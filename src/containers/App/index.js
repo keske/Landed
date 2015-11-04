@@ -16,7 +16,7 @@ export class App extends Component {
       <div>
         <Header />
         <main className="container">
-          {this.props.children}
+          { this.props.children }
         </main>
         <Footer />
       </div>

@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import DocumentMeta from 'react-document-meta';
 
-import { Simple } from 'components';
-
 const metaData = {
-  title: 'Simple Title',
+  title: 'Home',
   description: 'I\'m a description. I can to create multiple tags',
   canonical: 'http://example.com/path/to/page',
   meta: {
@@ -20,9 +18,7 @@ export class Home extends Component {
     return (
       <div>
         <DocumentMeta {...metaData} />
-        <h1>Home Page:</h1>
-        <hr />
-        <Simple />
+        <h1>Home</h1>
       </div>
     );
   }
