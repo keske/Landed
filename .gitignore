@@ -46,6 +46,7 @@ crashlytics.properties
 crashlytics-build.properties
 
 node_modules/
+dist/
 .sass-cache/
 bower_components/
 app/bower_components
