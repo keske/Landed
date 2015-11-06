@@ -1,3 +1,90 @@
+@import '../../../containers/App/styles/vars';
+
 :local(.styles) {
-  position: relative;
+  background: $green;
+
+  padding: 21px 0;
+  margin-top: 40px;
+
+  span.logo {
+    display: inline-block;
+
+    width: 90px;
+    height: 26px;
+
+    background: url(/src/images/svg/footer-logo.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+
+  p.title {
+    font-family: 'Jannon10Pro';
+    font-size: 38px;
+    line-height: 41px;
+
+    color: #FFF;
+  }
+
+  .social {
+    margin: 30px 0px;
+
+    a {
+      display: inline-block;
+
+      margin-right: 20px;
+
+      opacity: .5;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      @mixin icon($url, $width, $height) {
+        width: $width;
+        height: $height;
+
+        background: url(/src/images/svg/#{ $url }.svg);
+        background-repeat: no-repeat;
+        background-size: $width $height;
+      }
+
+      &.twitter {
+        @include icon('Twitter', 22, 18);
+      }
+
+      &.facebook {
+        @include icon('Facebook', 22, 22);
+      }
+
+      &.instagram {
+        @include icon('Instagram', 22, 22);
+      }
+
+      &.linkedin {
+        @include icon('LinkedIn', 20, 18);
+      }
+
+      &.pinterest {
+        @include icon('Pinterest', 22, 22);
+      }
+
+      &.google {
+        @include icon('GooglePlus', 30, 19);
+      }
+    }
+  }
+
+  p.copyright {
+    font-family: 'SupriaSans Regular';
+    color: #FFF;
+    font-size: 12px;
+    line-height: 18px;
+
+    a {
+      color: #FFF;
+      border-bottom: 1px solid #FFF;
+
+      margin-left: 5px;
+    }
+  }
 }

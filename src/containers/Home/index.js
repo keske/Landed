@@ -5,6 +5,8 @@ import DocumentMeta from 'react-document-meta';
 import { TopImage } from 'components/TopImage';
 import { Subscribe } from 'components/Subscribe';
 import { Toggle } from 'components/Toggle';
+import { YouCan } from 'components/YouCan';
+import { ImageBlock } from 'components/ImageBlock';
 import { HowItWorks } from 'components/HowItWorks';
 import { FAQ } from 'components/FAQ';
 
@@ -28,6 +30,8 @@ export class Home extends Component {
         <TopImage />
         <Subscribe />
         <Toggle />
+        <YouCan />
+        <ImageBlock />
         <HowItWorks />
         <FAQ />
       </section>

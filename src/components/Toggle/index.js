@@ -36,6 +36,17 @@ export class Toggle extends Component {
               </div>
             </div>
           </div>
+
+          <div className="row">
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+              <p className="centered">
+                Buying a new home in many cities concentrates too much of your wealth into one asset, and often owning is too costly to access in the first place. Renting gives you no ability to use your home to build your wealth, and it offers you little control over your physical space and duration of occupancy.
+              </p>
+              <p className="italic">
+                Landed  is an option between renting and owning,  that is so much  needed.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     );

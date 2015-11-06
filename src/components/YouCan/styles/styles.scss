@@ -1,0 +1,28 @@
+@import '../../../containers/App/styles/vars';
+
+:local(.styles) {
+  background: $light-green;
+
+  font-family: 'SupriaSans Regular';
+
+  border-top: 1px solid rgba(255, 255, 255, .22);
+
+  padding: 25px 0 50px;
+
+  color: #FFF;
+  font-size: 16px;
+
+  span.icon {
+    $size: 33px;
+
+    width: $size;
+    height: $size;
+
+    display: inline-block;
+
+    background: url(/src/images/svg/with-icon.svg);
+    background-repeat: no-repeat;
+
+    margin: 30px 0 20px;
+  }
+}

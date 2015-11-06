@@ -4,4 +4,12 @@
 
 :global(body) {
   position: relative;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }

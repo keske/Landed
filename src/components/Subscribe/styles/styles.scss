@@ -2,4 +2,74 @@
 
 :local(.styles) {
   position: relative;
+
+  margin-top: -75px;
+  
+  background: rgba(0, 0, 0, .35);
+
+  padding: 20px 0;
+
+  span.email-icon {
+    $size: 26px;
+
+    width: $size;
+    height: $size;
+
+    display: inline-block;
+
+    background: url(/src/images/svg/email.svg);
+    background-repeat: no-repeat; 
+  }
+
+  span.title {
+    font-family: 'SupriaSans Regular';
+
+    color: #FFF;
+    font-size: 14px;
+  }
+
+  input[type="email"] {
+    width: 100%;
+
+    font-family: 'SupriaSans Regular';
+    font-size: 14px;
+
+    padding: 3px 7px;
+
+    background: none;
+    border: none;
+    border-bottom: 1px solid #FFF;
+
+    outline: none;
+
+    position: relative;
+    top: -5px;
+    
+    $placeholderColor: rgba(255, 255, 255, .43);
+    ::-webkit-input-placeholder {
+      color: $placeholderColor;
+    }
+    ::-moz-placeholder {
+      color: $placeholderColor;
+    }
+    :-moz-placeholder {
+      color: $placeholderColor;
+    }
+    :-ms-input-placeholder {
+      color: $placeholderColor;
+    }
+  }
+
+  button {
+    font-family: 'SupriaSans Regular';
+    font-size: 14px;
+
+    color: #FFF;
+    background: none;
+
+    padding: 5px 15px;
+
+    border: 1px solid #FFF;
+    border-radius: 30px;
+  }
 }

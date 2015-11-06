@@ -1,10 +1,9 @@
 @import '../../../containers/App/styles/vars';
 
 :local(.styles) {
-  background: $green;
+  background: $light-green;
 
   padding: 50px 0 50px;
-  margin-bottom: 50px;
 
   h2 {
     text-align: center;
@@ -93,6 +92,31 @@
           }
         }
       }
+    }
+  }
+
+  p {
+    font-family: 'SupriaSans Regular';
+    font-size: 16px;
+    color: #FFF;
+
+    &.centered {
+      $width: 60%;
+
+      width: $width;
+      margin-left: (100 - $width) / 2;
+
+      margin-top: 40px;
+    }
+
+    &.italic {
+      font-family: 'Jannon10Pro-Italic';
+      font-size: 24px;
+      
+      $width: 40%;
+
+      width: $width;
+      margin-left: (100 - $width) / 2;
     }
   }
 }
