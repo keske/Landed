@@ -1,0 +1,69 @@
+@import '../../../containers/App/styles/vars';
+
+:local(.styles) {
+  width: 100%;
+  height: 600px;
+
+  background: url(../../../../src/images/photos/top.jpg);
+  background-size: 100% auto;
+  
+  // TODO: remove
+  margin-top: -5px;
+
+  h1 {
+    color: #FFF;
+
+    margin: 100px 0 50px;
+  }
+
+  .group {
+    margin-bottom: 20px;
+
+    span.icon {
+      $size: 17px;
+      $left: 20px;
+
+      width: $size;
+      height: $size;
+
+      vertical-align: top;
+
+      border-radius: 100%;
+      border: 2px solid #FFF;
+
+      display: inline-block;
+      
+      margin-left: - $left - $size;
+      margin-right: $left;
+    }
+
+    p {
+      font-family: 'SupriaSans Regular';
+      color: #FFF;
+      font-size: 14px;
+      line-height: 17px;
+
+      width: 250px;
+
+      display: inline-block;
+    }
+  }
+
+  span.button {
+    border: 2px solid #FFF;
+    border-radius: 75;
+
+    padding: 15px 30px;
+
+    font-size: 18px;
+    color: #FFF;
+
+    margin-top: 20px;
+    display: inline-block;
+
+    &:hover {
+      background: #FFF;
+      color: $green;
+    }
+  }
+}

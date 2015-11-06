@@ -1,6 +1,8 @@
+@import 'fonts';
+@import 'vars';
+
 body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  // 
 }
 
 h1,
@@ -9,7 +11,30 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 300;
+  // 
+}
+
+h1 {
+  font-family: 'Jannon10Pro';
+  font-size: 45px;
+}
+
+h2 {
+  font-family: 'Jannon10Pro';
+  font-size: 40px;
+  line-height: 21px;
+
+  &.gray {
+    color: #7B7B7A;
+  }
+
+  &.white {
+    color: #FFF;
+  }
+
+  &.green {
+    color: $green;
+  }
 }
 
 p {

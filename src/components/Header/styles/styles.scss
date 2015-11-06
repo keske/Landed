@@ -1,3 +1,30 @@
+@import '../../../containers/App/styles/vars';
+
 :local(.styles) {
-  position: relative;
+  position: fixed;
+  z-index: 1;
+
+  width: 100%;
+
+  padding: 40px 0;
+
+  transition: .3s;
+
+  &.green {
+    background: $green;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+
+    position: fixed;
+    top: 0;
+  }
+
+  a {
+    color: #FFF;
+    font-family: 'SupriaSans Regular';
+    font-size: 15px;
+
+    border-bottom: 2px solid #FFF;
+
+    margin-right: 60px;
+  }
 }

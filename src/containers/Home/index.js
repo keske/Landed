@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import DocumentMeta from 'react-document-meta';
 
+/* application components */
+import { TopImage } from 'components/TopImage';
+import { Subscribe } from 'components/Subscribe';
+import { Toggle } from 'components/Toggle';
+import { HowItWorks } from 'components/HowItWorks';
+import { FAQ } from 'components/FAQ';
+
 const metaData = {
   title: 'Home',
   description: 'I\'m a description. I can to create multiple tags',
@@ -16,10 +23,14 @@ const metaData = {
 export class Home extends Component {
   render() {
     return (
-      <div>
+      <section>
         <DocumentMeta {...metaData} />
-        <h1>Home</h1>
-      </div>
+        <TopImage />
+        <Subscribe />
+        <Toggle />
+        <HowItWorks />
+        <FAQ />
+      </section>
     );
   }
 }

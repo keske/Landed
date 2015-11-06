@@ -1,0 +1,98 @@
+@import '../../../containers/App/styles/vars';
+
+:local(.styles) {
+  background: $green;
+
+  padding: 50px 0 50px;
+  margin-bottom: 50px;
+
+  h2 {
+    text-align: center;
+  }
+
+  .toggle {
+    $width: 505px;
+
+    margin-top: 50px;
+
+    text-align: center;
+
+    div {
+      display: inline-block;
+    }
+
+    .bar {
+      width: $width;
+      height: 36px;
+
+      background: url(../../../../src/images/ui/bar.png);
+      background-size: cover;
+    }
+
+    .circle {
+      $size: 30px;
+
+      width: $size;
+      height: $size;
+
+      background: url(../../../../src/images/ui/circle.png);
+      background-size: cover;
+
+      position: relative;
+
+      top: -2px;
+
+      &.renting {
+        left: - $width + 3;
+      }
+
+      &.landed {
+        left: - ($width / 2) - ($size / 2);
+      }
+
+      &.owning {
+        left: - $size - 2;
+      }
+    }
+
+    .labels {
+      display: block;
+
+      margin-top: 10px;
+
+      ul {
+        list-style-type: none;
+
+        padding: 0;
+        margin: 0;
+
+        margin-left: 26%;
+
+        li {
+          position: absolute;
+          width: $width + 10;
+
+          font-family: 'Jannon10Pro-Italic';
+          font-size: 15px;
+          color: #FFF;
+
+          &:nth-child(1) {
+            text-align: left;
+          }
+
+          &:nth-child(2) {
+            text-align: center;
+          }
+
+          &:nth-child(3) {
+            text-align: right;
+          }
+
+          &.active {
+
+          }
+        }
+      }
+    }
+  }
+}
