@@ -1,5 +1,3 @@
-// @import '../../../containers/App/styles/vars';
-
 :local(.styles) {
   position: relative;
 
@@ -17,7 +15,7 @@
 
     display: inline-block;
 
-    background: url(../../../../files/svg/email.svg);
+    background: url(../files/email.svg);
     background-repeat: no-repeat; 
   }
 
