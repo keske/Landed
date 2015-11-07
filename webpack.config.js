@@ -14,7 +14,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.join(__dirname, '/dist/'),
-    publicPath: '/dist/',
+    publicPath: './dist/',
   },
 
   plugins: [
@@ -37,23 +37,8 @@ module.exports = {
       test: /bootstrap\/js\//,
       loader: 'imports?jQuery=jquery',
     }, {
-      test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'url?limit=10000&mimetype=application/font-woff',
-    }, {
-      test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'url?limit=10000&mimetype=application/font-woff2',
-    }, {
-      test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'url?limit=10000&mimetype=application/octet-stream',
-    }, {
-      test: /\.otf(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'url?limit=10000&mimetype=application/font-otf',
-    }, {
-      test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'file',
-    }, {
-      test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'url?limit=10000&mimetype=image/svg+xml',
+      test: /\.(eot|woff|woff2|ttf|otf|svg|png|jpg)$/,
+      loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]',
     }, {
       test: /\.js$/,
       loaders: ['react-hot', 'babel?stage=0&loose[]=es6.modules'],
@@ -61,12 +46,6 @@ module.exports = {
     }, {
       test: /\.scss$/,
       loader: 'css!postcss-loader!sass',
-    }, {
-      test: /\.png$/,
-      loader: 'file?name=[name].[ext]',
-    }, {
-      test: /\.jpg$/,
-      loader: 'file?name=[name].[ext]',
     }],
   },
   postcss: function() {
