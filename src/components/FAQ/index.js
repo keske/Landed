@@ -49,7 +49,7 @@ export class FAQ extends Component {
                       className={ currentQuestion === key ? 'active' : '' }
                       onClick={ () => { this.setState({ currentQuestion: key }); } }>
                       <span dangerouslySetInnerHTML={{ __html: question }} />
-                      <div className="answers answer-mobile hidden-md hidden-lg"
+                      <div className="answer-mobile hidden-md hidden-lg"
                            dangerouslySetInnerHTML={{ __html: QuestionsAndAnswers[key].answer }}>
                     </div>
                     </span>

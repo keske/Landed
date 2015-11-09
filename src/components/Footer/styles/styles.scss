@@ -1,4 +1,5 @@
 @import '../../../containers/App/styles/vars';
+@import '../../../containers/App/styles/screens';
 
 :local(.styles) {
   background: $green;
@@ -23,6 +24,11 @@
     line-height: 41px;
 
     color: #FFF;
+
+    @media (#{ $phone }) {
+      font-size: 22px;
+      line-height: 27px;
+    }
   }
 
   .social {

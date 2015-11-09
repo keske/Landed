@@ -60,7 +60,7 @@ export class Header extends Component {
         <div className="top-header">
           <div className="container">
             <div className="row">
-              <div className="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-md-offset-1 col-lg-offset-1">
+              <div className="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-md-offset-1 col-lg-offset-1 hidden-xs hidden-sm">
                 <span className="logo" />
               </div>
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 hidden-xs hidden-sm">
@@ -70,7 +70,7 @@ export class Header extends Component {
                 { renderLogin() }
               </div>
               <div className="col-xs-6 col-sm-6 hidden-md hidden-lg text-right">
-                sad
+                |||
               </div>
             </div>
           </div>

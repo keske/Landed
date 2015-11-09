@@ -9,6 +9,8 @@
   background-size: 100% auto;
 
   @media (#{ $phone }) {
+    height: 580px;
+
     background: url(../files/top-phone.jpg);
     background-size: 100% auto;
   }
