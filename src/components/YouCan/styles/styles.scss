@@ -1,4 +1,5 @@
 @import '../../../containers/App/styles/vars';
+@import '../../../containers/App/styles/screens';
 
 :local(.styles) {
   background: $light-green;
@@ -11,6 +12,26 @@
 
   color: #FFF;
   font-size: 16px;
+
+  .icon-col {
+    text-align: center;
+
+    @media (#{ $phone }) {
+      text-align: right;
+    }
+  }
+
+  .text-col {
+    text-align: center;
+
+    margin-top: 24px;
+    padding-left: 30px;
+
+    @media (#{ $phone }) {
+      text-align: left;
+      padding-right: 60px;
+    }
+  }
 
   span.title {
     font-family: 'Jannon10Pro-Italic';

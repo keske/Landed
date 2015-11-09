@@ -47,17 +47,20 @@ export class FAQ extends Component {
                   <li key={ key }>
                     <span
                       className={ currentQuestion === key ? 'active' : '' }
-                      onClick={ () => { this.setState({ currentQuestion: key }); } }
-                      dangerouslySetInnerHTML={{ __html: question }}>
+                      onClick={ () => { this.setState({ currentQuestion: key }); } }>
+                      <span dangerouslySetInnerHTML={{ __html: question }} />
+                      <div className="answers answer-mobile hidden-md hidden-lg"
+                           dangerouslySetInnerHTML={{ __html: QuestionsAndAnswers[key].answer }}>
+                    </div>
                     </span>
                   </li>)
                 }
               </ul>
             </div>
-            <div className="col-md-1 col-lg-1">
+            <div className="col-md-1 col-lg-1 hidden-xs hidden-sm">
               <span className={ `arrow arrow-${ currentQuestion }` } />
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 hidden-xs hidden-sm">
               <ul className="answers">
                 {
                   QuestionsAndAnswers.map(({ answer }, key) =>

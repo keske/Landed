@@ -181,6 +181,10 @@
       $red: #F55C23;
       $green: #36E42D;
 
+      @media (#{ $phone }) {
+        width: 100%;
+      }
+
       @mixin circle($color) {
         $size: 10px;
 

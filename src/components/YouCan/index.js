@@ -24,51 +24,102 @@ export class YouCan extends Component {
           </div>
 
           <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-md-offset-2 col-lg-offset-2 text-center">
-              <img src={ icons[0] } />
-              <p>
-                Pay less down than traditional ownership
-              </p>
+
+            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+              <div className="row">
+                <div className="col-xs-2 col-sm-2 col-md-12 col-lg-12 icon-col">
+                  <img src={ icons[0] } />
+                </div>
+                <div className="col-xs-10 col-sm-10 col-md-12 col-lg-12 text-col">
+                  <p>
+                    Pay less down than traditional ownership
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 text-center">
-              <img src={ icons[1] } />
-              <p>
-                Stay as long as you want
-              </p>
+
+            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+              <div className="row">
+                <div className="col-xs-2 col-sm-2 col-md-12 col-lg-12 icon-col">
+                  <img src={ icons[1] } />
+                </div>
+                <div className="col-xs-10 col-sm-10 col-md-12 col-lg-12 text-col">
+                  <p>
+                    Stay as long  as you want
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 text-center">
-              <img src={ icons[2] } />
-              <p>
-                Do whatever to make a house your home
-              </p>
+
+            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+              <div className="row">
+                <div className="col-xs-2 col-sm-2 col-md-12 col-lg-12 icon-col">
+                  <img src={ icons[2] } />
+                </div>
+                <div className="col-xs-10 col-sm-10 col-md-12 col-lg-12 text-col">
+                  <p>
+                    Do whatever to make a house your home
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 text-center">
-              <img src={ icons[3] } />
-              <p>
-                Bring home that cute pup
-              </p>
+
+            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+              <div className="row">
+                <div className="col-xs-2 col-sm-2 col-md-12 col-lg-12 icon-col">
+                  <img src={ icons[3] } />
+                </div>
+                <div className="col-xs-10 col-sm-10 col-md-12 col-lg-12 text-col">
+                  <p>
+                    Bring home that cute pup
+                  </p>
+                </div>
+              </div>
             </div>
+
           </div>
 
           <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-md-offset-3 col-lg-offset-3 text-center">
-              <img src={ icons[4] } />
-              <p>
-                Always have help to maintain your home
-              </p>
+
+            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-md-offset-2 col-lg-offset-2">
+              <div className="row">
+                <div className="col-xs-2 col-sm-2 col-md-12 col-lg-12 icon-col">
+                  <img src={ icons[4] } />
+                </div>
+                <div className="col-xs-10 col-sm-10 col-md-12 col-lg-12 text-col">
+                  <p>
+                    Always have help to maintain your home
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 text-center">
-              <img src={ icons[5] } />
-              <p>
-                Sublease to others
-              </p>
+
+            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+              <div className="row">
+                <div className="col-xs-2 col-sm-2 col-md-12 col-lg-12 icon-col">
+                  <img src={ icons[5] } />
+                </div>
+                <div className="col-xs-10 col-sm-10 col-md-12 col-lg-12 text-col">
+                  <p>
+                    Sublease to others  at any price
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 text-center">
-              <img src={ icons[6] } />
-              <p>
-                Grow your wealth when home values rise
-              </p>
+
+            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+              <div className="row">
+                <div className="col-xs-2 col-sm-2 col-md-12 col-lg-12 icon-col">
+                  <img src={ icons[6] } />
+                </div>
+                <div className="col-xs-10 col-sm-10 col-md-12 col-lg-12 text-col">
+                  <p>
+                    Grow your wealth when home values rise
+                  </p>
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
       </section>
