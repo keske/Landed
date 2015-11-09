@@ -1,4 +1,5 @@
 @import '../../../containers/App/styles/vars';
+@import '../../../containers/App/styles/screens';
 
 :local(.styles) {
   background: $light-green;
@@ -7,6 +8,9 @@
 
   h2 {
     text-align: center;
+
+    font-size: 35px;
+    line-height: 41px;
   }
 
   p.toggle-title {
@@ -15,13 +19,19 @@
     line-height: 24px;
 
     text-align: center;
-    
-    $width: 40%;
 
-    width: $width;
+    @mixin width($width) {
+      width: $width;
 
-    margin-top: 20px;
-    margin-left: (100 - $width) / 2;
+      margin-top: 20px;
+      margin-left: (100 - $width) / 2;
+    }
+
+    @include width(40%);
+
+    @media (#{ $phone }) {
+      @include width(70%);
+    }
   }
 
   .toggle {
@@ -31,50 +41,80 @@
 
     text-align: center;
 
-    div {
-      display: inline-block;
-    }
-
     .bar {
       width: $width;
       height: 36px;
 
+      margin: 0 auto;
+
       background: url(../files/bar.png);
       background-size: cover;
+
+      display: block;
+
+      @media (#{ $phone }) {
+        width: 309px;
+        height: 50px;
+
+        background: url(../files/bar-phone.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+      }
     }
 
     .circle {
-      $size: 30px;
+      @mixin bg($width) {
+        $size: $width;
 
-      width: $size;
-      height: $size;
+        width: $size;
+        height: $size;
 
-      background: url(../files/circle.png);
-      background-size: cover;
+        background: url(../files/circle.png);
+        background-size: cover;
+
+        &.renting {
+          left: 50%;
+          margin-left: -250px;
+
+          @media (#{ $phone }) {
+            left: 50%;
+            margin-left: -160px;
+          }
+        }
+
+        &.landed {
+          left: 50%;
+          margin-left: - ($size / 2);
+        }
+
+        &.owning {
+          left: 50%;
+          margin-left: 221px;
+
+          @media (#{ $phone }) {
+            left: 50%;
+            margin-left: 110px;
+          }
+        }
+      }
+
+      @include bg(30px)
 
       position: relative;
 
       transition: .4s;
 
-      top: -2px;
+      top: -32px;
 
-      &.renting {
-        left: - $width + 3;
-      }
-
-      &.landed {
-        left: - ($width / 2) - ($size / 2);
-      }
-
-      &.owning {
-        left: - $size - 2;
+      @media (#{ $phone }) {
+        @include bg(50px);
+        top: -55px;
       }
     }
 
     .labels {
       display: block;
-
-      margin-left: -30px;
+      margin-top: -20px;
 
       span.label {
         font-family: 'Jannon10Pro-Italic';
@@ -84,6 +124,10 @@
 
         width: 225px;
         display: inline-block;
+
+        @media (#{ $phone }) {
+          width: 20%;
+        }
       }
 
       .logo {
@@ -108,12 +152,21 @@
       z-index: 3;
 
       div {
-        width: 33%;
+        width: 20%;
         height: 70px;
 
-        margin-top: -70px;
+        margin-top: -110px;
         
         display: inline-block;
+
+        @media (min-width: 768px) and (max-width: 992px) {
+          width: 33%;
+        }
+
+        @media (#{ $phone }) {
+          width: 33.3333%;
+          margin-top: -140px;
+        }
       }
     }
 
@@ -123,8 +176,7 @@
 
       display: inline-block;
       
-      margin-top: 30px;
-      margin-left: -30px;
+      margin-top: 10px;
       
       $red: #F55C23;
       $green: #36E42D;
@@ -231,7 +283,7 @@
       width: $width;
       margin-left: (100 - $width) / 2;
 
-      margin-top: -40px;
+      margin-top: -20px;
     }
   }
 }

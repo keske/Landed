@@ -1,4 +1,5 @@
 @import '../../../containers/App/styles/vars';
+@import '../../../containers/App/styles/screens';
 
 :local(.styles) {
   width: 100%;
@@ -7,10 +8,19 @@
   background: url(../files/top.jpg);
   background-size: 100% auto;
 
+  @media (#{ $phone }) {
+    background: url(../files/top-phone.jpg);
+    background-size: 100% auto;
+  }
+
   h1 {
     color: #FFF;
 
     margin: 100px 0 30px;
+
+    @media (#{ $phone }) {
+      font-size: 29px;
+    }
   }
 
   .group {
@@ -32,6 +42,10 @@
       
       margin-left: - $left - $size;
       margin-right: $left;
+
+      @media (#{ $phone }) {
+        margin-left: 0;
+      }
     }
 
     p {
@@ -57,6 +71,11 @@
 
     margin-top: 5px;
     display: inline-block;
+
+    @media (#{ $phone }) {
+      width: 100%;
+      text-align: center;
+    }
 
     &:hover {
       background: #FFF;

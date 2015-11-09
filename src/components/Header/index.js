@@ -60,20 +60,23 @@ export class Header extends Component {
         <div className="top-header">
           <div className="container">
             <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-md-offset-1 col-lg-offset-1">
+              <div className="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-md-offset-1 col-lg-offset-1">
                 <span className="logo" />
               </div>
-              <div className="col-xs-12 col-sm-12 col-md-5 col-lg-6">
+              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 hidden-xs hidden-sm">
                 { renderNav() }
               </div>
-              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-3 text-right">
+              <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 text-right hidden-xs hidden-sm">
                 { renderLogin() }
+              </div>
+              <div className="col-xs-6 col-sm-6 hidden-md hidden-lg text-right">
+                sad
               </div>
             </div>
           </div>
           <div className="logo-symbol" />
         </div>
-        <div className={ `fixed-header ${ show ? 'show' : '' }` }>
+        <div className={ `fixed-header ${ show ? 'show' : '' } hidden-xs hidden-sm` }>
           <div className="container">
             <div className="row">
               <div className="col-xs-12 col-sm-8 col-md-8 col-lg-9">

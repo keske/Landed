@@ -1,9 +1,20 @@
+@import '../../../containers/App/styles/screens';
+
 :local(.styles) {
   position: relative;
 
   margin-top: -72px;
   
   background: rgba(0, 0, 0, .35);
+
+  @media (#{ $phone }) {
+    background: none;
+
+    position: absolute;
+    width: 100%;
+    
+    margin-top: -112px;
+  }
 
   padding: 20px 0;
 
@@ -30,6 +41,12 @@
 
     position: relative;
     top: 6px;
+
+    @media (#{ $phone }) {
+      font-size: 12px;
+
+      top: 0;
+    }
   }
 
   input[type="email"] {
@@ -72,5 +89,11 @@
 
     border: 1px solid #FFF;
     border-radius: 30px;
+
+    @media (#{ $phone }) {
+      font-family: 'SupriaSans Light';
+      font-size: 10px;
+      padding: 8px;
+    }
   }
 }

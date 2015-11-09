@@ -7,7 +7,7 @@ import styles from './styles';
 /* images */
 const icons = [];
 R.forEach(name =>
-  icons.push(require(`./files/${ name }.png`)),
+  icons.push(require(`./files/how-${ name }.png`)),
   R.range(1, 3 + 1));
 
 export class HowItWorks extends Component {

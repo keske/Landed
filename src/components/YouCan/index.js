@@ -7,7 +7,7 @@ import styles from './styles';
 /* images */
 const icons = [];
 R.forEach(name =>
-  icons.push(require(`./files/${ name }.png`)),
+  icons.push(require(`./files/you-can-${ name }.png`)),
   R.range(1, 7 + 1));
 
 export class YouCan extends Component {
