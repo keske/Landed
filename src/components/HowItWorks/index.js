@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
+import R from 'ramda';
 
 /* component styles */
 import styles from './styles';
+
+/* images */
+const icons = [];
+R.forEach(name =>
+  icons.push(require(`./files/${ name }.png`)),
+  R.range(1, 3 + 1));
 
 export class HowItWorks extends Component {
   render() {
@@ -20,7 +27,7 @@ export class HowItWorks extends Component {
           <div className="row">
 
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
-              <span className="icon" />
+              <img src={ icons[0] } />
               <p className="paragraph green">
                 1. You find a home
               </p>
@@ -30,7 +37,7 @@ export class HowItWorks extends Component {
             </div>
 
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
-              <span className="icon" />
+              <img src={ icons[1] } />
               <p className="paragraph green">
                 2. We find co-investors
               </p>
@@ -40,7 +47,7 @@ export class HowItWorks extends Component {
             </div>
 
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
-              <span className="icon" />
+              <img src={ icons[2] } />
               <p className="paragraph green">
                 3. You stay until you’re ready to sell
               </p>

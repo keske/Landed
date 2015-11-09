@@ -1,7 +1,7 @@
 :local(.styles) {
   position: relative;
 
-  margin-top: -75px;
+  margin-top: -72px;
   
   background: rgba(0, 0, 0, .35);
 
@@ -17,6 +17,9 @@
 
     background: url(../files/email.svg);
     background-repeat: no-repeat; 
+
+    position: relative;
+    top: 6px;
   }
 
   span.title {
@@ -24,12 +27,15 @@
 
     color: #FFF;
     font-size: 14px;
+
+    position: relative;
+    top: 6px;
   }
 
   input[type="email"] {
     width: 100%;
 
-    font-family: 'SupriaSans Regular';
+    font-family: 'Jannon10Pro-Italic';
     font-size: 14px;
 
     padding: 3px 7px;
@@ -39,9 +45,6 @@
     border-bottom: 1px solid #FFF;
 
     outline: none;
-
-    position: relative;
-    top: -5px;
     
     $placeholderColor: rgba(255, 255, 255, .43);
     ::-webkit-input-placeholder {

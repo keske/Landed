@@ -33,7 +33,7 @@ export class Header extends Component {
 
     function renderNav() {
       return (
-        <div>
+        <nav>
           <Link to="about">
             About
           </Link>
@@ -43,7 +43,7 @@ export class Header extends Component {
           <Link to="faq">
             F.A.Q.
           </Link>
-        </div>
+        </nav>
       );
     }
 

@@ -83,7 +83,7 @@
       position: fixed;
 
       top: 12px;
-      left: 10px;
+      left: 20px;
 
       z-index: 3;
       display: inline-block;
@@ -94,6 +94,10 @@
       background: url(../files/small-logo.svg);
       background-repeat: no-repeat;
       background-size: 100% auto;
+    }
+
+    nav {
+      padding-left: 40px;
     }
     
     a {

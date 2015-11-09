@@ -4,18 +4,16 @@ import { Link } from 'react-router';
 /* component styles */
 import styles from './styles';
 
-const QuestionsAndAnswers = [
-  {
-    question: "How do I sell my portion of a home if I don't own the whole thing?",
-    answer: "Landed is creating a marketplace for exactly these types of purchases. Because the person living in the home pays rent on the share they don't own, everyone else who co-invests in the home receives a monthly rent check. This guarantees that there will be others willing to become co-investors so they too can receive regular rental payments (in addition to any wealth generated from increasing home values).<br /><br />As the marketplace is built, Landed will give pioneering investors a number of additional guarantees to make sure your investment is protected.",
-  }, {
-    question: 'Companies fail all the time. If landed fails, what happens to my home or investment?',
-    answer: 'answer 2',
-  }, {
-    question: 'Why should I own less than 100% of my house? Why invest in partial properties?',
-    answer: 'answer 3',
-  },
-];
+const QuestionsAndAnswers = [{
+  question: "How do I sell my portion of a home if I don't own the whole thing?",
+  answer: "With Landed, you agree to hold the property for at least five years. If you need to relocate before then, you have two options: (1) you can sublease the property until the end of the term or (2) you can buy-out your investors and sell the entire property. In the case of the second option, you’ll pay a 2% penalty for early termination. <br /><br /> Otherwise, you can sell the property exactly you would your own home and pay your co - investors 75 % of the proceeds.We can also help you sell just your share of the home to another Landed occupant so walk away with more in your pocket.You can also choose to buy - out your investors without any penalty as soon as the five years are up.",
+}, {
+  question: "Companies fail all the time.  What happens if Landed goes bankrupt or gets acquired?",
+  answer: "With Landed, you own the property (your name is on title!) -- we just help coordinate the interactions between all the parties. In the unlikely event that we cease to exist, you'll still own your share of the house, the contract with your co-investors will still be valid and there are contingency plans in place to ensure your investment is protected.",
+}, {
+  question: "Is this really like owning a home?  How is this different?",
+  answer: "With Landed, you’re sharing your home investment, not your home experience.  You can paint the walls, fix up the kitchen, build a new deck, AirBnB, sublet or get a puppy; we’re just an alternative financing choice.<br />The only thing that will require approval is major structural changes to the property.  If you want to tear down some walls or build an extension, we just want to partner with you to make sure it’s adding value to the property.",
+}];
 
 export class FAQ extends Component {
 
@@ -56,8 +54,10 @@ export class FAQ extends Component {
                 }
               </ul>
             </div>
-
-            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-1">
+            <div className="col-md-1 col-lg-1">
+              <span className={ `arrow arrow-${ currentQuestion }` } />
+            </div>
+            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
               <ul className="answers">
                 {
                   QuestionsAndAnswers.map(({ answer }, key) =>

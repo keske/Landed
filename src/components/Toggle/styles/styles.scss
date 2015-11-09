@@ -126,8 +126,7 @@
       margin-top: 30px;
       margin-left: -30px;
       
-      $red: red;
-      $yellow: #F3D861;
+      $red: #F55C23;
       $green: #36E42D;
 
       @mixin circle($color) {
@@ -139,7 +138,7 @@
         display: inline-block;
 
         background: $color;
-        box-shadow: 0 0 4px $color;
+        box-shadow: 0 0 14px 3px $color;
 
         border-radius: 100%;
       }
@@ -227,7 +226,7 @@
     color: #FFF;
 
     &.centered {
-      $width: 60%;
+      $width: 65%;
 
       width: $width;
       margin-left: (100 - $width) / 2;
