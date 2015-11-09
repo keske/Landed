@@ -37,7 +37,7 @@ export class Header extends Component {
           <Link to="about">
             About
           </Link>
-          <Link to="investment-oportuninties">
+          <Link to="oportuninties">
             Investment oportuninties
           </Link>
           <Link to="faq">

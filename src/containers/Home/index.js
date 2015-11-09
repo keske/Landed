@@ -26,7 +26,7 @@ export class Home extends Component {
   render() {
     return (
       <section>
-        <DocumentMeta {...metaData} />
+        <DocumentMeta { ...metaData } />
         <TopImage />
         <Subscribe />
         <Toggle />
