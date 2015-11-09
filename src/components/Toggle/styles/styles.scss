@@ -9,10 +9,25 @@
     text-align: center;
   }
 
+  p.toggle-title {
+    font-family: 'Jannon10Pro-Italic';
+    font-size: 19px;
+    line-height: 24px;
+
+    text-align: center;
+    
+    $width: 40%;
+
+    width: $width;
+
+    margin-top: 20px;
+    margin-left: (100 - $width) / 2;
+  }
+
   .toggle {
     $width: 505px;
 
-    margin-top: 50px;
+    margin: 30px 0;
 
     text-align: center;
 
@@ -39,6 +54,8 @@
 
       position: relative;
 
+      transition: .4s;
+
       top: -2px;
 
       &.renting {
@@ -57,39 +74,148 @@
     .labels {
       display: block;
 
-      margin-top: 10px;
+      margin-left: -30px;
 
-      ul {
-        list-style-type: none;
+      span.label {
+        font-family: 'Jannon10Pro-Italic';
+        font-size: 15px;
+        color: #FFF;
+        font-weight: normal;
 
-        padding: 0;
-        margin: 0;
+        width: 225px;
+        display: inline-block;
+      }
 
-        margin-left: 26%;
+      .logo {
+        width: 54px;
+        height: 20px;
 
-        li {
-          position: absolute;
-          width: $width + 10;
+        background: url(../files/logo.svg);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
 
-          font-family: 'Jannon10Pro-Italic';
-          font-size: 15px;
+        display: inline-block;
+        position: relative;
+
+        top: 10px;
+      }
+    }
+
+    .active-zones {
+      width: 100%;
+
+      position: relative;
+      z-index: 3;
+
+      div {
+        width: 33%;
+        height: 70px;
+
+        margin-top: -70px;
+        
+        display: inline-block;
+      }
+    }
+
+    .states {
+      width: 400px;
+      min-height: 100px;
+
+      display: inline-block;
+      
+      margin-top: 30px;
+      margin-left: -30px;
+      
+      $red: red;
+      $yellow: #F3D861;
+      $green: #36E42D;
+
+      @mixin circle($color) {
+        $size: 10px;
+
+        width: $size;
+        height: $size;
+
+        display: inline-block;
+
+        background: $color;
+        box-shadow: 0 0 4px $color;
+
+        border-radius: 100%;
+      }
+
+      &.renting {
+        .monthly-payments {
+          @include circle($red);
+        }
+        .upfront-costs {
+          @include circle($green);
+        }
+        .degree-of-control {
+          @include circle($red);
+        }
+      }
+      &.landed {
+        .monthly-payments {
+          @include circle($green);
+        }
+        .upfront-costs {
+          @include circle($green);
+        }
+        .degree-of-control {
+          @include circle($green);
+        }
+      }
+      &.owning {
+        .monthly-payments {
+          @include circle($green);
+        }
+        .upfront-costs {
+          @include circle($red);
+        }
+        .degree-of-control {
+          @include circle($green);
+        }
+      }
+
+      .state {
+        width: 33.3333%;
+        display: inline-block;
+
+        span.state-circle {
+          $speed: .4s;
+
+          &.monthly-payments {
+            transition: $speed + .1;
+          }
+          &.upfront-costs {
+            transition: $speed + .2;
+          }
+          &.degree-of-control {
+            transition: $speed + .3;
+          }
+        }
+
+        p.state-title {
+          font-family: 'SupriaSans Regular';
+          font-size: 12px;
           color: #FFF;
 
-          &:nth-child(1) {
-            text-align: left;
-          }
+          opacity: .5;
 
-          &:nth-child(2) {
-            text-align: center;
-          }
+          margin-top: 10px;
+        }
 
-          &:nth-child(3) {
-            text-align: right;
-          }
+        p.state-describe {
+          font-family: 'SupriaSans Regular';
+          font-size: 12px;
+          color: #FFF;
 
-          &.active {
+          text-transform: uppercase;
 
-          }
+          margin-top: -10px;
+
+          padding: 0 10%;
         }
       }
     }
@@ -106,17 +232,7 @@
       width: $width;
       margin-left: (100 - $width) / 2;
 
-      margin-top: 40px;
-    }
-
-    &.italic {
-      font-family: 'Jannon10Pro-Italic';
-      font-size: 24px;
-      
-      $width: 40%;
-
-      width: $width;
-      margin-left: (100 - $width) / 2;
+      margin-top: -40px;
     }
   }
 }

@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import { items } from './items';
+import { toggle } from './toggle';
 
 const rootReducer = combineReducers({
-  items,
+  toggle,
 });
 
 export default rootReducer;

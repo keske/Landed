@@ -5,23 +5,26 @@ var autoprefixer = require('autoprefixer');
 var csswring = require('csswring');
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   entry: [
-    'webpack-hot-middleware/client',
     './src/index',
   ],
 
   output: {
     filename: 'bundle.js',
-    path: path.join(__dirname, '/dist/'),
+    path: path.join(__dirname, '../dist/'),
     publicPath: 'dist/',
   },
 
   plugins: [
     new ExtractTextPlugin('bundle.css'),
+    new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+    }),
     new webpack.ProvidePlugin({
       jQuery: 'jquery',
     }),
