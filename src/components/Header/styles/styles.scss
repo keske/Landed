@@ -5,7 +5,7 @@
 
   .top-header {
     position: absolute;
-    z-index: 1;
+    z-index: 3;
 
     width: 100%;
 
@@ -16,12 +16,32 @@
     span.logo {
       display: inline-block;
 
-      width: 142px;
+      width: 103px;
       height: 43px;
 
       background: url(../files/logo.svg);
       background-repeat: no-repeat;
       background-size: 100% auto;
+
+      position: relative;
+      top: -3px;
+    }
+
+    nav {
+
+      a {
+        color: #FFF;
+        font-family: 'SupriaSans Regular';
+        font-size: 16px;
+
+        border-bottom: 2px solid #FFF;
+
+        margin-right: 60px;
+
+        &.active, &:hover {
+          border-bottom: 7px solid #FFF;
+        }
+      }
     }
   }
 
@@ -29,14 +49,14 @@
     position: absolute;
     z-index: 3;
 
-    top: 30px;
+    top: 25px;
     left: 30px;
 
     display: inline-block;
 
     transition: .4s;
 
-    width: 55px;
+    width: 45px;
     height: 58px;
 
     background: url(../files/logo-symbol.svg);
@@ -56,16 +76,6 @@
     }
   }
 
-  a {
-    color: #FFF;
-    font-family: 'SupriaSans Regular';
-    font-size: 16px;
-
-    border-bottom: 2px solid #FFF;
-
-    margin-right: 60px;
-  }
-
   button.login {
     color: #FFF;
     font-family: 'SupriaSans Regular';
@@ -79,11 +89,16 @@
     padding: 6px 30px;
 
     position: relative;
-  }
 
+    &:hover {
+      background: #FFF;
+      color: $green;
+    }
+  }
+  
   .fixed-header {
     position: fixed;
-    z-index: 1;
+    z-index: 3;
 
     background: $green;
 
@@ -94,11 +109,11 @@
 
     .logo-small {
       position: fixed;
+      z-index: 13;
 
-      top: 12px;
+      top: 14px;
       left: 20px;
 
-      z-index: 3;
       display: inline-block;
 
       width: 97px;
@@ -110,15 +125,105 @@
     }
 
     nav {
-      padding-left: 40px;
+      padding-left: 140px;
     }
     
     a {
+      color: #FFF;
+      font-family: 'SupriaSans Regular';
       font-size: 14px;
+
+      border-bottom: 2px solid #FFF;
+
+      margin-right: 60px;
+
+      &.active, &:hover {
+        border-bottom: 7px solid #FFF;
+      }
     }
 
     button.login {
-      top: -4px;
+      top: -8px;
+    }
+  }
+  
+  span.burger {
+    width: 23px;
+    height: 12px;
+
+    background: url(../files/burger.svg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+
+    display: inline-block;
+
+    top: 30px;
+    right: 20px;
+
+    position: fixed;
+
+    &.cross {
+      width: 15px;
+      height: 14px;
+
+      background: url(../files/close.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .phone-menu {
+    display: none;
+
+    background: $green;
+    
+    position: fixed;
+    z-index: 2;
+
+    width: 100%;
+
+    &.show {
+      display: block;
+    }
+
+    nav {
+      margin-top: 80px;
+
+      a {
+        color: #FFF;
+        display: block;
+
+        padding: 20px;
+        width: 100%;
+        
+        border-top: 1px solid #FFF;
+        border-bottom: 1px solid #FFF;
+
+        margin-top: -1px;
+      }
+    }
+
+    .login {
+      margin: 30px 0;
+    }
+  }
+
+  .black-layer {
+    display: none;
+
+    background: rgba(0, 0, 0, .8);
+    
+    position: fixed;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    &.show {
+      display: block;
     }
   }
 }

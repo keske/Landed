@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import DocumentMeta from 'react-document-meta';
 
 /* application components */
-// import { ComponentName } from 'components/ComponentName';
+import { AboutPage } from 'components/AboutPage';
 
 const metaData = {
   title: 'About',
@@ -21,7 +21,7 @@ export class About extends Component {
     return (
       <section>
         <DocumentMeta { ...metaData } />
-        About page
+        <AboutPage />
       </section>
     );
   }
