@@ -42,7 +42,7 @@ export class HowItWorks extends Component {
                 2. We find co-investors
               </p>
               <p className="paragraph">
-                You put down 5% of the sale price and take on a 20% mortgage. As soon as your offer is accepted, we select others to co-invest in your home in small portions to cover the rest.
+                You put down 5% of the sale price and take on a 20% mortgage. As soon as your offer is accepted, we select others to co-invest (not co-live) to cover the rest.
               </p>
             </div>
 
@@ -62,7 +62,7 @@ export class HowItWorks extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
               <span className="button">
-                Start a process now
+                Sign up to get started
               </span>
             </div>
           </div>

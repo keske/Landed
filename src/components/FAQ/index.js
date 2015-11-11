@@ -73,7 +73,7 @@ export class FAQ extends Component {
               </ul>
 
               <Link to="faq">
-                See comlete F.A.Q.
+                See complete F.A.Q.
               </Link>
             </div>
           </div>

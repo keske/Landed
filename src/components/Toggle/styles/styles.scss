@@ -11,12 +11,14 @@
 
     font-size: 35px;
     line-height: 41px;
+
+    margin-bottom: 30px;
   }
 
   p.toggle-title {
-    font-family: 'Jannon10Pro-Italic';
-    font-size: 19px;
-    line-height: 24px;
+    font-family: 'SupriaSans Regular';
+    font-size: 22px;
+    line-height: 27px;
 
     text-align: center;
 
@@ -37,7 +39,7 @@
   .toggle {
     $width: 505px;
 
-    margin: 30px 0;
+    margin: 50px 0 0;
 
     text-align: center;
 
@@ -98,13 +100,13 @@
         }
       }
 
-      @include bg(30px)
+      @include bg(50px)
 
       position: relative;
 
       transition: .4s;
 
-      top: -32px;
+      top: -40px;
 
       @media (#{ $phone }) {
         @include bg(50px);
@@ -286,8 +288,6 @@
 
       width: $width;
       margin-left: (100 - $width) / 2;
-
-      margin-top: -20px;
     }
   }
 }

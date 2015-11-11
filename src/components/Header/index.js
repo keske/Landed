@@ -16,6 +16,7 @@ export class Header extends Component {
   static propTypes = {
     dispatch: React.PropTypes.func,
     showPhoneMenu: React.PropTypes.bool,
+    loaded: React.PropTypes.bool,
   }
 
   constructor(props) {
@@ -23,6 +24,7 @@ export class Header extends Component {
 
     this.state = {
       show: false,
+      loaded: false,
     };
 
     this.animateHeader = this.animateHeader.bind(this);
@@ -32,6 +34,10 @@ export class Header extends Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.animateHeader);
+
+    this.setState({
+      loaded: true,
+    });
   }
 
   componentWillUnmount() {
@@ -55,12 +61,12 @@ export class Header extends Component {
   }
 
   render() {
-    const { show } = this.state;
+    const { show, loaded } = this.state;
     const { showPhoneMenu } = this.props;
 
     function renderNav() {
       return (
-        <nav>
+        <nav className={ `${ loaded ? 'loaded' : '' }` }>
           <Link to="about"
                 activeClassName="active">
             About
