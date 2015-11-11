@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DocumentMeta from 'react-document-meta';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 /* application components */
 import { TopImage } from 'components/TopImage';
@@ -27,13 +28,17 @@ export class Home extends Component {
     return (
       <section>
         <DocumentMeta { ...metaData } />
-        <TopImage />
-        <Subscribe />
-        <Toggle />
-        <YouCan />
-        <ImageBlock />
-        <HowItWorks />
-        <FAQ />
+        <ReactCSSTransitionGroup transitionName="page-parts-animation"
+                                       transitionAppear={true}
+                                       transitionAppearTimeout={1000}>
+          <TopImage />
+          <Subscribe />
+          <Toggle />
+          <YouCan />
+          <ImageBlock />
+          <HowItWorks />
+          <FAQ />
+        </ReactCSSTransitionGroup>
       </section>
     );
   }

@@ -3,6 +3,15 @@
 
 :local(.styles) {
 
+  .el-animation-appear {
+    opacity: 0.01;
+  }
+
+  .el-animation-appear.el-animation-appear-active {
+    opacity: 1;
+    transition: 0.7s linear;
+  }
+
   .top-header {
     position: absolute;
     z-index: 3;
@@ -38,26 +47,10 @@
 
         margin-right: 60px;
 
-        opacity: 0;
-
         transition: 1s;
 
         &.active, &:hover {
           border-bottom: 7px solid #FFF;
-        }
-      }
-
-      &.loaded {
-
-        a {
-          opacity: 1;
-          @for $i from 1 through 12 {
-            &:nth-child(#{$i}) {
-              // opacity: 1;
-              // transition: opacity $i * 9s linear;
-            }
-          }
-          // opacity: 1;
         }
       }
     }

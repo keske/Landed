@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router';
 import $ from 'jquery';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 /* actions */
 import * as actionCreators from 'actions/app';
@@ -16,7 +17,6 @@ export class Header extends Component {
   static propTypes = {
     dispatch: React.PropTypes.func,
     showPhoneMenu: React.PropTypes.bool,
-    loaded: React.PropTypes.bool,
   }
 
   constructor(props) {
@@ -24,7 +24,6 @@ export class Header extends Component {
 
     this.state = {
       show: false,
-      loaded: false,
     };
 
     this.animateHeader = this.animateHeader.bind(this);
@@ -34,10 +33,6 @@ export class Header extends Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.animateHeader);
-
-    this.setState({
-      loaded: true,
-    });
   }
 
   componentWillUnmount() {
@@ -61,12 +56,12 @@ export class Header extends Component {
   }
 
   render() {
-    const { show, loaded } = this.state;
+    const { show } = this.state;
     const { showPhoneMenu } = this.props;
 
     function renderNav() {
       return (
-        <nav className={ `${ loaded ? 'loaded' : '' }` }>
+        <nav>
           <Link to="about"
                 activeClassName="active">
             About
@@ -93,41 +88,45 @@ export class Header extends Component {
 
     return (
       <section className={ `${ styles }` }>
-        <div className="top-header">
-          <div className="container">
-            <div className="row">
-              <div className="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-md-offset-1 col-lg-offset-1 hidden-xs hidden-sm">
-                <Link to="/">
-                  <span className="logo" />
-                </Link>
-              </div>
-              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 hidden-xs hidden-sm">
-                { renderNav() }
-              </div>
-              <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 text-right hidden-xs hidden-sm">
-                { renderLogin() }
-              </div>
-              <div className="col-xs-12 col-sm-12 hidden-md hidden-lg text-right"
-                   onClick={ () => this.handleMenu() }>
-                <span className={ `burger ${ showPhoneMenu ? 'cross' : '' }` } />
-              </div>
-            </div>
-          </div>
-          <div className="logo-symbol" />
-        </div>
-        <div className={ `fixed-header ${ show ? 'show' : '' } hidden-xs hidden-sm` }>
-          <div className="container">
-            <div className="row">
-              <div className="col-xs-12 col-sm-8 col-md-8 col-lg-9">
-                { renderNav() }
-              </div>
-              <div className="col-xs-12 col-sm-4 col-md-4 col-lg-3 text-right">
-                { renderLogin() }
+        <ReactCSSTransitionGroup transitionName="el-animation"
+                                       transitionAppear={true}
+                                       transitionAppearTimeout={500}>
+          <div className="top-header">
+            <div className="container">
+              <div className="row">
+                <div className="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-md-offset-1 col-lg-offset-1 hidden-xs hidden-sm">
+                  <Link to="/">
+                    <span className="logo" />
+                  </Link>
+                </div>
+                <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 hidden-xs hidden-sm">
+                  { renderNav() }
+                </div>
+                <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 text-right hidden-xs hidden-sm">
+                  { renderLogin() }
+                </div>
+                <div className="col-xs-12 col-sm-12 hidden-md hidden-lg text-right"
+                     onClick={ () => this.handleMenu() }>
+                  <span className={ `burger ${ showPhoneMenu ? 'cross' : '' }` } />
+                </div>
               </div>
             </div>
+            <div className="logo-symbol" />
           </div>
-          <div className="logo-small" />
-        </div>
+          <div className={ `fixed-header ${ show ? 'show' : '' } hidden-xs hidden-sm` }>
+            <div className="container">
+              <div className="row">
+                <div className="col-xs-12 col-sm-8 col-md-8 col-lg-9">
+                  { renderNav() }
+                </div>
+                <div className="col-xs-12 col-sm-4 col-md-4 col-lg-3 text-right">
+                  { renderLogin() }
+                </div>
+              </div>
+            </div>
+            <div className="logo-small" />
+          </div>
+        </ReactCSSTransitionGroup>
         <div className={ `phone-menu ${ showPhoneMenu ? 'show' : '' }` }>
           { renderNav() }
           <div className="text-center">
