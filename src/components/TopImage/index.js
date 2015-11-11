@@ -12,8 +12,8 @@ export class TopImage extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11 col-md-offset-1 col-lg-offset-1">
               <ReactCSSTransitionGroup transitionName="title-animation"
-                                       transitionAppear={true}
-                                       transitionAppearTimeout={1300}>
+                                       transitionAppear={ true }
+                                       transitionAppearTimeout={ 1300 }>
                 <h1 className="hidden-xs hidden-sm">
                   Split your home investment,<br />
                   not the space
@@ -28,8 +28,8 @@ export class TopImage extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11 col-md-offset-1 col-lg-offset-1">
               <ReactCSSTransitionGroup transitionName="text-animation-1"
-                                       transitionAppear={true}
-                                       transitionAppearTimeout={1000}>
+                                       transitionAppear={ true }
+                                       transitionAppearTimeout={ 1000 }>
                 <div className="group">
                   <span className="icon" />
                   <p>
@@ -39,8 +39,8 @@ export class TopImage extends Component {
               </ReactCSSTransitionGroup>
 
               <ReactCSSTransitionGroup transitionName="text-animation-2"
-                                       transitionAppear={true}
-                                       transitionAppearTimeout={1300}>
+                                       transitionAppear={ true }
+                                       transitionAppearTimeout={ 1300 }>
                 <div className="group">
                   <span className="icon" />
                   <p>
@@ -50,8 +50,8 @@ export class TopImage extends Component {
               </ReactCSSTransitionGroup>
 
               <ReactCSSTransitionGroup transitionName="text-animation-3"
-                                       transitionAppear={true}
-                                       transitionAppearTimeout={1500}>
+                                       transitionAppear={ true }
+                                       transitionAppearTimeout={ 1500 }>
                 <div className="group">
                   <span className="icon" />
                   <p>
@@ -61,11 +61,13 @@ export class TopImage extends Component {
               </ReactCSSTransitionGroup>
 
               <ReactCSSTransitionGroup transitionName="text-animation-4"
-                                       transitionAppear={true}
-                                       transitionAppearTimeout={1700}>
-                <span className="button">
-                  I want a home to live in
-                </span>
+                                       transitionAppear={ true }
+                                       transitionAppearTimeout={ 1700 }>
+                <a href="https://golanded.typeform.com/to/GbesjE">
+                  <span className="button">
+                    I want a home to live in
+                  </span>
+                </a>
               </ReactCSSTransitionGroup>
             </div>
           </div>

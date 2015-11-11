@@ -18,6 +18,10 @@
 
   padding: 20px 0;
 
+  form {
+    margin: 0;
+  }
+
   span.email-icon {
     $size: 26px;
 
@@ -78,7 +82,7 @@
     }
   }
 
-  button {
+  button, input[type="submit"] {
     font-family: 'SupriaSans Regular';
     font-size: 14px;
 
@@ -90,10 +94,16 @@
     border: 1px solid #FFF;
     border-radius: 30px;
 
+    opacity: .8;
+
     @media (#{ $phone }) {
       font-family: 'SupriaSans Light';
       font-size: 10px;
       padding: 8px;
+    }
+
+    &:hover {
+      opacity: 1;
     }
   }
 }

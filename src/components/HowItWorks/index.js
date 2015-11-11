@@ -61,9 +61,11 @@ export class HowItWorks extends Component {
 
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-              <span className="button">
-                Sign up to get started
-              </span>
+              <a href="https://golanded.typeform.com/to/GbesjE">
+                <span className="button">
+                  Sign up to get started
+                </span>
+              </a>
             </div>
           </div>
 

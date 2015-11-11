@@ -76,7 +76,7 @@
 
         &.renting {
           left: 50%;
-          margin-left: -250px;
+          margin-left: -260px;
 
           @media (#{ $phone }) {
             left: 50%;
@@ -91,7 +91,7 @@
 
         &.owning {
           left: 50%;
-          margin-left: 221px;
+          margin-left: 211px;
 
           @media (#{ $phone }) {
             left: 50%;

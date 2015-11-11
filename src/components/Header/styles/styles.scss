@@ -75,6 +75,8 @@
     background-size: 100% auto;
 
     @media (#{ $phone }) {
+      position: fixed;
+
       width: 114px;
       height: 40px;
       
@@ -113,10 +115,19 @@
 
     background: $green;
 
-    padding: 20px 0 5px;
+    padding: 20px 0 0;
     
     width: 100%;
-    display: none;
+    height: 60px;
+
+    opacity: 0;
+    top: -100px;
+    transition: opacity .3s;
+
+    &.show {
+      opacity: 1;
+      top: 0;
+    }
 
     .logo-small {
       position: fixed;
@@ -127,12 +138,12 @@
 
       display: inline-block;
 
-      width: 97px;
-      height: 29px;
+      width: 98px;
+      height: 28px;
 
       background: url(../files/small-logo.svg);
       background-repeat: no-repeat;
-      background-size: 100% auto;
+      background-size: cover;
     }
 
     nav {

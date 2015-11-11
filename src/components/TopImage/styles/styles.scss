@@ -15,28 +15,26 @@
     background-size: 100% auto;
   }
 
-  // .title-animation-appear {
-  //   // opacity: 0.01;
-  //   visibility: hidden;
-  //   margin-left: -20px;
-  // }
+  .title-animation-appear {
+    opacity: 0.01;
+    margin: 120px 0 30px;
+  }
 
-  // .title-animation-appear.title-animation-appear-active {
-  //   // opacity: 1;
-  //   visibility: visible;
-  //   margin-left: 0;
-  //   transition: .5s linear;
-  // }
+  .title-animation-appear.title-animation-appear-active {
+    opacity: 1;
+    margin: 100px 0 30px;
+    transition: .5s linear;
+  }
 
   @for $i from 1 through 12 {
     .text-animation-#{$i}-appear {
       opacity: 0.01;
-      margin-left: -20px;
+      margin-top: 20px;
     }
 
     .text-animation-#{$i}-appear.text-animation-#{$i}-appear-active {
-      opacity: .3;
-      margin-left: 0;
+      opacity: 1;
+      margin-top: 0;
       transition: $i * 0.5s;
     }
   }

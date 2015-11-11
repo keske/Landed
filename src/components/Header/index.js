@@ -46,6 +46,7 @@ export class Header extends Component {
   handleMenu() {
     const { showPhoneMenu } = this.props;
 
+    // jQuery yeah, but... okeey
     if (showPhoneMenu) {
       this.actions.show(false);
       $('body, html').css('overflow', 'scroll');
@@ -66,10 +67,10 @@ export class Header extends Component {
                 activeClassName="active">
             About
           </Link>
-          <Link to="oportuninties"
+          { /* <Link to="oportuninties"
                 activeClassName="active">
             Investment oportuninties
-          </Link>
+          </Link> */ }
           <Link to="faq"
                 activeClassName="active">
             F.A.Q.
@@ -80,7 +81,7 @@ export class Header extends Component {
 
     function renderLogin() {
       return (
-        <button className="login">
+        <button className="login hidden-xs hidden-sm">
           Log in
         </button>
       );
@@ -89,8 +90,8 @@ export class Header extends Component {
     return (
       <section className={ `${ styles }` }>
         <ReactCSSTransitionGroup transitionName="el-animation"
-                                       transitionAppear={true}
-                                       transitionAppearTimeout={500}>
+                                       transitionAppear={ true }
+                                       transitionAppearTimeout={ 500 }>
           <div className="top-header">
             <div className="container">
               <div className="row">
@@ -124,7 +125,9 @@ export class Header extends Component {
                 </div>
               </div>
             </div>
-            <div className="logo-small" />
+            <Link to="/">
+              <div className="logo-small" />
+            </Link>
           </div>
         </ReactCSSTransitionGroup>
         <div className={ `phone-menu ${ showPhoneMenu ? 'show' : '' }` }>

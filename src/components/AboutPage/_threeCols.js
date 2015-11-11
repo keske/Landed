@@ -1,26 +1,31 @@
 import React, { Component } from 'react';
+import R from 'ramda';
 
-import oval from './files/oval.png';
+/* images */
+const icons = [];
+R.forEach(name =>
+  icons.push(require(`./files/about-${ name }.png`)),
+  R.range(1, 3 + 1));
 
 export class ThreeCols extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <div className="row threeCol">
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
-            <img src={ oval } />
+            <img src={ icons[0] } />
             <p>
               Instead of a bank that gets its money back no matter what, we share in the ups and downs with you.
             </p>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
-            <img src={ oval } />
+            <img src={ icons[1] } />
             <p>
               Instead of a bank that gets its money back no matter what, we share in the ups and downs with you.
             </p>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
-            <img src={ oval } />
+            <img src={ icons[2] } />
             <p>
               Instead of a bank that gets its money back no matter what, we share in the ups and downs with you.
             </p>
