@@ -17,6 +17,7 @@ export class Header extends Component {
   static propTypes = {
     dispatch: React.PropTypes.func,
     showPhoneMenu: React.PropTypes.bool,
+    showLoginMenu: React.PropTypes.bool,
   }
 
   constructor(props) {
@@ -58,7 +59,7 @@ export class Header extends Component {
 
   render() {
     const { show } = this.state;
-    const { showPhoneMenu } = this.props;
+    const { showPhoneMenu, showLoginMenu } = this.props;
 
     function renderNav() {
       return (
@@ -71,17 +72,17 @@ export class Header extends Component {
                 activeClassName="active">
             Investment oportuninties
           </Link> */ }
-          <Link to="faq"
+          <a href="https://golanded.zendesk.com/hc/en-us"
                 activeClassName="active">
             F.A.Q.
-          </Link>
+          </a>
         </nav>
       );
     }
 
     function renderLogin() {
       return (
-        <button className="login hidden-xs hidden-sm">
+        <button className={ `login hidden-xs hidden-sm ${ showLoginMenu ? 'hide' : '' }` }>
           Log in
         </button>
       );
@@ -103,7 +104,8 @@ export class Header extends Component {
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 hidden-xs hidden-sm">
                   { renderNav() }
                 </div>
-                <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 text-right hidden-xs hidden-sm">
+                <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 text-right hidden-xs hidden-sm"
+                     onClick={ () => { this.actions.showLoginMenu(true); } }>
                   { renderLogin() }
                 </div>
                 <div className="col-xs-12 col-sm-12 hidden-md hidden-lg text-right"
@@ -120,7 +122,8 @@ export class Header extends Component {
                 <div className="col-xs-12 col-sm-8 col-md-8 col-lg-9">
                   { renderNav() }
                 </div>
-                <div className="col-xs-12 col-sm-4 col-md-4 col-lg-3 text-right">
+                <div className="col-xs-12 col-sm-4 col-md-4 col-lg-3 text-right"
+                     onClick={ () => { this.actions.showLoginMenu(true); } }>
                   { renderLogin() }
                 </div>
               </div>
@@ -132,9 +135,19 @@ export class Header extends Component {
         </ReactCSSTransitionGroup>
         <div className={ `phone-menu ${ showPhoneMenu ? 'show' : '' }` }>
           { renderNav() }
-          <div className="text-center">
+          <div className="text-center"
+               onClick={ () => { this.actions.showLoginMenu(true); } }>
             { renderLogin() }
           </div>
+        </div>
+        <div className={ `login-menu ${ showLoginMenu ? 'show' : '' }` }>
+          <span className="cross"
+                onClick={ () => { this.actions.showLoginMenu(false); } } />
+          <input type="email" placeholder="e-mail" />
+          <input type="password" placeholder="password" />
+          <submit>
+            Log in
+          </submit>
         </div>
         <div className={ `black-layer ${ showPhoneMenu ? 'show' : '' }` } />
       </section>

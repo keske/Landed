@@ -1,5 +1,6 @@
 const initialState = {
   showPhoneMenu: false,
+  showLoginMenu: false,
 };
 
 export function app(state = initialState, action) {
@@ -8,6 +9,12 @@ export function app(state = initialState, action) {
     return {
       ...state,
       showPhoneMenu: action.act,
+    };
+
+  case 'SHOW_LOGIN':
+    return {
+      ...state,
+      showLoginMenu: action.act,
     };
 
   default:

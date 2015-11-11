@@ -10,7 +10,7 @@ export class WhyDoesLandedExist extends Component {
               Why does Landed exist?
             </h2>
           </div>
-          <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4 text-center">
+          <div className="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 text-center">
             <p>
               Here’s a little story to help tell the tale of why we’re  so focused on changing the housing market, forever:
             </p>
@@ -20,7 +20,7 @@ export class WhyDoesLandedExist extends Component {
           </div>
 
           <div className="row whyDoesLandedExist two-folks">
-            <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offest-2 col-lg-offset-2 text-left">
+            <div className="col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xs-offset-1 col-sm-offset-1 col-md-offset-2 col-lg-offset-2 text-left">
               <p className="black">
                 Richie is a married middle-aged man.  Richie has had a pretty successful life.
               </p>
@@ -34,7 +34,7 @@ export class WhyDoesLandedExist extends Component {
                 - Almost all of his wealth is in diversified financial instruments (stocks, bonds, cash).
               </p>
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-left">
+            <div className="col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xs-offset-1 col-sm-offset-1 col-md-offset-2 col-lg-offset-2 text-left">
               <p className="black">
                 Susan is a young married woman about to have her first child. She bought a house just two years ago.
               </p>
@@ -49,7 +49,7 @@ export class WhyDoesLandedExist extends Component {
           </div>
 
           <div className="row whyDoesLandedExist footer-text">
-            <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offest-2 col-lg-offset-2 text-left">
+            <div className="col-xs-10 col-sm-10 col-md-8 col-lg-8 col-xs-offset-1 col-sm-offset-1 col-md-offset-2 col-lg-offset-2 text-left">
               <p>
                 During the ‘Great Recession’, people like Susan (a median homebuyer), lost over 35% of their net worth. People less wealthy than Susan lost everything. Many of them owed more on their mortgage then their house was worth (known as ‘being underwater’). In fact, today, almost eight years later, over 15% of US homeowners are still underwater on their homes.
               </p>

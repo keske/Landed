@@ -230,6 +230,97 @@
     }
   }
 
+  .login-menu {
+    opacity: 0;
+    top: -400px;
+
+    transition: .4s;
+
+    background: rgba(0, 0, 0, .64);
+    
+    position: fixed;
+    z-index: 7;
+
+    width: 360px;
+
+    right: 0;
+
+    border-bottom-left-radius: 44px;
+
+    padding: 80px 0 60px;
+
+    &.show {
+      opacity: 1;
+      top: 0;
+    }
+
+    .cross {
+      width: 15px;
+      height: 14px;
+
+      display: inline-block;
+
+      background: url(../files/close.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      position: absolute;
+
+      top: 40px;
+      right: 40px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      display: block;
+
+      width: 80%;
+      margin-left: 10%;
+      margin-bottom: 30px;
+      
+      border: none;
+      border-bottom: 1px solid #FFF;
+      border-radius: 0;
+
+      background: none;
+
+      font-family: 'Jannon10Pro-Italic';
+      font-size: 14px;
+
+      padding: 3px 7px;
+
+      outline: none;
+    
+      $placeholderColor: rgba(255, 255, 255, 1);
+      ::-webkit-input-placeholder {
+        color: $placeholderColor;
+      }
+      ::-moz-placeholder {
+        color: $placeholderColor;
+      }
+      :-moz-placeholder {
+        color: $placeholderColor;
+      }
+      :-ms-input-placeholder {
+        color: $placeholderColor;
+      }
+    }
+
+    submit {
+      right: 40;
+      position: absolute;
+      
+      font-family: 'SupriaSans Regular';
+      font-size: 14px;
+      color: #FFF;
+
+      border: 1px solid #FFF;
+      border-radius: 89px;
+
+      padding: 5px 20px;
+    }
+  }
+
   .black-layer {
     display: none;
 

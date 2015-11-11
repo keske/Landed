@@ -118,6 +118,10 @@
       display: block;
       margin-top: -20px;
 
+      @media (#{ $phone }) {
+        margin-top: -40px;
+      }
+
       span.label {
         font-family: 'Jannon10Pro-Italic';
         font-size: 15px;
@@ -238,6 +242,7 @@
       .state {
         width: 33.3333%;
         display: inline-block;
+        vertical-align: top;
 
         span.state-circle {
           $speed: .4s;
@@ -284,7 +289,7 @@
     color: #FFF;
 
     &.centered {
-      $width: 65%;
+      $width: 85%;
 
       width: $width;
       margin-left: (100 - $width) / 2;

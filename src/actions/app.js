@@ -5,3 +5,9 @@ export function show(act) {
   };
 }
 
+export function showLoginMenu(act) {
+  return {
+    type: 'SHOW_LOGIN',
+    act,
+  };
+}

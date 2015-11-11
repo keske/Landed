@@ -21,7 +21,7 @@ export class WhoIsLanded extends Component {
               </p>
               </div>
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-md-offest-3 col-lg-offset-3 text-center">
+            <div className="col-xs-8 col-sm-8 col-md-3 col-lg-3 col-xs-offset-2 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
               <img src={ alex } />
               <p className="name">
                 Alex Lofton
@@ -34,7 +34,7 @@ export class WhoIsLanded extends Component {
                  Dancer by night.
               </p>
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 text-center">
+            <div className="col-xs-8 col-sm-8 col-md-3 col-lg-3 col-xs-offset-2 col-sm-offset-2 col-md-offset-0 col-lg-offset-0 text-center">
               <img src={ jonathan } />
               <p className="name">
                 Jonathan Asmis

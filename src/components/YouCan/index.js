@@ -71,7 +71,7 @@ export class YouCan extends Component {
                 </div>
                 <div className="col-xs-10 col-sm-10 col-md-12 col-lg-12 text-col">
                   <p>
-                    Bring home that cute pup
+                    Bring home  that cute pup
                   </p>
                 </div>
               </div>
