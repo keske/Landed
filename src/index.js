@@ -10,7 +10,8 @@ const store = configureStore();
 
 ReactDOM.render(
   <Provider store={ store }>
-    <Router history={ createHistory() }>
+    <Router onUpdate={ () => window.scrollTo(0, 0) }
+            history={ createHistory() }>
       <Redirect from="/" to="home" />
       { routes }
     </Router>

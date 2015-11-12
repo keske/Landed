@@ -15,10 +15,6 @@ export class IntroImage extends Component {
   render() {
     const { title, text } = this.props;
 
-    // const style = {
-    //   background: `url(files/${ image })`,
-    // };
-
     return (
       <section className={ `${styles}` }>
         <div className="container">
@@ -27,7 +23,7 @@ export class IntroImage extends Component {
               <ReactCSSTransitionGroup transitionName="title-animation"
                                        transitionAppear={ true }
                                        transitionAppearTimeout={ 700 }>
-                <h1 className="hidden-xs hidden-sm">
+                <h1>
                   { title }
                 </h1>
               </ReactCSSTransitionGroup>

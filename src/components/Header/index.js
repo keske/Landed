@@ -47,38 +47,36 @@ export class Header extends Component {
   handleMenu() {
     const { showPhoneMenu } = this.props;
 
-    // jQuery yeah, but... okeey
     if (showPhoneMenu) {
       this.actions.show(false);
-      $('body, html').css('overflow', 'scroll');
     } else {
       this.actions.show(true);
-      $('body, html').css('overflow', 'hidden');
     }
+  }
+
+  renderNav() {
+    return (
+      <nav>
+        <Link onClick={ () => this.actions.show(false) }
+              to="about"
+              activeClassName="active">
+          About
+        </Link>
+        { /* <Link to="oportuninties"
+              activeClassName="active">
+          Investment oportuninties
+        </Link> */ }
+        <a href="https://golanded.zendesk.com/hc/en-us"
+              activeClassName="active">
+          F.A.Q.
+        </a>
+      </nav>
+    );
   }
 
   render() {
     const { show } = this.state;
     const { showPhoneMenu, showLoginMenu } = this.props;
-
-    function renderNav() {
-      return (
-        <nav>
-          <Link to="about"
-                activeClassName="active">
-            About
-          </Link>
-          { /* <Link to="oportuninties"
-                activeClassName="active">
-            Investment oportuninties
-          </Link> */ }
-          <a href="https://golanded.zendesk.com/hc/en-us"
-                activeClassName="active">
-            F.A.Q.
-          </a>
-        </nav>
-      );
-    }
 
     function renderLogin() {
       return (
@@ -86,6 +84,13 @@ export class Header extends Component {
           Log in
         </button>
       );
+    }
+
+    // jQuery yeah, but... okaaay
+    if (!showPhoneMenu) {
+      $('body, html').css('overflow', 'scroll');
+    } else {
+      $('body, html').css('overflow', 'hidden');
     }
 
     return (
@@ -102,7 +107,7 @@ export class Header extends Component {
                   </Link>
                 </div>
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 hidden-xs hidden-sm">
-                  { renderNav() }
+                  { this.renderNav() }
                 </div>
                 <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 text-right hidden-xs hidden-sm"
                      onClick={ () => { this.actions.showLoginMenu(true); } }>
@@ -114,13 +119,16 @@ export class Header extends Component {
                 </div>
               </div>
             </div>
-            <div className="logo-symbol" />
+            <Link to="/">
+              <div className="logo-symbol" />
+            </Link>
           </div>
+          <div className={ `green-header ${ show ? 'show' : '' } ` } />
           <div className={ `fixed-header ${ show ? 'show' : '' } hidden-xs hidden-sm` }>
             <div className="container">
               <div className="row">
                 <div className="col-xs-12 col-sm-8 col-md-8 col-lg-9">
-                  { renderNav() }
+                  { this.renderNav() }
                 </div>
                 <div className="col-xs-12 col-sm-4 col-md-4 col-lg-3 text-right"
                      onClick={ () => { this.actions.showLoginMenu(true); } }>
@@ -134,7 +142,7 @@ export class Header extends Component {
           </div>
         </ReactCSSTransitionGroup>
         <div className={ `phone-menu ${ showPhoneMenu ? 'show' : '' }` }>
-          { renderNav() }
+          { this.renderNav() }
           <div className="text-center"
                onClick={ () => { this.actions.showLoginMenu(true); } }>
             { renderLogin() }

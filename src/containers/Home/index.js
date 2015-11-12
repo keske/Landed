@@ -29,8 +29,8 @@ export class Home extends Component {
       <section>
         <DocumentMeta { ...metaData } />
         <ReactCSSTransitionGroup transitionName="page-parts-animation"
-                                       transitionAppear={true}
-                                       transitionAppearTimeout={1000}>
+                                       transitionAppear={ true }
+                                       transitionAppearTimeout={ 1000 }>
           <TopImage />
           <Subscribe />
           <Toggle />

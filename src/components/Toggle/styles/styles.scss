@@ -177,7 +177,7 @@
     }
 
     .states {
-      width: 400px;
+      width: 500px;
       min-height: 100px;
 
       display: inline-block;
@@ -215,6 +215,9 @@
         .degree-of-control {
           @include circle($red);
         }
+        .tax-benefits {
+          @include circle($red);
+        }
       }
       &.landed {
         .monthly-payments {
@@ -224,6 +227,9 @@
           @include circle($green);
         }
         .degree-of-control {
+          @include circle($green);
+        }
+        .tax-benefits {
           @include circle($green);
         }
       }
@@ -237,10 +243,13 @@
         .degree-of-control {
           @include circle($green);
         }
+        .tax-benefits {
+          @include circle($green);
+        }
       }
 
       .state {
-        width: 33.3333%;
+        width: 25%;
         display: inline-block;
         vertical-align: top;
 
