@@ -36,24 +36,24 @@
 
   .title-animation-appear {
     opacity: 0.01;
-    margin: 120px 0 30px;
+    // margin: 120px 0 30px;
   }
 
   .title-animation-appear.title-animation-appear-active {
     opacity: 1;
-    margin: 100px 0 30px;
+    // margin: 100px 0 30px;
     transition: .5s linear;
   }
 
   @for $i from 1 through 12 {
     .text-animation-#{$i}-appear {
       opacity: 0.01;
-      margin-top: 20px;
+      // margin-top: 20px;
     }
 
     .text-animation-#{$i}-appear.text-animation-#{$i}-appear-active {
       opacity: 1;
-      margin-top: 0;
+      // margin-top: 0;
       transition: $i * 0.5s;
     }
   }

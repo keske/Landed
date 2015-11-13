@@ -17,23 +17,23 @@
 
   .title-animation-appear {
     opacity: 0.01;
-    margin: 120px 0 30px;
+    // margin: 120px 0 30px;
   }
 
   .title-animation-appear.title-animation-appear-active {
     opacity: 1;
-    margin: 100px 0 30px;
+    // margin: 100px 0 30px;
     transition: .5s linear;
   }
 
   .text-animation-appear {
     opacity: 0.01;
-    margin-top: 50px;
+    // margin-top: 50px;
   }
 
   .text-animation-appear.text-animation-appear-active {
     opacity: 1;
-    margin-top: 30px;
+    // margin-top: 30px;
     transition: .5s linear;
   }
 
