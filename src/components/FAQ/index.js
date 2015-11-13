@@ -13,6 +13,9 @@ const QuestionsAndAnswers = [{
 }, {
   question: "Is this really like owning a home?  How is this different?",
   answer: "With Landed, you’re sharing your home investment, not your home experience.  You can paint the walls, fix up the kitchen, build a new deck, AirBnB, sublet or get a puppy; we’re just an alternative financing choice.<br />The only thing that will require approval is major structural changes to the property.  If you want to tear down some walls or build an extension, we just want to partner with you to make sure it’s adding value to the property.",
+}, {
+  question: "Does rent change year to year?  How do you set the buy-out price?",
+  answer: "Rent changes year-to-year based on nearby home sales.  Before closing on your home, we'll sit down with you and agree to a method for assessing rent (either through an online rent index or through property appraisals).  To determine how much Landed's co-investment is worth, we'll use a local home price index to track the appreciation of the home.",
 }];
 
 export class FAQ extends Component {

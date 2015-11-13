@@ -14,7 +14,7 @@ export class WhyDoesLandedExist extends Component {
             <p>
               Here’s a little story to help tell the tale of why we’re  so focused on changing the housing market, forever:
             </p>
-            <p className="black">
+            <p className="black second-paragraph">
               Let’s take a look at two folks, Richie and Susan.
             </p>
           </div>
@@ -35,7 +35,7 @@ export class WhyDoesLandedExist extends Component {
               - Almost all of his wealth is in diversified financial instruments (stocks, bonds, cash).
             </p>
           </div>
-          <div className="col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xs-offset-1 col-sm-offset-1 col-md-offset-2 col-lg-offset-2 text-left">
+          <div className="col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0 text-left">
             <p className="black">
               Susan is a young married woman about to have her first child. She bought a house just two years ago.
             </p>

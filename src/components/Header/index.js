@@ -88,9 +88,9 @@ export class Header extends Component {
 
     // jQuery yeah, but... okaaay
     if (!showPhoneMenu) {
-      $('body, html').css('overflow', 'scroll');
+      $('html').css('overflow', 'scroll');
     } else {
-      $('body, html').css('overflow', 'hidden');
+      $('html').css('overflow', 'hidden');
     }
 
     return (
@@ -109,7 +109,7 @@ export class Header extends Component {
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 hidden-xs hidden-sm">
                   { this.renderNav() }
                 </div>
-                <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 text-right hidden-xs hidden-sm"
+                <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 text-right hidden-xs hidden-sm login-fixed-button"
                      onClick={ () => { this.actions.showLoginMenu(true); } }>
                   { renderLogin() }
                 </div>
@@ -127,10 +127,10 @@ export class Header extends Component {
           <div className={ `fixed-header ${ show ? 'show' : '' } hidden-xs hidden-sm` }>
             <div className="container">
               <div className="row">
-                <div className="col-xs-12 col-sm-8 col-md-8 col-lg-9">
+                <div className="col-xs-12 col-sm-8 col-md-8 col-lg-9 fixed-nav">
                   { this.renderNav() }
                 </div>
-                <div className="col-xs-12 col-sm-4 col-md-4 col-lg-3 text-right"
+                <div className="col-xs-12 col-sm-4 col-md-4 col-lg-3 text-right login-fixed-button"
                      onClick={ () => { this.actions.showLoginMenu(true); } }>
                   { renderLogin() }
                 </div>

@@ -24,7 +24,7 @@
       
       li {
         padding: 20px 0;
-        border-bottom: 1px solid #CCC;
+        border-bottom: 1px solid #F2F2F2;
 
         @media (#{ $phone }) {
           border: none;
@@ -117,6 +117,9 @@
     }
     &.arrow-2 {
       margin-top: 230px;
+    }
+    &.arrow-3 {
+      margin-top: 314px;
     }
   }
 

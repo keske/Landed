@@ -52,8 +52,7 @@ export class HowItWorks extends Component {
                 3. You stay until you’re ready to sell
               </p>
               <p className="paragraph">
-                We help manage the property and all co-investor interactions. You pay rent on the part of the home you don’t own, and rent rises fairly based on nearby house prices. When you decide to move and sale prices have gone up, you earn money on the portion of the home you own.
-
+                You pay rent on the part of the home you don’t own, and can buy-out Landed at any time. When you decide to move, you split the revenues according to ownership shar
               </p>
             </div>
 

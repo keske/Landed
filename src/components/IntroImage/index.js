@@ -12,11 +12,29 @@ export class IntroImage extends Component {
     image: React.PropTypes.string,
   }
 
+  constructor(props) {
+    super(props);
+    this.parallax = this.parallax.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.parallax);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.parallax);
+  }
+
+  parallax() {
+    const top = window.pageYOffset / 10;
+    this.refs.parallax.style.backgroundPositionY = top;
+  }
+
   render() {
     const { title, text } = this.props;
 
     return (
-      <section className={ `${styles}` }>
+      <section className={ `${styles}` } ref="parallax">
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11 col-md-offset-1 col-lg-offset-1">

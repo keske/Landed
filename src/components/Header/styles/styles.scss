@@ -43,9 +43,13 @@
         font-family: 'SupriaSans Regular';
         font-size: 16px;
 
-        border-bottom: 2px solid #FFF;
+        // border-bottom: 2px solid #FFF;
+        border-bottom: none;
 
-        margin-right: 60px;
+        position: relative;
+        top: 5px;
+
+        margin-right: 40px;
 
         transition: 1s;
 
@@ -171,9 +175,10 @@
       font-family: 'SupriaSans Regular';
       font-size: 14px;
 
-      border-bottom: 2px solid #FFF;
+      // border-bottom: 2px solid #FFF;
+      border-bottom: none;
 
-      margin-right: 60px;
+      margin-right: 40px;
 
       &.active, &:hover {
         border-bottom: 7px solid #FFF;
@@ -354,5 +359,15 @@
     &.show {
       display: block;
     }
+  }
+
+  .fixed-nav {
+    position: fixed;
+    left: 130px;
+  }
+
+  .login-fixed-button {
+    position: absolute;
+    right: 20px;
   }
 }

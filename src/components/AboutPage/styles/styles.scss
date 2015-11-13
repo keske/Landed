@@ -47,7 +47,7 @@
         margin-top: 40px;
       }
     }
-
+    
     img {
       width: 100%;
     }
@@ -74,21 +74,22 @@
   }
 
   .whyDoesLandedExist {
-    margin-top: 100px;
+    margin-top: 60px;
 
     h2 {
       margin-bottom: 60px;
     }
 
-    p.black {
-      margin-top: 40px;
+    p.second-paragraph {
+      font-size: 20px;
+      margin-top: 50px;
     }
 
     .two-folks {
 
       p {
         width: 90%;
-
+        
         line-height: 24px;
       }
     }
@@ -99,6 +100,10 @@
       p {
         margin-bottom: 30px;
       }
+    }
+
+    p {
+      line-height: 24px;
     }
   }
 }
