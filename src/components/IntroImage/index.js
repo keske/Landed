@@ -26,10 +26,10 @@ export class IntroImage extends Component {
   }
 
   parallax() {
-    const top = window.pageYOffset / 10;
+    const top = (window.pageYOffset - this.refs.parallax.offsetTop) / 30;
 
     if (screen.width >= 720) {
-      this.refs.parallax.style.backgroundPositionY = top;
+      this.refs.parallax.style.backgroundPosition = `0px ${ top }px`;
     }
   }
 
