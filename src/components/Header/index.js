@@ -123,7 +123,7 @@ export class Header extends Component {
               <div className="logo-symbol" />
             </Link>
           </div>
-          <div className={ `green-header ${ show ? 'show' : '' } ` } />
+          <div className={ `green-header ${ show ? 'show' : '' } hidden-md hidden-lg` } />
           <div className={ `fixed-header ${ show ? 'show' : '' } hidden-xs hidden-sm` }>
             <div className="container">
               <div className="row">
