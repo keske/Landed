@@ -8,25 +8,42 @@ export class TopImage extends Component {
 
   constructor(props) {
     super(props);
-    this.parallax = this.parallax.bind(this);
+    this.onScrollAnimation = this.onScrollAnimation.bind(this);
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.parallax);
+    window.addEventListener('scroll', this.onScrollAnimation);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.parallax);
+    window.removeEventListener('scroll', this.ponScrollAnimation);
+  }
+
+  onScrollAnimation() {
+    this.parallax();
+    this.blurImage();
   }
 
   parallax() {
-    const top = window.pageYOffset / 10;
-    this.refs.parallax.style.backgroundPositionY = top;
+    const top = window.pageYOffset / 30;
+
+    if (screen.width >= 720) {
+      this.refs.parallax.style.backgroundPosition = `0px ${ top }px`;
+    }
+  }
+
+  blurImage() {
+    const opacity = (window.pageYOffset / 190).toFixed(1);
+
+    if (screen.width >= 720) {
+      this.refs.blurred.style.opacity = opacity;
+    }
   }
 
   render() {
     return (
       <section className={ `${styles}` } ref="parallax">
+        <div className="blurred-image" ref="blurred" />
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11 col-md-offset-1 col-lg-offset-1">

@@ -27,7 +27,10 @@ export class IntroImage extends Component {
 
   parallax() {
     const top = window.pageYOffset / 10;
-    this.refs.parallax.style.backgroundPositionY = top;
+
+    if (screen.width >= 720) {
+      this.refs.parallax.style.backgroundPositionY = top;
+    }
   }
 
   render() {

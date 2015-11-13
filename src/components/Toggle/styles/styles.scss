@@ -119,7 +119,7 @@
       margin-top: -20px;
 
       @media (#{ $phone }) {
-        margin-top: -40px;
+        margin-top: -50px;
       }
 
       span.label {
@@ -132,13 +132,18 @@
         display: inline-block;
 
         @media (#{ $phone }) {
-          width: 20%;
+          width: 33.3333%;
         }
       }
 
       .logo {
         width: 54px;
         height: 20px;
+
+        @media (#{ $phone }) {
+          width: 64px;
+          height: 20px;
+        }
 
         background: url(../files/logo.svg);
         background-size: 100% auto;
@@ -148,6 +153,10 @@
         position: relative;
 
         top: 10px;
+
+        @media (#{ $phone }) {
+          top: 6px;
+        }
       }
     }
 

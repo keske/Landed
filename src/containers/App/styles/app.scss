@@ -22,7 +22,7 @@
   @for $i from 1 through 12 {
     &:nth-child(#{$i}) {
       opacity: 1;
-      transition: $i * 0.5s;
+      transition: $i * 0.7s;
     }
   }
 }

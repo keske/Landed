@@ -19,8 +19,11 @@ export class ImageBlock extends Component {
   }
 
   parallax() {
-    const top = window.pageYOffset / 10 + -160;
-    this.refs.parallax.style.backgroundPositionY = top;
+    const top = window.pageYOffset / 30;
+
+    if (screen.width >= 720) {
+      this.refs.parallax.style.backgroundPosition = `0px ${ top }px`;
+    }
   }
 
   render() {

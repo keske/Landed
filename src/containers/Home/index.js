@@ -28,10 +28,11 @@ export class Home extends Component {
     return (
       <section>
         <DocumentMeta { ...metaData } />
+        <TopImage />
+
         <ReactCSSTransitionGroup transitionName="page-parts-animation"
                                        transitionAppear={ true }
-                                       transitionAppearTimeout={ 1000 }>
-          <TopImage />
+                                       transitionAppearTimeout={ 3000 }>
           <Subscribe />
           <Toggle />
           <YouCan />
