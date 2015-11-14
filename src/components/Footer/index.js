@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 /* component styles */
 import styles from './styles';
@@ -22,20 +23,20 @@ export class Footer extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
               <div className="social">
-                <a href="#" className="twitter" />
-                <a href="#" className="facebook" />
-                <a href="#" className="instagram" />
-                <a href="#" className="linkedin" />
-                <a href="#" className="pinterest" />
-                <a href="#" className="google" />
+                <a href="https://twitter.com/landedhomes" className="twitter" />
+                <a href="https://www.facebook.com/golanded" className="facebook" />
+                <a href="http://instagram.com/landedhomes" className="instagram" />
+                <a href="https://plus.google.com/118374456065627678011/about" className="google" />
               </div>
               <p className="copyright">
                 Copyright © Landed, Inc
                 <br />
                 Landed was founded in 2015 in the San Francisco Bay Area.
                 <br />
-                We believe everyone can be an owner.
-                <a href="#">Discover how.</a>
+                We believe everyone can be a homeowner.
+                <Link to="about">
+                  Discover how.
+                </Link>
               </p>
             </div>
           </div>

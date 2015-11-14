@@ -56,7 +56,7 @@ export class TopImage extends Component {
                 </h1>
                 <h1 className="hidden-md hidden-lg">
                   Split your home<br />
-                  investment, not the space
+                  investment, not&nbsp;the&nbsp;space
                 </h1>
               </ReactCSSTransitionGroup>
             </div>
@@ -92,17 +92,6 @@ export class TopImage extends Component {
                   <span className="icon" />
                   <p>
                     Pay expenses on the portion you own.<br />Pay rent to co-investors on the rest.
-                  </p>
-                </div>
-              </ReactCSSTransitionGroup>
-
-              <ReactCSSTransitionGroup transitionName="text-animation-3"
-                                       transitionAppear={ true }
-                                       transitionAppearTimeout={ 1500 }>
-                <div className="group">
-                  <span className="icon" />
-                  <p>
-                    Get benefits of ownership with less risk, less debt, and&nbsp;fewer headaches.
                   </p>
                 </div>
               </ReactCSSTransitionGroup>

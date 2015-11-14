@@ -64,7 +64,8 @@
     margin: 100px 0 30px;
 
     @media (#{ $phone }) {
-      font-size: 22px;
+      width: 90%;
+      font-size: 28px;
     }
   }
 
@@ -89,10 +90,6 @@
       
       margin-left: - $left - $size;
       margin-right: $left;
-
-      @media (#{ $phone }) {
-        display: none;
-      }
     }
 
     p {
@@ -107,7 +104,6 @@
 
       @media (#{ $phone }) {
         width: 100%;
-        font-size: 12px;
       }
     }
   }

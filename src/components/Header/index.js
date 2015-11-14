@@ -80,9 +80,16 @@ export class Header extends Component {
 
     function renderLogin() {
       return (
-        <button className={ `login hidden-xs hidden-sm ${ showLoginMenu ? 'hide' : '' }` }>
-          Log in
-        </button>
+        <span>
+          <button className={ `login hidden-xs hidden-sm ${ showLoginMenu ? 'hide' : '' }` }>
+            Log in
+          </button>
+          <a href="https://golanded.typeform.com/to/GbesjE">
+            <button className={ `signup hidden-xs hidden-sm ${ showLoginMenu ? 'hide' : '' }` }>
+              Sign up
+            </button>
+          </a>
+        </span>
       );
     }
 

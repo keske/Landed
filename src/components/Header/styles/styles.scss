@@ -28,7 +28,7 @@
       width: 103px;
       height: 43px;
 
-      background: url(../files/logo.svg);
+      background: url(../files/logo.png);
       background-repeat: no-repeat;
       background-size: 100% auto;
 
@@ -74,7 +74,7 @@
     width: 45px;
     height: 58px;
 
-    background: url(../files/logo-symbol.svg);
+    background: url(../files/logo-symbol.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
 
@@ -87,13 +87,13 @@
       top: 20px;
       left: 20px;
 
-      background: url(../files/logo-phone.svg);
+      background: url(../files/logo-phone.png);
       background-repeat: no-repeat;
       background-size: 100% auto;
     }
   }
 
-  button.login {
+  button.login, button.signup {
     color: #FFF;
     font-family: 'SupriaSans Regular';
     font-size: 14px;
@@ -110,6 +110,17 @@
     &:hover {
       background: #FFF;
       color: $green;
+    }
+
+    &.signup {
+      background: rgba(255, 255, 255, .8);
+      color: $green;
+
+      margin-left: 20px;
+
+      &:hover {
+        background: #FFF;
+      }
     }
   }
 
@@ -159,9 +170,9 @@
       display: inline-block;
 
       width: 98px;
-      height: 28px;
+      height: 30px;
 
-      background: url(../files/small-logo.svg);
+      background: url(../files/small-logo.png);
       background-repeat: no-repeat;
       background-size: cover;
     }
@@ -185,7 +196,7 @@
       }
     }
 
-    button.login {
+    button.login, button.signup {
       top: -8px;
     }
   }
