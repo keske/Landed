@@ -71,7 +71,8 @@ export class Toggle extends Component {
   }
 
   handleMouseUp() {
-    const halfOfBar = window.innerWidth / 2 - this.refs.bar.offsetWidth;
+    // const halfOfBar = window.innerWidth / 2 - this.refs.bar.offsetWidth;
+    const halfOfBar = 250;
 
     this.refs.circle.style.left = '50%';
 
