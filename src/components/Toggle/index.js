@@ -46,10 +46,11 @@ export class Toggle extends Component {
   }
 
   handleMouseDown() {
-    const halfOfBar = (window.innerWidth / 2) - this.refs.bar.offsetWidth;
+    const circleWidth = this.refs.circle.offsetWidth / 2;
+    const halfOfBar = window.innerWidth / 2 - this.refs.bar.offsetWidth;
 
-    this.refs.circle.style.marginLeft = '-25px';
-    this.refs.circle.style.left = event.pageX - halfOfBar - (this.refs.circle.offsetWidth / 2);
+    this.refs.circle.style.marginLeft = '-35px';
+    this.refs.circle.style.left = event.pageX - halfOfBar - circleWidth;
 
     this.setState({
       mouseDown: true,
@@ -60,17 +61,17 @@ export class Toggle extends Component {
     const { mouseDown } = this.state;
 
     const circleWidth = this.refs.circle.offsetWidth / 2;
-    const halfOfBar = (window.innerWidth / 2) - this.refs.bar.offsetWidth;
+    const halfOfBar = window.innerWidth / 2 - this.refs.bar.offsetWidth;
 
-    if (event.pageX > (window.innerWidth / 2) - halfOfBar + circleWidth &&
-        event.pageX < (window.innerWidth / 2) + halfOfBar - circleWidth &&
+    if (event.pageX > (window.innerWidth / 2) - 250 + circleWidth &&
+        event.pageX < (window.innerWidth / 2) + 250 - circleWidth &&
         mouseDown) {
       this.refs.circle.style.left = event.pageX - halfOfBar - circleWidth;
     }
   }
 
   handleMouseUp() {
-    const halfOfBar = (window.innerWidth / 2) - this.refs.bar.offsetWidth;
+    const halfOfBar = window.innerWidth / 2 - this.refs.bar.offsetWidth;
 
     this.refs.circle.style.left = '50%';
 
@@ -98,6 +99,9 @@ export class Toggle extends Component {
   render() {
     const { status } = this.props;
     const { mouseDown } = this.state;
+
+    // 252
+    // console.log(window.innerWidth / 2 - 505);
 
     const data = {
       renting: {
