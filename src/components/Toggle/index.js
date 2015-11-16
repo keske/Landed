@@ -37,19 +37,16 @@ export class Toggle extends Component {
         monthlypayments: 'HIGHEST',
         upfrontcosts: 'LOWEST',
         degreeofcontrol: 'LEAST',
-        taxbenefits: 'NONE',
       },
       landed: {
         monthlypayments: 'LOWER THAN RENTING',
         upfrontcosts: 'LOWER THAN OWNING',
         degreeofcontrol: 'SIMILAR TO OWNING',
-        taxbenefits: 'SOME',
       },
       owning: {
         monthlypayments: 'LOWEST',
         upfrontcosts: 'HIGHEST',
         degreeofcontrol: 'MOST',
-        taxbenefits: 'MOST',
       },
     };
 
@@ -114,15 +111,6 @@ export class Toggle extends Component {
                     </p>
                     <p className="state-describe">
                       { data[`${ status }`].degreeofcontrol }
-                    </p>
-                  </div>
-                  <div className="state hidden-xs hidden-sm">
-                    <span className="state-circle tax-benefits" />
-                    <p className="state-title">
-                      Tax Benefits:
-                    </p>
-                    <p className="state-describe">
-                      { data[`${ status }`].taxbenefits }
                     </p>
                   </div>
                 </div>

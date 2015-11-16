@@ -25,6 +25,7 @@ export class Header extends Component {
 
     this.state = {
       show: false,
+      error: false,
     };
 
     this.animateHeader = this.animateHeader.bind(this);
@@ -75,7 +76,7 @@ export class Header extends Component {
   }
 
   render() {
-    const { show } = this.state;
+    const { show, error } = this.state;
     const { showPhoneMenu, showLoginMenu } = this.props;
 
     function renderLogin() {
@@ -160,7 +161,10 @@ export class Header extends Component {
                 onClick={ () => { this.actions.showLoginMenu(false); } } />
           <input type="email" placeholder="e-mail" />
           <input type="password" placeholder="password" />
-          <submit>
+          <span className={ `error ${ error ? 'show' : '' }` }>
+            wrong email/password
+          </span>
+          <submit onClick={ () => { this.setState({ error: true }); } }>
             Log in
           </submit>
         </div>

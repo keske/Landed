@@ -12,7 +12,7 @@ import { HowItWorks } from 'components/HowItWorks';
 import { FAQ } from 'components/FAQ';
 
 const metaData = {
-  title: 'Home',
+  title: 'Landed',
   description: 'I\'m a description. I can to create multiple tags',
   canonical: 'http://example.com/path/to/page',
   meta: {
@@ -24,12 +24,25 @@ const metaData = {
 };
 
 export class Home extends Component {
-  render() {
-    return (
-      <section>
-        <DocumentMeta { ...metaData } />
-        <TopImage />
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      loaded: false,
+    };
+  }
+
+  componentDidMount() {
+    this.setState({
+      loaded: true,
+    });
+  }
+
+  render() {
+    const { loaded } = this.state;
+
+    function renderContent() {
+      return (
         <ReactCSSTransitionGroup transitionName="page-parts-animation"
                                        transitionAppear={ true }
                                        transitionAppearTimeout={ 3000 }>
@@ -40,6 +53,18 @@ export class Home extends Component {
           <HowItWorks />
           <FAQ />
         </ReactCSSTransitionGroup>
+      );
+    }
+
+    console.log(loaded);
+
+    return (
+      <section>
+        <DocumentMeta { ...metaData } />
+        <TopImage />
+          {
+            loaded ? renderContent() : null
+          }
       </section>
     );
   }

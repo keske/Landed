@@ -224,9 +224,6 @@
         .degree-of-control {
           @include circle($red);
         }
-        .tax-benefits {
-          @include circle($red);
-        }
       }
       &.landed {
         .monthly-payments {
@@ -236,9 +233,6 @@
           @include circle($green);
         }
         .degree-of-control {
-          @include circle($green);
-        }
-        .tax-benefits {
           @include circle($green);
         }
       }
@@ -252,13 +246,10 @@
         .degree-of-control {
           @include circle($green);
         }
-        .tax-benefits {
-          @include circle($green);
-        }
       }
 
       .state {
-        width: 25%;
+        width: 33.3333%;
         display: inline-block;
         vertical-align: top;
 
