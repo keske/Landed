@@ -6,9 +6,7 @@
 
   background: url(../files/image-block.jpg);
   background-size: cover;
-  
-  // TODO: remove
-  margin-top: -5px;
+  background-repeat: no-repeat;
 
   @media (#{ $phone }) {
     height: 315px;

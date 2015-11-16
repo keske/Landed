@@ -20,17 +20,84 @@ export class Toggle extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      mouseDown: false,
+    };
+
     this.actions = bindActionCreators(actionCreators, this.props.dispatch);
 
+    // binds
+    this.handleMouseDown = this.handleMouseDown.bind(this);
+    this.handleMouseMove = this.handleMouseMove.bind(this);
+    this.handleMouseUp = this.handleMouseUp.bind(this);
     this.handlePosition = this.handlePosition.bind(this);
   }
 
+  componentDidMount() {
+    this.refs.circle.addEventListener('mousedown', this.handleMouseDown);
+    window.addEventListener('mousemove', this.handleMouseMove);
+    this.refs.circle.addEventListener('mouseup', this.handleMouseUp);
+  }
+
+  componentWillUnmount() {
+    // this.refs.circle.removeEventListener('mousedown', this.handleMouseDown);
+    // window.circle.removeEventListener('mousemove', this.handleMouseMove);
+    // this.refs.circle.removeEventListener('mouseup', this.handleMouseUp);
+  }
+
+  handleMouseDown() {
+    const halfOfBar = (window.innerWidth / 2) - this.refs.bar.offsetWidth;
+
+    this.refs.circle.style.marginLeft = '-25px';
+    this.refs.circle.style.left = event.pageX - halfOfBar - (this.refs.circle.offsetWidth / 2);
+
+    this.setState({
+      mouseDown: true,
+    });
+  }
+
+  handleMouseMove() {
+    const { mouseDown } = this.state;
+
+    const circleWidth = this.refs.circle.offsetWidth / 2;
+    const halfOfBar = (window.innerWidth / 2) - this.refs.bar.offsetWidth;
+
+    if (event.pageX > (window.innerWidth / 2) - halfOfBar + circleWidth &&
+        event.pageX < (window.innerWidth / 2) + halfOfBar - circleWidth &&
+        mouseDown) {
+      this.refs.circle.style.left = event.pageX - halfOfBar - circleWidth;
+    }
+  }
+
+  handleMouseUp() {
+    const halfOfBar = (window.innerWidth / 2) - this.refs.bar.offsetWidth;
+
+    this.refs.circle.style.left = '50%';
+
+    this.setState({
+      mouseDown: false,
+    });
+
+    if (event.pageX > (window.innerWidth / 2) - halfOfBar &&
+        event.pageX < (window.innerWidth / 2) - halfOfBar / 2) {
+      this.handlePosition('renting');
+    } else if (event.pageX < (window.innerWidth / 2) + halfOfBar &&
+               event.pageX < (window.innerWidth / 2) + halfOfBar / 2) {
+      this.handlePosition('landed');
+    } else if (event.pageX > (window.innerWidth / 2) + halfOfBar / 2 &&
+               event.pageX < (window.innerWidth / 2) + halfOfBar) {
+      this.handlePosition('owning');
+    }
+  }
+
   handlePosition(position) {
+    this.refs.circle.style.marginLeft = '';
     this.actions.set(position);
   }
 
   render() {
     const { status } = this.props;
+    const { mouseDown } = this.state;
 
     const data = {
       renting: {
@@ -66,8 +133,8 @@ export class Toggle extends Component {
               </p>
 
               <div className="toggle">
-                <div className="bar" />
-                <div className={ ` ${ status } circle` } ref="circle"/>
+                <div className="bar" ref="bar" />
+                <div className={ ` ${ status } circle ${ mouseDown ? 'without-speed' : '' }` } ref="circle"/>
                 <div className="labels">
                   <span className="label">
                     Renting

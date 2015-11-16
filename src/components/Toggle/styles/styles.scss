@@ -43,6 +43,9 @@
 
     text-align: center;
 
+    user-select: none;
+    -moz-user-select: none;
+
     .bar {
       width: $width;
       height: 36px;
@@ -65,6 +68,12 @@
     }
 
     .circle {
+      transition: .4s;
+
+      &.without-speed {
+        transition: 0s;
+      }
+
       @mixin bg($width) {
         $size: $width;
 
@@ -73,6 +82,13 @@
 
         background: url(../files/circle.png);
         background-size: cover;
+
+        position: absolute;
+        z-index: 7;
+
+        &.moving {
+          transition: 0s !important;
+        }
 
         &.renting {
           left: 50%;
@@ -103,8 +119,6 @@
       @include bg(50px)
 
       position: relative;
-
-      transition: .4s;
 
       top: -40px;
 
@@ -164,7 +178,7 @@
       width: 100%;
 
       position: relative;
-      z-index: 3;
+      z-index: 2;
 
       div {
         width: 20%;
