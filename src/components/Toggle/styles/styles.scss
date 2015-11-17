@@ -83,7 +83,6 @@
         background: url(../files/circle.png);
         background-size: cover;
 
-        position: absolute;
         z-index: 7;
 
         &.moving {
@@ -181,8 +180,8 @@
       z-index: 2;
 
       div {
-        width: 20%;
-        height: 70px;
+        width: 25%;
+        height: 130px;
 
         margin-top: -110px;
         
@@ -194,7 +193,7 @@
 
         @media (#{ $phone }) {
           width: 33.3333%;
-          margin-top: -140px;
+          height: 150px;
         }
       }
     }
