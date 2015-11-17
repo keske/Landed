@@ -138,7 +138,7 @@ export class Header extends Component {
                 <div className="col-xs-12 col-sm-8 col-md-8 col-lg-9 fixed-nav">
                   { this.renderNav() }
                 </div>
-                <div className="col-xs-12 col-sm-4 col-md-4 col-lg-3 text-right login-fixed-button"
+                <div className={ `${ show ? 'fixed' : '' } col-xs-12 col-sm-4 col-md-4 col-lg-3 text-right login-fixed-button` }
                      onClick={ () => { this.actions.showLoginMenu(true); } }>
                   { renderLogin() }
                 </div>

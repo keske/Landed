@@ -56,8 +56,6 @@ export class Home extends Component {
       );
     }
 
-    console.log(loaded);
-
     return (
       <section>
         <DocumentMeta { ...metaData } />

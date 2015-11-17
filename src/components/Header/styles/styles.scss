@@ -186,7 +186,6 @@
       font-family: 'SupriaSans Regular';
       font-size: 14px;
 
-      // border-bottom: 2px solid #FFF;
       border-bottom: none;
 
       margin-right: 40px;
@@ -318,12 +317,13 @@
 
       font-family: 'Jannon10Pro-Italic';
       font-size: 14px;
+      color: #FFF;
 
       padding: 3px 7px;
 
       outline: none;
     
-      $placeholderColor: rgba(255, 255, 255, 1);
+      $placeholderColor: rgba(255, 255, 255, .43);
       ::-webkit-input-placeholder {
         color: $placeholderColor;
       }
@@ -405,5 +405,9 @@
     top: 10px;
     right: 20px;
     top: 35px;
+
+    &.fixed {
+      top: 20px;
+    }
   }
 }
