@@ -18,7 +18,7 @@ export class Subscribe extends Component {
               <div className="col-xs-12 col-sm-12 col-md-1 col-lg-1 text-right">
                 <span className="email-icon hidden-xs hidden-sm" />
               </div>
-              <div className="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+              <div className="col-xs-4 col-sm-4 col-md-4 col-lg-3">
                 <span className="title">
                   Just curious? Leave us your email
                 </span>

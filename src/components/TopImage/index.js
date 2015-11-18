@@ -20,16 +20,7 @@ export class TopImage extends Component {
   }
 
   onScrollAnimation() {
-    this.parallax();
     this.blurImage();
-  }
-
-  parallax() {
-    const top = (window.pageYOffset - this.refs.parallax.offsetTop) / 30;
-
-    if (screen.width >= 720) {
-      this.refs.parallax.style.backgroundPosition = `0px ${ top }px`;
-    }
   }
 
   blurImage() {
@@ -42,7 +33,7 @@ export class TopImage extends Component {
 
   render() {
     return (
-      <section className={ `${styles}` } ref="parallax">
+      <section className={ `${styles}` }>
         <div className="blurred-image" ref="blurred" />
         <div className="container">
           <div className="row">
@@ -69,7 +60,7 @@ export class TopImage extends Component {
                 <div className="group">
                   <span className="icon" />
                   <p>
-                    Get benefits of ownership with as little as 5% down, less debt and fewer headaches
+                    Get benefits of ownership with as little as 5% down, less debt and fewer headaches.
                   </p>
                 </div>
               </ReactCSSTransitionGroup>

@@ -67,7 +67,7 @@ export class Header extends Component {
               activeClassName="active">
           Investment oportuninties
         </Link> */ }
-        <a href="https://golanded.zendesk.com/hc/en-us"
+        <a href="https://landed.zendesk.com"
               activeClassName="active">
           F.A.Q.
         </a>

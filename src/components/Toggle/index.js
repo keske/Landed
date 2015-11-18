@@ -49,10 +49,13 @@ export class Toggle extends Component {
     const circleWidth = this.refs.circle.offsetWidth / 2;
     const halfOfBar = window.innerWidth / 2 - this.refs.bar.offsetWidth;
 
-    if (window.innerWidth > 720) {
+    if (window.innerWidth > 1200) {
       this.refs.circle.style.marginLeft = '-35px';
       this.refs.circle.style.left = event.pageX - halfOfBar - circleWidth;
-    } else {
+    } else if (window.innerWidth > 720 && window.innerWidth < 1200) {
+      this.refs.circle.style.marginLeft = '-115px';
+      this.refs.circle.style.left = event.pageX - halfOfBar - circleWidth;
+    } else if (window.innerWidth < 720) {
       this.refs.circle.style.marginLeft = '-15px';
       this.refs.circle.style.left = event.pageX - circleWidth;
     }
@@ -71,9 +74,11 @@ export class Toggle extends Component {
     if (event.pageX > (window.innerWidth / 2) - (this.refs.bar.offsetWidth / 2 + 10) + circleWidth &&
         event.pageX < (window.innerWidth / 2) + (this.refs.bar.offsetWidth / 2 + 10) - circleWidth &&
         mouseDown) {
-      if (window.innerWidth > 720) {
+      if (window.innerWidth > 1200) {
         this.refs.circle.style.left = event.pageX - halfOfBar - circleWidth;
-      } else {
+      } else if (window.innerWidth > 720 && window.innerWidth < 1200) {
+        this.refs.circle.style.left = event.pageX - halfOfBar - circleWidth;
+      } else if (window.innerWidth < 720) {
         this.refs.circle.style.left = event.pageX - circleWidth;
       }
     }

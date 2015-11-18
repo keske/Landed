@@ -6,7 +6,7 @@
   height: 600px;
 
   background: url(../files/top-about.jpg);
-  background-size: 100% auto;
+  background-size: cover;
 
   @media (#{ $phone }) {
     height: 580px;

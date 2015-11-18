@@ -26,13 +26,13 @@ export class WhyDoesLandedExist extends Component {
               Richie is a married middle-aged man.  Richie has had a pretty successful life.
             </p>
             <p>
-              - His family’s net worth is just over $3,000,000 dollars.
+              ◦ His family’s net worth is just over $3,000,000 dollars.
               <br />
-              - He has less than 20% of his wealth in housing.
+              ◦ He has less than 20% of his wealth in housing.
               <br />
-              - He has extremely low levels of debt relative to what he owns.
+              ◦ He has extremely low levels of debt relative to what he owns.
               <br />
-              - Almost all of his wealth is in diversified financial instruments (stocks, bonds, cash).
+              ◦ Almost all of his wealth is in diversified financial instruments (stocks, bonds, cash).
             </p>
           </div>
           <div className="col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0 text-left">
@@ -40,11 +40,11 @@ export class WhyDoesLandedExist extends Component {
               Susan is a young married woman about to have her first child. She bought a house just two years ago.
             </p>
             <p>
-              - She also has been doing really well. Her family’s net worth is almost $250,000.
+              ◦ She also has been doing really well. Her family’s net worth is almost $250,000.
               <br />
-              - She, however, has almost 75% of her wealth in housing.
+              ◦ She, however, has almost 75% of her wealth in housing.
               <br />
-              - She also has high levels of debt.  She’s only paid down a little of her mortgage.
+              ◦ She also has high levels of debt.  She’s only paid down a little of her mortgage.
             </p>
           </div>
         </div>

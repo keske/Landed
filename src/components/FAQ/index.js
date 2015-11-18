@@ -75,9 +75,9 @@ export class FAQ extends Component {
                 }
               </ul>
 
-              <Link to="faq">
+              <a href="http://landed.zendesk.com">
                 See complete F.A.Q.
-              </Link>
+              </a>
             </div>
           </div>
 
