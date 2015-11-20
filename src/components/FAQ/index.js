@@ -49,7 +49,7 @@ export class FAQ extends Component {
                   QuestionsAndAnswers.map(({ question }, key) =>
                   <li key={ key }>
                     <span
-                      className={ currentQuestion === key ? 'active' : '' }
+                      className={ currentQuestion === key && 'active' }
                       onClick={ () => { this.setState({ currentQuestion: key }); } }>
                       <span dangerouslySetInnerHTML={{ __html: question }} />
                       <div className="answer-mobile hidden-md hidden-lg"
@@ -68,16 +68,16 @@ export class FAQ extends Component {
                 {
                   QuestionsAndAnswers.map(({ answer }, key) =>
                   <li
-                    className={ currentQuestion === key ? 'active' : '' }
-                    key={ key }
-                    dangerouslySetInnerHTML={{ __html: answer }}>
+                    className={ currentQuestion === key && 'active' }
+                    key={ key }>
+                    <span dangerouslySetInnerHTML={{ __html: answer }} />
+                    <br /><br />
+                    <a href="http://landed.zendesk.com">
+                      See complete F.A.Q.
+                    </a>
                   </li>)
                 }
               </ul>
-
-              <a href="http://landed.zendesk.com">
-                See complete F.A.Q.
-              </a>
             </div>
           </div>
 

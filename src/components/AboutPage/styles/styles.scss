@@ -42,15 +42,15 @@
 
     padding: 50px 0;
 
-    &.paragraphs {
-      p {
-        margin-top: 40px;
-      }
+    p.paragraphs {
+      margin-top: 40px;
     }
     
     img {
       width: 80%;
       border-radius: 100%;
+
+      margin-top: 50px;
     }
 
     p.name {
