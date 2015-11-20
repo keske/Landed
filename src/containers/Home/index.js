@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import DocumentMeta from 'react-document-meta';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
+/* actions */
+import * as actionCreators from 'actions/app';
 
 /* application components */
 import { TopImage } from 'components/TopImage';
@@ -10,6 +15,7 @@ import { YouCan } from 'components/YouCan';
 import { ImageBlock } from 'components/ImageBlock';
 import { HowItWorks } from 'components/HowItWorks';
 import { FAQ } from 'components/FAQ';
+import { PopUp } from 'components/PopUp';
 
 const metaData = {
   title: 'Landed',
@@ -23,6 +29,10 @@ const metaData = {
   },
 };
 
+@connect(
+  state => state.app,
+  dispatch => bindActionCreators(actionCreators, dispatch)
+)
 export class Home extends Component {
 
   constructor(props) {
