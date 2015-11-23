@@ -41,7 +41,7 @@
 
   .title-animation-appear.title-animation-appear-active {
     opacity: 1;
-    // margin: 100px 0 30px;
+    // margin: 130px 0 30px;
     transition: .5s linear;
   }
 
@@ -65,7 +65,7 @@
 
     @media (#{ $phone }) {
       width: 90%;
-      font-size: 28px;
+      font-size: 35px;
     }
   }
 
@@ -111,6 +111,8 @@
   span.button {
     background: #FFF;
     border-radius: 75px;
+    opacity: 0.8;
+
 
     padding: 12px 35px;
 
@@ -128,6 +130,8 @@
     &:hover {
       background: #FFF;
       color: $green;
+      opacity: 1;
+      
     }
   }
 }

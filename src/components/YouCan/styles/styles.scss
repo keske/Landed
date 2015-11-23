@@ -24,23 +24,27 @@
   .text-col {
     text-align: center;
 
-    margin-top: 24px;
-    padding-left: 30px;
+    margin-top: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 20px;
 
     @media (#{ $phone }) {
       text-align: left;
       padding-right: 60px;
+
     }
   }
 
   span.title {
     font-family: 'Jannon10Pro-Italic';
     font-size: 19px;
+
   }
   
   img {
     width: 65px;
-
-    margin: 10px 0;
+    margin-top: 40px;
+    /*margin: 0px 0;*/
   }
 }

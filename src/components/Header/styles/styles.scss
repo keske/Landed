@@ -14,7 +14,7 @@
 
   .top-header {
     position: absolute;
-    z-index: 3;
+    z-index: 12;
 
     width: 100%;
 
@@ -62,7 +62,7 @@
 
   .logo-symbol {
     position: absolute;
-    z-index: 3;
+    z-index: 15;
 
     top: 25px;
     left: 30px;
@@ -126,7 +126,7 @@
 
   .green-header {
     position: fixed;
-    z-index: 1;
+    z-index: 10;
 
     width: 100%;
     height: 75px;
@@ -142,7 +142,7 @@
   
   .fixed-header {
     position: fixed;
-    z-index: 3;
+    z-index: 10;
 
     background: $green;
 
@@ -188,7 +188,7 @@
 
       border-bottom: none;
 
-      margin-right: 40px;
+   /*   margin-right: 40px;*/
 
       &.active, &:hover {
         border-bottom: 7px solid #FFF;
@@ -372,6 +372,7 @@
       &:hover {
         background: #FFF;
         color: $green;
+        border: 2px solid #FFF;
       }
     }
   }
@@ -398,6 +399,11 @@
   .fixed-nav {
     position: fixed;
     left: 130px;
+
+      a
+      {
+      margin-right: 40px;
+      }
   }
 
   .login-fixed-button {
