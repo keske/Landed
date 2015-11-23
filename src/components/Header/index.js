@@ -11,6 +11,7 @@ export class Header extends Component {
   static propTypes = {
     dispatch: React.PropTypes.func,
     showPhoneMenu: React.PropTypes.bool,
+    showPopup: React.PropTypes.func,
     loginMenu: React.PropTypes.bool,
     showLoginMenu: React.PropTypes.func,
     show: React.PropTypes.func,
@@ -73,20 +74,27 @@ export class Header extends Component {
     const { show, error } = this.state;
     const { showPhoneMenu, loginMenu } = this.props;
 
-    function renderLogin() {
+    const renderLogin = () => {
       return (
         <span>
-          <button className={ `login hidden-xs hidden-sm ${ loginMenu && 'hide' }` }>
+          <button className={ `login` }
+                  onClick={ () => this.props.showLoginMenu(true) }>
             Log in
           </button>
-          <a href="https://golanded.typeform.com/to/GbesjE">
-            <button className={ `signup hidden-xs hidden-sm ${ loginMenu && 'hide' }` }>
+
+          <Link onClick={ () => this.props.show(false) }
+                to="join">
+            <button className={ `signup hidden-md hidden-lg` }>
               Sign up
             </button>
-          </a>
+          </Link>
+
+          <button className="signup hidden-xs hidden-sm" onClick={ () => { this.props.showPopup(true); } }>
+            Sign up
+          </button>
         </span>
       );
-    }
+    };
 
     // jQuery yeah, but... okaaay
     if (!showPhoneMenu) {
@@ -111,8 +119,7 @@ export class Header extends Component {
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 hidden-xs hidden-sm">
                   { this.renderNav() }
                 </div>
-                <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-right hidden-xs hidden-sm login-fixed-button"
-                     onClick={ () => { this.props.showLoginMenu(true); } }>
+                <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-right hidden-xs hidden-sm login-fixed-button">
                   { renderLogin() }
                 </div>
                 <div className="col-xs-12 col-sm-12 hidden-md hidden-lg text-right"
@@ -132,8 +139,7 @@ export class Header extends Component {
                 <div className="col-xs-12 col-sm-8 col-md-8 col-lg-9 fixed-nav">
                   { this.renderNav() }
                 </div>
-                <div className={ `${ show && 'fixed' } col-xs-12 col-sm-4 col-md-4 col-lg-3 text-right login-fixed-button` }
-                     onClick={ () => { this.props.showLoginMenu(true); } }>
+                <div className={ `${ show && 'fixed' } col-xs-12 col-sm-4 col-md-4 col-lg-3 text-right login-fixed-button` }>
                   { renderLogin() }
                 </div>
               </div>
@@ -145,8 +151,7 @@ export class Header extends Component {
         </ReactCSSTransitionGroup>
         <div className={ `phone-menu ${ showPhoneMenu && 'show' }` }>
           { this.renderNav() }
-          <div className="text-center"
-               onClick={ () => { this.props.showLoginMenu(true); } }>
+          <div className="text-left">
             { renderLogin() }
           </div>
         </div>

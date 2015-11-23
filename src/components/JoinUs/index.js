@@ -223,7 +223,14 @@ export class JoinUs extends Component {
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
               { !succes
                 ? <input type="submit" value="Join waitlist" onClick={ () => this.handleRequest() }/>
-                : <p className="succes">Thanks! We’ll contact  you in the next 24 hours.</p>
+                : <span className="succes">
+                    <p className="title">
+                      Thanks, and welcome to the Landed community!
+                    </p>
+                    <p className="text">
+                      If you're buying a home in California, we'll be in touch as soon as you're off the wait list. If you're buying elsewhere, we'll be in touch as soon as we open up shop in your city.
+                    </p>
+                  </span>
               }
             </div>
           </div>

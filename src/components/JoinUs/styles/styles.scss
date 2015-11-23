@@ -99,10 +99,27 @@
     margin: 50px 0 30px;
   }
 
-  p.succes {
-    font-family: 'SupriaSans Regular';
-    color: $green;
-    font-size: 14px;
+  span.succes {
     margin: 50px 0 30px;
+    width: 600px;
+
+    display: inline-block;
+
+    @media (#{ $phone }) {
+      width: 100%;
+    }
+
+    p.title {
+      font-family: 'Jannon10Pro-Italic';
+      font-size: 19px;
+      line-height: 22px;
+      color: $green;
+    }
+
+    p.text {
+      font-family: 'SupriaSans Regular';
+      color: $green;
+      font-size: 14px;
+    }
   }
 }
