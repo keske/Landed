@@ -43,9 +43,9 @@ export class Header extends Component {
     const { showPhoneMenu } = this.props;
 
     if (showPhoneMenu) {
-      this.actions.show(false);
+      this.props.show(false);
     } else {
-      this.actions.show(true);
+      this.props.show(true);
     }
   }
 

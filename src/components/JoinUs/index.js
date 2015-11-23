@@ -17,6 +17,7 @@ export class JoinUs extends Component {
       mmerge: '',
       whenMove: '',
       budget: '',
+      succes: false,
     };
   }
 
@@ -26,12 +27,12 @@ export class JoinUs extends Component {
     const req = {
       email: email,
       data: {
-        name: name,
-        phone: phone,
-        city: city,
-        mmerge: mmerge,
-        whenMove: whenMove,
-        budget: budget,
+        FNAME: name,
+        PHONE: phone,
+        CITY: city,
+        MMERGE4: mmerge,
+        WHENMOVE: whenMove,
+        BUDGET: budget,
       },
     };
 
@@ -41,9 +42,12 @@ export class JoinUs extends Component {
       data: req,
     });
 
-    request.done((data) => {
-      console.log(data);
-    });
+    // request.done((data) => {
+      // console.log(data);
+      // this.setState({ succes: true });
+    // });
+
+    this.setState({ succes: true });
 
     request.fail((jqXHR, textStatus, errorThrown) => {
       console.error(
@@ -54,6 +58,8 @@ export class JoinUs extends Component {
   }
 
   render() {
+    const { succes } = this.state;
+
     return (
       <section className={ `${styles}` }>
         <div className="container">
@@ -170,42 +176,42 @@ export class JoinUs extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-md-offset-2 col-lg-offet-2 popup-budget">
               <input type="radio" id="budget-less-1000" name="budget"
-                     onChange={ () => this.setState({ budget: 'Less than $1000' }) } />
+                     onChange={ () => this.setState({ budget: 'Less than $1k' }) } />
               <label className="gray big" htmlFor="budget-less-1000">
                 Less than $1000
               </label>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 popup-budget">
               <input type="radio" id="budget-1000-2000" name="budget"
-                     onChange={ () => this.setState({ budget: '$1000–$2000' }) } />
+                     onChange={ () => this.setState({ budget: '$1K – $2K' }) } />
               <label className="gray big" htmlFor="budget-1000-2000">
                 $1000–$2000
               </label>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 popup-budget">
               <input type="radio" id="budget-2000-3000" name="budget"
-                     onChange={ () => this.setState({ budget: '$2000– $3000' }) } />
+                     onChange={ () => this.setState({ budget: '$2K – $3K' }) } />
               <label className="gray big" htmlFor="budget-2000-3000">
                 $2000–$3000
               </label>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-md-offset-2 col-lg-offet-2 popup-budget">
               <input type="radio" id="budget-3000-4000" name="budget"
-                     onChange={ () => this.setState({ budget: '$3000–$4000' }) } />
+                     onChange={ () => this.setState({ budget: '$3K – $4K' }) } />
               <label className="gray big" htmlFor="budget-3000-4000">
                 $3000–$4000
               </label>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 popup-budget">
               <input type="radio" id="budget-4000-5000" name="budget"
-                     onChange={ () => this.setState({ budget: '$4000–$5000' }) } />
+                     onChange={ () => this.setState({ budget: '$4K – $5K' }) } />
               <label className="gray big" htmlFor="budget-4000-5000">
                 $4000–$5000
               </label>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 popup-budget">
               <input type="radio" id="budget-more-5000" name="budget"
-                     onChange={ () => this.setState({ budget: 'More than $5000' }) } />
+                     onChange={ () => this.setState({ budget: 'more then $5K' }) } />
               <label className="gray big" htmlFor="budget-more-5000">
                 More than $5000
               </label>
@@ -215,7 +221,10 @@ export class JoinUs extends Component {
 
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-              <input type="submit" value="Join waitlist" onClick={ () => this.handleRequest() }/>
+              { !succes
+                ? <input type="submit" value="Join waitlist" onClick={ () => this.handleRequest() }/>
+                : <p className="succes">Thanks! We’ll contact  you in the next 24 hours.</p>
+              }
             </div>
           </div>
         </div>

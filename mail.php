@@ -1,5 +1,7 @@
 <?php 
 
+// print_r($_POST);
+
 if (empty($_POST['email']) or empty($_POST['data']) or isset($_GET['debug'])) { 
 echo 'Your request ' . PHP_EOL; 
 
@@ -55,9 +57,10 @@ $json = curl_exec($ch);
 $response = json_decode($json, true); 
 
 //some debug: 
-//  echo 'mailchimp responce:<br>'.PHP_EOL; 
-//  echo $json; 
-//  print_r($response); 
+ // echo 'mailchimp responce:<br>'.PHP_EOL; 
+ // echo $json; 
+ // print_r($response); 
+ // print_r($data);
 
 //final handling: 
 if (empty($response['id'])) { 
