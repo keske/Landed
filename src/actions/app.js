@@ -11,3 +11,10 @@ export function showLoginMenu(act) {
     act,
   };
 }
+
+export function showPopup(act) {
+  return {
+    type: 'SHOW_POPUP',
+    act,
+  };
+}

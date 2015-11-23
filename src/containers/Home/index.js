@@ -15,7 +15,6 @@ import { YouCan } from 'components/YouCan';
 import { ImageBlock } from 'components/ImageBlock';
 import { HowItWorks } from 'components/HowItWorks';
 import { FAQ } from 'components/FAQ';
-import { PopUp } from 'components/PopUp';
 
 const metaData = {
   title: 'Landed',
@@ -69,7 +68,7 @@ export class Home extends Component {
     return (
       <section>
         <DocumentMeta { ...metaData } />
-        <TopImage />
+        <TopImage { ...this.props } />
           {
             loaded ? renderContent() : null
           }

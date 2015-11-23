@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { Link } from 'react-router';
 
 /* component styles */
 import styles from './styles';
 
 export class TopImage extends Component {
+
+  static propTypes = {
+    showPopup: React.PropTypes.func,
+  }
 
   constructor(props) {
     super(props);
@@ -16,7 +21,7 @@ export class TopImage extends Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.ponScrollAnimation);
+    window.removeEventListener('scroll', this.onScrollAnimation);
   }
 
   onScrollAnimation() {
@@ -90,11 +95,18 @@ export class TopImage extends Component {
               <ReactCSSTransitionGroup transitionName="text-animation-4"
                                        transitionAppear={ true }
                                        transitionAppearTimeout={ 1700 }>
-                <a href="https://golanded.typeform.com/to/GbesjE">
-                  <span className="button">
+                <div className="hidden-md hidden-lg">
+                  <Link to="join">
+                    <span className="button">
+                      I want a home to live in
+                    </span>
+                  </Link>
+                </div>
+                <div className="hidden-xs hidden-sm">
+                  <span className="button" onClick={ () => this.props.showPopup(true) }>
                     I want a home to live in
                   </span>
-                </a>
+                </div>
               </ReactCSSTransitionGroup>
             </div>
           </div>

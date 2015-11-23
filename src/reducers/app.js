@@ -1,6 +1,7 @@
 const initialState = {
   showPhoneMenu: false,
   loginMenu: false,
+  popup: false,
 };
 
 export function app(state = initialState, action) {
@@ -15,6 +16,12 @@ export function app(state = initialState, action) {
     return {
       ...state,
       loginMenu: action.act,
+    };
+
+  case 'SHOW_POPUP':
+    return {
+      ...state,
+      popup: action.act,
     };
 
   default:

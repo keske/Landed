@@ -12,6 +12,7 @@ export class Header extends Component {
     dispatch: React.PropTypes.func,
     showPhoneMenu: React.PropTypes.bool,
     loginMenu: React.PropTypes.bool,
+    showLoginMenu: React.PropTypes.func,
     show: React.PropTypes.func,
   }
 

@@ -2,102 +2,141 @@
 @import '../../../containers/App/styles/screens';
 
 :local(.styles) {
-  // padding-top: 150px;
-  background: #FFF;
+  position: absolute;
+  z-index: 7;
 
-  .header-green-layer {
-    background: $green;
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+
+  text-align: center;
+
+  display: none;
+
+  &.show {
+    display: block;
+  }
+
+  .outer {
+    background: rgba(0, 0, 0, .45);
+
+    position: absolute;
+    z-index: 1;
 
     width: 100%;
-    height: 100px;
+    height: 100%;
 
-    @media (#{ $phone }) {
-      position: fixed;
-      height: 70px;
-    }
+    top: 0;
+    left: 0;
   }
 
-  .row {
-    padding: 5px 0;
-  }
+  .inner {
+    position: relative;
+    z-index: 1;
 
-  .header {
-    margin-top: 70px;
+    text-align: left;
 
-    @media (#{ $phone }) {
-      margin-top: 100px;
-    }
+    display: inline-block;
 
-    p.title {
-      font-family: 'SupriaSans Regular';
-      font-size: 33px;
-      line-height: 40px;
-      color: $green;
-    }
+    background: #FFF;
+    width: 670px;
 
-    p.info {
-      font-family: 'Jannon10Pro-Italic';
-      font-size: 18px;
-      line-height: 22px;
-      color: $green;
-    }
-  }
+    border-radius: 45px;
+    
+    margin-top: 100px;
 
-  label, h3, span.labels {
-    display: block;
+    .header {
+      border-top-left-radius: 45px;
+      border-top-right-radius: 45px;
 
-    font-family: 'SupriaSans Regular';
-    color: $green;
-    font-size: 14px;
-    font-weight: normal;
+      background: $green;
+      margin-top: -5px;
+      margin-bottom: 40px;
 
-    vertical-align: top;
+      p {
+        color: #FFF;
+      }
 
-    &.gray {
-      color: #7B7B7A;
-      margin-left: 10px;
-      display: inline-block;
-      width: 80%;
+      p.title {
+        margin-top: 40px;
+      }
 
-      &.big {
-        // font-size: 16px;
-        // padding: 10px 0;
+      p.info {
+        margin-bottom: 40px;
       }
     }
 
-    span.hint {
-      color: rgba(0, 155, 105, .43);
-      display: block;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="phone"] {
-      display: block;
+    .container {
       width: 100%;
 
-      background: rgba(0, 155, 105, .1);
-      border: none;
-      border-bottom: 1px solid $green;
+      .row {
 
-      padding: 10px 20px;
-      margin: 10px 0 30px;
+        .col-md-12,
+        .col-lg-12,
+        .col-md-8,
+        .col-lg-8 {
+          width: 100%;
+          margin-left: 0;
 
-      outline: none;
+          padding: 0 50px;
+        }
+
+        .col-md-4 {
+          margin-left: 50px;
+        }
+
+        .popup-california-title {
+          margin-left: 36px;
+        }
+
+        .popup-california-yes-no {
+          width: 170px;
+        }
+
+        .popup-moving {
+          margin-left: 0;
+          width: 300px;
+
+          &:nth-child(1), &:nth-child(3) {
+            margin-left: 36px;
+          }
+        }
+        .popup-budget {
+          width: 200px;
+
+          &:nth-child(1), &:nth-child(4) {
+            margin-left: 36px;
+          } 
+        }
+      }
     }
   }
 
-  input[type="submit"] {
-    background: $green;
-    color: #FFF;
+  .close {
+    $size: 30px;
 
-    border: none;
-    border-radius: 75px;
+    width: $size;
+    height: $size;
 
-    font-family: 'SupriaSans Regular';
-    font-size: 20px;
+    position: absolute;
 
-    padding: 20px 130px;
-    margin: 50px 0 30px;
+    z-index: 3;
+
+    top: 120px;
+    left: 50%;
+
+    margin-left: 420px;
+
+    opacity: 1;
+
+    &:hover {
+      opacity: .5;
+    }
+
+    img {
+      width: 100%;
+    }
   }
 }

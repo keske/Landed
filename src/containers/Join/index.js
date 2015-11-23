@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import DocumentMeta from 'react-document-meta';
 
 /* application components */
-import { PopUp } from 'components/PopUp';
+import { JoinUs } from 'components/JoinUs';
+
+/* component styles */
+import styles from './styles';
 
 const metaData = {
   title: 'Join',
@@ -19,9 +22,10 @@ const metaData = {
 export class Join extends Component {
   render() {
     return (
-      <section>
+      <section className={ `${styles}` }>
         <DocumentMeta { ...metaData } />
-        <PopUp />
+        <div className="header-green-layer" />
+        <JoinUs />
       </section>
     );
   }

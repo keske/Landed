@@ -12,6 +12,7 @@ import 'style!./styles/app.scss';
 /* application components */
 import { Header } from 'components/Header';
 import { Footer } from 'components/Footer';
+import { PopUp } from 'components/PopUp';
 
 @connect(
   state => state.app,
@@ -27,6 +28,7 @@ export class App extends Component {
         <Header { ...this.props } />
           { this.props.children }
         <Footer />
+        <PopUp { ...this.props } />
       </section>
     );
   }
