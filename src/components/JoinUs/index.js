@@ -42,10 +42,10 @@ export class JoinUs extends Component {
       data: req,
     });
 
-    // request.done((data) => {
-      // console.log(data);
+    request.done((data) => {
+      console.log(data);
       // this.setState({ succes: true });
-    // });
+    });
 
     this.setState({ succes: true });
 
