@@ -34,15 +34,25 @@ export class Toggle extends Component {
   }
 
   componentDidMount() {
+    // mouse
     this.refs.circle.addEventListener('mousedown', this.handleMouseDown);
     window.addEventListener('mousemove', this.handleMouseMove);
     this.refs.circle.addEventListener('mouseup', this.handleMouseUp);
+    // touch
+    this.refs.circle.addEventListener('touchstart', this.handleMouseDown);
+    window.addEventListener('touchmove', this.handleMouseMove);
+    this.refs.circle.addEventListener('touchend', this.handleMouseUp);
   }
 
   componentWillUnmount() {
+    // mouse
     this.refs.circle.removeEventListener('mousedown', this.handleMouseDown);
     window.removeEventListener('mousemove', this.handleMouseMove);
     this.refs.circle.removeEventListener('mouseup', this.handleMouseUp);
+    // touch
+    this.refs.circle.removeEventListener('touchstart', this.handleMouseDown);
+    window.removeEventListener('touchmove', this.handleMouseMove);
+    this.refs.circle.removeEventListener('touchend', this.handleMouseUp);
   }
 
   handleMouseDown() {
