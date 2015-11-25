@@ -20,6 +20,11 @@
       text-align: right;
     }
   }
+  
+  .titlemargins{
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
 
   .text-col {
     text-align: center;
@@ -38,13 +43,13 @@
 
   span.title {
     font-family: 'Jannon10Pro-Italic';
-    font-size: 19px;
+    font-size: 35px;
 
   }
   
   img {
     width: 65px;
-    margin-top: 40px;
+   
     /*margin: 0px 0;*/
   }
 }
