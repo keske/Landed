@@ -88,10 +88,11 @@ export class Header extends Component {
               Sign up
             </button>
           </Link>
-
-          <button className="signup hidden-xs hidden-sm" onClick={ () => { this.props.showPopup(true); } }>
-            Sign up
-          </button>
+          <Link to="join">
+            <button className="signup hidden-xs hidden-sm" >
+              Sign up
+            </button>
+          </Link>
         </span>
       );
     };

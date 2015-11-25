@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import R from 'ramda';
+import { Link } from 'react-router';
 
 /* component styles */
 import styles from './styles';
@@ -60,11 +61,11 @@ export class HowItWorks extends Component {
 
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-              <a href="https://golanded.typeform.com/to/GbesjE">
+              <Link to="join">
                 <span className="button">
                   Sign up to get started
                 </span>
-              </a>
+             </Link>
             </div>
           </div>
 
