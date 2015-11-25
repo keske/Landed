@@ -17,7 +17,7 @@ import { HowItWorks } from 'components/HowItWorks';
 import { FAQ } from 'components/FAQ';
 
 const metaData = {
-  title: 'Landed',
+  title: 'Landed. Smarter ownership, for everyone.',
   description: 'I\'m a description. I can to create multiple tags',
   canonical: 'http://example.com/path/to/page',
   meta: {

@@ -154,7 +154,7 @@ export class Toggle extends Component {
 
             <div className="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
               <p className="centered text-center">
-                Owning your home gives you the control that renting doesn't, but it comes at a serious cost. Where home prices are high, a downpayment can be prohibitive and a massive mortgage means too much financial risk. Something between renting and owning is needed
+                Owning your home gives you the control that renting doesn't, but it comes at a serious cost. Where home prices are high, a downpayment can be prohibitive and a massive mortgage means too much financial risk. Something between renting and owning is needed.
               </p>
 
               <div className="toggle">
