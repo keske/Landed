@@ -29,6 +29,7 @@ export class Footer extends Component {
                 <a href="https://plus.google.com/118374456065627678011/about" className="google" />
               </div>
               <p className="copyright">
+              Need to contact us? <a href="mailto:hi@landed.com">hi@landed.com</a><br />
                 Copyright © Landed, Inc
                 <br />
                 Landed was founded in 2015 in the San Francisco Bay Area.

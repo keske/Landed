@@ -72,7 +72,7 @@ export class FAQ extends Component {
                     key={ key }>
                     <span dangerouslySetInnerHTML={{ __html: answer }} />
                     <br /><br />
-                    <a href="http://landed.zendesk.com">
+                    <a href="http://landed.zendesk.com" target="_blank">
                       See complete F.A.Q.
                     </a>
                   </li>)
