@@ -88,11 +88,11 @@ export class Header extends Component {
               Sign up
             </button>
           </Link>
-          <Link to="join">
+          <a href="/#join" target="_blank">
             <button className="signup hidden-xs hidden-sm" >
               Sign up
             </button>
-          </Link>
+          </a>
         </span>
       );
     };

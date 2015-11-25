@@ -61,11 +61,11 @@ export class HowItWorks extends Component {
 
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-              <Link to="join">
+              <a href="/#join" target="_blank">
                 <span className="button">
                   Sign up to get started
                 </span>
-             </Link>
+             </a>
             </div>
           </div>
 
