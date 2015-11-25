@@ -37,7 +37,7 @@ export class JoinUs extends Component {
     };
 
     const request = $.ajax({
-      url: 'http://gradusdevelopment.com/mail.php',
+      url: 'http://landed.com/mail.php',
       type: 'post',
       data: req,
     });
