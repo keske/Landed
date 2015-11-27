@@ -87,13 +87,8 @@ export class Header extends Component {
         </span>
       );
     }
-
-    // jQuery yeah, but... okaaay
-    if (!showPhoneMenu) {
-      $('html').css('overflow', 'scroll');
-    } else {
-      $('html').css('overflow', 'hidden');
-    }
+    
+    document.documentElement.style.overflow = showPhoneMenu ? 'hidden' : 'scroll';
 
     return (
       <section className={ `${ styles }` }>
