@@ -98,7 +98,7 @@ export class YouCan extends Component {
                 </div>
                 <div className="col-xs-10 col-sm-10 col-md-12 col-lg-12 text-col">
                   <p>
-                    Sublease to others at any price
+                    Sublease to others at any price
                   </p>
                 </div>
               </div>
