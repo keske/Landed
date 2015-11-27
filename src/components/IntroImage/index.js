@@ -5,7 +5,6 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import styles from './styles';
 
 export class IntroImage extends Component {
-
   static propTypes = {
     title: React.PropTypes.string,
     text: React.PropTypes.string,

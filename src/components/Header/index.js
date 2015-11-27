@@ -92,8 +92,8 @@ export class Header extends Component {
     return (
       <section className={ `${ styles }` }>
         <ReactCSSTransitionGroup transitionName="el-animation"
-                                       transitionAppear={ true }
-                                       transitionAppearTimeout={ 500 }>
+                                 transitionAppear={ true }
+                                 transitionAppearTimeout={ 500 }>
           <div className="top-header">
             <div className="container">
               <div className="row">

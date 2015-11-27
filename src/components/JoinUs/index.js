@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import styles from './styles';
 
 export class JoinUs extends Component {
-
   constructor(props) {
     super(props);
 
