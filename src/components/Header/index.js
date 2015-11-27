@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import $ from 'jquery';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 /* component styles */
