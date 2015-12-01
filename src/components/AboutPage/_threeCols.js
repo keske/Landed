@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 import R from 'ramda';
 
 /* images */
-const icons = [];
-R.forEach(name =>
-  icons.push(require(`./files/about-${ name }.png`)),
-  R.range(1, 3 + 1));
+const icons = R.range(1, 3 + 1).map(index => require(`./files/about-${index}.png`));
 
 export class ThreeCols extends Component {
   render() {

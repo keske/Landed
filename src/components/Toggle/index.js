@@ -10,7 +10,6 @@ import styles from './styles';
 
 @connect(state => state.toggle)
 export class Toggle extends Component {
-
   static propTypes = {
     dispatch: React.PropTypes.func,
     status: React.PropTypes.string,

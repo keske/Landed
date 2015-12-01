@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import styles from './styles';
 
 export class ImageBlock extends Component {
-
   constructor(props) {
     super(props);
     this.parallax = this.parallax.bind(this);

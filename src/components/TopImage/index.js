@@ -6,7 +6,6 @@ import { Link } from 'react-router';
 import styles from './styles';
 
 export class TopImage extends Component {
-
   static propTypes = {
     showPopup: React.PropTypes.func,
   }

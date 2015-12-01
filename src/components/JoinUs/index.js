@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
 
 /* component styles */
 import styles from './styles';
 
 export class JoinUs extends Component {
-
   constructor(props) {
     super(props);
 
@@ -34,23 +32,10 @@ export class JoinUs extends Component {
         budget: budget,
       },
     };
-
-    const request = $.ajax({
-      url: 'http://gradusdevelopment.com/mail.php',
-      type: 'post',
-      data: req,
-    });
-
-    request.done((data) => {
-      console.log(data);
-    });
-
-    request.fail((jqXHR, textStatus, errorThrown) => {
-      console.error(
-        'The following error occurred: ' +
-        textStatus, errorThrown
-      );
-    });
+    
+    const http = new XMLHttpRequest();
+    http.open('POST', 'http://gradusdevelopment.com/mail.php', true);
+    http.send(JSON.stringify(req));
   }
 
   render() {
