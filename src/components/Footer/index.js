@@ -26,7 +26,7 @@ export class Footer extends Component {
                 <a href="https://twitter.com/landedhomes" className="twitter" />
                 <a href="https://www.facebook.com/golanded" className="facebook" />
                 <a href="http://instagram.com/landedhomes" className="instagram" />
-                // <a href="https://plus.google.com/118374456065627678011/about" className="google" />
+               
               </div>
               <p className="copyright">
               Need to contact us? <a href="mailto:hi@landed.com">hi@landed.com</a><br />
