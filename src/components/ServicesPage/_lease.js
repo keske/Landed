@@ -1,7 +1,54 @@
 import React, { Component } from 'react';
 
+const RENTAL = [{
+  prop: 'Base Rent',
+  val: 'Market rent',
+}, {
+  prop: 'Rent Discount/Premium',
+  val: 'None',
+}, {
+  prop: 'Rent Increases',
+  val: 'Assessed annually based on local index. ',
+}, {
+  prop: 'Rent Increase Limit',
+  val: 'No more than 20% every 3 years.',
+}, {
+  prop: 'Rent Period',
+  val: '5 years.  Resident can move out early but responsible for sublet.',
+}, {
+  prop: 'Repair Handling',
+  val: 'Resident pays for minor repairs.  Major repairs paid by investor.',
+}];
+
+const PURCHASE = [{
+  prop: 'Purchase Timeline',
+  val: 'Can purchase after 2 years with 90 days notice.',
+}, {
+  prop: 'Purchase Price',
+  val: 'Purchase price based on independent index.',
+}, {
+  prop: 'Minimum Purchase Price',
+  val: '90% of original purchase price.',
+}];
+
 export class Lease extends Component {
   render() {
+    function renderTable(data) {
+      return data.map((field, key) =>
+        <div key={ key }>
+          <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5 left-side">
+            <p className="field-prop">
+              { field.prop }
+            </p>
+          </div>
+          <div className="col-xs-12 col-sm-12 col-md-7 col-lg-7 right-side">
+            <p className="field-val">
+              { field.val }
+            </p>
+          </div>
+        </div>
+      );
+    }
     return (
       <div className="container">
         <div className="row lease-and-shared">
@@ -71,6 +118,67 @@ export class Lease extends Component {
                 Simpler than partial ownership.
               </li>
             </ul>
+
+            <p className="ul-title">
+              For Investors
+            </p>
+            <ul>
+              <li>
+                Can find your own space
+              </li>
+              <li>
+                Much more control than traditional rental
+              </li>
+              <li>
+                No fear of landlord eviction.
+              </li>
+              <li>
+                Can invest in your space knowing you can always choose to own it.
+              </li>
+              <li>
+                No rent premiums or option fees.   Can save for purchase independently.
+              </li>
+              <li>
+                Simpler than partial ownership.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="row terms">
+          <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+            <p className="title">
+              Customizable terms
+            </p>
+            <p>
+              Paragraph about customizable terms?
+            </p>
+          </div>
+
+          <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 terms-table">
+            <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5 left-side">
+              <p className="field-name-prop">
+                Rental Agreement
+              </p>
+            </div>
+            <div className="col-xs-12 col-sm-12 col-md-7 col-lg-7 right-side">
+              <p className="field-name-val">
+                Recommended Default
+              </p>
+            </div>
+            { renderTable(RENTAL) }
+
+            <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5 left-side">
+              <p className="field-name-prop">
+                Purchase Option
+              </p>
+            </div>
+            <div className="col-xs-12 col-sm-12 col-md-7 col-lg-7 right-side">
+              <p className="field-name-val">
+                Recommended Default
+              </p>
+            </div>
+            { renderTable(PURCHASE) }
           </div>
         </div>
       </div>
