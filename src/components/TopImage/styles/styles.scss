@@ -8,6 +8,16 @@
   // Pages
   //
   // Home
+  // Temp:
+  background: url(../files/top.jpg);
+  background-size: cover;
+
+  @media (#{ $phone }) {
+    height: 580px;
+
+    background: url(../files/top-phone.jpg);
+    background-size: cover;
+  }
   &.home {
     background: url(../files/top.jpg);
     background-size: cover;
