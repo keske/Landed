@@ -7,6 +7,7 @@ export class ImageBlock extends Component {
 
   static propTypes = {
     text: React.PropTypes.string,
+    imageClass: React.PropTypes.string,
   }
 
   constructor(props) {
@@ -31,10 +32,10 @@ export class ImageBlock extends Component {
   }
 
   render() {
-    const { text } = this.props;
+    const { text, imageClass } = this.props;
 
     return (
-      <section className={ `${styles}` } ref="parallax">
+      <section className={ `${styles} ${imageClass}` } ref="parallax">
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11 col-md-offset-1 col-lg-offset-1">

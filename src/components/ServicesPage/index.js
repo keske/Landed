@@ -14,7 +14,12 @@ export class ServicesPage extends Component {
     const intro = {
       title: 'How can Landed help?',
       text: 'We make sharing your home investment delightfully simple.',
-      image: 'top-about.png',
+      image: 'services',
+    };
+
+    const imageBlockProps = {
+      text: 'Let Landed take away<br />all the headaches<br />of shared ownership',
+      imageClass: 'services',
     };
 
     return (
@@ -23,7 +28,7 @@ export class ServicesPage extends Component {
         <div className={ `${styles}` }>
           <Lease />
         </div>
-        <ImageBlock text="Let Landed take away<br />all the headaches<br />of shared ownership" />
+        <ImageBlock { ...imageBlockProps } />
         <HowItWorks />
       </section>
     );
