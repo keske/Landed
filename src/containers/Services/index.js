@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import DocumentMeta from 'react-document-meta';
 
 /* application components */
-// import { ComponentName } from 'components/ComponentName';
+import { ServicesPage } from 'components/ServicesPage';
 
 const metaData = {
-  title: 'Oportuninties',
+  title: 'Services',
   description: 'I\'m a description. I can to create multiple tags',
   canonical: 'http://example.com/path/to/page',
   meta: {
@@ -16,12 +16,12 @@ const metaData = {
   },
 };
 
-export class Oportuninties extends Component {
+export class Services extends Component {
   render() {
     return (
       <section>
         <DocumentMeta { ...metaData } />
-        About page
+        <ServicesPage />
       </section>
     );
   }
