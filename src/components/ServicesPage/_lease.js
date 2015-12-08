@@ -40,7 +40,7 @@ export class Lease extends Component {
     super(props);
 
     this.state = {
-      showFirstStory: true,
+      showFirstStory: false,
       showSecondStory: false,
     };
   }
@@ -284,12 +284,16 @@ export class Lease extends Component {
             </div>
           </div>
 
-          <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div className="col-xs-12 col-sm-12 col-md-10 col-lg-10">
             <div className={`story ${showFirstStory && 'show'}`}>
-              showFirstStory
+              <p>
+                Typical rent-to-own contracts have a bad reputation.  Traditionally, an upfront option fee is paid as well as a monthly rent premium that eventually goes towards an inflated home purchase price.
+              </p>
             </div>
             <div className={`story ${showSecondStory && 'show'}`}>
-              showSecondStory
+              <p>
+                Sadly, the reality is that many buyers never exercise their right to buy and all those additional fees go straight to the landlord’s pocket.  We don’t think that’s fair.
+              </p>
             </div>
           </div>
         </div>

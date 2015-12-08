@@ -4,6 +4,11 @@ import React, { Component } from 'react';
 import styles from './styles';
 
 export class ImageBlock extends Component {
+
+  static propTypes = {
+    text: React.PropTypes.string,
+  }
+
   constructor(props) {
     super(props);
     this.parallax = this.parallax.bind(this);
@@ -26,17 +31,14 @@ export class ImageBlock extends Component {
   }
 
   render() {
+    const { text } = this.props;
+
     return (
       <section className={ `${styles}` } ref="parallax">
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11 col-md-offset-1 col-lg-offset-1">
-              <h1 className="hidden-xs hidden-sm">
-                Landed makes<br />ownership possible<br />sooner than you think
-              </h1>
-              <h1 className="hidden-md hidden-lg">
-                Landed makes<br />ownership possible<br />sooner than you think
-              </h1>
+              <h1 dangerouslySetInnerHTML={{ __html: text }} />
             </div>
           </div>
         </div>

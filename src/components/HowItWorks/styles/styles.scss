@@ -2,8 +2,6 @@
 
 :local(.styles) {
   position: relative;
-
-  border-bottom: 1px solid #979797;
   margin-top: 50px;
 
   h2 {
@@ -13,7 +11,7 @@
   img {
     width: 110px;
 
-    margin: 30px 0 20px;;
+    margin: 30px 0 20px;
   }
 
   p.paragraph {
@@ -27,6 +25,46 @@
     }
   }
 
+  span.price {
+    font-family: 'Jannon10Pro';
+    font-size: 23px;
+    line-height: 35px;
+    color: #C8C8C8;
+
+    display: block;
+
+    margin-top: 50px;
+  }
+
+  hr.price {
+    width: 300px;
+    height: 1px;
+    background: $green;
+
+    position: relative;
+    margin-top: -20px;
+
+    border: none;
+  }
+
+  span.special {
+    font-family: 'Jannon10Pro';
+    font-size: 32px;
+    line-height: 35px;
+    color: $green;
+
+    display: block;
+
+    margin-top: 40px;
+
+    span.free {
+      font-style: italic;
+
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+
   span.button {
     font-size: 18px;
     color: $green;
@@ -37,7 +75,7 @@
     padding: 20px 77px;
     
     display: inline-block;
-    margin: 30px 0 60px;
+    margin: 50px 0 60px;
 
     &:hover {
       background: $green;

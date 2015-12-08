@@ -58,7 +58,7 @@ export class Home extends Component {
           <Subscribe />
           <Toggle />
           <YouCan />
-          <ImageBlock />
+          <ImageBlock text="Landed makes<br />ownership possible<br />sooner than you think" />
           <HowItWorks />
           <FAQ />
         </ReactCSSTransitionGroup>

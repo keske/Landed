@@ -57,6 +57,13 @@ export class HowItWorks extends Component {
 
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+              <span className="price">
+                $499  +  $19 / month
+              </span>
+              <hr className="price" />
+              <span className="special">
+                Holiday Special: <span className="free">Free</span>
+              </span>
               <a href="/#join" target="_blank">
                 <span className="button">
                   Sign up to get started

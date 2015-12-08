@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 /* components */
 import { IntroImage } from '../IntroImage';
+import { ImageBlock } from '../ImageBlock';
+import { HowItWorks } from '../HowItWorks';
 import { Lease } from './_lease';
 
 /* component styles */
@@ -16,9 +18,13 @@ export class ServicesPage extends Component {
     };
 
     return (
-      <section className={ `${styles}` }>
+      <section>
         <IntroImage { ...intro } />
-        <Lease />
+        <div className={ `${styles}` }>
+          <Lease />
+        </div>
+        <ImageBlock text="Let Landed take away<br />all the headaches<br />of shared ownership" />
+        <HowItWorks />
       </section>
     );
   }

@@ -234,9 +234,13 @@
   .examples {
     margin-top: 50px;
 
-    .story-block:nth-child(3) {
-      @media (#{ $phone }) {
-        margin-top: 30px;
+    .story-block {
+      margin-bottom: 30px;
+
+      &:nth-child(3) {
+        @media (#{ $phone }) {
+          margin-top: 30px;
+        }
       }
     }
 
