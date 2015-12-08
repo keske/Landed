@@ -62,7 +62,7 @@ export class Toggle extends Component {
       this.refs.circle.style.marginLeft = '-35px';
       this.refs.circle.style.left = event.pageX - halfOfBar - circleWidth;
     } else if (window.innerWidth > 720 && window.innerWidth < 1200) {
-      this.refs.circle.style.marginLeft = '-115px';
+      this.refs.circle.style.marginLeft = '-145px';
       this.refs.circle.style.left = event.pageX - halfOfBar - circleWidth;
     } else if (window.innerWidth < 720) {
       this.refs.circle.style.marginLeft = '-15px';

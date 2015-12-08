@@ -166,7 +166,7 @@
 
     .logo-small {
       position: fixed;
-      z-index: 13;
+      z-index: 17;
 
       top: 14px;
       left: 20px;
@@ -192,10 +192,8 @@
 
       border-bottom: none;
 
-   /*   margin-right: 40px;*/
-
       &.active, &:hover {
-        border-bottom: 7px solid #FFF;
+        border-bottom: 3px solid #FFF;
       }
     }
 

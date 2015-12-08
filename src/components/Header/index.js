@@ -10,7 +10,6 @@ export class Header extends Component {
   static propTypes = {
     dispatch: React.PropTypes.func,
     showPhoneMenu: React.PropTypes.bool,
-    showPopup: React.PropTypes.func,
     loginMenu: React.PropTypes.bool,
     showLoginMenu: React.PropTypes.func,
     show: React.PropTypes.func,
@@ -43,20 +42,15 @@ export class Header extends Component {
     const { showPhoneMenu } = this.props;
 
     if (showPhoneMenu) {
-      this.props.show(false);
+      this.actions.show(false);
     } else {
-      this.props.show(true);
+      this.actions.show(true);
     }
   }
 
   renderNav() {
     return (
       <nav>
-        <Link onClick={ () => this.props.show(false) }
-              to="services"
-              activeClassName="active">
-          Services
-        </Link>
         <Link onClick={ () => this.props.show(false) }
               to="about"
               activeClassName="active">
@@ -78,35 +72,27 @@ export class Header extends Component {
     const { show, error } = this.state;
     const { showPhoneMenu, loginMenu } = this.props;
 
-    const renderLogin = () => {
+    function renderLogin() {
       return (
         <span>
-          <button className={ `login` }
-                  onClick={ () => this.props.showLoginMenu(true) }>
+          <button className={ `login hidden-xs hidden-sm ${ loginMenu && 'hide' }` }>
             Log in
           </button>
-
-          <Link onClick={ () => this.props.show(false) }
-                to="join">
-            <button className={ `signup hidden-md hidden-lg` }>
-              Sign up
-            </button>
-          </Link>
-          <a href="/#join" target="_blank">
-            <button className="signup hidden-xs hidden-sm" >
+          <a href="https://golanded.typeform.com/to/GbesjE">
+            <button className={ `signup hidden-xs hidden-sm ${ loginMenu && 'hide' }` }>
               Sign up
             </button>
           </a>
         </span>
       );
-    };
-
+    }
+    
     document.documentElement.style.overflow = showPhoneMenu ? 'hidden' : 'scroll';
 
     return (
       <section className={ `${ styles }` }>
         <ReactCSSTransitionGroup transitionName="el-animation"
-                                 transitionAppear
+                                 transitionAppear={ true }
                                  transitionAppearTimeout={ 500 }>
           <div className="top-header">
             <div className="container">
@@ -119,7 +105,8 @@ export class Header extends Component {
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 hidden-xs hidden-sm">
                   { this.renderNav() }
                 </div>
-                <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-right hidden-xs hidden-sm login-fixed-button">
+                <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-right hidden-xs hidden-sm login-fixed-button"
+                     onClick={ () => { this.props.showLoginMenu(true); } }>
                   { renderLogin() }
                 </div>
                 <div className="col-xs-12 col-sm-12 hidden-md hidden-lg text-right"
@@ -139,7 +126,8 @@ export class Header extends Component {
                 <div className="col-xs-12 col-sm-8 col-md-8 col-lg-9 fixed-nav">
                   { this.renderNav() }
                 </div>
-                <div className={ `${ show && 'fixed' } col-xs-12 col-sm-4 col-md-4 col-lg-3 text-right login-fixed-button` }>
+                <div className={ `${ show && 'fixed' } col-xs-12 col-sm-4 col-md-4 col-lg-3 text-right login-fixed-button` }
+                     onClick={ () => { this.props.showLoginMenu(true); } }>
                   { renderLogin() }
                 </div>
               </div>
@@ -151,7 +139,8 @@ export class Header extends Component {
         </ReactCSSTransitionGroup>
         <div className={ `phone-menu ${ showPhoneMenu && 'show' }` }>
           { this.renderNav() }
-          <div className="text-left">
+          <div className="text-center"
+               onClick={ () => { this.props.showLoginMenu(true); } }>
             { renderLogin() }
           </div>
         </div>

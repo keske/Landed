@@ -31,8 +31,22 @@ const PURCHASE = [{
   val: '90% of original purchase price.',
 }];
 
+const jenifer = require('./files/jen.png');
+const marc = require('./files/marc.png');
+
 export class Lease extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showFirstStory: true,
+      showSecondStory: false,
+    };
+  }
+
   render() {
+    const { showFirstStory, showSecondStory } = this.state;
 
     function renderTable(data) {
       return data.map((field, key) =>
@@ -226,6 +240,61 @@ export class Lease extends Component {
             </div>
           </div>
         </div>
+
+        <div className="row examples">
+          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p className="title">
+              Examples
+            </p>
+          </div>
+
+          <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6 story-block">
+            <div className="row"
+                 onClick={() => this.setState({showFirstStory: !showFirstStory ? true : false, showSecondStory: false})}>
+              <div className="col-xs-3 col-sm-4 col-md-3 col-lg-3">
+                <img src={ jenifer } />
+              </div>
+              <div className="col-xs-9 col-sm-8 col-md-9 col-lg-9">
+                <p className={`text ${showFirstStory && 'active'}`}>
+                  Jennifer’s parents want to help her buy a home, but Jennifer doesn’t want a gift.
+                  <br />
+                  <span className="read">
+                    Read Jenifer’s story
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6 story-block">
+            <div className="row"
+                 onClick={() => this.setState({showFirstStory: false, showSecondStory: !showSecondStory ? true : false})}>
+              <div className="col-xs-3 col-sm-4 col-md-3 col-lg-3">
+                <img src={ marc } />
+              </div>
+              <div className="col-xs-9 col-sm-8 col-md-9 col-lg-9">
+                <p className={`text ${showSecondStory && 'active'}`}>
+                  Marc Johnson works in finance and understands that having all of his family’s assets in one investment is not the best decision.
+                  <br />
+                  <span className="read">
+                    Read Marc’s story
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div className={`story ${showFirstStory && 'show'}`}>
+              showFirstStory
+            </div>
+            <div className={`story ${showSecondStory && 'show'}`}>
+              showSecondStory
+            </div>
+          </div>
+        </div>
+
+
       </div>
     );
   }

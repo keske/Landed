@@ -3,6 +3,8 @@
 
 :local(.styles) {
   background: #F8F8F8;
+  padding-bottom: 70px;
+  margin-bottom: -40px;
 
   p {
     font-family: 'SupriaSans Regular';
@@ -78,6 +80,7 @@
     p.ul-title {
       font-family: 'SupriaSans Bold';
       font-weight: bold;
+      color: #4C4C4C;
       font-size: 18px;
       line-height: 18px;
     }
@@ -225,6 +228,71 @@
           width: 80%;
         }
       }
+    }
+  }
+
+  .examples {
+    margin-top: 50px;
+
+    .story-block:nth-child(3) {
+      @media (#{ $phone }) {
+        margin-top: 30px;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  
+    p.title {
+      font-family: 'Jannon10Pro-Bold';
+      font-size: 25px;
+      line-height: 45px;
+      color: #4C4C4C;
+
+      margin-bottom: 40px;
+    }
+
+    p.text {
+      font-family: 'SupriaSans Regular';
+      font-size: 16px;
+      line-height: 22px;
+      color: #7B7B7A;
+
+      width: 80%;
+      margin-top: 10px;
+
+      cursor: pointer;
+
+      &:hover {
+        color: $green;
+
+        .read {
+          border-bottom: none;
+          margin-bottom: 2px;
+        }
+      }
+
+      &.active {
+        color: $green;
+
+        .read {
+          display: none;
+        }
+      }
+
+      .read {
+        display: inline-block;
+
+        margin-top: 10px;
+
+        border-bottom: 2px solid $green;
+        color: $green;
+      }
+    }
+
+    .story {
+      display: none;
     }
   }
 }
