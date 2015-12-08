@@ -53,8 +53,8 @@ export class Home extends Component {
     function renderContent() {
       return (
         <ReactCSSTransitionGroup transitionName="page-parts-animation"
-                                       transitionAppear={ true }
-                                       transitionAppearTimeout={ 3000 }>
+                                 transitionAppear
+                                 transitionAppearTimeout={ 3000 }>
           <Subscribe />
           <Toggle />
           <YouCan />

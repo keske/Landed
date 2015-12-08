@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import $ from 'jquery';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 /* component styles */
@@ -97,18 +96,13 @@ export class Header extends Component {
       );
     };
 
-    // jQuery yeah, but... okaaay
-    if (!showPhoneMenu) {
-      $('html').css('overflow', 'scroll');
-    } else {
-      $('html').css('overflow', 'hidden');
-    }
+    document.documentElement.style.overflow = showPhoneMenu ? 'hidden' : 'scroll';
 
     return (
       <section className={ `${ styles }` }>
         <ReactCSSTransitionGroup transitionName="el-animation"
-                                       transitionAppear={ true }
-                                       transitionAppearTimeout={ 500 }>
+                                 transitionAppear
+                                 transitionAppearTimeout={ 500 }>
           <div className="top-header">
             <div className="container">
               <div className="row">

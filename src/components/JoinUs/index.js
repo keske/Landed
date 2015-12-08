@@ -5,7 +5,6 @@ import $ from 'jquery';
 import styles from './styles';
 
 export class JoinUs extends Component {
-
   constructor(props) {
     super(props);
 
@@ -36,6 +35,7 @@ export class JoinUs extends Component {
       },
     };
 
+
     const request = $.ajax({
       url: 'http://landed.com/mail.php',
       type: 'post',
@@ -55,6 +55,11 @@ export class JoinUs extends Component {
         textStatus, errorThrown
       );
     });
+
+    // const http = new XMLHttpRequest();
+    // http.open('POST', 'http://gradusdevelopment.com/mail.php', true);
+    // http.send(JSON.stringify(req));
+
   }
 
   render() {

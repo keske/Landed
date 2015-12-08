@@ -32,7 +32,7 @@ export class WhoIsLanded extends Component {
             </p>
             <p className="sign">
               Advocate by day.<br />
-               Dancer by night.
+              Dancer by night.
             </p>
           </div>
           <div className="col-xs-8 col-sm-8 col-md-3 col-lg-3 col-xs-offset-2 col-sm-offset-2 col-md-offset-0 col-lg-offset-0 text-center">

@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 import R from 'ramda';
-import { Link } from 'react-router';
 
 /* component styles */
 import styles from './styles';
 
 /* images */
-const icons = [];
-R.forEach(name =>
-  icons.push(require(`./files/how-${ name }.png`)),
-  R.range(1, 3 + 1));
+const icons = R.range(1, 3 + 1).map(index => require(`./files/how-${index}.png`));
 
 export class HowItWorks extends Component {
   render() {
