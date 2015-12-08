@@ -33,15 +33,16 @@ const PURCHASE = [{
 
 export class Lease extends Component {
   render() {
+
     function renderTable(data) {
       return data.map((field, key) =>
         <div key={ key }>
-          <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5 left-side">
+          <div className="col-xs-12 col-sm-5 col-md-5 col-lg-5 left-side">
             <p className="field-prop">
               { field.prop }
             </p>
           </div>
-          <div className="col-xs-12 col-sm-12 col-md-7 col-lg-7 right-side">
+          <div className="col-xs-12 col-sm-7 col-md-7 col-lg-7 right-side">
             <p className="field-val">
               { field.val }
             </p>
@@ -49,6 +50,41 @@ export class Lease extends Component {
         </div>
       );
     }
+
+    function renderLandedSupport() {
+      return (
+        <div className="landed-support">
+          <p className="title">
+            Landed Support
+          </p>
+          <div className="list">
+            <span className="icon" />
+            <span className="text">
+              <p>
+                Help finding you an investor
+              </p>
+            </span>
+          </div>
+          <div className="list">
+            <span className="icon" />
+            <span className="text">
+              <p>
+                Simple, intuitive legal forms
+              </p>
+            </span>
+          </div>
+          <div className="list">
+            <span className="icon" />
+            <span className="text">
+              <p>
+                On-going support and independent advisor
+              </p>
+            </span>
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div className="container">
         <div className="row lease-and-shared">
@@ -71,10 +107,10 @@ export class Lease extends Component {
             </p>
 
             <div className="list">
-              <div className="col-xs-12 col-sm-12 col-md-1 col-lg-1 text-right">
+              <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
                 <span className="list-number">1.</span>
               </div>
-              <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11">
+              <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
                 <p>
                   A long-term rent agreement that provides security to both the owner and the renter.  This commits both the investor and the resident to the space for 5 years.  For this commitment, the investor agrees to give the resident the same experience they would have in their own home.
                 </p>
@@ -82,10 +118,10 @@ export class Lease extends Component {
             </div>
 
             <div className="list">
-              <div className="col-xs-12 col-sm-12 col-md-1 col-lg-1 text-right">
+              <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
                 <span className="list-number">2.</span>
               </div>
-              <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11">
+              <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
                 <p>
                   An option to buy back the property from the investor.  In exchange to committing the home long-term, the resident is given an option to buy the property any time after two years.
                 </p>
@@ -153,32 +189,41 @@ export class Lease extends Component {
             <p>
               Paragraph about customizable terms?
             </p>
+            <div className="hidden-xs hidden-sm">
+              { renderLandedSupport() }
+            </div>
           </div>
 
           <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 terms-table">
-            <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5 left-side">
+            <div className="col-xs-12 col-sm-5 col-md-5 col-lg-5 left-side">
               <p className="field-name-prop">
                 Rental Agreement
               </p>
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-7 col-lg-7 right-side">
+            <div className="col-xs-12 col-sm-7 col-md-7 col-lg-7 right-side">
               <p className="field-name-val">
                 Recommended Default
               </p>
             </div>
             { renderTable(RENTAL) }
 
-            <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5 left-side">
+            <div className="col-xs-12 col-sm-5 col-md-5 col-lg-5 left-side">
               <p className="field-name-prop">
                 Purchase Option
               </p>
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-7 col-lg-7 right-side">
+            <div className="col-xs-12 col-sm-7 col-md-7 col-lg-7 right-side">
               <p className="field-name-val">
                 Recommended Default
               </p>
             </div>
             { renderTable(PURCHASE) }
+          </div>
+
+          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div className="hidden-md hidden-lg">
+              { renderLandedSupport() }
+            </div>
           </div>
         </div>
       </div>

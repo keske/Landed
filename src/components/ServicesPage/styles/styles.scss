@@ -1,4 +1,5 @@
 @import '../../../containers/App/styles/vars';
+@import '../../../containers/App/styles/screens';
 
 :local(.styles) {
   background: #F8F8F8;
@@ -47,6 +48,14 @@
     .list {
       margin-left: -60px;
       margin-bottom: 30px;
+
+      @media (min-width: 768px) and (max-width: 992px) {
+        margin-left: -80px;
+      }
+
+      @media (#{ $phone }) {
+        margin-left: -15px;
+      }
 
       &:after {
         content: "";
@@ -99,11 +108,25 @@
       color: #4C4C4C;
     }
 
+    .landed-support {
+      margin-top: 50px;
+    }
+
     .terms-table {
       background: #FFF;
       border-top: 1px solid $green;
 
       padding-bottom: 40px;
+
+      @media (min-width: 768px) and (max-width: 992px) {
+        margin-top: 30px;
+        padding-top: 40px;
+      }
+
+      @media (#{ $phone }) {
+        margin-top: 30px;
+        padding-top: 40px;
+      }
       
       .left-side, .right-side {
         padding: 0 25px;
@@ -111,6 +134,10 @@
 
       .left-side {
         text-align: right;
+
+        @media (#{ $phone }) {
+          text-align: left;
+        }
       }
 
       p.field-name-prop {
@@ -120,6 +147,10 @@
         color: #4C4C4C;
 
         margin-top: 40px;
+
+        @media (#{ $phone }) {
+          display: none;
+        }
       }
       p.field-name-val {
         font-family: 'SupriaSans Bold';
@@ -128,6 +159,10 @@
         color: #7B7B7A;
 
         margin-top: 40px;
+
+        @media (#{ $phone }) {
+          display: none;
+        }
       }
 
       p.field-prop {
@@ -137,6 +172,10 @@
         color: #4C4C4C;
 
         padding: 3px 0;
+
+        @media (#{ $phone }) {
+          margin-bottom: 0;
+        }
       }
       p.field-val {
         font-family: 'SupriaSans Regular';
@@ -145,6 +184,46 @@
         color: #7B7B7A;
 
         padding: 3px 0;
+
+        @media (#{ $phone }) {
+          padding-bottom: 20px;
+        }
+      }
+    }
+
+    .landed-support {
+
+      .list {
+        margin-left: -40px;
+        padding: 5px 0;
+
+        @media (min-width: 768px) and (max-width: 992px) {
+          margin-left: 0;
+        }
+
+        @media (#{ $phone }) {
+          margin-left: 0;
+        }
+
+        span.icon {
+          vertical-align: top;
+
+          $size: 18px;
+
+          width: $size;
+          height: $size;
+
+          background: url(../files/landed-done.png);
+          background-size: cover;
+
+          display: inline-block;
+        }
+
+        p {
+          display: inline-block;
+          margin-left: 20px;
+          width: 80%;
+        }
       }
     }
   }
