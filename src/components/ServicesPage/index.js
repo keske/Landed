@@ -6,6 +6,7 @@ import { IntroImage } from '../IntroImage';
 import { ImageBlock } from '../ImageBlock';
 import { HowItWorks } from '../HowItWorks';
 import { Lease } from './_lease';
+import { Ownership } from './_ownership';
 
 /* component styles */
 import styles from './styles';
