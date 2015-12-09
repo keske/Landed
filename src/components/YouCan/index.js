@@ -13,7 +13,7 @@ export class YouCan extends Component {
       <section className={ `${styles}` }>
         <div className="container">
           <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center titlemargins">
               <span className="title">
                 With Landed you can:
               </span>
