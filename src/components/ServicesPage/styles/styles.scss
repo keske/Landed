@@ -95,8 +95,10 @@
         line-height: 24px;
         color: #7B7B7A;
 
+        width: 90%;
+
         list-style-type: disc;
-        padding: 3px 0 0 10px;
+        padding: 0 0 20px 0;
       }
     }
   }
@@ -109,6 +111,10 @@
       font-size: 25px;
       line-height: 45px;
       color: #4C4C4C;
+    }
+
+    p.text {
+      width: 90%;
     }
 
     .landed-support {
@@ -297,6 +303,42 @@
 
     .story {
       display: none;
+
+      p {
+        width: 70%;
+      }
+    }
+  }
+
+  .sign-up-block {
+    position: absolute;
+    margin-top: -100px;
+
+    span.button {
+      background: #FFF;
+      border-radius: 75px;
+      opacity: 0.8;
+
+
+      padding: 12px 35px;
+
+      font-size: 18px;
+      color: $green;
+
+      margin-top: 5px;
+      display: inline-block;
+
+      @media (#{ $phone }) {
+        width: 100%;
+        text-align: center;
+      }
+
+      &:hover {
+        background: #FFF;
+        color: $green;
+        opacity: 1;
+        
+      }
     }
   }
 }

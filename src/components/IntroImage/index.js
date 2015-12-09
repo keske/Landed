@@ -33,19 +33,17 @@ export class IntroImage extends Component {
   }
 
   render() {
-    const { title, text } = this.props;
+    const { title, text, image } = this.props;
 
     return (
-      <section className={ `${styles}` } ref="parallax">
+      <section className={ `${styles} ${image}` } ref="parallax">
         <div className="container">
           <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11 col-md-offset-1 col-lg-offset-1">
+            <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11">
               <ReactCSSTransitionGroup transitionName="title-animation"
                                        transitionAppear
                                        transitionAppearTimeout={ 700 }>
-                <h1>
-                  { title }
-                </h1>
+                <h1 dangerouslySetInnerHTML={{ __html: title }} />
               </ReactCSSTransitionGroup>
               <ReactCSSTransitionGroup transitionName="text-animation"
                                        transitionAppear

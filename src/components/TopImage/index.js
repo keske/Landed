@@ -41,7 +41,7 @@ export class TopImage extends Component {
         <div className="blurred-image" ref="blurred" />
         <div className="container">
           <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11 col-md-offset-1 col-lg-offset-1">
+            <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11">
               <ReactCSSTransitionGroup transitionName="title-animation"
                                        transitionAppear
                                        transitionAppearTimeout={ 1300 }>
@@ -57,7 +57,7 @@ export class TopImage extends Component {
             </div>
           </div>
           <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11 col-md-offset-1 col-lg-offset-1">
+            <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11">
               <ReactCSSTransitionGroup transitionName="text-animation-2"
                                        transitionAppear
                                        transitionAppearTimeout={ 700 }>
@@ -97,13 +97,13 @@ export class TopImage extends Component {
                 <div className="hidden-md hidden-lg">
                   <Link to="join">
                     <span className="button">
-                      I want a home to live in
+                      I’m ready for home
                     </span>
                   </Link>
                 </div>
                 <div className="hidden-xs hidden-sm">
                   <span className="button" onClick={ () => this.props.showPopup(true) }>
-                    I want a home to live in
+                    I’m ready for home
                   </span>
                 </div>
               </ReactCSSTransitionGroup>

@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
 import DocumentMeta from 'react-document-meta';
+
+/* actions */
+import * as actionCreators from 'actions/app';
 
 /* application components */
 import { ServicesPage } from 'components/ServicesPage';
@@ -16,12 +22,16 @@ const metaData = {
   },
 };
 
+@connect(
+  state => state.app,
+  dispatch => bindActionCreators(actionCreators, dispatch)
+)
 export class Services extends Component {
   render() {
     return (
       <section>
         <DocumentMeta { ...metaData } />
-        <ServicesPage />
+        <ServicesPage { ...this.props } />
       </section>
     );
   }

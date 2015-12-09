@@ -111,7 +111,7 @@ export class Header extends Component {
           <div className="top-header">
             <div className="container">
               <div className="row">
-                <div className="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-md-offset-1 col-lg-offset-1 hidden-xs hidden-sm">
+                <div className="col-xs-6 col-sm-6 col-md-2 col-lg-2 hidden-xs hidden-sm">
                   <Link to="/">
                     <span className="logo" />
                   </Link>
