@@ -5,8 +5,8 @@ import { Link } from 'react-router';
 import styles from './styles';
 
 const QuestionsAndAnswers = [{
-  question: "How do I sell my portion of a home if I don't own the whole thing?",
-  answer: "With Landed, you agree to hold the property for at least five years. If you need to relocate before then, you have two options: </br>1) you can sublease the property until the end of the term or </br>2) you can buy-out your investors and sell the entire property. </br>In the case of the second option, you’ll pay a 2% penalty for early termination. <br /><br /> Otherwise, you can sell the property exactly as you would your own home and pay your co-investors 75% of the proceeds. We can help you sell just your share of the home to another Landed occupant so you walk away with more money in your pocket. You can also choose to buy out your investors without any penalty as soon as the five years are up.",
+  question: "How do I sell or move if I don’t own the whole home?",
+  answer: "n a typical agreement, you agree to hold the property for at least five years. If you need to relocate before then, you have two options: </br>1) you can sublease the property until the end of the term or </br>2) you can buy-out your investors and sell the entire property. </br>In the case of the second option, you’ll pay a 2% penalty for early termination. <br /><br /> Otherwise, you can sell the property exactly as you would your own home and pay your co-investors 75% of the proceeds. We can help you sell just your share of the home to another Landed occupant so you walk away with more money in your pocket. You can also choose to buy out your investors without any penalty as soon as the five years are up.",
 }, {
   question: "Companies fail all the time.  What happens if Landed goes bankrupt or gets acquired?",
   answer: "With Landed, you own the property (your name is on title!) -- we just help coordinate the interactions between all the parties. In the unlikely event that we cease to exist, you'll still own your share of the house, the contract with your co-investors will still be valid and there are contingency plans in place to ensure your investment is protected.",
@@ -15,7 +15,9 @@ const QuestionsAndAnswers = [{
   answer: "With Landed, you’re sharing your home investment, not your home experience.  You can paint the walls, fix up the kitchen, build a new deck, AirBnB, sublet or get a puppy; we’re just an alternative financing choice.<br />The only thing that will require approval is major structural changes to the property.  If you want to tear down some walls or build an extension, we just want to partner with you to make sure it’s adding value to the property.",
 }, {
   question: "Does rent change year to year?  How do you set the buy-out price?",
-  answer: "Rent changes year-to-year based on nearby home sales.  Before closing on your home, we'll sit down with you and agree to a method for assessing rent (either through an online rent index or through property appraisals).  To determine how much Landed's co-investment is worth, we'll use a local home price index to track the appreciation of the home.",
+  answer: "Typically, rent changes annually based on an independent public rent index.  For buy-out prices, we’ll use a local Case-Shiller property index to track the changing value of your home.  That way, changes you make inside the home won’t result in higher rent or buy-out prices.
+Our role is to make it valuations clear, transparent and fair so that you can don’t have to ruin your most important relationships over differences in opinion.
+",
 }];
 
 export class FAQ extends Component {

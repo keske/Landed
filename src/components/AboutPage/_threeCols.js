@@ -12,19 +12,19 @@ export class ThreeCols extends Component {
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
             <img src={ icons[0] } />
             <p>
-              Instead of a bank that gets its money back no matter what, we share in the ups and downs with you.
+              Instead of a bank that gets its money back no matter what, co-investors will share in both the ups and downs with you.
             </p>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
             <img src={ icons[1] } />
             <p>
-              Instead of forcing you to put down a massive down payment, we’re willing to meet you at 5% down without mandatory insurance or extra fees.
+              50% to 60% of new home buyers couldn’t have purchased without parental support.  Co-investors help you get into your home sooner.
             </p>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
             <img src={ icons[2] } />
             <p>
-              Instead of leaving you to fend for yourself in a new home with new challenges, we have someone on call 24/7 to help you with repairs and household maintenance.
+              Instead of leaving you to fend for yourself in a new home with new challenges, Landed and your co-investors are here to support you.
             </p>
           </div>
         </div>

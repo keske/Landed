@@ -46,12 +46,10 @@ export class TopImage extends Component {
                                        transitionAppear
                                        transitionAppearTimeout={ 1300 }>
                 <h1 className="hidden-xs hidden-sm">
-                  Split your home investment,<br />
-                  not the space
+                  Join forces to pay for home
                 </h1>
                 <h1 className="hidden-md hidden-lg">
-                  Split your home<br />
-                  investment, not&nbsp;the&nbsp;space
+                  Join forces to pay for home
                 </h1>
               </ReactCSSTransitionGroup>
             </div>
@@ -64,7 +62,8 @@ export class TopImage extends Component {
                 <div className="group">
                   <span className="icon" />
                   <p>
-                    Get benefits of ownership with as little as 5% down, less debt and fewer headaches.
+                    Simple, standard shared ownership structures to split your investment with family or friends.
+
                   </p>
                 </div>
               </ReactCSSTransitionGroup>
@@ -75,12 +74,12 @@ export class TopImage extends Component {
                 <div className="group">
                   <span className="icon" />
                   <p>
-                    Own 25% of your home’s value but get exclusive living&nbsp;rights.
+                    Independent third party services to make sure you don’t jeopardize your relationships.
                   </p>
                 </div>
               </ReactCSSTransitionGroup>
 
-              <ReactCSSTransitionGroup transitionName="text-animation-2"
+              { /* <ReactCSSTransitionGroup transitionName="text-animation-2"
                                        transitionAppear
                                        transitionAppearTimeout={ 1300 }>
                 <div className="group">
@@ -89,7 +88,7 @@ export class TopImage extends Component {
                     Pay expenses on the portion you own.<br />Pay rent to co-investors on the rest.
                   </p>
                 </div>
-              </ReactCSSTransitionGroup>
+              </ReactCSSTransitionGroup>  */ }
 
               <ReactCSSTransitionGroup transitionName="text-animation-4"
                                        transitionAppear
