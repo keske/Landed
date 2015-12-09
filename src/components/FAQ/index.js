@@ -15,9 +15,7 @@ const QuestionsAndAnswers = [{
   answer: "With Landed, you’re sharing your home investment, not your home experience.  You can paint the walls, fix up the kitchen, build a new deck, AirBnB, sublet or get a puppy; we’re just an alternative financing choice.<br />The only thing that will require approval is major structural changes to the property.  If you want to tear down some walls or build an extension, we just want to partner with you to make sure it’s adding value to the property.",
 }, {
   question: "Does rent change year to year?  How do you set the buy-out price?",
-  answer: "Typically, rent changes annually based on an independent public rent index.  For buy-out prices, we’ll use a local Case-Shiller property index to track the changing value of your home.  That way, changes you make inside the home won’t result in higher rent or buy-out prices.
-Our role is to make it valuations clear, transparent and fair so that you can don’t have to ruin your most important relationships over differences in opinion.
-",
+  answer: "Typically, rent changes annually based on an independent public rent index. For buy-out prices, we’ll use a local Case-Shiller property index to track the changing value of your home. That way, changes you make inside the home won’t result in higher rent or buy-out prices. Our role is to make it valuations clear, transparent and fair so that you can don’t have to ruin your most important relationships over differences in opinion.",
 }];
 
 export class FAQ extends Component {
