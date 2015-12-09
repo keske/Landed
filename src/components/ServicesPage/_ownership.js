@@ -1,6 +1,20 @@
 import React, { Component } from 'react';
 
 const RENTAL = [{
+  prop: 'Purchase Frequency',
+  val: 'Once a year, can purchase more of the home.',
+}, {
+  prop: 'Purchase Price for 1% portion',
+  val: 'Purchase price based on independent index.',
+}, {
+  prop: 'Minimum Purchase Price for 1% portion',
+  val: '90% of original purchase price basis',
+}, {
+  prop: 'Ownership Interest',
+  val: 'Based on down-payment amounts',
+}];
+
+const PURCHASE = [{
   prop: 'Base Rent',
   val: 'Market rent',
 }, {
@@ -8,33 +22,22 @@ const RENTAL = [{
   val: 'None',
 }, {
   prop: 'Rent Increases',
-  val: 'Assessed annually based on local index. ',
+  val: 'Assessed annually based on local index.',
 }, {
   prop: 'Rent Increase Limit',
-  val: 'No more than 20% every 3 years.',
+  val: 'No more than 20% every 3 years',
 }, {
   prop: 'Rent Period',
   val: '5 years.  Resident can move out early but responsible for sublet.',
 }, {
   prop: 'Repair Handling',
-  val: 'Resident pays for minor repairs.  Major repairs paid by investor.',
-}];
-
-const PURCHASE = [{
-  prop: 'Purchase Timeline',
-  val: 'Can purchase after 2 years with 90 days notice.',
-}, {
-  prop: 'Purchase Price',
-  val: 'Purchase price based on independent index.',
-}, {
-  prop: 'Minimum Purchase Price',
-  val: '90% of original purchase price.',
+  val: 'Resident pays for minor repairs.  Major repairs paid by group.',
 }];
 
 const jenifer = require('./files/jen.png');
 const marc = require('./files/marc.png');
 
-export class Lease extends Component {
+export class Ownership extends Component {
 
   constructor(props) {
     super(props);
@@ -50,7 +53,8 @@ export class Lease extends Component {
 
     function renderTable(data) {
       return data.map((field, key) =>
-        <div key={ key }>
+        <div className="row"
+             key={ key }>
           <div className="col-xs-12 col-sm-5 col-md-5 col-lg-5 left-side">
             <p className="field-prop">
               { field.prop }
@@ -72,10 +76,11 @@ export class Lease extends Component {
             Landed Support
           </p>
           <div className="list">
-            <span className="icon" />
+            <span className="icon un-done" />
             <span className="text">
               <p>
                 Help finding you an investor
+                <i>coming soon</i>
               </p>
             </span>
           </div>
@@ -104,20 +109,20 @@ export class Lease extends Component {
         <div className="row lease-and-shared">
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <p className="small-title">
-              service 1
+              service 2
             </p>
             <p className="title">
-              Lease Until You Buy
+              Shared Ownership
             </p>
           </div>
 
           <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5">
             <p className="text">
-              Typical rent-to-own contracts have a bad reputation.  Traditionally, an upfront option fee is paid as well as a monthly rent premium that eventually goes towards an inflated home purchase price.  Sadly, the reality is that many buyers never exercise their right to buy and all those additional fees go straight to the landlord’s pocket.  We don’t think that’s fair.
+              Shared ownership involves splitting a home purchase, but assigning exclusive living rights to one of the parties (the Resident Owner).  For the portion that the Resident Owner doesn’t own, they pay rent to the investor.
             </p>
 
             <p className="italic-block small-title">
-              More typically known as a lease-option agreement, our contract involves two main parts:
+              A partial ownership also involves two main parts:
             </p>
 
             <div className="list">
@@ -126,7 +131,7 @@ export class Lease extends Component {
               </div>
               <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
                 <p>
-                  A long-term rent agreement that provides security to both the owner and the renter.  This commits both the investor and the resident to the space for 5 years.  For this commitment, the investor agrees to give the resident the same experience they would have in their own home.
+                  <strong>A co-ownership agreement that splits the responsibilities of ownership.</strong>  The two parties hold the property on title as Tenants-In-Common. The ownership percentages between the two parties are usually calculated by how much they put in as down-payment.  Typically, all financials (paying the mortgage, insurance, repairs, but also receiving rent payments) are split according to ownership interest.  The resident owner is allowed to slowly purchase more of the property over time.
                 </p>
               </div>
             </div>
@@ -137,7 +142,7 @@ export class Lease extends Component {
               </div>
               <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
                 <p>
-                  An option to buy back the property from the investor.  In exchange to committing the home long-term, the resident is given an option to buy the property any time after two years.
+                  <strong>A lease to the resident owner.</strong> This ownership group then leases the property to the Resident Owner and gives them all the rights that would typically be conveyed to a homeowner.
                 </p>
               </div>
             </div>
@@ -150,14 +155,13 @@ export class Lease extends Component {
             </p>
             <ul>
               <li>
-                Live like a homeowner with no fear of landlord eviction.
+                Become a responsible homeowner without as much debt.
               </li>
               <li>
-                Invest in your space knowing you'll own it.
-                { /* ' */ }
+                Can buy ownership over time instead of all at once.
               </li>
               <li>
-                No rent premiums or confusing option fees found in many rent-to-own contracts.
+                Have your money working sooner while sharing some of the financial risk.
               </li>
             </ul>
 
@@ -166,13 +170,13 @@ export class Lease extends Component {
             </p>
             <ul>
               <li>
-                Simple rental investment with tax advantages and simple access to financing.
+                Co-invest in a great home with a trusted, committed resident who takes care of your investment.
               </li>
               <li>
-                A trusted, committed resident who takes care of your investment.
+                Get benefits of owning investment real estate without the hassle of being a landlord.
               </li>
               <li>
-                More options available if residents can no longer pay.
+                Provide an opportunity for the resident to stair-step into responsible ownership.
               </li>
             </ul>
           </div>
@@ -194,7 +198,7 @@ export class Lease extends Component {
           <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 terms-table">
             <div className="col-xs-12 col-sm-5 col-md-5 col-lg-5 left-side">
               <p className="field-name-prop">
-                Rental Agreement
+                Co-Ownership Agreement
               </p>
             </div>
             <div className="col-xs-12 col-sm-7 col-md-7 col-lg-7 right-side">
@@ -206,7 +210,7 @@ export class Lease extends Component {
 
             <div className="col-xs-12 col-sm-5 col-md-5 col-lg-5 left-side">
               <p className="field-name-prop">
-                Purchase Option
+                Lease
               </p>
             </div>
             <div className="col-xs-12 col-sm-7 col-md-7 col-lg-7 right-side">
@@ -239,10 +243,10 @@ export class Lease extends Component {
               </div>
               <div className="col-xs-9 col-sm-8 col-md-9 col-lg-9">
                 <p className={`text ${showFirstStory && 'active'}`}>
-                  Lisa and her family found a home in Pasadena for $750,000. 
+                  Jennifer’s parents want to help her buy a home, but Jennifer doesn’t want a gift.
                   <br />
                   <span className="read">
-                    Read Lisa’s story
+                    Read Jennifer’s story
                   </span>
                 </p>
               </div>
@@ -257,10 +261,10 @@ export class Lease extends Component {
               </div>
               <div className="col-xs-9 col-sm-8 col-md-9 col-lg-9">
                 <p className={`text ${showSecondStory && 'active'}`}>
-                  The Torres family was just asked to leave their rental by their landlord.  The Torres family would prefer to rent instead of own, but really value security and control for their children.
+                  Marc Johnson works in finance and understands that having all of his family’s assets in one investment is not the best decision.
                   <br />
                   <span className="read">
-                    Read Torres’s story
+                    Read Marc’s story
                   </span>
                 </p>
               </div>
@@ -270,24 +274,31 @@ export class Lease extends Component {
           <div className="col-xs-12 col-sm-12 col-md-10 col-lg-10">
             <div className={`story ${showFirstStory && 'show'}`}>
               <p>
-                Although they have some money saved up, they want to avoid paying mortgage insurance and feel it’s too risky to be buying a home right now.
+                Instead, she would prefer to have her parents invest alongside her but in a way that doesn’t put their relationship at risk as issues come up.
               </p>
               <p>
-                Lisa’s uncle wanted to help support Lisa in a way that was fair and fit within his portfolio goals.  He bought the house for Lisa, and uses Landed to determine fair rent to be $3,500 / month.
+                Jennifer finds an $900,000 condo in the Mission (San Francisco) that she absolutely loves.  She only has enough for a 5% downpayment and her parents provide an additional 15%.
               </p>
               <p>
-                Three years later, Lisa felt ready to buy the home outright.  Using Landed, Lisa determined the house was now worth $790,000 and got a regular mortgage to buy-out her uncle.
+                Every month, Jennifer and her roommates pays fair rent of $4,500.  Landed collects the money, pays the mortgage, insurance, property taxes and repair fund.  The remaining profit is split between her and her parents based on their 25/75 ownership split.
               </p>
+              <p>
+                Every year, Jennifer buys more of the home from her parents using Landed to determine a fair price.  Eventually in year 4, she buys the property outright.
+              </p>
+
             </div>
             <div className={`story ${showSecondStory && 'show'}`}>
               <p>
-                The Torres’ need help finding a long-term investor.
+                He wants to share the financial risk with someone but has little desire to buy more of the house over time.
               </p>
               <p>
-                Landed helps identify an investor who is also looking for committed occupants.  The Torres’ identify a $550,000 home in San Diego and the investor purchases it.  The Torres’ pay $2,800 / mth.
+                Marc’s friend’s brother loves investing in real estate.  They decide to split the home 25/75 but make big down-payments.  Every month, Marc pays $3,900 in rent.  Like before, Landed pays for all expenses.  The remaining $1,600 in profit is split between them.
               </p>
               <p>
-                Three years later, Ms. Torres receives an amazing career opportunity in Denver that she can’t let slip away.  The Torres family moves to Denver and sublets their home to complete the 5 year agreement.  They choose to not buy the home, and the investor maintains his investment.
+                In year 3, an earthquake causes $100,000 of damage to the property.  Marc’s investor is responsible for $75,000 of the repairs.  Alternatively, Landed starts fairly discounting his ownership.
+              </p>
+              <p>
+                After six years, the Johnson family decides it’s time for a move.  They sell the house and split the proceeds according to ownership share.
               </p>
             </div>
           </div>

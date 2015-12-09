@@ -50,7 +50,8 @@ export class Lease extends Component {
 
     function renderTable(data) {
       return data.map((field, key) =>
-        <div key={ key }>
+        <div className="row"
+             key={ key }>
           <div className="col-xs-12 col-sm-5 col-md-5 col-lg-5 left-side">
             <p className="field-prop">
               { field.prop }

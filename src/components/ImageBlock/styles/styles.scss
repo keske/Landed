@@ -21,14 +21,14 @@
   }
   // Services page
   &.services {
-    background: url(../files/services.jpg);
+    background: url(../files/image-block-services.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 
     @media (#{ $phone }) {
       height: 315px;
 
-      background: url(../files/services-phone.jpg);
+      background: url(../files/image-block-services-phone.jpg);
       background-size: 100% auto;
     }
   }

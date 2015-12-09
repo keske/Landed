@@ -226,12 +226,27 @@
           background-size: cover;
 
           display: inline-block;
+
+          &.un-done {
+            background: url(../files/landed-un-done.png);
+          background-size: cover;
+          }
         }
 
         p {
           display: inline-block;
           margin-left: 20px;
           width: 80%;
+
+          i {
+            font-family: 'Jannon10Pro-Italic';
+            font-size: 16px;
+            font-style: italic;
+
+            color: $green;
+
+            display: block;
+          }
         }
       }
     }
