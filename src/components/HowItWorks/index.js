@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 import R from 'ramda';
-import { Link } from 'react-router';
 
 /* component styles */
 import styles from './styles';
 
 /* images */
-const icons = [];
-R.forEach(name =>
-  icons.push(require(`./files/how-${ name }.png`)),
-  R.range(1, 3 + 1));
+const icons = R.range(1, 3 + 1).map(index => require(`./files/how-${index}.png`));
 
 export class HowItWorks extends Component {
   render() {
@@ -61,6 +57,13 @@ export class HowItWorks extends Component {
 
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+              <span className="price">
+                $499  +  $19 / month
+              </span>
+              <hr className="price" />
+              <span className="special">
+                Holiday Special: <span className="free">Free</span>
+              </span>
               <a href="/#join" target="_blank">
                 <span className="button">
                   Sign up to get started

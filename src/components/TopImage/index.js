@@ -6,7 +6,6 @@ import { Link } from 'react-router';
 import styles from './styles';
 
 export class TopImage extends Component {
-
   static propTypes = {
     showPopup: React.PropTypes.func,
   }
@@ -42,9 +41,9 @@ export class TopImage extends Component {
         <div className="blurred-image" ref="blurred" />
         <div className="container">
           <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11 col-md-offset-1 col-lg-offset-1">
+            <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11">
               <ReactCSSTransitionGroup transitionName="title-animation"
-                                       transitionAppear={ true }
+                                       transitionAppear
                                        transitionAppearTimeout={ 1300 }>
                 <h1 className="hidden-xs hidden-sm">
                   Split your home investment,<br />
@@ -58,9 +57,9 @@ export class TopImage extends Component {
             </div>
           </div>
           <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11 col-md-offset-1 col-lg-offset-1">
+            <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11">
               <ReactCSSTransitionGroup transitionName="text-animation-2"
-                                       transitionAppear={ true }
+                                       transitionAppear
                                        transitionAppearTimeout={ 700 }>
                 <div className="group">
                   <span className="icon" />
@@ -71,7 +70,7 @@ export class TopImage extends Component {
               </ReactCSSTransitionGroup>
 
               <ReactCSSTransitionGroup transitionName="text-animation-1"
-                                       transitionAppear={ true }
+                                       transitionAppear
                                        transitionAppearTimeout={ 1000 }>
                 <div className="group">
                   <span className="icon" />
@@ -82,7 +81,7 @@ export class TopImage extends Component {
               </ReactCSSTransitionGroup>
 
               <ReactCSSTransitionGroup transitionName="text-animation-2"
-                                       transitionAppear={ true }
+                                       transitionAppear
                                        transitionAppearTimeout={ 1300 }>
                 <div className="group">
                   <span className="icon" />
@@ -93,18 +92,18 @@ export class TopImage extends Component {
               </ReactCSSTransitionGroup>
 
               <ReactCSSTransitionGroup transitionName="text-animation-4"
-                                       transitionAppear={ true }
+                                       transitionAppear
                                        transitionAppearTimeout={ 1700 }>
                 <div className="hidden-md hidden-lg">
                   <Link to="join">
                     <span className="button">
-                      I want a home to live in
+                      I’m ready for home
                     </span>
                   </Link>
                 </div>
                 <div className="hidden-xs hidden-sm">
                   <span className="button" onClick={ () => this.props.showPopup(true) }>
-                    I want a home to live in
+                    I’m ready for home
                   </span>
                 </div>
               </ReactCSSTransitionGroup>

@@ -9,7 +9,6 @@ import styles from './styles';
 const close = require('./files/close.png');
 
 export class PopUp extends Component {
-
   static propTypes = {
     popup: React.PropTypes.bool,
     showPopup: React.PropTypes.func,

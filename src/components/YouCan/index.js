@@ -5,10 +5,7 @@ import R from 'ramda';
 import styles from './styles';
 
 /* images */
-const icons = [];
-R.forEach(name =>
-  icons.push(require(`./files/you-can-${ name }.png`)),
-  R.range(1, 7 + 1));
+const icons = R.range(1, 7 + 1).map(index => require(`./files/you-can-${index}.png`));
 
 export class YouCan extends Component {
   render() {
@@ -45,7 +42,7 @@ export class YouCan extends Component {
                 </div>
                 <div className="col-xs-10 col-sm-10 col-md-12 col-lg-12 text-col">
                   <p>
-                    Stay as long  as&nbsp;you&nbsp;want
+                    Stay as long as&nbsp;you&nbsp;want
                   </p>
                 </div>
               </div>
@@ -101,7 +98,7 @@ export class YouCan extends Component {
                 </div>
                 <div className="col-xs-10 col-sm-10 col-md-12 col-lg-12 text-col">
                   <p>
-                    Sublease to others  at any price
+                    Sublease to others at any price
                   </p>
                 </div>
               </div>

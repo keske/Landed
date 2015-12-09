@@ -50,15 +50,20 @@ export class Home extends Component {
   render() {
     const { loaded } = this.state;
 
+    const imageBlockProps = {
+      text: 'Landed makes<br />ownership possible<br />sooner than you think',
+      imageClass: 'home',
+    };
+
     function renderContent() {
       return (
         <ReactCSSTransitionGroup transitionName="page-parts-animation"
-                                       transitionAppear={ true }
-                                       transitionAppearTimeout={ 3000 }>
+                                 transitionAppear
+                                 transitionAppearTimeout={ 3000 }>
           <Subscribe />
           <Toggle />
           <YouCan />
-          <ImageBlock />
+          <ImageBlock { ...imageBlockProps } />
           <HowItWorks />
           <FAQ />
         </ReactCSSTransitionGroup>

@@ -1,0 +1,344 @@
+@import '../../../containers/App/styles/vars';
+@import '../../../containers/App/styles/screens';
+
+:local(.styles) {
+  background: #F8F8F8;
+  padding-bottom: 70px;
+  margin-bottom: -40px;
+
+  p {
+    font-family: 'SupriaSans Regular';
+    font-size: 16px;
+    line-height: 22px;
+    color: #7B7B7A;
+
+    &.black {
+      color: #000;
+    }
+  }
+
+  .lease-and-shared {
+    margin-top: 40px;
+    
+    p.small-title {
+      font-family: 'Jannon10Pro';
+      font-style: italic;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    p.title {
+      font-family: 'SupriaSans Bold';
+      font-weight: bold;
+      font-size: 25px;
+      line-height: 45px;
+      color: $green;
+
+      margin-top: -10px;
+    }
+
+    p.text {
+      font-family: 'SupriaSans Regular';
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    p.italic-block {
+      padding: 30px 0;
+    }
+
+    .list {
+      margin-left: -60px;
+      margin-bottom: 30px;
+
+      @media (min-width: 768px) and (max-width: 992px) {
+        margin-left: -80px;
+      }
+
+      @media (#{ $phone }) {
+        margin-left: -15px;
+      }
+
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      span.list-number {
+        font-family: 'Jannon10Pro';
+        font-style: italic;
+        font-size: 16px;
+        line-height: 24px;
+        color: #7B7B7A;
+
+        display: inline-block;
+        margin-left: 14px;
+      }
+    }
+
+    p.ul-title {
+      font-family: 'SupriaSans Bold';
+      font-weight: bold;
+      color: #4C4C4C;
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    ul {
+      margin-left: -20px;
+      margin-bottom: 30px;
+
+      li {
+        font-family: 'SupriaSans Regular';
+        font-size: 16px;
+        line-height: 24px;
+        color: #7B7B7A;
+
+        width: 90%;
+
+        list-style-type: disc;
+        padding: 0 0 20px 0;
+      }
+    }
+  }
+
+  .terms {
+    margin-top: 50px;
+  
+    p.title {
+      font-family: 'Jannon10Pro-Bold';
+      font-size: 25px;
+      line-height: 45px;
+      color: #4C4C4C;
+    }
+
+    p.text {
+      width: 90%;
+    }
+
+    .landed-support {
+      margin-top: 50px;
+    }
+
+    .terms-table {
+      background: #FFF;
+      border-top: 1px solid $green;
+
+      padding-bottom: 40px;
+
+      @media (min-width: 768px) and (max-width: 992px) {
+        margin-top: 30px;
+        padding-top: 40px;
+      }
+
+      @media (#{ $phone }) {
+        margin-top: 30px;
+        padding-top: 40px;
+      }
+      
+      .left-side, .right-side {
+        padding: 0 25px;
+      }
+
+      .left-side {
+        text-align: right;
+
+        @media (#{ $phone }) {
+          text-align: left;
+        }
+      }
+
+      p.field-name-prop {
+        font-family: 'SupriaSans Bold';
+        font-size: 18px;
+        line-height: 42px;
+        color: #4C4C4C;
+
+        margin-top: 40px;
+
+        @media (#{ $phone }) {
+          display: none;
+        }
+      }
+      p.field-name-val {
+        font-family: 'SupriaSans Bold';
+        font-size: 18px;
+        line-height: 42px;
+        color: #7B7B7A;
+
+        margin-top: 40px;
+
+        @media (#{ $phone }) {
+          display: none;
+        }
+      }
+
+      p.field-prop {
+        font-family: 'SupriaSans Regular';
+        font-size: 18px;
+        line-height: 22px;
+        color: #4C4C4C;
+
+        padding: 3px 0;
+
+        @media (#{ $phone }) {
+          margin-bottom: 0;
+        }
+      }
+      p.field-val {
+        font-family: 'SupriaSans Regular';
+        font-size: 16px;
+        line-height: 22px;
+        color: #7B7B7A;
+
+        padding: 3px 0;
+
+        @media (#{ $phone }) {
+          padding-bottom: 20px;
+        }
+      }
+    }
+
+    .landed-support {
+
+      .list {
+        margin-left: -40px;
+        padding: 5px 0;
+
+        @media (min-width: 768px) and (max-width: 992px) {
+          margin-left: 0;
+        }
+
+        @media (#{ $phone }) {
+          margin-left: 0;
+        }
+
+        span.icon {
+          vertical-align: top;
+
+          $size: 18px;
+
+          width: $size;
+          height: $size;
+
+          background: url(../files/landed-done.png);
+          background-size: cover;
+
+          display: inline-block;
+        }
+
+        p {
+          display: inline-block;
+          margin-left: 20px;
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  .examples {
+    margin-top: 50px;
+
+    .story-block {
+      margin-bottom: 30px;
+
+      &:nth-child(3) {
+        @media (#{ $phone }) {
+          margin-top: 30px;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  
+    p.title {
+      font-family: 'Jannon10Pro-Bold';
+      font-size: 25px;
+      line-height: 45px;
+      color: #4C4C4C;
+
+      margin-bottom: 40px;
+    }
+
+    p.text {
+      font-family: 'SupriaSans Regular';
+      font-size: 16px;
+      line-height: 22px;
+      color: #7B7B7A;
+
+      width: 80%;
+      margin-top: 10px;
+
+      cursor: pointer;
+
+      &:hover {
+        color: $green;
+
+        .read {
+          border-bottom: none;
+          margin-bottom: 2px;
+        }
+      }
+
+      &.active {
+        color: $green;
+
+        .read {
+          display: none;
+        }
+      }
+
+      .read {
+        display: inline-block;
+
+        margin-top: 10px;
+
+        border-bottom: 2px solid $green;
+        color: $green;
+      }
+    }
+
+    .story {
+      display: none;
+
+      p {
+        width: 70%;
+      }
+    }
+  }
+
+  .sign-up-block {
+    position: absolute;
+    margin-top: -100px;
+
+    span.button {
+      background: #FFF;
+      border-radius: 75px;
+      opacity: 0.8;
+
+
+      padding: 12px 35px;
+
+      font-size: 18px;
+      color: $green;
+
+      margin-top: 5px;
+      display: inline-block;
+
+      @media (#{ $phone }) {
+        width: 100%;
+        text-align: center;
+      }
+
+      &:hover {
+        background: #FFF;
+        color: $green;
+        opacity: 1;
+        
+      }
+    }
+  }
+}

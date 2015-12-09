@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import $ from 'jquery';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 /* component styles */
@@ -54,6 +53,11 @@ export class Header extends Component {
     return (
       <nav>
         <Link onClick={ () => this.props.show(false) }
+              to="services"
+              activeClassName="active">
+          Services
+        </Link>
+        <Link onClick={ () => this.props.show(false) }
               to="about"
               activeClassName="active">
           About
@@ -97,22 +101,17 @@ export class Header extends Component {
       );
     };
 
-    // jQuery yeah, but... okaaay
-    if (!showPhoneMenu) {
-      $('html').css('overflow', 'scroll');
-    } else {
-      $('html').css('overflow', 'hidden');
-    }
+    document.documentElement.style.overflow = showPhoneMenu ? 'hidden' : 'scroll';
 
     return (
       <section className={ `${ styles }` }>
         <ReactCSSTransitionGroup transitionName="el-animation"
-                                       transitionAppear={ true }
-                                       transitionAppearTimeout={ 500 }>
+                                 transitionAppear
+                                 transitionAppearTimeout={ 500 }>
           <div className="top-header">
             <div className="container">
               <div className="row">
-                <div className="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-md-offset-1 col-lg-offset-1 hidden-xs hidden-sm">
+                <div className="col-xs-6 col-sm-6 col-md-2 col-lg-2 hidden-xs hidden-sm">
                   <Link to="/">
                     <span className="logo" />
                   </Link>
