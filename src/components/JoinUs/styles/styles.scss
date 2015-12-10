@@ -122,4 +122,16 @@
       font-size: 14px;
     }
   }
+
+  textarea {
+    border: none;
+    border-bottom: 2px solid rgba(0, 155, 105, .3);
+
+    background: rgba(0, 155, 105, .1);
+
+    padding: 10px 20px;
+
+    width: 740px;
+    min-height: 116px;
+  }
 }

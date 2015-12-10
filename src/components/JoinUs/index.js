@@ -15,13 +15,17 @@ export class JoinUs extends Component {
       city: '',
       mmerge: '',
       whenMove: '',
-      budget: '',
+      investor: false,
+      ownership: '',
+      comments: '',
       succes: false,
     };
   }
 
   handleRequest() {
-    const { email, name, phone, city, mmerge, whenMove, budget } = this.state;
+    const {
+      email, name, phone, city, mmerge, whenMove, investor, ownership, comments,
+    } = this.state;
 
     const req = {
       email: email,
@@ -31,10 +35,13 @@ export class JoinUs extends Component {
         CITY: city,
         MMERGE4: mmerge,
         WHENMOVE: whenMove,
-        BUDGET: budget,
+        MMERGE8: investor,
+        MMERGE7: ownership,
+        MMERGE9: comments,
       },
     };
 
+    console.log(req);
 
     const request = $.ajax({
       url: 'http://landed.com/mail.php',
@@ -44,7 +51,6 @@ export class JoinUs extends Component {
 
     request.done((data) => {
       console.log(data);
-      // this.setState({ succes: true });
     });
 
     this.setState({ succes: true });
@@ -101,6 +107,7 @@ export class JoinUs extends Component {
             </div>
           </div>
           <div className="row">
+
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-2 col-lg-offet-2 popup-california-title">
               <span className="labels">
                 Are you specifically interested  in being a homeowner in California?
@@ -169,59 +176,71 @@ export class JoinUs extends Component {
             </div>
           </div>
 
+          <br />
+
           <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offet-2">
-              <h3>
-                What's your maximum monthly household budget for housing expenses?
-                { /* ' */ }
-              </h3>
+            <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-2 col-lg-offet-2 popup-investor-title">
+              <span className="labels">
+                Do you have an investor ready to help you buy your home?
+              </span>
+            </div>
+            <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 popup-investor-yes-no">
+              <input type="radio" id="investor-yes" name="investor" onChange={ () => this.setState({ investor: 'Yes' }) } />
+              <label className="gray big" htmlFor="investor-yes">
+                Yes
+              </label>
+            </div>
+            <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 popup-investor-yes-no">
+              <input type="radio" id="investor-no" name="investor" onChange={ () => this.setState({ investor: 'No' }) } />
+              <label className="gray big" htmlFor="investor-no">
+                No
+              </label>
             </div>
           </div>
 
           <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-md-offset-2 col-lg-offet-2 popup-budget">
-              <input type="radio" id="budget-less-1000" name="budget"
-                     onChange={ () => this.setState({ budget: 'Less than $1k' }) } />
-              <label className="gray big" htmlFor="budget-less-1000">
-                Less than $1000
+            <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offet-2">
+              <h3>
+                When are you interested in moving to a new home?
+              </h3>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-md-offset-2 col-lg-offet-2 popup-ownership">
+              <input type="radio" id="ownership-lease" name="ownership"
+                     onChange={ () => this.setState({ ownership: 'Lease To Own' }) } />
+              <label className="gray" htmlFor="ownership-lease">
+                Lease To Own
               </label>
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 popup-budget">
-              <input type="radio" id="budget-1000-2000" name="budget"
-                     onChange={ () => this.setState({ budget: '$1K – $2K' }) } />
-              <label className="gray big" htmlFor="budget-1000-2000">
-                $1000–$2000
+            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 popup-ownership">
+              <input type="radio" id="ownership-shared" name="ownership"
+                     onChange={ () => this.setState({ ownership: 'Shared Ownership' }) } />
+              <label className="gray" htmlFor="ownership-shared">
+                Shared Ownership
               </label>
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 popup-budget">
-              <input type="radio" id="budget-2000-3000" name="budget"
-                     onChange={ () => this.setState({ budget: '$2K – $3K' }) } />
-              <label className="gray big" htmlFor="budget-2000-3000">
-                $2000–$3000
+            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 popup-ownership">
+              <input type="radio" id="ownership-more" name="ownership"
+                     onChange={ () => this.setState({ ownership: 'I Need More Information' }) } />
+              <label className="gray" htmlFor="ownership-more">
+                I Need More<br />Information
               </label>
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-md-offset-2 col-lg-offet-2 popup-budget">
-              <input type="radio" id="budget-3000-4000" name="budget"
-                     onChange={ () => this.setState({ budget: '$3K – $4K' }) } />
-              <label className="gray big" htmlFor="budget-3000-4000">
-                $3000–$4000
-              </label>
-            </div>
-            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 popup-budget">
-              <input type="radio" id="budget-4000-5000" name="budget"
-                     onChange={ () => this.setState({ budget: '$4K – $5K' }) } />
-              <label className="gray big" htmlFor="budget-4000-5000">
-                $4000–$5000
-              </label>
-            </div>
-            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 popup-budget">
-              <input type="radio" id="budget-more-5000" name="budget"
-                     onChange={ () => this.setState({ budget: 'more then $5K' }) } />
-              <label className="gray big" htmlFor="budget-more-5000">
-                More than $5000
-              </label>
-            </div>
+          </div>
 
+          <div className="row">
+            <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offet-2">
+              <h3>
+                Other Comments:
+              </h3>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-md-offset-2 col-lg-offet-2 popup-comments">
+              <textarea id="comments" name="comments"
+                     onChange={ (event) => this.setState({ comments: event.target.value }) } />
+            </div>
           </div>
 
           <div className="row">
