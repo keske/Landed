@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="12px" height="21px" viewBox="0 0 12 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.1 (15681) - http://www.bohemiancoding.com/sketch -->
+    <title>Line + Line</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="главная-copy-6" sketch:type="MSArtboardGroup" transform="translate(-470.000000, -2594.000000)" stroke-linecap="square" stroke="#009B69" stroke-width="2">
+            <g id="Line-+-Line" sketch:type="MSLayerGroup" transform="translate(472.000000, 2596.000000)">
+                <path d="M0.326520647,0.326520647 L8.54810077,8.54810077" id="Line" sketch:type="MSShapeGroup"></path>
+                <path d="M0.326520647,8.81605748 L8.54810077,17.0376376" id="Line" sketch:type="MSShapeGroup" transform="translate(4.571289, 13.060826) scale(1, -1) translate(-4.571289, -13.060826) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

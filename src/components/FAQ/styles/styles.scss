@@ -3,10 +3,14 @@
 
 :local(.styles) {
   position: relative;
-  border-top: 1px solid #979797;
+  border-top: 1px solid #CCC;
+  background: #F4F4F4;
 
   margin-top: 20px;
   padding-top: 50px;
+
+  padding-bottom: 50px;
+  margin-bottom: -40px;
 
   h2 {
     text-align: center;

@@ -1,0 +1,126 @@
+@import '../../../containers/App/styles/vars';
+@import '../../../containers/App/styles/screens';
+
+:local(.styles) {
+  position: relative;
+
+  margin-top: 20px;
+  padding-top: 50px;
+
+  h2 {
+    text-align: center;
+  }
+
+  p {
+    padding-right: 30px;
+  }
+
+  p.title {
+    font-family: 'SupriaSans Bold';
+    color: $green;
+    font-size: 26px;
+    line-height: 45px;
+
+    margin-top: 40px;
+  }
+
+  p.intro {
+    font-family: 'Jannon10Pro-Italic';
+    color: #4A4A4A;
+    font-size: 19px;
+    line-height: 24px;
+
+    padding-top: 10px;
+  }
+
+  .benefits {
+    margin-top: 30px;
+
+    p.header {
+      font-family: 'SupriaSans Bold';
+      color: #4A4A4A;
+      font-size: 18px;
+      line-height: 18px;
+
+      margin-bottom: 15px;
+    }
+
+    p.text {
+      font-family: 'SupriaSans Regular';
+      color: #4A4A4A;
+      font-size: 16px;
+      line-height: 20px;
+
+      padding-left: 30px;
+      margin-bottom: 20px;
+
+      i {
+        font-family: 'Jannon10Pro-Italic';
+      }
+    }
+  }
+
+  .role {
+    margin-top: 40px;
+
+    p.header {
+      font-family: 'SupriaSans Medium';
+      color: #000;
+      font-size: 19px;
+      line-height: 24px;
+
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin-left: -20px;
+      margin-bottom: 30px;
+
+      li {
+        font-family: 'SupriaSans Regular';
+        font-size: 16px;
+        line-height: 20px;
+        color: #4A4A4A;
+
+        list-style-type: disc;
+        padding: 0 0 20px 10px;
+      }
+    }
+  }
+
+  span.button {
+    font-size: 18px;
+    color: $green;
+    
+    border-radius: 31px;
+    border: 1px solid $green;
+
+    padding: 20px 77px;
+    
+    display: inline-block;
+    margin: 50px 0 30px;
+
+    &:hover {
+      background: $green;
+      color: #FFF;
+    }
+  }
+
+  .different-structure {
+    display: block;
+    margin-bottom: 70px;
+
+    a {
+      font-family: 'SupriaSans Regular';
+      font-size: 16px;
+      line-height: 20px;
+      color: $green;
+
+      border-bottom: 1px solid $green;
+
+      &:hover {
+        border-bottom: none;        
+      }
+    }
+  }
+}

@@ -13,7 +13,7 @@ import { Subscribe } from 'components/Subscribe';
 import { Toggle } from 'components/Toggle';
 import { YouCan } from 'components/YouCan';
 import { ImageBlock } from 'components/ImageBlock';
-import { HowItWorks } from 'components/HowItWorks';
+import { Shared } from 'components/Shared';
 import { FAQ } from 'components/FAQ';
 
 const metaData = {
@@ -41,7 +41,7 @@ export class Home extends Component {
     };
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.setState({
       loaded: true,
     });
@@ -64,7 +64,7 @@ export class Home extends Component {
           <Toggle />
           <YouCan />
           <ImageBlock { ...imageBlockProps } />
-          <HowItWorks />
+          <Shared />
           <FAQ />
         </ReactCSSTransitionGroup>
       );
