@@ -247,10 +247,13 @@ export class Ownership extends Component {
               </div>
               <div className="col-xs-9 col-sm-8 col-md-9 col-lg-9">
                 <p className={`text ${showFirstStory && 'active'}`}>
-                  Jennifer’s parents want to help her buy a home, but Jennifer doesn’t want a gift.
+                  <p className="story-title">
+                    Lisa
+                  </p>
+                  Being a Homeowner Sooner
                   <br />
                   <span className="read">
-                    Read Jennifer’s story
+                    Read Lisa’s story
                   </span>
                 </p>
               </div>
@@ -265,7 +268,10 @@ export class Ownership extends Component {
               </div>
               <div className="col-xs-9 col-sm-8 col-md-9 col-lg-9">
                 <p className={`text ${showSecondStory && 'active'}`}>
-                  Marc Johnson works in finance and understands that having all of his family’s assets in one investment is not the best decision.
+                  <p className="story-title">
+                    Marc
+                  </p>
+                  Diversifying his Housing Risk
                   <br />
                   <span className="read">
                     Read Marc’s story

@@ -7,30 +7,30 @@ export class ThirdStory extends Component {
         <div className="row">
           <div className="col-xs-12 col-sm-12 col-md-7 col-lg-7">
             <p>
-              <strong>Jennifer</strong> is an elementary school teacher in Los Angeles.  Her husband is a junior accountant.
+              <strong>Lisa</strong> is one year into her new job as a software engineer and is committed to the Bay Area long-term.
             </p>
             <p>
-              Having just recently paid off their student debts, they were ready to consider buying a home to start their family.
+              Lisa is eyeing a 2bd condo in San Jose in a neighborhood that she really likes.
             </p>
             <p>
-              Jennifer's parents are in a strong position to help, but Jennifer doesn't want a gift.
+              She doesn't want to buy the whole thing as she thinks it's overly risky to only put 5% down.
             </p>
             <p>
-              Jennifer is considering two options: (1) to get a 3.5% down FHA loan or (2) ask her parents to buy the home with the goal to buy it from them when she's saved up enough for a 20% downpayment. { /* ' */ }
+              She wants to split the purchase with her parents. { /* ' */ }
             </p>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <div className="financial-info">
               <p className="title">
-                Jennifer's Financial Information { /* ' */ }
+                Lisa's Financial Information { /* ' */ }
               </p>
 
               <div className="row">
                 <div className="col-xs-4 col-sm-4 col-md-6 col-lg-6 prop">
-                  Family Income
+                  Individual Income
                 </div>
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 value">
-                  $130,000
+                  $100,000
                 </div>
               </div>
 
@@ -39,7 +39,7 @@ export class ThirdStory extends Component {
                   After-Tax Family Income
                 </div>
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 value">
-                  $100,000
+                  $80,000
                 </div>
               </div>
 
@@ -57,7 +57,7 @@ export class ThirdStory extends Component {
                   Credit Score
                 </div>
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 value">
-                  720
+                  735
                 </div>
               </div>
 
@@ -66,7 +66,7 @@ export class ThirdStory extends Component {
                   Home Price
                 </div>
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 value">
-                  $675,000
+                  $640,000
                 </div>
               </div>
 
@@ -84,7 +84,7 @@ export class ThirdStory extends Component {
                 FHA Mortgage
               </div>
               <div className="col-xs-3 col-sm-3 col-md-4 col-lg-4 lease-title">
-                Lease Until You Buy
+                Shared Ownership
               </div>
             </div>
 
@@ -93,10 +93,10 @@ export class ThirdStory extends Component {
                 Monthly Loan Payments
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $3,500
+                $3,250
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
+                $613
               </div>
             </div>
 
@@ -105,10 +105,10 @@ export class ThirdStory extends Component {
                 Interest Paid
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $2,685
+                $2,500
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
+                $425
               </div>
             </div>
 
@@ -117,10 +117,10 @@ export class ThirdStory extends Component {
                 Principal Paid
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $815
+                $750
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
+                $188
               </div>
             </div>
 
@@ -141,10 +141,22 @@ export class ThirdStory extends Component {
                 Other Home Costs
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $1,000
+                $1,100
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
+                $294
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
+                Rent on Parent's Portion { /* ' */ }
+              </div>
+              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
                 none
+              </div>
+              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
+                $2,325
               </div>
             </div>
 
@@ -155,10 +167,10 @@ export class ThirdStory extends Component {
                 Total Paid
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $4,950
+                $4,800
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $3,250
+                $3,232
               </div>
             </div>
             <div className="row">
@@ -166,10 +178,10 @@ export class ThirdStory extends Component {
                 Expected Tax Deduction
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $(620)
+                $(500)
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
+                $(85)
               </div>
             </div>
             <div className="row">
@@ -177,10 +189,10 @@ export class ThirdStory extends Component {
                 Paying Off Mortgage
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $(815)
+                $(750)
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
+                $(188)
               </div>
             </div>
 
@@ -191,10 +203,10 @@ export class ThirdStory extends Component {
                 Total Paid For Home
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $3,515
+                $3,550
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $3,250
+                $2,959
               </div>
             </div>
 
@@ -205,22 +217,22 @@ export class ThirdStory extends Component {
                 How Landed Helped
               </p>
               <p>
-                Landed helps structure the contract between Jennifer and her parents in case anything went wrong.
+                Landed helps structure the contract between Lisa and her parents in case anything went wrong.
               </p>
               <p>
-                Landed makes sure all the bills were paid on time, and deposits the rent directly into Jennifer's parents' account.
+                Landed makes sure all the bills were paid on time, and deposited the rent directly into Lisa's parents' account.
               </p>
               <p>
-                Landed makes sure everyone got all the tax deductions they are entitled to.
+                Landed makes sure everyone got all the tax deductions they were entitled to.
               </p>
               <p>
                 Landed fairly assesses the fair rent every year based on the original home price and growth in the neighborhood.
               </p>
               <p>
-                Landed fairly assesses the buy-out price based on the original home price and growth in the neighborhood.
+                Landed fairly assesses the buy-back price based on the original home price and growth in the neighborhood.
               </p>
               <p>
-                Most importantly, Landed makes sure Jennifer and her parents never having anything to fight about.
+                Landed makes sure her parents and her never had anything to disagree over!
               </p>
             </div>
           </div>
@@ -228,16 +240,16 @@ export class ThirdStory extends Component {
         <div className="row sign">
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
             <p>
-              Within 5 years, Jennifer and her family will have enough for a 20% downpayment.
+              Lisa manages getting rent from her roommates and pays her parents every month through Landed.
             </p>
             <p>
-              They'll save more money using lease-until-you-buy and make the smarter financial choice.
+              Every year, Lisa buys as much of the property as she wants from her parents at a fair price.
             </p>
             <p>
-              In return, Jennifer's parents will likely earn more than they would in their mutual fund.
+              Her parents earn more on their investment than they would in their mutual fund.
             </p>
             <p>
-              As a group, they'll only pay $1,350 / month to the bank, instead of $3,135 / month
+              Everyone wins, except her previous landlord!
             </p>
           </div>
         </div>

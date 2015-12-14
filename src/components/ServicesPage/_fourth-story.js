@@ -7,22 +7,22 @@ export class FourthStory extends Component {
         <div className="row">
           <div className="col-xs-12 col-sm-12 col-md-7 col-lg-7">
             <p>
-              <strong>Jennifer</strong> is an elementary school teacher in Los Angeles.  Her husband is a junior accountant.
+              <strong>Marc</strong> works in finance in Seattle.  His wife Elizabeth is a lawyer.  They are just starting their family and are thinking of buying a home.
             </p>
             <p>
-              Having just recently paid off their student debts, they were ready to consider buying a home to start their family.
+              They both understand that having all their assets tied up in their home is not the smartest financial strategy.
             </p>
             <p>
-              Jennifer's parents are in a strong position to help, but Jennifer doesn't want a gift.
+              Although they can afford a regular mortgage with a 20% downpayment, given the choice, they would rather split the investment and invest the remainder in a diversified portfolio.
             </p>
             <p>
-              Jennifer is considering two options: (1) to get a 3.5% down FHA loan or (2) ask her parents to buy the home with the goal to buy it from them when she's saved up enough for a 20% downpayment. { /* ' */ }
+              Through his work, Marc knows an investor that is looking to increase his Seattle property exposure. { /* ' */ }
             </p>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <div className="financial-info">
               <p className="title">
-                Jennifer's Financial Information { /* ' */ }
+                Marc's Financial Information { /* ' */ }
               </p>
 
               <div className="row">
@@ -30,7 +30,7 @@ export class FourthStory extends Component {
                   Family Income
                 </div>
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 value">
-                  $130,000
+                  $225,000
                 </div>
               </div>
 
@@ -39,7 +39,7 @@ export class FourthStory extends Component {
                   After-Tax Family Income
                 </div>
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 value">
-                  $100,000
+                  $165,000
                 </div>
               </div>
 
@@ -48,7 +48,7 @@ export class FourthStory extends Component {
                   Current Savings
                 </div>
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 value">
-                  $35,000
+                  $250,000
                 </div>
               </div>
 
@@ -57,7 +57,7 @@ export class FourthStory extends Component {
                   Credit Score
                 </div>
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 value">
-                  720
+                  750
                 </div>
               </div>
 
@@ -66,7 +66,7 @@ export class FourthStory extends Component {
                   Home Price
                 </div>
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 value">
-                  $675,000
+                  $1,100,000
                 </div>
               </div>
 
@@ -93,10 +93,10 @@ export class FourthStory extends Component {
                 Monthly Loan Payments
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $3,500
+                $4,200
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
+                $1,050
               </div>
             </div>
 
@@ -105,10 +105,10 @@ export class FourthStory extends Component {
                 Interest Paid
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $2,685
+                $2,910
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
+                $728
               </div>
             </div>
 
@@ -117,10 +117,10 @@ export class FourthStory extends Component {
                 Principal Paid
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $815
+                $1,290
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
+                $323
               </div>
             </div>
 
@@ -129,7 +129,7 @@ export class FourthStory extends Component {
                 Mortgage Insurance
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $450
+                none
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
                 none
@@ -141,10 +141,21 @@ export class FourthStory extends Component {
                 Other Home Costs
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $1,000
+                $1,558
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
+                $409
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
+                Rent to Investor
+              </div>
+              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
                 none
+              </div>
+              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
+                $3,563
               </div>
             </div>
 
@@ -155,10 +166,10 @@ export class FourthStory extends Component {
                 Total Paid
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $4,950
+                $5,758
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $3,250
+                $5,021
               </div>
             </div>
             <div className="row">
@@ -166,10 +177,10 @@ export class FourthStory extends Component {
                 Expected Tax Deduction
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $(620)
+                $(776)
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
+                $(194)
               </div>
             </div>
             <div className="row">
@@ -177,10 +188,21 @@ export class FourthStory extends Component {
                 Paying Off Mortgage
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $(815)
+                $(1,290)
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
+                $(323)
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
+                Investing the Saved Down Payment
+              </div>
+              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
                 none
+              </div>
+              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
+                $(1,100)
               </div>
             </div>
 
@@ -191,10 +213,10 @@ export class FourthStory extends Component {
                 Total Paid For Home
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $3,515
+                $3,692
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $3,250
+                $3,405
               </div>
             </div>
 
@@ -205,22 +227,22 @@ export class FourthStory extends Component {
                 How Landed Helped
               </p>
               <p>
-                Landed helps structure the contract between Jennifer and her parents in case anything went wrong.
+                Landed helps structure the contract between Marc and his investor to protect both parties.
               </p>
               <p>
-                Landed makes sure all the bills were paid on time, and deposits the rent directly into Jennifer's parents' account.
+                When a minor earthquake caused $100,000 of damage to his property in year 3, Landed helped assess the damage and collect the appropriate amounts from each party.
               </p>
               <p>
-                Landed makes sure everyone got all the tax deductions they are entitled to.
+                Landed makes sure all the bills were paid on time, and deposits the rent directly into the investor's account.
+              </p>
+              <p>
+                Landed makes sure everyone got all the tax deductions they were entitled to.
               </p>
               <p>
                 Landed fairly assesses the fair rent every year based on the original home price and growth in the neighborhood.
               </p>
               <p>
-                Landed fairly assesses the buy-out price based on the original home price and growth in the neighborhood.
-              </p>
-              <p>
-                Most importantly, Landed makes sure Jennifer and her parents never having anything to fight about.
+                Landed fairly assesses the buy-back price based on the original home price and growth in the neighborhood.
               </p>
             </div>
           </div>
@@ -228,16 +250,13 @@ export class FourthStory extends Component {
         <div className="row sign">
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
             <p>
-              Within 5 years, Jennifer and her family will have enough for a 20% downpayment.
+              Marc has no intention of buying more of the property over time, he wants to continue splitting the investment.
             </p>
             <p>
-              They'll save more money using lease-until-you-buy and make the smarter financial choice.
+              Should his investor want to leave the agreement after 5 years, Marc can always get a regular mortgage and buy the entire property at a fair price.
             </p>
             <p>
-              In return, Jennifer's parents will likely earn more than they would in their mutual fund.
-            </p>
-            <p>
-              As a group, they'll only pay $1,350 / month to the bank, instead of $3,135 / month
+              Marc doesn't see much downside and it helps him achieve his investing goals while living in a space he can control.
             </p>
           </div>
         </div>
