@@ -244,9 +244,11 @@ export class Lease extends Component {
               </div>
               <div className="col-xs-9 col-sm-8 col-md-9 col-lg-9">
                 <p className={`text ${showFirstStory && 'active'}`}>
-                  <p className="story-title">
+                  <span className="story-title">
                     Diego
-                  </p>
+                      <br />
+
+                  </span>
                   Finding a Better Rental Home
                   <br />
                   <span className="read">
@@ -265,9 +267,10 @@ export class Lease extends Component {
               </div>
               <div className="col-xs-9 col-sm-8 col-md-9 col-lg-9">
                 <p className={`text ${showSecondStory && 'active'}`}>
-                  <p className="story-title">
+                  <span className="story-title">
                     Jennifer
-                  </p>
+                    <br />                    
+                  </span>
                   Avoiding High FHA Rates
                   <br />
                   <span className="read">

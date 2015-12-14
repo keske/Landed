@@ -48,11 +48,13 @@
 
   h1 {
     color: #FFF;
-
-    margin: 100px 0 30px;
+    font-size: 29px;
+    margin: 130px 0 30px;
+    width: 70%;
 
     @media (#{ $phone }) {
       font-size: 29px;
+      width: 90%;
     }
   }
 
@@ -71,7 +73,10 @@
     }
 
     @media (#{ $phone }) {
+      font-size: 16px;
       width: 90%;
+      line-height:18px;
+
     }
   }
 }

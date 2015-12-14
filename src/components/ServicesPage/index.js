@@ -19,7 +19,7 @@ export class ServicesPage extends Component {
 
   render() {
     const intro = {
-      title: 'We offer comprehensive support to<br />help take the hassle out of getting<br />investment help.',
+      title: 'We offer comprehensive support to help take the hassle out of getting investment help.',
       text: "All of us need a little bit of help buying our first home. Not everyone is lucky enough to get big gifts to make it work.<br /><br />Although formalizing the support is hard, expensive and intimidating, it doesn't have to be.<br /><br />Whether structured as a co-investment, a rent-to-own agreement or just a simple loan, Landed is here to help.",
       image: 'services',
     };

@@ -254,11 +254,16 @@
 
         padding: 20px;
         width: 100%;
+        font-size: 16px;
         
-        border-top: 1px solid #FFF;
-        border-bottom: 1px solid #FFF;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        border-bottom: 1px solid rgba(255,255,255,0.2);
 
         margin-top: -1px;
+      }
+
+      a:hover {
+        background-color: #11CA8E;
       }
     }
 

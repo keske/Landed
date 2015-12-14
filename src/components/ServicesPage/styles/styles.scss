@@ -21,8 +21,7 @@
     margin-top: 40px;
     
     p.small-title {
-      font-family: 'Jannon10Pro';
-      font-style: italic;
+      font-family: 'Jannon10Pro-Italic';
       font-size: 16px;
       line-height: 24px;
     }
@@ -292,8 +291,10 @@
       .story-title {
         font-family: 'Jannon10Pro-Bold';
         font-size: 28px;
-        line-height: 17px;
+        line-height: 27px;
         color: #7B7B7A;
+        margin-bottom: 15px;
+
       }
 
       &:hover {

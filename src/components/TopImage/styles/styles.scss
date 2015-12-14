@@ -72,7 +72,7 @@
   h1 {
     color: #FFF;
 
-    margin: 100px 0 30px;
+    margin: 120px 0 30px;
 
     @media (#{ $phone }) {
       width: 90%;
@@ -106,15 +106,19 @@
     p {
       font-family: 'SupriaSans Regular';
       color: #FFF;
-      font-size: 14px;
-      line-height: 17px;
+      opacity: 0.9;
+      font-size: 16px;
+      line-height: 22px;
 
-      width: 350px;
+
+      width: 450px;
 
       display: inline-block;
 
       @media (#{ $phone }) {
         width: 100%;
+        font-size: 14px;
+        line-height: 18px;
       }
     }
   }
@@ -130,7 +134,7 @@
     font-size: 18px;
     color: $green;
 
-    margin-top: 5px;
+    margin-top: 25px;
     display: inline-block;
 
     @media (#{ $phone }) {
