@@ -244,6 +244,7 @@ export class Lease extends Component {
               </div>
               <div className="col-xs-9 col-sm-8 col-md-9 col-lg-9">
                 <p className={`text ${showFirstStory && 'active'}`}>
+                  
                   <span className="story-title">
                     Diego
                       <br />
@@ -251,7 +252,7 @@ export class Lease extends Component {
                   </span>
                   Finding a Better Rental Home
                   <br />
-                  <span className="read">
+                                    <span className="read">
                     Read Diego’s story
                   </span>
                 </p>

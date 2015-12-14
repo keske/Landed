@@ -247,9 +247,9 @@ export class Ownership extends Component {
               </div>
               <div className="col-xs-9 col-sm-8 col-md-9 col-lg-9">
                 <p className={`text ${showFirstStory && 'active'}`}>
-                  <p className="story-title">
-                    Lisa
-                  </p>
+                  <span className="story-title">
+                    Lisa<br />
+                  </span>
                   Being a Homeowner Sooner
                   <br />
                   <span className="read">
@@ -268,9 +268,9 @@ export class Ownership extends Component {
               </div>
               <div className="col-xs-9 col-sm-8 col-md-9 col-lg-9">
                 <p className={`text ${showSecondStory && 'active'}`}>
-                  <p className="story-title">
-                    Marc
-                  </p>
+                  <span className="story-title">
+                    Marc <br />
+                  </span>
                   Diversifying his Housing Risk
                   <br />
                   <span className="read">
