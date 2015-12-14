@@ -77,10 +77,11 @@ export class Lease extends Component {
             Landed Support
           </p>
           <div className="list">
-            <span className="icon" />
+            <span className="icon un-done" />
             <span className="text">
               <p>
                 Help finding you an investor
+                 <i>coming soon</i>
               </p>
             </span>
           </div>

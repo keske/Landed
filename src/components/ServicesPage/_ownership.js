@@ -8,10 +8,10 @@ const RENTAL = [{
   prop: 'Purchase Frequency',
   val: 'Once a year, can purchase more of the home.',
 }, {
-  prop: 'Purchase Price for 1% portion',
+  prop: 'Share Purchase Price',
   val: 'Purchase price based on independent index.',
 }, {
-  prop: 'Minimum Purchase Price for 1% portion',
+  prop: 'Share Minimum Purchase Price',
   val: '90% of original purchase price basis',
 }, {
   prop: 'Ownership Interest',

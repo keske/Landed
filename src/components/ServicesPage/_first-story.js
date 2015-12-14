@@ -93,7 +93,7 @@ export class FirstStory extends Component {
                 Monthly Loan Payments
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $2,000.00
+                $2,000
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
                 none
@@ -105,7 +105,7 @@ export class FirstStory extends Component {
                 Interest Paid
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $1,545.00
+                $1,545
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
                 none
@@ -117,7 +117,7 @@ export class FirstStory extends Component {
                 Principal Paid
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $455.00
+                $455
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
                 none
@@ -129,7 +129,7 @@ export class FirstStory extends Component {
                 Mortgage Insurance
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $315.00
+                $315
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
                 none
@@ -141,7 +141,7 @@ export class FirstStory extends Component {
                 Other Home Costs
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $555.00
+                $555
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
                 none
