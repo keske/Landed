@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 
+/* stories */
+import { FirstStory } from './_first-story';
+import { SecondStory } from './_second-story';
+
 const RENTAL = [{
   prop: 'Base Rent',
   val: 'Market rent',
@@ -240,10 +244,13 @@ export class Lease extends Component {
               </div>
               <div className="col-xs-9 col-sm-8 col-md-9 col-lg-9">
                 <p className={`text ${showFirstStory && 'active'}`}>
-                  Lisa and her family found a home in Pasadena for $750,000. 
+                  <p className="story-title">
+                    Diego
+                  </p>
+                  Finding a Better Rental Home
                   <br />
                   <span className="read">
-                    Read Lisa’s story
+                    Read Diego’s story
                   </span>
                 </p>
               </div>
@@ -258,38 +265,25 @@ export class Lease extends Component {
               </div>
               <div className="col-xs-9 col-sm-8 col-md-9 col-lg-9">
                 <p className={`text ${showSecondStory && 'active'}`}>
-                  The Torres family was just asked to leave their rental by their landlord.  The Torres family would prefer to rent instead of own, but really value security and control for their children.
+                  <p className="story-title">
+                    Jennifer
+                  </p>
+                  Avoiding High FHA Rates
                   <br />
                   <span className="read">
-                    Read Torres’s story
+                    Read Jennifer’s story
                   </span>
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div className={`story ${showFirstStory && 'show'}`}>
-              <p>
-                Although they have some money saved up, they want to avoid paying mortgage insurance and feel it’s too risky to be buying a home right now.
-              </p>
-              <p>
-                Lisa’s uncle wanted to help support Lisa in a way that was fair and fit within his portfolio goals.  He bought the house for Lisa, and uses Landed to determine fair rent to be $3,500 / month.
-              </p>
-              <p>
-                Three years later, Lisa felt ready to buy the home outright.  Using Landed, Lisa determined the house was now worth $790,000 and got a regular mortgage to buy-out her uncle.
-              </p>
+              <FirstStory />
             </div>
             <div className={`story ${showSecondStory && 'show'}`}>
-              <p>
-                The Torres’ need help finding a long-term investor.
-              </p>
-              <p>
-                Landed helps identify an investor who is also looking for committed occupants.  The Torres’ identify a $550,000 home in San Diego and the investor purchases it.  The Torres’ pay $2,800 / mth.
-              </p>
-              <p>
-                Three years later, Ms. Torres receives an amazing career opportunity in Denver that she can’t let slip away.  The Torres family moves to Denver and sublets their home to complete the 5 year agreement.  They choose to not buy the home, and the investor maintains his investment.
-              </p>
+              <SecondStory />
             </div>
           </div>
         </div>

@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 
+/* stories */
+import { ThirdStory } from './_third-story';
+import { FourthStory } from './_fourth-story';
+
 const RENTAL = [{
   prop: 'Purchase Frequency',
   val: 'Once a year, can purchase more of the home.',
@@ -271,35 +275,12 @@ export class Ownership extends Component {
             </div>
           </div>
 
-          <div className="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div className={`story ${showFirstStory && 'show'}`}>
-              <p>
-                Instead, she would prefer to have her parents invest alongside her but in a way that doesn’t put their relationship at risk as issues come up.
-              </p>
-              <p>
-                Jennifer finds an $900,000 condo in the Mission (San Francisco) that she absolutely loves.  She only has enough for a 5% downpayment and her parents provide an additional 15%.
-              </p>
-              <p>
-                Every month, Jennifer and her roommates pays fair rent of $4,500.  Landed collects the money, pays the mortgage, insurance, property taxes and repair fund.  The remaining profit is split between her and her parents based on their 25/75 ownership split.
-              </p>
-              <p>
-                Every year, Jennifer buys more of the home from her parents using Landed to determine a fair price.  Eventually in year 4, she buys the property outright.
-              </p>
-
+              <ThirdStory />
             </div>
             <div className={`story ${showSecondStory && 'show'}`}>
-              <p>
-                He wants to share the financial risk with someone but has little desire to buy more of the house over time.
-              </p>
-              <p>
-                Marc’s friend’s brother loves investing in real estate.  They decide to split the home 25/75 but make big down-payments.  Every month, Marc pays $3,900 in rent.  Like before, Landed pays for all expenses.  The remaining $1,600 in profit is split between them.
-              </p>
-              <p>
-                In year 3, an earthquake causes $100,000 of damage to the property.  Marc’s investor is responsible for $75,000 of the repairs.  Alternatively, Landed starts fairly discounting his ownership.
-              </p>
-              <p>
-                After six years, the Johnson family decides it’s time for a move.  They sell the house and split the proceeds according to ownership share.
-              </p>
+              <FourthStory />
             </div>
           </div>
         </div>

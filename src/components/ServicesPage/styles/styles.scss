@@ -285,9 +285,16 @@
       color: #7B7B7A;
 
       width: 80%;
-      margin-top: 10px;
+      margin-top: 30px;
 
       cursor: pointer;
+
+      .story-title {
+        font-family: 'Jannon10Pro-Bold';
+        font-size: 28px;
+        line-height: 17px;
+        color: #7B7B7A;
+      }
 
       &:hover {
         color: $green;
@@ -300,6 +307,10 @@
 
       &.active {
         color: $green;
+
+        p {
+          color: $green;          
+        }
 
         .read {
           display: none;
@@ -316,11 +327,124 @@
       }
     }
 
+    // Story block
     .story {
       display: none;
 
+      background: #FFF;
+      border-top: 1px solid $green;
+      padding: 50px 40px 70px;
+
       p {
-        width: 70%;
+        font-size: 16px;
+        line-height: 24px;
+
+        width: 90%;
+        color: #4C4C4C;
+      }
+
+      .financial-info, .lended-helped {
+        opacity: .55;
+        color: #4C4C4C;
+
+        p.title {
+          font-family: 'Jannon10Pro-Italic';
+          font-size: 16px;
+          line-height: 24px;
+
+          margin-bottom: 20px;
+
+          @media (min-width: 768px) and (max-width: 992px) {
+            margin-top: 50px;
+          }
+
+          @media (#{ $phone }) {
+            margin-top: 50px;
+          }
+        }
+
+        .row {
+          padding: 10px 0;
+
+          font-size: 14px;
+          line-height: 15px;
+        }
+      }
+
+      .lended-helped {
+        opacity: 1;
+
+        p {
+          margin-bottom: 20px;
+          padding-right: 20px;
+        }
+      }
+      
+      // Diff table
+      .diff-table {
+
+        .row {
+          padding-bottom: 20px;
+        }
+        
+        // Head
+        .fha-title {
+          font-family: 'SupriaSans Bold';
+          font-size: 14px;
+          line-height: 15px;
+          color: #7B7B7A;
+        }
+        .lease-title {
+          font-family: 'SupriaSans Bold';
+          font-size: 14px;
+          line-height: 15px;
+          color: $green;
+        }
+      
+        // Body
+        .prop, .fha-val, .lease-val {
+          padding-top: 3px;
+          padding-bottom: 3px;
+
+          @media (min-width: 768px) and (max-width: 992px) {
+            padding-top: 13px;
+          }
+
+          @media (#{ $phone }) {
+            padding-top: 13px;
+          }
+        }
+        .prop {
+          font-family: 'SupriaSans Regular';
+          font-size: 14px;
+          line-height: 15px;
+          color: #7B7B7A;
+          opacity: .55;
+        }
+        .fha-val {
+          font-family: 'SupriaSans Regular';
+          font-size: 14px;
+          line-height: 15px;
+          color: #7B7B7A;
+        }
+        .lease-val {
+          font-family: 'SupriaSans Regular';
+          font-size: 14px;
+          line-height: 15px;
+          color: $green;
+        }
+      }
+
+      .sign {
+        margin-top: 70px;
+
+        p {
+          font-family: 'Jannon10Pro-Italic';
+          font-size: 22px;
+          line-height: 34px;
+
+          padding: 0 8%;
+        }
       }
     }
   }

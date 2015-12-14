@@ -239,7 +239,7 @@ export class JoinUs extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-md-offset-2 col-lg-offet-2 popup-comments">
               <textarea id="comments" name="comments"
-                     onChange={ (event) => this.setState({ comments: event.target.value }) } />
+                        onChange={ (event) => this.setState({ comments: event.target.value }) } />
             </div>
           </div>
 
