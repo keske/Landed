@@ -62,7 +62,7 @@ export class TopImage extends Component {
                 <div className="group">
                   <span className="icon" />
                   <p>
-                    Simple, standard shared ownership structures to split your investment with family or friends.
+                    Simple, standard shared ownership structures to split your investment with family or trusted partners.
 
                   </p>
                 </div>
@@ -74,21 +74,21 @@ export class TopImage extends Component {
                 <div className="group">
                   <span className="icon" />
                   <p>
-                    Independent third party services to make sure you don’t jeopardize your relationships.
+                    Trusted on-going support to make sure you don't jeopardize your most important relationships.
                   </p>
                 </div>
               </ReactCSSTransitionGroup>
 
-              { /* <ReactCSSTransitionGroup transitionName="text-animation-2"
+             <ReactCSSTransitionGroup transitionName="text-animation-2"
                                        transitionAppear
                                        transitionAppearTimeout={ 1300 }>
                 <div className="group">
                   <span className="icon" />
                   <p>
-                    Pay expenses on the portion you own.<br />Pay rent to co-investors on the rest.
+                    Your favorite home partner from search to sale.
                   </p>
                 </div>
-              </ReactCSSTransitionGroup>  */ }
+              </ReactCSSTransitionGroup> 
 
               <ReactCSSTransitionGroup transitionName="text-animation-4"
                                        transitionAppear
