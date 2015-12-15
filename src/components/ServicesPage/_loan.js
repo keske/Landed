@@ -24,8 +24,8 @@ const RENTAL = [{
   val: 'Principal due in the case of borrower divorce',
 }];
 
-const mikael = require('./files/jen.png'); //NOT ADJUSTED
-const vidhya = require('./files/marc.png');  //NOT ADJUSTED
+const mikael = require('./files/mikael.jpg'); //NOT ADJUSTED
+const vidhya = require('./files/vidhya.jpg');  //NOT ADJUSTED
 
 export class Loan extends Component {
 
