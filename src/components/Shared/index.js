@@ -38,9 +38,7 @@ export class Shared extends Component {
                 </p>
               </div>
             </div>
-          </div>
 
-          <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
               <p className="title">
                 Lease To Own
@@ -86,7 +84,7 @@ export class Shared extends Component {
 
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-              <a href="/#join" target="_blank">  // THIS NEEDS TO POINT TO SERVICES
+              <a href="/#join" target="_blank">
                 <span className="button">
                   See how we can help
                 </span>

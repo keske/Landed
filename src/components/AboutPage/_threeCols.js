@@ -31,9 +31,6 @@ export class ThreeCols extends Component {
 
         <div className="row threeCol paragraphs">
           <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 text-center">
-           /* <p>
-              With co-investors, you can get the home you want without all the risk. It’s a way for you to get some of your wealth out of the real estate market and watch it grow sustainably.
-            </p>*/
             <p>
               For investors, we’re an easier way to invest in people and places you care about. Landed is working towards democratizing these investments, making urban real estate accessible for those of us who aren’t millionaires.
             </p>
