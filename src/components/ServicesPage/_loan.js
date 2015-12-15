@@ -70,7 +70,7 @@ export class Loan extends Component {
             <span className="text">
               <p>
                 Help finding you an investor
-                <i>family_only</i>
+                <i>family only</i>
               </p>
             </span>
           </div>
