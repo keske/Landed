@@ -294,16 +294,16 @@
       color: #7B7B7A;
 
       width: 80%;
-      margin-top: 30px;
+      margin-top: 15px;
 
       cursor: pointer;
 
       .story-title {
-        font-family: 'Jannon10Pro-Bold';
+        font-family: 'Jannon10Pro';
         font-size: 28px;
-        line-height: 27px;
+        line-height: 33px;
         color: #7B7B7A;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
 
       }
 
@@ -311,7 +311,7 @@
         
         .read {
           opacity: 1;
-          font-family: 'SupriaSans Bold';
+          border-bottom: 1px solid $green;
         }
       }
 
@@ -336,8 +336,9 @@
         opacity: 0.7;
         margin-top: 10px;
 
-        border-bottom: 2px solid $green;
+        border-bottom: 1px dotted $green;
         color: $green;
+        padding-bottom: 2px;
       }
     }
 

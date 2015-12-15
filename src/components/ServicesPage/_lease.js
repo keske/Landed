@@ -35,8 +35,9 @@ const PURCHASE = [{
   val: '90% of original purchase price.',
 }];
 
-const jenifer = require('./files/jen.png');
-const marc = require('./files/marc.png');
+const diego = require('./files/diego.jpg');
+const jennifer = require('./files/jennifer.jpg');
+
 
 export class Lease extends Component {
 
@@ -241,7 +242,7 @@ export class Lease extends Component {
             <div className="row"
                  onClick={() => this.setState({showFirstStory: !showFirstStory ? true : false, showSecondStory: false})}>
               <div className="col-xs-3 col-sm-4 col-md-3 col-lg-3">
-                <img src={ jenifer } />
+                <img src={ diego } />
               </div>
               <div className="col-xs-9 col-sm-8 col-md-9 col-lg-9">
                 <p className={`text ${showFirstStory && 'active'}`}>
@@ -265,7 +266,7 @@ export class Lease extends Component {
             <div className="row"
                  onClick={() => this.setState({showFirstStory: false, showSecondStory: !showSecondStory ? true : false})}>
               <div className="col-xs-3 col-sm-4 col-md-3 col-lg-3">
-                <img src={ marc } />
+                <img src={ jennifer } />
               </div>
               <div className="col-xs-9 col-sm-8 col-md-9 col-lg-9">
                 <p className={`text ${showSecondStory && 'active'}`}>

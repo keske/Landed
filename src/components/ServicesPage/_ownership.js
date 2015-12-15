@@ -38,8 +38,8 @@ const PURCHASE = [{
   val: 'Resident pays for minor repairs.  Major repairs paid by group.',
 }];
 
-const jenifer = require('./files/jen.png');
-const marc = require('./files/marc.png');
+const lisa = require('./files/lisa.jpg');
+const marc = require('./files/marc.jpg');
 
 export class Ownership extends Component {
 
@@ -243,7 +243,7 @@ export class Ownership extends Component {
             <div className="row"
                  onClick={() => this.setState({showFirstStory: !showFirstStory ? true : false, showSecondStory: false})}>
               <div className="col-xs-3 col-sm-4 col-md-3 col-lg-3">
-                <img src={ jenifer } />
+                <img src={ lisa } />
               </div>
               <div className="col-xs-9 col-sm-8 col-md-9 col-lg-9">
                 <p className={`text ${showFirstStory && 'active'}`}>
