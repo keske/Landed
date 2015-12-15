@@ -18,7 +18,7 @@ export class ThreeCols extends Component {
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
             <img src={ icons[1] } />
             <p>
-              50% to 60% of new home buyers couldn’t have purchased without parental support.  Co-investors help you get into your home sooner.
+              Co-investors help you build wealth sooner.  Start building partial home wealth with as little as 5% down.
             </p>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
@@ -31,11 +31,11 @@ export class ThreeCols extends Component {
 
         <div className="row threeCol paragraphs">
           <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 text-center">
+           /* <p>
+              With co-investors, you can get the home you want without all the risk. It’s a way for you to get some of your wealth out of the real estate market and watch it grow sustainably.
+            </p>*/
             <p>
-              That way, you can get the home you want without all the risk. It’s a way for you to get some of your wealth out of the real estate market and watch it grow sustainably.
-            </p>
-            <p>
-              For investors, we’re an easier way for you to invest in a local neighborhood with promise. Landed will soon launch a marketplace for everyone to invest at a reasonable price point, making urban real estate accessible even for those of us who aren’t millionaires.
+              For investors, we’re an easier way to invest in people and places you care about. Landed is working towards democratizing these investments, making urban real estate accessible for those of us who aren’t millionaires.
             </p>
           </div>
         </div>

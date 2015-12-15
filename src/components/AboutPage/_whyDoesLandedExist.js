@@ -12,10 +12,13 @@ export class WhyDoesLandedExist extends Component {
           </div>
           <div className="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 text-center">
             <p>
-              Here’s a little story to help tell the tale of why we’re  so focused on changing the housing market, forever:
+              Homes are the dominant way that North Americans build wealth.  But over the last two decades, making a responsible home investment has become more and more difficult, if not impossible.
+            </p>
+            <p>
+            Here’s a little story to help tell the tale of why we’re  so focused on changing the housing market, forever:
             </p>
             <p className="black second-paragraph">
-              Let’s take a look at two folks, Richie and Susan.
+              Let’s take a look at two friends, Richie and Susan.
             </p>
           </div>
         </div>
@@ -37,14 +40,14 @@ export class WhyDoesLandedExist extends Component {
           </div>
           <div className="col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0 text-left">
             <p className="black">
-              Susan is a young married woman about to have her first child. She bought a house just two years ago.
+              Susan is a young woman about to have her first child. She bought a house just four years ago.
             </p>
             <p>
               ◦ She also has been doing really well. Her family’s net worth is almost $250,000.
               <br />
               ◦ She, however, has almost 75% of her wealth in housing.
               <br />
-              ◦ She also has high levels of debt.  She’s only paid down a little of her mortgage.
+              ◦ She also has high levels of debt.  She really had to stretch to buy her home.
             </p>
           </div>
         </div>
@@ -58,13 +61,16 @@ export class WhyDoesLandedExist extends Component {
               So millions of people like Susan buckled down to save money until they were back on solid ground. But saving money means fewer things are being purchased, which means less profits for companies, which means layoffs, which means less money for households, which means less things are being purchased… the economy goes into a tail spin.
             </p>
             <p>
-              Now, some of Susan’s friends lost their jobs, which means they couldn’t afford to pay their mortgage. As a result, the bank foreclosed on them, took their money back and left Susan’s friends with nothing.  And who bought these homes? Well, companies that people like Richie disproportionately own through their already diversified portfolio. As a result, people like Richie only lost 10% of their net worth during the recession and quickly recovered.
+              Now, some of Susan’s friends lost their jobs and fell behind on their mortgage payments. The banks foreclosed on them, got most of their mortgage loan back but left Susan’s friends with nothing.  And who bought these homes? Well, companies that people like Richie disproportionately own through their already diversified portfolio. As a result, people like Richie only lost 10% of their net worth during the recession and quickly recovered.
             </p>
             <p>
-              This happens, to a lesser degree, every time the real estate market corrects itself, which, on average, happens every seven years.
+              This happens, to a lesser degree, every time the real estate market corrects itself, which seems to happen every seven to twelve years.
             </p>
             <p>
-              Buying a house with an overwhelming amount of debt puts you at risk. Everyone buying their homes with significant debt puts the whole economy at risk. And when credit bubbles burst, the wealthy get wealthier at the expense of everyone else. Simply put, it’s time for a change.
+              Buying a house with an overwhelming amount of institutional debt puts you at risk. Everyone buying their homes with that kind of debt puts the whole economy at risk. And when credit bubbles burst, the wealthy get wealthier at the expense of everyone else.
+            </p>
+            <p>
+              Let's make homeowners more financially resilient.  Let's make it incredibly simple for two partners to join forces to pay for home.  Let's learn how to do it extremely well so that make anyone a co-investor.  Only then do all of us have a chance to build wealth sustainably.
             </p>
           </div>
         </div>

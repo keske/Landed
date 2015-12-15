@@ -77,9 +77,9 @@ export class JoinUs extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offet-12 header">
               <p className="title"
-                 dangerouslySetInnerHTML={{ __html: 'Join Landed\'s home buyer waitlist' }} />
+                 dangerouslySetInnerHTML={{ __html: 'Join Landed\'s home buyer community' }} />
               <p className="info"
-                 dangerouslySetInnerHTML={{ __html: 'We\'re adding new users every few weeks and<br />we\'ll be in touch before you know it.' }} />
+                 dangerouslySetInnerHTML={{ __html: 'We\'ve got quite the holiday backlog but<br />we\'ll be in touch before you know it!' }} />
             </div>
           </div>
           <div className="row">
@@ -150,7 +150,7 @@ export class JoinUs extends Component {
               <input type="radio" id="move-asap" name="move"
                      onChange={ () => this.setState({ whenMove: 'As soon as posstible' }) } />
               <label className="gray" htmlFor="move-asap">
-                As soon as posstible
+                As soon as possible
               </label>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 popup-moving">
@@ -181,7 +181,7 @@ export class JoinUs extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-2 col-lg-offet-2 popup-investor-title">
               <span className="labels">
-                Do you have an investor ready to help you buy your home?
+                Do you have a partner ready to help you buy your home?
               </span>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 popup-investor-yes-no">
@@ -224,7 +224,7 @@ export class JoinUs extends Component {
               <input type="radio" id="ownership-more" name="ownership"
                      onChange={ () => this.setState({ ownership: 'I Need More Information' }) } />
               <label className="gray" htmlFor="ownership-more">
-                I Need More<br />Information
+                Down-Payment<br />Loan
               </label>
             </div>
           </div>
@@ -246,13 +246,13 @@ export class JoinUs extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
               { !succes
-                ? <input type="submit" value="Join waitlist" onClick={ () => this.handleRequest() }/>
+                ? <input type="submit" value="Talk to our experts" onClick={ () => this.handleRequest() }/>
                 : <span className="succes">
                     <p className="title">
                       Thanks, and welcome to the Landed community!
                     </p>
                     <p className="text">
-                      If you're buying a home in California, we'll be in touch as soon as you're off the wait list. If you're buying elsewhere, we'll be in touch as soon as we open up shop in your city.
+                      If you're buying a home in California, you'll hear from us within the next few days. If you're buying elsewhere, we'll be in touch as soon as we open up shop in your city! We're going state by state so we can make sure to get everything right.
                     </p>
                   </span>
               }
