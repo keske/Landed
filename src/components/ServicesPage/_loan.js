@@ -24,26 +24,6 @@ const RENTAL = [{
   val: 'Principal due in the case of borrower divorce',
 }];
 
-/*const PURCHASE = [{
-  prop: 'Base Rent',
-  val: 'Market rent',
-}, {
-  prop: 'Rent Discount/Premium',
-  val: 'None',
-}, {
-  prop: 'Rent Increases',
-  val: 'Assessed annually based on local index.',
-}, {
-  prop: 'Rent Increase Limit',
-  val: 'No more than 20% every 3 years',
-}, {
-  prop: 'Rent Period',
-  val: '5 years.  Resident can move out early but responsible for sublet.',
-}, {
-  prop: 'Repair Handling',
-  val: 'Resident pays for minor repairs.  Major repairs paid by group.',
-}];
-*/
 const mikael = require('./files/jen.png'); //NOT ADJUSTED
 const vidhya = require('./files/marc.png');  //NOT ADJUSTED
 
@@ -117,9 +97,9 @@ export class Loan extends Component {
     return (
       <div className="container">
         <div className="row lease-and-shared">
-          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div className="col-xs-12 col-sm-12 col-md-10 col-lg-10">
             <p className="small-title-border">
-              service 2
+              service 3
             </p>
             <p className="title">
               Family Down-Payment Loan
@@ -217,21 +197,7 @@ export class Loan extends Component {
               </p>
             </div>
             { renderTable(RENTAL) }
-
-            /*
-            <div className="col-xs-12 col-sm-5 col-md-5 col-lg-5 left-side">
-              <p className="field-name-prop">
-                Lease
-              </p>
-            </div>
-            <div className="col-xs-12 col-sm-7 col-md-7 col-lg-7 right-side">
-              <p className="field-name-val">
-                Recommended Default
-              </p>
-            </div>
-            { renderTable(PURCHASE) }
           </div>
-          */
 
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div className="hidden-md hidden-lg">
@@ -251,7 +217,7 @@ export class Loan extends Component {
             <div className="row"
                  onClick={() => this.setState({showFirstStory: !showFirstStory ? true : false, showSecondStory: false})}>
               <div className="col-xs-3 col-sm-4 col-md-3 col-lg-3">
-                <img src={ jenifer } />
+                <img src={ mikael } />
               </div>
               <div className="col-xs-9 col-sm-8 col-md-9 col-lg-9">
                 <p className={`text ${showFirstStory && 'active'}`}>
@@ -272,7 +238,7 @@ export class Loan extends Component {
             <div className="row"
                  onClick={() => this.setState({showFirstStory: false, showSecondStory: !showSecondStory ? true : false})}>
               <div className="col-xs-3 col-sm-4 col-md-3 col-lg-3">
-                <img src={ marc } />
+                <img src={ vidhya } />
               </div>
               <div className="col-xs-9 col-sm-8 col-md-9 col-lg-9">
                 <p className={`text ${showSecondStory && 'active'}`}>
