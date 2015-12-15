@@ -7,6 +7,7 @@ import { ImageBlock } from '../ImageBlock';
 import { HowItWorks } from '../HowItWorks';
 import { Lease } from './_lease';
 import { Ownership } from './_ownership';
+import { Loan } from './loan';
 
 /* component styles */
 import styles from './styles';
@@ -53,6 +54,7 @@ export class ServicesPage extends Component {
           </div>
           <Lease />
           <Ownership />
+          <Loan />
         </div>
         <ImageBlock { ...imageBlockProps } />
         <HowItWorks />
