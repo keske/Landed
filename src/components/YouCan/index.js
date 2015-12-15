@@ -42,7 +42,7 @@ export class YouCan extends Component {
                 </div>
                 <div className="col-xs-10 col-sm-10 col-md-12 col-lg-12 text-col">
                   <p>
-                    Stay as long as&nbsp;you&nbsp;want
+                    Stay as long  as&nbsp;you&nbsp;want
                   </p>
                 </div>
               </div>

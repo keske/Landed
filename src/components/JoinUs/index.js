@@ -224,7 +224,7 @@ export class JoinUs extends Component {
               <input type="radio" id="ownership-more" name="ownership"
                      onChange={ () => this.setState({ ownership: 'I Need More Information' }) } />
               <label className="gray" htmlFor="ownership-more">
-                Down-Payment<br />Loan
+                Family<br />Loan
               </label>
             </div>
           </div>

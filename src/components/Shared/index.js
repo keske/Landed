@@ -20,7 +20,7 @@ export class Shared extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
               <p className="title">
-                Family Down-Payment Loan
+                Family Loan
               </p>
               <p className="intro">
                 Get structured loans from family to make a bigger down-payment.
@@ -84,7 +84,7 @@ export class Shared extends Component {
 
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-              <a href="/#join" target="_blank">
+              <a href="/#services" >
                 <span className="button">
                   See how we can help
                 </span>
