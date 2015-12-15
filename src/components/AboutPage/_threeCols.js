@@ -18,7 +18,7 @@ export class ThreeCols extends Component {
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
             <img src={ icons[1] } />
             <p>
-              Co-investors help you build wealth sooner.  Start building partial home wealth with as little as 5% down.
+              Co-investors help you build wealth sooner. Start building partial home wealth with as little as 5% down.
             </p>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
