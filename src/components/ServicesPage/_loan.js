@@ -97,7 +97,7 @@ export class Loan extends Component {
     return (
       <div className="container">
         <div className="row lease-and-shared">
-          <div className="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <p className="small-title-border">
               service 3
             </p>
