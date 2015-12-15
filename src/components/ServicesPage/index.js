@@ -7,7 +7,7 @@ import { ImageBlock } from '../ImageBlock';
 import { HowItWorks } from '../HowItWorks';
 import { Lease } from './_lease';
 import { Ownership } from './_ownership';
-import { Loan } from './loan';
+import { Loan } from './_loan';
 
 /* component styles */
 import styles from './styles';

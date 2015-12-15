@@ -37,32 +37,8 @@ export class Shared extends Component {
                   <i>Investor:</i> a simple investment to support loved ones.
                 </p>
               </div>
-
-              //I'M THINKING OF NOT HAVING THE LANDED SUPPORT PIECE HERE.  SEEMS REPETITIVE.
-
-              /*              <div className="role">
-                              <p className="header">
-                                Landed’s Role:
-                              </p>
-                              <ul>
-                                <li>
-                                  Guide you through the contract process
-                                </li>
-                                <li>
-                                  Ensure investor stays current on home expenses.
-                                </li>
-                                <li>
-                                  Fairly assess and collect rent.
-                                </li>
-                                <li>
-                                  Tax support.
-                                </li>
-                                <li>
-                                  Deal with disputes if they arise.
-                                </li>
-                              </ul>
-                            </div>*/
             </div>
+          </div>
 
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
@@ -84,31 +60,6 @@ export class Shared extends Component {
                   <i>Investor:</i> standard investment property with committed occupant.
                 </p>
               </div>
-
-              //I'M THINKING OF NOT HAVING THE LANDED SUPPORT PIECE HERE.  SEEMS REPETITIVE.
-
-/*              <div className="role">
-                <p className="header">
-                  Landed’s Role:
-                </p>
-                <ul>
-                  <li>
-                    Guide you through the contract process
-                  </li>
-                  <li>
-                    Ensure investor stays current on home expenses.
-                  </li>
-                  <li>
-                    Fairly assess and collect rent.
-                  </li>
-                  <li>
-                    Tax support.
-                  </li>
-                  <li>
-                    Deal with disputes if they arise.
-                  </li>
-                </ul>
-              </div>*/
             </div>
 
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
@@ -130,32 +81,7 @@ export class Shared extends Component {
                   <i>Investor:</i> standard investment property with committed occupant.
                 </p>
               </div>
-
-//I'M THINKING OF NOT HAVING THE LANDED SUPPORT PIECE HERE.  SEEMS REPETITIVE.
-
-/*              <div className="role">
-                <p className="header">
-                  Landed’s Role:
-                </p>
-                <ul>
-                  <li>
-                    Guide you through the contract process
-                  </li>
-                  <li>
-                    Ensure home expenses are paid.
-                  </li>
-                  <li>
-                    Act as arbiter for repairs and upgrades.
-                  </li>
-                  <li>
-                    Tax support.
-                  </li>
-                  <li>
-                    Deal with disputes if they arise.
-                  </li>
-                </ul>
-              </div>
-            </div>*/
+            </div>
           </div>
 
           <div className="row">
