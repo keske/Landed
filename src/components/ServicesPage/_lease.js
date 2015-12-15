@@ -113,7 +113,7 @@ export class Lease extends Component {
               service 1
             </p>
             <p className="title">
-              Lease Until You Buy
+              Lease-To-Own
             </p>
           </div>
 

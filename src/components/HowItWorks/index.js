@@ -29,27 +29,27 @@ export class HowItWorks extends Component {
                 1. You find a home
               </p>
               <p className="paragraph">
-                Your broker helps you find the right home. We help you make a cash offer and help you through the home buying process.
+                Your broker helps you find the right home. Before you make an offer, we'll help estimate your on-going payments based on your ownership structure.
               </p>
             </div>
 
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
               <img src={ icons[1] } />
               <p className="paragraph green">
-                2. We find co-investors
+                2. You and your investors close.
               </p>
               <p className="paragraph">
-                You put down 5% of the sale price and take on a 20% mortgage. As soon as your offer is accepted, we select others to co-invest (not co-live) to cover the rest.
+                As soon as your offer is accepted, we'll step in to help you close.  We'll ensure all documents are signed and properly registered.
               </p>
             </div>
 
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
               <img src={ icons[2] } />
               <p className="paragraph green">
-                3. You stay until you’re ready to sell
+                3. You stay until you’re ready to leave
               </p>
               <p className="paragraph">
-                You pay rent on the part of the home you don’t own, and can buy-out Landed at any time. When you decide to move, you split the revenues according to ownership shar
+                We'll help you set up automated payments and walk you through your Landed services.  Welcome home!
               </p>
             </div>
 
@@ -62,7 +62,7 @@ export class HowItWorks extends Component {
               </span>
               <hr className="price" />
               <span className="special">
-                Holiday Special: <span className="free">Free</span>
+                Holiday Special: <span className="free">Completely Free</span>
               </span>
               <a href="/#join" target="_blank">
                 <span className="button">
