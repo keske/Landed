@@ -139,6 +139,10 @@
 
   .terms {
     margin-top: 50px;
+
+    @media (#{ $phone }) {
+      display: none;
+    }
   
     p.title {
       font-family: 'Jannon10Pro-Bold';
@@ -288,6 +292,10 @@
 
   .examples {
     margin-top: 50px;
+
+    @media (#{ $phone }) {
+      display: none;
+    }
 
     .story-block {
       margin-bottom: 30px;
