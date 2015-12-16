@@ -131,7 +131,15 @@
 
     padding: 10px 20px;
 
-    width: 740px;
+    max-width: 740px;
     min-height: 116px;
+
+    @media (min-width: 768px) and (max-width: 992px) {
+      width: 100%;
+    }
+
+    @media (#{ $phone }) {
+      width: 100%;
+    }
   }
 }
