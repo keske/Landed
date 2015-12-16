@@ -214,16 +214,16 @@ export class ThirdStory extends Component {
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <div className="lended-helped">
               <p className="title">
-                How Landed Helped
+                How Landed Helps
               </p>
               <p>
-                Landed helps structure the contract between Lisa and her parents in case anything went wrong.
+                Landed helps structure the contract between Lisa and her parents in case anything goes wrong.
               </p>
               <p>
-                Landed makes sure all the bills were paid on time, and deposited the rent directly into Lisa's parents' account.
+                Landed makes sure all the bills were paid on time, and deposits the rent directly into Lisa's parents' account.
               </p>
               <p>
-                Landed makes sure everyone got all the tax deductions they were entitled to.
+                Landed makes sure everyone gets all the tax deductions to which they are entitled.
               </p>
               <p>
                 Landed fairly assesses the fair rent every year based on the original home price and growth in the neighborhood.
@@ -232,7 +232,7 @@ export class ThirdStory extends Component {
                 Landed fairly assesses the buy-back price based on the original home price and growth in the neighborhood.
               </p>
               <p>
-                Landed makes sure her parents and her never had anything to disagree over!
+                Landed makes sure no one has anything to fight about!
               </p>
             </div>
           </div>

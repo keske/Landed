@@ -58,19 +58,19 @@ export class WhyDoesLandedExist extends Component {
               During the ‘Great Recession’, people like Susan (a median homebuyer), lost over 35% of their net worth. People less wealthy than Susan lost everything. Many of them owed more on their mortgage then their house was worth (known as ‘being underwater’). In fact, today, almost eight years later, over 15% of US homeowners are still underwater on their homes.
             </p>
             <p>
-              So millions of people like Susan buckled down to save money until they were back on solid ground. But saving money means fewer things are being purchased, which means less profits for companies, which means layoffs, which means less money for households, which means less things are being purchased… the economy goes into a tail spin.
+              Millions of people like Susan buckled down to save money until they were back on solid ground. But saving money means fewer things are being purchased, which means less profits for companies, which means layoffs, which means less money for households, which means fewer things are being purchased… the economy goes into a tail spin.
             </p>
             <p>
-              Now, some of Susan’s friends lost their jobs and fell behind on their mortgage payments. The banks foreclosed on them, got most of their mortgage loan back but left Susan’s friends with nothing.  And who bought these homes? Well, companies that people like Richie disproportionately own through their already diversified portfolio. As a result, people like Richie only lost 10% of their net worth during the recession and quickly recovered.
+              Some of Susan’s friends lost their jobs and fell behind on their mortgage payments. The banks foreclosed on them and got most of their mortgage loans back, but left Susan’s friends with nothing.  And who bought these homes? Well, companies that people like Richie disproportionately own through their already diversified portfolio. As a result, people like Richie only lost 10% of their net worth during the recession and quickly recovered.
             </p>
             <p>
-              This happens, to a lesser degree, every time the real estate market corrects itself, which seems to happen every seven to twelve years.
+              A version of this happens every time the real estate market corrects itself, which seems to happen every seven to twelve years.
             </p>
             <p>
               Buying a house with an overwhelming amount of institutional debt puts you at risk. Everyone buying their homes with that kind of debt puts the whole economy at risk. And when credit bubbles burst, the wealthy get wealthier at the expense of everyone else.
             </p>
             <p>
-              Let's make homeowners more financially resilient.  Let's make it incredibly simple for two partners to join forces to pay for home.  Let's learn how to do it extremely well so that make anyone a co-investor.  Only then do all of us have a chance to build wealth sustainably.
+              Let's make homeowners more financially resilient.  Let's make it incredibly simple for two partners to join forces to pay for home.  Let's make it so easy that anyone can be a co-investor in the neighborhoods and cities they know and love.  Only then do all of us have a chance to build wealth sustainably.
             </p>
           </div>
         </div>

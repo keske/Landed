@@ -224,19 +224,19 @@ export class FourthStory extends Component {
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <div className="lended-helped">
               <p className="title">
-                How Landed Helped
+                How Landed Helps
               </p>
               <p>
                 Landed helps structure the contract between Marc and his investor to protect both parties.
               </p>
               <p>
-                When a minor earthquake caused $100,000 of damage to his property in year 3, Landed helped assess the damage and collect the appropriate amounts from each party.
+                Should an earthquake cause $100,000 of damage to the property, Landed helps assess the damage and ensures each party fulfills their responsibility.
               </p>
               <p>
-                Landed makes sure all the bills were paid on time, and deposits the rent directly into the investor's account.
+                Landed makes sure all the bills are paid on time, and deposits the rent directly into the investor's account.
               </p>
               <p>
-                Landed makes sure everyone got all the tax deductions they were entitled to.
+                Landed makes sure everyone gets all the tax deductions to which they are entitled.
               </p>
               <p>
                 Landed fairly assesses the fair rent every year based on the original home price and growth in the neighborhood.

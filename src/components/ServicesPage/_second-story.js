@@ -202,25 +202,25 @@ export class SecondStory extends Component {
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <div className="lended-helped">
               <p className="title">
-                How Landed Helped
+                How Landed Helps
               </p>
               <p>
-                Landed helps structure the contract between Jennifer and her parents in case anything went wrong.
+                Landed helps structure the contract between Jennifer and her parents in case anything goes wrong.
               </p>
               <p>
-                Landed makes sure all the bills were paid on time, and deposits the rent directly into Jennifer's parents' account.
+                Landed makes sure all the bills are paid on time, and helps deposit the rent directly into Jennifer's parents' account.
               </p>
               <p>
-                Landed makes sure everyone got all the tax deductions they are entitled to.
+                Landed makes sure everyone gets all the tax deductions to which they are entitled.
               </p>
               <p>
-                Landed fairly assesses the fair rent every year based on the original home price and growth in the neighborhood.
+                Landed fairly assesses the rent every year based on the original home price and growth in the neighborhood.
               </p>
               <p>
                 Landed fairly assesses the buy-out price based on the original home price and growth in the neighborhood.
               </p>
               <p>
-                Most importantly, Landed makes sure Jennifer and her parents never having anything to fight about.
+                Most importantly, Landed makes sure Jennifer and her parents never have anything to fight about.
               </p>
             </div>
           </div>
@@ -237,7 +237,7 @@ export class SecondStory extends Component {
               In return, Jennifer's parents will likely earn more than they would in their mutual fund.
             </p>
             <p>
-              As a group, they'll only pay $1,350 / month to the bank, instead of $3,135 / month
+              As a group, they'll only pay $1,350 / month to the bank, instead of $3,135 / month.
             </p>
           </div>
         </div>

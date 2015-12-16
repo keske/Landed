@@ -224,7 +224,7 @@ export class FifthStory extends Component {
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <div className="lended-helped">
               <p className="title">
-                How Landed Helped
+                How Landed Helps
               </p>
               <p>
                 Landed helps structure the contract between Mikael and his parents to protect both parties.
@@ -233,10 +233,10 @@ export class FifthStory extends Component {
                 Landed helps register the documents so they are legally binding.
               </p>
               <p>
-                Landed helped remind Mikael about his monthly interest obligations and made it easy for him to pay.
+                Landed helps remind Mikael about his monthly interest obligations and makes it easy for him to pay.
               </p>
               <p>
-                Landed makes sure everyone got all the tax deductions they were entitled to.
+                Landed makes sure everyone got all the tax deductions to which they are entitled.
               </p>
             </div>
           </div>

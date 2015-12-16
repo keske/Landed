@@ -6,10 +6,10 @@ import { SecondStory } from './_second-story';
 
 const RENTAL = [{
   prop: 'Base Rent',
-  val: 'Market rent',
+  val: 'Market rent.',
 }, {
   prop: 'Rent Discount/Premium',
-  val: 'None',
+  val: 'None.',
 }, {
   prop: 'Rent Increases',
   val: 'Assessed annually based on local index. ',
@@ -144,7 +144,7 @@ export class Lease extends Component {
               </div>
               <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
                 <p>
-                  An option to buy back the property from the investor.  In exchange to committing the home long-term, the resident is given an option to buy the property any time after two years.
+                  An option to buy back the property from the investor.  In exchange for committing to the home long-term, the resident is given an option to buy the property.
                 </p>
               </div>
             </div>

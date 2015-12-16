@@ -122,7 +122,7 @@ export class Ownership extends Component {
 
           <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5">
             <p className="text">
-              Shared ownership involves splitting a home purchase, but assigning exclusive living rights to one of the parties (the Resident Owner).  For the portion that the Resident Owner doesn’t own, they pay rent to the investor.
+              Shared ownership splits a home purchase, but assigns exclusive living rights to one of the parties (the Resident Owner).  For the portion that the Resident Owner doesn’t own, he or she pays rent to the investor.
             </p>
 
             <p className="italic-block small-title">

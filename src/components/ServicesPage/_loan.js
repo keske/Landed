@@ -224,7 +224,7 @@ export class Loan extends Component {
                   <span className="story-title">
                     Mikael<br />
                   </span>
-                  Getting a Structure Gift
+                  Getting a Structured Gift
                   <br />
                   <span className="read">
                     Read Mikael's story
