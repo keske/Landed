@@ -64,7 +64,7 @@ export class HowItWorks extends Component {
               <span className="special">
                 Holiday Special: <span className="free">$199 + $0/mth</span>
               </span>
-              <a href="/#join" target="_blank">
+              <a href="#join" target="_blank">
                 <span className="button">
                   Sign up to get started
                 </span>
