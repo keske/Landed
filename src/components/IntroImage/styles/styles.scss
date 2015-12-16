@@ -13,6 +13,7 @@
 
     background: url(../files/mobile-about.jpg);
     background-size: 100% auto;
+    background-repeat: no-repeat;
   }
 
   // Services
@@ -21,10 +22,11 @@
     background-size: cover;
 
     @media (#{ $phone }) {
-      height: 580px;
+      height: 680px;
 
       background: url(../files/services-phone.jpg);
-      background-size: 100% auto;
+      background-size: 680px auto;
+      background-repeat: no-repeat;
     }
   }
 
