@@ -6,6 +6,9 @@
   padding-bottom: 70px;
   margin-bottom: -40px;
 
+
+
+
   p {
     font-family: 'SupriaSans Regular';
     font-size: 16px;
@@ -25,6 +28,29 @@
       font-size: 16px;
       line-height: 24px;
     }
+
+
+    p.intro {
+    margin-top: 30px;
+
+    width: 90%;
+
+    font-family: 'SupriaSans Light';
+    color: #FFF;
+    font-size: 18px;
+    line-height: 24px;
+
+    @media (#{ $large-desktop }) {
+      width: 50%;
+    }
+
+    @media (#{ $phone }) {
+      font-size: 12px;
+      width: 90%;
+      line-height:18px;
+
+    }
+  }
 
     p.small-title-border {
       font-family: 'Jannon10Pro-Italic';

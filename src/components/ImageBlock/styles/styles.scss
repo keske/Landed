@@ -27,9 +27,9 @@
 
     @media (#{ $phone }) {
       height: 315px;
-
       background: url(../files/image-block-services-phone.jpg);
-      background-size: 100% auto;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
   }
 
@@ -45,7 +45,7 @@
       font-size: 28px;
       line-height: 34px;
       
-      margin-top: 200px;
+      margin-top: 130px;
     }
   }
 }

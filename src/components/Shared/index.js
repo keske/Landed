@@ -90,7 +90,7 @@ export class Shared extends Component {
                 </span>
               </a>
               <div className="different-structure">
-                <a href="#">
+                <a href="#join">
                   I’m thinking of a different structure, can you help?
                 </a>
               </div>

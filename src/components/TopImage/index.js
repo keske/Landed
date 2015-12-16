@@ -49,7 +49,7 @@ export class TopImage extends Component {
                   Join forces to pay for home
                 </h1>
                 <h1 className="hidden-md hidden-lg">
-                  Join forces to pay for home
+                  Join forces to pay for&nbsp;home
                 </h1>
               </ReactCSSTransitionGroup>
             </div>
