@@ -13,7 +13,7 @@ export class SixthStory extends Component {
               After moving to the Bay Area and starting a great career, she's thinking of buying a house for her own (new) family.
             </p>
             <p>
-              Neither her or her partner's parents can offer a lot of support, but Vidhya her dad and three uncles that are willing to loan $30,000 each.
+              Vidhya's dad can't offer enough support by himself, but he and Vidhya's three uncles are willing to loan $30,000 each.
             </p>
             <p>
               These aren't gifts, they are investments in Vidhya.  They want 5% interest.
@@ -36,7 +36,7 @@ export class SixthStory extends Component {
 
               <div className="row">
                 <div className="col-xs-4 col-sm-4 col-md-6 col-lg-6 prop">
-                  After-Tax Family Income
+                  After-Tax Income
                 </div>
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 value">
                   $135,000
@@ -163,7 +163,7 @@ export class SixthStory extends Component {
 
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Total Paid
+                Total Out-of-Pocket
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
                 $5,840
@@ -210,7 +210,7 @@ export class SixthStory extends Component {
 
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Total Paid For Home
+                Net Cost of Home
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
                 $4,229

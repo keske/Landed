@@ -36,7 +36,7 @@ export class FirstStory extends Component {
 
               <div className="row">
                 <div className="col-xs-4 col-sm-4 col-md-6 col-lg-6 prop">
-                  After-Tax Family Income
+                  After-Tax Income
                 </div>
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 value">
                   $70,000
@@ -148,11 +148,23 @@ export class FirstStory extends Component {
               </div>
             </div>
 
+            <div className="row">
+              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
+                Rent Owed
+              </div>
+              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
+                none
+              </div>
+              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
+                $2000
+              </div>
+            </div>
+
             <br /><br />
 
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Total Paid
+                Total Out-of-Pocket
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
                 $2,870
@@ -188,7 +200,7 @@ export class FirstStory extends Component {
 
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Total Paid For Home
+                Net Cost Of Home
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
                 $2,142
@@ -225,13 +237,13 @@ export class FirstStory extends Component {
         <div className="row sign">
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
             <p>
-              Within 5 years, Diego will have enough for a large downpayment.
+              Within 5 years, Diego will have enough for a large down-payment.
             </p>
             <p>
-              Diego pays a fair price that doesn’t include all<br />the work he's put into his home out of his own pocket.
+              Diego pays a fair price that doesn’t include all the work he's put into his home out of his own pocket.
             </p>
             <p>
-              The investor makes a better return than most of his rental investments because Diego treats it as his home and takes care of repairs.
+              The investor makes a similar return to his other rental investments without as much work.
             </p>
           </div>
         </div>
