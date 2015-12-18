@@ -12,11 +12,20 @@ export class TopImage extends Component {
 
   constructor(props) {
     super(props);
+
+    this.state = {
+      loaded: false,
+    };
+
     this.onScrollAnimation = this.onScrollAnimation.bind(this);
   }
 
   componentDidMount() {
     window.addEventListener('scroll', this.onScrollAnimation);
+
+    this.setState({
+      loaded: true,
+    });
   }
 
   componentWillUnmount() {
@@ -28,17 +37,19 @@ export class TopImage extends Component {
   }
 
   blurImage() {
-    const opacity = (window.pageYOffset / 190).toFixed(1);
+    // const opacity = (window.pageYOffset / 190).toFixed(1);
 
-    if (screen.width >= 720) {
-      this.refs.blurred.style.opacity = opacity;
-    }
+    // if (screen.width >= 720) {
+    //   this.refs.blurred.style.opacity = opacity;
+    // }
   }
 
   render() {
+    const { loaded } = this.state;
+
     return (
       <section className={ `${styles}` }>
-        <div className="blurred-image" ref="blurred" />
+        <div className={`blurred-image ${loaded && 'loaded'}`} ref="blurred" />
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11">

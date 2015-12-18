@@ -18,6 +18,7 @@
     background: url(../files/top-phone.jpg);
     background-size: cover;
   }
+
   &.home {
     background: url(../files/top.jpg);
     background-size: cover;
@@ -42,10 +43,11 @@
     background: url(../files/top-blur.jpg);
     background-size: cover;
 
-    opacity: 0;
+    // opacity: 0;
+    opacity: 1;
 
-    @media (#{ $phone }) {
-      display: none;
+    &.loaded {
+      opacity: 0;
     }
   }
 
