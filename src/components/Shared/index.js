@@ -84,7 +84,7 @@ export class Shared extends Component {
 
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-              <a href="/#services" >
+              <a href="#services" >
                 <span className="button">
                   See how we can help
                 </span>

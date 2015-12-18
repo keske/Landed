@@ -36,7 +36,7 @@ export class FourthStory extends Component {
 
               <div className="row">
                 <div className="col-xs-4 col-sm-4 col-md-6 col-lg-6 prop">
-                  After-Tax Family Income
+                  After-Tax Income
                 </div>
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 value">
                   $165,000
@@ -163,7 +163,7 @@ export class FourthStory extends Component {
 
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Total Paid
+                Total Out-of-Pocket
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
                 $5,758
@@ -210,7 +210,7 @@ export class FourthStory extends Component {
 
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Total Paid For Home
+                Net Cost of Home
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
                 $3,692
@@ -224,19 +224,19 @@ export class FourthStory extends Component {
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <div className="lended-helped">
               <p className="title">
-                How Landed Helped
+                How Landed Helps
               </p>
               <p>
                 Landed helps structure the contract between Marc and his investor to protect both parties.
               </p>
               <p>
-                When a minor earthquake caused $100,000 of damage to his property in year 3, Landed helped assess the damage and collect the appropriate amounts from each party.
+                Should an earthquake cause $100,000 of damage to the property, Landed helps assess the damage and ensures each party fulfills their responsibility.
               </p>
               <p>
-                Landed makes sure all the bills were paid on time, and deposits the rent directly into the investor's account.
+                Landed makes sure all the bills are paid on time, and deposits the rent directly into the investor's account.
               </p>
               <p>
-                Landed makes sure everyone got all the tax deductions they were entitled to.
+                Landed helps everyone keep track of all their potential tax deductions.
               </p>
               <p>
                 Landed fairly assesses the fair rent every year based on the original home price and growth in the neighborhood.
@@ -250,10 +250,10 @@ export class FourthStory extends Component {
         <div className="row sign">
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
             <p>
-              Marc has no intention of buying more of the property over time, he wants to continue splitting the investment.
+              Marc has no intention of buying more of the property over time -- he wants to continue splitting the investment.
             </p>
             <p>
-              Should his investor want to leave the agreement after 5 years, Marc can always get a regular mortgage and buy the entire property at a fair price.
+              Should his investor want to leave the agreement after five years, Marc can always get a regular mortgage and buy the entire property at a fair price.
             </p>
             <p>
               Marc doesn't see much downside and it helps him achieve his investing goals while living in a space he can control.

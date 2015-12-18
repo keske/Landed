@@ -122,11 +122,11 @@ export class Ownership extends Component {
 
           <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5">
             <p className="text">
-              Shared ownership involves splitting a home purchase, but assigning exclusive living rights to one of the parties (the Resident Owner).  For the portion that the Resident Owner doesn’t own, they pay rent to the investor.
+              Shared ownership splits a home purchase, but assigns exclusive living rights to one of the parties (the Resident Owner).  For the portion that the Resident Owner doesn’t own, he or she pays rent to the investor.
             </p>
 
             <p className="italic-block small-title">
-              A partial ownership also involves two main parts:
+              A shared ownership arrangement also consists of two main parts:
             </p>
 
             <div className="list">
@@ -135,7 +135,7 @@ export class Ownership extends Component {
               </div>
               <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
                 <p>
-                  <strong>A co-ownership agreement that splits the responsibilities of ownership.</strong>  The two parties hold the property on title as Tenants-In-Common. The ownership percentages between the two parties are usually calculated by how much they put in as down-payment.  Typically, all financials (paying the mortgage, insurance, repairs, but also receiving rent payments) are split according to ownership interest.  The resident owner is allowed to slowly purchase more of the property over time.
+                  <strong>A shared ownership agreement that splits the responsibilities of ownership.</strong>  The two parties hold the property on title as Tenants-In-Common. The ownership percentages between the two parties are usually calculated by how much they put in as down-payment.  Typically, all financials (paying the mortgage, insurance, repairs, but also receiving rent payments) are split according to ownership interest.  The Resident Owner is allowed to slowly purchase more of the property over time.
                 </p>
               </div>
             </div>
@@ -146,7 +146,7 @@ export class Ownership extends Component {
               </div>
               <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
                 <p>
-                  <strong>A lease to the resident owner.</strong> This ownership group then leases the property to the Resident Owner and gives them all the rights that would typically be conveyed to a homeowner.
+                  <strong>A lease to the Resident Owner.</strong> The two parties lease the property to the Resident Owner who receives all the typical living rights enjoyed by a homeowner.
                 </p>
               </div>
             </div>
@@ -162,7 +162,7 @@ export class Ownership extends Component {
                 Become a responsible homeowner without as much debt.
               </li>
               <li>
-                Can buy ownership over time instead of all at once.
+                Buy ownership over time instead of all at once.
               </li>
               <li>
                 Have your money working sooner while sharing some of the financial risk.
@@ -202,7 +202,7 @@ export class Ownership extends Component {
           <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 terms-table">
             <div className="col-xs-12 col-sm-5 col-md-5 col-lg-5 left-side">
               <p className="field-name-prop">
-                Co-Ownership Agreement
+                Shared Ownership Agreement
               </p>
             </div>
             <div className="col-xs-12 col-sm-7 col-md-7 col-lg-7 right-side">

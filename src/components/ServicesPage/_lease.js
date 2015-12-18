@@ -6,13 +6,13 @@ import { SecondStory } from './_second-story';
 
 const RENTAL = [{
   prop: 'Base Rent',
-  val: 'Market rent',
+  val: 'Market rent.',
 }, {
   prop: 'Rent Discount/Premium',
-  val: 'None',
+  val: 'None.',
 }, {
   prop: 'Rent Increases',
-  val: 'Assessed annually based on local index. ',
+  val: 'Assessed annually based on local rent index. ',
 }, {
   prop: 'Rent Increase Limit',
   val: 'No more than 20% every 3 years.',
@@ -29,10 +29,10 @@ const PURCHASE = [{
   val: 'Can purchase after 2 years with 90 days notice.',
 }, {
   prop: 'Purchase Price',
-  val: 'Purchase price based on independent index.',
+  val: 'Purchase price based on local price index.',
 }, {
   prop: 'Minimum Purchase Price',
-  val: '90% of original purchase price.',
+  val: 'No lower than 90% of original purchase price.',
 }];
 
 const diego = require('./files/diego.jpg');
@@ -124,7 +124,7 @@ export class Lease extends Component {
             </p>
 
             <p className="italic-block small-title">
-              More typically known as a lease-option agreement, our contract involves two main parts:
+              More typically known as a lease-option agreement, it consists of two main parts:
             </p>
 
             <div className="list">
@@ -133,7 +133,7 @@ export class Lease extends Component {
               </div>
               <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
                 <p>
-                  A long-term rent agreement that provides security to both the owner and the renter.  This commits both the investor and the resident to the space for 5 years.  For this commitment, the investor agrees to give the resident the same experience they would have in their own home.
+                  <strong>A long-term rent agreement that provides security to both the owner and the renter.</strong>  This commits both the investor and the resident to the space for 5 years.  For this commitment, the investor agrees to give the resident the same experience they would have in their own home.
                 </p>
               </div>
             </div>
@@ -144,7 +144,7 @@ export class Lease extends Component {
               </div>
               <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
                 <p>
-                  An option to buy back the property from the investor.  In exchange to committing the home long-term, the resident is given an option to buy the property any time after two years.
+                  <strong>An option to buy back the property from the investor.</strong>  In exchange for committing to the home long-term, the resident is given an option to buy the property.
                 </p>
               </div>
             </div>
@@ -179,7 +179,7 @@ export class Lease extends Component {
                 A trusted, committed resident who takes care of your investment.
               </li>
               <li>
-                More options available if residents can no longer pay.
+                Full control of your investment.
               </li>
             </ul>
           </div>

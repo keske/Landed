@@ -8,7 +8,7 @@ const RENTAL = [{
   prop: 'Interest Rate',
   val: 'Minimum allowable interest (2.58% as of Dec 2015).',
 }, {
-  prop: 'Annual Gift',
+  prop: 'Annual Loan Forgiveness',
   val: 'None (maximum $14,000 per loan, per year).',
 }, {
   prop: 'Amortization Term',
@@ -86,7 +86,7 @@ export class Loan extends Component {
             <span className="icon" />
             <span className="text">
               <p>
-                On-going support and independent advisor
+                On-going support and independent adviser
               </p>
             </span>
           </div>
@@ -102,17 +102,17 @@ export class Loan extends Component {
               service 3
             </p>
             <p className="title">
-              Family Down-Payment Loan
+              Family Loan
             </p>
           </div>
 
           <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5">
             <p className="text">
-              In a down-payment loan, the investor provides a second loan that is properly recorded with the relevant authorities to ensure tax and legal compliance.  Although debt is the simplest form of support, the investor is taking significant risk without a corresponding reward.  Similarly, the resident owner is put in a vulnerable position should home prices adjust.
+              In a down-payment loan, the investor provides a second loan that is properly recorded with the relevant authorities to ensure tax and legal compliance.  Although additional debt is the simplest form of support, it also comes with additional risks.  Both parties need to be comfortable with the likely scenario that home prices decline and the resident is left in a vulnerable position.
             </p>
 
             <p className="italic-block small-title">
-              A family down-payment loan also involves two main parts:
+              A family loan also consists of two main parts:
             </p>
 
             <div className="list">
@@ -145,13 +145,13 @@ export class Loan extends Component {
             </p>
             <ul>
               <li>
-                Simple, tax-deductible down-payment loan.
+                If you plan on paying your family back, get the tax-deductable benefits!
               </li>
               <li>
                 Avoid mortgage insurance and get better rates with a bigger down-payment.
               </li>
               <li>
-                Properly registered documents give you peace of mind.
+                Safeguard your most important relationships from unclear expectations.
               </li>
             </ul>
 
@@ -160,13 +160,13 @@ export class Loan extends Component {
             </p>
             <ul>
               <li>
-                A simple way to support family members buying a home
+                Protect yourself from the tax liabilities of undocumented loans or gifts.
               </li>
               <li>
-                Properly registered documents give you protection in case things go wrong.
+                Secure your investment in the case of divorce or death.
               </li>
               <li>
-                Properly registered documents protect you from potential gift taxes.
+                Safeguard your most important relationships from unclear expectations.
               </li>
             </ul>
           </div>
@@ -224,7 +224,7 @@ export class Loan extends Component {
                   <span className="story-title">
                     Mikael<br />
                   </span>
-                  Getting a Structure Gift
+                  Getting a Structured Gift
                   <br />
                   <span className="read">
                     Read Mikael's story

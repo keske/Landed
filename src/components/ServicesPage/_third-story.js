@@ -10,10 +10,10 @@ export class ThirdStory extends Component {
               <strong>Lisa</strong> is one year into her new job as a software engineer and is committed to the Bay Area long-term.
             </p>
             <p>
-              Lisa is eyeing a 2bd condo in San Jose in a neighborhood that she really likes.
+              Lisa is eyeing a 2 bedroom condo in San Jose in a neighborhood that she really likes.
             </p>
             <p>
-              She doesn't want to buy the whole thing as she thinks it's overly risky to only put 5% down.
+              She doesn't want to buy the whole thing as she thinks it's overly risky to take out a 95% loan from the bank.
             </p>
             <p>
               She wants to split the purchase with her parents. { /* ' */ }
@@ -36,7 +36,7 @@ export class ThirdStory extends Component {
 
               <div className="row">
                 <div className="col-xs-4 col-sm-4 col-md-6 col-lg-6 prop">
-                  After-Tax Family Income
+                  After-Tax Income
                 </div>
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 value">
                   $80,000
@@ -164,7 +164,7 @@ export class ThirdStory extends Component {
 
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Total Paid
+                Total Out-of-Pocket
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
                 $4,800
@@ -200,7 +200,7 @@ export class ThirdStory extends Component {
 
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Total Paid For Home
+                Net Cost of Home
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
                 $3,550
@@ -214,16 +214,16 @@ export class ThirdStory extends Component {
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <div className="lended-helped">
               <p className="title">
-                How Landed Helped
+                How Landed Helps
               </p>
               <p>
-                Landed helps structure the contract between Lisa and her parents in case anything went wrong.
+                Landed helps structure the contract between Lisa and her parents in case anything goes wrong.
               </p>
               <p>
-                Landed makes sure all the bills were paid on time, and deposited the rent directly into Lisa's parents' account.
+                Landed makes sure all the bills were paid on time, and deposits the rent directly into Lisa's parents' account.
               </p>
               <p>
-                Landed makes sure everyone got all the tax deductions they were entitled to.
+                Landed makes sure everyone gets all the tax deductions to which they are entitled.
               </p>
               <p>
                 Landed fairly assesses the fair rent every year based on the original home price and growth in the neighborhood.
@@ -232,7 +232,7 @@ export class ThirdStory extends Component {
                 Landed fairly assesses the buy-back price based on the original home price and growth in the neighborhood.
               </p>
               <p>
-                Landed makes sure her parents and her never had anything to disagree over!
+                Landed makes sure no one has anything to fight about!
               </p>
             </div>
           </div>

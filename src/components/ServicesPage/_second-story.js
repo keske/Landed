@@ -36,7 +36,7 @@ export class SecondStory extends Component {
 
               <div className="row">
                 <div className="col-xs-4 col-sm-4 col-md-6 col-lg-6 prop">
-                  After-Tax Family Income
+                  After-Tax Income
                 </div>
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 value">
                   $100,000
@@ -147,12 +147,23 @@ export class SecondStory extends Component {
                 none
               </div>
             </div>
+            <div className="row">
+              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
+                Rent Owed
+              </div>
+              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
+                none
+              </div>
+              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
+                $3,250
+              </div>
+            </div>
 
             <br /><br />
 
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Total Paid
+                Total Out-of-Pocket
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
                 $4,950
@@ -188,7 +199,7 @@ export class SecondStory extends Component {
 
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Total Paid For Home
+                Net Cost of Home
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
                 $3,515
@@ -202,25 +213,25 @@ export class SecondStory extends Component {
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <div className="lended-helped">
               <p className="title">
-                How Landed Helped
+                How Landed Helps
               </p>
               <p>
-                Landed helps structure the contract between Jennifer and her parents in case anything went wrong.
+                Landed helps structure the contract between Jennifer and her parents in case anything goes wrong.
               </p>
               <p>
-                Landed makes sure all the bills were paid on time, and deposits the rent directly into Jennifer's parents' account.
+                Landed makes sure all the bills are paid on time, and helps deposit the rent directly into Jennifer's parents' account.
               </p>
               <p>
-                Landed makes sure everyone got all the tax deductions they are entitled to.
+                Landed makes sure everyone gets all the tax deductions to which they are entitled.
               </p>
               <p>
-                Landed fairly assesses the fair rent every year based on the original home price and growth in the neighborhood.
+                Landed fairly assesses the rent every year based on the original home price and growth in the neighborhood.
               </p>
               <p>
                 Landed fairly assesses the buy-out price based on the original home price and growth in the neighborhood.
               </p>
               <p>
-                Most importantly, Landed makes sure Jennifer and her parents never having anything to fight about.
+                Most importantly, Landed makes sure Jennifer and her parents never have anything to fight about.
               </p>
             </div>
           </div>
@@ -228,16 +239,16 @@ export class SecondStory extends Component {
         <div className="row sign">
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
             <p>
-              Within 5 years, Jennifer and her family will have enough for a 20% downpayment.
+              Within 5 years, Jennifer and her family will have enough for a 20% down-payment.
             </p>
             <p>
               They'll save more money using lease-until-you-buy and make the smarter financial choice.
             </p>
             <p>
-              In return, Jennifer's parents will likely earn more than they would in their mutual fund.
+              In return, Jennifer's parents can add a strong real estate investment to their portfolio.
             </p>
             <p>
-              As a group, they'll only pay $1,350 / month to the bank, instead of $3,135 / month
+              As a group, they'll only pay $1,350 / month to the bank, instead of $3,135 / month.
             </p>
           </div>
         </div>

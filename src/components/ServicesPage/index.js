@@ -20,8 +20,8 @@ export class ServicesPage extends Component {
 
   render() {
     const intro = {
-      title: 'Comprehensive support to help take the hassle out of getting investment help',
-      text: "All of us need a little bit of help buying our first home. Not everyone is lucky enough to get big gifts to make it work.<br /><br />Although formalizing the support is hard, expensive and intimidating, it doesn't have to be.<br /><br />Whether structured as a lease-to-own agreement, a co-investment, or just a simple loan, Landed is here to help.",
+      title: 'Comprehensive support to take the hassle out of getting investment help',
+      text: "We all need a little help buying our first home but it's not always clear how to get it. <br /><br />Landed helps you create and register legal documents, helps track and transfer payments, and acts as an independent arbiter.<br /><br />Whether structured as a lease-to-own agreement, a co-investment, or just a simple loan, Landed is here to help.",
       image: 'services',
     };
 
