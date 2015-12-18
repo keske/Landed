@@ -40,6 +40,10 @@ export class IntroImage extends Component {
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.parallax);
+
+    this.setState({
+      loaded: false,
+    });
   }
 
   parallax() {

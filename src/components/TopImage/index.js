@@ -17,7 +17,7 @@ export class TopImage extends Component {
       loaded: false,
     };
 
-    this.onScrollAnimation = this.onScrollAnimation.bind(this);
+    // this.onScrollAnimation = this.onScrollAnimation.bind(this);
   }
 
   componentDidMount() {
@@ -37,20 +37,24 @@ export class TopImage extends Component {
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.onScrollAnimation);
+
+    this.setState({
+      loaded: false,
+    });
   }
 
-  onScrollAnimation() {
-    this.blurImage();
-  }
+  // onScrollAnimation() {
+  //   this.blurImage();
+  // }
 
-  blurImage() {
-    const { loaded } = this.state;
-    const opacity = (window.pageYOffset / 190).toFixed(1);
+  // blurImage() {
+  //   const { loaded } = this.state;
+  //   const opacity = (window.pageYOffset / 190).toFixed(1);
 
-    if (screen.width >= 720 && loaded) {
-      // this.refs.blurred.style.opacity = opacity;
-    }
-  }
+  //   if (screen.width >= 720 && loaded) {
+  //     this.refs.blurred.style.opacity = opacity;
+  //   }
+  // }
 
   render() {
     const { loaded } = this.state;
