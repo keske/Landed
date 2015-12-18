@@ -5,19 +5,57 @@
   width: 100%;
   height: 600px;
 
-  background: url(../files/top-about.jpg);
-  background-size: cover;
+  @mixin blurredImage($image) {
+    .blurred-image {
+      width: 100%;
+      height: 600px;
 
-  @media (#{ $phone }) {
-    height: 580px;
+      position: absolute;
 
-    background: url(../files/mobile-about.jpg);
-    background-size: 100% auto;
-    background-repeat: no-repeat;
+      top: 0;
+      left: 0;
+
+      background: url(../files/#{$image}-blur.jpg);
+      background-size: cover;
+
+      opacity: 1;
+      transition: 0s;
+
+      &.loaded {
+        transition: 3s;
+        opacity: 0;
+      }
+    }
+  }
+  
+  // About
+  &.about {
+    @include blurredImage('about');
+
+    background: url(../files/about.jpg);
+    background-size: cover;
+
+    @media (#{ $phone }) {
+      height: 580px;
+
+      background: url(../files/about-phone.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    @media (max-width: 325px) {
+      height: 680px;
+
+      background: url(../files/about-phone.jpg);
+      background-size: 680px auto;
+      background-repeat: no-repeat;
+    }
   }
 
   // Services
   &.services {
+    @include blurredImage('services');
+
     background: url(../files/services.jpg);
     background-size: cover;
 

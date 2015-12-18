@@ -5,8 +5,6 @@ import { Link } from 'react-router';
 /* component styles */
 import styles from './styles';
 
-const file = require('./files/top.jpg');
-
 export class TopImage extends Component {
   static propTypes = {
     showPopup: React.PropTypes.func,
@@ -25,18 +23,14 @@ export class TopImage extends Component {
   componentDidMount() {
     window.addEventListener('scroll', this.onScrollAnimation);
 
-    // setTimeout(() => this.setState({
-    //   loaded: true,
-    // }), 2000);
-
     const img = new Image();
+    img.src = require('./files/top.jpg');
 
-    img.src = file;
     if (!img.complete) {
       img.onload = () => {
-        this.setState({
+        setTimeout(() => this.setState({
           loaded: true,
-        });
+        }), 300);
       };
     }
   }
@@ -50,11 +44,12 @@ export class TopImage extends Component {
   }
 
   blurImage() {
-    // const opacity = (window.pageYOffset / 190).toFixed(1);
+    const { loaded } = this.state;
+    const opacity = (window.pageYOffset / 190).toFixed(1);
 
-    // if (screen.width >= 720) {
-    //   this.refs.blurred.style.opacity = opacity;
-    // }
+    if (screen.width >= 720 && loaded) {
+      // this.refs.blurred.style.opacity = opacity;
+    }
   }
 
   render() {

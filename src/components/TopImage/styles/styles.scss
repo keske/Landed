@@ -43,10 +43,11 @@
     background: url(../files/top-blur.jpg);
     background-size: cover;
 
-    // opacity: 0;
     opacity: 1;
+    transition: 0s;
 
     &.loaded {
+      transition: 3s;
       opacity: 0;
     }
   }

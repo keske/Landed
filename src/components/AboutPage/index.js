@@ -14,7 +14,7 @@ export class AboutPage extends Component {
     const intro = {
       title: 'What is Landed?',
       text: 'We’re a San Francisco headquartered company on a mission: make it easier and smarter to buy and invest in urban homes.<br /><br />For homebuyers, we help you share some of the financial risk of buying a home with other trusted partners.',
-      image: 'top-about.png',
+      image: 'about',
     };
 
     return (

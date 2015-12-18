@@ -13,11 +13,29 @@ export class IntroImage extends Component {
 
   constructor(props) {
     super(props);
+
+    this.state = {
+      loaded: false,
+    };
+
     this.parallax = this.parallax.bind(this);
   }
 
   componentDidMount() {
+    const { image } = this.props;
+
     window.addEventListener('scroll', this.parallax);
+
+    const img = new Image();
+    img.src = require(`./files/${image}.jpg`);
+
+    if (!img.complete) {
+      img.onload = () => {
+        setTimeout(() => this.setState({
+          loaded: true,
+        }), 300);
+      };
+    }
   }
 
   componentWillUnmount() {
@@ -34,9 +52,11 @@ export class IntroImage extends Component {
 
   render() {
     const { title, text, image } = this.props;
+    const { loaded } = this.state;
 
     return (
       <section className={ `${styles} ${image}` } ref="parallax">
+        <div className={`blurred-image ${loaded && 'loaded'}`} ref="blurred" />
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11">

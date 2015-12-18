@@ -65,7 +65,7 @@ export class Home extends Component {
           <YouCan />
           <ImageBlock { ...imageBlockProps } />
           <Shared />
-          
+
         </ReactCSSTransitionGroup>
       );
     }
