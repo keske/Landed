@@ -5,6 +5,8 @@ import { Link } from 'react-router';
 /* component styles */
 import styles from './styles';
 
+const file = require('./files/top.jpg');
+
 export class TopImage extends Component {
   static propTypes = {
     showPopup: React.PropTypes.func,
@@ -23,9 +25,20 @@ export class TopImage extends Component {
   componentDidMount() {
     window.addEventListener('scroll', this.onScrollAnimation);
 
-    this.setState({
-      loaded: true,
-    });
+    // setTimeout(() => this.setState({
+    //   loaded: true,
+    // }), 2000);
+
+    const img = new Image();
+
+    img.src = file;
+    if (!img.complete) {
+      img.onload = () => {
+        this.setState({
+          loaded: true,
+        });
+      };
+    }
   }
 
   componentWillUnmount() {
