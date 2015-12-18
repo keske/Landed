@@ -27,7 +27,7 @@ export class IntroImage extends Component {
     window.addEventListener('scroll', this.parallax);
 
     const img = new Image();
-    img.src = require(`./files/${image}.jpg`);
+    img.src = `/dist/${image}.jpg`;
 
     if (!img.complete) {
       img.onload = () => {
@@ -40,10 +40,6 @@ export class IntroImage extends Component {
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.parallax);
-
-    this.setState({
-      loaded: false,
-    });
   }
 
   parallax() {

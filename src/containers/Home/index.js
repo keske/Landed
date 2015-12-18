@@ -14,7 +14,6 @@ import { Toggle } from 'components/Toggle';
 import { YouCan } from 'components/YouCan';
 import { ImageBlock } from 'components/ImageBlock';
 import { Shared } from 'components/Shared';
-import { FAQ } from 'components/FAQ';
 
 const metaData = {
   title: 'Landed. Smarter ownership, for everyone.',
@@ -37,18 +36,18 @@ export class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loaded: false,
+      pageLoaded: false,
     };
   }
 
   componentWillMount() {
     this.setState({
-      loaded: true,
+      pageLoaded: true,
     });
   }
 
   render() {
-    const { loaded } = this.state;
+    const { pageLoaded } = this.state;
 
     const imageBlockProps = {
       text: 'Landed makes<br />ownership possible<br />sooner than you think',
@@ -75,7 +74,7 @@ export class Home extends Component {
         <DocumentMeta { ...metaData } />
         <TopImage { ...this.props } />
           {
-            loaded ? renderContent() : null
+            pageLoaded ? renderContent() : null
           }
       </section>
     );

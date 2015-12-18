@@ -24,7 +24,7 @@ export class TopImage extends Component {
     window.addEventListener('scroll', this.onScrollAnimation);
 
     const img = new Image();
-    img.src = require('./files/top.jpg');
+    img.src = '/dist/top.jpg';
 
     if (!img.complete) {
       img.onload = () => {
@@ -37,10 +37,6 @@ export class TopImage extends Component {
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.onScrollAnimation);
-
-    this.setState({
-      loaded: false,
-    });
   }
 
   // onScrollAnimation() {
