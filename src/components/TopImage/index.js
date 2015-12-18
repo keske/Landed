@@ -23,16 +23,20 @@ export class TopImage extends Component {
   componentDidMount() {
     window.addEventListener('scroll', this.onScrollAnimation);
 
-    const img = new Image();
-    img.src = '/dist/top.jpg';
+    // const img = new Image();
+    // img.src = require('./files/top.jpg');
 
-    if (!img.complete) {
-      img.onload = () => {
-        setTimeout(() => this.setState({
-          loaded: true,
-        }), 300);
-      };
-    }
+    // if (!img.complete) {
+    //   img.onload = () => {
+    //     setTimeout(() => this.setState({
+    //       loaded: true,
+    //     }), 300);
+    //   };
+    // }
+
+    setTimeout(() => this.setState({
+      loaded: true,
+    }), 300);
   }
 
   componentWillUnmount() {

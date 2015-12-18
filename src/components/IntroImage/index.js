@@ -22,20 +22,24 @@ export class IntroImage extends Component {
   }
 
   componentDidMount() {
-    const { image } = this.props;
+    // const { image } = this.props;
 
     window.addEventListener('scroll', this.parallax);
 
-    const img = new Image();
-    img.src = `/dist/${image}.jpg`;
+    // const img = new Image();
+    // img.src = require(`./files/${image}.jpg`);
 
-    if (!img.complete) {
-      img.onload = () => {
-        setTimeout(() => this.setState({
-          loaded: true,
-        }), 300);
-      };
-    }
+    // if (!img.complete) {
+    //   img.onload = () => {
+    //     setTimeout(() => this.setState({
+    //       loaded: true,
+    //     }), 300);
+    //   };
+    // }
+
+    setTimeout(() => this.setState({
+      loaded: true,
+    }), 300);
   }
 
   componentWillUnmount() {
