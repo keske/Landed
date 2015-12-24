@@ -26,30 +26,33 @@ export class HowItWorks extends Component {
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
               <img src={ icons[0] } />
               <p className="paragraph green">
-                1. You find a home
+                1. Hassle-free support
+
               </p>
               <p className="paragraph">
-                Your broker helps you find the right home. Before you make an offer, we'll help estimate your on-going payments based on your ownership structure.
+                Landed helps you create, update and properly register your support structures to stay protected.  We also make sure your lender, insurance and title companies are on-board.
               </p>
             </div>
 
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
               <img src={ icons[1] } />
               <p className="paragraph green">
-                2. You and your investors close.
+                2. Effortless payments
+
               </p>
               <p className="paragraph">
-                As soon as your offer is accepted, we'll step in to help you close.  We'll ensure all documents are signed and properly registered.
+                Landed helps you assess prices, set-up recurring payments, and log everything to keep tax filings simple.  So easy you can set it & forget it, keeping your relationship smooth.
               </p>
             </div>
 
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
               <img src={ icons[2] } />
               <p className="paragraph green">
-                3. You stay until you’re ready to leave
+                3. On-going expert advisor
+
               </p>
               <p className="paragraph">
-                We'll help you set up automated payments and walk you through your Landed services.  Welcome home!
+                A new home comes with new challenges.  We make sure you’re never getting taken advantage of when it comes to your biggest investment.
               </p>
             </div>
 

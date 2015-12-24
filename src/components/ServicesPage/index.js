@@ -52,12 +52,13 @@ export class ServicesPage extends Component {
               </div>
             </div>
           </div>
+          <HowItWorks />
           <Lease />
           <Ownership />
           <Loan />
         </div>
         <ImageBlock { ...imageBlockProps } />
-        <HowItWorks />
+        
       </section>
     );
   }
