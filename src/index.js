@@ -7,11 +7,15 @@ import configureStore from './store/configureStore';
 import routes from './routes';
 
 const store = configureStore();
+const history = createHistory({
+  queryKey: false,
+});
+
 
 ReactDOM.render(
   <Provider store={ store }>
     <Router onUpdate={ () => window.scrollTo(0, 0) }
-            history={ createHistory() }>
+            history={ history }>
       <Redirect from="/" to="home" />
       { routes }
     </Router>
