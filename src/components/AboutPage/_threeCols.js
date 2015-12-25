@@ -11,27 +11,56 @@ export class ThreeCols extends Component {
         <div className="row threeCol">
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
             <img src={ icons[0] } />
+
+              <p className="paragraph green">
+               The system is rigged
+
+
+              </p>
+
             <p>
-              Instead of a bank that gets its money back no matter what, co-investors will share in both the ups and downs with you.
+              Nobody can responsibly buy their first home by themselves; even with a&nbsp;supportive bank. <br /><br />
+
+Without gifts or equity partners, millions of Americans are making excessively risky investment decisions that the bankers themselves would never make.
+
             </p>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
             <img src={ icons[1] } />
+              <p className="paragraph green">
+               Together, there is another way.
+
+
+              </p>
+
+
             <p>
-              Co-investors help you build wealth sooner. Start building partial home wealth with as little as 5% down.
+              Joining forces to pay for home is extremely hard, but it doesn’t have to be.  We work with banks, title companies, insurers, lawyers and brokers to keep the hard parts about joining forces simple.
+
+<br /><br />It’s all we do, and we’re getting really good at it.
+
             </p>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
             <img src={ icons[2] } />
+
+              <p className="paragraph green">
+               Less vulnerability, more wealth.
+
+
+              </p>
             <p>
-              Instead of leaving you to fend for yourself in a new home with new challenges, Landed and your co-investors are here to support you.
+              We hope that joining forces becomes so easy that any neighbor can pitch in.  That day, you’ll get the same home experience regardless of how much of it you own.
+
+<br /><br />Until then, we’ll keep working to: <br />(1) reduce barriers to wealth building and (2) make people less financially vulnerable.
+
             </p>
           </div>
         </div>
 
         <div className="row threeCol paragraphs">
           <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 text-center">
-            <p>
+            <p className="paragraph middle">
               For investors, we’re an easier way to invest in people and places you care about. Landed is working towards democratizing these investments, making urban real estate accessible for those of us who aren’t millionaires.
             </p>
           </div>
