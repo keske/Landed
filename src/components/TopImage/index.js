@@ -16,23 +16,10 @@ export class TopImage extends Component {
     this.state = {
       loaded: false,
     };
-
-    // this.onScrollAnimation = this.onScrollAnimation.bind(this);
   }
 
   componentDidMount() {
     window.addEventListener('scroll', this.onScrollAnimation);
-
-    // const img = new Image();
-    // img.src = require('./files/top.jpg');
-
-    // if (!img.complete) {
-    //   img.onload = () => {
-    //     setTimeout(() => this.setState({
-    //       loaded: true,
-    //     }), 300);
-    //   };
-    // }
 
     setTimeout(() => this.setState({
       loaded: true,
@@ -42,19 +29,6 @@ export class TopImage extends Component {
   componentWillUnmount() {
     window.removeEventListener('scroll', this.onScrollAnimation);
   }
-
-  // onScrollAnimation() {
-  //   this.blurImage();
-  // }
-
-  // blurImage() {
-  //   const { loaded } = this.state;
-  //   const opacity = (window.pageYOffset / 190).toFixed(1);
-
-  //   if (screen.width >= 720 && loaded) {
-  //     this.refs.blurred.style.opacity = opacity;
-  //   }
-  // }
 
   render() {
     const { loaded } = this.state;
@@ -111,7 +85,7 @@ export class TopImage extends Component {
                     Your favorite home partner from search to sale.
                   </p>
                 </div>
-              </ReactCSSTransitionGroup> 
+              </ReactCSSTransitionGroup>
 
               <ReactCSSTransitionGroup transitionName="text-animation-4"
                                        transitionAppear

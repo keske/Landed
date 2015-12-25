@@ -36,7 +36,9 @@ export class Header extends Component {
   }
 
   animateHeader() {
-    window.pageYOffset > 600 ? this.setState({ show: true }) : this.setState({ show: false });
+    this.setState({
+      show: window.pageYOffset > 600,
+    });
   }
 
   handleMenu() {
