@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
+/* components */
 import SmartLoading from '../SmartLoading';
 
 /* component styles */
@@ -44,7 +45,7 @@ export class TopImage extends Component {
                             move="from-bottom-to-top"
                             distance={100}
                             speed={1000}
-                            wait={300}>
+                            wait={1000}>
                 <h1 className="hidden-xs hidden-sm">
                   Join forces to pay for home
                 </h1>
@@ -61,7 +62,7 @@ export class TopImage extends Component {
                             move="from-bottom-to-top"
                             distance={100}
                             speed={1300}
-                            wait={500}>
+                            wait={1200}>
                 <div className="group">
                   <span className="icon" />
                   <p>
@@ -89,7 +90,7 @@ export class TopImage extends Component {
                             move="from-bottom-to-top"
                             distance={100}
                             speed={1500}
-                            wait={700}>
+                            wait={1400}>
                 <div className="hidden-md hidden-lg">
                   <Link to="join">
                     <span className="button">

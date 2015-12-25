@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
+/* components */
+import SmartLoading from '../SmartLoading';
 
 /* component styles */
 import styles from './styles';
@@ -107,9 +109,11 @@ export class Header extends Component {
 
     return (
       <section className={ `${ styles }` }>
-        <ReactCSSTransitionGroup transitionName="el-animation"
-                                 transitionAppear
-                                 transitionAppearTimeout={ 500 }>
+        <SmartLoading animation="fade-in"
+                      move="from-top-to-bottom"
+                      distance={50}
+                      speed={700}
+                      wait={100}>
           <div className="top-header">
             <div className="container">
               <div className="row">
@@ -154,7 +158,7 @@ export class Header extends Component {
               <div className="logo-small" />
             </Link>
           </div>
-        </ReactCSSTransitionGroup>
+        </SmartLoading>
         <div className={ `phone-menu ${ showPhoneMenu && 'show' }` }>
           { this.renderNav() }
           <div className="text-left">
