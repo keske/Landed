@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { Link } from 'react-router';
+
+import SmartLoading from '../SmartLoading';
 
 /* component styles */
 import styles from './styles';
@@ -39,57 +40,56 @@ export class TopImage extends Component {
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11">
-              <ReactCSSTransitionGroup transitionName="title-animation"
-                                       transitionAppear
-                                       transitionAppearTimeout={ 1300 }>
+              <SmartLoading animation="fade-in"
+                            move="from-bottom-to-top"
+                            distance={100}
+                            speed={1000}
+                            wait={300}>
                 <h1 className="hidden-xs hidden-sm">
                   Join forces to pay for home
                 </h1>
                 <h1 className="hidden-md hidden-lg">
                   Join forces to pay for&nbsp;home
                 </h1>
-              </ReactCSSTransitionGroup>
+              </SmartLoading>
             </div>
           </div>
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11">
-              <ReactCSSTransitionGroup transitionName="text-animation-2"
-                                       transitionAppear
-                                       transitionAppearTimeout={ 700 }>
+
+              <SmartLoading animation="fade-in"
+                            move="from-bottom-to-top"
+                            distance={100}
+                            speed={1300}
+                            wait={500}>
                 <div className="group">
                   <span className="icon" />
                   <p>
                     Simple, standard shared ownership structures to split your investment with family or trusted partners.
-
                   </p>
                 </div>
-              </ReactCSSTransitionGroup>
 
-              <ReactCSSTransitionGroup transitionName="text-animation-1"
-                                       transitionAppear
-                                       transitionAppearTimeout={ 1000 }>
                 <div className="group">
                   <span className="icon" />
                   <p>
                     Trusted on-going support to make sure you don't jeopardize your most important relationships.
                   </p>
                 </div>
-              </ReactCSSTransitionGroup>
 
-             <ReactCSSTransitionGroup transitionName="text-animation-2"
-                                       transitionAppear
-                                       transitionAppearTimeout={ 1300 }>
                 <div className="group">
                   <span className="icon" />
                   <p>
                     Your favorite home partner from search to sale.
                   </p>
                 </div>
-              </ReactCSSTransitionGroup>
 
-              <ReactCSSTransitionGroup transitionName="text-animation-4"
-                                       transitionAppear
-                                       transitionAppearTimeout={ 1700 }>
+              </SmartLoading>
+
+              <SmartLoading animation="fade-in"
+                            move="from-bottom-to-top"
+                            distance={100}
+                            speed={1500}
+                            wait={700}>
                 <div className="hidden-md hidden-lg">
                   <Link to="join">
                     <span className="button">
@@ -102,7 +102,7 @@ export class TopImage extends Component {
                     I’m ready for home
                   </span>
                 </div>
-              </ReactCSSTransitionGroup>
+              </SmartLoading>
             </div>
           </div>
         </div>

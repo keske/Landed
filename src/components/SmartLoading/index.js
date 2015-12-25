@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // Utils
-import { getMarginTop, getMarginLeft } from 'utils';
+import { getMarginTop, getMarginLeft } from './utils';
 
 // Component styles
 import styles from './styles';
