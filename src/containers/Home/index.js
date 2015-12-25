@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import DocumentMeta from 'react-document-meta';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 /* actions */
 import * as actionCreators from 'actions/app';
 
 /* application components */
+import SmartLoading from 'components/SmartLoading';
 import { TopImage } from 'components/TopImage';
 import { Subscribe } from 'components/Subscribe';
 import { Toggle } from 'components/Toggle';
@@ -56,16 +56,17 @@ export class Home extends Component {
 
     function renderContent() {
       return (
-        <ReactCSSTransitionGroup transitionName="page-parts-animation"
-                                 transitionAppear
-                                 transitionAppearTimeout={ 3000 }>
-          <Subscribe />
-          <Toggle />
-          <YouCan />
-          <ImageBlock { ...imageBlockProps } />
-          <Shared />
-
-        </ReactCSSTransitionGroup>
+          <section>
+            <SmartLoading animation="fade-in"
+                        speed={700}
+                        wait={1700}>
+              <Subscribe />
+            </SmartLoading>
+            <Toggle />
+            <YouCan />
+            <ImageBlock { ...imageBlockProps } />
+            <Shared />
+          </section>
       );
     }
 
