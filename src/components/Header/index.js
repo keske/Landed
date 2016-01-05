@@ -96,7 +96,7 @@ export class Header extends Component {
               Sign up
             </button>
           </Link>
-          <a href="/#join" target="_blank">
+          <a href="#/join" target="_blank">
             <button className="signup hidden-xs hidden-sm" >
               Sign up
             </button>
