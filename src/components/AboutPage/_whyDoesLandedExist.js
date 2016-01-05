@@ -15,15 +15,16 @@ export class WhyDoesLandedExist extends Component {
               Homes are the dominant way that North Americans build wealth.  But over the last two decades, making a responsible home investment has become more and more difficult, if not impossible.
             </p>
             <p>
-            Here’s a little story to help tell the tale of why we’re  so focused on changing the housing market, forever:
+              As home prices climb relative to our annual savings, first-time home buyers are increasingly forced to ask friends and family for investment support.
             </p>
+
             <p className="black second-paragraph">
               Let’s take a look at two friends, Richie and Susan.
             </p>
           </div>
         </div>
 
-        <div className="row whyDoesLandedExist two-folks">
+        {/*<div className="row whyDoesLandedExist two-folks">
           <div className="col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xs-offset-1 col-sm-offset-1 col-md-offset-2 col-lg-offset-2 text-left">
             <p className="black">
               Richie is a married middle-aged man.  Richie has had a pretty successful life.
@@ -73,7 +74,7 @@ export class WhyDoesLandedExist extends Component {
               Let's make homeowners more financially resilient.  Let's make it incredibly simple for two partners to join forces to pay for home.  Let's make it so easy that anyone can be a co-investor in the neighborhoods and cities they know and love.  Only then do all of us have a chance to build wealth sustainably.
             </p>
           </div>
-        </div>
+        </div>*/}
       </div>
     );
   }

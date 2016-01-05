@@ -52,19 +52,19 @@ Without gifts or equity partners, millions of Americans are making excessively r
             <p>
               We hope that joining forces becomes so easy that any neighbor can pitch in.  That day, you’ll get the same home experience regardless of how much of it you own.
 
-<br /><br />Until then, we’ll keep working to: <br />(1) reduce barriers to wealth building and (2) make people less financially vulnerable.
+<br /><br />Until then, we’ll keep working to reduce barriers to wealth building and make people less financially vulnerable.
 
             </p>
           </div>
         </div>
 
-        <div className="row threeCol paragraphs">
+        {/*<div className="row threeCol paragraphs">
           <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 text-center">
             <p className="paragraph middle">
               For investors, we’re an easier way to invest in people and places you care about. Landed is working towards democratizing these investments, making urban real estate accessible for those of us who aren’t millionaires.
             </p>
           </div>
-        </div>
+        </div>*/}
       </div>
     );
   }

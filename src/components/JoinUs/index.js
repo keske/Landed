@@ -79,7 +79,7 @@ export class JoinUs extends Component {
               <p className="title"
                  dangerouslySetInnerHTML={{ __html: 'Join Landed\'s home buyer community' }} />
               <p className="info"
-                 dangerouslySetInnerHTML={{ __html: 'We\'ve got quite the holiday backlog but<br />we\'ll be in touch before you know it!' }} />
+                 dangerouslySetInnerHTML={{ __html: 'We\'ll be in touch before you know it!' }} />
             </div>
           </div>
           <div className="row">
@@ -100,7 +100,7 @@ export class JoinUs extends Component {
               <label>
                 What's your phone number?
                 <span className="hint">
-                  Some of the Landed process is easier to talk through with a real life expert.
+                  Some of the process is easier to talk through with a real life expert.
                 </span>
                 <input type="phone" onChange={ (event) => this.setState({ phone: event.target.value }) } />
               </label>
@@ -201,7 +201,7 @@ export class JoinUs extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offet-2">
               <h3>
-                When are you interested in moving to a new home?
+                Which type of support structure are you interested in learning more about?
               </h3>
             </div>
           </div>
@@ -224,7 +224,7 @@ export class JoinUs extends Component {
               <input type="radio" id="ownership-more" name="ownership"
                      onChange={ () => this.setState({ ownership: 'I Need More Information' }) } />
               <label className="gray" htmlFor="ownership-more">
-                Family<br />Loan
+                Family Loan
               </label>
             </div>
           </div>
@@ -252,7 +252,7 @@ export class JoinUs extends Component {
                       Thanks, and welcome to the Landed community!
                     </p>
                     <p className="text">
-                      If you're buying a home in California, you'll hear from us within the next few days. If you're buying elsewhere, we'll be in touch as soon as we open up shop in your city! We're going state by state so we can make sure to get everything right.
+                      Look out for a welcome email within the next few days explaining your next steps.
                     </p>
                   </span>
               }

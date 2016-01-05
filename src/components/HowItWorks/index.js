@@ -30,7 +30,7 @@ export class HowItWorks extends Component {
 
               </p>
               <p className="paragraph">
-                Landed helps you create, update and properly register your support structures to stay protected.  We also make sure your lender, insurance and title companies are on-board.
+                Landed helps you create, update and properly register your support structures to stay protected.  We also make sure your lender, insurance and title companies are on board.
               </p>
             </div>
 
@@ -52,7 +52,7 @@ export class HowItWorks extends Component {
 
               </p>
               <p className="paragraph">
-                A new home comes with new challenges.  We make sure you’re never getting taken advantage of when it comes to your biggest investment.
+                A new home comes with new challenges.  We make sure you don't get taken advantage of when it comes to your biggest investment.
               </p>
             </div>
 
@@ -60,13 +60,13 @@ export class HowItWorks extends Component {
 
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-              <span className="price">
-                $499  +  $19 / month
-              </span>
-              <hr className="price" />
               <span className="special">
-                Holiday Special: <span className="free">$199 + $0/mth</span>
+                Comprehensive support for <span className="free">$99</span>
               </span>
+              <span className="price">
+                No fees until your documents are properly recorded
+              </span>
+              {/*<hr className="price" />*/}
               <a href="#join" target="_blank">
                 <span className="button">
                   Sign up to get started

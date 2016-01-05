@@ -192,7 +192,7 @@ export class Ownership extends Component {
               Customizable terms
             </p>
             <p className="text">
-              Our basic terms have been developed based on years of experience and reflect what an independent investor would accept.  Sign up to see how easy it can be to customize them!
+              Our basic terms have been developed based on years of experience and reflect what an independent investor might accept.  Sign up to see how easy it can be to customize them!
             </p>
             <div className="hidden-xs hidden-sm">
               { renderLandedSupport() }
@@ -202,7 +202,7 @@ export class Ownership extends Component {
           <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 terms-table">
             <div className="col-xs-12 col-sm-5 col-md-5 col-lg-5 left-side">
               <p className="field-name-prop">
-                Shared Ownership Agreement
+                Ownership Agreement
               </p>
             </div>
             <div className="col-xs-12 col-sm-7 col-md-7 col-lg-7 right-side">

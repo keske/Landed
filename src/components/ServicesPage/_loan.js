@@ -6,16 +6,19 @@ import { SixthStory } from './_sixth-story';
 
 const RENTAL = [{
   prop: 'Interest Rate',
-  val: 'Minimum allowable interest (2.58% as of Dec 2015).',
+  val: 'Minimum allowable interest (as determined by applicable federal rate)',
 }, {
   prop: 'Annual Loan Forgiveness',
-  val: 'None (maximum $14,000 per loan, per year).',
+  val: 'None (maximum of $14,000 per loan, per year to limit gift tax liabilities)',
 }, {
   prop: 'Amortization Term',
   val: '30 years',
 }, {
   prop: 'Loan Term',
   val: '30 years',
+}, {
+  prop: 'Loan Position',
+  val: 'Second lien loan',
 }, {
   prop: 'Late Penalty',
   val: '3% of regular payment',
@@ -65,7 +68,7 @@ export class Loan extends Component {
           <p className="title">
             Landed Support
           </p>
-          <div className="list">
+          {/*<div className="list">
             <span className="icon un-done" />
             <span className="text">
               <p>
@@ -73,7 +76,7 @@ export class Loan extends Component {
                 <i>family only</i>
               </p>
             </span>
-          </div>
+          </div>*/}
           <div className="list">
             <span className="icon" />
             <span className="text">
@@ -178,7 +181,7 @@ export class Loan extends Component {
               Customizable terms
             </p>
             <p className="text">
-              Our basic terms have been developed based on years of experience and reflect what an independent investor would accept.  Sign up to see how easy it can be to customize them!
+              Our basic terms have been developed based on years of experience and reflect standard practice.  Sign up to customize them.
             </p>
             <div className="hidden-xs hidden-sm">
               { renderLandedSupport() }

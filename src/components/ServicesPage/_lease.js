@@ -191,7 +191,7 @@ export class Lease extends Component {
               Customizable terms
             </p>
             <p className="text">
-              Our basic terms have been developed based on years of experience and reflect what an independent investor would accept.  Sign up to see how easy it can be to customize them!
+              Our basic terms have been developed based on years of experience and reflect what an independent investor might accept.  Sign up to see how easy it can be to customize them!
             </p>
             <div className="hidden-xs hidden-sm">
               { renderLandedSupport() }

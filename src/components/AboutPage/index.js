@@ -22,7 +22,7 @@ export class AboutPage extends Component {
         <IntroImage { ...intro } />
         <ThreeCols />
         <WhoIsLanded />
-        <WhyDoesLandedExist />
+        {/*<WhyDoesLandedExist />*/}
       </section>
     );
   }
