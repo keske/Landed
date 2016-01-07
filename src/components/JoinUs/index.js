@@ -112,7 +112,7 @@ export class JoinUs extends Component {
 
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-2 col-lg-offet-2 popup-california-title">
               <span className="labels">
-                Is the home located in California?
+                Is the home located in the United States?
               </span>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 popup-california-yes-no">
