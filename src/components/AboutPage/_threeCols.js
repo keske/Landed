@@ -50,7 +50,7 @@ We work with banks, title companies, insurers, lawyers and brokers to keep the h
 
               </p>
             <p>
-              We hope that joining forces becomes so easy that anyone can pitch in.  <br /><br />
+              We're building the future of homeownership. We want joining forces to become so easy that anyone can pitch in.  <br /><br />
 
 Until then, we’ll keep working to reduce barriers to wealth building and make people less financially vulnerable.
 
