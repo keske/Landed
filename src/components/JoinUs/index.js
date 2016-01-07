@@ -62,6 +62,7 @@ export class JoinUs extends Component {
         textStatus, errorThrown
       );
     });
+    ga.initialize('UA-72154127-1');
     ga.event({category: 'user', action:'Sign up'}); //google analytics event
 
     // const http = new XMLHttpRequest();
@@ -254,7 +255,7 @@ export class JoinUs extends Component {
                       Thanks, and welcome to the Landed community!
                     </p>
                     <p className="text">
-                      Look out for a welcome email within the next few days explaining your next steps.
+                      We'll be in touch soon explaining your next steps.
                     </p>
                   </span>
               }

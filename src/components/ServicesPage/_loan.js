@@ -111,7 +111,7 @@ export class Loan extends Component {
 
           <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5">
             <p className="text">
-              In a down-payment loan, the investor provides a second loan that is properly recorded with the relevant authorities to ensure tax and legal compliance.  Although additional debt is the simplest form of support, it also comes with additional risks.  Both parties need to be comfortable with the likely scenario that home prices decline and the resident is left in a vulnerable position.
+              In a down-payment loan, the investor provides a second loan that is properly recorded with the relevant authorities to ensure tax and legal compliance.  Although additional debt is the simplest form of support, it also comes with additional risks.  Both parties need to be comfortable with the scenario that home prices decline and the resident is left in a vulnerable position.
             </p>
 
             <p className="italic-block small-title">
@@ -196,7 +196,7 @@ export class Loan extends Component {
             </div>
             <div className="col-xs-12 col-sm-7 col-md-7 col-lg-7 right-side">
               <p className="field-name-val">
-                Recommended Default
+                Example
               </p>
             </div>
             { renderTable(RENTAL) }

@@ -207,7 +207,7 @@ export class Ownership extends Component {
             </div>
             <div className="col-xs-12 col-sm-7 col-md-7 col-lg-7 right-side">
               <p className="field-name-val">
-                Recommended Default
+                Example
               </p>
             </div>
             { renderTable(RENTAL) }
@@ -219,7 +219,7 @@ export class Ownership extends Component {
             </div>
             <div className="col-xs-12 col-sm-7 col-md-7 col-lg-7 right-side">
               <p className="field-name-val">
-                Recommended Default
+                Example
               </p>
             </div>
             { renderTable(PURCHASE) }
