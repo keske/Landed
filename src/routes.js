@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router';
+import ga from 'react-ga';
 
 /* containers */
 import { App } from 'containers/App';
@@ -16,3 +17,11 @@ export default (
     <Route path="join" component={ Join } />
   </Route>
 );
+
+exports.run = function(location, el) {
+  ga.initialize('UA-72154127-1');
+  Router.run(routes, location, function(Handler, state) {
+    ga.pageview(state.pathname);
+    React.render(<Handler/>, el);
+  });
+};

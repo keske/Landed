@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import ga from 'react-ga';
 
 /* component styles */
 import styles from './styles';
@@ -61,6 +62,7 @@ export class JoinUs extends Component {
         textStatus, errorThrown
       );
     });
+    ga.event({category: 'user', action:'Sign up'}); //google analytics event
 
     // const http = new XMLHttpRequest();
     // http.open('POST', 'http://gradusdevelopment.com/mail.php', true);
