@@ -16,7 +16,7 @@ export class HowItWorks extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
               <h2 className="green">
-                How does it work?
+                How do we help?
               </h2>
             </div>
           </div>
@@ -26,11 +26,11 @@ export class HowItWorks extends Component {
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
               <img src={ icons[0] } />
               <p className="paragraph green">
-                1. Hassle-free support
+                1. Transaction support
 
               </p>
               <p className="paragraph">
-                Landed helps you create, update and properly register your support structures to stay protected.  We also make sure your lender, insurance and title companies are on board.
+                Landed helps you create, update and properly register your support structures to stay protected.  We also make sure your lender, insurance and title company are on board.
               </p>
             </div>
 
@@ -48,7 +48,7 @@ export class HowItWorks extends Component {
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
               <img src={ icons[2] } />
               <p className="paragraph green">
-                3. On-going expert advisor
+                3. Expert advisor
 
               </p>
               <p className="paragraph">
@@ -61,7 +61,7 @@ export class HowItWorks extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
               <span className="special">
-                Comprehensive support for <span className="free">$99</span>
+                Concierge support for <span className="free">$99</span>
               </span>
               <span className="price">
                 No fees until your documents are properly recorded

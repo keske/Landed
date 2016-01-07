@@ -110,7 +110,7 @@ export class JoinUs extends Component {
 
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-2 col-lg-offet-2 popup-california-title">
               <span className="labels">
-                Are you specifically interested  in being a homeowner in California?
+                Is the home located in California?
               </span>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 popup-california-yes-no">
@@ -150,14 +150,14 @@ export class JoinUs extends Component {
               <input type="radio" id="move-asap" name="move"
                      onChange={ () => this.setState({ whenMove: 'As soon as posstible' }) } />
               <label className="gray" htmlFor="move-asap">
-                As soon as possible
+                I'm already living in the home
               </label>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 popup-moving">
               <input type="radio" id="move-next-month" name="move"
                      onChange={ () => this.setState({ whenMove: 'In the next month' }) } />
               <label className="gray" htmlFor="move-next-month">
-                In the next month
+                As soon as possible
               </label>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 popup-moving">
@@ -181,7 +181,7 @@ export class JoinUs extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-2 col-lg-offet-2 popup-investor-title">
               <span className="labels">
-                Do you have a partner ready to help you buy your home?
+                Is the investor or lender already identified?
               </span>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 popup-investor-yes-no">

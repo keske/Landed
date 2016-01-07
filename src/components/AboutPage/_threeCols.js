@@ -13,15 +13,15 @@ export class ThreeCols extends Component {
             <img src={ icons[0] } />
 
               <p className="paragraph green">
-               The system is rigged
+               The system is rigged.
 
 
               </p>
 
             <p>
-              Nobody can responsibly buy their first home by themselves; even with a&nbsp;supportive bank. <br /><br />
+              Nobody can responsibly buy their first home by themselves, even with a&nbsp;supportive bank. <br /><br />
 
-Without gifts or equity partners, millions of Americans are making excessively risky investment decisions that the bankers themselves would never make.
+Without gifts or investment partners, millions of Americans are making excessively risky investment decisions that the bankers themselves would never make.
 
             </p>
           </div>
@@ -35,9 +35,9 @@ Without gifts or equity partners, millions of Americans are making excessively r
 
 
             <p>
-              Joining forces to pay for home is extremely hard, but it doesn’t have to be.  We work with banks, title companies, insurers, lawyers and brokers to keep the hard parts about joining forces simple.
+              Joining forces to pay for home is extremely hard, but it doesn’t have to be.  <br /><br />
 
-<br /><br />It’s all we do, and we’re getting really good at it.
+We work with banks, title companies, insurers, lawyers and brokers to keep the hard parts about joining forces simple.
 
             </p>
           </div>
@@ -50,9 +50,9 @@ Without gifts or equity partners, millions of Americans are making excessively r
 
               </p>
             <p>
-              We hope that joining forces becomes so easy that any neighbor can pitch in.  That day, you’ll get the same home experience regardless of how much of it you own.
+              We hope that joining forces becomes so easy that anyone can pitch in.  <br /><br />
 
-<br /><br />Until then, we’ll keep working to reduce barriers to wealth building and make people less financially vulnerable.
+Until then, we’ll keep working to reduce barriers to wealth building and make people less financially vulnerable.
 
             </p>
           </div>

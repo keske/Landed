@@ -20,7 +20,7 @@ export class Subscribe extends Component {
               </div>
               <div className="col-xs-4 col-sm-4 col-md-4 col-lg-3">
                 <span className="title">
-                  Just curious? Leave us your email
+                  Want to help? Leave us your email
                 </span>
               </div>
               <div className="col-xs-6 col-sm-6 col-md-4 col-lg-4">
