@@ -26,10 +26,10 @@ export class App extends Component {
   render() {
     return (
       <section>
+        <GoogleAnalytics id="UA-72154127-1" />
         <Header { ...this.props } />
           { this.props.children }
         <Footer />
-        <GoogleAnalytics id="UA-72154127-1" />
         <PopUp { ...this.props } />
       </section>
     );
