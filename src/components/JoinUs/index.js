@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-import ga from 'react-ga';
+import GoogleAnalytics from 'analytics';
+
 
 /* component styles */
 import styles from './styles';
@@ -62,8 +63,6 @@ export class JoinUs extends Component {
         textStatus, errorThrown
       );
     });
-    ga.initialize('UA-72154127-1');
-    ga.event({category: 'user', action:'Sign up'}); //google analytics event
 
     // const http = new XMLHttpRequest();
     // http.open('POST', 'http://gradusdevelopment.com/mail.php', true);
@@ -257,7 +256,8 @@ export class JoinUs extends Component {
                     <p className="text">
                       We'll be in touch soon explaining your next steps.
                     </p>
-                  </span>
+                    <GoogleAnalytics id="UA-72154127-1" set="event" />
+                  </span>                
               }
             </div>
           </div>

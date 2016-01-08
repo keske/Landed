@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import 'bootstrap-webpack';
-import GoogleAnalytics from 'react-g-analytics'
+import GoogleAnalytics from 'analytics';
 
 /* actions */
 import * as actionCreators from 'actions/app';
@@ -24,9 +24,10 @@ export class App extends Component {
     children: React.PropTypes.any,
   }
   render() {
+    var popupchange = this.props.popup;
     return (
       <section>
-        <GoogleAnalytics id="UA-72154127-1" />
+        <GoogleAnalytics id="UA-72154127-1" popup = {popupchange} />
         <Header { ...this.props } />
           { this.props.children }
         <Footer />

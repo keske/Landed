@@ -16,7 +16,6 @@ export class PopUp extends Component {
 
   render() {
     const { popup } = this.props;
-
     return (
       <section className={ `${styles} ${ popup && 'show' }` }>
         <div className="outer" onClick={ () => this.props.showPopup(false) } />
