@@ -79,7 +79,9 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.5",
+    "firebase": "^2.3.2",
     "jquery": "^2.1.4",
+    "re-base": "^1.5.0",
     "react": "^0.14.0",
     "react-dom": "^0.14.0-rc1",
     "react-g-analytics": "^0.1.17",

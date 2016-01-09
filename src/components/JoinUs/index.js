@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import GoogleAnalytics from 'analytics';
-
+import Rebase from 're-base';
 
 /* component styles */
 import styles from './styles';
@@ -43,7 +43,13 @@ export class JoinUs extends Component {
       },
     };
 
-    console.log(req);
+    var base = Rebase.createClass("https://dblanded.firebaseio.com");
+    base.push('users', {
+      data: req,
+      then(){
+        console.log('complete');
+      }
+    });
 
     const request = $.ajax({
       url: 'http://landed.com/mail.php',
@@ -67,6 +73,7 @@ export class JoinUs extends Component {
     // const http = new XMLHttpRequest();
     // http.open('POST', 'http://gradusdevelopment.com/mail.php', true);
     // http.send(JSON.stringify(req));
+
 
   }
 
