@@ -111,7 +111,7 @@ export class Lease extends Component {
         <div className="row lease-and-shared">
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <p className="small-title-border">
-              service
+              service detail
             </p>
             <p className="title">
               Lease-To-Own

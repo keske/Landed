@@ -20,13 +20,13 @@ export class ServicesPage extends Component {
 
   render() {
     const intro = {
-      title: 'Comprehensive support to take the hassle out of getting investment help',
-      text: "We all need a little help buying our first home but it's not always clear how to get it. <br /><br />Landed helps you create and register legal documents, helps track and transfer payments, and acts as an independent arbiter.<br /><br />Whether structured as a loan, a lease-to-own agreement, or a co-investment, Landed is here to help.",
+      title: 'We help you get home financing from family and trusted partners -- the right way.',
+      text: "Landed helps you create and register legal documents, helps track and transfer payments, and acts as an independent arbiter.<br /><br />You decide on a structure (either a loan, a lease-to-own, or a co-investment agreement) and Landed takes care of the rest.",
       image: 'services',
     };
 
     const imageBlockProps = {
-      text: 'Let Landed take away<br />all the headaches<br />of shared ownership',
+      text: 'Let Landed take away<br />all the headaches<br />with getting financial <br />support',
       imageClass: 'services',
     };
 
@@ -40,13 +40,13 @@ export class ServicesPage extends Component {
                 <div className="hidden-md hidden-lg sign-up-block">
                   <Link to="join">
                     <span className="button">
-                      Help me with Home
+                      Sign-Up to Learn More
                     </span>
                   </Link>
                 </div>
                 <div className="hidden-xs hidden-sm sign-up-block">
                   <span className="button" onClick={ () => this.props.showPopup(true) }>
-                    Help me with Home
+                    Sign-Up to Learn More
                   </span>
                 </div>
               </div>

@@ -30,7 +30,7 @@ export class HowItWorks extends Component {
 
               </p>
               <p className="paragraph">
-                Landed helps you create, update and properly register your support structures to stay protected.  We also make sure your lender, insurance and title company are on board.
+                Landed works with top local lawyers and title companies to create, register and update re-usable legal documents and pass the savings on to you.
               </p>
             </div>
 
@@ -52,7 +52,7 @@ export class HowItWorks extends Component {
 
               </p>
               <p className="paragraph">
-                A new home comes with new challenges.  We make sure you don't get taken advantage of when it comes to your biggest investment.
+                Landed stays engaged as necessary to enforce the rules you've set and help support new homeowners with their investment.
               </p>
             </div>
 
@@ -61,10 +61,10 @@ export class HowItWorks extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
               <span className="special">
-                Concierge support for <span className="free">$99</span>
+                Concierge support for <span className="free">$299</span>
               </span>
               <span className="price">
-                No fees until your documents are properly recorded
+                No fees until your documents are properly recorded.<br />Earn potential tax deductions, get investment protection and save thousands on legal fees. 
               </span>
               {/*<hr className="price" />*/}
               <a href="#join" target="_blank">
