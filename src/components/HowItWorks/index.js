@@ -30,7 +30,7 @@ export class HowItWorks extends Component {
 
               </p>
               <p className="paragraph">
-                Landed works with top local lawyers and title companies to create, register and update re-usable legal documents and pass the savings on to you.
+                Pay your family attorney for advice and review, not word processing.<br /><br />Landed works with top lawyers to create, register and update re-usable legal forms, and passes the savings on to you.
               </p>
             </div>
 
@@ -41,7 +41,7 @@ export class HowItWorks extends Component {
 
               </p>
               <p className="paragraph">
-                Landed helps you assess prices, set-up recurring payments, and log everything to keep tax filings simple.  So easy you can set it & forget it, keeping your relationship smooth.
+                Landed helps you assess prices, set-up recurring payments, and log everything to keep tax filings simple.<br /><br />So easy you can set it & forget it, keeping your relationship smooth.
               </p>
             </div>
 
@@ -52,7 +52,7 @@ export class HowItWorks extends Component {
 
               </p>
               <p className="paragraph">
-                Landed stays engaged as necessary to enforce the rules you've set and help support new homeowners with their investment.
+                Landed stays engaged to enforce the rules you've set and help support new homeowners with their investment.<br /><br />We'll help make sure you don't overpay for insurance, taxes or major home services.
               </p>
             </div>
 
@@ -61,7 +61,7 @@ export class HowItWorks extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
               <span className="special">
-                Concierge support for <span className="free">$299</span>
+                Concierge support for <span className="free">$199</span>
               </span>
               <span className="price">
                 No fees until your documents are properly recorded.<br />Earn potential tax deductions, get investment protection and save thousands on legal fees. 
