@@ -54,8 +54,8 @@ export class Home extends Component {
       return (
           <section>
             <SmartLoading animation="fade-in"
-                        speed={700}
-                        wait={1700}>
+                          speed={700}
+                          wait={1700}>
               <Subscribe />
             </SmartLoading>
             <WeWillHelpYou />
@@ -68,7 +68,7 @@ export class Home extends Component {
         <DocumentMeta { ...metaData } />
         <TopImage { ...this.props } />
           {
-            pageLoaded ? renderContent() : null
+            pageLoaded && renderContent()
           }
       </section>
     );

@@ -12,7 +12,7 @@ export class PopUp extends Component {
   static propTypes = {
     popup: React.PropTypes.bool,
     showPopup: React.PropTypes.func,
-  }
+  };
 
   render() {
     const { popup } = this.props;

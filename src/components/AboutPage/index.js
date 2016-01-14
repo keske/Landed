@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import { IntroImage } from '../IntroImage';
 import { ThreeCols } from './_threeCols';
 import { WhoIsLanded } from './_whoIsLanded';
-import { WhyDoesLandedExist } from './_whyDoesLandedExist';
 
 /* component styles */
 import styles from './styles';
@@ -22,7 +21,6 @@ export class AboutPage extends Component {
         <IntroImage { ...intro } />
         <ThreeCols />
         <WhoIsLanded />
-        {/*<WhyDoesLandedExist />*/}
       </section>
     );
   }

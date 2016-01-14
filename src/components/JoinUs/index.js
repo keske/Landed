@@ -46,9 +46,9 @@ export class JoinUs extends Component {
     var base = Rebase.createClass("https://dblanded.firebaseio.com");
     base.push('users', {
       data: req,
-      then(){
+      then() {
         console.log('complete');
-      }
+      },
     });
 
     const request = $.ajax({

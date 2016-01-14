@@ -8,7 +8,7 @@ export class ImageBlock extends Component {
   static propTypes = {
     text: React.PropTypes.string,
     imageClass: React.PropTypes.string,
-  }
+  };
 
   constructor(props) {
     super(props);

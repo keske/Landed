@@ -6,11 +6,10 @@
     "mocha": true
   },
   "globals": {
-      "If": true,
-      "For": true,
-      "connect": true
+    "connect": true
   },
   "rules": {
+    "max-len": 0,
     "react/jsx-uses-react": 2,
     "react/jsx-uses-vars": 2,
     "react/react-in-jsx-scope": 2,

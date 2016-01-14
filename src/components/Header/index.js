@@ -16,7 +16,7 @@ export class Header extends Component {
     loginMenu: React.PropTypes.bool,
     showLoginMenu: React.PropTypes.func,
     show: React.PropTypes.func,
-  }
+  };
 
   constructor(props) {
     super(props);

@@ -9,7 +9,7 @@ export class IntroImage extends Component {
     title: React.PropTypes.string,
     text: React.PropTypes.string,
     image: React.PropTypes.string,
-  }
+  };
 
   constructor(props) {
     super(props);

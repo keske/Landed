@@ -16,7 +16,7 @@ export class ServicesPage extends Component {
 
   static propTypes = {
     showPopup: React.PropTypes.func,
-  }
+  };
 
   render() {
     const intro = {

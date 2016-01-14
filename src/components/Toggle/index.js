@@ -17,7 +17,7 @@ export class Toggle extends Component {
     dispatch: React.PropTypes.func,
     status: React.PropTypes.string,
     data: React.PropTypes.object,
-  }
+  };
 
   constructor(props) {
     super(props);

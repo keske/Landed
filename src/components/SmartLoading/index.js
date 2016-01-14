@@ -16,7 +16,7 @@ export default class SmartLoading extends Component {
     distance: React.PropTypes.number,
     wait: React.PropTypes.number,
     block: React.PropTypes.string,
-  }
+  };
 
   constructor(props) {
     super(props);

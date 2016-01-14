@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import createHistory from 'history/lib/createHashHistory';
 import { Provider } from 'react-redux';
-import { Router, Redirect } from 'react-router';
+import { Router, Redirect, useRouterHistory } from 'react-router';
+import { createHashHistory } from 'history';
+import { syncReduxAndRouter } from 'redux-simple-router';
+
 import configureStore from './store/configureStore';
 import routes from './routes';
 
+const history = useRouterHistory(createHashHistory)({ queryKey: false });
 const store = configureStore();
-const history = createHistory({
-  queryKey: false,
-});
 
+syncReduxAndRouter(history, store);
 
 ReactDOM.render(
   <Provider store={ store }>

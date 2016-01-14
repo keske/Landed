@@ -22,7 +22,7 @@ import { PopUp } from 'components/PopUp';
 export class App extends Component {
   static propTypes = {
     children: React.PropTypes.any,
-  }
+  };
   render() {
     var popupchange = this.props.popup;
     return (
