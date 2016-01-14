@@ -2,4 +2,26 @@
 
 :local(.styles) {
   position: relative;
+  background: $green;
+
+  p.title {
+    font-family: 'Jannon10Pro-Italic';
+    font-size: 26px;
+
+    color: #FFF;
+  }
+
+  p.list-title {
+    font-family: 'SupriaSans Regular';
+    font-size: 23px;
+
+    color: #FFF;
+  }
+
+  ul {
+
+    li {
+      color: #FFF;
+    }
+  }
 }

@@ -14,5 +14,6 @@ export default (
     <Route path="about" component={ About } />
     <Route path="services" component={ Services } />
     <Route path="join" component={ Join } />
+    <Route status={ 404 } path="*" component={ Home } />
   </Route>
 );

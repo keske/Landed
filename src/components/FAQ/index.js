@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 /* component styles */
-import styles from './styles';
+import { styles } from './styles/styles.scss';
 
 const QuestionsAndAnswers = [{
   question: "How do I sell or move if I don’t own the whole home?",

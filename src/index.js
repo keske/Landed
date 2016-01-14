@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import { Router, Redirect, useRouterHistory } from 'react-router';
 import { createHashHistory } from 'history';
 import { syncReduxAndRouter } from 'redux-simple-router';
-
 import configureStore from './store/configureStore';
 import routes from './routes';
 
@@ -14,11 +13,10 @@ const store = configureStore();
 syncReduxAndRouter(history, store);
 
 ReactDOM.render(
-  <Provider store={ store }>
-    <Router onUpdate={ () => window.scrollTo(0, 0) }
-            history={ history }>
+  <Provider store={store}>
+    <Router history={history}>
       <Redirect from="/" to="home" />
-      { routes }
+      {routes}
     </Router>
   </Provider>,
   document.getElementById('root')
