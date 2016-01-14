@@ -10,10 +10,11 @@ import * as actionCreators from 'actions/app';
 import SmartLoading from 'components/SmartLoading';
 import { TopImage } from 'components/TopImage';
 import { Subscribe } from 'components/Subscribe';
-import { Toggle } from 'components/Toggle';
-import { YouCan } from 'components/YouCan';
-import { ImageBlock } from 'components/ImageBlock';
-import { Shared } from 'components/Shared';
+import { WeWillHelpYou } from 'components/WeWillHelpYou';
+// import { Toggle } from 'components/Toggle';
+// import { YouCan } from 'components/YouCan';
+// import { ImageBlock } from 'components/ImageBlock';
+// import { Shared } from 'components/Shared';
 
 const metaData = {
   title: 'Landed. Smarter ownership, for everyone.',
@@ -49,11 +50,6 @@ export class Home extends Component {
   render() {
     const { pageLoaded } = this.state;
 
-    const imageBlockProps = {
-      text: 'Landed makes<br />ownership possible<br />sooner than you think',
-      imageClass: 'home',
-    };
-
     function renderContent() {
       return (
           <section>
@@ -62,10 +58,7 @@ export class Home extends Component {
                         wait={1700}>
               <Subscribe />
             </SmartLoading>
-            <Toggle />
-            <YouCan />
-            <ImageBlock { ...imageBlockProps } />
-            <Shared />
+            <WeWillHelpYou />
           </section>
       );
     }
