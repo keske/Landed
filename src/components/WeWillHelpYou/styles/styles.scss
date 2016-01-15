@@ -1,17 +1,29 @@
 @import '../../../containers/App/styles/vars';
+@import '../../../containers/App/styles/screens';
 
 :local(.styles) {
   position: relative;
-  background: $green;
+  background: $light-green;
+
+  padding: 60px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .43);
 
   p.title {
+    margin-bottom: 40px;
+
     font-family: 'Jannon10Pro-Italic';
     font-size: 26px;
 
     color: #FFF;
+
+    @media (#{$phone}) {
+      margin-bottom: 50px;    
+    }
   }
 
   p.list-title {
+    margin-bottom: 30px;
+
     font-family: 'SupriaSans Regular';
     font-size: 23px;
 
@@ -19,9 +31,20 @@
   }
 
   ul {
+    
+    @media (#{$phone}) {
+      margin-bottom: 50px;    
+    }
 
     li {
+      font-family: 'SupriaSans Regular';
+      font-size: 16px;
+      line-height: 20px;
+
       color: #FFF;
+      
+      margin-left: -40px;
+      margin-bottom: 20px;
     }
   }
 }
