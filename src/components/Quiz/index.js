@@ -138,14 +138,18 @@ export class Quiz extends Component {
 
           <div className="row nav">
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-left">
-              <div className="button previous" onClick={() => this.backSlider()}>
+              <div
+                className={ `button previous ${ slider === 0 && 'hide' }` }
+                onClick={ () => this.backSlider() }
+              >
                 <span className="previous-icon"/>
                 previous
               </div>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-right">
               <div className="button next" onClick={() => this.nextSlider()}>
-                next
+                { slider !== MAX_SLIDERS && 'next' }
+                { slider === MAX_SLIDERS && 'let’s get started' }
                 <span className="next-icon" />
               </div>
             </div>
