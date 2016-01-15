@@ -30,7 +30,7 @@ export class JoinUs extends Component {
     } = this.state;
 
     const req = {
-      email: email,
+      email,
       data: {
         FNAME: name,
         PHONE: phone,
@@ -43,7 +43,7 @@ export class JoinUs extends Component {
       },
     };
 
-    var base = Rebase.createClass("https://dblanded.firebaseio.com");
+    const base = Rebase.createClass('https://dblanded.firebaseio.com');
     base.push('users', {
       data: req,
       then() {
@@ -69,12 +69,6 @@ export class JoinUs extends Component {
         textStatus, errorThrown
       );
     });
-
-    // const http = new XMLHttpRequest();
-    // http.open('POST', 'http://gradusdevelopment.com/mail.php', true);
-    // http.send(JSON.stringify(req));
-
-
   }
 
   render() {

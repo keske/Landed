@@ -1,4 +1,5 @@
 {
+  "parser": "babel-eslint",
   "extends": "eslint-config-airbnb",
   "env": {
     "browser": true,
@@ -7,6 +8,9 @@
   },
   "globals": {
     "connect": true
+  },
+  "ecmaFeatures": {
+    "jsx": true,
   },
   "rules": {
     "max-len": 0,

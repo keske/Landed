@@ -12,6 +12,13 @@ export function showLoginMenu(act) {
   };
 }
 
+export function showQuiz(act) {
+  return {
+    type: 'SHOW_QUIZ',
+    act,
+  };
+}
+
 export function showPopup(act) {
   return {
     type: 'SHOW_POPUP',
