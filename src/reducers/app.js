@@ -1,6 +1,6 @@
 const initialState = {
   showPhoneMenu: false,
-  showQuizPopUp: true,
+  showQuizPopUp: false,
   loginMenu: false,
   popup: false,
 };

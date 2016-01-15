@@ -13,8 +13,8 @@ export class Header extends Component {
     dispatch: React.PropTypes.func,
     showPhoneMenu: React.PropTypes.bool,
     showPopup: React.PropTypes.func,
+    showQuiz: React.PropTypes.func,
     loginMenu: React.PropTypes.bool,
-    showLoginMenu: React.PropTypes.func,
     show: React.PropTypes.func,
   };
 
@@ -86,7 +86,7 @@ export class Header extends Component {
       return (
         <span>
           <button className={ `login` }
-                  onClick={ () => this.props.showLoginMenu(true) }>
+                  onClick={ () => this.props.showQuiz(true) }>
             Log in
           </button>
 
@@ -167,7 +167,8 @@ export class Header extends Component {
         </div>
         <div className={ `login-menu ${ loginMenu && 'show' }` }>
           <span className="cross"
-                onClick={ () => { this.props.showLoginMenu(false); } } />
+                onClick={ () => { this.props.showQuiz(false); } }
+          />
           <input type="email" placeholder="e-mail" />
           <input type="password" placeholder="password" />
           <span className={ `error ${ error && 'show' }` }>

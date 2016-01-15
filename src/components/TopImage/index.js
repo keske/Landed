@@ -9,7 +9,7 @@ import { styles } from './styles/styles.scss';
 
 export class TopImage extends Component {
   static propTypes = {
-    showPopup: React.PropTypes.func,
+    showQuiz: React.PropTypes.func,
   };
 
   constructor(props) {
@@ -99,7 +99,7 @@ export class TopImage extends Component {
                   </Link>
                 </div>
                 <div className="hidden-xs hidden-sm">
-                  <span className="button" onClick={ () => this.props.showPopup(true) }>
+                  <span className="button" onClick={ () => this.props.showQuiz(true) }>
                     I’m ready for home
                   </span>
                 </div>

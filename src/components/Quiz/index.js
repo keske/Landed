@@ -15,7 +15,7 @@ export class Quiz extends Component {
     super(props);
 
     this.state = {
-      slider: 2,
+      slider: 0,
     };
   }
 
@@ -147,7 +147,7 @@ export class Quiz extends Component {
               </div>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-right">
-              <div className="button next" onClick={() => this.nextSlider()}>
+              <div className="button next" onClick={ () => this.nextSlider() }>
                 { slider !== MAX_SLIDERS && 'next' }
                 { slider === MAX_SLIDERS && 'let’s get started' }
                 <span className="next-icon" />

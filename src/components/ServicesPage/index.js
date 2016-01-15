@@ -15,7 +15,7 @@ import { styles } from './styles/styles.scss';
 export class ServicesPage extends Component {
 
   static propTypes = {
-    showPopup: React.PropTypes.func,
+    showQuiz: React.PropTypes.func,
   };
 
   render() {
@@ -45,7 +45,7 @@ export class ServicesPage extends Component {
                   </Link>
                 </div>
                 <div className="hidden-xs hidden-sm sign-up-block">
-                  <span className="button" onClick={ () => this.props.showPopup(true) }>
+                  <span className="button" onClick={ () => this.props.showQuiz(true) }>
                     Sign-Up to Learn More
                   </span>
                 </div>
