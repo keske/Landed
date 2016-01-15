@@ -8,14 +8,14 @@ import Select from 'react-select';
 /* component styles */
 import { styles } from './styles/styles.scss';
 
-const MAX_SLIDERS = 1;
+const MAX_SLIDERS = 2;
 
 export class Quiz extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      slider: 1,
+      slider: 2,
     };
   }
 
@@ -48,6 +48,35 @@ export class Quiz extends Component {
       });
     });
 
+    const renderStateOption = (option) =>
+      <span className="select-option">
+        <span className="select-label">{ option.label }</span>
+      </span>;
+
+    const options = [{
+      label: 'Early Search Without Broker',
+      value: 'Early Search Without Broker',
+      text: 'Just understanding the different options.',
+    }, {
+      label: 'Already Searching With Broker',
+      value: 'Already Searching With Broker',
+      text: 'The perfect home hasn’t been found yet.',
+    }, {
+      label: 'Post-Offer',
+      value: 'Post-Offer',
+      text: 'An offer has been accepted but property is still closing.',
+    }, {
+      label: 'Already Closed',
+      value: 'Already Closed',
+      text: 'Looking to make our informal deal more formal.',
+    }];
+
+    const renderOption = (option) =>
+      <span className="select-option">
+        <span className="select-label">{ option.label }</span>
+        <span className="select-text">{ option.text }</span>
+      </span>;
+
     return (
       <section className={ `${styles}` }>
         <div className="container">
@@ -65,24 +94,44 @@ export class Quiz extends Component {
           <div className="row">
             <div className="wrap">
               <div className={`slides position-${ slider }`}>
-                  <div className="slide col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <p className="label">
-                      What’s your email
-                    </p>
-                    <input type="text"
-                      placeholder="Test"
-                    />
-                  </div>
-                  <div className="slide col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <p className="label">
-                      Where will the home be located?
-                    </p>
-                    <Select
-                      name="form-field-name"
-                      value="Alabama"
-                      options={ states }
-                    />
-                  </div>
+
+                <div className="slide col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <p className="label">
+                    What’s your email
+                  </p>
+                  <input type="text"
+                    placeholder="Test"
+                  />
+                </div>
+
+                <div className="slide col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <p className="label">
+                    Where will the home be located?
+                  </p>
+                  <Select
+                    name="form-field-name"
+                    value="Alabama"
+                    searchable={ false }
+                    options={ states }
+                    optionRenderer={ renderStateOption }
+                  />
+                </div>
+
+                <div className="slide col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <p className="label">
+                    What stage of the home buying process are we?
+                  </p>
+                  <Select
+                    className="stage-style"
+                    searchable={ false }
+                    name="form-field-name"
+                    options={ options }
+                    optionRenderer={ renderOption }
+                    valueRenderer={ renderOption }
+                    value="Early Search Without Broker"
+                  />
+                </div>
+
               </div>
             </div>
           </div>

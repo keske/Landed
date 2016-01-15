@@ -153,10 +153,12 @@
           border: none;
           border-bottom: 1px solid $green;
 
-          padding: 10px 20px;
+          padding: 20px 30px;
           display: inline-block;
 
-          width: 100%;
+          width: 96%;
+
+          outline: none;
 
           font-family: 'SupriaSans Regular';
           font-size: 16px;
@@ -170,28 +172,95 @@
   // Vendor customs
   .Select {
     margin: 20px 10px;
+    width: 94%;
 
     .Select-control {
       border-radius: 0;
 
-      // padding: 15px 20px 0;
-
       font-family: 'SupriaSans Regular';
       font-size: 16px;
+      outline: none;
+
+      height: 66px;
+
+      border: 1px solid rgba(0, 155, 105, .33);
+
+      &:hover {
+        border: 1px solid $light-green;        
+      }
+
+      .Select-arrow-zone {
+
+        .Select-arrow {
+          width: 18px;
+          height: 10px;
+
+          background: url(../files/down.svg);
+          margin-left: -20px;
+
+          border: none;
+        }
+      }
+    }
+
+    .Select-clear-zone {
+      display: none;
     }
 
     .Select-placeholder {
-      // padding-top: 10px;
-      // padding-left: 15px;
+      padding-top: 15px;
+      padding-left: 20px;
+
+      color: $green !important;
     }
 
     .Select-input {
+      // 
+    }
 
+    &.stage-style {
+
+      .Select-control {
+        height: 76px;
+      }
+    }
+
+    .select-option {
+      // border-bottom: 1px solid red;
+    }
+
+    .select-label, .select-text {
+      font-family: 'SupriaSans Regular';
+      font-size: 16px;
+      line-height: 18px;
+
+      font-weight: normal;
+
+      color: $green;
+      display: block;
+
+      padding: 3px 0;
+    }
+
+    .select-text {
+      margin-top: -5px;
+      color: rgba(0, 153, 105, .33);
+      display: block;
     }
   }
-
+  
+  // TODO:
   .Select-menu-outer {
-    position: absolute !important;
-    z-index: 7 !important;
+    .Select-menu {
+      .Select-option:nth-child(1) {
+        // border-bottom: 1px solid red;
+      }
+    }
+    .Select-option:nth-child(1) {
+        // border-bottom: 1px solid red;
+      }
   }
+    // position: absolute !important;
+    // z-index: 7 !important;
+  // }
 }
