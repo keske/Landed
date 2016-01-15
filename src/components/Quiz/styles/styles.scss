@@ -1,0 +1,303 @@
+@import '../../../containers/App/styles/vars';
+@import '../../../containers/App/styles/screens';
+
+:local(.styles) {
+  @import './react-select';
+  user-select: none;
+  
+  .header-green-layer {
+    background: $green;
+
+    width: 100%;
+    height: 100px;
+
+    @media (#{ $phone }) {
+      position: fixed;
+      height: 70px;
+    }
+  }
+
+  .row {
+    padding: 5px 0;
+  }
+
+  .header {
+    margin-top: 70px;
+
+    @media (#{ $phone }) {
+      margin-top: 100px;
+    }
+
+    p.title {
+      font-family: 'SupriaSans Regular';
+      font-size: 33px;
+      line-height: 40px;
+      color: $green;
+    }
+
+    p.info {
+      font-family: 'Jannon10Pro-Italic';
+      font-size: 18px;
+      line-height: 22px;
+      color: $green;
+    }
+  }
+
+  .nav {
+    
+    .button {
+
+      &.previous {
+        padding: 0 25px;
+
+        font-family: 'SupriaSans Regular';
+        font-size: 17px;
+        line-height: 40px;
+        color: $light-green;
+
+        margin-left: 30px;
+
+        &:hover {
+          color: $green;
+
+          span.previous-icon {
+            opacity: 1;
+          }
+        }
+
+        span.previous-icon {
+          width: 11px;
+          height: 18px;
+
+          display: inline-block;
+
+          position: absolute;
+          top: 11px;
+          left: 50px;
+
+          background: url(../files/back-green.svg);
+          opacity: .7;
+        }
+      }
+
+      &.next {
+        font-family: 'SupriaSans Regular';
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFF;
+
+        background: $green;
+        border-radius: 75px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+
+        display: inline-block;
+
+        padding: 10px 60px 10px 50px;
+        margin-bottom: 30px;
+        margin-right: 30px;
+
+        &:hover {
+          background: $light-green;
+        }
+
+        span.next-icon {
+          width: 11px;
+          height: 18px;
+
+          display: inline-block;
+
+          position: absolute;
+          top: 13px;
+          right: 70px;
+
+          background: url(../files/next-white.svg);
+        }
+      }
+    }
+  }
+
+  .wrap {
+
+    .slides {
+
+      transition: .3s;
+
+      &.position-0 {
+        .slide:nth-child(1) {
+          display: block;
+        }
+        .slide:nth-child(2) {
+          display: none;
+        }
+        .slide:nth-child(3) {
+          display: none;
+        }
+      }
+
+      &.position-1 {
+        .slide:nth-child(1) {
+          display: none;
+        }
+        .slide:nth-child(2) {
+          display: block;
+        }
+        .slide:nth-child(3) {
+          display: none;
+        }
+      }
+
+      &.position-2 {
+        .slide:nth-child(1) {
+          display: none;
+        }
+        .slide:nth-child(2) {
+          display: none;
+        }
+        .slide:nth-child(3) {
+          display: block;
+        }
+      }
+
+      .slide {
+        float: left;
+        max-width: 700px !important;
+        height: 150px;
+
+        p.label {
+          font-family: 'SupriaSans Regular';
+          font-weight: normal;
+          font-size: 22px;
+
+          color: $green;
+          line-height: 26px;
+        }
+
+        input[type="text"] {
+          border: 1px solid rgba(0, 155, 105, .33);
+
+          padding: 21px 30px 21px 20px;
+          display: inline-block;
+
+          width: 99%;
+
+          outline: none;
+
+          font-family: 'SupriaSans Regular';
+          font-size: 16px;
+
+          margin-top: 20px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  // Vendor customs
+  .Select {
+    margin: 20px 10px;
+    width: 99%;
+
+    .Select-control {
+      border-radius: 0;
+
+      font-family: 'SupriaSans Regular';
+      font-size: 16px;
+      outline: none;
+
+      height: 66px;
+
+      border: 1px solid rgba(0, 155, 105, .33);
+
+      &:hover {
+        border: 1px solid $light-green;        
+      }
+
+      .Select-arrow-zone {
+
+        .Select-arrow {
+          width: 18px;
+          height: 10px;
+
+          background: url(../files/down.svg);
+          margin-left: -20px;
+
+          border: none;
+        }
+      }
+    }
+
+    .Select-clear-zone {
+      display: none;
+    }
+
+    .Select-placeholder {
+      padding-top: 15px;
+      padding-left: 20px;
+
+      color: $green !important;
+    }
+
+    .Select-input {
+      // 
+    }
+
+    &.stage-style {
+
+      .Select-control {
+        height: 76px;
+      }
+    }
+
+    .select-option {
+      // border-bottom: 1px solid red;
+    }
+
+    .select-label, .select-text {
+      font-family: 'SupriaSans Regular';
+      font-size: 16px;
+      line-height: 18px;
+
+      font-weight: normal;
+
+      color: $green;
+      display: block;
+
+      padding: 3px 0;
+    }
+
+    .select-text {
+      margin-top: -5px;
+      color: rgba(0, 153, 105, .33);
+      display: block;
+    }
+  }
+  
+  // TODO:
+  // .Select-menu-outer {
+  //   .Select-menu {
+  //     .Select-option:nth-child(1) {
+  //       border-bottom: 1px solid red;
+  //     }
+  //   }
+  //   .Select-option:nth-child(1) {
+  //       border-bottom: 1px solid red;
+  //     }
+  // }
+
+  ::-webkit-input-placeholder {
+    // color: rgba(0, 153, 105, .33);
+    color: $green;
+  }
+  :-moz-placeholder {
+    // color: rgba(0, 153, 105, .33);
+    color: $green;
+  }
+  ::-moz-placeholder {
+    // color: rgba(0, 153, 105, .33);
+    color: $green;
+  }
+  :-ms-input-placeholder {
+    // color: rgba(0, 153, 105, .33);
+    color: $green;
+  }
+}

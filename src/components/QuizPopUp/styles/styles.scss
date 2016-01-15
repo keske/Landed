@@ -1,0 +1,160 @@
+@import '../../../containers/App/styles/vars';
+@import '../../../containers/App/styles/screens';
+
+:local(.styles) {
+  position: absolute;
+  z-index: 7;
+
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+
+  text-align: center;
+
+  display: none;
+
+  &.show {
+    display: block;
+  }
+
+  .outer {
+    background: rgba(0, 0, 0, .45);
+
+    position: absolute;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+  }
+
+  .inner {
+    position: relative;
+    z-index: 1;
+
+    text-align: left;
+
+    display: inline-block;
+
+    background: #FFF;
+    width: 670px;
+
+    $radius: 25px;
+
+    border-radius: $radius;
+    
+    margin-top: 100px;
+
+    .header {
+      border-top-left-radius: $radius;
+      border-top-right-radius: $radius;
+
+      background: $green;
+      margin-top: -5px;
+      margin-bottom: 40px;
+
+      p {
+        color: #FFF !important;
+      }
+
+      p.title {
+        margin-top: 20px;
+      }
+
+      p.info {
+        margin-top: -5px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .container {
+      width: 100%;
+
+      .row {
+
+        .col-md-12,
+        .col-lg-12,
+        .col-md-8,
+        .col-lg-8 {
+          width: 100%;
+          margin-left: 0;
+
+          padding: 0 50px;
+        }
+
+        .col-md-4 {
+          margin-left: 50px;
+        }
+
+        .popup-california-title, .popup-investor-title {
+          margin-left: 36px;
+        }
+
+        .popup-california-yes-no, .popup-investor-yes-no {
+          width: 170px;
+        }
+
+        .popup-moving {
+          margin-left: 0;
+          width: 300px;
+
+          &:nth-child(1), &:nth-child(3) {
+            margin-left: 36px;
+          }
+        }
+        .popup-ownership {
+          margin-left: 0;
+          width: 210px;
+
+          &:nth-child(1) {
+            margin-left: 36px;
+          }
+        }
+        .popup-comments {
+          margin-left: 36px;
+
+          textarea {
+            width: 100%;
+          }
+        }
+        .popup-budget {
+          width: 200px;
+
+          &:nth-child(1), &:nth-child(4) {
+            margin-left: 36px;
+          } 
+        }
+      }
+    }
+  }
+
+  .close {
+    $size: 30px;
+
+    width: $size;
+    height: $size;
+
+    position: absolute;
+
+    z-index: 3;
+
+    top: 120px;
+    left: 50%;
+
+    margin-left: 360px;
+
+    opacity: 1;
+
+    &:hover {
+      opacity: .5;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
