@@ -3,6 +3,7 @@
 
 :local(.styles) {
   @import './react-select';
+  user-select: none;
   
   .header-green-layer {
     background: $green;
@@ -116,28 +117,51 @@
   }
 
   .wrap {
-    // overflow: hidden;
 
     .slides {
-      width: 99999px;
 
       transition: .3s;
 
       &.position-0 {
-        margin-left: 0;
+        .slide:nth-child(1) {
+          display: block;
+        }
+        .slide:nth-child(2) {
+          display: none;
+        }
+        .slide:nth-child(3) {
+          display: none;
+        }
       }
 
       &.position-1 {
-        margin-left: -700px;
+        .slide:nth-child(1) {
+          display: none;
+        }
+        .slide:nth-child(2) {
+          display: block;
+        }
+        .slide:nth-child(3) {
+          display: none;
+        }
       }
 
       &.position-2 {
-        margin-left: -1400px;
+        .slide:nth-child(1) {
+          display: none;
+        }
+        .slide:nth-child(2) {
+          display: none;
+        }
+        .slide:nth-child(3) {
+          display: block;
+        }
       }
 
       .slide {
         float: left;
         max-width: 700px !important;
+        height: 150px;
 
         p.label {
           font-family: 'SupriaSans Regular';
@@ -149,14 +173,12 @@
         }
 
         input[type="text"] {
-          background: rgba(0, 155, 105, .03);
-          border: none;
-          border-bottom: 1px solid $green;
+          border: 1px solid rgba(0, 155, 105, .33);
 
-          padding: 20px 30px;
+          padding: 21px 30px 21px 20px;
           display: inline-block;
 
-          width: 96%;
+          width: 99%;
 
           outline: none;
 
@@ -164,6 +186,7 @@
           font-size: 16px;
 
           margin-top: 20px;
+          margin-left: 10px;
         }
       }
     }
@@ -172,7 +195,7 @@
   // Vendor customs
   .Select {
     margin: 20px 10px;
-    width: 94%;
+    width: 99%;
 
     .Select-control {
       border-radius: 0;
@@ -250,17 +273,31 @@
   }
   
   // TODO:
-  .Select-menu-outer {
-    .Select-menu {
-      .Select-option:nth-child(1) {
-        // border-bottom: 1px solid red;
-      }
-    }
-    .Select-option:nth-child(1) {
-        // border-bottom: 1px solid red;
-      }
-  }
-    // position: absolute !important;
-    // z-index: 7 !important;
+  // .Select-menu-outer {
+  //   .Select-menu {
+  //     .Select-option:nth-child(1) {
+  //       border-bottom: 1px solid red;
+  //     }
+  //   }
+  //   .Select-option:nth-child(1) {
+  //       border-bottom: 1px solid red;
+  //     }
   // }
+
+  ::-webkit-input-placeholder {
+    // color: rgba(0, 153, 105, .33);
+    color: $green;
+  }
+  :-moz-placeholder {
+    // color: rgba(0, 153, 105, .33);
+    color: $green;
+  }
+  ::-moz-placeholder {
+    // color: rgba(0, 153, 105, .33);
+    color: $green;
+  }
+  :-ms-input-placeholder {
+    // color: rgba(0, 153, 105, .33);
+    color: $green;
+  }
 }

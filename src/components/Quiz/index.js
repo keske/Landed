@@ -100,7 +100,7 @@ export class Quiz extends Component {
                     What’s your email
                   </p>
                   <input type="text"
-                    placeholder="Test"
+                    placeholder="Your email"
                   />
                 </div>
 
@@ -110,7 +110,7 @@ export class Quiz extends Component {
                   </p>
                   <Select
                     name="form-field-name"
-                    value="Alabama"
+                    placeholder="Please select state"
                     searchable={ false }
                     options={ states }
                     optionRenderer={ renderStateOption }
