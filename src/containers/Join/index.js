@@ -5,7 +5,7 @@ import DocumentMeta from 'react-document-meta';
 import { JoinUs } from 'components/JoinUs';
 
 /* component styles */
-import { styles } from './styles/styles.scss';
+import styles from './styles';
 
 const metaData = {
   title: 'Join',

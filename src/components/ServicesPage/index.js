@@ -10,7 +10,7 @@ import { Ownership } from './_ownership';
 import { Loan } from './_loan';
 
 /* component styles */
-import { styles } from './styles/styles.scss';
+import styles from './styles';
 
 export class ServicesPage extends Component {
 

@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { Quiz } from 'components/Quiz';
 
 /* component styles */
-import { styles } from './styles/styles.scss';
+import styles from './styles';
 
 const close = require('./files/close.png');
 

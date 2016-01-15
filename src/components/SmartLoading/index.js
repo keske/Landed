@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { getMarginTop, getMarginLeft } from './utils';
 
 // Component styles
-import { styles } from './styles/styles.scss';
+import styles from './styles';
 
 export default class SmartLoading extends Component {
 

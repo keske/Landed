@@ -6,7 +6,7 @@ import Select from 'react-select';
 // import Rebase from 're-base';
 
 /* component styles */
-import { styles } from './styles/styles.scss';
+import styles from './styles';
 
 const MAX_SLIDERS = 2;
 
