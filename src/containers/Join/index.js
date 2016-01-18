@@ -13,7 +13,7 @@ const metaData = {
   meta: {
     charset: 'utf-8',
     name: {
-      keywords: 'react,meta,document,html,tags',
+      keywords: 'landed, smarter, ownership',
     },
   },
 };
