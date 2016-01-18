@@ -89,45 +89,6 @@
         .col-md-4 {
           margin-left: 50px;
         }
-
-        .popup-california-title, .popup-investor-title {
-          margin-left: 36px;
-        }
-
-        .popup-california-yes-no, .popup-investor-yes-no {
-          width: 170px;
-        }
-
-        .popup-moving {
-          margin-left: 0;
-          width: 300px;
-
-          &:nth-child(1), &:nth-child(3) {
-            margin-left: 36px;
-          }
-        }
-        .popup-ownership {
-          margin-left: 0;
-          width: 210px;
-
-          &:nth-child(1) {
-            margin-left: 36px;
-          }
-        }
-        .popup-comments {
-          margin-left: 36px;
-
-          textarea {
-            width: 100%;
-          }
-        }
-        .popup-budget {
-          width: 200px;
-
-          &:nth-child(1), &:nth-child(4) {
-            margin-left: 36px;
-          } 
-        }
       }
     }
   }
