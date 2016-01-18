@@ -38,7 +38,7 @@ export class ServicesPage extends Component {
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div className="hidden-md hidden-lg sign-up-block">
-                  <Link to="join">
+                  <Link to="quiz">
                     <span className="button">
                       Sign-Up to Learn More
                     </span>
@@ -58,7 +58,6 @@ export class ServicesPage extends Component {
           <Ownership />
         </div>
         <ImageBlock { ...imageBlockProps } />
-        
       </section>
     );
   }

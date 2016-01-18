@@ -7,6 +7,7 @@ import { Home } from 'containers/Home';
 import { About } from 'containers/About';
 import { Services } from 'containers/Services';
 import { Join } from 'containers/Join';
+import { QuizContainer } from 'containers/Quiz';
 
 export default (
   <Route path="/" component={ App }>
@@ -14,6 +15,7 @@ export default (
     <Route path="about" component={ About } />
     <Route path="services" component={ Services } />
     <Route path="join" component={ Join } />
+    <Route path="quiz" component={ QuizContainer } />
     <Route status={ 404 } path="*" component={ Home } />
   </Route>
 );

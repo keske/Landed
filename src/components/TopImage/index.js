@@ -42,10 +42,11 @@ export class TopImage extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11">
               <SmartLoading animation="fade-in"
-                            move="from-bottom-to-top"
-                            distance={100}
-                            speed={1000}
-                            wait={1000}>
+                move="from-bottom-to-top"
+                distance={100}
+                speed={1000}
+                wait={1000}
+              >
                 <h1 className="hidden-xs hidden-sm">
                   Join forces to pay for home
                 </h1>
@@ -59,10 +60,11 @@ export class TopImage extends Component {
             <div className="col-xs-12 col-sm-12 col-md-11 col-lg-11">
 
               <SmartLoading animation="fade-in"
-                            move="from-bottom-to-top"
-                            distance={100}
-                            speed={1300}
-                            wait={1200}>
+                move="from-bottom-to-top"
+                distance={100}
+                speed={1300}
+                wait={1200}
+              >
                 <div className="group">
                   <span className="icon" />
                   <p>
@@ -87,12 +89,13 @@ export class TopImage extends Component {
               </SmartLoading>
 
               <SmartLoading animation="fade-in"
-                            move="from-bottom-to-top"
-                            distance={100}
-                            speed={1500}
-                            wait={1400}>
+                move="from-bottom-to-top"
+                distance={100}
+                speed={1500}
+                wait={1400}
+              >
                 <div className="hidden-md hidden-lg">
-                  <Link to="join">
+                  <Link to="quiz">
                     <span className="button">
                       I’m ready for home
                     </span>
