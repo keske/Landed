@@ -4,7 +4,7 @@ import GoogleAnalytics from 'analytics';
 import Rebase from 're-base';
 
 /* component styles */
-import styles from './styles';
+import { styles } from './styles/styles.scss';
 
 export class JoinUs extends Component {
   constructor(props) {

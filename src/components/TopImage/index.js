@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 import SmartLoading from '../SmartLoading';
 
 /* component styles */
-import styles from './styles';
+import { styles } from './styles/styles.scss';
 
 export class TopImage extends Component {
   static propTypes = {

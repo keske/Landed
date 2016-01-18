@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { JoinUs } from 'components/JoinUs';
 
 /* component styles */
-import styles from './styles';
+import { styles } from './styles/styles.scss';
 
 const close = require('./files/close.png');
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 /* component styles */
-import styles from './styles';
+import { styles } from './styles/styles.scss';
 
 export class ImageBlock extends Component {
 

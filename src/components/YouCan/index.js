@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import R from 'ramda';
 
 /* component styles */
-import styles from './styles';
+import { styles } from './styles/styles.scss';
 
 /* images */
 const icons = R.range(1, 7 + 1).map(index => require(`./files/you-can-${index}.png`));

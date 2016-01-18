@@ -9,7 +9,7 @@ import * as actionCreators from 'actions/toggle';
 import SmartLoading from '../SmartLoading';
 
 /* component styles */
-import styles from './styles';
+import { styles } from './styles/styles.scss';
 
 @connect(state => state.toggle)
 export class Toggle extends Component {

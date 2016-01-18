@@ -6,7 +6,7 @@ import { ThreeCols } from './_threeCols';
 import { WhoIsLanded } from './_whoIsLanded';
 
 /* component styles */
-import styles from './styles';
+import { styles } from './styles/styles.scss';
 
 export class AboutPage extends Component {
   render() {

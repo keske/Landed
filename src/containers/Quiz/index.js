@@ -5,7 +5,7 @@ import DocumentMeta from 'react-document-meta';
 import { Quiz } from 'components/Quiz';
 
 /* component styles */
-import styles from './styles';
+import { styles } from './styles/styles.scss';
 
 const metaData = {
   title: 'Quiz',

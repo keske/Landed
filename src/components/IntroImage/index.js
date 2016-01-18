@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 /* component styles */
-import styles from './styles';
+import { styles } from './styles/styles.scss';
 
 export class IntroImage extends Component {
   static propTypes = {
