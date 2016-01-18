@@ -18,7 +18,7 @@ import { WeWillHelpYou } from 'components/WeWillHelpYou';
 
 const metaData = {
   title: 'Landed. Smarter ownership, for everyone.',
-  description: 'I\'m a description. I can to create multiple tags',
+  description: 'Smarter ownership, for everyone.',
   meta: {
     charset: 'utf-8',
     name: {

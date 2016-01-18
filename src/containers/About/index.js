@@ -6,7 +6,7 @@ import { AboutPage } from 'components/AboutPage';
 
 const metaData = {
   title: 'About',
-  description: 'I\'m a description. I can to create multiple tags',
+  description: 'Smarter ownership, for everyone.',
   meta: {
     charset: 'utf-8',
     name: {

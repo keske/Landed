@@ -9,8 +9,7 @@ import styles from './styles';
 
 const metaData = {
   title: 'Quiz',
-  description: 'I\'m a description. I can to create multiple tags',
-  
+  description: 'Smarter ownership, for everyone.',
   meta: {
     charset: 'utf-8',
     name: {
