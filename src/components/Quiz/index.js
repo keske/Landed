@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import R from 'ramda';
 import Select from 'react-select';
-// import $ from 'jquery';
-// import GoogleAnalytics from 'analytics';
-// import Rebase from 're-base';
+import $ from 'jquery';
+import Rebase from 're-base';
+
+/* utils */
+import { isEmailValid } from '../../utils/validate.js';
 
 /* component styles */
 import { styles } from './styles/styles.scss';
@@ -16,6 +18,10 @@ export class Quiz extends Component {
 
     this.state = {
       slider: 0,
+      email: '',
+      location: '',
+      stage: '',
+      succes: false,
     };
   }
 
@@ -35,12 +41,55 @@ export class Quiz extends Component {
     });
   }
 
-  render() {
-    const { slider } = this.state;
+  handleRequest() {
+    const { email, location, stage } = this.state;
 
+    const req = {
+      email,
+      data: {
+        stage,
+        location,
+      },
+    };
+
+    const base = Rebase.createClass('https://dblanded.firebaseio.com');
+
+    console.log(req);
+
+    base.push('users', {
+      data: req,
+      then() {
+        console.log('complete');
+      },
+    });
+
+    const request = $.ajax({
+      url: 'http://landed.com/mail.php',
+      type: 'post',
+      data: req,
+    });
+
+    request.done((data) => {
+      console.log(data);
+    });
+
+    this.setState({ succes: true });
+
+    request.fail((jqXHR, textStatus, errorThrown) => {
+      console.error(
+        'The following error occurred: ' +
+        textStatus, errorThrown
+      );
+    });
+  }
+
+  render() {
+    const { slider, email, location } = this.state;
+
+    // Get all USA states
     const data = require('./states');
     const states = [];
-
+    // Prepare data for react-select
     data.default.map(state => {
       states.push({
         value: state.name,
@@ -48,11 +97,13 @@ export class Quiz extends Component {
       });
     });
 
+    // Render customize state options for react-select
     const renderStateOption = (option) =>
       <span className="select-option">
         <span className="select-label">{ option.label }</span>
       </span>;
 
+    // Stage options
     const options = [{
       label: 'Early Search Without Broker',
       value: 'Early Search Without Broker',
@@ -71,6 +122,7 @@ export class Quiz extends Component {
       text: 'Looking to make our informal deal more formal.',
     }];
 
+    // Render option
     const renderOption = (option) =>
       <span className="select-option">
         <span className="select-label">{ option.label }</span>
@@ -101,6 +153,7 @@ export class Quiz extends Component {
                   </p>
                   <input type="text"
                     placeholder="Your email"
+                      onChange={ (event) => this.setState({ email: event.target.value }) }
                   />
                 </div>
 
@@ -114,12 +167,13 @@ export class Quiz extends Component {
                     searchable={ false }
                     options={ states }
                     optionRenderer={ renderStateOption }
+                    onChange={ (val) => this.setState({ location: val }) }
                   />
                 </div>
 
                 <div className="slide col-xs-12 col-sm-12 col-md-12 col-lg-12">
                   <p className="label">
-                    What stage of the home buying process are we?
+                    What stage of the home buying <br className="show-xs hidden-sm hidden-md hidden-lg" />process are we?
                   </p>
                   <Select
                     className="stage-style"
@@ -129,6 +183,7 @@ export class Quiz extends Component {
                     optionRenderer={ renderOption }
                     valueRenderer={ renderOption }
                     value="Early Search Without Broker"
+                    onChange={ (val) => this.setState({ stage: val }) }
                   />
                 </div>
 
@@ -147,11 +202,23 @@ export class Quiz extends Component {
               </div>
             </div>
             <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right">
-              <div className="button next" onClick={ () => this.nextSlider() }>
-                { slider !== MAX_SLIDERS && 'next' }
-                { slider === MAX_SLIDERS && 'let’s get started' }
+              <button
+                className="button next"
+                onClick={ () =>
+                  slider === MAX_SLIDERS
+                    ? this.handleRequest()
+                    : this.nextSlider()
+                }
+                disabled={
+                  slider === 0 && !isEmailValid(email) ||
+                  slider === 1 && location === ''
+                }
+              >
+                next
+                { /* slider !== MAX_SLIDERS && 'next'
+                slider === MAX_SLIDERS && 'let’s get started' */ }
                 <span className="next-icon" />
-              </div>
+              </button>
             </div>
           </div>
         </div>
