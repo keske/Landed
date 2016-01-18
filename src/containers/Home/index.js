@@ -19,7 +19,6 @@ import { WeWillHelpYou } from 'components/WeWillHelpYou';
 const metaData = {
   title: 'Landed. Smarter ownership, for everyone.',
   description: 'I\'m a description. I can to create multiple tags',
-  canonical: 'http://example.com/path/to/page',
   meta: {
     charset: 'utf-8',
     name: {

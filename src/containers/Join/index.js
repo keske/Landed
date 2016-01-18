@@ -10,7 +10,6 @@ import styles from './styles';
 const metaData = {
   title: 'Join',
   description: 'I\'m a description. I can to create multiple tags',
-  canonical: 'http://example.com/path/to/page',
   meta: {
     charset: 'utf-8',
     name: {
