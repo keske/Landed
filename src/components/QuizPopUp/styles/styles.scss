@@ -43,7 +43,7 @@
     background: #FFF;
     width: 670px;
 
-    $radius: 25px;
+    $radius: 15px;
 
     border-radius: $radius;
     
@@ -55,7 +55,7 @@
 
       background: $green;
       margin-top: -5px;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
 
       p {
         color: #FFF !important;
@@ -66,7 +66,7 @@
       }
 
       p.info {
-        margin-top: -5px;
+        margin-top: -15px;
         margin-bottom: 20px;
       }
     }
@@ -83,7 +83,7 @@
           width: 100%;
           margin-left: 0;
 
-          padding: 0 50px;
+          padding: 0 30px;
         }
 
         .col-md-4 {

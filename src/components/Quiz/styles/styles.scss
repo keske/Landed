@@ -33,15 +33,14 @@
 
     p.title {
       font-family: 'SupriaSans Regular';
-      font-size: 33px;
-      line-height: 40px;
+      font-size: 24px;
       color: $green;
     }
 
     p.info {
       font-family: 'Jannon10Pro-Italic';
-      font-size: 18px;
-      line-height: 22px;
+      font-size: 14px;
+      opacity: .5;
       color: $green;
     }
   }
@@ -54,7 +53,7 @@
         padding: 0 25px;
 
         font-family: 'SupriaSans Regular';
-        font-size: 17px;
+        font-size: 12px;
         line-height: 40px;
         color: $light-green;
 
@@ -65,7 +64,7 @@
         }
 
         @media (#{ $desktop }) {
-          margin-left: 40px;
+          margin-left: 20px;
         }
 
         &:hover {
@@ -77,16 +76,17 @@
         }
 
         span.previous-icon {
-          width: 11px;
-          height: 18px;
+          width: 9px;
+          height: 16px;
 
           display: inline-block;
 
           position: absolute;
-          top: 11px;
+          top: 12px;
           left: 50px;
 
           background: url(../files/back-green.svg);
+          background-size: cover;
           opacity: .7;
 
           @media (#{ $phone }) {
@@ -94,14 +94,14 @@
           }
 
           @media (#{ $desktop }) {
-            left: 60px;
+            left: 40px;
           }
         }
       }
 
       &.next {
         font-family: 'SupriaSans Regular';
-        font-size: 20px;
+        font-size: 16px;
         line-height: 24px;
         color: #FFF;
 
@@ -111,7 +111,7 @@
 
         display: inline-block;
 
-        padding: 10px 60px 10px 50px;
+        padding: 5px 50px 5px 40px;
         margin-bottom: 30px;
         margin-right: 30px;
 
@@ -126,7 +126,7 @@
         }
 
         @media (#{ $desktop }) {
-          margin-right: 10%;
+          margin-right: 5%;
         }
 
         &:hover {
@@ -138,16 +138,20 @@
         }
 
         span.next-icon {
-          width: 11px;
-          height: 18px;
+          $widht: 9px;
+          $height: 16px;
+
+          width: $widht;
+          height: $height;
 
           display: inline-block;
 
           position: absolute;
-          top: 13px;
-          right: 70px;
+          top: 9px;
+          right: 50px;
 
           background: url(../files/next-white.svg);
+          background-size: cover;
         }
       }
     }
@@ -197,7 +201,6 @@
 
       .slide {
         float: left;
-        // max-width: 700px !important;
         height: 150px;
 
         @media (#{ $phone }) {
@@ -207,9 +210,9 @@
         }
 
         p.label {
-          font-family: 'SupriaSans Regular';
+          font-family: 'Jannon10Pro-Italic';
           font-weight: normal;
-          font-size: 22px;
+          font-size: 18px;
 
           color: $green;
           line-height: 26px;

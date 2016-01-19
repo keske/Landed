@@ -10,7 +10,7 @@ export class WeWillHelpYou extends Component {
         <div className="container">
 
           <div className="row">
-            <div className="col-xs-10 col-sm-12 col-md-12 col-lg-12 col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 text-center">
+            <div className="col-xs-10 col-sm-12 col-md-11 col-lg-11 col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 text-center">
               <p className="title">
                 Getting help from family and trusted partners<br className="hidden-xs" />to pay for home?  We'll help you:
                 { /* ' */ }
@@ -19,7 +19,7 @@ export class WeWillHelpYou extends Component {
           </div>
 
           <div className="row">
-            <div className="col-xs-10 col-sm-5 col-md-4 col-lg-3 col-xs-offset-2 col-sm-offset-1 col-md-offset-2 col-lg-offset-3">
+            <div className="col-xs-10 col-sm-5 col-md-4 col-lg-3 col-xs-offset-2 col-sm-offset-1 col-md-offset-2 col-lg-offset-2">
               <p className="list-title">
                 Enlist Supporters
               </p>
