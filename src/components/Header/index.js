@@ -85,22 +85,29 @@ export class Header extends Component {
     const renderLogin = () => {
       return (
         <span>
-          <button className={ `login` }
-                  onClick={ () => this.props.showQuiz(true) }>
+          <button
+            className={ `login` }
+            onClick={ () => this.props.showLoginMenu(true) }
+          >
             Log in
           </button>
 
-          <Link onClick={ () => this.props.show(false) }
-                to="join">
-            <button className={ `signup hidden-md hidden-lg` }>
+          <span
+            onClick={ () => this.props.showQuiz(true) }
+            to="quiz"
+          >
+            <button className={ `signup hidden-xs hidden-sm` }>
+              Sign up
+            </button>
+          </span>
+          <Link
+            onClick={ () => this.props.show(false) }
+            to="quiz"
+          >
+            <button className="signup hidden-md hidden-lg" >
               Sign up
             </button>
           </Link>
-          <a href="#/join" target="_blank">
-            <button className="signup hidden-xs hidden-sm" >
-              Sign up
-            </button>
-          </a>
         </span>
       );
     };
@@ -167,7 +174,7 @@ export class Header extends Component {
         </div>
         <div className={ `login-menu ${ loginMenu && 'show' }` }>
           <span className="cross"
-                onClick={ () => { this.props.showQuiz(false); } }
+                onClick={ () => { this.props.showLoginMenu(false); } }
           />
           <input type="email" placeholder="e-mail" />
           <input type="password" placeholder="password" />
