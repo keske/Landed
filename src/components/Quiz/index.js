@@ -163,7 +163,7 @@ export class Quiz extends Component {
                   </p>
                   <Select
                     name="form-field-name"
-                    placeholder="Please select state"
+                    value="Alaska"
                     searchable={ false }
                     options={ states }
                     optionRenderer={ renderStateOption }

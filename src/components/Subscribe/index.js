@@ -15,15 +15,13 @@ export class Subscribe extends Component {
               noValidate>
           <div className="container">
             <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-1 col-lg-1 text-right">
-                <span className="email-icon hidden-xs hidden-sm" />
-              </div>
               <div className="col-xs-4 col-sm-4 col-md-4 col-lg-3">
+                <span className="email-icon hidden-xs hidden-sm" />
                 <span className="title">
                   Want to help? Leave us your email
                 </span>
               </div>
-              <div className="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+              <div className="col-xs-6 col-sm-6 col-md-5 col-lg-5">
                 <input type="email"
                        name="EMAIL"
                        id="mce-EMAIL"
