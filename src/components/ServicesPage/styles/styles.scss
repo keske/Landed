@@ -27,7 +27,31 @@
       width: $size;
       height: $size;
 
-      background: url(../files/loan-icon.png);
+      background: url(../files/icon1.png);
+      background-size: cover;
+
+      display: inline-block;
+    }
+
+    span.lease-icon {
+      $size: 52px;
+
+      width: $size;
+      height: $size;
+
+      background: url(../files/icon2.png);
+      background-size: cover;
+
+      display: inline-block;
+    }
+
+    span.ownership-icon {
+      $size: 52px;
+
+      width: $size;
+      height: $size;
+
+      background: url(../files/icon3.png);
       background-size: cover;
 
       display: inline-block;
