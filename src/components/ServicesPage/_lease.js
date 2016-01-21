@@ -109,49 +109,7 @@ export class Lease extends Component {
     return (
       <div className="container">
         <div className="row lease-and-shared">
-          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <p className="small-title-border">
-              service detail
-            </p>
-            <p className="title">
-              Lease-To-Own
-            </p>
-          </div>
-
-          <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-            <p className="text">
-              Typical rent-to-own contracts have a bad reputation.  Traditionally, an upfront option fee is paid as well as a monthly rent premium that eventually goes towards an inflated home purchase price.  Sadly, the reality is that many buyers never exercise their right to buy and all those additional fees go straight to the landlord’s pocket.  We don’t think that’s fair.
-            </p>
-
-            <p className="italic-block small-title">
-              More typically known as a lease-option agreement, it consists of two main parts:
-            </p>
-
-            <div className="list">
-              <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
-                <span className="list-number">1.</span>
-              </div>
-              <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
-                <p>
-                  <strong>A long-term rent agreement that provides security to both the owner and the renter.</strong>  This commits both the investor and the resident to the space for 5 years.  For this commitment, the investor agrees to give the resident the same experience they would have in their own home.
-                </p>
-              </div>
-            </div>
-
-            <div className="list">
-              <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
-                <span className="list-number">2.</span>
-              </div>
-              <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
-                <p>
-                  <strong>An option to buy back the property from the investor.</strong>  In exchange for committing to the home long-term, the resident is given an option to buy the property.
-                </p>
-              </div>
-            </div>
-
-          </div>
-
-          <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-1 col-lg-offset-1">
+          <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <p className="ul-title">
               For Residents
             </p>
@@ -167,7 +125,9 @@ export class Lease extends Component {
                 No rent premiums or confusing option fees found in many rent-to-own contracts.
               </li>
             </ul>
+          </div>
 
+          <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <p className="ul-title">
               For Investors
             </p>

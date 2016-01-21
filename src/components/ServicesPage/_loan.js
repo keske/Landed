@@ -100,49 +100,7 @@ export class Loan extends Component {
     return (
       <div className="container">
         <div className="row lease-and-shared">
-          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <p className="small-title-border">
-              service detail
-            </p>
-            <p className="title">
-              Family Loan
-            </p>
-          </div>
-
-          <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-            <p className="text">
-              In a down-payment loan, the investor provides a second loan that is properly recorded with the relevant authorities to ensure tax and legal compliance.  Although additional debt is the simplest form of support, it also comes with additional risks.  Both parties need to be comfortable with the scenario that home prices decline and the resident is left in a vulnerable position.
-            </p>
-
-            <p className="italic-block small-title">
-              A family loan also consists of two main parts:
-            </p>
-
-            <div className="list">
-              <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
-                <span className="list-number">1.</span>
-              </div>
-              <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
-                <p>
-                  <strong>A promissory note that outlines the terms of the loan.</strong>  Among other restrictions, a minimum interest rate must be charged to have the note considered valid.
-                </p>
-              </div>
-            </div>
-
-            <div className="list">
-              <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
-                <span className="list-number">2.</span>
-              </div>
-              <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
-                <p>
-                  <strong>A mortgage or deed of trust that secures the loan.</strong> It is registered with the relevant local authorities and helps ensure that the lender is protected in a number of contingencies.
-                </p>
-              </div>
-            </div>
-
-          </div>
-
-          <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-1 col-lg-offset-1">
+          <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <p className="ul-title">
               For Residents
             </p>
@@ -157,7 +115,9 @@ export class Loan extends Component {
                 Safeguard your most important relationships from unclear expectations.
               </li>
             </ul>
+          </div>
 
+          <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <p className="ul-title">
               For Investors
             </p>

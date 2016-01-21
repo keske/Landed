@@ -17,6 +17,75 @@
     }
   }
 
+  .family {
+    margin-top: 60px;
+    margin-bottom: 50px;
+
+    span.loan-icon {
+      $size: 52px;
+
+      width: $size;
+      height: $size;
+
+      background: url(../files/loan-icon.png);
+      background-size: cover;
+
+      display: inline-block;
+    }
+
+    p.title {
+      font-family: 'SupriaSans Bold';
+      font-size: 32px;
+      line-height: 34px;
+      color: $green;
+
+      display: inline-block;
+      position: relative;
+
+      top: 10px;
+      left: 25px;
+    }
+
+    p.info-text {
+      color: #4C4C4C;
+      font-family: 'SupriaSans Regular';
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    .button {
+      border-radius: 50px;
+      border: 1px solid $green;
+
+      color: $green;
+      display: inline-block;
+
+      margin-top: 30px;
+
+      padding: 15px 25px;
+
+      font-family: 'SupriaSans Light';
+      font-size: 18px;
+
+      &:hover {
+        background: $green;
+        color: #FFF;
+      }
+    }
+
+    p.more-known {
+      margin: 30px 0;
+
+      font-family: "Jannon10Pro-Italic";
+      font-size: 16px;
+    }
+
+    .expandet-list {
+      margin-left: -60px;
+      margin-top: 20px;
+    }
+  }
+
   .lease-and-shared {
     margin-top: 40px;
     
@@ -30,9 +99,7 @@
       font-family: 'Jannon10Pro-Italic';
       font-size: 16px;
       line-height: 24px;  
-      margin-top: 50px;
       padding-top: 50px;
-      border-top: 1px solid $green;    
     }
 
     p.title {

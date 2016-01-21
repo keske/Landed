@@ -111,49 +111,7 @@ export class Ownership extends Component {
     return (
       <div className="container">
         <div className="row lease-and-shared">
-          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <p className="small-title-border">
-              service detail
-            </p>
-            <p className="title">
-              Shared Ownership
-            </p>
-          </div>
-
-          <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-            <p className="text">
-              Shared ownership splits a home purchase, but assigns exclusive living rights to one of the parties (the Resident Owner).  For the portion that the Resident Owner doesn’t own, he or she pays rent to the investor.
-            </p>
-
-            <p className="italic-block small-title">
-              A shared ownership arrangement also consists of two main parts:
-            </p>
-
-            <div className="list">
-              <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
-                <span className="list-number">1.</span>
-              </div>
-              <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
-                <p>
-                  <strong>A shared ownership agreement that splits the responsibilities of ownership.</strong>  The two parties hold the property on title as Tenants-In-Common. The ownership percentages between the two parties are usually calculated by how much they put in as down-payment.  Typically, all financials (paying the mortgage, insurance, repairs, but also receiving rent payments) are split according to ownership interest.  The Resident Owner is allowed to slowly purchase more of the property over time.
-                </p>
-              </div>
-            </div>
-
-            <div className="list">
-              <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
-                <span className="list-number">2.</span>
-              </div>
-              <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
-                <p>
-                  <strong>A lease to the Resident Owner.</strong> The two parties lease the property to the Resident Owner who receives all the typical living rights enjoyed by a homeowner.
-                </p>
-              </div>
-            </div>
-
-          </div>
-
-          <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-1 col-lg-offset-1">
+          <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <p className="ul-title">
               For Residents
             </p>
@@ -168,7 +126,9 @@ export class Ownership extends Component {
                 Have your money working sooner while sharing some of the financial risk.
               </li>
             </ul>
+          </div>
 
+          <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <p className="ul-title">
               For Investors
             </p>
