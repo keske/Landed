@@ -74,7 +74,10 @@
 
   h1 {
     color: #FFF;
-
+    font-size: 45px;
+    line-height: 41px;
+    font-family: 'Jannon10Pro';
+    
     margin: 120px 0 30px;
 
     @media (#{ $phone }) {
