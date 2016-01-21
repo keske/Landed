@@ -54,8 +54,6 @@ export class Quiz extends Component {
 
     const base = Rebase.createClass('https://dblanded.firebaseio.com');
 
-    console.log(req);
-
     base.push('users', {
       data: req,
       then() {
@@ -84,7 +82,9 @@ export class Quiz extends Component {
   }
 
   render() {
-    const { slider, email, location } = this.state;
+    const { slider, email, location, stage } = this.state;
+
+    console.log(location);
 
     // Get all USA states
     const data = require('./states');
@@ -153,7 +153,7 @@ export class Quiz extends Component {
                   </p>
                   <input type="text"
                     placeholder="Your email"
-                      onChange={ (event) => this.setState({ email: event.target.value }) }
+                    onChange={ (event) => this.setState({ email: event.target.value }) }
                   />
                 </div>
 
@@ -162,8 +162,8 @@ export class Quiz extends Component {
                     Where will the home be located?
                   </p>
                   <Select
-                    name="form-field-name"
-                    value="Alaska"
+                    name="form-field-location"
+                    value={ location || 'Select location' }
                     searchable={ false }
                     options={ states }
                     optionRenderer={ renderStateOption }
@@ -178,11 +178,11 @@ export class Quiz extends Component {
                   <Select
                     className="stage-style"
                     searchable={ false }
-                    name="form-field-name"
+                    name="form-field-stage"
                     options={ options }
                     optionRenderer={ renderOption }
                     valueRenderer={ renderOption }
-                    value="Early Search Without Broker"
+                    value={ stage || 'Select stage' }
                     onChange={ (val) => this.setState({ stage: val }) }
                   />
                 </div>
