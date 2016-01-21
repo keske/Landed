@@ -3,7 +3,8 @@
 
 :local(.styles) {
   position: relative;
-  background: $light-green;
+  background: #F8F8F8;
+  // background: $light-green;
 
   padding: 60px 0;
   border-bottom: 1px solid rgba(255, 255, 255, .43);
@@ -14,7 +15,7 @@
     font-family: 'Jannon10Pro-Italic';
     font-size: 26px;
 
-    color: #FFF;
+    color: $light-green;
 
     @media (#{$phone}) {
       margin-bottom: 50px;    
@@ -27,7 +28,7 @@
     font-family: 'SupriaSans Regular';
     font-size: 23px;
 
-    color: #FFF;
+    color: $light-green;
   }
 
   ul {
@@ -41,7 +42,7 @@
       font-size: 16px;
       line-height: 20px;
 
-      color: #FFF;
+      color: $light-green;
       
       margin-left: -40px;
       margin-bottom: 20px;
