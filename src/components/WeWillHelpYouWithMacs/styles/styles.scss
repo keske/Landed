@@ -1,0 +1,143 @@
+@import '../../../containers/App/styles/vars';
+@import '../../../containers/App/styles/screens';
+
+:local(.styles) {
+  position: relative;
+  overflow-y: hidden;
+  padding: 60px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .43);
+
+  .right-mac {
+    width: 658px;
+    position: relative;
+
+    @media (min-width: 1200px) {
+      top: -260px;
+      right: -440px;
+    }
+
+    @media (min-width: 992px) and (max-width: 1200px) {
+      top: -260px;
+      right: -400px;
+    }
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+
+  }
+
+  .enlist {
+
+  }
+
+  .formalize {
+    margin-top: -120px;
+    margin-bottom: 100px;
+    padding-top: 80px;
+
+    border-top: 1px solid rgba(0, 0, 0, .1);
+
+    @media (max-width: 992px) {
+      margin-top: 120px;
+    }
+  }
+
+  .left-mac {
+    width: 672px;
+    position: absolute;
+
+    @media (min-width: 1200px) {
+      margin-top: -10px;
+      margin-left: -40px;
+    }
+
+    @media (min-width: 992px) and (max-width: 1200px) {
+      margin-top: 20px;
+      margin-left: -60px;
+    }
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+
+  }
+
+  .phone-mac {
+    padding: 10px 0 40px;
+
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  p.title {
+    margin-bottom: 60px;
+
+    font-family: 'Jannon10Pro-Italic';
+    font-size: 24px;
+    line-height: 30px;
+
+    color: $light-green;
+  }
+
+  p.list-title {
+    margin-bottom: 40px;
+
+    font-family: 'SupriaSans Regular';
+    font-size: 32px;
+
+    color: $light-green;
+  }
+
+  p.list-intro {
+    font-family: 'Jannon10Pro-Italic';
+    font-size: 16px;
+    line-height: 20px;
+    color: $light-green;
+
+    margin-top: -40px;
+  }
+
+  ul {
+    
+    margin-top: 30px;
+
+    li {
+      font-family: 'SupriaSans Regular';
+      font-size: 16px;
+      line-height: 20px;
+      color: #4C4C4C;
+      
+      margin-top: 20px;
+      margin-left: -20px;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .button {
+    border: 1px solid $light-green;
+    border-radius: 33px;
+
+    color: $light-green;
+    font-size: 18px;
+
+    background: #FFF;
+
+    padding: 14px 50px;
+    position: relative;
+    top: 30px;
+
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .11);
+
+    &:hover {
+      background: $light-green;
+      color: #FFF;
+    }
+  }
+}

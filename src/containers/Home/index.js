@@ -10,11 +10,7 @@ import * as actionCreators from 'actions/app';
 import SmartLoading from 'components/SmartLoading';
 import { TopImage } from 'components/TopImage';
 import { Subscribe } from 'components/Subscribe';
-import { WeWillHelpYou } from 'components/WeWillHelpYou';
-// import { Toggle } from 'components/Toggle';
-// import { YouCan } from 'components/YouCan';
-// import { ImageBlock } from 'components/ImageBlock';
-// import { Shared } from 'components/Shared';
+import { WeWillHelpYouWithMacs } from 'components/WeWillHelpYouWithMacs';
 
 const metaData = {
   title: 'Landed. Smarter ownership, for everyone.',
@@ -49,18 +45,20 @@ export class Home extends Component {
   render() {
     const { pageLoaded } = this.state;
 
-    function renderContent() {
+    const renderContent = () => {
       return (
           <section>
-            <SmartLoading animation="fade-in"
-                          speed={700}
-                          wait={1700}>
+            <SmartLoading
+              animation="fade-in"
+              speed={700}
+              wait={1700}
+            >
               <Subscribe />
             </SmartLoading>
-            <WeWillHelpYou />
+            <WeWillHelpYouWithMacs { ...this.props } />
           </section>
       );
-    }
+    };
 
     return (
       <section>
