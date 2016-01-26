@@ -11,7 +11,7 @@ import { QuizContainer } from 'containers/Quiz';
 
 export default (
   <Route path="/" component={ App }>
-    <IndexRoute component={Home} />
+    <IndexRoute component={ Home } />
     <Route path="about" component={ About } />
     <Route path="services" component={ Services } />
     <Route path="join" component={ Join } />

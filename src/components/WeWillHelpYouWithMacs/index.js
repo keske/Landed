@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SmartLoading from '../SmartLoading';
 
 /* component styles */
 import { styles } from './styles/styles.scss';
@@ -58,17 +59,21 @@ export class WeWillHelpYouWithMacs extends Component {
                 onClick={() => {
                   this.props.showQuiz(true);
                   window.scrollTo(0, 0);
-                }
-                }
+                }}
               >
                 get started
               </span>
             </div>
-            <div
-              className="right-mac"
+            <SmartLoading animation="fade-in"
+              move="from-right-to-left"
+              distance={30}
+              speed={1500}
+              wait={1400}
             >
-              <img src={macs[0]} />
-            </div>
+              <div className="right-mac">
+                <img src={macs[0]} />
+              </div>
+            </SmartLoading>
           </div>
 
           <div className="row formalize">
@@ -77,11 +82,16 @@ export class WeWillHelpYouWithMacs extends Component {
             >
               <img src={macs[1]} />
             </div>
-            <div
-              className="left-mac"
+            <SmartLoading animation="fade-in"
+              move="from-left-to-right"
+              distance={30}
+              speed={1500}
+              wait={2000}
             >
-              <img src={macs[1]} />
-            </div>
+              <div className="left-mac">
+                <img src={macs[1]} />
+              </div>
+            </SmartLoading>
             <div
               className="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-5 col-lg-offset-5"
             >
@@ -106,8 +116,7 @@ export class WeWillHelpYouWithMacs extends Component {
                 onClick={() => {
                   this.props.showQuiz(true);
                   window.scrollTo(0, 0);
-                }
-                }
+                }}
               >
                 get started
               </span>
