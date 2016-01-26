@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router';
+import { Route, IndexRoute } from 'react-router';
 
 /* containers */
 import { App } from 'containers/App';
@@ -11,7 +11,7 @@ import { QuizContainer } from 'containers/Quiz';
 
 export default (
   <Route path="/" component={ App }>
-    <Route path="home" component={ Home } />
+    <IndexRoute component={Home} />
     <Route path="about" component={ About } />
     <Route path="services" component={ Services } />
     <Route path="join" component={ Join } />
