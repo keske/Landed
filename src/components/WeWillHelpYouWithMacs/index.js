@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import SmartLoading from '../SmartLoading';
 
 /* component styles */
@@ -16,6 +17,28 @@ export class WeWillHelpYouWithMacs extends Component {
   };
 
   render() {
+    const renderButton = () => (
+      <section>
+        <div className="hidden-md hidden-lg">
+          <Link to="quiz">
+            <span className="button">
+              get started
+            </span>
+          </Link>
+        </div>
+        <div className="hidden-xs hidden-sm">
+          <span className="button"
+            onClick={() => {
+              this.props.showQuiz(true);
+              window.scrollTo(0, 0);
+            }}
+          >
+            get started
+          </span>
+        </div>
+      </section>
+    );
+
     return (
       <section className={ `${styles}` }>
         <div className="container">
@@ -55,14 +78,7 @@ export class WeWillHelpYouWithMacs extends Component {
                   Get the tools you need to outline, manage and communicate the investment.
                 </li>
               </ul>
-              <span className="button"
-                onClick={() => {
-                  this.props.showQuiz(true);
-                  window.scrollTo(0, 0);
-                }}
-              >
-                get started
-              </span>
+              { renderButton() }
             </div>
             <SmartLoading animation="fade-in"
               move="from-right-to-left"
@@ -112,17 +128,9 @@ export class WeWillHelpYouWithMacs extends Component {
                   Have us enforce the rules so you can protect your relationship.
                 </li>
               </ul>
-              <span className="button"
-                onClick={() => {
-                  this.props.showQuiz(true);
-                  window.scrollTo(0, 0);
-                }}
-              >
-                get started
-              </span>
+              { renderButton() }
             </div>
           </div>
-
         </div>
       </section>
     );
