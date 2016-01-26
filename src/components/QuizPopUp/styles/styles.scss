@@ -2,7 +2,7 @@
 @import '../../../containers/App/styles/screens';
 
 :local(.styles) {
-  position: absolute;
+  position: fixed;
   z-index: 7;
 
   width: 100%;

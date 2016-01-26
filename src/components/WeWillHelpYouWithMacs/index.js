@@ -28,10 +28,7 @@ export class WeWillHelpYouWithMacs extends Component {
         </div>
         <div className="hidden-xs hidden-sm">
           <span className="button"
-            onClick={() => {
-              this.props.showQuiz(true);
-              window.scrollTo(0, 0);
-            }}
+            onClick={ () => this.props.showQuiz(true) }
           >
             get started
           </span>
