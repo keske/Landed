@@ -135,10 +135,10 @@ export class Quiz extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offet-12 header">
               <p className="title"
-                dangerouslySetInnerHTML={{ __html: 'Join Landed\'s home buyer waitlist' }}
+                dangerouslySetInnerHTML={{ __html: 'Join Landed\'s waitlist' }}
               />
               <p className="info"
-                dangerouslySetInnerHTML={{ __html: 'We\'re adding new users every few weeks and we\'ll be in touch before you know it.' }}
+                dangerouslySetInnerHTML={{ __html: 'We\'re adding new users every week and we\'ll be in touch before you know it.' }}
               />
             </div>
           </div>

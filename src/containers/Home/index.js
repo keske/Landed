@@ -11,6 +11,7 @@ import SmartLoading from 'components/SmartLoading';
 import { TopImage } from 'components/TopImage';
 import { Subscribe } from 'components/Subscribe';
 import { WeWillHelpYouWithMacs } from 'components/WeWillHelpYouWithMacs';
+import { HowItWorks } from 'components/HowItWorks'
 
 const metaData = {
   title: 'Landed. Smarter ownership, for everyone.',
@@ -55,7 +56,8 @@ export class Home extends Component {
             >
               <Subscribe />
             </SmartLoading>
-            <WeWillHelpYouWithMacs { ...this.props } />
+            {/*<WeWillHelpYouWithMacs { ...this.props } />*/}
+            <HowItWorks />
           </section>
       );
     };

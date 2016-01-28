@@ -48,11 +48,11 @@ export class HowItWorks extends Component {
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
               <img src={ icons[2] } />
               <p className="paragraph green">
-                3. Expert advisor
+                3. On-going mediation
 
               </p>
               <p className="paragraph">
-                Landed stays engaged to enforce the rules you've set and help support new homeowners with their investment.<br /><br />We'll help make sure you don't overpay for insurance, taxes or major home services.
+                Landed stays engaged to enforce the rules you've set and partner with you as circumstances change.<br /><br />We'll make sure you can keep your investment and relationship separate.
               </p>
             </div>
 
@@ -61,15 +61,14 @@ export class HowItWorks extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
               <span className="special">
-                Concierge support for <span className="free">$199</span>
+                <br />Concierge support for <span className="free">$99 + $9/month</span>
               </span>
               <span className="price">
                 No fees until your documents are properly recorded.<br />Earn potential tax deductions, get investment protection and save thousands on legal fees. 
               </span>
-              {/*<hr className="price" />*/}
-              <a href="#join" target="_blank">
+              <a href="services">
                 <span className="button">
-                  Sign up to get started
+                  Learn more
                 </span>
              </a>
             </div>

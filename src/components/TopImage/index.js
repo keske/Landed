@@ -68,7 +68,7 @@ export class TopImage extends Component {
                 <div className="group">
                   <span className="icon" />
                   <p>
-                    Simple, standard shared ownership structures to split your investment with family or trusted partners.
+                    All the tools you need to get down payment help from family and friends.
                   </p>
                 </div>
 
@@ -82,7 +82,7 @@ export class TopImage extends Component {
                 <div className="group">
                   <span className="icon" />
                   <p>
-                    Your favorite home partner from search to sale.
+                    Everyone needs help to buy their first home.  We help you do it right.
                   </p>
                 </div>
 
@@ -97,13 +97,13 @@ export class TopImage extends Component {
                 <div className="hidden-md hidden-lg">
                   <Link to="quiz">
                     <span className="button">
-                      I’m ready for home
+                      Get Started Today
                     </span>
                   </Link>
                 </div>
                 <div className="hidden-xs hidden-sm">
                   <span className="button" onClick={ () => this.props.showQuiz(true) }>
-                    I’m ready for home
+                    Get Started Today
                   </span>
                 </div>
               </SmartLoading>

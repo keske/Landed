@@ -37,6 +37,8 @@ export class Footer extends Component {
                 <Link to="about">
                   Discover how.
                 </Link>
+                <br />
+                Landed is not a law firm and cannot provide legal advice. Landed is everything else you need to make getting help from family and friends simple.
               </p>
             </div>
           </div>

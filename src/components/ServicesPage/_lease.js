@@ -78,15 +78,6 @@ export class Lease extends Component {
             Landed Support
           </p>
           <div className="list">
-            <span className="icon un-done" />
-            <span className="text">
-              <p>
-                Help finding you an investor
-                 <i>coming soon</i>
-              </p>
-            </span>
-          </div>
-          <div className="list">
             <span className="icon" />
             <span className="text">
               <p>
@@ -98,7 +89,15 @@ export class Lease extends Component {
             <span className="icon" />
             <span className="text">
               <p>
-                On-going support and independent advisor
+                Track payments and estimate taxes
+              </p>
+            </span>
+          </div>
+          <div className="list">
+            <span className="icon" />
+            <span className="text">
+              <p>
+                On-going support and independent mediator
               </p>
             </span>
           </div>
@@ -119,7 +118,6 @@ export class Lease extends Component {
               </li>
               <li>
                 Invest in your space knowing you'll own it.
-                { /* ' */ }
               </li>
               <li>
                 No rent premiums or confusing option fees found in many rent-to-own contracts.

@@ -89,7 +89,15 @@ export class Loan extends Component {
             <span className="icon" />
             <span className="text">
               <p>
-                On-going support and independent adviser
+                Track payments and estimate taxes
+              </p>
+            </span>
+          </div>
+          <div className="list">
+            <span className="icon" />
+            <span className="text">
+              <p>
+                On-going support and independent mediator
               </p>
             </span>
           </div>
