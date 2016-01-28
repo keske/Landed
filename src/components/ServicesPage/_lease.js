@@ -137,7 +137,7 @@ export class Lease extends Component {
                 A trusted, committed resident who takes care of your investment.
               </li>
               <li>
-                Full control of your investment.
+                Only one party on title.
               </li>
             </ul>
           </div>

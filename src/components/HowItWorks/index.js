@@ -30,7 +30,7 @@ export class HowItWorks extends Component {
 
               </p>
               <p className="paragraph">
-                Pay your family attorney for advice and review, not word processing.<br /><br />Landed works with top lawyers to create, register and update re-usable legal forms, and passes the savings on to you.
+                Landed works with top lawyers to create, register and update re-usable legal forms, and passes the savings on to you.<br /><br />Pay your attorney for advice and review, not word processing.
               </p>
             </div>
 
@@ -41,7 +41,7 @@ export class HowItWorks extends Component {
 
               </p>
               <p className="paragraph">
-                Landed helps you assess prices, set-up recurring payments, and log everything to keep tax filings simple.<br /><br />So easy you can set it & forget it, keeping your relationship smooth.
+                Landed helps you assess prices, set-up recurring payments, and log everything to keep tax filings simple.<br /><br />So easy you can set it and forget it, minimizing potential conflict.
               </p>
             </div>
 

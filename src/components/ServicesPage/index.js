@@ -47,13 +47,13 @@ export class ServicesPage extends Component {
     const { loanFamilyExpand, leaseExpand, ownershipExpand } = this.state;
 
     const intro = {
-      title: 'However you choose to partner with friends and family -- Landed is here to help.',
-      text: "You decide on a structure (either a down payment loan, co-investment, or a lease-to-own agreement) and Landed takes care of the rest.",
+      title: 'Want to partner with others to buy a home? Landed is here to help.',
+      text: "You decide on a structure (either a down payment loan, co-investment, or a lease-to-own agreement), and Landed takes care of the rest.",
       image: 'services',
     };
 
     const imageBlockProps = {
-      text: 'Let Landed take away<br />all the headaches<br />with getting financial <br />support',
+      text: 'Landed eliminates the <br />anxieties of<br />getting financial <br />support',
       imageClass: 'services',
     };
 
@@ -96,7 +96,7 @@ export class ServicesPage extends Component {
                   className={ `button ${ loanFamilyExpand && 'hide' }` }
                   onClick={ this.showLoenFamily }
                 >
-                  details and examples
+                  Details and Examples
                 </span>
 
                 <p className={`more-known ${!loanFamilyExpand && 'hide'}`}>
@@ -138,18 +138,18 @@ export class ServicesPage extends Component {
               </div>
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <p className="info-text">
-                  Shared ownership splits a home purchase, but assigns exclusive living rights to one of the parties (the Resident Owner). For the portion that the Resident Owner doesn’t own, he or she pays rent to the investor. Properly structured, it can truly be a win-win for all involved.
+                  Shared ownership splits a home purchase, but assigns exclusive living rights to one person (the Resident Owner). For the portion that the Resident Owner doesn’t own, he or she pays rent to the investor. Properly structured, it can truly be a win-win for all involved.
                 </p>
 
                 <span
                   className={ `button ${ ownershipExpand && 'hide' }` }
                   onClick={ this.showOwnersip }
                 >
-                  details and examples
+                  Details and Examples
                 </span>
 
                 <p className={`more-known ${!ownershipExpand && 'hide'}`}>
-                  More typically known as a lease-option agreement, our contract involves two main parts:
+                  A shared ownership agreement involves a number of main parts:
                 </p>
                 <div className={`expandet-list list ${ !ownershipExpand && 'hide'}`}>
                   <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
@@ -157,7 +157,7 @@ export class ServicesPage extends Component {
                   </div>
                   <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
                     <p>
-                      <strong>A shared ownership agreement that splits the responsibilities of ownership.</strong>  The two parties hold the property on title as Tenants-In-Common. The ownership percentages between the two parties are usually calculated by how much they put in as down-payment.  Typically, all financials (paying the mortgage, insurance, repairs, but also receiving rent payments) are split according to ownership interest.  The Resident Owner is allowed to slowly purchase more of the property over time.
+                      <strong>A shared ownership agreement that splits the responsibilities of ownership.</strong>  The two parties hold the property on title as Tenants-In-Common. The ownership percentages between the two parties are usually calculated by how much they put in as down-payment.  Typically, all financials (paying the mortgage, insurance, repairs) are split according to ownership interest.  The Resident Owner is even allowed to slowly purchase more of the property over time.
                     </p>
                   </div>
                 </div>
@@ -187,14 +187,14 @@ export class ServicesPage extends Component {
               </div>
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <p className="info-text">
-                  Typical rent-to-own contracts have a bad reputation. Traditionally, an upfront option fee is paid as well as a monthly rent premium that eventually goes towards an inflated home purchase price. Sadly, the reality is that many buyers never exercise their right to buy and all those additional fees go straight to the landlord’s pocket. We don’t think that’s fair.
+                  Typical rent-to-own contracts have a bad reputation. Typically, a large upfront fee and excessively high rent is paid to really pressure the resident into buying. Sadly, the reality is that many buyers never exercise their right to buy and all those additional fees go straight to the landlord’s pocket. We don’t think that’s fair.
                 </p>
 
                 <span
                   className={ `button ${ leaseExpand && 'hide' }` }
                   onClick={ this.showLease }
                 >
-                  details and examples
+                  Details and Examples
                 </span>
 
                 <p className={`more-known ${!leaseExpand && 'hide'}`}>

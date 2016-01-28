@@ -30,7 +30,7 @@ export class InvestmentSurvey extends Component {
     return (
       <section>
         <DocumentMeta { ...metaData } />
-        <InvestmentPropertySurvey { ...this.props } />
+        <InvestmentPropertySurvey />
       </section>
     );
   }

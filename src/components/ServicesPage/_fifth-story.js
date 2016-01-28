@@ -236,7 +236,7 @@ export class FifthStory extends Component {
                 Landed helps remind Mikael about his monthly interest obligations and makes it easy for him to pay.
               </p>
               <p>
-                Landed makes sure everyone got all the tax deductions to which they are entitled.
+                Landed makes sure everyone gets all the tax deductions to which they are entitled.
               </p>
             </div>
           </div>
