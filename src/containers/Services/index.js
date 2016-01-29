@@ -26,6 +26,11 @@ const metaData = {
   dispatch => bindActionCreators(actionCreators, dispatch)
 )
 export class Services extends Component {
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <section>

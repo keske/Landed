@@ -25,6 +25,10 @@
         transition: 3s;
         opacity: 0;
       }
+
+      @media (#{ $phone }) {
+        height: 580px;
+      }
     }
   }
   
