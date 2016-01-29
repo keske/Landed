@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import R from 'ramda';
 import Select from 'react-select';
+import GoogleAnalytics from 'analytics';
 import $ from 'jquery';
 import Rebase from 're-base';
 
@@ -221,6 +222,9 @@ export class Quiz extends Component {
                 next
                 <span className="next-icon" />
               </button>
+              {
+                slider === MAX_SLIDERS && <GoogleAnalytics id="UA-72154127-1" set="event" />
+              }
             </div>
           </div>
         </div>
