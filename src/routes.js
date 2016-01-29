@@ -13,10 +13,10 @@ import { QuizContainer } from 'containers/Quiz';
 export default (
   <Route path="/" component={ App }>
     <IndexRoute component={ Home } />
-    <Route path="about" component={ About } />
-    <Route path="services" component={ Services } />
-    <Route path="join" component={ Join } />
-    <Route path="quiz" component={ QuizContainer } />
+    <Route path="/about" component={ About } />
+    <Route path="/services" component={ Services } />
+    <Route path="/join" component={ Join } />
+    <Route path="/quiz" component={ QuizContainer } />
     {/*<Route path='survey' component={ InvestmentSurvey } />*/}
     <Route status={ 404 } path="*" component={ Home } />
   </Route>
