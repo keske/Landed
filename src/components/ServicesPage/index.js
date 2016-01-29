@@ -182,7 +182,7 @@ export class ServicesPage extends Component {
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                 <span className="lease-icon" />
                 <p className="title">
-                  Lease -<br />To-Own
+                  Lease-<br />To-Own
                 </p>
               </div>
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
