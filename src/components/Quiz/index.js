@@ -10,7 +10,7 @@ import { isEmailValid } from '../../utils/validate.js';
 /* component styles */
 import { styles } from './styles/styles.scss';
 
-const MAX_SLIDERS = 2;
+const MAX_SLIDERS = 3;
 
 export class Quiz extends Component {
   constructor(props) {
@@ -83,8 +83,6 @@ export class Quiz extends Component {
 
   render() {
     const { slider, email, location, stage } = this.state;
-
-    console.log(location);
 
     // Get all USA states
     const data = require('./states');
@@ -166,6 +164,7 @@ export class Quiz extends Component {
                     value={ location || 'Select location' }
                     searchable={ false }
                     options={ states }
+                    valueRenderer={ renderOption }
                     optionRenderer={ renderStateOption }
                     onChange={ (val) => this.setState({ location: val }) }
                   />
@@ -176,9 +175,9 @@ export class Quiz extends Component {
                     What stage of the home buying <br className="show-xs hidden-sm hidden-md hidden-lg" />process are we?
                   </p>
                   <Select
+                    name="form-field-stage"
                     className="stage-style"
                     searchable={ false }
-                    name="form-field-stage"
                     options={ options }
                     optionRenderer={ renderOption }
                     valueRenderer={ renderOption }
@@ -187,6 +186,11 @@ export class Quiz extends Component {
                   />
                 </div>
 
+                <div className="slide col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                  <p className="thanks-label">
+                    Thank you!
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -194,7 +198,7 @@ export class Quiz extends Component {
           <div className="row nav">
             <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-left">
               <div
-                className={ `button previous ${ slider === 0 && 'hide' }` }
+                className={ `button previous ${ (slider === 0 || slider === MAX_SLIDERS) && 'hide' }` }
                 onClick={ () => this.backSlider() }
               >
                 <span className="previous-icon"/>
@@ -203,7 +207,7 @@ export class Quiz extends Component {
             </div>
             <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right">
               <button
-                className="button next"
+                className={ `button next ${ slider === MAX_SLIDERS && 'hide' }` }
                 onClick={ () =>
                   slider === MAX_SLIDERS
                     ? this.handleRequest()
@@ -215,8 +219,6 @@ export class Quiz extends Component {
                 }
               >
                 next
-                { /* slider !== MAX_SLIDERS && 'next'
-                slider === MAX_SLIDERS && 'let’s get started' */ }
                 <span className="next-icon" />
               </button>
             </div>

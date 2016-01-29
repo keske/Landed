@@ -173,6 +173,9 @@
         .slide:nth-child(3) {
           display: none;
         }
+        .slide:nth-child(4) {
+          display: none;
+        }
       }
 
       &.position-1 {
@@ -185,6 +188,9 @@
         .slide:nth-child(3) {
           display: none;
         }
+        .slide:nth-child(4) {
+          display: none;
+        }
       }
 
       &.position-2 {
@@ -195,6 +201,24 @@
           display: none;
         }
         .slide:nth-child(3) {
+          display: block;
+        }
+        .slide:nth-child(4) {
+          display: none;
+        }
+      }
+
+      &.position-3 {
+        .slide:nth-child(1) {
+          display: none;
+        }
+        .slide:nth-child(2) {
+          display: none;
+        }
+        .slide:nth-child(3) {
+          display: none;
+        }
+        .slide:nth-child(4) {
           display: block;
         }
       }
@@ -222,6 +246,17 @@
             margin-top: 20px;
             margin-bottom: -10px;
           }
+        }
+
+        p.thanks-label {
+          font-family: 'Jannon10Pro-Italic';
+          font-weight: normal;
+          font-size: 38px;
+
+          color: $green;
+          line-height: 26px;
+
+          margin-top: 40px;
         }
 
         input[type="text"] {
@@ -357,19 +392,15 @@
   // }
 
   ::-webkit-input-placeholder {
-    // color: rgba(0, 153, 105, .33);
     color: $green;
   }
   :-moz-placeholder {
-    // color: rgba(0, 153, 105, .33);
     color: $green;
   }
   ::-moz-placeholder {
-    // color: rgba(0, 153, 105, .33);
     color: $green;
   }
   :-ms-input-placeholder {
-    // color: rgba(0, 153, 105, .33);
     color: $green;
   }
 }

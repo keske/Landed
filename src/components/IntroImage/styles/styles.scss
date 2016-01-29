@@ -106,6 +106,7 @@
 
     @media (#{ $phone }) {
       font-size: 24px;
+      line-height: 28px;
       width: 90%;
       
     }
@@ -128,9 +129,7 @@
     @media (#{ $phone }) {
       font-size: 16px;
       width: 90%;
-      line-height:18px;
-
-
+      line-height: 18px;
     }
   }
 }

@@ -107,6 +107,10 @@
     .expandet-list {
       margin-left: -60px;
       margin-top: 20px;
+
+      @media (#{ $phone }) {
+        margin-left: -15px;
+      }
     }
   }
 
