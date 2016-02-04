@@ -212,6 +212,9 @@
     @media (#{ $phone }) {
       display: none;
     }
+    @media (#{ $tablet }) {
+      display: none;
+    }
   
     p.title {
       font-family: 'Jannon10Pro-Bold';
@@ -267,6 +270,9 @@
         @media (#{ $phone }) {
           display: none;
         }
+        @media (#{ $tablet }) {
+          display: none;
+        }
       }
       p.field-name-val {
         font-family: 'SupriaSans Bold';
@@ -277,6 +283,9 @@
         margin-top: 40px;
 
         @media (#{ $phone }) {
+          display: none;
+        }
+        @media (#{ $tablet }) {
           display: none;
         }
       }
@@ -363,6 +372,9 @@
     margin-top: 50px;
 
     @media (#{ $phone }) {
+      display: none;
+    }
+    @media (#{ $tablet }) {
       display: none;
     }
 
@@ -556,7 +568,7 @@
         margin-top: 70px;
 
         p {
-          font-family: 'Jannon10Pro-Italic';
+          font-family: 'Jannon10Pro';
           font-size: 22px;
           line-height: 34px;
 

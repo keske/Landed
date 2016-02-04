@@ -71,6 +71,7 @@ export class Header extends Component {
           Investment oportuninties
         </Link> */ }
         <a href="https://landed.zendesk.com"
+              target = "_blank"
               activeClassName="active">
           F.A.Q.
         </a>

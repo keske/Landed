@@ -7,22 +7,22 @@ export class FirstStory extends Component {
         <div className="row">
           <div className="col-xs-12 col-sm-12 col-md-7 col-lg-7">
             <p>
-              <strong>Diego</strong> is a general contractor in Portland.  He lives alone with his young son Robert who is in elementary school.
+              <strong>Diego</strong> is a general contractor in Portland.  He lives alone with his young son Robert who is in pre-school.
             </p>
             <p>
-              Diego feels uncomfortable putting 3.5% down for a house, but is tired of being evicted for 'landlord-use' or being forced to pay massive rent increases.
+              Diego is tired of being evicted for 'landlord-use' or being forced to pay massive rent increases.
             </p>
             <p>
-              Diego really wants to invest in his home and has the skills to add a lot of value to the property.
+              Diego has enough for a 20% down payment, but wants to buy a fixer-upper and really invest in his home.
             </p>
             <p>
-              Diego has the idea to rent a fixer-upper from an investor, use his savings to put work into it, and then buy it back when he's ready. { /* ' */ }
+              Diego doesn't have enough money for both, so he asks his boss for 10% of the house price in exchange for 25% of the appreciation.
             </p>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <div className="financial-info">
               <p className="title">
-                Diego's Financial Information { /* ' */ }
+                Diego's Financial Information
               </p>
 
               <div className="row">
@@ -48,7 +48,7 @@ export class FirstStory extends Component {
                   Current Savings
                 </div>
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 value">
-                  $15,000
+                  $75,000
                 </div>
               </div>
 
@@ -81,10 +81,10 @@ export class FirstStory extends Component {
                 &nbsp;
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-title">
-                FHA Mortgage
+                FHA Mortgage (10% down)
               </div>
               <div className="col-xs-3 col-sm-3 col-md-4 col-lg-4 lease-title">
-                Lease Until You Buy
+                Mortgage with $38K debt-free help
               </div>
             </div>
 
@@ -93,10 +93,10 @@ export class FirstStory extends Component {
                 Monthly Loan Payments
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $2,000
+                $1,835
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
+                $1,600
               </div>
             </div>
 
@@ -105,10 +105,10 @@ export class FirstStory extends Component {
                 Interest Paid
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $1,545
+                $1,415
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
+                $1,211
               </div>
             </div>
 
@@ -117,10 +117,10 @@ export class FirstStory extends Component {
                 Principal Paid
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $455
+                $420
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
+                $389
               </div>
             </div>
 
@@ -144,19 +144,7 @@ export class FirstStory extends Component {
                 $555
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Rent Owed
-              </div>
-              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                none
-              </div>
-              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $2000
+                $555
               </div>
             </div>
 
@@ -167,10 +155,10 @@ export class FirstStory extends Component {
                 Total Out-of-Pocket
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $2,870
+                $2,705
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $2,000
+                $2,155
               </div>
             </div>
             <div className="row">
@@ -178,10 +166,10 @@ export class FirstStory extends Component {
                 Expected Tax Deduction
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $(273)
+                $(250)
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
+                $(214)
               </div>
             </div>
             <div className="row">
@@ -189,10 +177,10 @@ export class FirstStory extends Component {
                 Paying Off Mortgage
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $(455)
+                $(420)
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
+                $(389)
               </div>
             </div>
 
@@ -203,10 +191,10 @@ export class FirstStory extends Component {
                 Net Cost Of Home
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $2,142
+                $2,035
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $2,000
+                $1,552
               </div>
             </div>
 
@@ -217,19 +205,16 @@ export class FirstStory extends Component {
                 How Landed Helps
               </p>
               <p>
-                Landed helps structure the contract between Diego and his investor to keep both parties honest.
-              </p>
-              <p>
-                Landed makes sure all the bills are paid on time, and helps deposit the rent directly into the investor's account. { /* ' */ }
+                Landed helps structure the contract between Diego and his boss to keep both parties protected.
               </p>
               <p>
                 Landed makes sure everyone gets all the tax deductions to which they are entitled.
               </p>
               <p>
-                Landed fairly assesses the rent every year based on the original home price and growth in the neighborhood.
+                Landed fairly assesses the buy-back price based on the original home price and growth in the neighborhood.
               </p>
               <p>
-                Landed fairly assesses the buy-out price based on the original home price and growth in the neighborhood.
+                Landed helps Diego with the mechanics of buying back his boss' investment over time.
               </p>
             </div>
           </div>
@@ -237,13 +222,13 @@ export class FirstStory extends Component {
         <div className="row sign">
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
             <p>
-              Within 5 years, Diego will have enough for a large down-payment.
+              After two years and $35,000 of work, Diego has improved the value of the property to $500,000. At that point, he refinances the home and gets an additional $70,000 in his pocket.
             </p>
             <p>
-              Diego pays a fair price that doesn’t include all the work he's put into his home out of his own pocket.
+              Landed tells him that based on the Case-Shiller index, property prices in Portland have increase 10% over the last two years. This means that without the work, his house would have increased in value by $40,000. He promised his boss 25% of that.
             </p>
             <p>
-              The investor makes a similar return to his other rental investments without as much work.
+              Diego therefore pays his boss $38,000 back plus $10,000. Both Diego and his boss end up better off.
             </p>
           </div>
         </div>

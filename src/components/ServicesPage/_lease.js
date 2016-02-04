@@ -5,7 +5,21 @@ import { FirstStory } from './_first-story';
 import { SecondStory } from './_second-story';
 
 const RENTAL = [{
-  prop: 'Base Rent',
+  prop: 'Investment Percentage',
+  val: '10% (half of the down payment).',
+}, {
+  prop: 'Shared Appreciation / Depreciation',
+  val: '25% of the change in home value (up or down).',
+}, {
+  prop: 'Expiration',
+  val: '5 years. Homeowner must then refinance and pay-off the investment.',
+}, {
+  prop: 'Investor Protection',
+  val:  'Can force a sale in the case of divorce, intentional value destruction, failure to pay home costs.',
+}, {
+  prop: 'Repair Handling',
+  val: 'Homeowner handles all repairs.',
+/*  prop: 'Base Rent',
   val: 'Market rent.',
 }, {
   prop: 'Rent Discount/Premium',
@@ -22,17 +36,18 @@ const RENTAL = [{
 }, {
   prop: 'Repair Handling',
   val: 'Resident pays for minor repairs.  Major repairs paid by investor.',
+*/
 }];
 
 const PURCHASE = [{
-  prop: 'Purchase Timeline',
-  val: 'Can purchase after 2 years with 90 days notice.',
+  prop: 'Buy-Back Timeline',
+  val: 'Can buy-back any amount at any time, after 2 years.',
 }, {
-  prop: 'Purchase Price',
-  val: 'Purchase price based on local price index.',
+  prop: 'Early Buy-Back Price',
+  val: 'Buy-back price based on local price index.',
 }, {
-  prop: 'Minimum Purchase Price',
-  val: 'No lower than 90% of original purchase price.',
+  prop: 'Minimum Early Buy-Back Price',
+  val: 'No lower than the original investment amount.',
 }];
 
 const diego = require('./files/diego.jpg');
@@ -89,7 +104,7 @@ export class Lease extends Component {
             <span className="icon" />
             <span className="text">
               <p>
-                Track payments and estimate taxes
+                Track buy-out price and estimate taxes
               </p>
             </span>
           </div>
@@ -114,13 +129,13 @@ export class Lease extends Component {
             </p>
             <ul>
               <li>
-                Live like a homeowner with no fear of landlord eviction.
+                Become a homeowner without as much debt.
               </li>
               <li>
-                Invest in your space knowing you'll own it.
+                No additional monthly payments.
               </li>
               <li>
-                No rent premiums or confusing option fees found in many rent-to-own contracts.
+                Accept help without asking for a gift; avoid estate and gift taxes.
               </li>
             </ul>
           </div>
@@ -131,13 +146,13 @@ export class Lease extends Component {
             </p>
             <ul>
               <li>
-                Simple rental investment with tax advantages and simple access to financing.
+                Co-invest in property with a committed resident.
               </li>
               <li>
-                A trusted, committed resident who takes care of your investment.
+                Avoid co-signing a mortgage or complications from splitting expenses.
               </li>
               <li>
-                Only one party on title.
+                Securely help someone you care about without a large gift.
               </li>
             </ul>
           </div>
@@ -159,7 +174,7 @@ export class Lease extends Component {
           <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 terms-table">
             <div className="col-xs-12 col-sm-5 col-md-5 col-lg-5 left-side">
               <p className="field-name-prop">
-                Rental Agreement
+                Option Terms
               </p>
             </div>
             <div className="col-xs-12 col-sm-7 col-md-7 col-lg-7 right-side">
@@ -171,7 +186,7 @@ export class Lease extends Component {
 
             <div className="col-xs-12 col-sm-5 col-md-5 col-lg-5 left-side">
               <p className="field-name-prop">
-                Purchase Option
+                Buy-Back Terms
               </p>
             </div>
             <div className="col-xs-12 col-sm-7 col-md-7 col-lg-7 right-side">
@@ -210,7 +225,7 @@ export class Lease extends Component {
                       <br />
 
                   </span>
-                  Finding a Better Rental Home
+                  Getting simple help from parents.
                   <br />
                                     <span className="read">
                     Read Diego’s story
@@ -230,9 +245,9 @@ export class Lease extends Component {
                 <p className={`text ${showSecondStory && 'active'}`}>
                   <span className="story-title">
                     Jennifer
-                    <br />                    
+                    <br />
                   </span>
-                  Avoiding High FHA Rates
+                  Fair deal from her community.
                   <br />
                   <span className="read">
                     Read Jennifer’s story
@@ -251,8 +266,6 @@ export class Lease extends Component {
             </div>
           </div>
         </div>
-
-
       </div>
     );
   }

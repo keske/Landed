@@ -37,6 +37,9 @@
     position: relative;
     top: 12px;
     left: -30px;
+    @media (#{$large-desktop}) {
+      margin-left: 10px;
+    }
   }
 
   span.title {
@@ -49,6 +52,10 @@
     top: 6px;
     left: -20px;
 
+
+    @media (#{$large-desktop}) {
+      margin-left: 50px;
+    }
     @media (#{ $phone }) {
       font-size: 12px;
 

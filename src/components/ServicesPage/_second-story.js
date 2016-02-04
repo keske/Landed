@@ -13,16 +13,16 @@ export class SecondStory extends Component {
               Having just recently paid off their student debts, they were ready to consider buying a home to start their family.
             </p>
             <p>
-              Jennifer's parents are in a strong position to help, but Jennifer doesn't want a gift.
+              Jennifer's parents are in a strong position to help and feel comfortable with a $25,000 gift, but need to protect any additional support.
             </p>
             <p>
-              Jennifer is considering two options: (1) to get a 3.5% down FHA loan or (2) ask her parents to buy the home with the goal to buy it from them when she's saved up enough for a 20% downpayment. { /* ' */ }
+              Jennifer is considering two options: (1) to get a 10% down FHA loan or (2) ask her parents to pay $65,000 (10% down payment) in exchange for a 10% cut of the appreciation.
             </p>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <div className="financial-info">
               <p className="title">
-                Jennifer's Financial Information { /* ' */ }
+                Jennifer's Financial Information
               </p>
 
               <div className="row">
@@ -48,7 +48,7 @@ export class SecondStory extends Component {
                   Current Savings
                 </div>
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 value">
-                  $35,000
+                  $40,000
                 </div>
               </div>
 
@@ -66,7 +66,7 @@ export class SecondStory extends Component {
                   Home Price
                 </div>
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 value">
-                  $675,000
+                  $650,000
                 </div>
               </div>
 
@@ -84,7 +84,7 @@ export class SecondStory extends Component {
                 FHA Mortgage
               </div>
               <div className="col-xs-3 col-sm-3 col-md-4 col-lg-4 lease-title">
-                Lease Until You Buy
+                Debt-Free Financing
               </div>
             </div>
 
@@ -96,7 +96,7 @@ export class SecondStory extends Component {
                 $3,500
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
+                $2,600
               </div>
             </div>
 
@@ -105,10 +105,10 @@ export class SecondStory extends Component {
                 Interest Paid
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $2,685
+                $2,430
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
+                $1,815
               </div>
             </div>
 
@@ -117,10 +117,10 @@ export class SecondStory extends Component {
                 Principal Paid
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $815
+                $720
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
+                $700
               </div>
             </div>
 
@@ -129,7 +129,7 @@ export class SecondStory extends Component {
                 Mortgage Insurance
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $450
+                $390
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
                 none
@@ -144,18 +144,7 @@ export class SecondStory extends Component {
                 $1,000
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Rent Owed
-              </div>
-              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                none
-              </div>
-              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $3,250
+                $1,000
               </div>
             </div>
 
@@ -166,10 +155,10 @@ export class SecondStory extends Component {
                 Total Out-of-Pocket
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $4,950
+                $4,540
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $3,250
+                $3,600
               </div>
             </div>
             <div className="row">
@@ -177,10 +166,10 @@ export class SecondStory extends Component {
                 Expected Tax Deduction
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $(620)
+                $(561)
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
+                $(438)
               </div>
             </div>
             <div className="row">
@@ -188,10 +177,10 @@ export class SecondStory extends Component {
                 Paying Off Mortgage
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $(815)
+                $(720)
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
+                $(700)
               </div>
             </div>
 
@@ -202,10 +191,10 @@ export class SecondStory extends Component {
                 Net Cost of Home
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $3,515
+                $3,259
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $3,250
+                $2,462
               </div>
             </div>
 
@@ -219,13 +208,7 @@ export class SecondStory extends Component {
                 Landed helps structure the contract between Jennifer and her parents in case anything goes wrong.
               </p>
               <p>
-                Landed makes sure all the bills are paid on time, and helps deposit the rent directly into Jennifer's parents' account.
-              </p>
-              <p>
                 Landed makes sure everyone gets all the tax deductions to which they are entitled.
-              </p>
-              <p>
-                Landed fairly assesses the rent every year based on the original home price and growth in the neighborhood.
               </p>
               <p>
                 Landed fairly assesses the buy-out price based on the original home price and growth in the neighborhood.
@@ -239,16 +222,16 @@ export class SecondStory extends Component {
         <div className="row sign">
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
             <p>
-              Within 5 years, Jennifer and her family will have enough for a 20% down-payment.
+              As soon as she buys her house, the LA property market slows down. At the end of 5 years, her home is only worth about $25,000 more than she bought it for.
             </p>
             <p>
-              They'll save more money using lease-until-you-buy and make the smarter financial choice.
+              During those 5 years, Jennifer and her family have managed to save another $67,500 (the original $65,000 plus 10% of the $25,000 appreciation) and can buy out her parents.
             </p>
             <p>
-              In return, Jennifer's parents can add a strong real estate investment to their portfolio.
+              Jennifer's parents take the money and make a similar deal with Jen's younger brother. In this case, they made just about the same as having the money in a bank certificate of deposit.
             </p>
             <p>
-              As a group, they'll only pay $1,350 / month to the bank, instead of $3,135 / month.
+              Over those 5 years, Jen avoids over $30,000 in additional interest and mortgage insurance payments.
             </p>
           </div>
         </div>

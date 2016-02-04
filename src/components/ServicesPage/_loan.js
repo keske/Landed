@@ -131,7 +131,7 @@ export class Loan extends Component {
             </p>
             <ul>
               <li>
-                Protect yourself from the tax liabilities of undocumented loans or gifts.
+                Protect yourself from IRS tax liabilities of undocumented loans or gifts.
               </li>
               <li>
                 Secure your investment in the case of divorce or death.
@@ -235,8 +235,6 @@ export class Loan extends Component {
             </div>
           </div>
         </div>
-
-
       </div>
     );
   }

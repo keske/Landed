@@ -48,7 +48,7 @@ export class ServicesPage extends Component {
 
     const intro = {
       title: 'Want to partner with others to buy a home? Landed is here to help.',
-      text: "You decide on a structure (either a down payment loan, co-investment, or a lease-to-own agreement), and Landed takes care of the rest.",
+      text: "You decide on a deal that works for both of you (a down payment loan, shared ownership or a debt-free investment), and Landed helps take care of the rest.",
       image: 'services',
     };
 
@@ -182,10 +182,46 @@ export class ServicesPage extends Component {
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                 <span className="lease-icon" />
                 <p className="title">
-                  Lease-<br />To-Own
+                  Debt-Free<br />Financing
                 </p>
               </div>
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <p className="info-text">
+                  It's hard to qualify for a mortgage with less than a 20% down payment, and in many cases, it doesn't make sense to take on more debt, even if it's from someone you care about.  Debt-free financing allows homebuyers to accept funds today in exchange for part of the home's value when you refinance or sell.
+                </p>
+                <span
+                  className={ `button ${ leaseExpand && 'hide' }` }
+                  onClick={ this.showLease }
+                >
+                  Details and Examples
+                </span>
+
+                <p className={`more-known ${!leaseExpand && 'hide'}`}>
+                  Often known as fractional equity financing, it involves a number of documents:
+                </p>
+                <div className={`expandet-list list ${ !leaseExpand && 'hide'}`}>
+                  <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
+                    <span className="list-number">1.</span>
+                  </div>
+                  <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
+                    <p>
+                    <strong>An option that you grant to your investor in exchange for down payment help.</strong> For example, you might accept a 10% investment for 25% appreciation when you sell or refinance. This option is recorded with the relevant authorities.
+                  </p>
+                  </div>
+                </div>
+
+                <div className={`expandet-list list ${ !leaseExpand && 'hide'}`}>
+                  <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
+                    <span className="list-number">2.</span>
+                  </div>
+                  <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
+                    <p>
+                      <strong>A number of protective documents.</strong> A deed is recorded against the property to protect your partner's investment in the case you go bankrupt. A separate agreement outlines under which conditions your investor can call the amount due.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              {/*<div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <p className="info-text">
                   Typical rent-to-own contracts have a bad reputation. Typically, a large upfront fee and excessively high rent is paid to really pressure the resident into buying. Sadly, the reality is that many buyers never exercise their right to buy and all those additional fees go straight to the landlord’s pocket. We don’t think that’s fair.
                 </p>
@@ -221,7 +257,7 @@ export class ServicesPage extends Component {
                     </p>
                   </div>
                 </div>
-              </div>
+              </div>*/}
             </div>
           </div>
           { leaseExpand && <Lease /> }

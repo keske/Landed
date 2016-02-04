@@ -189,7 +189,10 @@ export class Quiz extends Component {
 
                 <div className="slide col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
                   <p className="thanks-label">
-                    Thank you!
+                    Thanks for signing up!
+                  </p>
+                  <p className="info">
+                    Lookout for an email within 24 hours with next steps.
                   </p>
                 </div>
               </div>
