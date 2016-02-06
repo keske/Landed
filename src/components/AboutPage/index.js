@@ -12,7 +12,7 @@ export class AboutPage extends Component {
   render() {
     const intro = {
       title: 'What is Landed?',
-      text: 'We’re a San Francisco headquartered company on a mission: make it easier and smarter to buy your first urban home.',
+      text: 'We’re a San Francisco headquartered company on a mission: make buying and investing in urban real estate smarter, for everyone.',
       image: 'about',
     };
 

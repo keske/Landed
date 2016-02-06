@@ -97,9 +97,9 @@ export class HowItWorks extends Component {
               <span className="price">
                 No fees until your documents are properly recorded.<br />Earn potential tax deductions, get investment protection and save thousands on legal fees. 
               </span>
-              <Link to="services">
+              <Link to="products">
                 <span className="button">
-                  Learn more
+                  Learn More
                 </span>
              </Link>
             </div>

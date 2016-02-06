@@ -5,7 +5,7 @@ import { Route, IndexRoute } from 'react-router';
 import { App } from 'containers/App';
 import { Home } from 'containers/Home';
 import { About } from 'containers/About';
-import { Services } from 'containers/Services';
+import { Products } from 'containers/Products';
 import { Join } from 'containers/Join';
 import { QuizContainer } from 'containers/Quiz';
 //import { InvestmentSurvey} from 'containers/InvestmentSurvey';
@@ -14,7 +14,7 @@ export default (
   <Route path="/" component={ App }>
     <IndexRoute component={ Home } />
     <Route path="/about" component={ About } />
-    <Route path="/services" component={ Services } />
+    <Route path="/products" component={ Products } />
     <Route path="/join" component={ Join } />
     <Route path="/quiz" component={ QuizContainer } />
     {/*<Route path='survey' component={ InvestmentSurvey } />*/}

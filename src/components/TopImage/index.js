@@ -82,7 +82,7 @@ export class TopImage extends Component {
                 <div className="group">
                   <span className="icon" />
                   <p>
-                    Trusted on-going support to make sure you don't jeopardize your most important relationships.
+                    Trusted ongoing support to make sure you don't jeopardize your most important relationships.
                   </p>
                 </div>
 
