@@ -205,7 +205,7 @@ export class ProductsPage extends Component {
                   </div>
                   <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
                     <p>
-                    <strong>An agreement (know as an option) that gives your supporter which gives him or her the ability to make money if the value of the home goes up.</strong> For example, you might accept half of the down payment for 25% of the growth in the value of the home when you sell or refinance. This option is recorded with the relevant authorities.
+                    <strong>An agreement (know as an option) that gives your supporter the ability to make money if the value of the home goes up.</strong> For example, you might accept half of the down payment for 25% of the growth in the value of the home when you sell or refinance. This option is recorded with the relevant authorities.
                   </p>
                   </div>
                 </div>
