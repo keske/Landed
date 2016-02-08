@@ -95,6 +95,7 @@
   },
   "dependencies": {
     "babel-preset-react-hmre": "^1.0.1",
+    "express": "^4.13.4",
     "foreman": "1.4.1",
     "jquery": "^2.2.0",
     "react": "^0.14.6",
