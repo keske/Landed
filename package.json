@@ -32,7 +32,6 @@
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "6.3.1",
-    "babel-core": "^6.4.5",
     "babel-eslint": "^5.0.0-beta6",
     "babel-loader": "^6.2.1",
     "babel-plugin-react-transform": "^2.0.0",
@@ -95,6 +94,7 @@
   },
   "dependencies": {
     "babel-preset-react-hmre": "^1.0.1",
+    "babel-core": "^6.4.5",
     "express": "^4.13.4",
     "foreman": "1.4.1",
     "jquery": "^2.2.0",
