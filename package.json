@@ -5,14 +5,17 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "webpack --progress --verbose --colors --display-error-details --config webpack/common.config.js",
-    "build:production": "npm run clean && npm run build",
+    "postinstall": "npm run clean && npm run build",
     "lint": "eslint src",
-    "start": "node bin/server.js",
+    "start": "nf start",
     "test": "karma start"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/keske/Landed.git"
+  },
+  "engines": {
+    "node": "4.2.4"
   },
   "keywords": [
     "react",
@@ -53,7 +56,6 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "imports-loader": "^0.6.5",
-    "intercom.io": "^1.0.11",
     "jasmine-core": "^2.4.1",
     "json-loader": "^0.5.4",
     "karma": "^0.13.19",
@@ -93,7 +95,7 @@
   },
   "dependencies": {
     "babel-preset-react-hmre": "^1.0.1",
-    "intercom.io": "^1.0.11",
+    "foreman": "1.4.1",
     "jquery": "^2.2.0",
     "react": "^0.14.6",
     "react-redux": "^4.0.6",
