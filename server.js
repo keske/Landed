@@ -2,9 +2,9 @@ const http = require('http');
 const express = require('express');
 const app = express();
 
-app.use(require('morgan')('short'));
+//app.use(require('morgan')('short'));
 
-(function initWebpack() {
+/*(function initWebpack() {
   const webpack = require('webpack');
   const webpackConfig = require('./webpack/common.config');
   const compiler = webpack(webpackConfig);
@@ -18,7 +18,7 @@ app.use(require('morgan')('short'));
   }));
 
   app.use(express.static(__dirname + '/'));
-})();
+})();*/
 
 app.get(/.*/, function root(req, res) {
   res.sendFile(__dirname + '/index.html');
