@@ -33,30 +33,24 @@ export class App extends Component {
       description: 'Easily and legally get down payment support from friends and family.',
       meta: {
         viewport: 'width=device-width, initial-scale=1',
-        property:{
-          twitter: {
-            card: 'summary_large_image',
-            site: '@landedhomes',
-            title: 'Landed - Smarter Homeownership',
-            description: 'Easily and legally get down payment support from friends and family.',
-            image: 'http://landed.com/images/meta/twittercard.jpg',
-            creator: '@jonasmis'
-          },
-          og: {
-            title: 'Landed',
-            type: 'website',
-            url: 'www.landed.com',
-            image: {
-              url:'http://landed.com/images/meta/facebookad.jpg',
-              type: 'image/jpeg',
-              width: '2400',
-              height: '1208'
-            },
-          description: 'Easily and legally get down payment support from friends and family.'
+        property: {
+            'twitter:card': 'summary_large_image',
+            'twitter:site': '@landedhomes',
+            'twitter:title': 'Landed - Smarter Homeownership',
+            'twitter:description': 'Easily and legally get down payment support from friends and family.',
+            'twitter:image': 'http://landed.com/images/meta/twittercard.jpg',
+            'twitter:creator': '@jonasmis',
+            'og:title': 'Landed',
+            'og:type': 'website',
+            'og:url': 'www.landed.com',
+            'og:image:url':'http://landed.com/images/meta/facebookad.jpg',
+            'og:image:type': 'image/jpeg',
+            'og:image:width': '2400',
+            'og:image:height': '1208',
+            'og:description': 'Easily and legally get down payment support from friends and family.'
         }
       }
-    }
-  };
+    };
 
     return (
       <section>
