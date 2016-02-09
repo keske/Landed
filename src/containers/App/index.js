@@ -31,28 +31,32 @@ export class App extends Component {
     const meta = {
       title: 'Landed',
       description: 'Easily and legally get down payment support from friends and family.',
-      viewport: 'width=device-width, initial-scale=1',
-      twitter: {
-        card: 'summary_large_image',
-        site: '@landedhomes',
-        title: 'Landed - Smarter Homeownership',
-        description: 'Easily and legally get down payment support from friends and family.',
-        image: 'http://landed.com/images/meta/twittercard.jpg',
-        creator: '@jonasmis'
-      },
-      og: {
-        title: 'Landed',
-        type: 'website',
-        url: 'www.landed.com',
-        image: {
-          url:'http://landed.com/images/meta/facebookad.jpg',
-          type: 'image/jpeg',
-          width: '2400',
-          height: '1208'
-        },
-        description: 'Easily and legally get down payment support from friends and family.'
+      meta: {
+        viewport: 'width=device-width, initial-scale=1',
+        property:{
+          twitter: {
+            card: 'summary_large_image',
+            site: '@landedhomes',
+            title: 'Landed - Smarter Homeownership',
+            description: 'Easily and legally get down payment support from friends and family.',
+            image: 'http://landed.com/images/meta/twittercard.jpg',
+            creator: '@jonasmis'
+          },
+          og: {
+            title: 'Landed',
+            type: 'website',
+            url: 'www.landed.com',
+            image: {
+              url:'http://landed.com/images/meta/facebookad.jpg',
+              type: 'image/jpeg',
+              width: '2400',
+              height: '1208'
+            },
+          description: 'Easily and legally get down payment support from friends and family.'
+        }
       }
-    };
+    }
+  };
 
     return (
       <section>
