@@ -131,55 +131,6 @@ export class ProductsPage extends Component {
           <div className="container family">
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                <span className="ownership-icon" />
-                <p className="title">
-                  Shared<br />Ownership
-                </p>
-              </div>
-              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <p className="info-text">
-                  Shared ownership splits a home purchase, but assigns exclusive living rights to one person (the Resident Owner). For the portion that the Resident Owner doesn’t own, he or she pays rent to the investor. Properly structured, it can truly be a win-win for all involved.
-                </p>
-
-                <span
-                  className={ `button ${ ownershipExpand && 'hide' }` }
-                  onClick={ this.showOwnersip }
-                >
-                  Details and Examples
-                </span>
-
-                <p className={`more-known ${!ownershipExpand && 'hide'}`}>
-                  A shared ownership agreement involves two main parts:
-                </p>
-                <div className={`expandet-list list ${ !ownershipExpand && 'hide'}`}>
-                  <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
-                    <span className="list-number">1.</span>
-                  </div>
-                  <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
-                    <p>
-                      <strong>A shared ownership agreement that splits the responsibilities of ownership.</strong>  The two parties hold the property on title as Tenants-In-Common. The ownership percentages between the two parties are usually calculated by how much they put in as down-payment.  Typically, all financials (paying the mortgage, insurance, repairs) are split according to ownership interest.  The Resident Owner is even allowed to slowly purchase more of the property over time.
-                    </p>
-                  </div>
-                </div>
-
-                <div className={`expandet-list list ${ !ownershipExpand && 'hide'}`}>
-                  <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
-                    <span className="list-number">2.</span>
-                  </div>
-                  <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
-                    <p>
-                      <strong>A lease to the Resident Owner.</strong> The two parties lease the property to the Resident Owner who receives all the typical living rights enjoyed by a homeowner.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          { ownershipExpand && <Ownership /> }
-          <hr />
-          <div className="container family">
-            <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                 <span className="lease-icon" />
                 <p className="title">
                   Debt-Free<br />Financing
@@ -261,6 +212,55 @@ export class ProductsPage extends Component {
             </div>
           </div>
           { leaseExpand && <Lease /> }
+          <hr />
+          <div className="container family">
+            <div className="row">
+              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <span className="ownership-icon" />
+                <p className="title">
+                  Shared<br />Ownership
+                </p>
+              </div>
+              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <p className="info-text">
+                  Shared ownership splits a home purchase, but assigns exclusive living rights to one person (the Resident Owner). For the portion that the Resident Owner doesn’t own, he or she pays rent to the investor. Properly structured, it can truly be a win-win for all involved.
+                </p>
+
+                <span
+                  className={ `button ${ ownershipExpand && 'hide' }` }
+                  onClick={ this.showOwnersip }
+                >
+                  Details and Examples
+                </span>
+
+                <p className={`more-known ${!ownershipExpand && 'hide'}`}>
+                  A shared ownership agreement involves two main parts:
+                </p>
+                <div className={`expandet-list list ${ !ownershipExpand && 'hide'}`}>
+                  <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
+                    <span className="list-number">1.</span>
+                  </div>
+                  <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
+                    <p>
+                      <strong>A shared ownership agreement that splits the responsibilities of ownership.</strong>  The two parties hold the property on title as Tenants-In-Common. The ownership percentages between the two parties are usually calculated by how much they put in as down-payment.  Typically, all financials (paying the mortgage, insurance, repairs) are split according to ownership interest.  The Resident Owner is even allowed to slowly purchase more of the property over time.
+                    </p>
+                  </div>
+                </div>
+
+                <div className={`expandet-list list ${ !ownershipExpand && 'hide'}`}>
+                  <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
+                    <span className="list-number">2.</span>
+                  </div>
+                  <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
+                    <p>
+                      <strong>A lease to the Resident Owner.</strong> The two parties lease the property to the Resident Owner who receives all the typical living rights enjoyed by a homeowner.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          { ownershipExpand && <Ownership /> }
         </div>
         <ImageBlock { ...imageBlockProps } />
       </section>

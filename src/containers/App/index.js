@@ -36,15 +36,14 @@ export class App extends Component {
         property: {
             'twitter:card': 'summary_large_image',
             'twitter:site': '@landedhomes',
-            'twitter:title': 'Landed - Smarter Homeownership',
+            'twitter:text:title': 'Landed - Smarter Homeownership',
             'twitter:description': 'Easily and legally get down payment support from friends and family.',
             'twitter:image': 'http://landed.com/images/meta/twittercard.jpg',
             'twitter:creator': '@jonasmis',
             'og:title': 'Landed',
             'og:type': 'website',
             'og:url': 'www.landed.com',
-            'og:image:url':'http://landed.com/images/meta/facebookad.jpg',
-            'og:image:type': 'image/jpeg',
+            'og:image':'http://landed.com/images/meta/facebookad.jpg',
             'og:image:width': '2400',
             'og:image:height': '1208',
             'og:description': 'Easily and legally get down payment support from friends and family.'
@@ -54,8 +53,8 @@ export class App extends Component {
 
     return (
       <section>
-        <GoogleAnalytics id="UA-72154127-1" popup={ popupchange } />
         <DocumentMeta {...meta} />
+        <GoogleAnalytics id="UA-72154127-1" popup={ popupchange } />
         <Header { ...this.props } />
           { this.props.children }
         <Footer />
