@@ -48,7 +48,7 @@ export class ProductsPage extends Component {
 
     const intro = {
       title: 'Want to partner with others to buy a home? Landed is here to help.',
-      text: "You decide on a deal that works for both of you (a down payment loan, shared ownership or a debt-free investment), and Landed helps take care of the rest.",
+      text: "You decide on a deal that works for both of you (a down payment loan, shared ownership or a debt-free investment), and Landed helps take care of the rest.</br></br>Sign up below or call (415)-745-2460 if you'd prefer to talk to a representative.",
       image: 'services',
     };
 
