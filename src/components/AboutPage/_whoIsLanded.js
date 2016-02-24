@@ -32,7 +32,7 @@ export class WhoIsLanded extends Component {
             </p>
             <p className="sign">
               Sales and Customer Experience.<br />
-              Stress Dancer.
+              Recovering Campaigner.
               {/*  potentially change to: 
               The campaign genius turned sales pro, obsessed with changing how we all experience where and how we live. Fact: he's not ashamed to show off his dancing skills whenever and wherever.
               The recovering engineer who's housing policy and finance chops make him the ultimate creative real estate investing guru. Fact: [you pick your fun fact]

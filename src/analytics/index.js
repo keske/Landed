@@ -84,10 +84,11 @@ export default class GoogleAnalytics extends Component {
 
   event(params = {}){
     // wait for correct title
-    console.log('event occured');
     console.log(params);
+    console.log(params.category);
+    console.log(params.action);
     setTimeout(() => {
-      GoogleAnalytics.sendEvent(params);
+      GoogleAnalytics.sendEvent(params.category, params.action);
     }, 0);
   }
 
@@ -107,8 +108,13 @@ export default class GoogleAnalytics extends Component {
     return GoogleAnalytics.send('pageview', { page, title });
   }
 
-  static sendEvent(params) {
-    return GoogleAnalytics.send('event', params);
+  static sendEvent(category, action) {
+    const field = {
+      hitType: 'event',
+      eventCategory: category,
+      eventAction: action
+    };
+    return GoogleAnalytics.send('event', field);
   }
 
   render() {

@@ -4,6 +4,7 @@ import Select from 'react-select';
 import GoogleAnalytics from 'analytics';
 import $ from 'jquery';
 import Rebase from 're-base';
+//import Intercom from 'intercom-client';
 
 /* utils */
 import { isEmailValid } from '../../utils/validate.js';
@@ -53,15 +54,23 @@ export class Quiz extends Component {
       },
     };
 
+    //Firebase Integration
     const base = Rebase.createClass('https://dblanded.firebaseio.com');
-
-    base.push('users', {
+    const newuser = base.push('users', {
       data: req,
       then() {
         console.log('complete');
       },
     });
-
+/*
+    //Intercom Integration
+    const request = $.ajax({
+      url: 'http://landed.com/mail2.php',
+      type: 'post',
+      data: req,
+    });
+*/
+    //Mailchimp Integration
     const request = $.ajax({
       url: 'http://landed.com/mail.php',
       type: 'post',
@@ -134,10 +143,10 @@ export class Quiz extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offet-12 header">
               <p className="title"
-                dangerouslySetInnerHTML={{ __html: 'Join Landed\'s waitlist' }}
+                dangerouslySetInnerHTML={{ __html: 'Legitimize your down payment support' }}
               />
               <p className="info"
-                dangerouslySetInnerHTML={{ __html: 'We\'re adding new users every week and we\'ll be in touch before you know it.' }}
+                dangerouslySetInnerHTML={{ __html: 'We\'re adding new users every day and we\'ll be in touch before you know it.' }}
               />
             </div>
           </div>
@@ -189,7 +198,10 @@ export class Quiz extends Component {
 
                 <div className="slide col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
                   <p className="thanks-label">
-                    Thank you!
+                    We'll be in touch soon!
+                  </p>
+                  <p className="info">
+                    Lookout for an email within 24 hours with next steps.
                   </p>
                 </div>
               </div>

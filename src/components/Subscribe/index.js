@@ -15,7 +15,7 @@ export class Subscribe extends Component {
               noValidate>
           <div className="container">
             <div className="row">
-              <div className="col-xs-4 col-sm-4 col-md-4 col-lg-3">
+              <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                 <span className="email-icon hidden-xs hidden-sm" />
                 <span className="title">
                   Want to follow our progress?

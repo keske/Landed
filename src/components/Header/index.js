@@ -57,9 +57,9 @@ export class Header extends Component {
     return (
       <nav>
         <Link onClick={ () => this.props.show(false) }
-              to="services"
+              to="products"
               activeClassName="active">
-          Services
+          Products
         </Link>
         <Link onClick={ () => this.props.show(false) }
               to="about"
@@ -71,6 +71,7 @@ export class Header extends Component {
           Investment oportuninties
         </Link> */ }
         <a href="https://landed.zendesk.com"
+              target = "_blank"
               activeClassName="active">
           F.A.Q.
         </a>

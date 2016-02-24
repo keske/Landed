@@ -23,9 +23,10 @@ export class Footer extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
               <div className="social">
-                <a href="https://twitter.com/landedhomes" className="twitter" />
-                <a href="https://www.facebook.com/golanded" className="facebook" />
-                <a href="http://instagram.com/landedhomes" className="instagram" />
+                <a href="https://twitter.com/landedhomes" className="twitter" target="_blank"/>
+                <a href="https://www.facebook.com/golanded" className="facebook" target="_blank"/>
+                <a href="https://medium.com/@Landed" className='medium' target="_blank" />
+                {/*<a href="http://instagram.com/landedhomes" className="instagram" />*/}
               </div>
               <p className="copyright">
               Need to contact us? <a href="mailto:hi@landed.com">hi@landed.com</a><br />
