@@ -14,7 +14,7 @@ export class Form extends Component {
     super(props);
 
     this.state = {
-      userAdded: true,
+      userAdded: false,
     };
   }
 
@@ -36,6 +36,11 @@ export class Form extends Component {
         email,
         phone,
         photo,
+        address,
+        photos,
+        id,
+        type,
+        monthlyPayment,
       },
       handleSubmit,
     } = this.props;
@@ -57,6 +62,52 @@ export class Form extends Component {
 
     const renderForm = () =>
       <form onSubmit={handleSubmit(submit)}>
+
+        {/* house */}
+        <h3>House</h3>
+
+        <h4>Address</h4>
+        <input type="text" {...address} />
+
+        <h4>Photos</h4>
+        <input type="text" {...photos} />
+
+        {/* house */}
+        <h3>Contract</h3>
+
+        <h4>ID</h4>
+        <input type="text" {...id} />
+
+        <h4>Type</h4>
+        <label>
+          <input
+            type="radio"
+            {...type}
+            value="dept"
+            checked={type.value === 'dept'}
+          /> Debt
+        </label>
+        <label>
+          <input
+            type="radio"
+            {...type}
+            value="deptFree"
+            checked={type.value === 'deptFree'}
+          /> Debt Free
+        </label>
+        <label>
+          <input
+            type="radio"
+            {...type}
+            value="equity"
+            checked={type.value === 'equity'}
+          /> Equity
+        </label>
+
+        <h4>Monthly payment</h4>
+        <input type="text" {...monthlyPayment} />
+
+        {/* info */}
         <h3>Info</h3>
 
         <h4>Name</h4>
@@ -105,6 +156,11 @@ Form = reduxForm({
     'email',
     'phone',
     'photo',
+    'address',
+    'photos',
+    'id',
+    'type',
+    'monthlyPayment',
   ],
 })(Form);
 
