@@ -4,7 +4,7 @@ import Select from 'react-select';
 import GoogleAnalytics from 'analytics';
 import $ from 'jquery';
 import Rebase from 're-base';
-//import Intercom from 'intercom-client';
+// import Intercom from 'intercom-client';
 
 /* utils */
 import { isEmailValid } from '../../utils/validate.js';
@@ -54,7 +54,7 @@ export class Quiz extends Component {
       },
     };
 
-    //Firebase Integration
+    // Firebase Integration
     const base = Rebase.createClass('https://dblanded.firebaseio.com');
     const newuser = base.push('users', {
       data: req,
@@ -62,15 +62,15 @@ export class Quiz extends Component {
         console.log('complete');
       },
     });
-/*
-    //Intercom Integration
-    const request = $.ajax({
-      url: 'http://landed.com/mail2.php',
-      type: 'post',
-      data: req,
-    });
-*/
-    //Mailchimp Integration
+    /*
+        //Intercom Integration
+        const request = $.ajax({
+          url: 'http://landed.com/mail2.php',
+          type: 'post',
+          data: req,
+        });
+    */
+    // Mailchimp Integration
     const request = $.ajax({
       url: 'http://landed.com/mail.php',
       type: 'post',

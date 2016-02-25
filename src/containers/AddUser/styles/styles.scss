@@ -1,0 +1,18 @@
+@import '../../../containers/App/styles/vars';
+@import '../../../containers/App/styles/screens';
+
+:local(.styles) {
+  background: #FFF;
+
+  .header-green-layer {
+    background: $green;
+
+    width: 100%;
+    height: 100px;
+
+    @media (#{ $phone }) {
+      position: fixed;
+      height: 70px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import '../../../containers/App/styles/vars';
+@import '../../../containers/App/styles/screens';
+
+:local(.styles) {
+  background: $light-green;
+  color: #FFF;
+
+  min-height: 100%;
+  padding-bottom: 100px;
+
+  h1 {
+    margin-top: 150px;
+  }
+
+  input[type="text"] {
+    color: #444;
+
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+
+    width: 100%;
+  }
+}
