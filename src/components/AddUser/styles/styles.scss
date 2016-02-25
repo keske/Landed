@@ -12,10 +12,36 @@
     margin-top: 150px;
   }
 
-  input[type="text"] {
+  h3 {
+
+  }
+
+  h4 {
+    margin-top: 20px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="phone"] {
     color: #444;
 
     padding: 10px 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    width: 100%;
+
+    outline: none;
+  }
+
+  button {
+    background: $green;
+    color: #FFF;
+
+    margin-top: 30px;
+    padding: 10px 20px;
+
     border: none;
     border-radius: 10px;
 

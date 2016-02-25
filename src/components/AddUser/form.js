@@ -1,30 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { reduxForm } from 'redux-form';
-import R from 'ramda';
-
-export const validate = values => {
-  const errors = {};
-
-  if (R.isEmpty(values.firstName)) {
-    errors.firstName = 'Required';
-  }
-
-  if (R.isEmpty(values.lastName)) {
-    errors.lastName = 'Required';
-  }
-
-  if (R.isEmpty(values.password)) {
-    errors.password = 'Required';
-  }
-
-  if (R.isEmpty(values.email)) {
-    errors.email = 'Required';
-  } else if (values.email && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Invalid email';
-  }
-
-  return errors;
-};
+import Rebase from 're-base';
 
 export class Form extends Component {
 
@@ -36,34 +12,61 @@ export class Form extends Component {
   render() {
     const {
       fields: {
-        firstName,
+        name,
+        auth,
+        email,
+        phone,
+        photo,
       },
       handleSubmit,
     } = this.props;
 
     const submit = data => {
-      console.log(data);
+      const base = Rebase.createClass('https://dblanded.firebaseio.com');
+      base.push('users/', {
+        data,
+        then() {
+          console.log('User added');
+        },
+      });
     };
 
     return (
       <form onSubmit={handleSubmit(submit)}>
-        <h6>First name</h6>
-        <input
-          type="text"
-          {...firstName}
-          placeholder="First name"
-        />
+        <h3>Info</h3>
+
+        <h4>Name</h4>
+        <input type="text" {...name} />
+
+        <h4>Auth details</h4>
+        <input type="text" {...auth} />
+
+        <h4>Email</h4>
+        <input type="email" {...email} />
+
+        <h4>Phone</h4>
+        <input type="phone" {...phone} />
+
+        <h4>Photo URL</h4>
+        <input type="text" {...photo} />
+
+        <button type="submit">
+          Add
+        </button>
       </form>
     );
   }
 }
 
 Form = reduxForm({
-  form: 'addPost',
+  form: 'addUser',
   fields: [
-    'firstName',
+    'name',
+    'auth',
+    'email',
+    'phone',
+    'photo',
   ],
-  validate,
 })(Form);
 
 export default Form;
