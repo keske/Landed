@@ -14,11 +14,11 @@ export class AddUser extends Component {
             <div className="
               col-xs-12
               col-sm-12
-              col-md-6 col-md-offset-3
-              col-lg-6 col-lg-offset-3"
+              col-md-6 col-md-offset-2
+              col-lg-6 col-lg-offset-2"
             >
               <h1>
-                Add
+                Create new user
               </h1>
               <Form />
             </div>

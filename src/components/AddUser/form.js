@@ -7,6 +7,25 @@ export class Form extends Component {
   static propTypes = {
     fields: PropTypes.object.isRequired,
     handleSubmit: PropTypes.func.isRequired,
+    resetForm: PropTypes.func.isRequired,
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      userAdded: true,
+    };
+  }
+
+  handleForm = () => {
+    const { resetForm } = this.props;
+
+    this.setState({
+      userAdded: false,
+    });
+
+    resetForm;
   };
 
   render() {
@@ -21,17 +40,22 @@ export class Form extends Component {
       handleSubmit,
     } = this.props;
 
+    const { userAdded } = this.state;
+
     const submit = data => {
       const base = Rebase.createClass('https://dblanded.firebaseio.com');
-      base.push('users/', {
-        data,
-        then() {
-          console.log('User added');
-        },
+
+      this.setState({
+        userAdded: base.push('users/', {
+          data,
+          then() {
+            return true;
+          },
+        }),
       });
     };
 
-    return (
+    const renderForm = () =>
       <form onSubmit={handleSubmit(submit)}>
         <h3>Info</h3>
 
@@ -53,7 +77,22 @@ export class Form extends Component {
         <button type="submit">
           Add
         </button>
-      </form>
+      </form>;
+
+    const renderSuccessState = () =>
+      <div className="success">
+        <h2>User added</h2>
+        <p onClick={this.handleForm}>Add another</p>
+      </div>;
+
+    return (
+      <section>
+        {
+          !userAdded
+            ? renderForm()
+            : renderSuccessState()
+        }
+      </section>
     );
   }
 }
