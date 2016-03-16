@@ -70,11 +70,11 @@ export class Header extends Component {
               activeClassName="active">
           Investment oportuninties
         </Link> */ }
-        <a href="https://landed.zendesk.com"
+        {/*<a href="https://landed.zendesk.com"
               target = "_blank"
               activeClassName="active">
           F.A.Q.
-        </a>
+        </a>*/}
       </nav>
     );
   }

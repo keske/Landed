@@ -43,11 +43,11 @@ export class HowItWorks extends Component {
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
                 <img src={ icons[0] } />
                 <p className="paragraph green">
-                  1. Transaction support
+                  1. Seed Investment Communities
 
                 </p>
                 <p className="paragraph">
-                  Landed works with top lawyers to create, register and update re-usable legal documents.<br /><br />Pay your attorney for advice and review, not word processing.
+                  Landed works with schools, companies and affinity networks to create and manage down payment support funds.<br /><br />Each fund helps multiple people like you with their down payments.
                 </p>
               </div>
             </SmartLoading>
@@ -61,11 +61,11 @@ export class HowItWorks extends Component {
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
                 <img src={ icons[1] } />
                 <p className="paragraph green">
-                  2. Effortless payments
+                  2. Support Your Home Purchase
 
                 </p>
                 <p className="paragraph">
-                  Landed helps you assess prices, set up recurring payments, and log everything to keep tax filings simple.<br /><br />So easy you can set it and forget it, minimizing potential conflict.
+                  Landed and its banking partners work with you to buy your home and manage all the details of getting down payment help.<br /><br />We make sure you're never at a disadvantage competing in hot markets.
                 </p>
               </div>
             </SmartLoading>
@@ -79,10 +79,10 @@ export class HowItWorks extends Component {
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
                 <img src={ icons[2] } />
                 <p className="paragraph green">
-                  3. Ongoing mediation
+                  3. Make Sure Things Go Right
                 </p>
                 <p className="paragraph">
-                  Landed stays engaged to enforce the rules you've set and partner with you as circumstances change.<br /><br />We'll make sure you can keep your investment and relationship separate.
+                  Landed stays engaged to enforce the rules that have been set and partner with you as circumstances change.<br /><br />Most of the time, we just get out of the way so you get the full experience of ownership.
                 </p>
               </div>
             </SmartLoading>
@@ -92,11 +92,11 @@ export class HowItWorks extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
               <span className="special">
-                <br />Concierge support for <span className="free">$199 + $5/month</span>
+                {/*}<br />Concierge support for <span className="free">$199 + $5/month</span>*/}
               </span>
-              <span className="price">
-                No fees until your documents are properly recorded.<br />Earn potential tax deductions, get investment protection and save thousands on legal fees. 
-              </span>
+{/*              <span className="price">
+                No fees until your documents are properly recorded.<br />Earn potential tax deductions, get investment protection and save thousands on legal fees.
+              </span>*/}
               <Link to="products">
                 <span className="button">
                   Learn More

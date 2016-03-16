@@ -12,10 +12,10 @@ const RENTAL = [{
   val: '25% of the change in home value (up or down).',
 }, {
   prop: 'Expiration',
-  val: '5 years. Homeowner must then refinance and pay-off the investment.',
+  val: '7 years. Homeowner must then refinance and pay-off the investment.',
 }, {
   prop: 'Investor Protection',
-  val:  'Can force a sale in the case of divorce, intentional value destruction, failure to pay home costs.',
+  val:  'Can force a sale in the case of illegal activity, intentional value destruction, failure to pay home costs.',
 }, {
   prop: 'Repair Handling',
   val: 'Homeowner handles all repairs.',
@@ -41,7 +41,7 @@ const RENTAL = [{
 
 const PURCHASE = [{
   prop: 'Buy-Back Timeline',
-  val: 'Can buy-back any amount at any time, after 2 years.',
+  val: 'Can buy-back any amount at any time, after 1 year.',
 }, {
   prop: 'Early Buy-Back Price',
   val: 'Buy-back price based on local price index.',
@@ -96,7 +96,7 @@ export class Lease extends Component {
             <span className="icon" />
             <span className="text">
               <p>
-                Simple, intuitive legal forms
+                Legal and compliance infrastructure
               </p>
             </span>
           </div>
@@ -104,7 +104,7 @@ export class Lease extends Component {
             <span className="icon" />
             <span className="text">
               <p>
-                Track buy-out price and estimate taxes
+                Investor dashboards and reporting
               </p>
             </span>
           </div>
@@ -112,7 +112,7 @@ export class Lease extends Component {
             <span className="icon" />
             <span className="text">
               <p>
-                Ongoing support and independent mediator
+                Ongoing support and mediation
               </p>
             </span>
           </div>
@@ -129,13 +129,13 @@ export class Lease extends Component {
             </p>
             <ul>
               <li>
-                Become a homeowner without as much debt.
+                Become a homeowner, earlier, without as much debt.
               </li>
               <li>
-                No additional monthly payments.
+                No additional monthly payments or mortgage insurance.
               </li>
               <li>
-                Accept help without asking for a gift and protect yourself from gift taxes.
+                Have complete security of payments for the next 7 years.
               </li>
             </ul>
           </div>
@@ -149,10 +149,10 @@ export class Lease extends Component {
                 Co-invest in property with a committed resident.
               </li>
               <li>
-                Avoid co-signing a mortgage or complications from splitting expenses.
+                Avoid co-signing a mortgage or splitting expenses.
               </li>
               <li>
-                Securely help someone you care about without a large gift.
+                Achieve rental property returns without any of the work.
               </li>
             </ul>
           </div>
@@ -161,10 +161,10 @@ export class Lease extends Component {
         <div className="row terms">
           <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
             <p className="title">
-              Customizable terms
+              Standard terms
             </p>
             <p className="text">
-              Our basic terms have been developed based on years of experience and reflect what an independent investor might accept.  Sign up to see how easy it can be to customize them!
+              Our basic terms have been developed based on years of experience and reflect what an independent investor might accept.
             </p>
             <div className="hidden-xs hidden-sm">
               { renderLandedSupport() }

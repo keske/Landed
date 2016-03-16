@@ -13,10 +13,10 @@ export class SecondStory extends Component {
               Having just recently paid off their student debts, they were ready to consider buying a home to start their family.
             </p>
             <p>
-              Jennifer's parents are in a strong position to help and feel comfortable with a $25,000 gift, but need to protect any additional support.
+              Jennifer's parents are in a strong position to help and feel comfortable with a $25,000 gift.
             </p>
             <p>
-              Jennifer is considering two options: (1) get a 10% down FHA loan or (2) ask her parents to pay $65,000 (half of a 20% down payment) in exchange for a 10% cut of the appreciation in the home.
+              Jennifer is considering two options: (1) get a 10% down FHA loan or (2) make use of the Landed program at her school to pay $97,500 (15% down payment) in exchange for a 37.5% cut of the appreciation in the home. By putting a total of 25% down, Jennifer can safely access interest-only loan options.
             </p>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
@@ -96,7 +96,7 @@ export class SecondStory extends Component {
                 $3,500
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $2,600
+                $1,300
               </div>
             </div>
 
@@ -108,7 +108,7 @@ export class SecondStory extends Component {
                 $2,430
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $1,815
+                $1,300
               </div>
             </div>
 
@@ -120,7 +120,7 @@ export class SecondStory extends Component {
                 $720
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $700
+                none
               </div>
             </div>
 
@@ -158,7 +158,7 @@ export class SecondStory extends Component {
                 $4,540
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $3,600
+                $2,300
               </div>
             </div>
             <div className="row">
@@ -169,7 +169,7 @@ export class SecondStory extends Component {
                 $(561)
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $(438)
+                $(300)
               </div>
             </div>
             <div className="row">
@@ -180,7 +180,7 @@ export class SecondStory extends Component {
                 $(720)
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $(700)
+                none
               </div>
             </div>
 
@@ -194,7 +194,7 @@ export class SecondStory extends Component {
                 $3,259
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $2,462
+                $2,000
               </div>
             </div>
 
@@ -205,16 +205,13 @@ export class SecondStory extends Component {
                 How Landed Helps
               </p>
               <p>
-                Landed helps structure the contract between Jennifer and her parents in case anything goes wrong.
+                Landed created the down payment support fund at Jennifer's school and helped the school reach out to its parents, alumni and champions to raise the capital.
               </p>
               <p>
-                Landed makes sure everyone gets all the tax deductions to which they are entitled.
+                Landed worked with Jennifer to put her full financing together and close the home.
               </p>
               <p>
-                Landed fairly assesses the buy-out price based on the original home price and growth in the neighborhood.
-              </p>
-              <p>
-                Most importantly, Landed makes sure Jennifer and her parents never have anything to fight about.
+                Most importantly, Landed makes sure Jennifer and her school community never have anything to fight about.
               </p>
             </div>
           </div>
@@ -222,16 +219,16 @@ export class SecondStory extends Component {
         <div className="row sign">
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
             <p>
-              As soon as she buys her house, the LA property market slows down. At the end of 5 years, her home is only worth about $25,000 more than she bought it for.
+              As soon as she buys her house, the LA property market crashes. At the end of 7 years, her home is only worth about $25,000 more than she bought it for.
             </p>
             <p>
-              During those 5 years, Jennifer and her family have managed to save another $67,500 (the original $65,000 plus 10% of the $25,000 appreciation) and can buy out her parents.
+              During those 7 years, Jennifer and her family have managed to save another $75,000 (the original $65,000 plus 37.5% of the $25,000 appreciation) and can buy out the community fund.
             </p>
             <p>
-              Jennifer's parents get their money back and make a similar deal with Jen's younger brother.
+              All the investors in the school's fund get their respective returns and many choose to re-invest in the next fund.
             </p>
             <p>
-              Over those 5 years, Jen avoids over $30,000 in additional interest and mortgage insurance payments.
+              Over those 7 years, Jen avoids over $40,000 in additional interest and mortgage insurance payments.
             </p>
           </div>
         </div>

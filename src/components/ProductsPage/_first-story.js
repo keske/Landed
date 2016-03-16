@@ -7,7 +7,7 @@ export class FirstStory extends Component {
         <div className="row">
           <div className="col-xs-12 col-sm-12 col-md-7 col-lg-7">
             <p>
-              <strong>Diego</strong> is a general contractor in Portland. He lives alone with his young son Robert who is in pre-school.
+              <strong>Diego</strong> is a junior lawyer in Portland. He lives alone with his young son Robert who is in pre-school.
             </p>
             <p>
               Diego is tired of being evicted for 'landlord-use' or being forced to pay massive rent increases.
@@ -16,7 +16,7 @@ export class FirstStory extends Component {
               Diego has enough for a regular down payment, but wants to buy a fixer-upper and really invest in his home.
             </p>
             <p>
-              Diego doesn't have enough money for both, so he asks his boss for 10% of the house price in exchange for 20% of the appreciation.
+              Diego doesn't have enough money for both, so he chooses to take 10% of the house price in exchange for 25% of the appreciation from his firm's Landed fund.
             </p>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
@@ -205,16 +205,13 @@ export class FirstStory extends Component {
                 How Landed Helps
               </p>
               <p>
-                Landed helps structure the contract between Diego and his boss to keep both parties protected.
+                Landed helped Diego's firm create their down payment fund.
               </p>
               <p>
-                Landed makes sure everyone gets all the tax deductions to which they are entitled.
+                Landed worked with Diego to put all his financing together and close his home.
               </p>
               <p>
-                Landed fairly assesses the buy-back price based on the original home price and growth in the neighborhood.
-              </p>
-              <p>
-                Landed helps Diego with the mechanics of buying back his boss' investment over time.
+                Landed helps Diego with the mechanics of buying back his firm's investment over time.
               </p>
             </div>
           </div>
@@ -225,10 +222,10 @@ export class FirstStory extends Component {
               After two years and $35,000 of work, Diego has improved the value of the property to $500,000. At that point, he refinances the home and gets an additional $75,000 in his pocket.
             </p>
             <p>
-              Diego improved the value of his property $120,000, but he promised his boss 20% of that gain.
+              Diego improved the value of his property $120,000, but he promised the fund 25% of that gain.
             </p>
             <p>
-              Diego therefore pays his boss $38,000 back plus $24,000 (20% of $120,000). Both Diego and his boss end up better off.
+              Diego therefore pays his boss $38,000 back plus $30,000 (25% of $120,000). Both Diego and his boss end up better off.
             </p>
           </div>
         </div>

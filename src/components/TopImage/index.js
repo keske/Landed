@@ -48,10 +48,10 @@ export class TopImage extends Component {
                 wait={1000}
               >
                 <h1 className="hidden-xs hidden-sm">
-                  Get down payment help <br/>from family and friends
+                  Get down payment help <br/>from your community.
                 </h1>
                 <h1 className="hidden-md hidden-lg">
-                  Get down payment help from family and friends
+                  Get down payment help from your community.
                 </h1>
               </SmartLoading>
             </div>
@@ -68,21 +68,21 @@ export class TopImage extends Component {
                 <div className="group">
                   <span className="icon" />
                   <p>
-                    Everyone needs help to buy their first home. We help you do it right.
+                    Everyone needs help to buy their first home. We organize your community to help you.
                   </p>
                 </div>
 
                 <div className="group">
                   <span className="icon" />
                   <p>
-                    All the tools you need to easily and legally set up down payment loans and co-investments.
+                    We work with schools, companies and affinity networks to create and manage down payment support programs.
                   </p>
                 </div>
 
                 <div className="group">
                   <span className="icon" />
                   <p>
-                    Trusted ongoing support to make sure you don't jeopardize your most important relationships.
+                    Through these programs, you can buy a home with less down and avoid costly fees.
                   </p>
                 </div>
 

@@ -47,13 +47,13 @@ export class ProductsPage extends Component {
     const { loanFamilyExpand, leaseExpand, ownershipExpand } = this.state;
 
     const intro = {
-      title: 'Want to partner with others to buy a home? Landed is here to help.',
-      text: "You decide on a deal that works for both of you (a down payment loan, shared ownership or a debt-free investment), and Landed helps take care of the rest.</br></br>Sign up below or call (415)-745-2460 if you'd prefer to talk to a representative.",
+      title: 'Need down payment support to buy a home? Landed is here to help.',
+      text: "We're working with organizations to create community funds that will give you money for your down payment, debt-free!</br></br> Want to know how the investment works?  Keep reading.",
       image: 'services',
     };
 
     const imageBlockProps = {
-      text: 'Landed eliminates the <br />anxieties of<br />getting financial <br />support',
+      text: 'You need partners </br>to start a business, </br>why not to buy a </br>house?',
       imageClass: 'services',
     };
 
@@ -79,7 +79,7 @@ export class ProductsPage extends Component {
               </div>
             </div>
           </div>
-          <div className="container family">
+          {/*<div className="container family">
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                 <span className="loan-icon" />
@@ -127,7 +127,7 @@ export class ProductsPage extends Component {
             </div>
           </div>
           { loanFamilyExpand && <Loan /> }
-          <hr />
+          <hr />*/}
           <div className="container family">
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
@@ -212,7 +212,7 @@ export class ProductsPage extends Component {
             </div>
           </div>
           { leaseExpand && <Lease /> }
-          <hr />
+          {/*<hr />
           <div className="container family">
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
@@ -260,7 +260,7 @@ export class ProductsPage extends Component {
               </div>
             </div>
           </div>
-          { ownershipExpand && <Ownership /> }
+          { ownershipExpand && <Ownership /> }*/}
         </div>
         <ImageBlock { ...imageBlockProps } />
       </section>
