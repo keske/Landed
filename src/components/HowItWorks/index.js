@@ -82,7 +82,7 @@ export class HowItWorks extends Component {
                   3. Make Sure Things Go Right
                 </p>
                 <p className="paragraph">
-                  Landed stays engaged to enforce the rules that have been set and partner with you as circumstances change.<br /><br />Most of the time, we just get out of the way so you get the full experience of ownership.
+                  Landed stays engaged to enforce the rules that have been set and work with you as circumstances change.<br /><br />Most of the time, we just get out of the way so you get the full experience of ownership.
                 </p>
               </div>
             </SmartLoading>

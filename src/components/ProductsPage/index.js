@@ -48,7 +48,7 @@ export class ProductsPage extends Component {
 
     const intro = {
       title: 'Need down payment support to buy a home? Landed is here to help.',
-      text: "We're working with organizations to create community funds that will give you money for your down payment, debt-free!</br></br> Want to know how the investment works?  Keep reading.",
+      text: "We're working with organizations to create community funds that will give you money for your down payment, debt-free.</br></br> Want to know how the investment works?  Keep reading.",
       image: 'services',
     };
 
