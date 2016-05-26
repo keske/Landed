@@ -48,10 +48,10 @@ export class TopImage extends Component {
                 wait={1000}
               >
                 <h1 className="hidden-xs hidden-sm">
-                  Get down payment help <br/>from your community.
+                  Down payment help, <br/>from your community
                 </h1>
                 <h1 className="hidden-md hidden-lg">
-                  Get down payment help from your community.
+                  Down payment help, from your community
                 </h1>
               </SmartLoading>
             </div>
@@ -82,7 +82,7 @@ export class TopImage extends Component {
                 <div className="group">
                   <span className="icon" />
                   <p>
-                    Through these programs, you can buy a home with less down and avoid costly fees.
+                    Through these programs, you can buy a home with less down and pay the lowest monthly fee -- anywhere.
                   </p>
                 </div>
 

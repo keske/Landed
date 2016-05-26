@@ -11,7 +11,7 @@ import * as actionCreators from 'actions/app';
 import { ProductsPage } from 'components/ProductsPage';
 
 const metaData = {
-  title: 'Products',
+  title: 'Start a Landed Fund',
   description: 'Smarter ownership, for everyone.',
   meta: {
     charset: 'utf-8',

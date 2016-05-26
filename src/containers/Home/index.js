@@ -11,7 +11,8 @@ import SmartLoading from 'components/SmartLoading';
 import { TopImage } from 'components/TopImage';
 import { Subscribe } from 'components/Subscribe';
 import { WeWillHelpYouWithMacs } from 'components/WeWillHelpYouWithMacs';
-import { HowItWorks } from 'components/HowItWorks'
+import { HowItWorks } from 'components/HowItWorks';
+import { HomePage } from 'components/Home';
 
 const metaData = {
   title: 'Landed. Smarter ownership, for everyone.',
@@ -73,6 +74,7 @@ export class Home extends Component {
           {
             pageLoaded && renderContent()
           }
+        <HomePage { ...this.props } />
       </section>
     );
   }

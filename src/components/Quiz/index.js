@@ -113,21 +113,21 @@ export class Quiz extends Component {
 
     // Stage options
     const options = [{
-      label: 'Early Search Without Broker',
-      value: 'Early Search Without Broker',
-      text: 'Just understanding the different options.',
+      label: 'Homebuyer - looking for more information',
+      value: 'Homebuyer - looking for more information',
+      text:  'I want to know how this would work for my home purchase',
     }, {
-      label: 'Already Searching With Broker',
-      value: 'Already Searching With Broker',
-      text: 'The perfect home hasn’t been found yet.',
+      label: 'Employer/School - looking for more information',
+      value: 'Employer/School - looking for more information',
+      text:  'I want more information about starting a Landed Fund.',
     }, {
-      label: 'Post-Offer',
-      value: 'Post-Offer',
-      text: 'An offer has been accepted but property is still closing.',
+      label: 'Investor/Alumni - looking for more information',
+      value: 'Investor/Alumni - looking for more information',
+      text:  'I want more information about participating in a Landed Fund',
     }, {
-      label: 'Already Closed',
-      value: 'Already Closed',
-      text: 'Looking to make our informal deal more formal.',
+      label: 'Community Champion - looking for more information',
+      value: 'Community Champion - looking for more information',
+      text:  'I want more information about championing a Landed Fund in my community',
     }];
 
     // Render option
@@ -167,7 +167,7 @@ export class Quiz extends Component {
 
                 <div className="slide col-xs-12 col-sm-12 col-md-12 col-lg-12">
                   <p className="label">
-                    Where will the home be located?
+                    In which state do you reside?
                   </p>
                   <Select
                     name="form-field-location"
@@ -182,7 +182,7 @@ export class Quiz extends Component {
 
                 <div className="slide col-xs-12 col-sm-12 col-md-12 col-lg-12">
                   <p className="label">
-                    What stage of the home buying <br className="show-xs hidden-sm hidden-md hidden-lg" />process are you?
+                    What describes your <br className="show-xs hidden-sm hidden-md hidden-lg" />situation best?
                   </p>
                   <Select
                     name="form-field-stage"

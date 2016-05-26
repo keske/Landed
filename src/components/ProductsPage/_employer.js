@@ -54,7 +54,7 @@ const diego = require('./files/diego.jpg');
 const jennifer = require('./files/jennifer.jpg');
 
 
-export class Lease extends Component {
+export class Employer extends Component {
 
   constructor(props) {
     super(props);
@@ -125,40 +125,40 @@ export class Lease extends Component {
         <div className="row lease-and-shared">
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <p className="ul-title">
-              For Residents
+              Employer / Union Benefits
             </p>
             <ul>
               <li>
-                Become a homeowner, earlier, without as much debt.
+                Expand your recruitment pool. 
               </li>
               <li>
-                No additional monthly payments or mortgage insurance.
+                Build engagement and loyalty.
               </li>
               <li>
-                Have complete security of payments for the next 7 years.
+                D
               </li>
             </ul>
           </div>
 
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <p className="ul-title">
-              For Investors
+              Landed Advantage
             </p>
             <ul>
               <li>
-                Co-invest in property with a committed resident.
+                <strong>Stay at arm's length.</strong> Don't put the relationship between faculty and administration at risk. 
               </li>
               <li>
-                Avoid co-signing a mortgage or splitting expenses.
+                <strong>No increase in overhead.</strong> Landed takes care of all regulatory and compliance infrastructure.
               </li>
               <li>
-                Achieve rental property returns without any of the work.
+                <strong>Leverage Landed's network.</strong> Through standardization, Landed makes the investment more compelling.
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="row terms">
+        {/*<div className="row terms">
           <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
             <p className="title">
               Standard terms
@@ -265,7 +265,7 @@ export class Lease extends Component {
               <SecondStory />
             </div>
           </div>
-        </div>
+        </div>*/}
       </div>
     );
   }

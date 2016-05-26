@@ -5,9 +5,9 @@ import { Link } from 'react-router';
 import { IntroImage } from '../IntroImage';
 import { ImageBlock } from '../ImageBlock';
 // import { HowItWorks } from '../HowItWorks';
-import { Lease } from './_lease';
-import { Ownership } from './_ownership';
-import { Loan } from './_loan';
+import { Employer } from './_employer';
+import { Alumni } from './_alumni';
+import { Schools } from './_schools';
 
 /* component styles */
 import { styles } from './styles/styles.scss';
@@ -21,39 +21,39 @@ export class ProductsPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loanFamilyExpand: false,
-      leaseExpand: false,
-      ownershipExpand: false,
+      schoolsExpand: false,
+      employerExpand: false,
+      alumniExpand: false,
     };
 
-    this.showLoenFamily = this.showLoenFamily.bind(this);
-    this.showLease = this.showLease.bind(this);
-    this.showOwnersip = this.showOwnersip.bind(this);
+    this.showSchools = this.showSchools.bind(this);
+    this.showEmployer = this.showEmployer.bind(this);
+    this.showAlumni = this.showAlumni.bind(this);
   }
 
-  showLoenFamily() {
-    this.setState({ loanFamilyExpand: true });
+  showSchools() {
+    this.setState({ schoolsExpand: true });
   }
 
-  showLease() {
-    this.setState({ leaseExpand: true });
+  showEmployer() {
+    this.setState({ employerExpand: true });
   }
 
-  showOwnersip() {
-    this.setState({ ownershipExpand: true });
+  showAlumni() {
+    this.setState({ alumniExpand: true });
   }
 
   render() {
-    const { loanFamilyExpand, leaseExpand, ownershipExpand } = this.state;
+    const { schoolsExpand, employerExpand, alumniExpand } = this.state;
 
     const intro = {
-      title: 'Need down payment support to buy a home? Landed is here to help.',
-      text: "We're working with organizations to create community funds that will give you money for your down payment, debt-free.</br></br> Want to know how the investment works?  Keep reading.",
+      title: 'Want to help your community live near where they work?</br> Start a Landed Fund.',
+      text: "Not everyone has wealthy parents to help them with a downpayment. Landed support can provide a similar boost to help start building wealth. </br></br> Help people you care about.</br> Own a diversified real estate portfolio.",
       image: 'services',
     };
 
     const imageBlockProps = {
-      text: 'You need partners </br>to start a business, </br>why not to buy a </br>house?',
+      text: 'Have other </br>Landed Fund ideas?</br></br>Let us know!',
       imageClass: 'services',
     };
 
@@ -67,90 +67,100 @@ export class ProductsPage extends Component {
                 <div className="hidden-md hidden-lg sign-up-block">
                   <Link to="quiz">
                     <span className="button">
-                      Sign Up to Learn More
+                      Learn More.
                     </span>
                   </Link>
                 </div>
                 <div className="hidden-xs hidden-sm sign-up-block">
                   <span className="button" onClick={ () => this.props.showQuiz(true) }>
-                    Sign Up to Learn More
+                    Learn More.
                   </span>
                 </div>
               </div>
             </div>
           </div>
-          {/*<div className="container family">
+          <div className="container family">
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                 <span className="loan-icon" />
                 <p className="title">
-                  Family<br />Loan
+                  Schools<br />and Districts
                 </p>
               </div>
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <p className="info-text">
-                  Outside of large gifts, family down payment loans are the most common form of support. If your intention is to repay even some portion of the help you receive from your parents, structuring a family down payment loan ensures your family member is protected from IRS scrutiny and complications resulting from a potential divorce.
+                  The Landed story started with supporting schools and school districts recruit and retain faculty. Social impact funds and family offices want to invest in supporting educators; Landed gives them a way.
                 </p>
 
                 <span
-                  className={ `button ${ loanFamilyExpand && 'hide' }` }
-                  onClick={ this.showLoenFamily }
+                  className={ `button ${ schoolsExpand && 'hide' }` }
+                  onClick={ this.showSchools }
                 >
-                  Details and Examples
+                  Learn More
                 </span>
 
-                <p className={`more-known ${!loanFamilyExpand && 'hide'}`}>
-                  A family loan involves two main parts:
+                <p className={`more-known ${!schoolsExpand && 'hide'}`}>
+                  Partnering with Landed is as simple as 1, 2, 3. Outside of helping identify potential sources of capital, starting a Landed Fund requires no ongoing cost or overhead:
                 </p>
-                <div className={`expandet-list list ${!loanFamilyExpand && 'hide'}`}>
+                <div className={`expandet-list list ${!schoolsExpand && 'hide'}`}>
                   <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
                     <span className="list-number">1.</span>
                   </div>
                   <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
                     <p>
-                      <strong>A promissory note that outlines the terms of the loan.</strong>  Among other restrictions, a minimum interest rate must be charged to have the note considered valid.
+                      <strong>Engage Landed.</strong>  Understand the potential demand and determine who the benefit applies to (all faculty, tenured faculty, etc).
                     </p>
                   </div>
                 </div>
 
-                <div className={`expandet-list list ${!loanFamilyExpand && 'hide'}`}>
+                <div className={`expandet-list list ${!schoolsExpand && 'hide'}`}>
                   <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
                     <span className="list-number">2.</span>
                   </div>
                   <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
                     <p>
-                      <strong>A mortgage or deed of trust that secures the loan.</strong> We help you register it with the relevant local authorities to make it an official second mortgage. A registered loan is also tax-deductible for the borrower, which could help them save thousands of dollars over the length of the loan.
+                      <strong>Work with Landed to recruit the funds.</strong> In addition to your school's network, Landed has strong relationships with wealth sources across the country.
+                    </p>
+                  </div>
+                </div>
+                <div className={`expandet-list list ${!schoolsExpand && 'hide'}`}>
+                  <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
+                    <span className="list-number">3.</span>
+                  </div>
+                  <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
+                    <p>
+                      <strong>Launch the benefit.</strong> Once the benefit is launched, faculty, staff and investors will deal directly with Landed. Landed will manage all legal and regulatory compliance in addition to homebuyer support.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          { loanFamilyExpand && <Loan /> }
-          <hr />*/}
+          { schoolsExpand && <Schools /> }
+          <hr />
           <div className="container family">
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                 <span className="lease-icon" />
                 <p className="title">
-                  Debt-Free<br />Financing
+                  Unions &<br /> Employers
                 </p>
               </div>
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <p className="info-text">
-                  It's hard to qualify for a mortgage with less than a 20% down payment, and in many cases, it doesn't make sense to take on more debt.  Debt-free financing allows homebuyers to accept funds today in exchange for part of the home's value when you refinance or sell.
+                  Your employees and members need help to start building a life in their communities, and you know them best.  Whether out of ERISA funds or employer reserves, help your own while achieving return targets.
                 </p>
                 <span
-                  className={ `button ${ leaseExpand && 'hide' }` }
-                  onClick={ this.showLease }
+                  className={ `button ${ employerExpand && 'hide' }` }
+                  onClick={ this.showEmployer }
                 >
                   Details and Examples
                 </span>
 
-                <p className={`more-known ${!leaseExpand && 'hide'}`}>
+                <p className={`more-known ${!employerExpand && 'hide'}`}>
                   Often known as fractional equity financing, it involves two main parts:
                 </p>
-                <div className={`expandet-list list ${ !leaseExpand && 'hide'}`}>
+                <div className={`expandet-list list ${ !employerExpand && 'hide'}`}>
                   <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
                     <span className="list-number">1.</span>
                   </div>
@@ -161,7 +171,7 @@ export class ProductsPage extends Component {
                   </div>
                 </div>
 
-                <div className={`expandet-list list ${ !leaseExpand && 'hide'}`}>
+                <div className={`expandet-list list ${ !employerExpand && 'hide'}`}>
                   <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
                     <span className="list-number">2.</span>
                   </div>
@@ -172,71 +182,34 @@ export class ProductsPage extends Component {
                   </div>
                 </div>
               </div>
-              {/*<div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <p className="info-text">
-                  Typical rent-to-own contracts have a bad reputation. Typically, a large upfront fee and excessively high rent is paid to really pressure the resident into buying. Sadly, the reality is that many buyers never exercise their right to buy and all those additional fees go straight to the landlord’s pocket. We don’t think that’s fair.
-                </p>
-
-                <span
-                  className={ `button ${ leaseExpand && 'hide' }` }
-                  onClick={ this.showLease }
-                >
-                  Details and Examples
-                </span>
-
-                <p className={`more-known ${!leaseExpand && 'hide'}`}>
-                  More typically known as a lease-option agreement, our contract involves two main parts:
-                </p>
-                <div className={`expandet-list list ${ !leaseExpand && 'hide'}`}>
-                  <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
-                    <span className="list-number">1.</span>
-                  </div>
-                  <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
-                    <p>
-                    <strong>A long-term rent agreement that provides security to both the owner and the renter.</strong>  This commits both the investor and the resident to the space for 5 years.  For this commitment, the investor agrees to give the resident the same experience they would have in their own home.
-                  </p>
-                  </div>
-                </div>
-
-                <div className={`expandet-list list ${ !leaseExpand && 'hide'}`}>
-                  <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
-                    <span className="list-number">2.</span>
-                  </div>
-                  <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
-                    <p>
-                      <strong>An option to buy back the property from the investor.</strong>  In exchange for committing to the home long-term, the resident is given an option to buy the property.
-                    </p>
-                  </div>
-                </div>
-              </div>*/}
             </div>
           </div>
-          { leaseExpand && <Lease /> }
-          {/*<hr />
+          { employerExpand && <Employer /> }
+          <hr />
           <div className="container family">
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                 <span className="ownership-icon" />
                 <p className="title">
-                  Shared<br />Ownership
+                  Alumni<br />Networks
                 </p>
               </div>
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <p className="info-text">
-                  Shared ownership splits a home purchase, but assigns exclusive living rights to one person (the Resident Owner). For the portion that the Resident Owner doesn’t own, he or she pays rent to the investor. Properly structured, it can truly be a win-win for all involved.
+                  Want to give back to your alumni community without providing a gift? Young alumni need investment partners to start building their life. Build a diversified urban real estate portfolio of responsible partners.
                 </p>
 
                 <span
-                  className={ `button ${ ownershipExpand && 'hide' }` }
-                  onClick={ this.showOwnersip }
+                  className={ `button ${ alumniExpand && 'hide' }` }
+                  onClick={ this.showAlumni }
                 >
                   Details and Examples
                 </span>
 
-                <p className={`more-known ${!ownershipExpand && 'hide'}`}>
+                <p className={`more-known ${!alumniExpand && 'hide'}`}>
                   A shared ownership agreement involves two main parts:
                 </p>
-                <div className={`expandet-list list ${ !ownershipExpand && 'hide'}`}>
+                <div className={`expandet-list list ${ !alumniExpand && 'hide'}`}>
                   <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
                     <span className="list-number">1.</span>
                   </div>
@@ -247,7 +220,7 @@ export class ProductsPage extends Component {
                   </div>
                 </div>
 
-                <div className={`expandet-list list ${ !ownershipExpand && 'hide'}`}>
+                <div className={`expandet-list list ${ !alumniExpand && 'hide'}`}>
                   <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
                     <span className="list-number">2.</span>
                   </div>
@@ -260,7 +233,7 @@ export class ProductsPage extends Component {
               </div>
             </div>
           </div>
-          { ownershipExpand && <Ownership /> }*/}
+          { alumniExpand && <Alumni /> }
         </div>
         <ImageBlock { ...imageBlockProps } />
       </section>

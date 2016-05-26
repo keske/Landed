@@ -59,7 +59,7 @@ export class Header extends Component {
         <Link onClick={ () => this.props.show(false) }
               to="products"
               activeClassName="active">
-          Products
+          Start a Landed Fund
         </Link>
         <Link onClick={ () => this.props.show(false) }
               to="about"
