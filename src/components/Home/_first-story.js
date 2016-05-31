@@ -16,7 +16,7 @@ export class FirstStory extends Component {
               Diego has enough for a regular down payment, but wants to buy a fixer-upper and really invest in his home.
             </p>
             <p>
-              Diego doesn't have enough money for both, so he chooses to take $38,000 from a UCLA Landed fund.
+              Diego doesn't have enough money for both, so he chooses to take $38,000 from a UCLA Landed Fund.
             </p>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
@@ -205,7 +205,7 @@ export class FirstStory extends Component {
                 How Landed Helps
               </p>
               <p>
-                Landed helped alumni at UCLA come together to form a Landed fund.
+                Landed helped alumni at UCLA come together to form a Landed Fund.
               </p>
               <p>
                 Landed worked with Diego to put all his financing together and close his home.

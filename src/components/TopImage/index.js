@@ -75,14 +75,14 @@ export class TopImage extends Component {
                 <div className="group">
                   <span className="icon" />
                   <p>
-                    We work with schools, companies and affinity networks to create and manage down payment support programs.
+                    We work with schools, companies and alumni networks to create and manage down payment help programs.
                   </p>
                 </div>
 
                 <div className="group">
                   <span className="icon" />
                   <p>
-                    Through these programs, you can buy a home with less down and pay the lowest monthly fee -- anywhere.
+                    Through these programs, qualifying homebuyers can put less down and pay less than they would in rent.
                   </p>
                 </div>
 

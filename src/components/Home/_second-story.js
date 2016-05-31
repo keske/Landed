@@ -13,7 +13,7 @@ export class SecondStory extends Component {
               Having just recently paid off their student debts and getting a little help from parents, they were ready to consider buying a home to start their family.
             </p>
             <p>
-              Jennifer considered two options: (1) get a 10% down FHA loan or (2) take $100,000 from her school's Landed fund for a 40% partnership. By putting a total of 25% down, Jennifer could safely access interest-only loan options.
+              Jennifer considered two options: (1) get a 10% down FHA loan or (2) take $100,000 from her school's Landed Fund for a 40% partnership. By putting a total of 25% down, Jennifer could safely access interest-only loan options.
             </p>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">

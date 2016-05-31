@@ -47,8 +47,8 @@ export class ProductsPage extends Component {
     const { schoolsExpand, employerExpand, alumniExpand } = this.state;
 
     const intro = {
-      title: 'Want to help your community live near where they work?</br> Start a Landed Fund.',
-      text: "Not everyone has wealthy parents to help them with a downpayment. Landed support can provide a similar boost to help start building wealth. </br></br> Help people you care about.</br> Own a diversified real estate portfolio.",
+      title: 'Start a Landed Fund.</br>Help people you care about buy a home, so they stay.',
+      text: "Not everyone can get help from Mom or Dad. Access to a Landed Fund can provide a similar boost to help them start building wealth. </br></br> Investing in a Landed Fund is not charity. It's ownership in a diversified, urban real estate portfolio without the pain of rental property.",
       image: 'services',
     };
 
@@ -67,13 +67,13 @@ export class ProductsPage extends Component {
                 <div className="hidden-md hidden-lg sign-up-block">
                   <Link to="quiz">
                     <span className="button">
-                      Learn More.
+                      Learn More
                     </span>
                   </Link>
                 </div>
                 <div className="hidden-xs hidden-sm sign-up-block">
                   <span className="button" onClick={ () => this.props.showQuiz(true) }>
-                    Learn More.
+                    Learn More
                   </span>
                 </div>
               </div>
@@ -89,14 +89,14 @@ export class ProductsPage extends Component {
               </div>
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <p className="info-text">
-                  The Landed story started with supporting schools and school districts recruit and retain faculty. Social impact funds and family offices want to invest in supporting educators; Landed gives them a way.
+                  Independent schools, school districts, and charter networks can better recruit and retain faculty by helping them become homeowners in the community in which they teach. It also gives members of the community, who have money to invest in real estate, a way to sustainably support quality educators.
                 </p>
 
                 <span
                   className={ `button ${ schoolsExpand && 'hide' }` }
                   onClick={ this.showSchools }
                 >
-                  Learn More
+                  Details
                 </span>
 
                 <p className={`more-known ${!schoolsExpand && 'hide'}`}>
@@ -148,13 +148,13 @@ export class ProductsPage extends Component {
               </div>
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <p className="info-text">
-                  Your employees and members need help to start building a life in their communities, and you know them best.  Whether out of ERISA funds or employer reserves, help your own while achieving return targets.
+                  Companies, not-for-profit organizations, government agencies and unions can better recruit and retain employees by helping them become homeowners in the communities in which they work. Help your own while achieving target investment returns on company reserves or retirement funds.
                 </p>
                 <span
                   className={ `button ${ employerExpand && 'hide' }` }
                   onClick={ this.showEmployer }
                 >
-                  Details and Examples
+                  Details
                 </span>
 
                 <p className={`more-known ${!employerExpand && 'hide'}`}>
@@ -191,19 +191,19 @@ export class ProductsPage extends Component {
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                 <span className="ownership-icon" />
                 <p className="title">
-                  Alumni<br />Networks
+                  Affiliate<br />Networks
                 </p>
               </div>
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <p className="info-text">
-                  Want to give back to your alumni community without providing a gift? Young alumni need investment partners to start building their life. Build a diversified urban real estate portfolio of responsible partners.
+                  Alumni of a specific university or of another affiliate group can support their community without having to give a gift. Build a diversified, urban real estate portfolio while helping young alumni access homeownership.
                 </p>
 
                 <span
                   className={ `button ${ alumniExpand && 'hide' }` }
                   onClick={ this.showAlumni }
                 >
-                  Details and Examples
+                  Details
                 </span>
 
                 <p className={`more-known ${!alumniExpand && 'hide'}`}>

@@ -167,7 +167,7 @@ export class Quiz extends Component {
 
                 <div className="slide col-xs-12 col-sm-12 col-md-12 col-lg-12">
                   <p className="label">
-                    In which state do you reside?
+                    In which state would the fund be based?
                   </p>
                   <Select
                     name="form-field-location"

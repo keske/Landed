@@ -46,7 +46,7 @@ export class HomePage extends Component {
     const { loanFamilyExpand, leaseExpand, ownershipExpand } = this.state;
 
     const imageBlockProps = {
-      text: 'You need partners </br>to start a business, </br>why not to buy a </br>house?',
+      text: 'You need partners </br>to start a business, so </br>why not to buy a </br>house?',
       imageClass: 'services',
     };
 
@@ -73,7 +73,7 @@ export class HomePage extends Component {
               </div>
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <p className="info-text">
-                  It's hard to qualify for a mortgage with less than a 20% down payment, and in many cases, it doesn't make sense to take on more debt.  Debt-free financing allows homebuyers to accept funds today in exchange for a partnership share of the appreciation or depreciation, if any, in the home.
+                  It's hard to qualify for a mortgage with less than a 20% down payment, and in many cases, it doesn't make sense to take on more debt.  Debt-free financing allows homebuyers to accept funds today to cover part of their down payment, in exchange for a partnership share of the growth (or decline), if any, in the value of the home.
                 </p>
                 <span
                   className={ `button ${ leaseExpand && 'hide' }` }
@@ -83,7 +83,7 @@ export class HomePage extends Component {
                 </span>
 
                 <p className={`more-known ${!leaseExpand && 'hide'}`}>
-                  Often known as equity financing, it involves two main parts:
+                  Sometimes known as equity financing, it involves two main parts:
                 </p>
                 <div className={`expandet-list list ${ !leaseExpand && 'hide'}`}>
                   <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
@@ -91,7 +91,7 @@ export class HomePage extends Component {
                   </div>
                   <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
                     <p>
-                    <strong>An agreement (know as the Landed Option) that gives your community the ability to make money if the value of the home goes up.</strong> For example, you might accept half of the down payment for 25% of the growth in the value of the home when you sell or refinance. This option is recorded with your local county.
+                    <strong>An agreement (know as the Landed Option) that gives investors from the community the ability to make money if the value of the home goes up.</strong> For example, a fair agreement in San Francisco or New York might be to invest 50% of the down payment for 25% of the profits when the home is sold or refinanced. This option is recorded with the local authorities.
                   </p>
                   </div>
                 </div>
@@ -102,7 +102,7 @@ export class HomePage extends Component {
                   </div>
                   <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
                     <p>
-                      <strong>A set of agreements to protect you and your community investors.</strong> A lien is recorded against the property to protect everyone's investment in the case you go bankrupt.
+                      <strong>A set of agreements to protect the homebuyer and community investors.</strong> A lien is recorded against the property to ensure the rules of the agreement are followed.
                     </p>
                   </div>
                 </div>

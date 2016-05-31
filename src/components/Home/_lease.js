@@ -132,7 +132,7 @@ export class Lease extends Component {
                 Make no monthly payments on the support.
               </li>
               <li>
-                Have complete security of payments for the next 7 years.
+                Have complete security of payments for the term of the agreement.
               </li>
             </ul>
           </div>
