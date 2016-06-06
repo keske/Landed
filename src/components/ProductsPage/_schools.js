@@ -114,7 +114,7 @@ export class Schools extends Component {
             </p>
             <ul>
               <li>
-                Recruit out-of-state faculty who don't want to go back to being renters.
+                Recruit out-of-area faculty who don't want to go back to being renters.
               </li>
               <li>
                 Retain faculty and staff by decreasing their commute and increasing their stability.
@@ -137,7 +137,7 @@ export class Schools extends Component {
                 <strong>No increase in overhead.</strong> Landed takes care of all regulatory and compliance infrastructure.
               </li>
               <li>
-                <strong>Leverage Landed's network.</strong> Through standardization, Landed makes the investment more compelling.
+                <strong>Leverage Landed's network.</strong> Through standard terms, Landed makes the investment more compelling.
               </li>
             </ul>
           </div>
@@ -177,7 +177,7 @@ export class Schools extends Component {
           </div>
         </div>*/}
 
-        <div className="row examples">
+        {/*<div className="row examples">
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <p className="title">
               Customer Stories
@@ -234,7 +234,7 @@ export class Schools extends Component {
               <SixthStory />
             </div>
           </div>
-        </div>
+        </div>*/}
       </div>
     );
   }

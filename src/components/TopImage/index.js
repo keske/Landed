@@ -68,7 +68,7 @@ export class TopImage extends Component {
                 <div className="group">
                   <span className="icon" />
                   <p>
-                    Everyone needs help to buy their first home. We organize your community to help you.
+                    Everyone needs help to buy their first home. We organize communities to provide it.
                   </p>
                 </div>
 

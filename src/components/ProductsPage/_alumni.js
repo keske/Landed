@@ -119,27 +119,27 @@ export class Alumni extends Component {
                 Own a diversified urban real estate portfolio alongside owners you trust.
               </li>
               <li>
-                Buy ownership over time instead of all at once.
+                Have a third-party monitor and manage the investments to make sure all the rules are followed.
               </li>
               <li>
-                Have your money working sooner while sharing some of the financial risk.
+                Sustainably help community members accelerate wealth building by becoming homeowners.
               </li>
             </ul>
           </div>
 
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <p className="ul-title">
-              For Investors
+              Landed Advantage
             </p>
             <ul>
               <li>
-                Co-invest in a great home with a trusted, committed resident who takes care of your investment.
+                <strong>Stay at arm's length.</strong> Don't put the relationship between community members at risk. 
               </li>
               <li>
-                Get benefits of owning investment real estate without the hassle of being a landlord.
+                <strong>Stay compliant.</strong> Landed takes care of all regulatory and compliance infrastructure.
               </li>
               <li>
-                Provide an opportunity for the resident to stair-step into responsible ownership.
+                <strong>Consistent investment terms.</strong> Through standard terms, Landed makes future liquidity possible.
               </li>
             </ul>
           </div>
@@ -191,7 +191,7 @@ export class Alumni extends Component {
           </div>
         </div>*/}
 
-        <div className="row examples">
+        {/*<div className="row examples">
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <p className="title">
               Customer Stories
@@ -248,7 +248,7 @@ export class Alumni extends Component {
               <FourthStory />
             </div>
           </div>
-        </div>
+        </div>*/}
 
 
       </div>

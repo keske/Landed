@@ -73,7 +73,7 @@ export class HomePage extends Component {
               </div>
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <p className="info-text">
-                  It's hard to qualify for a mortgage with less than a 20% down payment, and in many cases, it doesn't make sense to take on more debt.  Debt-free financing allows homebuyers to accept funds today to cover part of their down payment, in exchange for a partnership share of the growth (or decline), if any, in the value of the home.
+                  It's hard to qualify for a mortgage with less than a 20% down payment, and in many cases, it doesn't make sense to take on more debt.  Debt-free financing allows homebuyers to accept funds today to cover part of their down payment, in exchange for a share of the growth (or decline), if any, in the value of the home.
                 </p>
                 <span
                   className={ `button ${ leaseExpand && 'hide' }` }

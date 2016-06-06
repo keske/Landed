@@ -47,8 +47,8 @@ export class ProductsPage extends Component {
     const { schoolsExpand, employerExpand, alumniExpand } = this.state;
 
     const intro = {
-      title: 'Start a Landed Fund.</br>Help people you care about buy a home, so they stay.',
-      text: "Not everyone can get help from Mom or Dad. Access to a Landed Fund can provide a similar boost to help them start building wealth. </br></br> Investing in a Landed Fund is not charity. It's ownership in a diversified, urban real estate portfolio without the pain of rental property.",
+      title: 'Help people you care about buy a home, so they stay',
+      text: "Not everyone can get help from Mom or Dad for a down payment on their first home. Access to a Landed Fund can provide a similar boost. </br></br> Investing in a Landed Fund is not charity. It's ownership in a diversified, urban real estate portfolio without the pain of rental property.",
       image: 'services',
     };
 
@@ -84,7 +84,7 @@ export class ProductsPage extends Component {
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                 <span className="loan-icon" />
                 <p className="title">
-                  Schools<br />and Districts
+                  Schools &<br />Districts
                 </p>
               </div>
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -129,7 +129,7 @@ export class ProductsPage extends Component {
                   </div>
                   <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
                     <p>
-                      <strong>Launch the benefit.</strong> Once the benefit is launched, faculty, staff and investors will deal directly with Landed. Landed will manage all legal and regulatory compliance in addition to homebuyer support.
+                      <strong>Launch the Benefit.</strong> Once the benefit is launched, faculty, staff and investors will deal directly with Landed. Landed will manage all legal and regulatory compliance in addition to homebuyer support.
                     </p>
                   </div>
                 </div>
@@ -158,7 +158,7 @@ export class ProductsPage extends Component {
                 </span>
 
                 <p className={`more-known ${!employerExpand && 'hide'}`}>
-                  Often known as fractional equity financing, it involves two main parts:
+                  Partnering with Landed is as simple as 1, 2, 3. Outside of helping identify potential sources of capital, starting a Landed Fund requires no ongoing cost or overhead:
                 </p>
                 <div className={`expandet-list list ${ !employerExpand && 'hide'}`}>
                   <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
@@ -166,7 +166,7 @@ export class ProductsPage extends Component {
                   </div>
                   <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
                     <p>
-                    <strong>An agreement (know as an option) that gives your supporter the ability to make money if the value of the home goes up.</strong> For example, you might accept half of the down payment for 25% of the growth in the value of the home when you sell or refinance. This option is recorded with the relevant authorities.
+                    <strong>Engage Landed.</strong>  Understand the potential demand and determine who the benefit applies to (all employees, senior employees, etc).
                   </p>
                   </div>
                 </div>
@@ -177,10 +177,22 @@ export class ProductsPage extends Component {
                   </div>
                   <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
                     <p>
-                      <strong>A set of agreements to protect you and your co-investor.</strong> A lien is recorded against the property to protect your buying partner's investment in the case you go bankrupt. A separate agreement outlines the conditions under which your buying partner can ask for their investment back.
+                      <strong>Identify the Source of Funds.</strong> If company reserves or retirement funds are not available, Landed can also form a fund from the private investments of qualified employees.
                     </p>
                   </div>
                 </div>
+
+                <div className={`expandet-list list ${ !employerExpand && 'hide'}`}>
+                  <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
+                    <span className="list-number">3.</span>
+                  </div>
+                  <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
+                    <p>
+                      <strong>Launch the Benefit.</strong> Once the benefit is launched, employees and investors will deal directly with Landed. Landed will manage all legal and regulatory compliance in addition to homebuyer support.
+                    </p>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
@@ -207,26 +219,37 @@ export class ProductsPage extends Component {
                 </span>
 
                 <p className={`more-known ${!alumniExpand && 'hide'}`}>
-                  A shared ownership agreement involves two main parts:
+                  Partnering with Landed is as simple as 1, 2, 3. Outside of helping identify potential sources of capital, starting a Landed Fund requires no ongoing cost or overhead:
                 </p>
-                <div className={`expandet-list list ${ !alumniExpand && 'hide'}`}>
+                <div className={`expandet-list list ${ !employerExpand && 'hide'}`}>
                   <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
                     <span className="list-number">1.</span>
                   </div>
                   <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
                     <p>
-                      <strong>A shared ownership agreement that splits the responsibilities of ownership.</strong>  The two parties hold the property on title as Tenants-In-Common. The ownership percentages between the two parties are usually calculated by how much they put in as down-payment.  Typically, all financials (paying the mortgage, insurance, repairs) are split according to ownership interest.  The Resident Owner is even allowed to slowly purchase more of the property over time.
-                    </p>
+                    <strong>Engage Landed.</strong>  Estimate the potential demand and determine who the benefit applies to (all alumni, local alumni, etc).
+                  </p>
                   </div>
                 </div>
 
-                <div className={`expandet-list list ${ !alumniExpand && 'hide'}`}>
+                <div className={`expandet-list list ${ !employerExpand && 'hide'}`}>
                   <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
                     <span className="list-number">2.</span>
                   </div>
                   <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
                     <p>
-                      <strong>A lease to the Resident Owner.</strong> The two parties lease the property to the Resident Owner who receives all the typical living rights enjoyed by a homeowner.
+                      <strong>Identify the Investment Champions.</strong> In our experience, one or two community champions are necessary to seed the fund and recruit other alumni investors.
+                    </p>
+                  </div>
+                </div>
+
+                <div className={`expandet-list list ${ !employerExpand && 'hide'}`}>
+                  <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
+                    <span className="list-number">3.</span>
+                  </div>
+                  <div className="col-xs-12 col-sm-11 col-md-11 col-lg-11">
+                    <p>
+                      <strong>Launch the Fund.</strong> Once the benefit is launched, alumni and investors will deal directly with Landed. Landed will manage all legal and regulatory compliance in addition to homebuyer support.
                     </p>
                   </div>
                 </div>

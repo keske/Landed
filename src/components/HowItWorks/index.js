@@ -43,11 +43,11 @@ export class HowItWorks extends Component {
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
                 <img src={ icons[0] } />
                 <p className="paragraph green">
-                  1. Create Community Funds
+                  1.  Create Community Funds
 
                 </p>
                 <p className="paragraph">
-                  We create and manage a Landed Fund for a specific community, and Landed helps recruit funds from accredited investors.<br /><br />The fund helps multiple homebuyers from that community.
+                  We create and manage a Landed Fund for a specific community, and help recruit investment dollars from qualified investors.<br /><br />The Fund helps multiple homebuyers from that community buy a home.
                 </p>
               </div>
             </SmartLoading>
@@ -61,10 +61,10 @@ export class HowItWorks extends Component {
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
                 <img src={ icons[1] } />
                 <p className="paragraph green">
-                  2. Assist Home Purchases
+                  2.  Assist Home Purchases
                 </p>
                 <p className="paragraph">
-                  Landed and its banking partners work with homebuyers from that community to manage all the details of getting down payment help.<br /><br />We make sure our homebuyers can easily compete in hot markets.
+                  We work with homebuyers to manage all the details of getting down payment help alongside a mortgage from one of our banking partners.<br /><br />We make sure our homebuyers can easily compete in hot markets.
                 </p>
               </div>
             </SmartLoading>
@@ -78,10 +78,10 @@ export class HowItWorks extends Component {
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
                 <img src={ icons[2] } />
                 <p className="paragraph green">
-                  3. Make Sure Things Go Right
+                  3.  Make Sure Things Go Right
                 </p>
                 <p className="paragraph">
-                  Landed stays engaged to enforce the rules that have been set and works homebuyers should their circumstances change.<br /><br />Most of the time, we just get out of the way and let homebuyers flourish.
+                  We stay engaged to enforce the rules that have been set, and we work with homebuyers should their circumstances change.<br /><br />Then, we just get out of the way and let homebuyers enjoy being an owner.
                 </p>
               </div>
             </SmartLoading>

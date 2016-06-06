@@ -129,13 +129,13 @@ export class Employer extends Component {
             </p>
             <ul>
               <li>
-                Expand your recruitment pool. 
+                Recruit out-of-area employees who don't want to go back to being renters.
               </li>
               <li>
-                Build engagement and loyalty.
+                Retain employees by decreasing their commute and increasing their stability.
               </li>
               <li>
-                D
+                Sustainably help employees or members build more wealth without increasing salaries.
               </li>
             </ul>
           </div>
@@ -146,13 +146,13 @@ export class Employer extends Component {
             </p>
             <ul>
               <li>
-                <strong>Stay at arm's length.</strong> Don't put the relationship between faculty and administration at risk. 
+                <strong>Stay at arm's length.</strong> Don't put the relationship between employees and management at risk. 
               </li>
               <li>
                 <strong>No increase in overhead.</strong> Landed takes care of all regulatory and compliance infrastructure.
               </li>
               <li>
-                <strong>Leverage Landed's network.</strong> Through standardization, Landed makes the investment more compelling.
+                <strong>Leverage Landed's network.</strong> Through standard terms, Landed makes the investment more compelling.
               </li>
             </ul>
           </div>

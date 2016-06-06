@@ -79,14 +79,14 @@
   h1 {
     color: #FFF;
     font-size: 45px;
-    line-height: 41px;
+    line-height: 45px;
     font-family: 'Jannon10Pro';
     
     margin: 120px 0 30px;
 
     @media (#{ $phone }) {
       width: 90%;
-      font-size: 35px;
+      font-size: 34px;
       left: 0px;
     }
     @media (#{ $large-desktop }) {
