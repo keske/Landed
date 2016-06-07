@@ -47,7 +47,7 @@ export class HowItWorks extends Component {
 
                 </p>
                 <p className="paragraph">
-                  We create and manage a Landed Fund for a specific community, and help recruit investment dollars from qualified investors.<br /><br />The Fund helps multiple homebuyers from that community buy a home.
+                  We create and manage a Landed Fund for a specific community, and help recruit the necessary capital from qualified investors.
                 </p>
               </div>
             </SmartLoading>
@@ -64,7 +64,7 @@ export class HowItWorks extends Component {
                   2.  Assist Home Purchases
                 </p>
                 <p className="paragraph">
-                  We work with homebuyers to manage all the details of getting down payment help alongside a mortgage from one of our banking partners.<br /><br />We make sure our homebuyers can easily compete in hot markets.
+                  We work with homebuyers to manage all the details of getting down payment help alongside a mortgage from one of our banking partners.
                 </p>
               </div>
             </SmartLoading>
@@ -81,7 +81,7 @@ export class HowItWorks extends Component {
                   3.  Make Sure Things Go Right
                 </p>
                 <p className="paragraph">
-                  We stay engaged to enforce the rules that have been set, and we work with homebuyers should their circumstances change.<br /><br />Then, we just get out of the way and let homebuyers enjoy being an owner.
+                  We stay engaged to enforce the rules that have been set, and we work with homebuyers should their circumstances change.
                 </p>
               </div>
             </SmartLoading>

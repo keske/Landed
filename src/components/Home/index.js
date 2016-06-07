@@ -46,7 +46,7 @@ export class HomePage extends Component {
     const { loanFamilyExpand, leaseExpand, ownershipExpand } = this.state;
 
     const imageBlockProps = {
-      text: 'You need partners </br>to start a business, so </br>why not to buy a </br>house?',
+      text: 'Why not partner </br>with your community </br>to buy your </br>home?',
       imageClass: 'services',
     };
 

@@ -7,16 +7,16 @@ export class FirstStory extends Component {
         <div className="row">
           <div className="col-xs-12 col-sm-12 col-md-7 col-lg-7">
             <p>
-              <strong>Diego</strong> is a junior lawyer in Portland. He lives alone with his young son Robert who is in pre-school.
+              <strong>Diego</strong> is a junior lawyer in Portland and alumnus of UCLA. He lives alone with his young son Robert who is in pre-school.
             </p>
             <p>
               Diego is tired of being evicted for 'landlord-use' or being forced to pay massive rent increases.
             </p>
             <p>
-              Diego has enough for a regular down payment, but wants to buy a fixer-upper and really invest in his home.
+              Diego has enough for a regular down payment, but doesn't want to tie up every last dollar in his home.
             </p>
             <p>
-              Diego doesn't have enough money for both, so he chooses to take $38,000 from a UCLA Landed Fund.
+              To have enough money for a rainy day, Diego chooses to take $38,000 from a UCLA Landed Fund.
             </p>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
@@ -197,7 +197,7 @@ export class FirstStory extends Component {
                 Landed worked with Diego to put all his financing together and close his home.
               </p>
               <p>
-                Landed helps Diego with the mechanics of buying back the support over time and estimating the value of the improvements.
+                Landed helps Diego with the mechanics of buying back the support over time.
               </p>
             </div>
           </div>
@@ -205,10 +205,10 @@ export class FirstStory extends Component {
         <div className="row sign">
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
             <p>
-              After two years and $30,000 of work, the value of the property has increased from $380,000 to $500,000.
+              After two years and a bit of work, the value of the property has increased from $380,000 to $460,000.
             </p>
             <p>
-              The assessors estimate that the home would have been worth $460,000 without the improvements, so the property has really only appreciated $80,000.
+              The property has appreciated $80,000, and Diego decides it's a good time to refinance to become a full, independent owner.
             </p>
             <p>
               Diego therefore pays the fund $38,000 back plus $20,000 (25% of $80,000), which he can easily do out of his gains. Both Diego and his community end up better off.

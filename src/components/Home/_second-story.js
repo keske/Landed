@@ -13,7 +13,7 @@ export class SecondStory extends Component {
               Having just recently paid off their student debts and getting a little help from parents, they were ready to consider buying a home to start their family.
             </p>
             <p>
-              Jennifer considered two options: (1) get a 10% down FHA loan or (2) take $70,000 from her school's Landed Fund for a 25% share in the appreciation or depreciation.
+              Jennifer considered two options: (1) get a 10% down FHA loan or (2) take $70,000 from her school's Landed Fund in exchange for a 25% share in the growth or loss of her home's value.
             </p>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
@@ -138,10 +138,10 @@ export class SecondStory extends Component {
                 <strong>I</strong>nsurance and HOA
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val2">
-                $880
+                $255
               </div>
               <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val2">
-                $600
+                $255
               </div>
             </div>
 
@@ -202,16 +202,16 @@ export class SecondStory extends Component {
         <div className="row sign">
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
             <p>
-              Seven years later, Jen decides to refinance. She finds that her home hasn't appreciated at all.
+              Seven years later, Jennifer decides to refinance. She finds that her home has only appreciated $40,000.
             </p>
             <p>
               Thankfully, she's been paying down her mortgage every month and has more than enough equity built up to refinance into a standard 30-yr mortgage.
             </p>
             <p>
-              When Jen refinances, all the original investors in the school's fund get their investment back and many choose to re-invest in the next fund.
+              When Jennifer refinances, all the original investors in the school's fund get their investment back plus 25% of the $40,000 appreciation (or $10,000).
             </p>
             <p>
-              Over those 7 years, Jen avoided over $40,000 in additional interest and mortgage insurance payments thanks to Landed.
+              Over those 7 years, Jennifer avoided over $40,000 in additional interest and mortgage insurance payments thanks to Landed.
             </p>
           </div>
         </div>

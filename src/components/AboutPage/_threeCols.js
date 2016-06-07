@@ -21,7 +21,7 @@ export class ThreeCols extends Component {
             <p>
               Nobody can responsibly buy their first home by themselves, even with a&nbsp;supportive bank. <br /><br />
 
-Without gifts or investment partners, millions of Americans are making excessively risky investment decisions that the bankers themselves would never make.
+Without gifts or partners, millions of Americans are making excessively risky investment decisions that the bankers themselves would never make.
 
             </p>
           </div>

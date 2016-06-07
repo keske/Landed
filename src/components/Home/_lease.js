@@ -143,7 +143,7 @@ export class Lease extends Component {
             </p>
             <ul>
               <li>
-                Co-invest in property with a committed resident.
+                Invest in attractive real estate markets.
               </li>
               <li>
                 Avoid co-signing a mortgage or splitting expenses.
