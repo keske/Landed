@@ -82,7 +82,7 @@ export class TopImage extends Component {
                 <div className="group">
                   <span className="icon" />
                   <p>
-                    Through these programs, qualifying homebuyers can make a smaller down payment and pay less per month.
+                    Through these programs, homebuyers can make a smaller down payment and pay less every month.
                   </p>
                 </div>
 
