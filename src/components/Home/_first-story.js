@@ -48,7 +48,7 @@ export class FirstStory extends Component {
                   Current Savings
                 </div>
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 value">
-                  $75,000
+                  $76,000
                 </div>
               </div>
 
@@ -81,120 +81,106 @@ export class FirstStory extends Component {
                 &nbsp;
               </div>
               <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-title">
-                FHA Mortgage (10% down)
+                FHA Mortgage
               </div>
               <div className="col-xs-3 col-sm-3 col-md-4 col-lg-4 lease-title">
-                Mortgage with $38K debt-free help
+                Landed Support
               </div>
             </div>
 
             <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Monthly Loan Payments
+              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop1">
+                <strong>Total Monthly Payments</strong>
               </div>
-              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $1,835
+              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val1">
+                <strong>$2,420</strong>
               </div>
-              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $1,600
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Interest Paid
-              </div>
-              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $1,415
-              </div>
-              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $1,211
+              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val1">
+                <strong>$1,920</strong>
               </div>
             </div>
 
             <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Principal Paid
+              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop2">
+                <strong>P</strong>rincipal Paid
               </div>
-              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $420
+              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val2">
+                $505
               </div>
-              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $389
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Mortgage Insurance
-              </div>
-              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $315
-              </div>
-              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
+              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val2">
+                $570
               </div>
             </div>
 
             <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Other Home Costs
+              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop2">
+                <strong>I</strong>nterest Paid
               </div>
-              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $555
+              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val2">
+                $1,290
               </div>
-              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $555
+              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val2">
+                $725
               </div>
             </div>
 
-            <br /><br />
+            <div className="row">
+              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop2">
+                <strong>T</strong>axes
+              </div>
+              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val2">
+                $485
+              </div>
+              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val2">
+                $485
+              </div>
+            </div>
 
             <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Total Out-of-Pocket
+              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop2">
+                <strong>I</strong>nsurance and HOA
               </div>
-              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $2,705
+              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val2">
+                $140
               </div>
-              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $2,155
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Expected Tax Deduction
-              </div>
-              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $(250)
-              </div>
-              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $(214)
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Paying Off Mortgage
-              </div>
-              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $(420)
-              </div>
-              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $(389)
+              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val2">
+                $140
               </div>
             </div>
 
             <br /><br />
 
             <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Net Cost Of Home
+              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop1">
+                <strong>Cost of Home <br/>(Tax Benefit Included)</strong>
               </div>
-              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $2,035
+              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val1">
+                <strong>$2,105</strong>
               </div>
-              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $1,552
+              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val1">
+                <strong>$1,705</strong>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop2">
+                Cash Remaining for Expenses
+              </div>
+              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val2">
+                $3,730
+              </div>
+              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val2">
+                $4,130
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop2">
+                Debt-to-Income Ratio
+              </div>
+              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val2">
+                34.1%
+              </div>
+              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val2">
+                27.1%
               </div>
             </div>
 
@@ -205,13 +191,13 @@ export class FirstStory extends Component {
                 How Landed Helps
               </p>
               <p>
-                Landed helped alumni at UCLA come together to form a Landed Fund.
+                Landed helped alumni at UCLA come together to form a Landed Fund to support homebuyers like Diego.
               </p>
               <p>
                 Landed worked with Diego to put all his financing together and close his home.
               </p>
               <p>
-                Landed helps Diego with the mechanics of buying back the support over time.
+                Landed helps Diego with the mechanics of buying back the support over time and estimating the value of the improvements.
               </p>
             </div>
           </div>
@@ -219,13 +205,13 @@ export class FirstStory extends Component {
         <div className="row sign">
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
             <p>
-              After two years and $35,000 of work, the value of the property has increased from $380,000 to $500,000.
+              After two years and $30,000 of work, the value of the property has increased from $380,000 to $500,000.
             </p>
             <p>
-              Diego improved the value of his property $120,000, but he promised to share 25% of that gain with his community.
+              The assessors estimate that the home would have been worth $460,000 without the improvements, so the property has really only appreciated $80,000.
             </p>
             <p>
-              Diego therefore pays the fund $38,000 back plus $30,000 (25% of $120,000), which he can easily do out of his gains. Both Diego and his community end up better off.
+              Diego therefore pays the fund $38,000 back plus $20,000 (25% of $80,000), which he can easily do out of his gains. Both Diego and his community end up better off.
             </p>
           </div>
         </div>

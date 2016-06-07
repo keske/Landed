@@ -549,24 +549,47 @@
             padding-top: 13px;
           }
         }
-        .prop {
+
+        .prop1 {
           font-family: 'SupriaSans Regular';
           font-size: 14px;
           line-height: 15px;
           color: #7B7B7A;
-          opacity: .55;
+          opacity: .8;
         }
-        .fha-val {
+        .fha-val1 {
           font-family: 'SupriaSans Regular';
           font-size: 14px;
           line-height: 15px;
           color: #7B7B7A;
         }
-        .lease-val {
+        .lease-val1 {
           font-family: 'SupriaSans Regular';
           font-size: 14px;
           line-height: 15px;
           color: $green;
+        }
+        .prop2 {
+          font-family: 'SupriaSans Regular';
+          font-size: 12px;
+          line-height: 12px;
+          text-align: right;
+          color: #7B7B7A;
+          opacity: .55;
+        }
+        .fha-val2 {
+          font-family: 'SupriaSans Regular';
+          font-size: 12px;
+          line-height: 12px;
+          color: #7B7B7A;
+          opacity: .70;
+        }
+        .lease-val2 {
+          font-family: 'SupriaSans Regular';
+          font-size: 12px;
+          line-height: 12px;
+          color: $green;
+          opacity: .70;
         }
       }
 

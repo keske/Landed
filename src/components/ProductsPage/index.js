@@ -221,7 +221,7 @@ export class ProductsPage extends Component {
                 <p className={`more-known ${!alumniExpand && 'hide'}`}>
                   Partnering with Landed is as simple as 1, 2, 3. Outside of helping identify potential sources of capital, starting a Landed Fund requires no ongoing cost or overhead:
                 </p>
-                <div className={`expandet-list list ${ !employerExpand && 'hide'}`}>
+                <div className={`expandet-list list ${ !alumniExpand && 'hide'}`}>
                   <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
                     <span className="list-number">1.</span>
                   </div>
@@ -232,7 +232,7 @@ export class ProductsPage extends Component {
                   </div>
                 </div>
 
-                <div className={`expandet-list list ${ !employerExpand && 'hide'}`}>
+                <div className={`expandet-list list ${ !alumniExpand && 'hide'}`}>
                   <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
                     <span className="list-number">2.</span>
                   </div>
@@ -243,7 +243,7 @@ export class ProductsPage extends Component {
                   </div>
                 </div>
 
-                <div className={`expandet-list list ${ !employerExpand && 'hide'}`}>
+                <div className={`expandet-list list ${ !alumniExpand && 'hide'}`}>
                   <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right hidden-xs">
                     <span className="list-number">3.</span>
                   </div>

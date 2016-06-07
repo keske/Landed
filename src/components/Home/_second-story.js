@@ -13,7 +13,7 @@ export class SecondStory extends Component {
               Having just recently paid off their student debts and getting a little help from parents, they were ready to consider buying a home to start their family.
             </p>
             <p>
-              Jennifer considered two options: (1) get a 10% down FHA loan or (2) take $100,000 from her school's Landed Fund for a 40% partnership. By putting a total of 25% down, Jennifer could safely access interest-only loan options.
+              Jennifer considered two options: (1) get a 10% down FHA loan or (2) take $70,000 from her school's Landed Fund for a 25% share in the appreciation or depreciation.
             </p>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
@@ -36,7 +36,7 @@ export class SecondStory extends Component {
                   After-Tax Income
                 </div>
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 value">
-                  $100,000
+                  $95,000
                 </div>
               </div>
 
@@ -45,7 +45,7 @@ export class SecondStory extends Component {
                   Current Savings
                 </div>
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 value">
-                  $65,000
+                  $70,000
                 </div>
               </div>
 
@@ -54,7 +54,7 @@ export class SecondStory extends Component {
                   Credit Score
                 </div>
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 value">
-                  720
+                  730
                 </div>
               </div>
 
@@ -63,7 +63,7 @@ export class SecondStory extends Component {
                   Home Price
                 </div>
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 value">
-                  $650,000
+                  $700,000
                 </div>
               </div>
 
@@ -81,117 +81,103 @@ export class SecondStory extends Component {
                 FHA Mortgage
               </div>
               <div className="col-xs-3 col-sm-3 col-md-4 col-lg-4 lease-title">
-                Debt-Free Financing
+                Landed Support
               </div>
             </div>
 
             <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Monthly Loan Payments
+              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop1">
+                <strong>Total Monthly Payments</strong>
               </div>
-              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $3,500
+              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val1">
+                <strong>$4,450</strong>
               </div>
-              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $1,300
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Interest Paid
-              </div>
-              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $2,430
-              </div>
-              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $1,300
+              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val1">
+                <strong>$3,540</strong>
               </div>
             </div>
 
             <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Principal Paid
+              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop2">
+                <strong>P</strong>rincipal Paid
               </div>
-              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $720
+              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val2">
+                $930
               </div>
-              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Mortgage Insurance
-              </div>
-              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $390
-              </div>
-              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
+              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val2">
+                $1,050
               </div>
             </div>
 
             <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Other Home Costs
+              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop2">
+                <strong>I</strong>nterest Paid
               </div>
-              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $1,000
+              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val2">
+                $2,375
               </div>
-              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $1,000
+              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val2">
+                $1,340
               </div>
             </div>
 
-            <br /><br />
+            <div className="row">
+              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop2">
+                <strong>T</strong>axes
+              </div>
+              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val2">
+                $895
+              </div>
+              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val2">
+                $895
+              </div>
+            </div>
 
             <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Total Out-of-Pocket
+              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop2">
+                <strong>I</strong>nsurance and HOA
               </div>
-              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $4,540
+              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val2">
+                $880
               </div>
-              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $2,300
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Expected Tax Deduction
-              </div>
-              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $(561)
-              </div>
-              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $(300)
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Paying Off Mortgage
-              </div>
-              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $(720)
-              </div>
-              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                none
+              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val2">
+                $600
               </div>
             </div>
 
             <br /><br />
 
             <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop">
-                Net Cost of Home
+              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop1">
+                <strong>Cost of Home <br/>(Tax Benefit Included)</strong>
               </div>
-              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val">
-                $3,259
+              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val1">
+                <strong>$3,575</strong>
               </div>
-              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val">
-                $2,000
+              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val1">
+                <strong>$2,935</strong>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop2">
+                Cash Remaining for Expenses
+              </div>
+              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val2">
+                $4,345
+              </div>
+              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val2">
+                $4,980
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 prop2">
+                Debt-to-Income Ratio
+              </div>
+              <div className="col-xs-3 col-sm-3 col-xs-offset-1 col-sm-offset-1 col-md-3 col-lg-3 fha-val2">
+                41.1%
+              </div>
+              <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 lease-val2">
+                32.7%
               </div>
             </div>
 
@@ -202,7 +188,7 @@ export class SecondStory extends Component {
                 How Landed Helps
               </p>
               <p>
-                Landed created the down payment support fund at Jennifer's school and helped the school reach out to its parents, alumni and champions to raise the capital.
+                Landed created the down payment support fund at Jennifer's school and helped the school reach out to qualified investors to raise the capital.
               </p>
               <p>
                 Landed worked with Jennifer to put her full financing together and close the home.
@@ -216,13 +202,13 @@ export class SecondStory extends Component {
         <div className="row sign">
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
             <p>
-              As soon as she buys her house, the LA property market crashes. At the end of 7 years, her home is worth the same it was when she bought it.
+              Seven years later, Jen decides to refinance. She finds that her home hasn't appreciated at all.
             </p>
             <p>
-              During those 7 years, Jennifer and her family have managed to save another $65,000. She chooses to re-finance with Landed support, but needs much less help this time.
+              Thankfully, she's been paying down her mortgage every month and has more than enough equity built up to refinance into a standard 30-yr mortgage.
             </p>
             <p>
-              When Jen refinances, all the original investors in the school's fund get their investment back and many choose to re-invest.
+              When Jen refinances, all the original investors in the school's fund get their investment back and many choose to re-invest in the next fund.
             </p>
             <p>
               Over those 7 years, Jen avoided over $40,000 in additional interest and mortgage insurance payments thanks to Landed.
