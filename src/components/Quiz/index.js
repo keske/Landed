@@ -27,6 +27,11 @@ export class Quiz extends Component {
     };
   }
 
+  finished() {
+    this.nextSlider();
+    this.handleRequest();
+  }
+
   nextSlider() {
     const { slider } = this.state;
 
@@ -157,7 +162,7 @@ export class Quiz extends Component {
 
                 <div className="slide col-xs-12 col-sm-12 col-md-12 col-lg-12">
                   <p className="label">
-                    What’s your email
+                    What’s your email?
                   </p>
                   <input type="text"
                     placeholder="Your email"
@@ -222,13 +227,14 @@ export class Quiz extends Component {
               <button
                 className={ `button next ${ slider === MAX_SLIDERS && 'hide' }` }
                 onClick={ () =>
-                  slider === MAX_SLIDERS
-                    ? this.handleRequest()
+                  slider === MAX_SLIDERS-1
+                    ? this.finished()
                     : this.nextSlider()
                 }
                 disabled={
                   slider === 0 && !isEmailValid(email) ||
-                  slider === 1 && location === ''
+                  slider === 1 && location === '' ||
+                  slider === 2 && stage ===''
                 }
               >
                 next
