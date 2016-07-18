@@ -10,14 +10,8 @@
       $example_data = array(
           'email' => 'georg@inbox.ru',
           'data' => array(
-              'FNAME' => 'Georg',
-              'PHONE' => '+79262859833',
-              'location' => 'Moscow',
-              'MMERGE4' => 'Yes',
-              'WHENMOVE' => 'As soon as posstible',
-              'MMERGE8' => 'Yes',
-              'stage' => 'Lease To Own',
-              'MMERGE9' => 'Comment',
+              'LOCATION' => 'Moscow',
+              'STAGE' => 'Lease To Own',
           )
       );
       print_r($example_data);
@@ -31,9 +25,9 @@
 
 
   $settings = array(
-      'listID' => 'daca24e046',
+      'listID' => '69e95dbe3e',
       'ApiKEY' => '3f087f1041fac47422f807b753dfb88b-us10',
-      'possible_merge_fields' => 'FNAME, PHONE, location, MMERGE4, WHENMOVE, MMERGE8, stage, MMERGE9'
+      'possible_merge_fields' => 'LOCATION, STAGE'
   );
 
   $data = array(
@@ -43,7 +37,6 @@
   );
 
   //request mailchimp api: 
-  console.log('mail.php ran';)
   $ch = curl_init();
   list(, $dc_num) = explode('-us', $settings['ApiKEY']);
   curl_setopt($ch, CURLOPT_URL, 'https://us' . $dc_num . '.api.mailchimp.com/3.0/lists/' . $settings['listID'] . '/members/');

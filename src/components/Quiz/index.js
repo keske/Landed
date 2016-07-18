@@ -21,8 +21,8 @@ export class Quiz extends Component {
     this.state = {
       slider: 0,
       email: '',
-      location: '',
-      stage: '',
+      LOCATION: '',
+      STAGE: '',
       succes: false,
     };
   }
@@ -49,13 +49,16 @@ export class Quiz extends Component {
   }
 
   handleRequest() {
-    const { email, location, stage } = this.state;
-
+    const email = this.state.email;
+    const LOCATION = this.state.LOCATION.value;
+    const STAGE = this.state.STAGE.value;
+    console.log(LOCATION);
+    console.log(STAGE);
     const req = {
       email,
       data: {
-        stage,
-        location,
+        STAGE,
+        LOCATION,
       },
     };
 
@@ -77,7 +80,7 @@ export class Quiz extends Component {
     */
     // Mailchimp Integration
     const request = $.ajax({
-      url: 'http://landed.com/mail.php',
+      url: 'https://landed.com/mail.php',
       type: 'post',
       data: req,
     });
@@ -97,7 +100,7 @@ export class Quiz extends Component {
   }
 
   render() {
-    const { slider, email, location, stage } = this.state;
+    const { slider, email, LOCATION, STAGE } = this.state;
 
     // Get all USA states
     const data = require('./states');
@@ -116,7 +119,7 @@ export class Quiz extends Component {
         <span className="select-label">{ option.label }</span>
       </span>;
 
-    // Stage options
+    // STAGE options
     const options = [{
       label: 'Homebuyer - looking for more information',
       value: 'Homebuyer - looking for more information',
@@ -175,13 +178,13 @@ export class Quiz extends Component {
                     In which state would the fund be based?
                   </p>
                   <Select
-                    name="form-field-location"
-                    value={ location || 'Select location' }
+                    name="form-field-LOCATION"
+                    value={ LOCATION || 'Select LOCATION' }
                     searchable={ false }
                     options={ states }
                     valueRenderer={ renderOption }
                     optionRenderer={ renderStateOption }
-                    onChange={ (val) => this.setState({ location: val }) }
+                    onChange={ (val) => this.setState({ LOCATION: val }) }
                   />
                 </div>
 
@@ -190,14 +193,14 @@ export class Quiz extends Component {
                     What describes your <br className="show-xs hidden-sm hidden-md hidden-lg" />situation best?
                   </p>
                   <Select
-                    name="form-field-stage"
-                    className="stage-style"
+                    name="form-field-STAGE"
+                    className="STAGE-style"
                     searchable={ false }
                     options={ options }
                     optionRenderer={ renderOption }
                     valueRenderer={ renderOption }
-                    value={ stage || 'Select stage' }
-                    onChange={ (val) => this.setState({ stage: val }) }
+                    value={ STAGE || 'Select STAGE' }
+                    onChange={ (val) => this.setState({ STAGE: val }) }
                   />
                 </div>
 
@@ -206,7 +209,7 @@ export class Quiz extends Component {
                     We'll be in touch soon!
                   </p>
                   <p className="info">
-                    Lookout for an email within 24 hours with next steps.
+                    Lookout for an email within with next steps.
                   </p>
                 </div>
               </div>
@@ -233,8 +236,8 @@ export class Quiz extends Component {
                 }
                 disabled={
                   slider === 0 && !isEmailValid(email) ||
-                  slider === 1 && location === '' ||
-                  slider === 2 && stage ===''
+                  slider === 1 && LOCATION === '' ||
+                  slider === 2 && STAGE ===''
                 }
               >
                 next
