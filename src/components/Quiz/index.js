@@ -209,7 +209,7 @@ export class Quiz extends Component {
                     We'll be in touch soon!
                   </p>
                   <p className="info">
-                    Lookout for an email within with next steps.
+                    Lookout for an email with next steps.
                   </p>
                 </div>
               </div>
