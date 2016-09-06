@@ -74,6 +74,17 @@
   text-align: center;
   padding: 70px 0;
 
+  &.expland {
+
+    .calculate {
+      display: none;
+    }
+
+    .results {
+      display: inline-block;
+    }
+  }
+
   .title {
     text-align: right;
 
@@ -97,6 +108,194 @@
       margin-top: -10px;
 
       outline: none;
+    }
+  }
+
+  .results {
+    display: none;
+
+    background: $white;
+    border-radius: 8px;
+
+    width: 800px;
+    
+    margin-top: 30px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    .top {
+      font-family: $janon;
+      font-size: 27px;
+      line-height: 26px;
+      font-style: italic;
+
+      padding: 40px 0 10px;;
+    }
+
+    .option {
+      display: inline-block;
+      
+      margin: 0 20px;
+
+      .num {
+        font-size: 11px;
+        color: $gray;
+      }
+
+      .table {
+        width: 340px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, .1);
+
+        border-left: 1px solid rgba(0, 0, 0, .13);
+        border-right: 1px solid rgba(0, 0, 0, .13);
+        border-bottom: 1px solid rgba(0, 0, 0, .13);
+
+        .left-side {
+          border-right: 1px solid rgba(0, 0, 0, .13);
+        }
+
+        .left-side, .right-side {
+          width: 50%;
+          display: inline-block;
+
+          padding: 20px;
+
+          text-align: left;
+
+          &.red {
+            border-top: 2px solid $red;
+          }
+
+          &.green {
+            border-top: 2px solid $green;
+          }
+
+          .large {
+            color: $red;
+          }
+
+          .small {
+            color: $green;
+          }
+
+          .cost {
+            font-family: $janon;
+            font-style: italic;
+            color: $gray;
+
+            margin-top: -13px;
+          }
+
+          .price {
+            color: #2F2F2F;
+            font-size: 24px;
+
+            position: relative;
+            margin-top: -4px;
+            margin-left: -14px;
+            margin-bottom: -5px;
+          }
+        }
+      }
+    }
+  
+    .left-arrow, .right-arrow {
+      width: 39px;
+      height: 107px;
+
+      display: inline-block;
+
+      margin-top: 20px;
+    }
+
+    .left-arrow {
+      background: url(./files/left-arrow.png);
+      background-size: cover;
+    }
+
+    .right-arrow {
+      background: url(./files/right-arrow.png);
+      background-size: cover;
+    }
+
+    .middle {
+      font-family: $janon;
+      font-size: 27px;
+      line-height: 26px;
+      font-style: italic;
+      color: $green;
+
+      position: relative;
+      top: -30px;
+
+      display: inline-block;
+    }
+
+    .calc-table {
+      display: inline-block;
+      
+      margin: 0 20px;
+
+      .table {
+        width: 460px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, .1);
+
+        background: $white;
+
+        border-left: 1px solid rgba(0, 0, 0, .13);
+        border-right: 1px solid rgba(0, 0, 0, .13);
+        border-bottom: 1px solid rgba(0, 0, 0, .13);
+
+        .left-side {
+          border-right: 1px solid rgba(0, 0, 0, .13);
+        }
+
+        .left-side, .right-side {
+          width: 50%;
+          display: inline-block;
+
+          padding: 30px;
+
+          text-align: left;
+
+          border-top: 2px solid #00FAA9;
+
+          .small {
+            color: $green;
+            font-size: 19px;
+          }
+
+          .cost {
+            font-family: $janon;
+            font-style: italic;
+            font-size: 19px;
+            color: $gray;
+
+            margin-top: -13px;
+          }
+
+          .price {
+            color: #2F2F2F;
+            font-size: 28px;
+
+            position: relative;
+            margin-top: -4px;
+            margin-left: -14px;
+            margin-bottom: -5px;
+          }
+        }
+      }
+    }
+
+    .footer {
+      width: 100%;
+      height: 220px;
+
+      background: $green;
+
+      margin-top: -180px;
     }
   }
 }

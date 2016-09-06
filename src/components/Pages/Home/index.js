@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router';
+import cx from 'classnames';
 import Helmet from 'react-helmet';
 
 // Components
@@ -15,7 +16,20 @@ const ovalRight = require('./files/oval-right.png');
 import s from './index.css';
 
 export default class Home extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      calc: {
+        expand: false,
+      },
+    };
+  }
+
   render() {
+    const { calc: { expand } } = this.state;
+
     return (
       <section className={s.root}>
         <Helmet title="Home page" />
@@ -37,7 +51,7 @@ export default class Home extends Component {
           </Link>
         </div>
 
-        <div className={s.calc}>
+        <div className={cx(s.calc, { [s.expland]: expand })}>
           <p className={s.head}>
             Think <i>you</i> can’t buy a home?
           </p>
@@ -71,9 +85,123 @@ export default class Home extends Component {
             </Row>
           </Grid>
 
-          <span className={s.calculate}>
+          <span
+            className={s.calculate}
+            onClick={() => {
+              this.setState({
+                calc: {
+                  expand: true,
+                },
+              });
+            }}
+          >
             calculate
           </span>
+
+          <div className={s.results}>
+            <p className={s.top}>
+              Without Landed you had<br />two options:
+            </p>
+
+            <div className={s.option}>
+              <p className={s.num}>
+                option 1
+              </p>
+              <div className={s.table}>
+                <div className={cx(s['left-side'], s.red)}>
+                  <p className={s.large}>
+                    large
+                  </p>
+                  <p className={s.cost}>
+                    downpayment
+                  </p>
+                  <p className={s.price}>
+                    $100,000
+                  </p>
+                </div>
+                <div className={cx(s['right-side'], s.green)}>
+                  <p className={s.small}>
+                    small
+                  </p>
+                  <p className={s.cost}>
+                    monthly cost
+                  </p>
+                  <p className={s.price}>
+                    $3000
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className={s.option}>
+              <p className={s.num}>
+                option 1
+              </p>
+              <div className={s.table}>
+                <div className={cx(s['left-side'], s.red)}>
+                  <p className={s.large}>
+                    large
+                  </p>
+                  <p className={s.cost}>
+                    downpayment
+                  </p>
+                  <p className={s.price}>
+                    $100,000
+                  </p>
+                </div>
+                <div className={cx(s['right-side'], s.green)}>
+                  <p className={s.small}>
+                    small
+                  </p>
+                  <p className={s.cost}>
+                    monthly cost
+                  </p>
+                  <p className={s.price}>
+                    $3000
+                  </p>
+                </div>
+              </div>
+            </div>
+            <br />
+            <span className={s['left-arrow']} />
+            <p className={s.middle}>
+              Landed allowes you<br />to take best parts of both
+            </p>
+            <span className={s['right-arrow']} />
+
+            <div className={s['calc-table']}>
+              <div className={s.table}>
+                <div className={s['left-side']}>
+                  <p className={s.small}>
+                    small
+                  </p>
+                  <p className={s.cost}>
+                    downpayment
+                  </p>
+                  <p className={s.price}>
+                    $100,000
+                  </p>
+                </div>
+                <div className={s['right-side']}>
+                  <p className={s.small}>
+                    small
+                  </p>
+                  <p className={s.cost}>
+                    monthly cost
+                  </p>
+                  <p className={s.price}>
+                    $3000
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <span className={s.learn}>
+              learn more about how it works
+            </span>
+
+            <div className={s.footer} />
+          </div>
 
         </div>
 

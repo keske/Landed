@@ -124,6 +124,7 @@ const common = {
         black: '#4A4A4A',
         gray: '#9B9B9B',
         green: '#009B69',
+        red: '#D0021B',
       },
     }),
     require('postcss-nested'),
