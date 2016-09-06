@@ -5,6 +5,15 @@
 
   padding: 20px;
 
+  .logo {
+    opacity: 1;
+    border: none;
+
+    img {
+      width: 110px;
+    }
+  }
+
   p, a {
     color: $white;
     font-size: 12px;

@@ -18,7 +18,15 @@ export default class Footer extends Component {
               md={3}
               lg={3}
             >
-              <span className={s.logo} />
+              <Link
+                to="/"
+                className={s.logo}
+              >
+                <img
+                  src={require('./files/footer-logo.png')}
+                  role="presentation"
+                />
+              </Link>
             </Col>
             <Col
               xs={12}

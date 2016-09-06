@@ -27,6 +27,22 @@ export default class Home extends Component {
     };
   }
 
+  componentDidMount() {
+    window.addEventListener('scroll', this.parallax);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.parallax);
+  }
+
+  parallax = () => {
+    const top = (window.pageYOffset - this.refs.parallax.offsetTop) / 10;
+
+    if (screen.width >= 720) {
+      this.refs.parallax.style.backgroundPosition = `0px ${top}px`;
+    }
+  }
+
   render() {
     const { calc: { expand } } = this.state;
 
@@ -34,7 +50,10 @@ export default class Home extends Component {
       <section className={s.root}>
         <Helmet title="Home page" />
 
-        <div className={s.image}>
+        <div
+          ref="parallax"
+          className={s.image}
+        >
           <p className={s.title}>
             <i>If you work at school,</i>
             we’ll help you buy a home

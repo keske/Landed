@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
 
-  padding: 30px 0;
+  padding: 20px 0;
 
   width: 100%;
   transition: background .3s;
@@ -15,8 +15,34 @@
   }
 }
 
+.logo {
+  width: 39px;
+  height: 38px;
+
+  display: inline-block;
+
+  background: url(./files/landed-logo.png);
+  background-size: cover;
+}
+
+.text-logo {
+  width: 98px;
+  height: 23px;
+  
+  position: relative;
+  top: -7px;
+  margin-left: 40px;
+
+  display: inline-block;
+
+  background: url(./files/landed-text-logo.png);
+  background-size: cover;
+}
+
 .nav {
   text-align: right;
+
+  margin-top: 13px;
 
   a {
     color: $white;

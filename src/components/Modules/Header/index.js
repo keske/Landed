@@ -44,6 +44,7 @@ export default class Header extends Component {
               lg={4}
             >
               <span className={s.logo} />
+              <span className={s['text-logo']} />
             </Col>
             <Col
               xs={12}

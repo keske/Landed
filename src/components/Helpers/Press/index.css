@@ -4,7 +4,8 @@
   padding: 40px;
   text-align: center;
 
-  border-top: 1px solid $gray;
+  border-top: 1px solid rgba(216, 216, 216, .9);
+  border-bottom: 1px solid rgba(216, 216, 216, .9);
 
   img {
     width: auto;
