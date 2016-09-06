@@ -1,0 +1,37 @@
+.root {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  padding: 30px 0;
+}
+
+.nav {
+  text-align: right;
+
+  a {
+    color: $white;
+    font-family: $janon;
+    font-size: 16px;
+
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover, &.active {
+      opacity: .7;
+    }
+  }
+
+  .get-landed {
+    border: 1px solid $white;
+    border-radius: 30px;
+
+    font-family: $janonItalic;
+
+    padding: 7px 17px;
+  }
+}

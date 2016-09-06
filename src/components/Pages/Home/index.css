@@ -1,0 +1,56 @@
+.root {
+  background: url(./files/home.jpg);
+  background-size: 100% auto;
+}
+
+.image {
+  text-align: center;
+
+  height: 600px;
+  
+  p {
+    color: $white;
+  }
+
+  p.title {
+    font-size: 45px;
+    line-height: 45px;
+
+    padding-top: 200px;
+
+    i {
+      display: block;
+    }
+  }
+
+  p.intro {
+    font-size: 15px;
+    line-height: 19px;
+
+    max-width: 460px;
+
+    padding: 30px 0;
+
+    display: inline-block;
+  }
+
+  .get-started {
+    font-family: $janon;
+    font-size: 22px;
+    color: $green;
+
+    padding: 15px 35px;
+
+    background: $white;
+    border-radius: 50px;
+
+    display: inline-block;
+
+    transition: .2s;
+
+    &:hover {
+      color: $white;
+      background: $green;
+    }
+  }
+}

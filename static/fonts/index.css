@@ -1,0 +1,78 @@
+// Jannon
+
+@font-face {
+  font-family: 'Jannon10Pro';
+  src: url("../../../static/fonts/Jannon10/Jannon10Pro.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Jannon10Pro-Italic';
+  src: url("../../../static/fonts/Jannon10/Jannon10Pro-Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Jannon10Pro-Bold';
+  src: url("../../../static/fonts/Jannon10/Jannon10Pro-Bold.otf") format("opentype");
+}
+
+// Supria
+
+@font-face {
+  font-family: 'SupriaSans Black';
+  src: url("../../../static/fonts/Supria/SupriaSans Black.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SupriaSans Bold';
+  src: url("../../../static/fonts/Supria/SupriaSans Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SupriaSans Heavy';
+  src: url("../../../static/fonts/Supria/SupriaSans Heavy.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SupriaSans Light';
+  src: url("../../../static/fonts/Supria/SupriaSans Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SupriaSans Medium';
+  src: url("../../../static/fonts/Supria/SupriaSans Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SupriaSans Regular';
+  src: url("../../../static/fonts/Supria/SupriaSans Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SupriaSans BlackItalic';
+  src: url("../../../static/fonts/Supria/SupriaSans BlackItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SupriaSans BoldItalic';
+  src: url("../../../static/fonts/Supria/SupriaSans BoldItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SupriaSans HeavyItalic';
+  src: url("../../../static/fonts/Supria/SupriaSans HeavyItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SupriaSans LightItalic';
+  src: url("../../../static/fonts/Supria/SupriaSans LightItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SupriaSans MediumItalic';
+  src: url("../../../static/fonts/Supria/SupriaSans MediumItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SupriaSans RegularItalic';
+  src: url("../../../static/fonts/Supria/SupriaSans RegularItalic.otf") format("opentype");
+}

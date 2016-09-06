@@ -1,20 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { Router, Redirect, useRouterHistory } from 'react-router';
-import { createHashHistory } from 'history';
-import configureStore from './store/configureStore';
+import { Router, browserHistory } from 'react-router';
 import routes from './routes';
 
-const history = useRouterHistory(createHashHistory)({ queryKey: false });
-const store = configureStore();
+if (__CLIENT__ && __DEVELOPMENT__) {
+  window.Perf = require('react-addons-perf');
+}
 
-ReactDOM.render(
-  <Provider store={store}>
+let initialState;
+try {
+  initialState = window.__INITIAL_STATE__;
+} catch (err) {
+  initialState = {};
+}
+
+export const history = browserHistory;
+
+if (__CLIENT__) {
+  ReactDOM.render(
     <Router history={history}>
-      <Redirect from="/" to="home" />
       {routes}
-    </Router>
-  </Provider>,
-  document.getElementById('root')
-);
+    </Router>,
+    document.getElementById('root')
+  );
+}

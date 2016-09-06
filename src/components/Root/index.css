@@ -1,0 +1,36 @@
+:global() {
+
+  body {
+    margin: 0;
+
+    font-family: "SupriaSans Regular";
+    font-size: 14px;
+    color: $black;
+    background: $white;
+  }
+
+  /* Link */
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  i {
+    font-family: $janonItalic;
+  }
+  
+  /* Form */
+  input[type="name"],
+  input[type="email"],
+  input[type="password"] {
+    outline: none;
+  }
+
+  textarea {
+    outline: none;
+  }
+
+}
