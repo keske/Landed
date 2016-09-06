@@ -1,14 +1,40 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router';
+import cx from 'classnames';
 
 // Styles
 import s from './index.css';
 
 export default class Header extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      green: false,
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.animateHeader);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.animateHeader);
+  }
+
+  animateHeader = () => {
+    this.setState({
+      green: window.pageYOffset > 200,
+    });
+  }
+
   render() {
+    const { green } = this.state;
+
     return (
-      <section className={s.root}>
+      <section className={cx(s.root, { [s.green]: green })}>
         <Grid>
           <Row>
             <Col
