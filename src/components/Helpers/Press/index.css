@@ -1,0 +1,15 @@
+.root {
+  background: rgba(216, 216, 216, .2);
+
+  padding: 40px;
+  text-align: center;
+
+  border-top: 1px solid $gray;
+
+  img {
+    width: auto;
+    height: 25px;
+
+    margin: 0 20px;
+  }
+}

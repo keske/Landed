@@ -1,10 +1,11 @@
 .root {
-  background: url(./files/home.jpg);
-  background-size: 100% auto;
+   background: #F7F7F7;
 }
 
 .image {
   text-align: center;
+  background: url(./files/home.jpg);
+  background-size: 100% auto;
 
   height: 600px;
   
@@ -12,8 +13,9 @@
     color: $white;
   }
 
-  p.title {
+  .title {
     font-size: 45px;
+    font-family: $janon;
     line-height: 45px;
 
     padding-top: 200px;
@@ -23,7 +25,7 @@
     }
   }
 
-  p.intro {
+  .intro {
     font-size: 15px;
     line-height: 19px;
 
@@ -33,12 +35,14 @@
 
     display: inline-block;
   }
+}
 
-  .get-started {
+.get-started, .calculate, .learn, .program {
     font-family: $janon;
     font-size: 22px;
     color: $green;
-
+  
+    margin-top: 30px;
     padding: 15px 35px;
 
     background: $white;
@@ -48,9 +52,121 @@
 
     transition: .2s;
 
+    box-shadow: 0 3px 13px rgba(0, 0, 0, .2);
+
     &:hover {
       color: $white;
       background: $green;
     }
+  }
+
+.head {
+  font-family: $janon;
+  font-size: 45px;
+  line-height: 44px;
+}
+
+.intro {
+  padding: 20px 0 30px;
+}
+
+.calc {
+  text-align: center;
+  padding: 70px 0;
+
+  .title {
+    text-align: right;
+
+    font-size: 25px;
+  }
+  
+  .form {
+    text-align: left;
+
+    input[type="text"] {
+      width: 80%;
+      text-align: left;
+
+      padding: 15px 20px;
+
+      border-radius: 10px;
+      border: 1px solid rgba(0, 155, 105, .19);
+      box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2);
+
+      position: relative;
+      margin-top: -10px;
+
+      outline: none;
+    }
+  }
+}
+
+.how {
+  padding: 50px 0;
+
+  text-align: center;
+
+  border-top: 1px solid $gray;
+
+  .one-two-three {
+    padding: 20px 0;
+
+    p {
+      font-size: 18px;
+
+      width: 90%;
+      margin-left: 5%;
+    }
+  }
+
+  i {
+    display: block;
+
+    font-size: 23px;
+    font-style: italic;
+  }
+}
+
+.invest {
+  padding: 120px 0;
+  text-align: center;
+
+  i {
+    font-size: 23px;
+    font-style: italic;
+
+    display: block;
+
+    position: relative;
+    z-index: 1;
+  }
+
+  .program {
+    position: relative;
+    z-index: 1;
+  }
+
+  img {
+    position: absolute;
+    z-index: 0;
+  }
+
+  .oval-left {
+    left: 0;
+    width: 370px;
+  }
+
+  .oval-center {
+    width: 350px;
+
+    margin-top: -100px;
+    left: 45%;
+  }
+
+  .oval-right {
+    width: 370px;
+
+    margin-top: -250px;
+    right: 0;
   }
 }
