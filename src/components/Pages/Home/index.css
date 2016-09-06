@@ -1,5 +1,5 @@
 .root {
-   background: #F7F7F7;
+  background: #F7F7F7;
 }
 
 .image {
@@ -38,27 +38,27 @@
 }
 
 .get-started, .calculate, .learn, .program {
-    font-family: $janon;
-    font-size: 22px;
-    color: $green;
-  
-    margin-top: 30px;
-    padding: 15px 35px;
+  font-family: $janon;
+  font-size: 22px;
+  color: $green;
 
-    background: $white;
-    border-radius: 50px;
+  margin-top: 30px;
+  padding: 15px 35px;
 
-    display: inline-block;
+  background: $white;
+  border-radius: 50px;
 
-    transition: .2s;
+  display: inline-block;
 
-    box-shadow: 0 3px 13px rgba(0, 0, 0, .2);
+  transition: .2s;
 
-    &:hover {
-      color: $white;
-      background: $green;
-    }
+  box-shadow: 0 3px 13px rgba(0, 0, 0, .2);
+
+  &:hover {
+    color: $white;
+    background: $green;
   }
+}
 
 .head {
   font-family: $janon;

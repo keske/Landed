@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
+import { observer } from 'mobx-react';
 import { Grid, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router';
 import cx from 'classnames';
@@ -6,7 +7,12 @@ import cx from 'classnames';
 // Styles
 import s from './index.css';
 
+@observer
 export default class Header extends Component {
+
+  static contextTypes = {
+    app: PropTypes.object,
+  };
 
   constructor(props) {
     super(props);
@@ -32,9 +38,16 @@ export default class Header extends Component {
 
   render() {
     const { green } = this.state;
+    const { app } = this.context;
 
     return (
-      <section className={cx(s.root, { [s.green]: green })}>
+      <section
+        className={cx(
+          s.root,
+          { [s.green]: green },
+          s[`color-${app.headerColor}`],
+        )}
+      >
         <Grid>
           <Row>
             <Col

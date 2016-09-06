@@ -13,6 +13,30 @@
   &.green {
     background: $green;
   }
+
+  &.color-green {
+
+    .logo {
+      background: url(./files/landed-logo-green.png);
+      background-size: cover;
+    }
+
+    .text-logo {
+      background: url(./files/landed-text-logo-green.png);
+      background-size: cover;
+    }
+  }
+
+  .nav {
+
+    a {
+      color: $black;
+    }
+
+    .get-landed {
+      border: 1px solid $black;
+    }
+  }
 }
 
 .logo {

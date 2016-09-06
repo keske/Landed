@@ -1,0 +1,48 @@
+.root {
+  background: #F7F7F7;
+}
+
+.get-landed {
+  font-family: $janon;
+  font-size: 22px;
+  color: $green;
+
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding: 15px 35px;
+
+  background: $white;
+  border-radius: 50px;
+
+  display: inline-block;
+
+  transition: .2s;
+
+  box-shadow: 0 3px 13px rgba(0, 0, 0, .2);
+
+  &:hover {
+    color: $white;
+    background: $green;
+  }
+}
+
+.head {
+  font-family: $janon;
+  font-size: 45px;
+  line-height: 44px;
+  
+  padding-top: 50px;
+}
+
+.image {
+  width: 100%;
+
+  text-align: center;
+
+  background: url(./files/get-landed.jpg);
+  background-size: 100% auto;
+
+  p {
+    color: $white;
+  }
+}
