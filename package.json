@@ -60,6 +60,7 @@
     "morgan": "^1.7.0",
     "path-chunk-webpack-plugin": "1.2.0",
     "postcss-loader": "0.9.1",
+    "postcss-mixins": "^5.2.0",
     "postcss-nested": "^1.0.0",
     "postcss-short": "^1.4.0",
     "postcss-simple-vars": "^3.0.0",

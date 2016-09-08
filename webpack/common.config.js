@@ -129,6 +129,7 @@ const common = {
     }),
     require('postcss-nested'),
     require('postcss-short'),
+    require('postcss-mixins'),
     require('autoprefixer')({
       browsers: ['> 5%'],
       remove: false,

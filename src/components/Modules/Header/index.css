@@ -61,6 +61,30 @@
       }
     }
   }
+
+  &.green {
+
+    .logo {
+      background: url(./files/landed-logo.png);
+      background-size: cover;
+    }
+
+    .text-logo {
+      background: url(./files/landed-text-logo.png);
+      background-size: cover;
+    }
+
+    .nav {
+
+      a {
+        color: $white;
+      }
+
+      .get-landed {
+        border: 1px solid $white;
+      }
+    }
+  }
 }
 
 .logo {
