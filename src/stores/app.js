@@ -15,6 +15,7 @@ class App {
       second: false,
     },
     anonymous: true,
+    send: false,
   }
 
   @action headerSetColor(color) {
@@ -22,7 +23,7 @@ class App {
   }
 
   @action setSchoolData(data) {
-    this.schoolForm = { ...data };
+    this.schoolForm = { ...this.schoolForm, ...data };
   }
 }
 

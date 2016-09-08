@@ -41,6 +41,218 @@ export default class GetLanded extends Component {
   render() {
     const { app } = this.context;
 
+    const renderForm = () =>
+      <span className={cx(s.form, { [s.show]: !app.schoolForm.sent })}>
+        <Row className={s.row}>
+          <Col
+            xs={12}
+            sm={12}
+            md={6}
+            lg={6}
+          >
+            <label>
+              Your First Name
+              <input
+                type="text"
+                ref="firstName"
+                defaultValue={app.schoolForm.firstName}
+                onChange={() => this.changeData()}
+              />
+            </label>
+          </Col>
+
+          <Col
+            xs={12}
+            sm={12}
+            md={6}
+            lg={6}
+          >
+            <label>
+              Your Last Name
+              <input
+                type="text"
+                ref="lastName"
+                defaultValue={app.schoolForm.lastName}
+                onChange={() => this.changeData()}
+              />
+            </label>
+          </Col>
+        </Row>
+
+        <Row className={s.row}>
+          <Col
+            xs={12}
+            sm={12}
+            md={6}
+            lg={6}
+          >
+            <label>
+              Your Email Address
+              <input
+                type="email"
+                ref="email"
+                defaultValue={app.schoolForm.email}
+                onChange={() => this.changeData()}
+              />
+            </label>
+          </Col>
+
+          <Col
+            xs={12}
+            sm={12}
+            md={6}
+            lg={6}
+          >
+            <label>
+              Your Phone Number
+              <input
+                type="tel"
+                ref="phone"
+                defaultValue={app.schoolForm.phone}
+                onChange={() => this.changeData()}
+              />
+            </label>
+          </Col>
+        </Row>
+
+        <Row className={s.row}>
+          <Col
+            xs={12}
+            sm={12}
+            md={12}
+            lg={12}
+          >
+            <label>
+              School You Want to Start a Program
+              <input
+                type="text"
+                ref="program"
+                defaultValue={app.schoolForm.program}
+                onChange={() => this.changeData()}
+              />
+            </label>
+          </Col>
+        </Row>
+
+        <Row className={s.row}>
+          <Col
+            xs={12}
+            sm={12}
+            md={6}
+            lg={6}
+          >
+            <label>
+              What is your Landed Program outreach preference?
+            </label>
+          </Col>
+
+          <Col
+            xs={12}
+            sm={12}
+            md={6}
+            lg={6}
+          >
+            <RadioButton
+              text="I'd like to reach out to my school directly about starting a Landed Program"
+              active={app.schoolForm.school.first}
+              onClick={() => {
+                app.setSchoolData({
+                  school: {
+                    first: true,
+                    second: false,
+                  },
+                });
+              }}
+            />
+            <RadioButton
+              text="I'd like Landed to reach out to my school directly"
+              active={app.schoolForm.school.second}
+              onClick={() => {
+                app.setSchoolData({
+                  school: {
+                    first: false,
+                    second: true,
+                  },
+                });
+              }}
+            />
+          </Col>
+        </Row>
+
+        <Row className={s.row}>
+          <Col
+            xs={12}
+            sm={12}
+            md={6}
+            lg={6}
+          >
+            <label>
+              Would you like your request to be anonymous?
+            </label>
+          </Col>
+
+          <Col
+            xs={12}
+            sm={12}
+            md={6}
+            lg={6}
+          >
+            <RadioButton
+              text="Yes, don’t share my details with the school"
+              active={app.schoolForm.anonymous}
+              onClick={() => {
+                app.setSchoolData({
+                  anonymous: true,
+                });
+              }}
+            />
+            <RadioButton
+              text="No, i'm ok with you sharing my name"
+              active={!app.schoolForm.anonymous}
+              onClick={() => {
+                app.setSchoolData({
+                  anonymous: false,
+                });
+              }}
+            />
+          </Col>
+        </Row>
+
+        <span
+          className={s.button}
+          onClick={() => {
+            app.setSchoolData({ sent: true });
+          }}
+        >
+          learn more about how it works
+        </span>
+      </span>;
+
+    const renderThanx = () =>
+      <span className={cx(s.thanx, { [s.show]: app.schoolForm.sent })}>
+        <p className={s.title}>
+          Thank you for your<br />Landed Program request!
+        </p>
+        <p className={s.lead}>
+          You will be receiving an email shortly on the next steps.
+        </p>
+
+        <div className={s.mean}>
+          <i>
+            In the meantime:
+          </i>
+          <p>
+            The best way to get a Landed<br />Program started is to get more<br />staff at your school excited.
+          </p>
+        </div>
+        <span className={s.button}>
+          send email
+        </span>
+        <span className={s.button}>
+          post on facebook
+        </span>
+      </span>;
+
     return (
       <section className={s.root}>
         <Helmet title="Get Landed" />
@@ -108,184 +320,8 @@ export default class GetLanded extends Component {
               lg={10} lgOffset={1}
             >
               <div className={s['school-form']}>
-                <Row className={s.row}>
-                  <Col
-                    xs={12}
-                    sm={12}
-                    md={6}
-                    lg={6}
-                  >
-                    <label>
-                      Your First Name
-                      <input
-                        type="text"
-                        ref="firstName"
-                        defaultValue={app.schoolForm.firstName}
-                        onChange={() => this.changeData()}
-                      />
-                    </label>
-                  </Col>
-
-                  <Col
-                    xs={12}
-                    sm={12}
-                    md={6}
-                    lg={6}
-                  >
-                    <label>
-                      Your Last Name
-                      <input
-                        type="text"
-                        ref="lastName"
-                        defaultValue={app.schoolForm.lastName}
-                        onChange={() => this.changeData()}
-                      />
-                    </label>
-                  </Col>
-                </Row>
-
-                <Row className={s.row}>
-                  <Col
-                    xs={12}
-                    sm={12}
-                    md={6}
-                    lg={6}
-                  >
-                    <label>
-                      Your Email Address
-                      <input
-                        type="email"
-                        ref="email"
-                        defaultValue={app.schoolForm.email}
-                        onChange={() => this.changeData()}
-                      />
-                    </label>
-                  </Col>
-
-                  <Col
-                    xs={12}
-                    sm={12}
-                    md={6}
-                    lg={6}
-                  >
-                    <label>
-                      Your Phone Number
-                      <input
-                        type="tel"
-                        ref="phone"
-                        defaultValue={app.schoolForm.phone}
-                        onChange={() => this.changeData()}
-                      />
-                    </label>
-                  </Col>
-                </Row>
-
-                <Row className={s.row}>
-                  <Col
-                    xs={12}
-                    sm={12}
-                    md={12}
-                    lg={12}
-                  >
-                    <label>
-                      School You Want to Start a Program
-                      <input
-                        type="text"
-                        ref="program"
-                        defaultValue={app.schoolForm.program}
-                        onChange={() => this.changeData()}
-                      />
-                    </label>
-                  </Col>
-                </Row>
-
-                <Row className={s.row}>
-                  <Col
-                    xs={12}
-                    sm={12}
-                    md={6}
-                    lg={6}
-                  >
-                    <label>
-                      What is your Landed Program outreach preference?
-                    </label>
-                  </Col>
-
-                  <Col
-                    xs={12}
-                    sm={12}
-                    md={6}
-                    lg={6}
-                  >
-                    <RadioButton
-                      text="I'd like to reach out to my school directly about starting a Landed Program"
-                      active={app.schoolForm.school.first}
-                      onClick={() => {
-                        app.setSchoolData({
-                          school: {
-                            first: true,
-                            second: false,
-                          },
-                        });
-                      }}
-                    />
-                    <RadioButton
-                      text="I'd like Landed to reach out to my school directly"
-                      active={app.schoolForm.school.second}
-                      onClick={() => {
-                        app.setSchoolData({
-                          school: {
-                            first: false,
-                            second: true,
-                          },
-                        });
-                      }}
-                    />
-                  </Col>
-                </Row>
-
-                <Row className={s.row}>
-                  <Col
-                    xs={12}
-                    sm={12}
-                    md={6}
-                    lg={6}
-                  >
-                    <label>
-                      Would you like your request to be anonymous?
-                    </label>
-                  </Col>
-
-                  <Col
-                    xs={12}
-                    sm={12}
-                    md={6}
-                    lg={6}
-                  >
-                    <RadioButton
-                      text="Yes, don’t share my details with the school"
-                      active={app.schoolForm.anonymous}
-                      onClick={() => {
-                        app.setSchoolData({
-                          anonymous: true,
-                        });
-                      }}
-                    />
-                    <RadioButton
-                      text="No, i'm ok with you sharing my name"
-                      active={!app.schoolForm.anonymous}
-                      onClick={() => {
-                        app.setSchoolData({
-                          anonymous: false,
-                        });
-                      }}
-                    />
-                  </Col>
-                </Row>
-
-                <span className={s.learn}>
-                  learn more about how it works
-                </span>
+                {renderForm()}
+                {renderThanx()}
               </div>
             </Col>
           </Row>
