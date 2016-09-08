@@ -32,6 +32,12 @@
   line-height: 44px;
   
   padding-top: 50px;
+
+  text-align: center;
+
+  &.how {
+    padding: 100px 0;
+  }
 }
 
 .image {
@@ -46,3 +52,25 @@
     color: $white;
   }
 }
+
+.questions {
+  padding: 50px 0;
+
+  .question {
+    color: $green;
+    font-size: 21px;
+    line-height: 23px;
+    font-family: $janon;
+    font-style: italic;
+
+    padding-right: 20px;
+  }
+
+  .answer {
+    font-size: 18px;
+    line-height: 23px;
+
+    padding-right: 20px;
+  }
+}
+
