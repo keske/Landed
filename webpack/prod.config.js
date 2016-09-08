@@ -9,11 +9,13 @@ module.exports = {
   },
 
   module: {
+    // Loader fo css modules (https://github.com/gajus/react-css-modules)
+    // Working with extract text plugin (https://github.com/webpack/extract-text-webpack-plugin)
     loaders: [{
-      test: /\.scss$/,
+      test: /\.css$/,
       loader: ExtractTextPlugin.extract({
         notExtractLoader: 'style-loader',
-        loader: 'css?minimize!postcss-loader!sass-loader',
+        loader: 'css?minimize&module&localIdentName=[hash:base64:5]!postcss',
       }),
     }],
   },
