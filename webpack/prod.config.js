@@ -21,14 +21,20 @@ module.exports = {
   },
 
   plugins: [
-    new ExtractTextPlugin('bundle.css'),
+    // Save all styles in bundle.css with extract-text-plugin
+    new ExtractTextPlugin({
+      filename: 'bundle.css',
+      allChunks: true,
+    }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
+    // Minify bundle
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,
       },
     }),
+    // provide promise and fetch
     new webpack.ProvidePlugin({
       Promise: 'exports?global.Promise!es6-promise',
       fetch: 'exports?self.fetch!whatwg-fetch',
