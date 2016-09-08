@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
+import { observer } from 'mobx-react';
 import { Grid, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router';
 import cx from 'classnames';
@@ -15,7 +16,12 @@ const ovalRight = require('./files/oval-right.png');
 // Styles
 import s from './index.css';
 
+@observer
 export default class Home extends Component {
+
+  static contextTypes = {
+    app: PropTypes.object,
+  };
 
   constructor(props) {
     super(props);
@@ -28,7 +34,11 @@ export default class Home extends Component {
   }
 
   componentDidMount() {
+    const { app } = this.context;
+
     window.addEventListener('scroll', this.parallax);
+
+    app.headerSetColor('white');
   }
 
   componentWillUnmount() {

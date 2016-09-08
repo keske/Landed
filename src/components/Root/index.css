@@ -23,8 +23,9 @@
   }
   
   /* Form */
-  input[type="name"],
+  input[type="text"],
   input[type="email"],
+  input[type="tel"],
   input[type="password"] {
     outline: none;
   }
