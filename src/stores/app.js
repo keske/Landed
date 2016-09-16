@@ -18,12 +18,24 @@ class App {
     send: false,
   }
 
+  @observable lasdSchoolForm = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    send: false,
+  }
+
   @action headerSetColor(color) {
     this.headerColor = color;
   }
 
   @action setSchoolData(data) {
     this.schoolForm = { ...this.schoolForm, ...data };
+  }
+
+  @action setLASDData(data) {
+    this.lasdSchoolForm = { ...this.schoolForm, ...data };
   }
 }
 

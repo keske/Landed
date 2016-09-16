@@ -34,4 +34,11 @@
     outline: none;
   }
 
+  hr {
+    background: rgba(0, 0, 0, .13);
+    height: 1px;
+
+    border: none;
+  }
+
 }
