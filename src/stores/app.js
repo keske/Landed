@@ -3,6 +3,7 @@ import { observable, action } from 'mobx';
 class App {
   @observable isFetching = false;
   @observable headerColor = 'white';
+  @observable menu = false;
 
   @observable schoolForm = {
     firstName: '',
@@ -46,8 +47,15 @@ class App {
   }
 
   @action setInvestData(data) {
-    console.log(data)
     this.investForm = { ...this.investForm, ...data };
+  }
+
+  @action showMenu() {
+    this.menu = true;
+  }
+
+  @action hideMenu() {
+    this.menu = false;
   }
 
 }

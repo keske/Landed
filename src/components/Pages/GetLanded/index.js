@@ -22,6 +22,7 @@ export default class GetLanded extends Component {
     const { app } = this.context;
 
     app.headerSetColor('green');
+    app.hideMenu();
   }
 
   changeData = () => {

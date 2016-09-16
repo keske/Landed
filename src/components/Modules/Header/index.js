@@ -40,6 +40,41 @@ export default class Header extends Component {
     const { green } = this.state;
     const { app } = this.context;
 
+    const renderNav = () =>
+      <span>
+        <Link
+          to="/active-programs"
+          activeClassName={s.active}
+        >
+          Active Programs
+        </Link>
+        <Link
+          to="/how-it-works"
+          activeClassName={s.active}
+        >
+          How it Works
+        </Link>
+        <Link
+          to="/invest"
+          activeClassName={s.active}
+        >
+          Invest
+        </Link>
+        <Link
+          to="/about"
+          activeClassName={s.active}
+        >
+          About
+        </Link>
+        <Link
+          to="/get-landed"
+          className={s['get-landed']}
+          activeClassName={s.active}
+        >
+          Get Landed
+        </Link>
+      </span>;
+
     return (
       <section
         className={cx(
@@ -56,50 +91,44 @@ export default class Header extends Component {
               md={4}
               lg={4}
             >
-              <span className={s.logo} />
-              <span className={s['text-logo']} />
+              <Link to="/">
+                <span className={s.logo} />
+                <span className={s['text-logo']} />
+              </Link>
             </Col>
             <Col
-              xs={12}
-              sm={12}
+              xs={12} xsHidden
+              sm={12} smHidden
               md={8}
               lg={8}
               className={s.nav}
             >
-              <Link
-                to="/active-programs"
-                activeClassName={s.active}
-              >
-                Active Programs
-              </Link>
-              <Link
-                to="/how-it-works"
-                activeClassName={s.active}
-              >
-                How it Works
-              </Link>
-              <Link
-                to="/invest"
-                activeClassName={s.active}
-              >
-                Invest
-              </Link>
-              <Link
-                to="/about"
-                activeClassName={s.active}
-              >
-                About
-              </Link>
-              <Link
-                to="/get-landed"
-                className={s['get-landed']}
-                activeClassName={s.active}
-              >
-                Get Landed
-              </Link>
+              {renderNav()}
+            </Col>
+            <Col
+              xs={12}
+              sm={12}
+              md={8} mdHidden
+              lg={8} lgHidden
+            >
+              <span
+                className={s.burger}
+                onClick={() => {
+                  app.showMenu();
+                }}
+              />
             </Col>
           </Row>
         </Grid>
+        <div className={cx(s.menu, { show: app.menu })}>
+          {renderNav()}
+          <span
+            className={s.close}
+            onClick={() => {
+              app.hideMenu();
+            }}
+          />
+        </div>
       </section>
     );
   }

@@ -22,6 +22,7 @@ export default class About extends Component {
     const { app } = this.context;
 
     app.headerSetColor('white');
+    app.hideMenu();
   }
 
   changeData = () => {

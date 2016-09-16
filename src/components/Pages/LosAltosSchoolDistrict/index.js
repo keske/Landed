@@ -26,6 +26,7 @@ export default class LosAltosSchoolDistrict extends Component {
     window.addEventListener('scroll', this.parallax);
 
     app.headerSetColor('white');
+    app.hideMenu();
   }
 
   componentWillUnmount() {

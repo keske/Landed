@@ -133,3 +133,80 @@
     padding: 7px 17px;
   }
 }
+
+.burger {
+  width: 30px;
+  height: 15px;
+
+  position: fixed;
+  z-index: 13;
+
+  top: 35px;
+  right: 30px;
+
+  display: inline-block;
+
+  background: url(./files/burger.png);
+  background-size: cover;
+
+  cursor: pointer;
+}
+
+.close {
+  width: 23px;
+  height: 23px;
+
+  position: fixed;
+
+  top: 35px;
+  right: 35px;
+
+  display: inline-block;
+
+  background: url(./files/close.png);
+  background-size: cover;
+
+  cursor: pointer;
+}
+
+.menu {
+  position: fixed;
+  z-index: 15;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(255, 255, 255, .97);
+
+  text-align: center;
+  padding-top: 80px;
+
+  display: none;
+
+  &.show {
+    display: block;
+  }
+
+  a {
+    font-family: $janon;
+    font-size: 34px;
+    color: $green;
+
+    display: block;
+
+    padding: 20px 0;
+  }
+
+  .get-landed {
+    border: 1px solid $green;
+    display: inline-block;
+
+    padding: 20px 60px;
+    border-radius: 50px;
+
+    margin-top: 30px;
+  }
+}

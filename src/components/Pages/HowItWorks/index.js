@@ -24,6 +24,7 @@ export default class HowItWorks extends Component {
     window.addEventListener('scroll', this.parallax);
 
     app.headerSetColor('green');
+    app.hideMenu();
   }
 
   componentWillUnmount() {
