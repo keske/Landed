@@ -70,8 +70,8 @@ export default class HowItWorks extends Component {
         <Grid className={s.questions}>
           <Row>
             <Col
-              xs={12}
-              sm={12}
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
               md={4} mdOffset={2}
               lg={4} lgOffset={2}
             >
@@ -84,10 +84,10 @@ export default class HowItWorks extends Component {
             </Col>
 
             <Col
-              xs={12}
-              sm={12}
-              md={4}
-              lg={4}
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
+              md={4} mdOffset={0}
+              lg={4} lgOffset={0}
             >
               <p className={s.question}>
                 What is a Landed Fund?
@@ -99,8 +99,8 @@ export default class HowItWorks extends Component {
           </Row>
           <Row>
             <Col
-              xs={12}
-              sm={12}
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
               md={4} mdOffset={2}
               lg={4} lgOffset={2}
             >
@@ -113,10 +113,10 @@ export default class HowItWorks extends Component {
             </Col>
 
             <Col
-              xs={12}
-              sm={12}
-              md={4}
-              lg={4}
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
+              md={4} mdOffset={0}
+              lg={4} lgOffset={0}
             >
               <p className={s.question}>
                 What if I need to sell my home for lower than what I originally bought it for?
