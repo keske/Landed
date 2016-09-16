@@ -46,6 +46,14 @@
 
     .pipe {
       margin: 0 30px;
+
+      @media only screen 
+        and (max-width: 667px) {
+          opacity: 0;
+          display: block;
+          padding: 0px;
+          margin: 0;
+      }
     }
   }
 }

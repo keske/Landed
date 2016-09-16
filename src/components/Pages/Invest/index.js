@@ -126,25 +126,36 @@ export default class InvestPage extends Component {
           className={s['page-header']}
           ref="parallax"
         >
-          <p className={s.head}>
-            Invest in <i>your community</i>
-          </p>
-          <span className={s.button}>
-            Start investing today
-          </span>
-          <br />
-          <i className={s.with}>
-            With Landed you get:
-          </i>
-          <p className={s.what}>
-            Fully-Managed Funds
-            <span className={s.pipe}>|</span>
-            Low Fees
-            <span className={s.pipe}>|</span>
-            Earn up to 15%
-            <span className={s.pipe}>|</span>
-            Minimum $10k Investment
-          </p>
+          <Grid>
+            <Row>
+              <Col
+                xs={10} xsOffset={1}
+                sm={10} smOffset={1}
+                md={12} mdOffset={0}
+                lg={12} lgOffset={0}
+              >
+                <p className={s.head}>
+                  Invest in <i>your community</i>
+                </p>
+                <span className={s.button}>
+                  Start investing today
+                </span>
+                <br />
+                <i className={s.with}>
+                  With Landed you get:
+                </i>
+                <p className={s.what}>
+                  Fully-Managed Funds
+                  <span className={s.pipe}>|</span>
+                  Low Fees
+                  <span className={s.pipe}>|</span>
+                  Earn up to 15%
+                  <span className={s.pipe}>|</span>
+                  Minimum $10k Investment
+                </p>
+              </Col>
+            </Row>
+          </Grid>
         </div>
 
         <p className={cx(s.head)}>
