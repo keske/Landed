@@ -38,11 +38,11 @@
   text-align: center;
 
   &.how {
-    padding-top: 100px;
+    padding: 100px 40px 40px;
   }
 
   &.about {
-    padding: 100px 0 40px;
+    padding: 100px 40px 40px;
   }
 }
 
@@ -101,7 +101,6 @@
   display: inline-block;
 
   margin-top: 50px;
-  margin-left: 240px;
   margin-bottom: 100px;
 
   .card {
@@ -111,6 +110,7 @@
     box-shadow: 0 8px 7px rgba(0, 0, 0, .13);
 
     padding: 10px;
+    margin-bottom: 40px;
 
     img {
       width: 155px;

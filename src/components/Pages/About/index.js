@@ -44,14 +44,25 @@ export default class About extends Component {
         <Helmet title="About" />
 
         <div className={s['page-header']}>
+          <Grid>
+            <Row>
+              <Col
+                xs={10} xsOffset={1}
+                sm={10} smOffset={1}
+                md={12} mdOffset={0}
+                lg={12} lgOffset={0}
+              >
 
-          <p className={s.title}>
-            Making home ownership possible, one school at a time.
-          </p>
-          <br />
-          <p className={s.intro}>
-            At Landed, we’re on a mission to make homeownership accessible, affordable and easy in expensive cities.
-          </p>
+                <p className={s.title}>
+                  Making home ownership possible, one school at a time.
+                </p>
+                <br />
+                <p className={s.intro}>
+                  At Landed, we’re on a mission to make homeownership accessible, affordable and easy in expensive cities.
+                </p>
+              </Col>
+            </Row>
+          </Grid>
         </div>
 
         <p className={cx(s.head, s.how)}>
@@ -61,10 +72,10 @@ export default class About extends Component {
         <Grid className={s.about}>
           <Row>
             <Col
-              xs={12}
-              sm={12}
-              md={4}
-              lg={4}
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
+              md={4} mdOffset={0}
+              lg={4} lgOffset={0}
             >
               <span className={s.circle} />
               <p className={s.head}>
@@ -79,10 +90,10 @@ export default class About extends Component {
             </Col>
 
             <Col
-              xs={12}
-              sm={12}
-              md={4}
-              lg={4}
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
+              md={4} mdOffset={0}
+              lg={4} lgOffset={0}
             >
               <span className={s.circle} />
               <p className={s.head}>
@@ -97,10 +108,10 @@ export default class About extends Component {
             </Col>
 
             <Col
-              xs={12}
-              sm={12}
-              md={4}
-              lg={4}
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
+              md={4} mdOffset={0}
+              lg={4} lgOffset={0}
             >
               <span className={s.circle} />
               <p className={s.head}>
@@ -139,10 +150,10 @@ export default class About extends Component {
         <Grid className={s.team}>
           <Row>
             <Col
-              xs={12}
-              sm={12}
-              md={3}
-              lg={3}
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
+              md={3} mdOffset={0}
+              lg={3} lgOffset={0}
             >
               <div className={s.card}>
                 <img
@@ -164,10 +175,10 @@ export default class About extends Component {
               </div>
             </Col>
             <Col
-              xs={12}
-              sm={12}
-              md={3}
-              lg={3}
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
+              md={3} mdOffset={0}
+              lg={3} lgOffset={0}
             >
               <div className={s.card}>
                 <img
@@ -189,10 +200,10 @@ export default class About extends Component {
               </div>
             </Col>
             <Col
-              xs={12}
-              sm={12}
-              md={3}
-              lg={3}
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
+              md={3} mdOffset={0}
+              lg={3} lgOffset={0}
             >
               <div className={s.card}>
                 <img
