@@ -31,6 +31,7 @@
   .title, .title i {
     font-family: $janon;
     font-size: 82px;
+    line-height: 82px;
     color: $white;
 
     position: relative;
@@ -65,12 +66,12 @@
   font-size: 45px;
   line-height: 44px;
   
-  padding-top: 50px;
+  padding: 50px 40px 50px;
 
   text-align: center;
 
   &.how {
-    padding: 100px 0;
+    padding: 100px 40px 100px;
   }
 
   .small {
@@ -81,7 +82,7 @@
 .how {
   text-align: center;
 
-  padding: 10px 0 30px;
+  // padding: 10px 0 30px;
 
   .num {
     color: $green;

@@ -160,18 +160,29 @@ export default class LosAltosSchoolDistrict extends Component {
         </Grid>
 
         <div className={s['page-header']}>
-          <img src={schoolImage} role="presentation" />
-          <p className={s.title}>
-            Los Altos <i>School District</i>
-          </p>
+          <Grid>
+            <Row>
+              <Col
+                xs={10} xsOffset={1}
+                sm={10} smOffset={1}
+                md={12} mdOffset={0}
+                lg={12} lgOffset={0}
+              >
+                <img src={schoolImage} role="presentation" />
+                <p className={s.title}>
+                  Los Altos <i>School District</i>
+                </p>
 
-          <i className={s.program}>
-            Landed Program
-          </i>
+                <i className={s.program}>
+                  Landed Program
+                </i>
 
-          <p className={s.intro}>
-            At Los Altos School District, we and our students love our teachers. That’s why we started our Landed program, so they can live and be a permanent part of our community.
-          </p>
+                <p className={s.intro}>
+                  At Los Altos School District, we and our students love our teachers. That’s why we started our Landed program, so they can live and be a permanent part of our community.
+                </p>
+              </Col>
+            </Row>
+          </Grid>
         </div>
 
         <p className={s.head}>
@@ -181,10 +192,10 @@ export default class LosAltosSchoolDistrict extends Component {
         <Grid className={s.how}>
           <Row>
             <Col
-              xs={12}
-              sm={12}
-              md={4}
-              lg={4}
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
+              md={4} mdOffset={0}
+              lg={4} lgOffset={0}
             >
               <p className={s.num}>
                 1
@@ -195,10 +206,10 @@ export default class LosAltosSchoolDistrict extends Component {
             </Col>
 
             <Col
-              xs={12}
-              sm={12}
-              md={4}
-              lg={4}
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
+              md={4} mdOffset={0}
+              lg={4} lgOffset={0}
             >
               <p className={s.num}>
                 2
@@ -209,10 +220,10 @@ export default class LosAltosSchoolDistrict extends Component {
             </Col>
 
             <Col
-              xs={12}
-              sm={12}
-              md={4}
-              lg={4}
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
+              md={4} mdOffset={0}
+              lg={4} lgOffset={0}
             >
               <p className={s.num}>
                 3
@@ -239,10 +250,10 @@ export default class LosAltosSchoolDistrict extends Component {
         <Grid className={s.apply}>
           <Row>
             <Col
-              xs={12}
-              sm={12}
-              md={3}
-              lg={3}
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
+              md={3} mdOffset={0}
+              lg={3} lgOffset={0}
             >
               <span className={s['image-placeholder']} />
               <p>
@@ -251,10 +262,10 @@ export default class LosAltosSchoolDistrict extends Component {
             </Col>
 
             <Col
-              xs={12}
-              sm={12}
-              md={3}
-              lg={3}
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
+              md={3} mdOffset={0}
+              lg={3} lgOffset={0}
             >
               <span className={s['image-placeholder']} />
               <p>
@@ -263,10 +274,10 @@ export default class LosAltosSchoolDistrict extends Component {
             </Col>
 
             <Col
-              xs={12}
-              sm={12}
-              md={3}
-              lg={3}
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
+              md={3} mdOffset={0}
+              lg={3} lgOffset={0}
             >
               <span className={s['image-placeholder']} />
               <p>
@@ -275,10 +286,10 @@ export default class LosAltosSchoolDistrict extends Component {
             </Col>
 
             <Col
-              xs={12}
-              sm={12}
-              md={3}
-              lg={3}
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
+              md={3} mdOffset={0}
+              lg={3} lgOffset={0}
             >
               <span className={s['image-placeholder']} />
               <p>
