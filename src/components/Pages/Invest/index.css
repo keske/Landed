@@ -50,29 +50,6 @@
   }
 }
 
-.program {
-  padding: 150px 0 105px;
-
-  text-align: center;
-
-  border-bottom: 1px solid rgba(0, 0, 0, .13);
-
-  i {
-    color: $green;
-    font-size: 21px;
-    line-height: 25px;
-    font-family: $janon;
-    font-style: italic;
-  }
-
-  p {
-    font-size: 18px;
-    line-height: 23px;
-
-    margin-top: 20px;
-  }
-}
-
 .school-form {
   margin: 40px 0;
   background: #F2F2F2;

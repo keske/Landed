@@ -1,0 +1,168 @@
+.root {
+  background: #F7F7F7;
+
+  text-align: center;
+}
+
+.page-header {
+  text-align: center;
+  background: $green;
+
+  .title {
+    font-family: $janon;
+    font-size: 45px;
+    line-height: 44px;
+    color: $white;
+    
+    display: inline-block;
+    max-width: 700px;
+
+    margin-top: 260px;
+  }
+
+  .intro {
+    color: $white;
+    
+    display: inline-block;
+    max-width: 500px;
+
+    margin: 20px 0 140px;
+  }
+}
+
+.head {
+  font-family: $janon;
+  font-size: 45px;
+  line-height: 44px;
+
+  text-align: center;
+
+  &.how {
+    padding-top: 100px;
+  }
+
+  &.about {
+    padding: 100px 0 40px;
+  }
+}
+
+.head-text {
+  font-size: 18px;
+  line-height: 23px;
+
+  display: inline-block;
+  max-width: 580px;
+}
+
+.about {
+  text-align: center;
+
+  .circle {
+    width: 44px;
+    height: 44px;
+
+    background: $white;
+
+    border-radius: 100%;
+
+    display: inline-block;
+
+    margin: 100px 0 90px;
+
+    margin-left: -50px;
+  }
+
+  p {
+    padding-right: 50px;
+  }
+
+  .head {
+    font-family: $janon;
+    font-size: 23px;
+    line-height: 26px;
+    color: $green;
+    font-style: italic;
+
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .text {
+    font-size: 18px;
+    line-height: 23px;
+
+    text-align: left;
+
+    margin-bottom: 20px;
+  }
+}
+
+.team {
+  display: inline-block;
+
+  margin-top: 50px;
+  margin-left: 240px;
+  margin-bottom: 100px;
+
+  .card {
+    background: #FFF;
+
+    border-radius: 10px;
+    box-shadow: 0 8px 7px rgba(0, 0, 0, .13);
+
+    padding: 10px;
+
+    img {
+      width: 155px;
+      margin-top: 10px;
+    }
+
+    .name {
+      font-family: $janon;
+      color: $green;
+      font-size: 28px;
+      line-height: 35px;
+
+      margin-top: 20px;
+    }
+
+    .role {
+      font-family: $janon;
+      color: #545454;
+      font-size: 15px;
+      line-height: 38px;
+      font-style: italic;
+
+      margin: -10px 0 10px;
+    }
+
+    .description {
+      font-size: 13px;
+      line-height: 20px;
+      color: #545454;
+    }
+  }
+}
+
+.button {
+  font-family: $janon;
+  font-size: 22px;
+  color: $green;
+
+  margin-top: 30px;
+  padding: 15px 35px;
+
+  background: $white;
+  border-radius: 50px;
+
+  display: inline-block;
+
+  transition: .2s;
+
+  box-shadow: 0 3px 13px rgba(0, 0, 0, .2);
+
+  &:hover {
+    color: $white;
+    background: $green;
+  }
+}
