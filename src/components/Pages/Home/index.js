@@ -65,20 +65,31 @@ export default class Home extends Component {
           ref="parallax"
           className={s.image}
         >
-          <p className={s.title}>
-            <i>If you work at school,</i>
-            we’ll help you buy a home
-          </p>
-          <p className={s.intro}>
-            Landed is the homebuying partner you’ve aways wantedLanded is the homebuying partner you’ve aways wantedLanded is the homebuying partner you’ve aways wanted
-          </p>
-          <br />
-          <Link
-            to="get-started"
-            className={s['get-started']}
-          >
-            get started
-          </Link>
+          <Grid>
+            <Row>
+              <Col
+                xs={10} xsOffset={1}
+                sm={10} smOffset={1}
+                md={12} mdOffset={0}
+                lg={12} lgOffset={0}
+              >
+                <p className={s.title}>
+                  <i>If you work at school,</i>
+                  we’ll help you buy a home
+                </p>
+                <p className={s.intro}>
+                  Landed is the homebuying partner you’ve aways wantedLanded is the homebuying partner you’ve aways wantedLanded is the homebuying partner you’ve aways wanted
+                </p>
+                <br />
+                <Link
+                  to="get-started"
+                  className={s['get-started']}
+                >
+                  get started
+                </Link>
+              </Col>
+            </Row>
+          </Grid>
         </div>
 
         <div className={cx(s.calc, { [s.expland]: expand })}>
@@ -93,8 +104,8 @@ export default class Home extends Component {
           <Grid>
             <Row>
               <Col
-                xs={12}
-                sm={12}
+                xs={10} xsOffset={1}
+                sm={10} smOffset={1}
                 md={4} mdOffset={2}
                 lg={4} lgOffset={2}
                 className={s.title}
@@ -104,8 +115,8 @@ export default class Home extends Component {
                 </p>
               </Col>
               <Col
-                xs={12}
-                sm={12}
+                xs={10} xsOffset={1}
+                sm={10} smOffset={1}
                 md={4}
                 lg={4}
                 className={s.form}
