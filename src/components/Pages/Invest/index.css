@@ -18,6 +18,13 @@
   background: url(./files/invest-photo.jpg);
   background-size: 100% auto;
 
+  @media only screen 
+    and (max-width: 667px) {
+      background: url(./files/invest-photo.jpg);
+      background-size: auto 100%;
+      background-position: -200px 0;
+  }
+
   color: $white;
 
   .head {

@@ -33,7 +33,7 @@ export default class InvestPage extends Component {
   parallax = () => {
     const top = (window.pageYOffset - this.refs.parallax.offsetTop) / 10;
 
-    if (screen.width >= 720) {
+    if (screen.width >= 667) {
       this.refs.parallax.style.backgroundPosition = `0px ${top}px`;
     }
   }
