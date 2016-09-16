@@ -26,6 +26,13 @@ class App {
     send: false,
   }
 
+  @observable investForm = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    send: false,
+  }
+
   @action headerSetColor(color) {
     this.headerColor = color;
   }
@@ -37,6 +44,12 @@ class App {
   @action setLASDData(data) {
     this.lasdSchoolForm = { ...this.schoolForm, ...data };
   }
+
+  @action setInvestData(data) {
+    console.log(data)
+    this.investForm = { ...this.investForm, ...data };
+  }
+
 }
 
 export default new App();

@@ -6,13 +6,12 @@ import Helmet from 'react-helmet';
 
 // Components
 import Invest from 'components/Helpers/Invest';
-import RadioButton from 'components/Helpers/RadioButton';
 
 // Styles
 import s from './index.css';
 
 @observer
-export default class GetLanded extends Component {
+export default class InvestPage extends Component {
 
   static contextTypes = {
     app: PropTypes.object,
@@ -21,28 +20,28 @@ export default class GetLanded extends Component {
   componentDidMount() {
     const { app } = this.context;
 
-    app.headerSetColor('green');
+    window.addEventListener('scroll', this.parallax);
+
+    app.headerSetColor('white');
   }
 
-  changeData = () => {
-    const { app } = this.context;
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.parallax);
+  }
 
-    const data = {
-      firstName: this.refs.firstName.value,
-      lastName: this.refs.lastName.value,
-      email: this.refs.email.value,
-      phone: this.refs.phone.value,
-      program: this.refs.program.value,
-    };
+  parallax = () => {
+    const top = (window.pageYOffset - this.refs.parallax.offsetTop) / 10;
 
-    app.setSchoolData(data);
+    if (screen.width >= 720) {
+      this.refs.parallax.style.backgroundPosition = `0px ${top}px`;
+    }
   }
 
   render() {
     const { app } = this.context;
 
     const renderForm = () =>
-      <span className={cx(s.form, { [s.show]: !app.schoolForm.sent })}>
+      <span className={cx(s.form, { [s.show]: !app.investForm.sent })}>
         <Row className={s.row}>
           <Col
             xs={12}
@@ -55,7 +54,7 @@ export default class GetLanded extends Component {
               <input
                 type="text"
                 ref="firstName"
-                defaultValue={app.schoolForm.firstName}
+                defaultValue={app.investForm.firstName}
                 onChange={() => this.changeData()}
               />
             </label>
@@ -72,43 +71,7 @@ export default class GetLanded extends Component {
               <input
                 type="text"
                 ref="lastName"
-                defaultValue={app.schoolForm.lastName}
-                onChange={() => this.changeData()}
-              />
-            </label>
-          </Col>
-        </Row>
-
-        <Row className={s.row}>
-          <Col
-            xs={12}
-            sm={12}
-            md={6}
-            lg={6}
-          >
-            <label>
-              Your Email Address
-              <input
-                type="email"
-                ref="email"
-                defaultValue={app.schoolForm.email}
-                onChange={() => this.changeData()}
-              />
-            </label>
-          </Col>
-
-          <Col
-            xs={12}
-            sm={12}
-            md={6}
-            lg={6}
-          >
-            <label>
-              Your Phone Number
-              <input
-                type="tel"
-                ref="phone"
-                defaultValue={app.schoolForm.phone}
+                defaultValue={app.investForm.lastName}
                 onChange={() => this.changeData()}
               />
             </label>
@@ -123,105 +86,21 @@ export default class GetLanded extends Component {
             lg={12}
           >
             <label>
-              School You Want to Start a Program
+              Your Email Address
               <input
-                type="text"
-                ref="program"
-                defaultValue={app.schoolForm.program}
+                type="email"
+                ref="email"
+                defaultValue={app.investForm.email}
                 onChange={() => this.changeData()}
               />
             </label>
           </Col>
         </Row>
 
-        <Row className={s.row}>
-          <Col
-            xs={12}
-            sm={12}
-            md={6}
-            lg={6}
-          >
-            <label>
-              What is your Landed Program outreach preference?
-            </label>
-          </Col>
-
-          <Col
-            xs={12}
-            sm={12}
-            md={6}
-            lg={6}
-          >
-            <RadioButton
-              text="I'd like to reach out to my school directly about starting a Landed Program"
-              active={app.schoolForm.school.first}
-              onClick={() => {
-                app.setSchoolData({
-                  school: {
-                    first: true,
-                    second: false,
-                  },
-                });
-              }}
-            />
-            <RadioButton
-              text="I'd like Landed to reach out to my school directly"
-              active={app.schoolForm.school.second}
-              onClick={() => {
-                app.setSchoolData({
-                  school: {
-                    first: false,
-                    second: true,
-                  },
-                });
-              }}
-            />
-          </Col>
-        </Row>
-
-        <Row className={s.row}>
-          <Col
-            xs={12}
-            sm={12}
-            md={6}
-            lg={6}
-          >
-            <label>
-              Would you like your request to be anonymous?
-            </label>
-          </Col>
-
-          <Col
-            xs={12}
-            sm={12}
-            md={6}
-            lg={6}
-          >
-            <RadioButton
-              text="Yes, don’t share my details with the school"
-              active={app.schoolForm.anonymous}
-              onClick={() => {
-                app.setSchoolData({
-                  anonymous: true,
-                });
-              }}
-            />
-            <RadioButton
-              text="No, i'm ok with you sharing my name"
-              active={!app.schoolForm.anonymous}
-              onClick={() => {
-                app.setSchoolData({
-                  anonymous: false,
-                });
-              }}
-            />
-          </Col>
-        </Row>
-
         <span
           className={s.button}
           onClick={() => {
-            app.setSchoolData({ sent: true });
+            app.setInvestData({ sent: true });
           }}
         >
           learn more about how it works
@@ -229,86 +108,46 @@ export default class GetLanded extends Component {
       </span>;
 
     const renderThanx = () =>
-      <span className={cx(s.thanx, { [s.show]: app.schoolForm.sent })}>
+      <span className={cx(s.thanx, { [s.show]: app.investForm.sent })}>
         <p className={s.title}>
           Thank you for your<br />Landed Program request!
         </p>
         <p className={s.lead}>
           You will be receiving an email shortly on the next steps.
         </p>
-
-        <div className={s.mean}>
-          <i>
-            In the meantime:
-          </i>
-          <p>
-            The best way to get a Landed<br />Program started is to get more<br />staff at your school excited.
-          </p>
-        </div>
-        <span className={s.button}>
-          send email
-        </span>
-        <span className={s.button}>
-          post on facebook
-        </span>
       </span>;
 
     return (
       <section className={s.root}>
-        <Helmet title="Get Landed" />
+        <Helmet title="Invest" />
 
-        <div className={s['page-header']}>
-          <p className={cx(s.head, s.how)}>
-            Get Landed
+        <div
+          className={s['page-header']}
+          ref="parallax"
+        >
+          <p className={s.head}>
+            Invest in <i>your community</i>
           </p>
+          <span className={s.button}>
+            Start investing today
+          </span>
           <br />
-          <i>
-            Purchasing a home is expensive. 
+          <i className={s.with}>
+            With Landed you get:
           </i>
-          <br />
-          <p>
-            Especially when most of your paycheck is spent on rent and living expenses.
+          <p className={s.what}>
+            Fully-Managed Funds
+            <span className={s.pipe}>|</span>
+            Low Fees
+            <span className={s.pipe}>|</span>
+            Earn up to 15%
+            <span className={s.pipe}>|</span>
+            Minimum $10k Investment
           </p>
-        </div>
-
-        <div className={s.program}>
-          <Grid>
-            <Row>
-              <Col
-                xs={12}
-                sm={12}
-                md={4} mdOffset={2}
-                lg={4} lgOffset={2}
-              >
-                <i>
-                  A Landed Program makes purchasing a&nbsp;home&nbsp;affordable.
-                </i>
-                <p>
-                  Landed has a network of partner banks and vetted brokers who can help you find a home. Landed will work with you every step of the way until you are standing in your new home.
-                </p>
-              </Col>
-
-              <Col
-                xs={12}
-                sm={12}
-                md={4}
-                lg={4}
-              >
-                <i>
-                  A Landed Program makes purchasing  a&nbsp;home&nbsp;easier.
-                </i>
-                <p>
-                  Landed works with your school and investors to create a Landed Fund, giving you access to the funds you need for 50% of your downpayment.
-                </p>
-              </Col>
-            </Row>
-          </Grid>
         </div>
 
         <p className={cx(s.head)}>
-          <i>Ask your school</i>
-          <br />
-          to start a Landed Program
+          <i>Start Investing</i><br />in a Landed Program today
         </p>
 
         <Grid>

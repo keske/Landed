@@ -15,22 +15,38 @@
 .page-header {
   text-align: center;
 
-  padding-top: 100px;
+  background: url(./files/invest-photo.jpg);
+  background-size: 100% auto;
 
-  i {
-    font-size: 18px;
-    line-height: 19px;
-    font-family: $janon;
-    font-style: italic;
-    
-    display: inline-block;
-    margin-top: 20px;
+  color: $white;
+
+  .head {
+    font-size: 60px;
+    line-height: 64px;
+
+    padding-top: 200px;
   }
 
-  p {
-    max-width: 350px;
+  .with {
+    font-size: 25px;
+    line-height: 31px;
+    color: $white;
+    
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 60px;
+  }
+
+  .what {
+    font-size: 20px;
+    line-height: 23px;
+    color: $white;
+    
+    padding-top: 20px;
+    padding-bottom: 40px;
+
+    .pipe {
+      margin: 0 30px;
+    }
   }
 }
 
@@ -166,6 +182,8 @@
   transition: .2s;
 
   box-shadow: 0 3px 13px rgba(0, 0, 0, .2);
+
+  cursor: pointer;
 
   &:hover {
     color: $white;
