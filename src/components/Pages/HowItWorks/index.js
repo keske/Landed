@@ -48,6 +48,23 @@ export default class HowItWorks extends Component {
           How Landed Works
         </p>
 
+        <Grid className={s.questions}>
+          <Row>
+            <Col
+              xs={12}
+              sm={12}
+              md={12}
+              lg={12}
+            >
+              <img
+                src={require('./files/info1.jpg')}
+                className={s.info}
+                role="presentation"
+              />
+            </Col>
+          </Row>
+        </Grid>
+
         <div
           ref="parallax"
           className={s.image}
@@ -76,10 +93,10 @@ export default class HowItWorks extends Component {
               lg={4} lgOffset={2}
             >
               <p className={s.question}>
-                How does Landed profit?
+                Where does the money come from?
               </p>
               <p className={s.answer}>
-                At Landed, we want to make home-buying easier for you. That’s why we only make a profit if you purchase a home - we take a percentage of the real-estate brokers commision fee, which means you lose no money.
+                Landed pools investor money from people in your community who are Interested in supporting you and making a profit. You can think of Landed as a type of impactm ivesting That means we care about making sustainable good investments. Learn more bout investing
               </p>
             </Col>
 
@@ -90,10 +107,15 @@ export default class HowItWorks extends Component {
               lg={4} lgOffset={0}
             >
               <p className={s.question}>
-                What is a Landed Fund?
+                How does Landed make money? Do I get charged a bunch of fees?
               </p>
               <p className={s.answer}>
-                Think of it as a bank account. Investors put money into this fund (invest) that you can then take out to use for your downpayment.
+                Currently Landed does not charge home
+                buyers any ongination fee. We make our
+                money m two ways. First we charge a small
+                management fee to investors. Second, we
+                partner you with great real estate agents in
+                your area and we charge them a referral fee
               </p>
             </Col>
           </Row>
@@ -105,10 +127,13 @@ export default class HowItWorks extends Component {
               lg={4} lgOffset={2}
             >
               <p className={s.question}>
-                What does the Landed Fund get out of this?
+                Who is responsible for property taxes insurance repairs and mamtenance costs?
               </p>
               <p className={s.answer}>
-                If after living in your home for a few years, you decide to sell it, you split the profit 75/25 with th Landed Fund. That means if your home is now worth $600,000, that’s a $100,000 profit. You get your original $50,000 back plus $75,000 profit. Your investors get their original $50,000 back plus a $25,000 profit. That’s a win-win.
+                You Will be responsible for all the costs of
+                  homeownership like any other homeowner.
+                  Were here to help you get the right property
+                  insurance to cover unexpected costs.
               </p>
             </Col>
 
@@ -119,12 +144,10 @@ export default class HowItWorks extends Component {
               lg={4} lgOffset={0}
             >
               <p className={s.question}>
-                What if I need to sell my home for lower than what I originally bought it for?
+                What if I don't want to sell?
               </p>
               <p className={s.answer}>
-                Things happen, and we understand. That’s why our 75/25 model also applies in this scenario. If you take a loss, that burden is shared with investors, so it doesn’t hit you as hard.
-                <br />
-                That means, if your home worth has dropped to $400,000 when you sell, you only lose $75,000 instead of $100,000, while investors lose $25,000.
+                Normally, the Landed investment is made for a 10-year term. That means that if you don't want to sell in the next 10 years you'll have to repay Landed. Often this happens as a part of a refinancing (when you take out a new loan). You can buy out Landed's investment at any time after the first year without penalty.
               </p>
             </Col>
           </Row>

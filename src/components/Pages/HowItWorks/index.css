@@ -20,10 +20,16 @@
 
   box-shadow: 0 3px 13px rgba(0, 0, 0, .2);
 
+  cursor: pointer;
+
   &:hover {
     color: $white;
     background: $green;
   }
+}
+
+.info {
+  width: 100%;
 }
 
 .head {

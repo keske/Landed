@@ -16,7 +16,7 @@
   }
 }
 
-.learn {
+.button {
   font-family: $janon;
   font-size: 22px;
   color: $green;
@@ -32,6 +32,8 @@
   transition: .2s;
 
   box-shadow: 0 3px 13px rgba(0, 0, 0, .2);
+
+  cursor: pointer;
 
   &:hover {
     color: $white;

@@ -9,7 +9,7 @@ const Invest = () => (
       Want to invest in your community while getting<br />a market-rate return?
     </i>
 
-    <span className={s.learn}>
+    <span className={s.button}>
       Invest in a Landed Program
     </span>
   </div>
