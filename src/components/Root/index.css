@@ -12,6 +12,7 @@
   /* Link */
   a {
     text-decoration: none;
+    color: $green;
 
     &:hover {
       text-decoration: none;

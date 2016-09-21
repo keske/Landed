@@ -41,6 +41,11 @@
 
   border-bottom: 1px solid rgba(0, 0, 0, .13);
 
+  img {
+    width: 80%;
+    margin-left: 10%;
+  }
+
   i {
     color: $green;
     font-size: 21px;

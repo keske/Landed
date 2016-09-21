@@ -180,45 +180,6 @@ export default class GetLanded extends Component {
           </Col>
         </Row>
 
-        <Row className={s.row}>
-          <Col
-            xs={12}
-            sm={12}
-            md={6}
-            lg={6}
-          >
-            <label>
-              Would you like your request to be anonymous?
-            </label>
-          </Col>
-
-          <Col
-            xs={12}
-            sm={12}
-            md={6}
-            lg={6}
-          >
-            <RadioButton
-              text="Yes, don’t share my details with the school"
-              active={app.schoolForm.anonymous}
-              onClick={() => {
-                app.setSchoolData({
-                  anonymous: true,
-                });
-              }}
-            />
-            <RadioButton
-              text="No, i'm ok with you sharing my name"
-              active={!app.schoolForm.anonymous}
-              onClick={() => {
-                app.setSchoolData({
-                  anonymous: false,
-                });
-              }}
-            />
-          </Col>
-        </Row>
-
         <span
           className={s.button}
           onClick={() => {
@@ -264,7 +225,7 @@ export default class GetLanded extends Component {
           </p>
           <br />
           <i>
-            Purchasing a home is expensive. 
+            Purchasing a home is expensive.
           </i>
           <br />
           <p>
@@ -278,28 +239,34 @@ export default class GetLanded extends Component {
               <Col
                 xs={12}
                 sm={12}
-                md={4} mdOffset={2}
-                lg={4} lgOffset={2}
+                md={5} mdOffset={1}
+                lg={5} lgOffset={1}
               >
+                <img src={require('./files/n1.jpg')} />
                 <i>
-                  A Landed Program makes purchasing a&nbsp;home&nbsp;affordable.
+                  Landed helps make buying a home possible.
                 </i>
                 <p>
-                  Landed has a network of partner banks and vetted brokers who can help you find a home. Landed will work with you every step of the way until you are standing in your new home.
+                  Landed works with schools and investors to create funds that give you access to the money you need to make a down payment on a home
                 </p>
               </Col>
 
               <Col
                 xs={12}
                 sm={12}
-                md={4}
-                lg={4}
+                md={5}
+                lg={5}
               >
+                <img src={require('./files/n2.jpg')} />
                 <i>
-                  A Landed Program makes purchasing  a&nbsp;home&nbsp;easier.
+                  Landed makes buying and owning  a home easier.
                 </i>
                 <p>
-                  Landed works with your school and investors to create a Landed Fund, giving you access to the funds you need for 50% of your downpayment.
+                  Landed has a network of partner banks and
+                  vetted brokers who can help you find a home.
+                  <br />
+                  Landed wi ll work with you every step of the
+                  way until you are standing in your new home.
                 </p>
               </Col>
             </Row>

@@ -96,7 +96,7 @@ export default class HowItWorks extends Component {
                 Where does the money come from?
               </p>
               <p className={s.answer}>
-                Landed pools investor money from people in your community who are Interested in supporting you and making a profit. You can think of Landed as a type of impactm ivesting That means we care about making sustainable good investments. Learn more bout investing
+                Landed pools investor money from people in your community who are Interested in supporting you and making a profit. You can think of Landed as a type of impactm ivesting That means we care about making sustainable good investments. <Link to="/invest"><i>Learn more bout investing</i></Link>
               </p>
             </Col>
 
