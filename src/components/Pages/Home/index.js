@@ -117,7 +117,8 @@ export default class Home extends Component {
                   we’ll help you buy a home
                 </p>
                 <p className={s.intro}>
-                  Landed is the homebuying partner you’ve aways wantedLanded is the homebuying partner you’ve aways wantedLanded is the homebuying partner you’ve aways wanted
+                  Landed makes buying a home more affordable and less risky  by investing alongside you when you make a down payment.
+                  Our first priority is helping teachers and school staff  become homeowners.
                 </p>
                 <br />
                 <Link
@@ -137,7 +138,7 @@ export default class Home extends Component {
           </p>
 
           <p className={s.intro}>
-            Chech out in our calculator
+            Check out in our calculator
           </p>
 
           <Grid>
