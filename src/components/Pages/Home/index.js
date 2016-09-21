@@ -275,9 +275,9 @@ export default class Home extends Component {
               </div>
             </div>
 
-            <span className={s.learn}>
+            <Link to="how-it-works" className={s.learn}>
               learn more about how it works
-            </span>
+            </Link>
 
             <div className={s.footer} />
           </div>
