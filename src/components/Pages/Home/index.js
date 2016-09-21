@@ -9,9 +9,9 @@ import Helmet from 'react-helmet';
 import Press from 'components/Helpers/Press';
 
 // Images
-const ovalLeft = require('./files/oval-left.png');
-const ovalCenter = require('./files/oval-center.png');
-const ovalRight = require('./files/oval-right.png');
+// const ovalLeft = require('./files/oval-left.png');
+// const ovalCenter = require('./files/oval-center.png');
+// const ovalRight = require('./files/oval-right.png');
 
 // Styles
 import s from './index.css';
@@ -29,6 +29,18 @@ export default class Home extends Component {
     this.state = {
       calc: {
         expand: false,
+        monthly: {
+          first: 0, // 0.00385
+          second: 0, // 0.0049
+        },
+        downpayment: {
+          first: 0, // 20%
+          second: 0, // 10%
+        },
+        landed: {
+          first: 0, // 10%
+          second: 0, // 0.00385
+        },
       },
     };
   }
@@ -54,8 +66,35 @@ export default class Home extends Component {
     }
   }
 
+  calculate = () => {
+    const value = this.refs.calc.value;
+    const defaultValue = this.refs.calc.defaultValue;
+
+    const data = value !== '' ? value : defaultValue;
+
+    if (data !== '') {
+      this.setState({
+        calc: {
+          expand: true,
+          monthly: {
+            first: data * 0.00385, // 0.00385
+            second: data * 0.0049, // 0.0049
+          },
+          downpayment: {
+            first: (20 / 100) * data, // 20%
+            second: (10 / 100) * data, // 10%
+          },
+          landed: {
+            first: (20 / 100) * data, // 10%
+            second: data * 0.00385, // 0.00385
+          },
+        },
+      });
+    }
+  }
+
   render() {
-    const { calc: { expand } } = this.state;
+    const { calc: { expand, monthly, downpayment, landed } } = this.state;
 
     return (
       <section className={s.root}>
@@ -106,8 +145,8 @@ export default class Home extends Component {
               <Col
                 xs={10} xsOffset={1}
                 sm={10} smOffset={1}
-                md={4} mdOffset={2}
-                lg={4} lgOffset={2}
+                md={5} mdOffset={2}
+                lg={5} lgOffset={2}
                 className={s.title}
               >
                 <p>
@@ -121,20 +160,19 @@ export default class Home extends Component {
                 lg={4}
                 className={s.form}
               >
-                <input type="text" />
+                <input
+                  ref="calc"
+                  type="text"
+                  defaultValue="500000"
+                  onChange={() => { this.calculate(); }}
+                />
               </Col>
             </Row>
           </Grid>
 
           <span
             className={s.calculate}
-            onClick={() => {
-              this.setState({
-                calc: {
-                  expand: true,
-                },
-              });
-            }}
+            onClick={() => { this.calculate(); }}
           >
             calculate
           </span>
@@ -157,7 +195,7 @@ export default class Home extends Component {
                     downpayment
                   </p>
                   <p className={s.price}>
-                    $100,000
+                    ${downpayment.first}
                   </p>
                 </div>
                 <div className={cx(s['right-side'], s.green)}>
@@ -168,7 +206,7 @@ export default class Home extends Component {
                     monthly cost
                   </p>
                   <p className={s.price}>
-                    $3000
+                    ${downpayment.first}
                   </p>
                 </div>
               </div>
@@ -180,25 +218,25 @@ export default class Home extends Component {
               </p>
               <div className={s.table}>
                 <div className={cx(s['left-side'], s.red)}>
-                  <p className={s.large}>
-                    large
+                  <p className={s.small}>
+                    small
                   </p>
                   <p className={s.cost}>
                     downpayment
                   </p>
                   <p className={s.price}>
-                    $100,000
+                    ${downpayment.second}
                   </p>
                 </div>
                 <div className={cx(s['right-side'], s.green)}>
-                  <p className={s.small}>
-                    small
+                  <p className={s.large}>
+                    large
                   </p>
                   <p className={s.cost}>
                     monthly cost
                   </p>
                   <p className={s.price}>
-                    $3000
+                    ${monthly.second}
                   </p>
                 </div>
               </div>
@@ -220,7 +258,7 @@ export default class Home extends Component {
                     downpayment
                   </p>
                   <p className={s.price}>
-                    $100,000
+                    ${landed.first}
                   </p>
                 </div>
                 <div className={s['right-side']}>
@@ -231,7 +269,7 @@ export default class Home extends Component {
                     monthly cost
                   </p>
                   <p className={s.price}>
-                    $3000
+                    ${landed.second}
                   </p>
                 </div>
               </div>
@@ -248,7 +286,7 @@ export default class Home extends Component {
 
         <div className={s.how}>
           <p className={s.head}>
-            How Landed Works
+            What can Landed do for you?
           </p>
 
           <Grid className={s['one-two-three']}>
@@ -259,8 +297,12 @@ export default class Home extends Component {
                 md={4}
                 lg={4}
               >
+                <img src={require('./files/p1.jpg')} />
+                <span className={s.num}>
+                  1
+                </span>
                 <p>
-                  Your school starts a Landed program, allowing investors to pool their money into a Landed Program.
+                  <strong>A Landed program is started at your school</strong> and local investors are brought in to back the program.
                 </p>
               </Col>
               <Col
@@ -269,8 +311,12 @@ export default class Home extends Component {
                 md={4}
                 lg={4}
               >
+                <img src={require('./files/p2.jpg')} />
+                <span className={s.num}>
+                  2
+                </span>
                 <p>
-                  You apply to receive funds from your school’s Landed program, covering up to 50% of the downpayment you need.
+                  <strong>You apply to receive funds</strong> from your school’s Landed program, covering up to 50% of the downpayment you need.
                 </p>
               </Col>
               <Col
@@ -279,8 +325,15 @@ export default class Home extends Component {
                 md={4}
                 lg={4}
               >
+                <img src={require('./files/p3.jpg')} />
+                <span className={s.num}>
+                  3
+                </span>
                 <p>
-                  You get access to these funds and support to find a home through Landed’s vetter network, getting you in a home in a smarter and faster way.
+                  <strong>Landed helps you find and buy a home</strong> near where
+                    you work. We pay half the
+                    down payment when
+                    you re ready to buy
                 </p>
               </Col>
             </Row>
@@ -298,30 +351,32 @@ export default class Home extends Component {
 
         <Press />
 
-        <div className={s.invest}>
-          <i>
-            Want to invest in your community while getting<br />a market-rate return?
-          </i>
-          <span className={s.program}>
-            Invest in a Landed Program
-          </span>
+        {/*
+          <div className={s.invest}>
+            <i>
+              Want to invest in your community while getting<br />a market-rate return?
+            </i>
+            <span className={s.program}>
+              Invest in a Landed Program
+            </span>
 
-          <img
-            src={ovalLeft}
-            className={s['oval-left']}
-            role="presentation"
-          />
-          <img
-            src={ovalCenter}
-            className={s['oval-center']}
-            role="presentation"
-          />
-          <img
-            src={ovalRight}
-            className={s['oval-right']}
-            role="presentation"
-          />
-        </div>
+            <img
+              src={ovalLeft}
+              className={s['oval-left']}
+              role="presentation"
+            />
+            <img
+              src={ovalCenter}
+              className={s['oval-center']}
+              role="presentation"
+            />
+            <img
+              src={ovalRight}
+              className={s['oval-right']}
+              role="presentation"
+            />
+          </div>
+        */}
       </section>
     );
   }
