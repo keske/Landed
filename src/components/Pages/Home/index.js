@@ -8,11 +8,6 @@ import Helmet from 'react-helmet';
 // Components
 import Press from 'components/Helpers/Press';
 
-// Images
-// const ovalLeft = require('./files/oval-left.png');
-// const ovalCenter = require('./files/oval-center.png');
-// const ovalRight = require('./files/oval-right.png');
-
 // Styles
 import s from './index.css';
 
@@ -117,8 +112,8 @@ export default class Home extends Component {
                   we’ll help you buy a home
                 </p>
                 <p className={s.intro}>
-                  Landed makes buying a home more affordable and less risky  by investing alongside you when you make a down payment.
-                  Our first priority is helping teachers and school staff  become homeowners.
+                  Landed makes buying a home more affordable and less risky by investing alongside you when you make a down payment.
+                  Our first priority is helping teachers and school staff become homeowners.
                 </p>
                 <br />
                 <Link
@@ -144,10 +139,10 @@ export default class Home extends Component {
           <Grid>
             <Row>
               <Col
-                xs={10} xsOffset={1}
-                sm={10} smOffset={1}
-                md={5} mdOffset={2}
-                lg={5} lgOffset={2}
+                xs={12} xsOffset={0}
+                sm={6} smOffset={0}
+                md={5} mdOffset={1}
+                lg={5} lgOffset={1}
                 className={s.title}
               >
                 <p>
@@ -155,10 +150,10 @@ export default class Home extends Component {
                 </p>
               </Col>
               <Col
-                xs={10} xsOffset={1}
-                sm={10} smOffset={1}
-                md={4}
-                lg={4}
+                xs={12} xsOffset={0}
+                sm={6} smOffset={0}
+                md={5} mdOffset={0}
+                lg={5} lgOffset={0}
                 className={s.form}
               >
                 <input
