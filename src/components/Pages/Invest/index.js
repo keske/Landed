@@ -159,6 +159,143 @@ export default class InvestPage extends Component {
         </div>
 
         <p className={cx(s.head)}>
+          <i>Why I should</i> invest<br />with Landed
+        </p>
+
+        <Grid>
+          <Row>
+            <Col
+              xs={12}
+              sm={12}
+              md={12}
+              lg={12}
+            >
+              <img src={require('./files/i1.jpg')} role="presentation" />
+            </Col>
+          </Row>
+          <Row className={s.why}>
+            <Col
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
+              md={3} mdOffset={0}
+              lg={3} lgOffset={0}
+            >
+              <p className={s.title}>
+                Diversified
+              </p>
+              <p className={s.text}>
+                Spread invetments across homes
+              </p>
+            </Col>
+            <Col
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
+              md={3} mdOffset={0}
+              lg={3} lgOffset={0}
+            >
+              <p className={s.title}>
+                Passive
+              </p>
+              <p className={s.text}>
+                Educators are responsible for home maintenance and repair
+              </p>
+            </Col>
+            <Col
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
+              md={3} mdOffset={0}
+              lg={3} lgOffset={0}
+            >
+              <p className={s.title}>
+                Levered
+              </p>
+              <p className={s.text}>
+                Investors get leverage without taking on debt
+              </p>
+            </Col>
+            <Col
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
+              md={3} mdOffset={0}
+              lg={3} lgOffset={0}
+            >
+              <p className={s.title}>
+                Unique
+              </p>
+              <p className={s.text}>
+                Very difficult to replicate within your current portfolio
+              </p>
+            </Col>
+          </Row>
+        </Grid>
+
+        <hr />
+
+        <p className={cx(s.head)}>
+          <i>Your Investment’s Impact</i>
+        </p>
+
+        <Grid>
+          <Row>
+            <Col
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
+              md={10} mdOffset={1}
+              lg={10} lgOffset={1}
+            >
+              <img src={require('./files/i2.jpg')} role="presentation" />
+            </Col>
+          </Row>
+          <Row className={s.impact}>
+            <Col
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
+              md={3} mdOffset={2}
+              lg={3} lgOffset={2}
+            >
+              <p>
+                By helping educators buy homes, schools are able to retain and attract staff, making <strong>the schools more sustainable and stable.</strong>
+              </p>
+            </Col>
+            <Col
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
+              md={3} mdOffset={0}
+              lg={3} lgOffset={0}
+            >
+              <p>
+                Educators <strong>start building wealth earlier</strong>, and benefit from tax incentives, shorter commutes and psychological gains of ownership
+              </p>
+            </Col>
+            <Col
+              xs={10} xsOffset={1}
+              sm={10} smOffset={1}
+              md={3} mdOffset={0}
+              lg={3} lgOffset={0}
+            >
+              <p>
+                Less turnover and more engagement <strong>improves student outcomes</strong>, particularly in high-poverty, high-minority schools
+              </p>
+            </Col>
+          </Row>
+        </Grid>
+
+        <hr />
+
+        <Grid>
+          <Row>
+            <Col
+              xs={12}
+              sm={12}
+              md={12}
+              lg={12}
+            >
+              <img src={require('./files/info2.jpg')} role="presentation" />
+            </Col>
+          </Row>
+        </Grid>
+
+        <p className={cx(s.head)}>
           <i>Start Investing</i><br />in a Landed Program today
         </p>
 
