@@ -135,7 +135,7 @@ export default class InvestPage extends Component {
                 lg={12} lgOffset={0}
               >
                 <p className={s.head}>
-                  Invest in <i>your community</i>
+                  Landed ivestors help teachers buy homes
                 </p>
                 <span className={s.button}>
                   Start investing today
@@ -149,9 +149,9 @@ export default class InvestPage extends Component {
                   <span className={s.pipe}>|</span>
                   Low Fees
                   <span className={s.pipe}>|</span>
-                  Earn up to 15%
+                   Invest locally
                   <span className={s.pipe}>|</span>
-                  Minimum $10k Investment
+                  Equity returns
                 </p>
               </Col>
             </Row>
