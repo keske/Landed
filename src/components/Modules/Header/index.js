@@ -42,12 +42,7 @@ export default class Header extends Component {
 
     const renderNav = () =>
       <span>
-        <Link
-          to="/active-programs"
-          activeClassName={s.active}
-        >
-          Active Programs
-        </Link>
+        
         <Link
           to="/how-it-works"
           activeClassName={s.active}

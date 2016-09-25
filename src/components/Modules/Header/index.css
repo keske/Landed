@@ -1,17 +1,18 @@
 .root {
   position: fixed;
   z-index: 3;
+  -webkit-font-smoothing: antialiased;
 
   top: 0;
   left: 0;
 
-  padding: 20px 0;
+  padding: 15px 0px 5px 0px;
 
   width: 100%;
   transition: background .3s;
 
   &.green {
-    background: $green;
+    background: rgba(0,155,105,.8);
   }
 
   &.color-white {
@@ -32,9 +33,7 @@
         color: $white;
       }
 
-      .get-landed {
-        border: 1px solid $white;
-      }
+     
     }
   }
 
@@ -80,26 +79,24 @@
         color: $white;
       }
 
-      .get-landed {
-        border: 1px solid $white;
-      }
+    
     }
   }
 }
 
 .logo {
-  width: 39px;
-  height: 38px;
+  width: 33px;
+  height: 33px;
 
   display: inline-block;
 }
 
 .text-logo {
-  width: 98px;
-  height: 28px;
+  width: 75px;
+  height: 20px;
   
   position: relative;
-  top: -7px;
+  top: -9px;
   margin-left: 40px;
 
   display: inline-block;
@@ -107,29 +104,29 @@
 
 .nav {
   text-align: right;
-
-  margin-top: 13px;
+  
+  margin-top: 7px;
 
   a {
-    font-family: $janon;
-    font-size: 16px;
-
+    
+    font-size: 15px;
+    font-family: 'SupriaSans Regular';
     margin-right: 30px;
+    opacity: .8;
+    transition: .2s;
 
     &:last-child {
       margin-right: 0;
     }
 
     &:hover, &.active {
-      opacity: .7;
+      opacity: 1;
     }
   }
 
   .get-landed {
-    border-radius: 30px;
-
-    font-family: $janonItalic;
-
+    border-radius: 30px;    
+    font-family: 'SupriaSans Medium';
     padding: 7px 17px;
   }
 }
@@ -201,7 +198,6 @@
   }
 
   .get-landed {
-    border: 1px solid $green;
     display: inline-block;
 
     padding: 20px 60px;

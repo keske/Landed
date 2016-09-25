@@ -120,7 +120,7 @@ export default class Home extends Component {
                   to="get-started"
                   className={s['get-started']}
                 >
-                  get started
+                  Get started
                 </Link>
               </Col>
             </Row>
@@ -202,7 +202,7 @@ export default class Home extends Component {
                     monthly cost
                   </p>
                   <p className={s.price}>
-                    ${downpayment.first}
+                    ${monthly.first}
                   </p>
                 </div>
               </div>
