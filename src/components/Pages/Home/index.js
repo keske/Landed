@@ -159,19 +159,19 @@ export default class Home extends Component {
                 <input
                   ref="calc"
                   type="text"
-                  defaultValue="500000"
+                  defaultValue=""
                   onChange={() => { this.calculate(); }}
                 />
               </Col>
             </Row>
           </Grid>
 
-          <span
+         {/*  <span
             className={s.calculate}
             onClick={() => { this.calculate(); }}
           >
             calculate
-          </span>
+          </span> */} 
 
           <div className={s.results}>
             <p className={s.top}>

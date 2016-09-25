@@ -11,6 +11,7 @@
   width: 100%;
   transition: background .3s;
 
+
   &.green {
     background: rgba(0,155,105,.8);
   }
@@ -112,8 +113,9 @@
     font-size: 15px;
     font-family: 'SupriaSans Regular';
     margin-right: 30px;
-    opacity: .8;
+    opacity: .9;
     transition: .2s;
+    border-bottom: 2px solid rgba(255,255,255,0);
 
     &:last-child {
       margin-right: 0;
@@ -121,13 +123,12 @@
 
     &:hover, &.active {
       opacity: 1;
+      border-bottom: 2px solid rgba(255,255,255,1);
     }
   }
-
-  .get-landed {
-    border-radius: 30px;    
+  .get-landed {     
     font-family: 'SupriaSans Medium';
-    padding: 7px 17px;
+    
   }
 }
 
