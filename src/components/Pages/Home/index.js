@@ -5,6 +5,9 @@ import { Link } from 'react-router';
 import cx from 'classnames';
 import Helmet from 'react-helmet';
 
+// Utils
+import { numberWithCommas } from 'utils/price';
+
 // Components
 import Press from 'components/Helpers/Press';
 
@@ -67,21 +70,27 @@ export default class Home extends Component {
 
     const data = value !== '' ? value : defaultValue;
 
+    const getPrice = (price) => (
+      price > 100
+        ? numberWithCommas(price.toFixed(0))
+        : numberWithCommas(price.toFixed(1))
+    );
+
     if (data !== '') {
       this.setState({
         calc: {
           expand: true,
           monthly: {
-            first: data * 0.00385, // 0.00385
-            second: data * 0.0049, // 0.0049
+            first: getPrice(data * 0.00385),
+            second: getPrice(data * 0.0049),
           },
           downpayment: {
-            first: (20 / 100) * data, // 20%
-            second: (10 / 100) * data, // 10%
+            first: getPrice(20 / 100 * data),
+            second: getPrice(10 / 100 * data),
           },
           landed: {
-            first: (20 / 100) * data, // 10%
-            second: data * 0.00385, // 0.00385
+            first: getPrice(20 / 100 * data),
+            second: getPrice(data * 0.00385),
           },
         },
       });
