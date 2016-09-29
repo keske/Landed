@@ -5,14 +5,14 @@
 
 .image {
   text-align: center;
-  background: url(./files/home2.jpg);
-  background-size: auto 1600px;
+  background: url(./files/bg_new.jpg);
+  background-size: 100% auto;
 
   // height: 620px;
 
   @media only screen 
     and (max-width: 667px) {
-      background: url(./files/home1.jpg);
+      background: url(./files/bg_new.jpg);
       background-size: auto 100%;
       background-position: -200px 0;
   }
@@ -127,9 +127,11 @@
   background: rgba(0, 155, 105, .7);
   display: inline-block;
 
-  padding: 30px 0 !important;
+  padding: 50px 20px !important;
+
+  border-radius: 5px;
   
-  width: 500px;
+  width: 520px;
 
   .want {
     font-size: 25px;
@@ -142,11 +144,18 @@
     font-size: 20px;
     line-height: 20px;
 
-    font-family: @janon;
-    font-style: italic;
-
     position: relative;
     top: 10px;
+  }
+
+  .dollar {
+    font-size: 25px;
+
+    position: absolute;
+    z-index: 3;
+
+    margin-top: 11px;
+    margin-left: 10px;
   }
   
   .form {
@@ -154,7 +163,7 @@
     width: 60%;
     text-align: left;
 
-    padding: 15px 20px;
+    padding: 10px 10px 10px 27px;
 
     border-radius: 10px;
     border: 1px solid rgba(0, 155, 105, .19);
@@ -162,6 +171,8 @@
 
     position: relative;
     margin-top: -10px;
+
+    font-size: 25px;
 
     outline: none;
   }

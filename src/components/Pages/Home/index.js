@@ -141,10 +141,11 @@ export default class Home extends Component {
               <br />
               Check out in our calculator
             </p>
-
+            <br />
             <span className={s.want}>
-              I want to buy<br />a home for $
+              <i>I want to buy<br />a home for</i>
             </span>
+            <span className={s.dollar}>$</span>
             <input
               ref="calc"
               type="text"
