@@ -41,6 +41,8 @@ export default class Footer extends Component {
                 Landed was founded in 2015 in the San Francisco Bay Area.
               </p>
             </Col>
+            
+            { /*
             <Col
               xs={12}
               sm={12}
@@ -59,6 +61,8 @@ export default class Footer extends Component {
                 Terms of Service
               </Link>
             </Col>
+            */ }
+
             <Col
               xs={12}
               sm={12}
