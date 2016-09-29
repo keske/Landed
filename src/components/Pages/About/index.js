@@ -146,84 +146,88 @@ export default class About extends Component {
           We're a dedicated team of urban real estate and investing enthusiasts who believe everyone should have the ability to achieve the dream of building wealth by owning property – whether as a resident or investor – in smarter, simpler and more accessible ways than exist today.
         </p>
 
-        <Grid className={s.team}>
-          <Row>
-            <Col
-              xs={10} xsOffset={1}
-              sm={10} smOffset={1}
-              md={3} mdOffset={0}
-              lg={3} lgOffset={0}
-            >
-              <div className={s.card}>
-                <img
-                  src={require('./files/alex.jpg')}
-                  className={s.circle}
-                  role="presentation"
-                />
-                <p className={s.name}>
-                  Alex Lofton
-                </p>
-                <p className={s.role}>
-                  co-founder, President
-                </p>
-                <p className={s.description}>
-                  Customers and Partnerships. 
-                  <br />
-                  Recovering campaigner.
-                </p>
-              </div>
-            </Col>
-            <Col
-              xs={10} xsOffset={1}
-              sm={10} smOffset={1}
-              md={3} mdOffset={0}
-              lg={3} lgOffset={0}
-            >
-              <div className={s.card}>
-                <img
-                  src={require('./files/jonathan.jpg')}
-                  className={s.circle}
-                  role="presentation"
-                />
-                <p className={s.name}>
-                  Jonathan Asmis
-                </p>
-                <p className={s.role}>
-                  co-founder, CEO
-                </p>
-                <p className={s.description}>
-                  Investments.
-                  <br />
-                  Recovering engineer.
-                </p>
-              </div>
-            </Col>
-            <Col
-              xs={10} xsOffset={1}
-              sm={10} smOffset={1}
-              md={3} mdOffset={0}
-              lg={3} lgOffset={0}
-            >
-              <div className={s.card}>
-                <img
-                  src={require('./files/jesse.jpg')}
-                  className={s.circle}
-                  role="presentation"
-                />
-                <p className={s.name}>
-                  Jesse Vaughan
-                </p>
-                <p className={s.role}>
-                  co-founder
-                </p>
-                <p className={s.description}>
-                  Product. Recovering frontier-markets investor.
-                </p>
-              </div>
-            </Col>
+        <div className={s.team}>
+          <Grid>
+            <Row>
+              <Col
+                xs={10} xsOffset={1}
+                sm={10} smOffset={1}
+                md={4} mdOffset={0}
+                lg={4} lgOffset={0}
+              >
+                <div className={s.card}>
+                  <img
+                    src={require('./files/alex.jpg')}
+                    className={s.circle}
+                    role="presentation"
+                  />
+                  <p className={s.name}>
+                    Alex Lofton
+                  </p>
+                  <p className={s.role}>
+                    co-founder, President
+                  </p>
+                  <p className={s.description}>
+                    Customers and Partnerships. 
+                    <br />
+                    Recovering campaigner.
+                  </p>
+                </div>
+              </Col>
+              <Col
+                xs={10} xsOffset={1}
+                sm={10} smOffset={1}
+                md={4} mdOffset={0}
+                lg={4} lgOffset={0}
+              >
+                <div className={s.card}>
+                  <img
+                    src={require('./files/jonathan.jpg')}
+                    className={s.circle}
+                    role="presentation"
+                  />
+                  <p className={s.name}>
+                    Jonathan Asmis
+                  </p>
+                  <p className={s.role}>
+                    co-founder, CEO
+                  </p>
+                  <p className={s.description}>
+                    Investments.
+                    <br />
+                    Recovering engineer.
+                  </p>
+                </div>
+              </Col>
+              <Col
+                xs={10} xsOffset={1}
+                sm={10} smOffset={1}
+                md={4} mdOffset={0}
+                lg={4} lgOffset={0}
+              >
+                <div className={s.card}>
+                  <img
+                    src={require('./files/jesse.jpg')}
+                    className={s.circle}
+                    role="presentation"
+                  />
+                  <p className={s.name}>
+                    Jesse Vaughan
+                  </p>
+                  <p className={s.role}>
+                    co-founder
+                  </p>
+                  <p className={s.description}>
+                    Product.
+                    <br />
+                    Recovering frontier-markets investor.
+                  </p>
+                </div>
+              </Col>
 
-          </Row>
-        </Grid>
+            </Row>
+          </Grid>
+        </div>
 
         <Invest />
 

@@ -103,12 +103,14 @@
   margin-top: 50px;
   margin-bottom: 100px;
 
+  text-align: center;
+
   .card {
     background: #FFF;
 
     border-radius: 10px;
     box-shadow: 0 8px 7px rgba(0, 0, 0, .13);
-
+  
     padding: 10px;
     margin-bottom: 40px;
 
