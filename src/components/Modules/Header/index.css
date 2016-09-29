@@ -77,6 +77,11 @@
 
       a {
         color: $white;
+
+        &:hover, &.active {
+          opacity: 1;
+          border-bottom: 2px solid rgba(255, 255, 255, 1);
+        }
       }
     }
   }
