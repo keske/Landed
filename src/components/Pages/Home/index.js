@@ -134,159 +134,133 @@ export default class Home extends Component {
               </Col>
             </Row>
           </Grid>
-        </div>
 
-        <div className={cx(s.calc, { [s.expland]: expand })}>
-          <p className={s.head}>
-            Think <i>you</i> can’t buy a home?
-          </p>
-
-          <p className={s.intro}>
-            Check out in our calculator
-          </p>
-
-          <Grid>
-            <Row>
-              <Col
-                xs={12} xsOffset={0}
-                sm={6} smOffset={0}
-                md={5} mdOffset={1}
-                lg={5} lgOffset={1}
-                className={s.title}
-              >
-                <p>
-                  I want to buy a home for $
-                </p>
-              </Col>
-              <Col
-                xs={12} xsOffset={0}
-                sm={6} smOffset={0}
-                md={5} mdOffset={0}
-                lg={5} lgOffset={0}
-                className={s.form}
-              >
-                <input
-                  ref="calc"
-                  type="text"
-                  defaultValue=""
-                  onChange={() => { this.calculate(); }}
-                />
-              </Col>
-            </Row>
-          </Grid>
-
-         {/*  <span
-            className={s.calculate}
-            onClick={() => { this.calculate(); }}
-          >
-            calculate
-          </span> */} 
-
-          <div className={s.results}>
-            <p className={s.top}>
-              Without Landed you had<br />two options:
+          <div className={cx(s.calc, s.calcstart, { [s.expland]: expand })}>
+            <p className={s.lead}>
+              Think you can’t buy a home?
+              <br />
+              Check out in our calculator
             </p>
 
-            <div className={s.option}>
-              <p className={s.num}>
-                option 1
-              </p>
-              <div className={s.table}>
-                <div className={cx(s['left-side'], s.red)}>
-                  <p className={s.large}>
-                    large
-                  </p>
-                  <p className={s.cost}>
-                    downpayment
-                  </p>
-                  <p className={s.price}>
-                    ${downpayment.first}
-                  </p>
-                </div>
-                <div className={cx(s['right-side'], s.green)}>
-                  <p className={s.small}>
-                    small
-                  </p>
-                  <p className={s.cost}>
-                    monthly cost
-                  </p>
-                  <p className={s.price}>
-                    ${monthly.first}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className={s.option}>
-              <p className={s.num}>
-                option 1
-              </p>
-              <div className={s.table}>
-                <div className={cx(s['left-side'], s.red)}>
-                  <p className={s.small}>
-                    small
-                  </p>
-                  <p className={s.cost}>
-                    downpayment
-                  </p>
-                  <p className={s.price}>
-                    ${downpayment.second}
-                  </p>
-                </div>
-                <div className={cx(s['right-side'], s.green)}>
-                  <p className={s.large}>
-                    large
-                  </p>
-                  <p className={s.cost}>
-                    monthly cost
-                  </p>
-                  <p className={s.price}>
-                    ${monthly.second}
-                  </p>
-                </div>
-              </div>
-            </div>
-            <br />
-            <span className={s['left-arrow']} />
-            <p className={s.middle}>
-              Landed allowes you<br />to take best parts of both
-            </p>
-            <span className={s['right-arrow']} />
-
-            <div className={s['calc-table']}>
-              <div className={s.table}>
-                <div className={s['left-side']}>
-                  <p className={s.small}>
-                    small
-                  </p>
-                  <p className={s.cost}>
-                    downpayment
-                  </p>
-                  <p className={s.price}>
-                    ${landed.first}
-                  </p>
-                </div>
-                <div className={s['right-side']}>
-                  <p className={s.small}>
-                    small
-                  </p>
-                  <p className={s.cost}>
-                    monthly cost
-                  </p>
-                  <p className={s.price}>
-                    ${landed.second}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <Link to="how-it-works" className={s.learn}>
-              learn more about how it works
-            </Link>
-
-            <div className={s.footer} />
+            <span className={s.want}>
+              I want to buy<br />a home for $
+            </span>
+            <input
+              ref="calc"
+              type="text"
+              defaultValue=""
+              className={s.form}
+              onChange={() => { this.calculate(); }}
+            />
           </div>
 
+          <div className={cx(s.calc, { [s.expland]: expand })}>
+            <div className={s.results}>
+              <p className={s.top}>
+                Without Landed you had<br />two options:
+              </p>
+
+              <div className={s.option}>
+                <p className={s.num}>
+                  option 1
+                </p>
+                <div className={s.table}>
+                  <div className={cx(s['left-side'], s.red)}>
+                    <p className={s.large}>
+                      large
+                    </p>
+                    <p className={s.cost}>
+                      downpayment
+                    </p>
+                    <p className={s.price}>
+                      ${downpayment.first}
+                    </p>
+                  </div>
+                  <div className={cx(s['right-side'], s.green)}>
+                    <p className={s.small}>
+                      small
+                    </p>
+                    <p className={s.cost}>
+                      monthly cost
+                    </p>
+                    <p className={s.price}>
+                      ${monthly.first}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className={s.option}>
+                <p className={s.num}>
+                  option 1
+                </p>
+                <div className={s.table}>
+                  <div className={cx(s['left-side'], s.red)}>
+                    <p className={s.small}>
+                      small
+                    </p>
+                    <p className={s.cost}>
+                      downpayment
+                    </p>
+                    <p className={s.price}>
+                      ${downpayment.second}
+                    </p>
+                  </div>
+                  <div className={cx(s['right-side'], s.green)}>
+                    <p className={s.large}>
+                      large
+                    </p>
+                    <p className={s.cost}>
+                      monthly cost
+                    </p>
+                    <p className={s.price}>
+                      ${monthly.second}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <span className={s['left-arrow']} />
+              <p className={s.middle}>
+                Landed allowes you<br />to take best parts of both
+              </p>
+              <span className={s['right-arrow']} />
+
+              <div className={s['calc-table']}>
+                <div className={s.table}>
+                  <div className={s['left-side']}>
+                    <p className={s.small}>
+                      small
+                    </p>
+                    <p className={s.cost}>
+                      downpayment
+                    </p>
+                    <p className={s.price}>
+                      ${landed.first}
+                    </p>
+                  </div>
+                  <div className={s['right-side']}>
+                    <p className={s.small}>
+                      small
+                    </p>
+                    <p className={s.cost}>
+                      monthly cost
+                    </p>
+                    <p className={s.price}>
+                      ${landed.second}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <Link to="how-it-works" className={s.learn}>
+                learn more about how it works
+              </Link>
+
+              <div className={s.footer} />
+            </div>
+
+          </div>
         </div>
 
         <div className={s.how}>
