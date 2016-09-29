@@ -53,7 +53,7 @@
   }
 }
 
-.get-started {
+.learn, .get-started {
   font-size: 18px;
   color: $green;
   -webkit-font-smoothing: antialiased;
@@ -61,9 +61,9 @@
   // margin-top: 5px;
   padding: 8px 40px;
 
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,1);
   border-radius: 6px;
-  border: 2px solid rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(255, 255, 255, 1);
 
 
   display: inline-block;
@@ -83,7 +83,7 @@
   }
 }
 
-.calculate, .learn, .program {
+.calculate,  .program {
   
   font-size: 21px;
   color: $green;
@@ -122,14 +122,15 @@
 }
 
 .calcstart {
-  margin-top: 40px;
+  margin-top: 35px;
 
-  background: rgba(0, 155, 105, .7);
+  background: rgba(0, 155, 105, .9);
   display: inline-block;
 
-  padding: 50px 20px !important;
+  padding: 20px 20px 35px 20px !important;
 
-  border-radius: 5px;
+  border-radius: 10px;
+  margin-bottom: 15px;
   
   width: 520px;
 
@@ -149,12 +150,12 @@
   }
 
   .dollar {
-    font-size: 25px;
+    font-size: 16px;
 
     position: absolute;
     z-index: 3;
 
-    margin-top: 11px;
+    margin-top: 19px;
     margin-left: 10px;
   }
   
@@ -180,7 +181,7 @@
 
 .calc {
   text-align: center;
-  padding: 70px 0;
+  padding: 10px 0;
 
   .lead {
     font-size: 20px;
@@ -199,7 +200,7 @@
   .results {
     display: none;
 
-    background: rgba(255, 255, 255, .2);
+    background: rgba(0, 0, 0, .3);
     border-radius: 5px;
 
     width: 800px;
@@ -325,7 +326,7 @@
     .calc-table {
       display: inline-block;
       
-      margin: 0 20px;
+      margin: 0px 20px 25px 20px;
 
       .table {
         width: 460px;

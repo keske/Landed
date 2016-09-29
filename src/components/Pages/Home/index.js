@@ -46,7 +46,7 @@ export default class Home extends Component {
   componentDidMount() {
     const { app } = this.context;
 
-    window.addEventListener('scroll', this.parallax);
+    // window.addEventListener('scroll', this.parallax);
 
     app.headerSetColor('white');
     app.hideMenu();
@@ -126,7 +126,7 @@ export default class Home extends Component {
                 </p>
                 <br />
                 <Link
-                  to="get-started"
+                  to="/get-landed"
                   className={s['get-started']}
                 >
                   Get started
@@ -323,9 +323,11 @@ export default class Home extends Component {
             Sound too good to be true?
           </i>
 
-          <span className={s.learn}>
+         
+          <Link
+            to="/get-landed" className={s.learn}>
             learn more about how it works
-          </span>
+          </Link>
 
         </div>
 
