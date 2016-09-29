@@ -33,8 +33,6 @@
       a {
         color: $white;
       }
-
-     
     }
   }
 
@@ -54,10 +52,11 @@
 
       a {
         color: $black;
-      }
 
-      .get-landed {
-        border: 1px solid $black;
+        &:hover, &.active {
+          opacity: 1;
+          border-bottom: 2px solid rgba(0, 0, 0, 1);
+        }
       }
     }
   }
@@ -79,8 +78,6 @@
       a {
         color: $white;
       }
-
-    
     }
   }
 }
@@ -115,7 +112,7 @@
     margin-right: 30px;
     opacity: .9;
     transition: .2s;
-    border-bottom: 2px solid rgba(255,255,255,0);
+    border-bottom: 2px solid rgba(255, 255, 255 ,0);
 
     &:last-child {
       margin-right: 0;
@@ -123,12 +120,12 @@
 
     &:hover, &.active {
       opacity: 1;
-      border-bottom: 2px solid rgba(255,255,255,1);
+      border-bottom: 2px solid rgba(255, 255, 255 ,1);
     }
   }
+
   .get-landed {     
     font-family: 'SupriaSans Medium';
-    
   }
 }
 
