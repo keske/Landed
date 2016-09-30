@@ -45,22 +45,160 @@ export default class HowItWorks extends Component {
         <Helmet title="How It Works" />
 
         <p className={cx(s.head, s.how)}>
-          How Landed Works
+          <i>How</i> Landed Works
         </p>
 
-        <Grid className={s.questions}>
+        <Grid>
           <Row>
             <Col
-              xs={12}
-              sm={12}
-              md={12}
-              lg={12}
+              xs={12} xsOffset={0}
+              sm={12} smOffset={0}
+              md={8} mdOffset={2}
+              lg={8} lgOffset={2}
             >
-              <img
-                src={require('./files/info1.jpg')}
-                className={s.info}
-                role="presentation"
-              />
+              <div className={s.info}>
+
+                <div
+                  className={s.point}
+                  style={{
+                    height: 200,
+                  }}
+                >
+                  <div className={s.left}>
+                    <img
+                      src={require('./files/how-1.png')}
+                      role="presentation"
+                      style={{
+                        position: 'relative',
+                        top: '-80px',
+                      }}
+                    />
+                  </div>
+                  <div className={s.line} />
+                  <div className={s.num}>
+                    1
+                  </div>
+                  <div className={s.right}>
+                    <p className={s.title}>
+                      Your dream home
+                      <br />
+                      Cost: $800,000
+                    </p>
+                  </div>
+                </div>
+
+                <div className={s.point}>
+                  <div className={s.left}>
+                    <img
+                      src={require('./files/how-2.png')}
+                      role="presentation"
+                    />
+                  </div>
+                  <div className={s.num}>
+                    2
+                  </div>
+                  <div className={s.right}>
+                    <p className={s.title}>
+                      You need $160,000 down payment
+                    </p>
+                    <p className={s.text}>
+                      You currently have only half of it – $80,000 saved
+                    </p>
+                  </div>
+                </div>
+
+                <div className={s.point}>
+                  <div className={s.left}>
+                    <img
+                      src={require('./files/how-3.png')}
+                      role="presentation"
+                    />
+                  </div>
+                  <div className={s.num}>
+                    3
+                  </div>
+                  <div className={s.right}>
+                    <p className={cx(s.title, s.green)}>
+                      You can use Landed support and get $80,000 today.
+                    </p>
+                    <p className={s.text}>
+                      Instead of spending years renting and saving another $80,000, while home prices keep going up. Learn where the money comes from
+                    </p>
+                  </div>
+                </div>
+
+                <div className={s.point}>
+                  <div className={s.left}>
+                    <img
+                      src={require('./files/how-4.png')}
+                      role="presentation"
+                      style={{
+                        width: 250,
+                      }}
+                    />
+                  </div>
+                  <div className={s.num}>
+                    4
+                  </div>
+                  <div className={s.right}>
+                    <p className={s.title}>
+                      <i>We help you find you dream home in real life</i> and once you’re ready to buy your dream home, we both contribute to the down payment.
+                    </p>
+                    <p className={s.text}>
+                      You put in $80,000 and Landed puts in $80,000, and the bank provides a $640,000 loan.
+                    </p>
+                  </div>
+                </div>
+
+                <div className={s.point}>
+                  <div className={s.left}>
+                    <img
+                      src={require('./files/how-5.png')}
+                      role="presentation"
+                      style={{
+                        position: 'relative',
+                        top: '-80px',
+                      }}
+                    />
+                  </div>
+                  <div className={s.num}>
+                    5
+                  </div>
+                  <div className={s.right}>
+                    <p className={s.title}>
+                      Your dream home becomes  your real home. 
+                    </p>
+                    <p className={s.text}>
+                      You pay the costs of ownership  but don’t make any monthly payments  to Landed.
+                    </p>
+                  </div>
+                </div>
+
+                <div className={s.quote}>
+                  some time passes, while you live happily in your home
+                </div>
+
+                <div className={s.point}>
+                  <div className={s.left}>
+                    <img
+                      src={require('./files/how-6.png')}
+                      role="presentation"
+                    />
+                  </div>
+                  <div className={s.num}>
+                    6
+                  </div>
+                  <div className={s.right}>
+                    <p className={s.title}>
+                      <i>Landed makes its return on</i> investment when you sell or buy out the investment
+                    </p>
+                    <p className={s.text}>
+                      There are two ways to end the relationship with Landed. The first is to sell your home. The second is to refinance your home without selling. You can either sell or refinance at any time before the end of the Landed term (usually, 10 years).
+                    </p>
+                  </div>
+                </div>
+
+              </div>
             </Col>
           </Row>
         </Grid>
