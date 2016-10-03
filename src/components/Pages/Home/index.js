@@ -5,9 +5,6 @@ import { Link } from 'react-router';
 import cx from 'classnames';
 import Helmet from 'react-helmet';
 
-// Utils
-import { numberWithCommas } from 'utils/price';
-
 // Components
 import Press from 'components/Helpers/Press';
 
@@ -19,29 +16,8 @@ export default class Home extends Component {
 
   static contextTypes = {
     app: PropTypes.object,
+    calc: PropTypes.object,
   };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      calc: {
-        expand: false,
-        monthly: {
-          first: 0, // 0.00385
-          second: 0, // 0.0049
-        },
-        downpayment: {
-          first: 0, // 20%
-          second: 0, // 10%
-        },
-        landed: {
-          first: 0, // 10%
-          second: 0, // 0.00385
-        },
-      },
-    };
-  }
 
   componentDidMount() {
     const { app } = this.context;
@@ -64,41 +40,11 @@ export default class Home extends Component {
     }
   }
 
-  calculate = () => {
-    const value = this.refs.calc.value;
-    const defaultValue = this.refs.calc.defaultValue;
-
-    const data = value !== '' ? value : defaultValue;
-
-    const getPrice = (price) => (
-      price > 100
-        ? numberWithCommas(price.toFixed(0))
-        : numberWithCommas(price.toFixed(1))
-    );
-
-    if (data !== '') {
-      this.setState({
-        calc: {
-          expand: true,
-          monthly: {
-            first: getPrice(data * 0.00385),
-            second: getPrice(data * 0.0049),
-          },
-          downpayment: {
-            first: getPrice(20 / 100 * data),
-            second: getPrice(10 / 100 * data),
-          },
-          landed: {
-            first: getPrice(20 / 100 * data),
-            second: getPrice(data * 0.00385),
-          },
-        },
-      });
-    }
-  }
-
   render() {
-    const { calc: { expand, monthly, downpayment, landed } } = this.state;
+    const { calc: {
+      calculate,
+      data: { expand, monthly, downpayment, landed },
+    } } = this.context;
 
     return (
       <section className={s.root}>
@@ -151,7 +97,7 @@ export default class Home extends Component {
               type="text"
               defaultValue=""
               className={s.form}
-              onChange={() => { this.calculate(); }}
+              onChange={() => { calculate(this.refs.calc.value, this.refs.calc.defaultValue); }}
             />
           </div>
 

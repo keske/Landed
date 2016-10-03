@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { observer } from 'mobx-react';
 import Helmet from 'react-helmet';
 
-import { app } from '../../stores';
+import { app, calc } from '../../stores';
 
 // Components
 import Header from 'components/Modules/Header';
@@ -22,20 +22,19 @@ export default class Root extends Component {
 
   static childContextTypes = {
     app: PropTypes.object,
+    calc: PropTypes.object,
   }
 
   getChildContext() {
     return {
       app,
+      calc,
     };
   }
 
   render() {
     return (
       <section className={s}>
-        {
-          /* app.isFetching && <Loading /> */
-        }
         <Helmet title="Landed" />
         <Header />
         {
