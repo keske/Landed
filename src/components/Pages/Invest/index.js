@@ -236,16 +236,7 @@ export default class InvestPage extends Component {
         </p>
 
         <Grid>
-          <Row>
-            <Col
-              xs={10} xsOffset={1}
-              sm={10} smOffset={1}
-              md={10} mdOffset={1}
-              lg={10} lgOffset={1}
-            >
-              <img src={require('./files/i2.jpg')} role="presentation" />
-            </Col>
-          </Row>
+          
           <Row className={s.impact}>
             <Col
               xs={10} xsOffset={1}
@@ -254,8 +245,11 @@ export default class InvestPage extends Component {
               lg={3} lgOffset={2}
             >
               <p>
-                By helping educators buy homes, schools are able to retain and attract staff, making <strong>the schools more sustainable and stable.</strong>
+                <strong>Help educators buy homes </strong>
               </p>
+              <p>
+                Educators become a stronger part of the community, build wealth earlier, benefit from tax incentives and shorter commutes. 
+               </p> 
             </Col>
             <Col
               xs={10} xsOffset={1}
@@ -263,9 +257,12 @@ export default class InvestPage extends Component {
               md={3} mdOffset={0}
               lg={3} lgOffset={0}
             >
-              <p>
-                Educators <strong>start building wealth earlier</strong>, and benefit from tax incentives, shorter commutes and psychological gains of ownership
+               <p>
+                <strong>Make schools more sustainable</strong>
               </p>
+              <p>
+                By helping educators buy homes, schools are able to retain and attract staff, which makes schools more sustainable and stable. 
+               </p> 
             </Col>
             <Col
               xs={10} xsOffset={1}
@@ -273,27 +270,19 @@ export default class InvestPage extends Component {
               md={3} mdOffset={0}
               lg={3} lgOffset={0}
             >
-              <p>
-                Less turnover and more engagement <strong>improves student outcomes</strong>, particularly in high-poverty, high-minority schools
+               <p>
+                <strong>Improve student outcomes and engagement</strong>
               </p>
+              <p>
+                Less turnover means more engagement, which improves education and strengthens the community.
+               </p> 
             </Col>
           </Row>
         </Grid>
 
         <hr />
 
-        <Grid>
-          <Row>
-            <Col
-              xs={12}
-              sm={12}
-              md={12}
-              lg={12}
-            >
-              <img src={require('./files/info2.jpg')} role="presentation" />
-            </Col>
-          </Row>
-        </Grid>
+        
 
         <p className={cx(s.head)}>
           <i>Start Investing</i><br />in a Landed Program today
@@ -304,8 +293,8 @@ export default class InvestPage extends Component {
             <Col
               xs={12}
               sm={12}
-              md={10} mdOffset={1}
-              lg={10} lgOffset={1}
+              md={8} mdOffset={2}
+              lg={8} lgOffset={2}
             >
               <div className={s['school-form']}>
                 {renderForm()}

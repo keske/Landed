@@ -1,5 +1,6 @@
 .root {
   background: #F7F7F7;
+  webkit-font-smoothing: antialiased;
 }
 
 .head {
@@ -16,13 +17,14 @@
   text-align: center;
 
   background: url(./files/i0.jpg);
-  background-size: 100% auto;
+  background-size: cover;
+  min-height: 650px;
 
   @media only screen 
     and (max-width: 667px) {
       background: url(./files/i0.jpg);
       background-size: auto 100%;
-      background-position: -200px 0;
+      background-position: -100px 0;
   }
 
   color: $white;
@@ -86,12 +88,16 @@
   margin: 70px 0;
 
   p {
-    font-size: 18px;
-    line-height: 23px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #777;
   }
 
   strong {
-    color: $green;
+    font-family: $janon;
+    font-size: 26px;
+    font-weight: normal;
+    color: #222;
   }
 }
 
