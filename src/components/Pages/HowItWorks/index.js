@@ -203,6 +203,207 @@ export default class HowItWorks extends Component {
           </Row>
         </Grid>
 
+        <Grid>
+          <Row>
+            <Col
+              xs={12} xsOffset={0}
+              sm={12} smOffset={0}
+              md={8} mdOffset={2}
+              lg={8} lgOffset={2}
+            >
+              <div className={s.calc}>
+                <span className={s.line} />
+                <br />
+                <div className={s.side}>
+                  <div className={s.num}>
+                    7
+                  </div>
+                  <div className={cx(s.num, s.a)}>
+                    A
+                  </div>
+                  <img
+                    src={require('./files/7a.png')}
+                    role="presentation"
+                  />
+                  <p className={s.title}>
+                    <i className={s.green}>If your home goes up in value,</i>
+                    <br />
+                    both you and landed win
+                  </p>
+
+                  <div className={s.table}>
+                    <span className={s['col-5']}>
+                      Sale Price
+                    </span>
+                    <span className={s['col-5']}>
+                      $900,000
+                    </span>
+                    <span className={s['col-5']}>
+                      <span className={s.green}>
+                        Gain
+                      </span>
+                    </span>
+                    <span className={s['col-5']}>
+                      <span className={s.green}>
+                        $100,000
+                      </span>
+                    </span>
+
+                    <span className={s['col-7']}>
+                      <p className={s.green}>
+                        Sale Price
+                      </p>
+                      <p>
+                        (plus original investment)
+                      </p>
+                    </span>
+                    <span className={s['col-3']}>
+                      <p className={s.green}>
+                        $25,000
+                      </p>
+                      <p>
+                        $80,000
+                      </p>
+                    </span>
+
+                    <span className={cx(s['col-7'], s.total)}>
+                      <p className={s.green}>
+                        You owe Landed
+                      </p>
+                    </span>
+                    <span className={cx(s['col-3'], s.total)}>
+                      <p className={s.green}>
+                        $105,000
+                      </p>
+                    </span>
+
+                    <span className={s['col-7']}>
+                      <p className={s.green}>
+                        Your 75% Share
+                      </p>
+                      <p>
+                        (plus money built in home)*
+                      </p>
+                    </span>
+                    <span className={s['col-3']}>
+                      <p className={s.green}>
+                        $25,000
+                      </p>
+                      <p>
+                        $80,000
+                      </p>
+                    </span>
+
+                    <span className={cx(s['col-7'], s.total)}>
+                      <p className={s.green}>
+                        Your Profit
+                      </p>
+                    </span>
+                    <span className={cx(s['col-3'], s.total)}>
+                      <p className={s.green}>
+                        $105,000
+                      </p>
+                    </span>
+                  </div>
+                </div>
+
+                <div className={s.side}>
+                  <div className={s.num}>
+                    7
+                  </div>
+                  <div className={cx(s.num, s.b)}>
+                    B
+                  </div>
+                  <img
+                    src={require('./files/7b.png')}
+                    role="presentation"
+                  />
+                  <p className={s.title}>
+                    <i className={s.red}>If your home goes up in value,</i>
+                    <br />
+                    both you and Landed lose
+                  </p>
+
+                  <div className={s.table}>
+                    <span className={s['col-5']}>
+                      Sale Price
+                    </span>
+                    <span className={s['col-5']}>
+                      $900,000
+                    </span>
+                    <span className={s['col-5']}>
+                      <span className={s.red}>
+                        Loss
+                      </span>
+                    </span>
+                    <span className={s['col-5']}>
+                      <span className={s.red}>
+                        $100,000
+                      </span>
+                    </span>
+
+                    <span className={s['col-7']}>
+                      <p className={s.red}>
+                        Sale Price
+                      </p>
+                      <p>
+                        (plus original investment)
+                      </p>
+                    </span>
+                    <span className={s['col-3']}>
+                      <p className={s.red}>
+                        $25,000
+                      </p>
+                      <p>
+                        $80,000
+                      </p>
+                    </span>
+
+                    <span className={cx(s['col-7'], s.total)}>
+                      <p className={s.red}>
+                        You owe Landed
+                      </p>
+                    </span>
+                    <span className={cx(s['col-3'], s.total)}>
+                      <p className={s.red}>
+                        $105,000
+                      </p>
+                    </span>
+
+                    <span className={s['col-7']}>
+                      <p className={s.red}>
+                        Your 75% Share
+                      </p>
+                      <p>
+                        (plus money built in home)*
+                      </p>
+                    </span>
+                    <span className={s['col-3']}>
+                      <p className={s.red}>
+                        $25,000
+                      </p>
+                      <p>
+                        $80,000
+                      </p>
+                    </span>
+
+                    <span className={cx(s['col-7'], s.total)}>
+                      <p className={s.red}>
+                        Your Profit
+                      </p>
+                    </span>
+                    <span className={cx(s['col-3'], s.total)}>
+                      <p className={s.green}>
+                        $105,000
+                      </p>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Grid>
+
         <div
           ref="parallax"
           className={s.image}
