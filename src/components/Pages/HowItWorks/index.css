@@ -155,6 +155,7 @@
   text-align: center;
 
   background: #FFF;
+  padding-bottom: 30px;
 
   .line {
     width: 340px;
@@ -214,6 +215,8 @@
   .table {
     color: #9B9B9B;
     background: #FBFAF7;
+
+    border-radius: 3px;
 
     text-align: left;
     padding: 20px;

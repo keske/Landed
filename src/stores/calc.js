@@ -4,9 +4,8 @@ import { observable, action } from 'mobx';
 import { numberWithCommas } from 'utils/price';
 
 class Calc {
-  @observable price = 0;
-
   @observable data = {
+    pay: 0,
     expand: false,
     monthly: {
       first: 0, // 0.00385
@@ -33,6 +32,7 @@ class Calc {
 
     if (data !== '') {
       this.data = {
+        pay: value || defaultValue,
         expand: true,
         monthly: {
           first: getPrice(data * 0.00385),
@@ -45,7 +45,7 @@ class Calc {
         landed: {
           first: getPrice(20 / 100 * data),
           second: getPrice(data * 0.00385),
-        }
+        },
       };
     }
   }

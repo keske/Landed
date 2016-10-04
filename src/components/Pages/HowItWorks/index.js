@@ -5,6 +5,9 @@ import { Link } from 'react-router';
 import cx from 'classnames';
 import Helmet from 'react-helmet';
 
+// Utils
+import { numberWithCommas } from 'utils/price';
+
 // Components
 import Invest from 'components/Helpers/Invest';
 
@@ -16,6 +19,7 @@ export default class HowItWorks extends Component {
 
   static contextTypes = {
     app: PropTypes.object,
+    calc: PropTypes.object,
   };
 
   componentDidMount() {
@@ -40,6 +44,10 @@ export default class HowItWorks extends Component {
   }
 
   render() {
+    const { calc: {
+      data: { pay },
+    } } = this.context;
+
     return (
       <section className={s.root}>
         <Helmet title="How It Works" />
@@ -82,7 +90,7 @@ export default class HowItWorks extends Component {
                     <p className={s.title}>
                       Your dream home
                       <br />
-                      Cost: $800,000
+                      Cost: ${numberWithCommas(pay)}
                     </p>
                   </div>
                 </div>
@@ -236,7 +244,7 @@ export default class HowItWorks extends Component {
                       Sale Price
                     </span>
                     <span className={s['col-5']}>
-                      $900,000
+                      ${numberWithCommas(+pay + 100000)}
                     </span>
                     <span className={s['col-5']}>
                       <span className={s.green}>
@@ -259,7 +267,7 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={s['col-3']}>
                       <p className={s.green}>
-                        $25,000
+                        ${numberWithCommas(25 / 100 * 100000)}
                       </p>
                       <p>
                         $80,000
@@ -273,7 +281,7 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.green}>
-                        $105,000
+                        ${numberWithCommas(80000 + (25 / 100 * 100000))}
                       </p>
                     </span>
 
@@ -287,10 +295,10 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={s['col-3']}>
                       <p className={s.green}>
-                        $25,000
+                        ${numberWithCommas(75 / 100 * 100000)}
                       </p>
                       <p>
-                        $80,000
+                        $230,000
                       </p>
                     </span>
 
@@ -301,7 +309,7 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.green}>
-                        $105,000
+                        ${numberWithCommas(230000 + (75 / 100 * 100000))}
                       </p>
                     </span>
                   </div>
@@ -329,7 +337,7 @@ export default class HowItWorks extends Component {
                       Sale Price
                     </span>
                     <span className={s['col-5']}>
-                      $900,000
+                      -${numberWithCommas(+pay - 100000)}
                     </span>
                     <span className={s['col-5']}>
                       <span className={s.red}>
@@ -352,7 +360,7 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={s['col-3']}>
                       <p className={s.red}>
-                        $25,000
+                        -${numberWithCommas(25 / 100 * 100000)}
                       </p>
                       <p>
                         $80,000
@@ -366,7 +374,7 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.red}>
-                        $105,000
+                        ${numberWithCommas(80000 - (25 / 100 * 100000))}
                       </p>
                     </span>
 
@@ -380,10 +388,10 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={s['col-3']}>
                       <p className={s.red}>
-                        $25,000
+                        -${numberWithCommas(75 / 100 * 100000)}
                       </p>
                       <p>
-                        $80,000
+                        $230,000
                       </p>
                     </span>
 
@@ -394,7 +402,7 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.green}>
-                        $105,000
+                        ${numberWithCommas(230000 - (75 / 100 * 100000))}
                       </p>
                     </span>
                   </div>
