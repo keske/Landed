@@ -23,6 +23,8 @@ export default class GetLanded extends Component {
 
     app.headerSetColor('green');
     app.hideMenu();
+
+    window.scrollTo(0, 0);
   }
 
   changeData = () => {

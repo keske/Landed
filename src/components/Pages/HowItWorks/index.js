@@ -29,6 +29,8 @@ export default class HowItWorks extends Component {
 
     app.headerSetColor('green');
     app.hideMenu();
+
+    window.scrollTo(0, 0);
   }
 
   componentWillUnmount() {

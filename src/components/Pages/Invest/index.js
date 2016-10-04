@@ -24,6 +24,8 @@ export default class InvestPage extends Component {
 
     app.headerSetColor('white');
     app.hideMenu();
+
+    window.scrollTo(0, 0);
   }
 
   componentWillUnmount() {

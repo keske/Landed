@@ -27,6 +27,8 @@ export default class LosAltosSchoolDistrict extends Component {
 
     app.headerSetColor('white');
     app.hideMenu();
+
+    window.scrollTo(0, 0);
   }
 
   componentWillUnmount() {
