@@ -5,7 +5,7 @@ import cx from 'classnames';
 import Helmet from 'react-helmet';
 
 // Components
-import Invest from 'components/Helpers/Invest';
+// import Invest from 'components/Helpers/Invest';
 
 // Styles
 import s from './index.css';
@@ -139,9 +139,9 @@ export default class InvestPage extends Component {
                 <p className={s.head}>
                   Landed ivestors help teachers buy homes
                 </p>
-                <span className={s.button}>
+                <a href="#start" className={s.button}>
                   Start investing today
-                </span>
+                </a>
                 <br />
                 <i className={s.with}>
                   With Landed you get:
@@ -163,8 +163,6 @@ export default class InvestPage extends Component {
         <p className={cx(s.head)}>
           <i>Why I should</i> invest<br />with Landed
         </p>
-
-        
 
         <Grid>
           <Row>
@@ -255,7 +253,6 @@ export default class InvestPage extends Component {
         </p>
 
         <Grid>
-          
           <Row className={s.impact}>
             <Col
               xs={10} xsOffset={1}
@@ -263,15 +260,13 @@ export default class InvestPage extends Component {
               md={4} mdOffset={0}
               lg={4} lgOffset={0}
             >
-
               <img src={require('./files/t1.jpg')} role="presentation" />
-
               <p>
                 <strong>Help educators buy homes </strong>
               </p>
               <p>
-                Educators become a stronger part of the community, build wealth earlier, benefit from tax incentives and shorter commutes. 
-               </p> 
+                Educators become a stronger part of the community, build wealth earlier, benefit from tax incentives and shorter commutes.
+               </p>
             </Col>
             <Col
               xs={10} xsOffset={1}
@@ -281,13 +276,12 @@ export default class InvestPage extends Component {
             >
 
               <img src={require('./files/t2.jpg')} role="presentation" />
-
-               <p>
+              <p>
                 <strong>Make schools more sustainable</strong>
               </p>
               <p>
-                By helping educators buy homes, schools are able to retain and attract staff, which makes schools more sustainable and stable. 
-               </p> 
+                By helping educators buy homes, schools are able to retain and attract staff, which makes schools more sustainable and stable.
+              </p>
             </Col>
             <Col
               xs={10} xsOffset={1}
@@ -297,24 +291,23 @@ export default class InvestPage extends Component {
             >
 
               <img src={require('./files/t3.jpg')} role="presentation" />
-
-               <p>
+              <p>
                 <strong>Improve student outcomes and engagement</strong>
               </p>
               <p>
                 Less turnover means more engagement, which improves education and strengthens the community.
-               </p> 
+              </p>
             </Col>
           </Row>
         </Grid>
 
         <hr />
 
-        
-
-        <p className={cx(s.head)}>
-          <i>Start Investing</i><br />in a Landed Program today
-        </p>
+        <a name="start">
+          <p className={cx(s.head)}>
+            <i>Start Investing</i><br />in a Landed Program today
+          </p>
+        </a>
 
         <Grid>
           <Row>
@@ -331,9 +324,6 @@ export default class InvestPage extends Component {
             </Col>
           </Row>
         </Grid>
-
-       
-
       </section>
     );
   }
