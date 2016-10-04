@@ -104,7 +104,7 @@ export default class InvestPage extends Component {
             app.setInvestData({ sent: true });
           }}
         >
-          learn more about how it works
+          Submit
         </span>
       </span>;
 
@@ -162,15 +162,32 @@ export default class InvestPage extends Component {
           <i>Why I should</i> invest<br />with Landed
         </p>
 
+        
+
         <Grid>
           <Row>
             <Col
               xs={12}
               sm={12}
-              md={12}
-              lg={12}
+              md={8} smOffset={2}
+              lg={8} lgOffset={2}
             >
-              <img src={require('./files/i1.jpg')} role="presentation" />
+              <p className={cx(s.leadGrapgh)}>
+                Owner-occupied housing is an attractive investment asset class. Investments in owner-occupied housing, in Landed target markets, has historically outperformed the S&P 500 and multifamily investments. However, this asset class has largely been unavailable to most investors.
+              </p>
+            </Col>
+          </Row>
+        </Grid>
+
+        <Grid>
+          <Row>
+            <Col
+              xs={12}
+              sm={12}
+              md={8} smOffset={2}
+              lg={8} lgOffset={2}
+            >
+              <img src={require('./files/i1.png')} role="presentation" />
             </Col>
           </Row>
           <Row className={s.why}>
@@ -241,9 +258,12 @@ export default class InvestPage extends Component {
             <Col
               xs={10} xsOffset={1}
               sm={10} smOffset={1}
-              md={3} mdOffset={2}
-              lg={3} lgOffset={2}
+              md={4} mdOffset={0}
+              lg={4} lgOffset={0}
             >
+
+              <img src={require('./files/t1.jpg')} role="presentation" />
+
               <p>
                 <strong>Help educators buy homes </strong>
               </p>
@@ -254,9 +274,12 @@ export default class InvestPage extends Component {
             <Col
               xs={10} xsOffset={1}
               sm={10} smOffset={1}
-              md={3} mdOffset={0}
-              lg={3} lgOffset={0}
+              md={4} mdOffset={0}
+              lg={4} lgOffset={0}
             >
+
+              <img src={require('./files/t2.jpg')} role="presentation" />
+
                <p>
                 <strong>Make schools more sustainable</strong>
               </p>
@@ -267,9 +290,12 @@ export default class InvestPage extends Component {
             <Col
               xs={10} xsOffset={1}
               sm={10} smOffset={1}
-              md={3} mdOffset={0}
-              lg={3} lgOffset={0}
+              md={4} mdOffset={0}
+              lg={4} lgOffset={0}
             >
+
+              <img src={require('./files/t3.jpg')} role="presentation" />
+
                <p>
                 <strong>Improve student outcomes and engagement</strong>
               </p>
@@ -304,7 +330,7 @@ export default class InvestPage extends Component {
           </Row>
         </Grid>
 
-        <Invest />
+       
 
       </section>
     );

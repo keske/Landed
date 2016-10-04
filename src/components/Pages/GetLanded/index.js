@@ -186,7 +186,7 @@ export default class GetLanded extends Component {
             app.setSchoolData({ sent: true });
           }}
         >
-          learn more about how it works
+          Submit request
         </span>
       </span>;
 
@@ -259,7 +259,7 @@ export default class GetLanded extends Component {
               >
                 <img src={require('./files/n2.jpg')} />
                 <i>
-                  Landed makes buying and owning  a home easier.
+                 Landed makes buying and owning a home easier.
                 </i>
                 <p>
                   Landed has a network of partner banks and
@@ -295,7 +295,7 @@ export default class GetLanded extends Component {
           </Row>
         </Grid>
 
-        <Invest />
+       
 
       </section>
     );

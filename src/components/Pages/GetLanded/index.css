@@ -1,5 +1,6 @@
 .root {
   background: #F7F7F7;
+  padding-bottom: 50px;
 }
 
 .head {
@@ -35,7 +36,7 @@
 }
 
 .program {
-  padding: 150px 0 105px;
+  padding: 10px 0 105px;
 
   text-align: center;
 
@@ -70,7 +71,7 @@
   border: 1px solid #EAEAEA;
   border-radius: 9px;
 
-  padding: 50px;
+  padding: 70px 70px 25px 70px;
 
   text-align: center;
 
@@ -124,7 +125,7 @@
     }
 
     .button {
-      margin: 30px 20px;
+      margin: 0px 20px;
       min-width: 250px;
     }
   }
@@ -133,6 +134,8 @@
     font-size: 15px;
     font-weight: normal;
     color: #7B7B7A;
+    font-family: $janon;
+    font-style: italic;
 
     display: block;
   }
@@ -144,7 +147,7 @@
 
     width: 100%;
 
-    padding: 20px 20px;
+    padding: 15px 15px;
 
     margin-top: 5px;
     
@@ -160,7 +163,7 @@
   font-size: 22px;
   color: $green;
 
-  margin-top: 30px;
+  margin-top: 10px;
   padding: 15px 35px;
 
   background: $white;
