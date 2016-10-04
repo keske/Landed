@@ -1,6 +1,7 @@
 .root {
   background: #F7F7F7;
   webkit-font-smoothing: antialiased;
+  padding-bottom: 50px;
 }
 
 .head {
@@ -36,6 +37,7 @@
     padding-top: 200px;
   }
 
+
   .with {
     font-size: 25px;
     line-height: 31px;
@@ -68,9 +70,13 @@
 }
 
 .why {
+
+  margin-top: 56px;
+  margin-bottom: 16px;
+  padding: 0 120px;
   
   p {
-    padding: 0 40px;
+    padding: 0 10px;
   }
 
   .title {
@@ -79,18 +85,37 @@
   }
 
   .text {
-    font-size: 18px;
-    line-height: 23px;
+    font-family: 'SupriaSans Light'; 
+    font-size: 14px;
+    color: #777;
+    line-height: 17px;
   }
 }
 
+.leadGrapgh{
+    font-family: 'SupriaSans Light'; 
+    font-size: 14px;
+    color: #777;
+    line-height: 17px;
+    text-align: center;
+    webkit-font-smoothing: antialiased;
+  }
+
 .impact {
-  margin: 70px 0;
+  padding: 0 120px;
+  margin: 30px 0;
 
   p {
-    font-size: 16px;
-    line-height: 20px;
+    font-family: 'SupriaSans Light'; 
+    font-size: 14px;
     color: #777;
+    line-height: 17px;
+    padding: 0 10px;
+  }
+
+  img {
+  width: 100%;
+  margin-bottom: 15px;
   }
 
   strong {
@@ -103,6 +128,7 @@
 
 .school-form {
   margin: 40px 0;
+  padding-bottom: 90px;
   background: #F2F2F2;
   box-shadow: 0 12px 11px rgba(0, 0, 0, .13);
 
@@ -172,6 +198,8 @@
     font-size: 15px;
     font-weight: normal;
     color: #7B7B7A;
+    font-family: $janon;
+    font-style: italic;
 
     display: block;
   }
@@ -183,12 +211,12 @@
 
     width: 100%;
 
-    padding: 20px 20px;
+    padding: 15px 15px;
 
     margin-top: 5px;
     
     border: none;
-    border-radius: 12px;
+    border-radius: 7px;
 
     box-shadow: inset 0 3px 4px rgba(0, 0, 0, .13);
   }
