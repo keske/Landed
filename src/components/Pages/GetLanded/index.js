@@ -5,7 +5,6 @@ import cx from 'classnames';
 import Helmet from 'react-helmet';
 
 // Components
-import Invest from 'components/Helpers/Invest';
 import RadioButton from 'components/Helpers/RadioButton';
 
 // Styles
@@ -296,9 +295,6 @@ export default class GetLanded extends Component {
             </Col>
           </Row>
         </Grid>
-
-       
-
       </section>
     );
   }

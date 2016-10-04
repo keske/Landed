@@ -271,9 +271,10 @@ export default class Home extends Component {
             Sound too good to be true?
           </i>
 
-         
           <Link
-            to="/get-landed" className={s.learn}>
+            to="/get-landed"
+            className={s.learn}
+          >
             learn more about how it works
           </Link>
 

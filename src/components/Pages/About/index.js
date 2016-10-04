@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { observer } from 'mobx-react';
 import { Grid, Row, Col } from 'react-bootstrap';
-import { Link } from 'react-router';
 import cx from 'classnames';
 import Helmet from 'react-helmet';
 

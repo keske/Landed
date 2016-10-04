@@ -176,10 +176,10 @@ export default class HowItWorks extends Component {
                   </div>
                   <div className={s.right}>
                     <p className={s.title}>
-                      Your dream home becomes  your real home. 
+                      Your dream home becomes your real home.
                     </p>
                     <p className={s.text}>
-                      You pay the costs of ownership  but don’t make any monthly payments  to Landed.
+                      You pay the costs of ownership but don’t make any monthly payments to Landed.
                     </p>
                   </div>
                 </div>
