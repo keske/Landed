@@ -58,16 +58,13 @@ export default class About extends Component {
                 </p>
                 <br />
                 <p className={s.intro}>
-                  At Landed, we’re on a mission to make homeownership accessible, affordable and easy in expensive cities.
+                  At Landed, we’re on a mission to make homeownership accessible, affordable and easy, even in expensive cities.
                 </p>
               </Col>
             </Row>
           </Grid>
         </div>
 
-        <p className={cx(s.head, s.how)}>
-          How <i>LASD Landed</i> Works
-        </p>
 
         <Grid className={s.about}>
           <Row>
@@ -85,7 +82,7 @@ export default class About extends Component {
                 Nobody can responsibly buy their first home by themselves, even with a supportive bank.
               </p>
               <p className={s.text}>
-                Without gifts or partners, millions of Americans are making excessively risky investment decisions that the bankers themselves would never make.
+                Without partners, millions of Americans are making excessively risky investment decisions that the bankers themselves would never make.
               </p>
             </Col>
 
@@ -100,10 +97,10 @@ export default class About extends Component {
                 Together, there is another way
               </p>
               <p className={s.text}>
-                Nobody can responsibly buy their first home by themselves, even with a supportive bank.
+                Joining forces to pay for a home is extremely hard, but it really doesn’t have to be.
               </p>
               <p className={s.text}>
-                Without gifts or partners, millions of Americans are making excessively risky investment decisions that the bankers themselves would never make.
+                We work with banks, title companies, insurers, lawyers and brokers to make the hard parts simpler.
               </p>
             </Col>
 
@@ -118,10 +115,10 @@ export default class About extends Component {
                 Less vulnerability, more wealth
               </p>
               <p className={s.text}>
-                Nobody can responsibly buy their first home by themselves, even with a supportive bank.
+                We want everyone to have a real partner to help them buy their first home.
               </p>
               <p className={s.text}>
-                Without gifts or partners, millions of Americans are making excessively risky investment decisions that the bankers themselves would never make.
+                Until then, we’ll keep working to reduce barriers to wealth building and make people less financially vulnerable.
               </p>
             </Col>
           </Row>
@@ -135,16 +132,7 @@ export default class About extends Component {
           </i>
         </p>
         <p className={s['head-text']}>
-          The company, founded in 2015, has the backing of: Y Combinator business accelerator (winter 2016 batch), prominent angel and venture capital investors, top banking executives, former directors of federal housing authorities, affordable housing policy experts, union organizers, philanthropists, and, Stanford economists.
-        </p>
-
-        <p className={cx(s.head, s.about)}>
-          <i>
-            The Landed Team
-          </i>
-        </p>
-        <p className={s['head-text']}>
-          We're a dedicated team of urban real estate and investing enthusiasts who believe everyone should have the ability to achieve the dream of building wealth by owning property – whether as a resident or investor – in smarter, simpler and more accessible ways than exist today.
+          The company, founded in 2015, has the backing of: Y Combinator, prominent angel and venture capital investors, top banking executives, former directors of federal housing authorities, affordable housing policy experts, union organizers, philanthropists, and Stanford economists.
         </p>
 
         <div className={s.team}>
@@ -229,9 +217,6 @@ export default class About extends Component {
             </Row>
           </Grid>
         </div>
-
-        <Invest />
-
       </section>
     );
   }

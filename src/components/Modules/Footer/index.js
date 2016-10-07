@@ -35,7 +35,7 @@ export default class Footer extends Component {
               lg={3}
             >
               <p>
-                Copyright © Landed, Inc. DRE #01988003.
+                Copyright © Landed, Inc.  DRE #01988003.
               </p>
               <p>
                 Landed was founded in 2015 in the San Francisco Bay Area.

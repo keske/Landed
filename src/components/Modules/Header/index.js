@@ -49,12 +49,7 @@ export default class Header extends Component {
         >
           How it Works
         </Link>
-        <Link
-          to="/invest"
-          activeClassName={s.active}
-        >
-          Invest
-        </Link>
+
         <Link
           to="/about"
           activeClassName={s.active}

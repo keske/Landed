@@ -4,6 +4,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router';
 import cx from 'classnames';
 import Helmet from 'react-helmet';
+import Scroll, {Element, scroller} from 'react-scroll';
 
 // Components
 import Press from 'components/Helpers/Press';
@@ -65,29 +66,18 @@ export default class Home extends Component {
                 lg={12} lgOffset={0}
               >
                 <p className={s.title}>
-                  <i>If you work at school,</i>
+                  If you work at a school,<br/>
                   we’ll help you buy a home
                 </p>
-                <p className={s.intro}>
-                  Landed makes buying a home more affordable and less risky by investing alongside you when you make a down payment.
-                  Our first priority is helping teachers and school staff become homeowners.
-                </p>
-                <br />
-                <Link
-                  to="/get-landed"
-                  className={s['get-started']}
-                >
-                  Get started
-                </Link>
               </Col>
             </Row>
           </Grid>
 
-          <div className={cx(s.calc, s.calcstart, { [s.expland]: expand })}>
+          <div className={cx(s.calc, s.calcstart, { [s.expand]: expand })}>
             <p className={s.lead}>
               Think you can’t buy a home?
               <br />
-              Check out in our calculator
+              Let us surprise you.
             </p>
             <br />
             <span className={s.want}>
@@ -97,21 +87,25 @@ export default class Home extends Component {
             <input
               ref="calc"
               type="text"
-              defaultValue=""
+              defaultValue="800000"
               className={s.form}
               onChange={() => { calculate(this.refs.calc.value, this.refs.calc.defaultValue); }}
             />
+            <button className={s.learn} onClick={() => {scroller.scrollTo('calcStart', {duration: 1200,delay: 100,smooth: true,})}}>
+              go
+            </button>
           </div>
 
-          <div className={cx(s.calc, { [s.expland]: expand })}>
+          <Element name="calcStart"></Element>
+          <div className={cx(s.calc, { [s.expand]: expand })}>
             <div className={s.results}>
               <p className={s.top}>
-                Without Landed you had<br />two options:
+                Normally, you'd have two options:
               </p>
 
               <div className={s.option}>
                 <p className={s.num}>
-                  option 1
+                  Total home costs with a 80% mortgage
                 </p>
                 <div className={s.table}>
                   <div className={cx(s['left-side'], s.red)}>
@@ -119,7 +113,7 @@ export default class Home extends Component {
                       large
                     </p>
                     <p className={s.cost}>
-                      downpayment
+                      down payment
                     </p>
                     <p className={s.price}>
                       ${downpayment.first}
@@ -141,21 +135,21 @@ export default class Home extends Component {
 
               <div className={s.option}>
                 <p className={s.num}>
-                  option 1
+                  Total home costs with a 90% mortgage
                 </p>
                 <div className={s.table}>
-                  <div className={cx(s['left-side'], s.red)}>
+                  <div className={cx(s['left-side'], s.green)}>
                     <p className={s.small}>
                       small
                     </p>
                     <p className={s.cost}>
-                      downpayment
+                      down payment
                     </p>
                     <p className={s.price}>
                       ${downpayment.second}
                     </p>
                   </div>
-                  <div className={cx(s['right-side'], s.green)}>
+                  <div className={cx(s['right-side'], s.red)}>
                     <p className={s.large}>
                       large
                     </p>
@@ -171,7 +165,7 @@ export default class Home extends Component {
               <br />
               <span className={s['left-arrow']} />
               <p className={s.middle}>
-                Landed allowes you<br />to take best parts of both
+                Landed let's you put down 10%<br />but pay less each month
               </p>
               <span className={s['right-arrow']} />
 
@@ -182,10 +176,10 @@ export default class Home extends Component {
                       small
                     </p>
                     <p className={s.cost}>
-                      downpayment
+                      down payment
                     </p>
                     <p className={s.price}>
-                      ${landed.first}
+                      ${downpayment.second}
                     </p>
                   </div>
                   <div className={s['right-side']}>
@@ -196,7 +190,7 @@ export default class Home extends Component {
                       monthly cost
                     </p>
                     <p className={s.price}>
-                      ${landed.second}
+                      ${monthly.first}
                     </p>
                   </div>
                 </div>
@@ -214,7 +208,7 @@ export default class Home extends Component {
 
         <div className={s.how}>
           <p className={s.head}>
-            What can Landed do for you?
+            We make down payment support easy
           </p>
 
           <Grid className={s['one-two-three']}>
@@ -244,7 +238,7 @@ export default class Home extends Component {
                   2
                 </span>
                 <p>
-                  <strong>You apply to receive funds</strong> from your school’s Landed program, covering up to 50% of the downpayment you need.
+                  <strong>You apply to receive funds</strong> from your school’s Landed program, covering up to 50% of the down payment.
                 </p>
               </Col>
               <Col
@@ -258,24 +252,21 @@ export default class Home extends Component {
                   3
                 </span>
                 <p>
-                  <strong>Landed helps you find and buy a home</strong> near where
-                    you work. We pay half the
-                    down payment when
-                    you re ready to buy
+                  <strong>Landed helps you find and buy a home</strong> near where you work. We pay half the down payment when you’re ready to buy.
                 </p>
               </Col>
             </Row>
           </Grid>
 
           <i>
-            Sound too good to be true?
+             
           </i>
 
           <Link
             to="/get-landed"
             className={s.learn}
           >
-            learn more about how it works
+            bring Landed to your school
           </Link>
 
         </div>

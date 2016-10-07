@@ -109,10 +109,10 @@ export default class HowItWorks extends Component {
                   </div>
                   <div className={s.right}>
                     <p className={s.title}>
-                      You need $160,000 down payment
+                      You need a ${numberWithCommas(+pay /5)} down payment
                     </p>
                     <p className={s.text}>
-                      You currently have only half of it – $80,000 saved
+                      You currently have only half of it – ${numberWithCommas(+pay /10)} saved
                     </p>
                   </div>
                 </div>
@@ -129,10 +129,10 @@ export default class HowItWorks extends Component {
                   </div>
                   <div className={s.right}>
                     <p className={cx(s.title, s.green)}>
-                      You can use Landed support and get $80,000 today.
+                      You can partner with Landed and get ${numberWithCommas(+pay /10)} today
                     </p>
                     <p className={s.text}>
-                      Instead of spending years renting and saving another $80,000, while home prices keep going up. Learn where the money comes from
+                      In exchange for 25% of the appreciation or depreciation in the home going forward (if any).
                     </p>
                   </div>
                 </div>
@@ -152,10 +152,10 @@ export default class HowItWorks extends Component {
                   </div>
                   <div className={s.right}>
                     <p className={s.title}>
-                      <i>We help you find you dream home in real life</i> and once you’re ready to buy your dream home, we both contribute to the down payment.
+                      <i>We help you find your dream home</i> and we both contribute to the down payment
                     </p>
                     <p className={s.text}>
-                      You put in $80,000 and Landed puts in $80,000, and the bank provides a $640,000 loan.
+                      You put in ${numberWithCommas(+pay /10)}, Landed puts in ${numberWithCommas(+pay /10)} and the bank provides a ${numberWithCommas(+pay *0.8)} loan.
                     </p>
                   </div>
                 </div>
@@ -176,7 +176,7 @@ export default class HowItWorks extends Component {
                   </div>
                   <div className={s.right}>
                     <p className={s.title}>
-                      Your dream home becomes your real home.
+                      Your dream home becomes your real home
                     </p>
                     <p className={s.text}>
                       You pay the costs of ownership but don’t make any monthly payments to Landed.
@@ -203,7 +203,7 @@ export default class HowItWorks extends Component {
                       <i>Landed makes its return on</i> investment when you sell or buy out the investment
                     </p>
                     <p className={s.text}>
-                      There are two ways to end the relationship with Landed. The first is to sell your home. The second is to refinance your home without selling. You can either sell or refinance at any time before the end of the Landed term (usually, 10 years).
+                      There are two ways to end the partnership with Landed. The first is to sell your home. The second is to refinance your home without selling. You can sell or refinance at any time before the end of the Landed term (usually, 10 years).
                     </p>
                   </div>
                 </div>
@@ -238,7 +238,7 @@ export default class HowItWorks extends Component {
                   <p className={s.title}>
                     <i className={s.green}>If your home goes up in value,</i>
                     <br />
-                    both you and landed win
+                    both you and Landed win
                   </p>
 
                   <div className={s.table}>
@@ -261,7 +261,7 @@ export default class HowItWorks extends Component {
 
                     <span className={s['col-7']}>
                       <p className={s.green}>
-                        Sale Price
+                        Landed's 25% Share
                       </p>
                       <p>
                         (plus original investment)
@@ -269,10 +269,10 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={s['col-3']}>
                       <p className={s.green}>
-                        ${numberWithCommas(25 / 100 * 100000)}
+                        $25,000
                       </p>
                       <p>
-                        $80,000
+                        ${numberWithCommas(+pay /10)}
                       </p>
                     </span>
 
@@ -283,7 +283,7 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.green}>
-                        ${numberWithCommas(80000 + (25 / 100 * 100000))}
+                        ${numberWithCommas((+pay/10) + 25000)}
                       </p>
                     </span>
 
@@ -297,21 +297,21 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={s['col-3']}>
                       <p className={s.green}>
-                        ${numberWithCommas(75 / 100 * 100000)}
+                        $75,000
                       </p>
                       <p>
-                        $230,000
+                        ${numberWithCommas(+pay * (0.284))}
                       </p>
                     </span>
 
                     <span className={cx(s['col-7'], s.total)}>
                       <p className={s.green}>
-                        Your Profit
+                        You Keep
                       </p>
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.green}>
-                        ${numberWithCommas(230000 + (75 / 100 * 100000))}
+                        ${numberWithCommas(+pay * (0.284) + 75000)}
                       </p>
                     </span>
                   </div>
@@ -329,7 +329,7 @@ export default class HowItWorks extends Component {
                     role="presentation"
                   />
                   <p className={s.title}>
-                    <i className={s.red}>If your home goes up in value,</i>
+                    <i className={s.red}>If your home goes down in value,</i>
                     <br />
                     both you and Landed lose
                   </p>
@@ -339,7 +339,7 @@ export default class HowItWorks extends Component {
                       Sale Price
                     </span>
                     <span className={s['col-5']}>
-                      -${numberWithCommas(+pay - 100000)}
+                        ${numberWithCommas(+pay - 100000)}
                     </span>
                     <span className={s['col-5']}>
                       <span className={s.red}>
@@ -348,13 +348,13 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={s['col-5']}>
                       <span className={s.red}>
-                        $100,000
+                        -$100,000
                       </span>
                     </span>
 
                     <span className={s['col-7']}>
                       <p className={s.red}>
-                        Sale Price
+                        Landed's 25% Share
                       </p>
                       <p>
                         (plus original investment)
@@ -362,10 +362,10 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={s['col-3']}>
                       <p className={s.red}>
-                        -${numberWithCommas(25 / 100 * 100000)}
+                        -$25,000
                       </p>
                       <p>
-                        $80,000
+                        ${numberWithCommas(+pay/10)}
                       </p>
                     </span>
 
@@ -376,7 +376,7 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.red}>
-                        ${numberWithCommas(80000 - (25 / 100 * 100000))}
+                        ${numberWithCommas((+pay/10) - 25000)}
                       </p>
                     </span>
 
@@ -390,21 +390,21 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={s['col-3']}>
                       <p className={s.red}>
-                        -${numberWithCommas(75 / 100 * 100000)}
+                        -$75,000
                       </p>
                       <p>
-                        $230,000
+                        ${numberWithCommas(+pay * (0.284))}
                       </p>
                     </span>
 
                     <span className={cx(s['col-7'], s.total)}>
                       <p className={s.red}>
-                        Your Profit
+                        You Keep
                       </p>
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.green}>
-                        ${numberWithCommas(230000 - (75 / 100 * 100000))}
+                        ${numberWithCommas(+pay * (0.284) - 75000)}
                       </p>
                     </span>
                   </div>
@@ -422,10 +422,10 @@ export default class HowItWorks extends Component {
             Start<br />a Landed Program<br /><i>today</i>
           </p>
           <Link
-            to="get-started"
+            to="get-landed"
             className={s['get-landed']}
           >
-            get landed
+            bring Landed to your school
           </Link>
         </div>
 
@@ -445,7 +445,7 @@ export default class HowItWorks extends Component {
                 Where does the money come from?
               </p>
               <p className={s.answer}>
-                Landed pools investor money from people in your community who are Interested in supporting you and making a profit. You can think of Landed as a type of impactm ivesting That means we care about making sustainable good investments. <Link to="/invest"><i>Learn more bout investing</i></Link>
+                Landed pools investor money from people in your community who are interested in supporting you and making a return on their investment. You can think of Landed as a type of impact investing. We care about making sustainable good investments.
               </p>
             </Col>
 
@@ -459,12 +459,7 @@ export default class HowItWorks extends Component {
                 How does Landed make money? Do I get charged a bunch of fees?
               </p>
               <p className={s.answer}>
-                Currently Landed does not charge home
-                buyers any ongination fee. We make our
-                money m two ways. First we charge a small
-                management fee to investors. Second, we
-                partner you with great real estate agents in
-                your area and we charge them a referral fee
+                Currently Landed does not charge home buyers any origination fees. We make our money in two ways. First, we charge a small management fee to investors. Second, we partner you with great real estate agents in your area and we charge them a referral fee.
               </p>
             </Col>
           </Row>
@@ -479,10 +474,7 @@ export default class HowItWorks extends Component {
                 Who is responsible for property taxes insurance repairs and mamtenance costs?
               </p>
               <p className={s.answer}>
-                You Will be responsible for all the costs of
-                  homeownership like any other homeowner.
-                  Were here to help you get the right property
-                  insurance to cover unexpected costs.
+                You will be responsible for all the costs of homeownership like any other homeowner.
               </p>
             </Col>
 
@@ -496,14 +488,12 @@ export default class HowItWorks extends Component {
                 What if I don't want to sell?
               </p>
               <p className={s.answer}>
-                Normally, the Landed investment is made for a 10-year term. That means that if you don't want to sell in the next 10 years you'll have to repay Landed. Often this happens as a part of a refinancing (when you take out a new loan). You can buy out Landed's investment at any time after the first year without penalty.
+                Normally, the Landed investment is made for a 10-year term. That means that if you don't want to sell in the next 10 years, you'll have to repay Landed. Often this happens as a part of a refinancing (when you take out a new loan). You can buy out Landed's investment at any time after the first year without penalty.
               </p>
             </Col>
           </Row>
         </Grid>
-
-        <Invest />
-
+        <a href="https://landed.zendesk.com" target="_blank" className={s['get-landed']}> have more questions? </a>
       </section>
     );
   }

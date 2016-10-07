@@ -5,15 +5,15 @@ import { numberWithCommas } from 'utils/price';
 
 class Calc {
   @observable data = {
-    pay: 0,
-    expand: false,
+    pay: 800000,
+    expand: true,
     monthly: {
-      first: 0, // 0.00385
-      second: 0, // 0.0049
+      first: numberWithCommas(3080), // 0.00385
+      second: numberWithCommas(3920), // 0.0049
     },
     downpayment: {
-      first: 0, // 20%
-      second: 0, // 10%
+      first: numberWithCommas(160000), // 20%
+      second: numberWithCommas(80000), // 10%
     },
     landed: {
       first: 0, // 10%

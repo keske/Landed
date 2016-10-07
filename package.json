@@ -22,6 +22,7 @@
     "Andrey Keske (https://github.com/keske)"
   ],
   "devDependencies": {
+    "@types/selenium-webdriver": "^2.44.26",
     "autoprefixer": "6.3.7",
     "axios": "^0.13.1",
     "babel-core": "6.11.4",
@@ -71,11 +72,12 @@
     "react-dom": "15.2.1",
     "react-helmet": "3.1.0",
     "react-transform-hmr": "1.0.4",
+    "react-scroll": "1.4.0",
     "style-loader": "0.13.1",
     "superagent": "^2.2.0",
     "superagent-bluebird-promise": "^3.0.2",
     "url-loader": "0.5.7",
-    "webpack": "^2.1.0-beta.6",
+    "webpack": "^2.1.0-beta.21",
     "webpack-dev-middleware": "1.6.1",
     "webpack-dev-server": "2.0.0-beta",
     "webpack-hot-middleware": "2.12.1",

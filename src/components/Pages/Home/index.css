@@ -22,15 +22,15 @@
   }
 
   .title {
-    font-size: 36px;
+    font-size: 50px;
     font-family: $janon;
-    line-height: 36px;  
+    line-height: 54px;  
     text-shadow: 2px 5px 7px rgba(0,0,0,0.3);
 
 
     -webkit-font-smoothing: antialiased;
 
-    padding-top: 280px;
+    padding-top: 200px;
 
     i {
       display: block;
@@ -190,7 +190,7 @@
     font-family: @supriaSans;
   }
 
-  &.expland {
+  &.expand {
 
     .results {
       display: inline-block;
@@ -246,9 +246,9 @@
           width: 50%;
           display: inline-block;
 
-          padding: 20px;
+          padding: 10px;
 
-          text-align: left;
+          text-align: center;
 
           background: $white;
 
@@ -326,7 +326,7 @@
     .calc-table {
       display: inline-block;
       
-      margin: 0px 20px 25px 20px;
+      margin: -15px 20px 20px 20px;
 
       .table {
         width: 460px;
@@ -346,9 +346,9 @@
           width: 50%;
           display: inline-block;
 
-          padding: 30px;
+          padding: 10px;
 
-          text-align: left;
+          text-align: center;
 
           border-top: 2px solid #00FAA9;
 
