@@ -76,7 +76,7 @@ export default class About extends Component {
             >
               
               <p className={s.head}>
-               <img src={require('./files/p1.jpg')} />
+               <img src={require('./files/a1.jpg')} />
                 The system is rigged
               </p>
               <p className={s.text}>
@@ -97,7 +97,7 @@ export default class About extends Component {
             >
               
               <p className={s.head}>
-              <img src={require('./files/p2.jpg')} />
+              <img src={require('./files/a2.jpg')} />
                 Together, there is another way
               </p>
               <p className={s.text}>
@@ -116,7 +116,7 @@ export default class About extends Component {
             >
              
               <p className={s.head}>
-              <img src={require('./files/p3.jpg')} />
+              <img src={require('./files/a3.jpg')} />
                 Less vulnerability, more wealth
               </p>
               <p className={s.text}>
