@@ -8,9 +8,6 @@ import Helmet from 'react-helmet';
 // Utils
 import { numberWithCommas } from 'utils/price';
 
-// Components
-import Invest from 'components/Helpers/Invest';
-
 // Styles
 import s from './index.css';
 
@@ -69,19 +66,13 @@ export default class HowItWorks extends Component {
               <div className={s.info}>
 
                 <div
-                  className={s.point}
-                  style={{
-                    height: 200,
-                  }}
+                  className={cx(s.point, s['point-how'])}
                 >
                   <div className={s.left}>
                     <img
                       src={require('./files/how-1.png')}
                       role="presentation"
-                      style={{
-                        position: 'relative',
-                        top: '-80px',
-                      }}
+                      className={s['img-how']}
                     />
                   </div>
                   <div className={s.line} />
@@ -109,10 +100,10 @@ export default class HowItWorks extends Component {
                   </div>
                   <div className={s.right}>
                     <p className={s.title}>
-                      You need a ${numberWithCommas(+pay /5)} down payment
+                      You need a ${numberWithCommas(+pay / 5)} down payment
                     </p>
                     <p className={s.text}>
-                      You currently have only half of it – ${numberWithCommas(+pay /10)} saved
+                      You currently have only half of it – ${numberWithCommas(+pay / 10)} saved
                     </p>
                   </div>
                 </div>
@@ -129,7 +120,7 @@ export default class HowItWorks extends Component {
                   </div>
                   <div className={s.right}>
                     <p className={cx(s.title, s.green)}>
-                      You can partner with Landed and get ${numberWithCommas(+pay /10)} today
+                      You can partner with Landed and get ${numberWithCommas(+pay / 10)} today
                     </p>
                     <p className={s.text}>
                       In exchange for 25% of the appreciation or depreciation in the home going forward (if any).
@@ -155,7 +146,7 @@ export default class HowItWorks extends Component {
                       <i>We help you find your dream home</i> and we both contribute to the down payment
                     </p>
                     <p className={s.text}>
-                      You put in ${numberWithCommas(+pay /10)}, Landed puts in ${numberWithCommas(+pay /10)} and the bank provides a ${numberWithCommas(+pay *0.8)} loan.
+                      You put in ${numberWithCommas(+pay / 10)}, Landed puts in ${numberWithCommas(+pay / 10)} and the bank provides a ${numberWithCommas(+pay * 0.8)} loan.
                     </p>
                   </div>
                 </div>
@@ -225,10 +216,10 @@ export default class HowItWorks extends Component {
                 <span className={s.line} />
                 <br />
                 <div className={s.side}>
-                  <div className={s.num}>
+                  <div className={s['num-addition']}>
                     7
                   </div>
-                  <div className={cx(s.num, s.a)}>
+                  <div className={cx(s['num-addition'], s.a)}>
                     A
                   </div>
                   <img
@@ -318,10 +309,10 @@ export default class HowItWorks extends Component {
                 </div>
 
                 <div className={s.side}>
-                  <div className={s.num}>
+                  <div className={s['num-addition']}>
                     7
                   </div>
-                  <div className={cx(s.num, s.b)}>
+                  <div className={cx(s['num-addition'], s.b)}>
                     B
                   </div>
                   <img
@@ -493,7 +484,16 @@ export default class HowItWorks extends Component {
             </Col>
           </Row>
         </Grid>
-        <a href="https://landed.zendesk.com" target="_blank" className={s['get-landed']}> have more questions? </a>
+
+        <div className={s.center}>
+          <a
+            href="https://landed.zendesk.com"
+            target="_blank"
+            className={s['get-landed']}
+          >
+            have more questions?
+          </a>
+        </div>
       </section>
     );
   }

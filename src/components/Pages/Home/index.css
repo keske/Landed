@@ -8,8 +8,6 @@
   background: url(./files/bg_new.jpg);
   background-size: 100% auto;
 
-  // height: 620px;
-
   @media only screen 
     and (max-width: 667px) {
       background: url(./files/bg_new.jpg);
@@ -176,6 +174,21 @@
     font-size: 25px;
 
     outline: none;
+  }
+
+  input[type="text"] {
+    display: inline-block;
+    width: 40%;
+  }
+
+  button {
+    display: inline-block;
+    
+    position: relative;
+    top: -2px;
+    margin-left: 10px;
+
+    padding: 14px 20px;
   }
 }
 

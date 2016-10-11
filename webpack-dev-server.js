@@ -26,7 +26,6 @@ global.ssr = true;
   app.use(require('webpack-hot-middleware')(compiler, {
     log: console.log, path: '/__webpack_hmr', heartbeat: 10 * 1000,
   }));
-
 }());
 
 server.listen(port, () => {

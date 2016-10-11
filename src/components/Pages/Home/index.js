@@ -46,7 +46,7 @@ export default class Home extends Component {
   render() {
     const { calc: {
       calculate,
-      data: { expand, monthly, downpayment, landed },
+      data: { expand, monthly, downpayment },
     } } = this.context;
 
     return (
@@ -66,7 +66,7 @@ export default class Home extends Component {
                 lg={12} lgOffset={0}
               >
                 <p className={s.title}>
-                  If you work at a school,<br/>
+                  If you work at a school,<br />
                   we’ll help you buy a home
                 </p>
               </Col>
@@ -91,12 +91,22 @@ export default class Home extends Component {
               className={s.form}
               onChange={() => { calculate(this.refs.calc.value, this.refs.calc.defaultValue); }}
             />
-            <button className={s.learn} onClick={() => {scroller.scrollTo('calcStart', {duration: 1200,delay: 100,smooth: true,})}}>
+            <button
+              className={s.learn}
+              onClick={() => {
+                scroller.scrollTo('calcStart', {
+                  duration: 1200,
+                  delay: 100,
+                  smooth: true,
+                });
+              }}
+            >
               go
             </button>
           </div>
 
-          <Element name="calcStart"></Element>
+          <Element name="calcStart" />
+
           <div className={cx(s.calc, { [s.expand]: expand })}>
             <div className={s.results}>
               <p className={s.top}>
@@ -257,10 +267,6 @@ export default class Home extends Component {
               </Col>
             </Row>
           </Grid>
-
-          <i>
-             
-          </i>
 
           <Link
             to="/get-landed"

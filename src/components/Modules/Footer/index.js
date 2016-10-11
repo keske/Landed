@@ -42,27 +42,6 @@ export default class Footer extends Component {
               </p>
             </Col>
 
-            {/*
-            <Col
-              xs={12}
-              sm={12}
-              md={3}
-              lg={3}
-            >
-              <Link to="/careers">
-                Landed Careers
-              </Link>
-              <br />
-              <Link to="/privacy-policy">
-                Privacy Policy
-              </Link>
-              <br />
-              <Link to="/terms-of-service">
-                Terms of Service
-              </Link>
-            </Col>
-            */ }
-
             <Col
               xs={12}
               sm={12}
