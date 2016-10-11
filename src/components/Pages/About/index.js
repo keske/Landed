@@ -74,14 +74,17 @@ export default class About extends Component {
               md={4} mdOffset={0}
               lg={4} lgOffset={0}
             >
-              <span className={s.circle} />
+              
               <p className={s.head}>
+               <img src={require('./files/p1.jpg')} />
                 The system is rigged
               </p>
               <p className={s.text}>
+               
                 Nobody can responsibly buy their first home by themselves, even with a supportive bank.
               </p>
               <p className={s.text}>
+               
                 Without partners, millions of Americans are making excessively risky investment decisions that the bankers themselves would never make.
               </p>
             </Col>
@@ -92,8 +95,9 @@ export default class About extends Component {
               md={4} mdOffset={0}
               lg={4} lgOffset={0}
             >
-              <span className={s.circle} />
+              
               <p className={s.head}>
+              <img src={require('./files/p2.jpg')} />
                 Together, there is another way
               </p>
               <p className={s.text}>
@@ -110,8 +114,9 @@ export default class About extends Component {
               md={4} mdOffset={0}
               lg={4} lgOffset={0}
             >
-              <span className={s.circle} />
+             
               <p className={s.head}>
+              <img src={require('./files/p3.jpg')} />
                 Less vulnerability, more wealth
               </p>
               <p className={s.text}>

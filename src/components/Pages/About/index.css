@@ -7,6 +7,8 @@
 .page-header {
   text-align: center;
   background: $green;
+  background: url(./files/bg.jpg);
+  background-size: cover;
 
   .title {
     font-family: $janon;
@@ -18,6 +20,7 @@
     max-width: 700px;
 
     margin-top: 260px;
+
   }
 
   .intro {
@@ -29,6 +32,8 @@
     margin: 20px 0 140px;
   }
 }
+
+
 
 .head {
   font-family: $janon;
@@ -56,6 +61,11 @@
 
 .about {
   text-align: center;
+  margin-top: 15px;
+
+  img{
+    margin-bottom: 15px;
+  }
 
   .circle {
     width: 44px;
@@ -77,12 +87,13 @@
   }
 
   .head {
+
     font-family: $janon;
     font-size: 23px;
     line-height: 26px;
     color: $green;
     font-style: italic;
-
+    padding-top: 15px;
     text-align: left;
     margin-bottom: 20px;
   }

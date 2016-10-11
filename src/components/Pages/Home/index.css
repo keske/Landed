@@ -54,9 +54,10 @@
 .learn, .get-started {
   font-size: 18px;
   color: $green;
+
   -webkit-font-smoothing: antialiased;
 
-  // margin-top: 5px;
+  // margin-top: 20px;
   padding: 8px 40px;
 
   background: rgba(255,255,255,1);
@@ -80,6 +81,8 @@
     border: 2px solid rgba(0, 150, 105, 1);
   }
 }
+
+
 
 .calculate,  .program {
   
@@ -403,12 +406,16 @@
 
 .how {
   padding: 80px 0;
+  margin-top: 15px;
+
 
   text-align: center;
 
   border-top: 1px solid rgb(233,233,233);
 
   .one-two-three {
+
+  margin-bottom: 25px;
 
     img {
       width: 80%;
@@ -435,6 +442,7 @@
       width: 80%;
       margin-top: 20px;
       margin-left: 10%;
+
     }
   }
 
