@@ -272,7 +272,7 @@ export default class HowItWorks extends Component {
                         $25,000
                       </p>
                       <p>
-                        ${numberWithCommas(+pay /10)}
+                        ${numberWithCommas(+pay / 10)}
                       </p>
                     </span>
 
@@ -283,7 +283,7 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.green}>
-                        ${numberWithCommas((+pay/10) + 25000)}
+                        ${numberWithCommas((+pay / 10) + 25000)}
                       </p>
                     </span>
 
@@ -300,7 +300,7 @@ export default class HowItWorks extends Component {
                         $75,000
                       </p>
                       <p>
-                        ${numberWithCommas(+pay * (0.284))}
+                        ${numberWithCommas(+pay * (0.284).toFixed(1))}
                       </p>
                     </span>
 
@@ -311,7 +311,7 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.green}>
-                        ${numberWithCommas(+pay * (0.284) + 75000)}
+                        ${numberWithCommas(Math.ceil(+pay * (0.284) + 75000))}
                       </p>
                     </span>
                   </div>
@@ -365,7 +365,7 @@ export default class HowItWorks extends Component {
                         -$25,000
                       </p>
                       <p>
-                        ${numberWithCommas(+pay/10)}
+                        ${numberWithCommas(+pay / 10)}
                       </p>
                     </span>
 
@@ -376,7 +376,7 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.red}>
-                        ${numberWithCommas((+pay/10) - 25000)}
+                        ${numberWithCommas((+pay / 10) - 25000)}
                       </p>
                     </span>
 
@@ -393,7 +393,7 @@ export default class HowItWorks extends Component {
                         -$75,000
                       </p>
                       <p>
-                        ${numberWithCommas(+pay * (0.284))}
+                        ${numberWithCommas(+pay * (0.284).toFixed(1))}
                       </p>
                     </span>
 
@@ -404,7 +404,7 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.green}>
-                        ${numberWithCommas(+pay * (0.284) - 75000)}
+                        ${numberWithCommas(Math.ceil(+pay * (0.284) - 75000))}
                       </p>
                     </span>
                   </div>
