@@ -65,9 +65,7 @@ export default class HowItWorks extends Component {
             >
               <div className={s.info}>
 
-                <div
-                  className={cx(s.point, s['point-how'])}
-                >
+                <div className={cx(s.point, s['point-how'])}>
                   <div className={s.left}>
                     <img
                       src={require('./files/how-1.png')}
