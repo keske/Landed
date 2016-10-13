@@ -18,7 +18,9 @@ export const renderFullPage = (html, devPort, domain, initialState = null, head)
 
         <link rel="stylesheet" type="text/css" href="/static/vendors/bootstrap/bootstrap.min.css"></style>
         <link rel="stylesheet" type="text/css" href="/static/vendors/bootstrap/bootstrap-theme.min.css"></style>
+        <link rel="stylesheet" type="text/css" href="/static/vendors/react-select/react-select.css"></style>
         <link rel="stylesheet" type="text/css" href="/static/fonts/index.css"></style>
+
 
         ${bundleCSS}
         <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">

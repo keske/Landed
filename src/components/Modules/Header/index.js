@@ -56,13 +56,12 @@ export default class Header extends Component {
         >
           About
         </Link>
-        <Link
-          to="/get-landed"
+        <span
           className={s['get-landed']}
-          activeClassName={s.active}
+          onClick={() => { app.showQuiz(); }}
         >
           Get Landed
-        </Link>
+        </span>
       </span>;
 
     return (

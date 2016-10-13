@@ -103,6 +103,9 @@ export default class Home extends Component {
             >
               go
             </button>
+            <Link to="/how-it-works">
+              go
+            </Link>
           </div>
 
           <Element name="calcStart" />

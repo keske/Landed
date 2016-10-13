@@ -42,4 +42,80 @@
     border: none;
   }
 
+  // Vendor customs
+  .Select {
+    margin: 20px 10px;
+    width: 99%;
+
+    .Select-control {
+      border-radius: 0;
+
+      font-family: 'SupriaSans Regular';
+      font-size: 16px;
+      outline: none;
+
+      height: 66px;
+
+      border: 1px solid rgba(0, 155, 105, .33);
+
+      &:hover {
+        border: 1px solid rgba(57, 176, 136, 1);        
+      }
+
+      .Select-arrow-zone {
+
+        .Select-arrow {
+          width: 18px;
+          height: 10px;
+
+          background: url(./files/down.svg);
+          margin-left: -20px;
+
+          border: none;
+        }
+      }
+    }
+
+    .Select-clear-zone {
+      display: none;
+    }
+
+    .Select-placeholder {
+      padding-top: 15px;
+      padding-left: 20px;
+
+      color: $green !important;
+    }
+
+    &.stage-style {
+
+      .Select-control {
+        height: 76px;
+      }
+    }
+
+    .select-label, .select-text {
+      font-family: 'SupriaSans Regular';
+      font-size: 16px;
+      line-height: 18px;
+
+      font-weight: normal;
+
+      color: $green;
+      display: block;
+
+      padding: 3px 0;
+    }
+
+    .select-text {
+      margin-top: -5px;
+      color: rgba(0, 153, 105, .33);
+      display: block;
+
+      @media only screen and (max-width: 667px) {
+        font-size: 12px;
+      }
+    }
+  }
+
 }

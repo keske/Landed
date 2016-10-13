@@ -3,7 +3,7 @@ import { observable, action } from 'mobx';
 // Utils
 import { numberWithCommas } from 'utils/price';
 
-class Calc {
+export default new class Calc {
   @observable data = {
     pay: 800000,
     expand: true,
@@ -49,6 +49,4 @@ class Calc {
       };
     }
   }
-}
-
-export default new Calc();
+};

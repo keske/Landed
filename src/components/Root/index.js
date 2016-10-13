@@ -7,6 +7,7 @@ import { app, calc } from '../../stores';
 // Components
 import Header from 'components/Modules/Header';
 import Footer from 'components/Modules/Footer';
+import QuizPopUp from 'components/Modules/QuizPopUp';
 
 import s from './index.css';
 
@@ -41,6 +42,7 @@ export default class Root extends Component {
           this.props.children &&
             React.cloneElement(this.props.children, this.props)
         }
+        <QuizPopUp />
         <Footer />
       </section>
     );

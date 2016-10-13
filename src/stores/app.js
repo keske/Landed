@@ -1,9 +1,11 @@
 import { observable, action } from 'mobx';
 
-class App {
+export default new class App {
   @observable isFetching = false;
   @observable headerColor = 'white';
   @observable menu = false;
+  @observable showQuizPopUp = false;
+  @observable popup = false;
 
   @observable schoolForm = {
     firstName: '',
@@ -58,6 +60,13 @@ class App {
     this.menu = false;
   }
 
-}
+  @action showQuiz() {
+    this.showQuizPopUp = true;
+    this.popup = true;
+  }
 
-export default new App();
+  @action hideQuiz() {
+    this.showQuizPopUp = false;
+    this.popup = false;
+  }
+};
