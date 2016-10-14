@@ -156,7 +156,7 @@ export default class HowItWorks extends Component {
                       role="presentation"
                       style={{
                         position: 'relative',
-                        top: '-80px',
+                        top: '-20px',
                       }}
                     />
                   </div>
