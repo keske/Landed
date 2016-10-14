@@ -76,8 +76,7 @@ export default class Quiz extends Component {
     this.setState({ succes: true });
 
     request.fail((jqXHR, textStatus, errorThrown) => {
-      console.error(
-        'The following error occurred: ' +
+      console.log('The following error occurred: ' +
         textStatus, errorThrown
       );
     });
