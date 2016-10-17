@@ -170,11 +170,12 @@
 }
 
 .num-addition {
+  // position: relative;
   position: absolute;
   display: inline-block;
 
   top: 0;
-  margin-top: -16px;
+  top: -16px;
   margin-left: -18px;
 
   background: $green;
@@ -182,7 +183,7 @@
   font-size: 16px;
   color: #FFF;
 
-  text-align: center;
+  // text-align: center;
 
   padding: 5px 0;
   width: 33px;
@@ -190,8 +191,7 @@
 
   text-transform: uppercase;
 
-  @media only screen 
-    and (max-width: 667px) {
+  @media only screen and (max-width: 667px) {
       display: none;
   }
 
