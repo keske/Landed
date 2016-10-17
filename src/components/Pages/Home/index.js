@@ -4,7 +4,8 @@ import { Grid, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router';
 import cx from 'classnames';
 import Helmet from 'react-helmet';
-import Scroll, {Element, scroller} from 'react-scroll';
+import { Element, scroller } from 'react-scroll';
+import DynamicNumber from 'react-dynamic-number';
 
 // Components
 import Press from 'components/Helpers/Press';
@@ -23,8 +24,6 @@ export default class Home extends Component {
   componentDidMount() {
     const { app } = this.context;
 
-    // window.addEventListener('scroll', this.parallax);
-
     app.headerSetColor('white');
     app.hideMenu();
 
@@ -35,19 +34,18 @@ export default class Home extends Component {
     window.removeEventListener('scroll', this.parallax);
   }
 
-  parallax = () => {
-    const top = (window.pageYOffset - this.refs.parallax.offsetTop) / 10;
-
-    if (screen.width >= 667) {
-      this.refs.parallax.style.backgroundPosition = `0px ${top}px`;
-    }
-  }
-
   render() {
-    const { calc: {
-      calculate,
-      data: { expand, monthly, downpayment },
-    } } = this.context;
+    const {
+      app,
+      calc: {
+        calculate,
+        data: {
+          expand,
+          monthly,
+          downpayment,
+        },
+      },
+    } = this.context;
 
     return (
       <section className={s.root}>
@@ -84,12 +82,19 @@ export default class Home extends Component {
               <i>I want to buy<br />a home for</i>
             </span>
             <span className={s.dollar}>$</span>
-            <input
-              ref="calc"
-              type="text"
-              defaultValue="800000"
+            <DynamicNumber
+              separator={'.'}
+              integer={7}
+              fraction={10}
+              positive
+              negative={false}
+              thousand
+              placeholder="800000"
+              value="800000"
               className={s.form}
-              onChange={() => { calculate(this.refs.calc.value, this.refs.calc.defaultValue); }}
+              onChange={(event) => {
+                calculate(event.target.value, '800000');
+              }}
             />
             <button
               className={s.learn}
@@ -271,43 +276,16 @@ export default class Home extends Component {
             </Row>
           </Grid>
 
-          <Link
-            to="/get-landed"
+          <span
             className={s.learn}
+            onClick={() => { app.showQuiz(); }}
           >
             bring Landed to your school
-          </Link>
+          </span>
 
         </div>
 
         <Press />
-
-        {/*
-          <div className={s.invest}>
-            <i>
-              Want to invest in your community while getting<br />a market-rate return?
-            </i>
-            <span className={s.program}>
-              Invest in a Landed Program
-            </span>
-
-            <img
-              src={ovalLeft}
-              className={s['oval-left']}
-              role="presentation"
-            />
-            <img
-              src={ovalCenter}
-              className={s['oval-center']}
-              role="presentation"
-            />
-            <img
-              src={ovalRight}
-              className={s['oval-right']}
-              role="presentation"
-            />
-          </div>
-        */}
       </section>
     );
   }

@@ -17,6 +17,16 @@ export default class QuizPopUp extends Component {
     app: PropTypes.object,
   };
 
+  componentDidMount() {
+    const { app } = this.context;
+
+    document.addEventListener('keydown', () => {
+      if (event.keyCode === 27) {
+        app.hideQuiz();
+      }
+    }, false);
+  }
+
   render() {
     const { app } = this.context;
 

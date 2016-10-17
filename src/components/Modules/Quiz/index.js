@@ -3,7 +3,6 @@ import { Row, Col } from 'react-bootstrap';
 import R from 'ramda';
 import Select from 'react-select';
 import $ from 'jquery';
-import Rebase from 're-base';
 import cx from 'classnames';
 
 // Utils
@@ -53,15 +52,6 @@ export default class Quiz extends Component {
         location,
       },
     };
-
-    const base = Rebase.createClass('https://dblanded.firebaseio.com');
-
-    base.push('users', {
-      data: req,
-      then() {
-        console.log('complete');
-      },
-    });
 
     const request = $.ajax({
       url: 'http://landed.com/mail.php',

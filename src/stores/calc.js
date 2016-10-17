@@ -22,7 +22,9 @@ export default new class Calc {
   };
 
   @action calculate = (value, defaultValue) => {
-    const data = value !== '' ? value : defaultValue;
+    const data = value !== ''
+      ? value.replace(/,/g, '')
+      : defaultValue;
 
     const getPrice = (price) => (
       price > 100
@@ -32,7 +34,7 @@ export default new class Calc {
 
     if (data !== '') {
       this.data = {
-        pay: value || defaultValue,
+        pay: value.replace(/,/g, '') || defaultValue,
         expand: true,
         monthly: {
           first: getPrice(data * 0.00385),
