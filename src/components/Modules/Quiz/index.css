@@ -30,13 +30,19 @@
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 
+     @media only screen and (max-width: 667px) {
+        padding: 20px 20px 5px 20px;
+        line-height: 16px;  
+      }
+
     p.title {
       font-family: 'SupriaSans Regular';
       font-size: 24px;
       color: $white;
 
       @media only screen and (max-width: 667px) {
-        font-size: 20px;
+        font-size: 18px;
+        line-height: 16px;       
       }
     }
 
@@ -47,7 +53,8 @@
       color: $white;
 
       @media only screen and (max-width: 667px) {
-        font-size: 12px;
+        font-size: 14px;
+        opacity: .8;
       }
     }
   }

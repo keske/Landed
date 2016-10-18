@@ -65,7 +65,7 @@ export default class Home extends Component {
               >
                 <p className={s.title}>
                   If you work at a school,<br />
-                  we’ll help you buy a home
+                  we’ll help you buy a&nbsp;home
                 </p>
               </Col>
             </Row>

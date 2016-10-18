@@ -54,7 +54,7 @@ export default class About extends Component {
                 lg={12} lgOffset={0}
               >
                 <p className={s.title}>
-                  Making home ownership possible, one school at a time.
+                  Making home ownership possible, one school at a&nbsp;time.
                 </p>
                 <br />
                 <p className={s.intro}>
