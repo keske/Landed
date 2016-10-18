@@ -22,7 +22,7 @@ export default class Quiz extends Component {
       email: '',
       location: '',
       stage: '',
-      succes: false,
+      success: false,
     };
   }
 
@@ -63,7 +63,7 @@ export default class Quiz extends Component {
       console.log(data);
     });
 
-    this.setState({ succes: true });
+    this.setState({ success: true });
 
     request.fail((jqXHR, textStatus, errorThrown) => {
       console.log('The following error occurred: ' +
@@ -73,7 +73,7 @@ export default class Quiz extends Component {
   }
 
   render() {
-    const { slider, email, location, stage } = this.state;
+    const { slider, email, location, stage, success } = this.state;
 
     // Get all USA states
     const data = require('./states');
@@ -137,116 +137,133 @@ export default class Quiz extends Component {
           />
         </Row>
 
-        <Row>
-          <div className={s.wrap}>
-            <div
-              className={cx(
-                s.slides,
-                s[`position-${slider}`]
-              )}
-            >
+        {
+          success &&
+            <span className={s.success}>
+              <p className={s.title}>
+                Thanks, and welcome to the Landed community!
+              </p>
+              <p className={s.text}>
+                We'll be in touch soon explaining your next steps.
+              </p>
+            </span>
+        }
 
-              <Col
-                xs={12}
-                sm={12}
-                md={12}
-                lg={12}
-                className={s.slide}
-              >
-                <p className={s.label}>
-                  What’s your email
-                </p>
-                <input
-                  type="text"
-                  placeholder="Your email"
-                  onChange={(event) =>
-                    this.setState({ email: event.target.value })
-                  }
-                />
-              </Col>
+        {
+          !success &&
+            <section>
+              <Row>
+                <div className={s.wrap}>
+                  <div
+                    className={cx(
+                      s.slides,
+                      s[`position-${slider}`]
+                    )}
+                  >
 
-              <Col
-                xs={12}
-                sm={12}
-                md={12}
-                lg={12}
-                className={s.slide}
-              >
-                <p className={s.label}>
-                  Where will the home be located?
-                </p>
-                <Select
-                  name="form-field-location"
-                  value={location || 'Select location'}
-                  searchable={false}
-                  options={states}
-                  optionRenderer={renderStateOption}
-                  onChange={(val) => this.setState({ location: val })}
-                />
-              </Col>
+                    <Col
+                      xs={12}
+                      sm={12}
+                      md={12}
+                      lg={12}
+                      className={s.slide}
+                    >
+                      <p className={s.label}>
+                        What’s your email
+                      </p>
+                      <input
+                        type="text"
+                        placeholder="Your email"
+                        onChange={(event) =>
+                          this.setState({ email: event.target.value })
+                        }
+                      />
+                    </Col>
 
-              <Col
-                xs={12}
-                sm={12}
-                md={12}
-                lg={12}
-                className={s.slide}
-              >
-                <p className={s.label}>
-                  What stage of the home buying <br className="show-xs hidden-sm hidden-md hidden-lg" />process are we?
-                </p>
-                <Select
-                  className={s['stage-style']}
-                  searchable={false}
-                  name="form-field-stage"
-                  options={options}
-                  optionRenderer={renderOption}
-                  valueRenderer={renderOption}
-                  value={stage || 'Select stage'}
-                  onChange={(val) => this.setState({ stage: val })}
-                />
-              </Col>
+                    <Col
+                      xs={12}
+                      sm={12}
+                      md={12}
+                      lg={12}
+                      className={s.slide}
+                    >
+                      <p className={s.label}>
+                        Where will the home be located?
+                      </p>
+                      <Select
+                        name="form-field-location"
+                        value={location || 'Select location'}
+                        searchable={false}
+                        options={states}
+                        optionRenderer={renderStateOption}
+                        onChange={(val) => this.setState({ location: val })}
+                      />
+                    </Col>
 
-            </div>
-          </div>
-        </Row>
+                    <Col
+                      xs={12}
+                      sm={12}
+                      md={12}
+                      lg={12}
+                      className={s.slide}
+                    >
+                      <p className={s.label}>
+                        What stage of the home buying <br className="show-xs hidden-sm hidden-md hidden-lg" />process are we?
+                      </p>
+                      <Select
+                        className={s['stage-style']}
+                        searchable={false}
+                        name="form-field-stage"
+                        options={options}
+                        optionRenderer={renderOption}
+                        valueRenderer={renderOption}
+                        value={stage || 'Select stage'}
+                        onChange={(val) => this.setState({ stage: val })}
+                      />
+                    </Col>
 
-        <Row className={s.nav}>
-          <div
-            className={s['text-left']}
-          >
-            <div
-              className={cx(
-                s.button,
-                s.previous,
-                { [s.hide]: slider === 0 }
-              )}
-              onClick={() => this.backSlider()}
-            >
-              <span className={s['previous-icon']} />
-              previous
-            </div>
-          </div>
-          <div
-            className={s['text-right']}
-          >
-            <button
-              className={cx(s.button, s.next)}
-              onClick={() => (
-                slider === MAX_SLIDERS
-                  ? this.handleRequest()
-                  : this.nextSlider()
-              )}
-              disabled={
-                slider === 0 && !isEmailValid(email) ||
-                slider === 1 && location === ''
-              }
-            >
-              next
-              <span className={s['next-icon']} />
-            </button>
-          </div>
-        </Row>
+                  </div>
+                </div>
+              </Row>
+
+              <Row className={s.nav}>
+                <div
+                  className={s['text-left']}
+                >
+                  <div
+                    className={cx(
+                      s.button,
+                      s.previous,
+                      { [s.hide]: slider === 0 }
+                    )}
+                    onClick={() => this.backSlider()}
+                  >
+                    <span className={s['previous-icon']} />
+                    previous
+                  </div>
+                </div>
+                <div
+                  className={s['text-right']}
+                >
+                  <button
+                    className={cx(s.button, s.next)}
+                    onClick={() => (
+                      slider === MAX_SLIDERS
+                        ? this.handleRequest()
+                        : this.nextSlider()
+                    )}
+                    disabled={
+                      slider === 0 && !isEmailValid(email) ||
+                      slider === 1 && location === ''
+                    }
+                  >
+                    next
+                    <span className={s['next-icon']} />
+                  </button>
+                </div>
+              </Row>
+            </section>
+        }
 
       </section>
     );

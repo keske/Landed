@@ -52,6 +52,27 @@
     }
   }
 
+  .success {
+    margin: 50px 0 30px;
+    width: 600px;
+
+    display: inline-block;
+    text-align: center;
+
+    p.title {
+      font-family: 'Jannon10Pro-Italic';
+      font-size: 29px;
+      line-height: 22px;
+      color: $green;
+    }
+
+    p.text {
+      font-family: 'SupriaSans Regular';
+      color: $green;
+      font-size: 14px;
+    }
+  }
+
   .nav {
     position: relative;
 
