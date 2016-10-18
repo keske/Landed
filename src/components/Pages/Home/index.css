@@ -9,7 +9,7 @@
   background-size: 100% auto;
 
   @media only screen and (max-width: 667px) {
-    background: url(./files/bg_new.jpg);
+    background: url(./files/bg_mobile.jpg);
     background-size: 100% auto;
   }
   
@@ -32,7 +32,9 @@
     }
 
     @media only screen and (max-width: 667px) {
-      font-size: 36px;
+      font-size: 26px;
+      line-height: 28px;
+      padding-top: 140px;
     }
   }
 
@@ -80,6 +82,11 @@
     box-shadow: 0 8px 17px rgba(0, 0, 0, .4);
     border: 2px solid rgba(0, 150, 105, 1);
   }
+
+  @media only screen and (max-width: 667px) {
+      margin-bottom: 30px;
+    }
+
 }
 
 .calculate,  .program {
@@ -131,8 +138,9 @@
   width: 520px;
 
   @media only screen and (max-width: 667px) {
-    width: 90%;
-    margin-left: 5%;
+    width: 96%;
+    margin-left: 1%;
+     padding: 20px 20px 20px 10px !important;
   }
 
   .want {
@@ -148,16 +156,31 @@
 
     position: relative;
     top: 10px;
+
+    @media only screen and (max-width: 667px) {
+        font-size: 14px;    
+         width: 30%;         
+         top: 5px;
+         line-height: 15px;
+        
+      }
+
   }
 
   .dollar {
     font-size: 16px;
+    line-height: 20px;
 
     position: absolute;
     z-index: 1;
 
     margin-top: 19px;
     margin-left: 10px;
+
+      @media only screen and (max-width: 667px) {
+        margin-top: 13px;
+        font-size: 13px;
+      }
   }
   
   .form {
@@ -177,11 +200,21 @@
     font-size: 25px;
 
     outline: none;
+
+
+    @media only screen and (max-width: 667px) {
+        font-size: 16px;        
+      }
   }
 
   input[type="text"] {
     display: inline-block;
     width: 40%;
+
+       @media only screen and (max-width: 667px) {
+        width: 47%;      
+      }
+
   }
 
   button {
@@ -212,19 +245,28 @@
 
     @media only screen and (max-width: 667px) {
       display: inline-block;
+      padding: 10px 20px 10px 20px;
+      top: 0px;
     }
   }
 }
 
 .calc {
   text-align: center;
-  padding: 10px 0;
+  padding: 10px 0;  
 
   .lead {
     font-size: 20px;
     line-height: 20px;
 
     font-family: @supriaSans;
+
+      @media only screen and (max-width: 667px) {
+        font-size: 16px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        
+      }
   }
 
   &.expand {
@@ -433,20 +475,31 @@
   padding: 80px 0;
   margin-top: 15px;
 
-
   text-align: center;
 
   border-top: 1px solid rgb(233,233,233);
 
+   @media only screen and (max-width: 667px) {
+       padding: 20px 0;
+        
+      }
+
   .one-two-three {
 
   margin-bottom: 25px;
+
 
     img {
       width: 80%;
 
       margin-top: 50px;
       margin-left: 10%;
+
+      @media only screen and (max-width: 667px) {
+       width: 70%;
+       margin-top: 20px;        
+        
+      }
     }
 
     .num {

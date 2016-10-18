@@ -404,11 +404,10 @@ export default class HowItWorks extends Component {
         </Grid>
 
         <div
-          ref="parallax"
           className={s.image}
         >
           <p className={s.head}>
-            Start<br />a Landed Program<br /><i>today</i>
+            Start a Landed<br />Program <i>today</i>
           </p>
           <Link
             to="get-landed"

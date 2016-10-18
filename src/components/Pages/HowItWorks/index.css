@@ -44,6 +44,15 @@
 
   &.how {
     padding: 100px 0;
+
+      @media only screen and (max-width: 667px) {
+      padding: 60px 0px 10px 10px;
+      }
+  }
+
+  @media only screen and (max-width: 667px) {
+    font-size: 32px;
+    line-height: 35px;    
   }
 }
 
@@ -145,6 +154,8 @@
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -350,19 +361,20 @@
 
 .image {
   width: 100%;
+  height: auto;
 
   margin-top: 50px;
 
   text-align: center;
 
   background: url(./files/get-landed.jpg);
-  background-size: 100% auto;
+  background-size: cover;
+  
 
-  @media only screen 
-    and (max-width: 667px) {
-      background: url(./files/get-landed.jpg);
-      background-size: auto 100%;
-      background-position: -600px 0;
+  @media only screen and (max-width: 667px) {
+      background: url(./files/get-landed-m.jpg);
+      background-size: cover;  
+     
   }
 
   p {

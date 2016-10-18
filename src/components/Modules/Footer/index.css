@@ -8,9 +8,12 @@
   .logo {
     opacity: 1;
     border: none;
-
+    
     img {
       width: 110px;
+      @media only screen and (max-width: 667px) {
+      margin-bottom:20px;
+    }
     }
   }
 
