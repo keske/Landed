@@ -18,7 +18,7 @@ export default class Header extends Component {
     super(props);
 
     this.state = {
-      green: false,
+      green: window.innerWidth < 640,
     };
   }
 
@@ -32,7 +32,7 @@ export default class Header extends Component {
 
   animateHeader = () => {
     this.setState({
-      green: window.pageYOffset > 200,
+      green: false,
     });
   }
 
@@ -68,7 +68,7 @@ export default class Header extends Component {
       <section
         className={cx(
           s.root,
-          { [s.green]: green },
+          { [s.green]: green || window.innerWidth < 640 },
           s[`color-${app.headerColor}`],
         )}
       >
