@@ -22,8 +22,6 @@ export default class HowItWorks extends Component {
   componentDidMount() {
     const { app } = this.context;
 
-    window.addEventListener('scroll', this.parallax);
-
     app.headerSetColor('green');
     app.hideMenu();
 
@@ -34,18 +32,13 @@ export default class HowItWorks extends Component {
     window.removeEventListener('scroll', this.parallax);
   }
 
-  parallax = () => {
-    const top = (window.pageYOffset - this.refs.parallax.offsetTop) / 10;
-
-    if (screen.width >= 667) {
-      this.refs.parallax.style.backgroundPosition = `0px ${top}px`;
-    }
-  }
-
   render() {
-    const { calc: {
-      data: { pay },
-    } } = this.context;
+    const {
+      app,
+      calc: {
+        data: { pay },
+      },
+    } = this.context;
 
     return (
       <section className={s.root}>

@@ -96,12 +96,18 @@
 
         margin-left: 30px;
 
+        cursor: pointer;
+
         &:hover {
           color: $green;
 
           span.previous-icon {
             opacity: 1;
           }
+        }
+
+        &.hide {
+          display: none;
         }
 
         span.previous-icon {
@@ -138,6 +144,8 @@
 
         border: none;
 
+        cursor: pointer;
+
         @media only screen and (max-width: 667px) {
           margin-right: 8%;
         }
@@ -148,6 +156,7 @@
 
         &:disabled {
           opacity: .3;
+          cursor: default;
         }
 
         span.next-icon {

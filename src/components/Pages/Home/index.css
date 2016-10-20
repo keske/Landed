@@ -116,6 +116,13 @@
   font-family: $janon;
   font-size: 41px;
   line-height: 39px;
+
+  @media only screen and (max-width: 667px) {
+    font-size: 36px;
+    line-height: 34px;
+
+    padding: 0 50px;
+  }
 }
 
 .intro {

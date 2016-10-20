@@ -232,10 +232,19 @@ export default class Home extends Component {
           <Grid className={s['one-two-three']}>
             <Row>
               <Col
-                xs={12}
-                sm={12}
-                md={4}
-                lg={4}
+                xs={10} xsOffset={1}
+                sm={10} mdOffset={1}
+                md={4} mdOffset={0}
+                lg={4} lgOffset={0}
+              >
+              </Col>
+            </Row>
+            <Row>
+              <Col
+                xs={10} xsOffset={1}
+                sm={10} mdOffset={1}
+                md={4} mdOffset={0}
+                lg={4} lgOffset={0}
               >
                 <img src={require('./files/p1.jpg')} />
                 <span className={s.num}>
@@ -246,10 +255,10 @@ export default class Home extends Component {
                 </p>
               </Col>
               <Col
-                xs={12}
-                sm={12}
-                md={4}
-                lg={4}
+                xs={10} xsOffset={1}
+                sm={10} mdOffset={1}
+                md={4} mdOffset={0}
+                lg={4} lgOffset={0}
               >
                 <img src={require('./files/p2.jpg')} />
                 <span className={s.num}>
@@ -260,10 +269,10 @@ export default class Home extends Component {
                 </p>
               </Col>
               <Col
-                xs={12}
-                sm={12}
-                md={4}
-                lg={4}
+                xs={10} xsOffset={1}
+                sm={10} mdOffset={1}
+                md={4} mdOffset={0}
+                lg={4} lgOffset={0}
               >
                 <img src={require('./files/p3.jpg')} />
                 <span className={s.num}>

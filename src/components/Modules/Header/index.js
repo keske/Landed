@@ -32,7 +32,7 @@ export default class Header extends Component {
 
   animateHeader = () => {
     this.setState({
-      green: false,
+      green: window.pageYOffset > 200 && !window.innerWidth < 640,
     });
   }
 
