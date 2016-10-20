@@ -300,7 +300,7 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.green}>
-                        ${numberWithCommas(Math.ceil(+pay * (0.284) + 75000))}
+                        ${numberWithCommas(+pay * (0.284).toFixed(1) + 75000)}
                       </p>
                     </span>
                   </div>
@@ -393,7 +393,7 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.green}>
-                        ${numberWithCommas(Math.ceil(+pay * (0.284) - 75000))}
+                        ${numberWithCommas(+pay * (0.284).toFixed(1) - 75000)}
                       </p>
                     </span>
                   </div>
@@ -409,12 +409,12 @@ export default class HowItWorks extends Component {
           <p className={s.head}>
             Start a Landed<br />Program <i>today</i>
           </p>
-          <Link
-            to="get-landed"
+          <span
             className={s['get-landed']}
+            onClick={() => { app.showQuiz(); }}
           >
             bring Landed to your school
-          </Link>
+          </span>
         </div>
 
         <p className={s.head}>

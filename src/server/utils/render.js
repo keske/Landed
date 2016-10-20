@@ -33,6 +33,7 @@ export const renderFullPage = (html, devPort, domain, initialState = null, head)
           window.__INITIAL_STATE__ = ${JSON.stringify(initialState || {})};
         </script>
 
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDN3lvuQwak4fCIrPILC7ZaF5tMZKRPmgI&libraries=places"></script>
         <script src="http://${domain}:${devPort}/dist/vendor.js"></script>
         <script src="http://${domain}:${devPort}/dist/main.js"></script>
       </body>

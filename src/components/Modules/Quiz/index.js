@@ -4,14 +4,15 @@ import R from 'ramda';
 import Select from 'react-select';
 import $ from 'jquery';
 import cx from 'classnames';
+import Autocomplete from 'react-google-autocomplete'
 
 // Utils
-import { isEmailValid } from 'utils/validate.js';
+import { isEmailValid, isPhoneValid } from 'utils/validate.js';
 
 // Styles
 import s from './index.css';
 
-const MAX_SLIDERS = 2;
+const MAX_SLIDERS = 3;
 
 export default class Quiz extends Component {
   constructor(props) {
@@ -19,37 +20,44 @@ export default class Quiz extends Component {
 
     this.state = {
       slider: 0,
+      other: false,
       email: '',
-      location: '',
-      stage: '',
+      persontype: '',
+      othertype: '',
+      school: '',
+      number: '',
       success: false,
     };
   }
 
   nextSlider() {
-    const { slider } = this.state;
-
+    const { slider, other, persontype } = this.state;
     this.setState({
+      other: (persontype.value == "Other" && slider == 1) ? true : other,
       slider: slider < MAX_SLIDERS ? R.sum([slider, 1]) : slider,
     });
+    console.log(other);
   }
 
   backSlider() {
-    const { slider } = this.state;
+    const { slider, other, persontype } = this.state;
 
     this.setState({
+      other: (persontype.value == "Other" && slider == 2) ? false : other,
       slider: slider > 0 ? R.subtract(slider, 1) : slider,
     });
   }
 
   handleRequest() {
-    const { email, location, stage } = this.state;
+    const { email, persontype, othertype, school, number } = this.state;
 
     const req = {
       email,
       data: {
-        stage,
-        location,
+        persontype,
+        othertype,
+        school,
+        number
       },
     };
 
@@ -73,7 +81,7 @@ export default class Quiz extends Component {
   }
 
   render() {
-    const { slider, email, location, stage, success } = this.state;
+    const { slider, other, email, persontype, othertype, school, number, success } = this.state;
 
     // Get all USA states
     const data = require('./states');
@@ -87,31 +95,64 @@ export default class Quiz extends Component {
     });
 
     // Render customize state options for react-select
-    const renderStateOption = (option) =>
+/*    const renderStateOption = (option) =>
       <span className={s['select-option']}>
         <span className={s['select-label']}>
           {option.label}
         </span>
-      </span>;
+      </span>; */
 
     // Stage options
-    const options = [{
-      label: 'Early Search Without Broker',
-      value: 'Early Search Without Broker',
-      text: 'Just understanding the different options.',
+    const optionsPersonType = [{
+      label: 'I have a leadership role at a school or district',
+      value: 'Leader',
+      text: 'I want to understand how to start a Landed program',
     }, {
-      label: 'Already Searching With Broker',
-      value: 'Already Searching With Broker',
-      text: 'The perfect home hasn’t been found yet.',
+      label: 'I\'m a teacher or staff member at a school',
+      value: 'Customer',
+      text: 'I want to learn more about how Landed would work at my school',
     }, {
-      label: 'Post-Offer',
-      value: 'Post-Offer',
-      text: 'An offer has been accepted but property is still closing.',
-    }, {
-      label: 'Already Closed',
-      value: 'Already Closed',
-      text: 'Looking to make our informal deal more formal.',
+      label: 'I don\'t fit those categories',
+      value: 'Other',
+      text: 'But I still want to learn more about Landed!',
     }];
+    const optionsOtherType = [{
+      label: 'I\'m a realtor',
+      value: 'Realtor',
+      text: 'I want to work with Landed homebuyers',
+    }, {
+      label: 'I\'m a banker',
+      value: 'Banker',
+      text: 'I want to learn about lending against Landed partnerships',
+    }, {
+      label: 'I\'m an accredited community investor',
+      value: 'Investor',
+      text: 'I want to know whether my community already has a fund',
+    }, {
+      label: 'I\'m a member of the press',
+      value: 'Press',
+      text: 'I want to learn more about the Landed story',
+    }, {
+      label: 'None of the above',
+      value: 'Other',
+      text: 'I just want to learn more',
+    }];
+/*    const optionsPersonRole = [{
+      label: 'I have a leadership role at a school or district',
+      value: 'Leader',
+      text: 'I want to understand how to start a Landed program',
+    }, {
+      label: 'I\'m a teacher or staff member at a school',
+      value: 'Customer',
+      text: 'I want to learn more about how Landed would work at my school',
+    }, {
+      label: 'I don\'t fit those categories',
+      value: 'Post-Offer',
+      text: 'But I still want to learn more about Landed!',
+    }]; */
+
+
+
 
     // Render option
     const renderOption = (option) =>
@@ -126,13 +167,13 @@ export default class Quiz extends Component {
           <p
             className={s.title}
             dangerouslySetInnerHTML={{ __html:
-              'Join Landed\'s home buyer waitlist',
+              'Bring Landed to your school',
             }}
           />
           <p
             className={s.info}
             dangerouslySetInnerHTML={{ __html:
-              'We\'re adding new users every few weeks and we\'ll be in touch before you know it.',
+              'We\'re adding new schools every week. Have your school be next!',
           }}
           />
         </Row>
@@ -141,10 +182,10 @@ export default class Quiz extends Component {
           success &&
             <span className={s.success}>
               <p className={s.title}>
-                Thanks, and welcome to the Landed community!
+                Thanks!
               </p>
               <p className={s.text}>
-                We'll be in touch soon explaining your next steps.
+                We'll be in touch soon with next steps.
               </p>
             </span>
         }
@@ -157,7 +198,7 @@ export default class Quiz extends Component {
                   <div
                     className={cx(
                       s.slides,
-                      s[`position-${slider}`]
+                      s[`position-${slider}-${other}`]
                     )}
                   >
 
@@ -188,15 +229,17 @@ export default class Quiz extends Component {
                       className={s.slide}
                     >
                       <p className={s.label}>
-                        Where will the home be located?
+                        How would you describe yourself?
                       </p>
                       <Select
-                        name="form-field-location"
-                        value={location || 'Select location'}
+                        className={s['stage-style']}
                         searchable={false}
-                        options={states}
-                        optionRenderer={renderStateOption}
-                        onChange={(val) => this.setState({ location: val })}
+                        name="form-field-stage"
+                        options={optionsPersonType}
+                        optionRenderer={renderOption}
+                        valueRenderer={renderOption}
+                        value={persontype || 'Select best'}
+                        onChange={(val) => this.setState({ persontype: val })}
                       />
                     </Col>
 
@@ -208,17 +251,64 @@ export default class Quiz extends Component {
                       className={s.slide}
                     >
                       <p className={s.label}>
-                        What stage of the home buying <br className="show-xs hidden-sm hidden-md hidden-lg" />process are we?
+                        At what school do you work?
+                      </p>
+                      <Autocomplete
+                          style={{
+                            border: '1px solid rgba(0, 155, 105, .33)',
+                            padding: '11px 30px 11px 20px',
+                            display: 'inline-block',
+                            width: '100%',
+                            outline: 'none',
+                          }}
+                          placeholder="School Name"
+                          onPlaceSelected={(place) => {
+                            console.log(place);
+                            this.setState({ school: place.name });
+                            }
+                          }
+                          types={['establishment']}
+                      />
+                    </Col>
+
+                    <Col
+                      xs={12}
+                      sm={12}
+                      md={12}
+                      lg={12}
+                      className={s.slide}
+                    >
+                      <p className={s.label}>
+                        What’s your phone number?
+                      </p>
+                      <input
+                        type="text"
+                        placeholder="Your phone number"
+                        onChange={(event) =>
+                          this.setState({ number: event.target.value })
+                        }
+                      />
+                    </Col>
+
+                    <Col
+                      xs={12}
+                      sm={12}
+                      md={12}
+                      lg={12}
+                      className={s.slide}
+                    >
+                      <p className={s.label}>
+                        What kind of other?
                       </p>
                       <Select
                         className={s['stage-style']}
                         searchable={false}
                         name="form-field-stage"
-                        options={options}
+                        options={optionsOtherType}
                         optionRenderer={renderOption}
                         valueRenderer={renderOption}
-                        value={stage || 'Select stage'}
-                        onChange={(val) => this.setState({ stage: val })}
+                        value={persontype || 'Select best'}
+                        onChange={(val) => this.setState({ othertype: val })}
                       />
                     </Col>
 
@@ -254,7 +344,9 @@ export default class Quiz extends Component {
                     )}
                     disabled={
                       slider === 0 && !isEmailValid(email) ||
-                      slider === 1 && location === ''
+                      slider === 1 && persontype === '' ||
+                      slider === 2 && (school === '' && othertype === '') ||
+                      slider === 3 && !isPhoneValid(number) === ''
                     }
                   >
                     next

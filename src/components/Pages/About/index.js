@@ -158,11 +158,8 @@ export default class About extends Component {
                   <p className={s.name}>
                     Alex Lofton
                   </p>
-                  <p className={s.role}>
-                    co-founder, President
-                  </p>
                   <p className={s.description}>
-                    Customers and Partnerships. 
+                    Head of Growth.
                     <br />
                     Recovering campaigner.
                   </p>
@@ -183,11 +180,8 @@ export default class About extends Component {
                   <p className={s.name}>
                     Jonathan Asmis
                   </p>
-                  <p className={s.role}>
-                    co-founder, CEO
-                  </p>
                   <p className={s.description}>
-                    Investments.
+                    CEO.
                     <br />
                     Recovering engineer.
                   </p>
@@ -208,11 +202,8 @@ export default class About extends Component {
                   <p className={s.name}>
                     Jesse Vaughan
                   </p>
-                  <p className={s.role}>
-                    co-founder
-                  </p>
                   <p className={s.description}>
-                    Product.
+                    Head of Product.
                     <br />
                     Recovering frontier-markets investor.
                   </p>

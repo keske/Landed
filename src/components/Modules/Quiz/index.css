@@ -38,7 +38,7 @@
     p.title {
       font-family: 'SupriaSans Regular';
       font-size: 24px;
-      color: $white;
+      color: $white;  
 
       @media only screen and (max-width: 667px) {
         font-size: 18px;
@@ -48,12 +48,13 @@
 
     p.info {
       font-family: 'Jannon10Pro-Italic';
-      font-size: 14px;
-      opacity: .5;
+      font-size: 16px;
+      opacity: .8;
+      margin-top: -10px;
       color: $white;
 
       @media only screen and (max-width: 667px) {
-        font-size: 14px;
+        font-size: 16px;
         opacity: .8;
       }
     }
@@ -175,7 +176,7 @@
     .slides {
       transition: .3s;
 
-      &.position-0 {
+      &.position-0-false {
         .slide:nth-child(1) {
           display: block;
         }
@@ -183,11 +184,20 @@
           display: none;
         }
         .slide:nth-child(3) {
+          display: none;
+        }
+        .slide:nth-child(4) {
+          display: none;
+        }
+        .slide:nth-child(5) {
+          display: none;
+        }
+        .slide:nth-child(6) {
           display: none;
         }
       }
 
-      &.position-1 {
+      &.position-1-false {
         .slide:nth-child(1) {
           display: none;
         }
@@ -195,11 +205,20 @@
           display: block;
         }
         .slide:nth-child(3) {
+          display: none;
+        }
+        .slide:nth-child(4) {
+          display: none;
+        }
+        .slide:nth-child(5) {
+          display: none;
+        }
+        .slide:nth-child(6) {
           display: none;
         }
       }
 
-      &.position-2 {
+      &.position-2-false {
         .slide:nth-child(1) {
           display: none;
         }
@@ -209,7 +228,121 @@
         .slide:nth-child(3) {
           display: block;
         }
+        .slide:nth-child(4) {
+          display: none;
+        }
+        .slide:nth-child(5) {
+          display: none;
+        }
+        .slide:nth-child(6) {
+          display: none;
+        }
       }
+
+      &.position-2-true {
+        .slide:nth-child(1) {
+          display: none;
+        }
+        .slide:nth-child(2) {
+          display: none;
+        }
+        .slide:nth-child(3) {
+          display: none;
+        }
+        .slide:nth-child(4) {
+          display: none;
+        }
+        .slide:nth-child(5) {
+          display: block;
+        }
+        .slide:nth-child(6) {
+          display: none;
+        }
+      }
+
+
+      &.position-3-false {
+        .slide:nth-child(1) {
+          display: none;
+        }
+        .slide:nth-child(2) {
+          display: none;
+        }
+        .slide:nth-child(3) {
+          display: none;
+        }
+        .slide:nth-child(4) {
+          display: block;
+        }
+        .slide:nth-child(5) {
+          display: none;
+        }
+        .slide:nth-child(6) {
+          display: none;
+        }
+      }
+      &.position-4-false {
+        .slide:nth-child(1) {
+          display: none;
+        }
+        .slide:nth-child(2) {
+          display: none;
+        }
+        .slide:nth-child(3) {
+          display: none;
+        }
+        .slide:nth-child(4) {
+          display: none;
+        }
+        .slide:nth-child(5) {
+          display: block;
+        }
+        .slide:nth-child(6) {
+          display: none;
+        }
+      }
+
+      &.position-3-true {
+        .slide:nth-child(1) {
+          display: none;
+        }
+        .slide:nth-child(2) {
+          display: none;
+        }
+        .slide:nth-child(3) {
+          display: none;
+        }
+        .slide:nth-child(4) {
+          display: block;
+        }
+        .slide:nth-child(5) {
+          display: none;
+        }
+        .slide:nth-child(6) {
+          display: none;
+        }
+      }
+      &.position-4-true {
+        .slide:nth-child(1) {
+          display: none;
+        }
+        .slide:nth-child(2) {
+          display: none;
+        }
+        .slide:nth-child(3) {
+          display: none;
+        }
+        .slide:nth-child(4) {
+          display: none;
+        }
+        .slide:nth-child(5) {
+          display: block;
+        }
+        .slide:nth-child(6) {
+          display: none;
+        }
+      }
+
 
       .slide {
         float: left;
