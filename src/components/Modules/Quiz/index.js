@@ -4,7 +4,7 @@ import R from 'ramda';
 import Select from 'react-select';
 import $ from 'jquery';
 import cx from 'classnames';
-import Autocomplete from 'react-google-autocomplete'
+import Autocomplete from 'react-google-autocomplete';
 
 // Utils
 import { isEmailValid, isPhoneValid } from 'utils/validate.js';
@@ -33,7 +33,7 @@ export default class Quiz extends Component {
   nextSlider() {
     const { slider, other, persontype } = this.state;
     this.setState({
-      other: (persontype.value == "Other" && slider == 1) ? true : other,
+      other: (persontype.value === "Other" && slider === 1) ? true : other,
       slider: slider < MAX_SLIDERS ? R.sum([slider, 1]) : slider,
     });
     console.log(other);
@@ -43,7 +43,7 @@ export default class Quiz extends Component {
     const { slider, other, persontype } = this.state;
 
     this.setState({
-      other: (persontype.value == "Other" && slider == 2) ? false : other,
+      other: (persontype.value === "Other" && slider === 2) ? false : other,
       slider: slider > 0 ? R.subtract(slider, 1) : slider,
     });
   }
@@ -57,7 +57,7 @@ export default class Quiz extends Component {
         persontype,
         othertype,
         school,
-        number
+        number,
       },
     };
 
@@ -150,9 +150,6 @@ export default class Quiz extends Component {
       value: 'Post-Offer',
       text: 'But I still want to learn more about Landed!',
     }]; */
-
-
-
 
     // Render option
     const renderOption = (option) =>
@@ -254,20 +251,19 @@ export default class Quiz extends Component {
                         At what school do you work?
                       </p>
                       <Autocomplete
-                          style={{
-                            border: '1px solid rgba(0, 155, 105, .33)',
-                            padding: '11px 30px 11px 20px',
-                            display: 'inline-block',
-                            width: '100%',
-                            outline: 'none',
-                          }}
-                          placeholder="School Name"
-                          onPlaceSelected={(place) => {
-                            console.log(place);
-                            this.setState({ school: place.name });
-                            }
-                          }
-                          types={['establishment']}
+                        style={{
+                          border: '1px solid rgba(0, 155, 105, .33)',
+                          padding: '11px 30px 11px 20px',
+                          display: 'inline-block',
+                          width: '100%',
+                          outline: 'none',
+                        }}
+                        placeholder="School Name"
+                        onPlaceSelected={(place) => {
+                          console.log(place);
+                          this.setState({ school: place.name });
+                        }}
+                        types={['establishment']}
                       />
                     </Col>
 

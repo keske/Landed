@@ -1,0 +1,112 @@
+.root {
+  position: relative;
+  
+  color: #FFF;
+  background: rgba(17, 129, 89, 1);
+
+  @media only screen and (max-width: 667px) {
+    width: 100%;
+  }
+
+  padding: 20px 0;
+
+  span.email-icon {
+    $size: 18px;
+
+    width: $size;
+    height: $size;
+
+    display: inline-block;
+
+    background: url(./files/email.svg);
+    background-size: 100% auto;
+    background-repeat: no-repeat; 
+
+    position: relative;
+    top: 12px;
+    left: -30px;
+
+    @media only screen and (max-width: 667px) {
+      display: none;
+    }
+  }
+
+  span.title {
+    font-family: 'SupriaSans Regular';
+
+    color: #FFF;
+    font-size: 14px;
+
+    position: relative;
+    top: 6px;
+    left: -20px;
+
+    @media only screen and (max-width: 667px) {
+      display: none;
+    }
+  }
+
+  input[type="email"] {
+    width: 100%;
+
+    font-family: 'Jannon10Pro-Italic';
+    font-size: 14px;
+
+    padding: 3px 7px;
+
+    background: none;
+    border: none;
+    border-bottom: 1px solid #FFF;
+
+    outline: none;
+
+    margin-left: -30px;
+
+    position: relative;
+    top: 4px;
+
+    color: #FFF;
+
+    $placeholderColor: #FFF;
+
+    ::-webkit-input-placeholder {
+      color: $placeholderColor;
+    }
+    ::-moz-placeholder {
+      color: $placeholderColor;
+    }
+    :-moz-placeholder {
+      color: $placeholderColor;
+    }
+    :-ms-input-placeholder {
+      color: $placeholderColor;
+    }
+  }
+
+  button, input[type="submit"] {
+    font-family: 'SupriaSans Regular';
+    font-size: 14px;
+
+    color: #FFF;
+    background: none;
+
+    padding: 5px 15px;
+
+    border: 1px solid #FFF;
+    border-radius: 10px;
+
+    opacity: .8;
+
+    @media only screen and (max-width: 667px) {
+      font-family: 'SupriaSans Light';
+      font-size: 10px;
+      height: 35px;
+      width: 35px;
+      padding: 8px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
