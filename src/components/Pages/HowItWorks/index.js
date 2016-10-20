@@ -281,7 +281,7 @@ export default class HowItWorks extends Component {
                         Your 75% Share
                       </p>
                       <p>
-                        (plus money built in home)*
+                        (plus equity in home)
                       </p>
                     </span>
                     <span className={s['col-3']}>
@@ -374,7 +374,7 @@ export default class HowItWorks extends Component {
                         Your 75% Share
                       </p>
                       <p>
-                        (plus money built in home)*
+                        (plus equity in home)
                       </p>
                     </span>
                     <span className={s['col-3']}>
