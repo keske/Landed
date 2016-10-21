@@ -58,7 +58,7 @@ export default class About extends Component {
                 </p>
                 <br />
                 <p className={s.intro}>
-                  At Landed, we’re on a mission to make homeownership accessible, affordable and easy, even in expensive cities.
+                  At Landed, we’re on a mission to make homeownership accessible, affordable, and easy, even in expensive cities.
                 </p>
               </Col>
             </Row>
@@ -159,7 +159,7 @@ export default class About extends Component {
                     Alex Lofton
                   </p>
                   <p className={s.description}>
-                    Head of Growth.
+                    Head of Growth. Co-founder.
                     <br />
                     Recovering campaigner.
                   </p>
@@ -181,7 +181,7 @@ export default class About extends Component {
                     Jonathan Asmis
                   </p>
                   <p className={s.description}>
-                    CEO.
+                    CEO. Co-founder.
                     <br />
                     Recovering engineer.
                   </p>
@@ -203,7 +203,7 @@ export default class About extends Component {
                     Jesse Vaughan
                   </p>
                   <p className={s.description}>
-                    Head of Product.
+                    Head of Product. Co-founder.
                     <br />
                     Recovering frontier-markets investor.
                   </p>

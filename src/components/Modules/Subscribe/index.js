@@ -20,13 +20,13 @@ export default class Subscribe extends Component {
             <Row>
               <Col
                 xs={1} xsHidden
-                sm={5}
-                md={4}
+                sm={4}
+                md={3}
                 lg={3}
               >
                 <span className={s['email-icon']} />
                 <span className={s.title}>
-                  Want to help? Leave us your email
+                  Want regular updates?
                 </span>
               </Col>
               <Col

@@ -94,7 +94,7 @@ export default class HowItWorks extends Component {
                       You need a ${numberWithCommas(+pay / 5)} down payment
                     </p>
                     <p className={s.text}>
-                      You currently have only half of it – ${numberWithCommas(+pay / 10)} saved
+                      You currently have only half of it – ${numberWithCommas(+pay / 10)} saved.
                     </p>
                   </div>
                 </div>
@@ -134,7 +134,7 @@ export default class HowItWorks extends Component {
                   </div>
                   <div className={s.right}>
                     <p className={s.title}>
-                      <i>We help you find your dream home</i> and we both contribute to the down payment
+                      <i>We help you find your dream home</i> and contribute to the down payment.
                     </p>
                     <p className={s.text}>
                       You put in ${numberWithCommas(+pay / 10)}, Landed puts in ${numberWithCommas(+pay / 10)} and the bank provides a ${numberWithCommas(+pay * 0.8)} loan.
@@ -182,10 +182,10 @@ export default class HowItWorks extends Component {
                   </div>
                   <div className={s.right}>
                     <p className={s.title}>
-                      <i>Landed makes its return on</i> investment when you sell or buy out the investment
+                      <i>Landed makes its return on investment</i> when you sell or buy out the investment
                     </p>
                     <p className={s.text}>
-                      There are two ways to end the partnership with Landed. The first is to sell your home. The second is to refinance your home without selling. You can sell or refinance at any time before the end of the Landed term (usually, 10 years).
+                      There are two ways to end the partnership with Landed. The first is to sell your home. The second is to refinance your home without selling. You can sell or refinance at any time before the end of the Landed term (usually 10 years).
                     </p>
                   </div>
                 </div>
@@ -452,7 +452,7 @@ export default class HowItWorks extends Component {
               lg={4} lgOffset={2}
             >
               <p className={s.question}>
-                Who is responsible for property taxes insurance repairs and mamtenance costs?
+                Who is responsible for property taxes, insurance, repairs, and maintenance costs?
               </p>
               <p className={s.answer}>
                 You will be responsible for all the costs of homeownership like any other homeowner.
