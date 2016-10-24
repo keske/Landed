@@ -94,9 +94,9 @@
   color: #333;
 }
 .Select-input {
-  height: 50px; 
+  height: 50px !important; 
   vertical-align: middle;
-  width: 100%!important;
+  width: 100% !important;
 }
 .Select-input > input {
   background: none transparent;
