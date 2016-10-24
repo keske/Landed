@@ -3,11 +3,11 @@ Landed
 
 Site for a San Francisco headquartered company.
 
-First version:
-
 [http://landed.com](http://www.landed.com)
 
-![http://www.landed.com](http://andreykeske.com/github/landed/browser.png)
+First version (192a337c93f36bcc33de5b4c6e60c26629142b8c commit):
+
+![http://www.landed.com](https://raw.githubusercontent.com/keske/Landed/master/github/first.png)
 
 ## Installation
 ```
