@@ -54,7 +54,7 @@ export default class About extends Component {
                 lg={12} lgOffset={0}
               >
                 <p className={s.title}>
-                  Making home ownership possible, one school at a&nbsp;time.
+                  Making homeownership possible, one school at a&nbsp;time.
                 </p>
                 <br />
                 <p className={s.intro}>
@@ -81,7 +81,7 @@ export default class About extends Component {
               </p>
               <p className={s.text}>
                
-                Nobody can responsibly buy their first home by themselves, even with a supportive bank.
+                Many people can't responsibly buy their first home by themselves, even with a supportive bank.
               </p>
               <p className={s.text}>
                

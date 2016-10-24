@@ -207,7 +207,7 @@ export default class Quiz extends Component {
                       className={s.slide}
                     >
                       <p className={s.label}>
-                        What’s your email
+                        What’s your email?
                       </p>
                       <input
                         type="text"
@@ -303,7 +303,7 @@ export default class Quiz extends Component {
                         options={optionsOtherType}
                         optionRenderer={renderOption}
                         valueRenderer={renderOption}
-                        value={persontype || 'Select best'}
+                        value={othertype || 'Select best'}
                         onChange={(val) => this.setState({ othertype: val })}
                       />
                     </Col>

@@ -114,7 +114,7 @@ export default class HowItWorks extends Component {
                       You can partner with Landed and get ${numberWithCommas(+pay / 10)} today
                     </p>
                     <p className={s.text}>
-                      In exchange for 25% of the appreciation or depreciation in the home going forward (if any).
+                      In exchange for 25% of the appreciation when you sell.
                     </p>
                   </div>
                 </div>
