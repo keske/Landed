@@ -235,7 +235,7 @@ export default class Quiz extends Component {
                         options={optionsPersonType}
                         optionRenderer={renderOption}
                         valueRenderer={renderOption}
-                        value={persontype || 'Select best'}
+                        value={persontype}
                         onChange={(val) => this.setState({ persontype: val })}
                       />
                     </Col>
@@ -303,7 +303,7 @@ export default class Quiz extends Component {
                         options={optionsOtherType}
                         optionRenderer={renderOption}
                         valueRenderer={renderOption}
-                        value={othertype || 'Select best'}
+                        value={othertype}
                         onChange={(val) => this.setState({ othertype: val })}
                       />
                     </Col>
