@@ -30,8 +30,7 @@
   border: 1px solid #ccc;
   color: #333;
   cursor: default;
-  display: table;
-  height: 36px;
+  display: 50px;
   outline: none;
   overflow: hidden;
   position: relative;
@@ -62,7 +61,7 @@
 }
 .Select-placeholder {
   bottom: 0;
-  color: #aaa;
+  color: rgba(0, 155, 105, .33);
   left: 0;
   line-height: 34px;
   padding-left: 10px;
