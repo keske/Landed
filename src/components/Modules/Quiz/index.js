@@ -154,8 +154,8 @@ export default class Quiz extends Component {
     // Render option
     const renderOption = (option) =>
       <span className={s['select-option']}>
-        <span className={s['select-label']}>{option.label}</span>
-        <span className={s['select-label']}>{option.text}</span>
+        <p className={s['select-label']}>{option.label}</p>
+        <p className={s['select-text']}>{option.text}</p>
       </span>;
 
     return (
