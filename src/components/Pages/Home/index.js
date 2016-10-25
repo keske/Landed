@@ -247,9 +247,6 @@ export default class Home extends Component {
                 lg={4} lgOffset={0}
               >
                 <img src={require('./files/p1.jpg')} />
-                <span className={s.num}>
-                  1
-                </span>
                 <p>
                   <strong>A Landed program is started at your school</strong> and local investors are brought in to back the program.
                 </p>
@@ -261,9 +258,6 @@ export default class Home extends Component {
                 lg={4} lgOffset={0}
               >
                 <img src={require('./files/p2.jpg')} />
-                <span className={s.num}>
-                  2
-                </span>
                 <p>
                   <strong>You apply to receive funds</strong> from your school’s Landed program, covering up to 50% of the down payment.
                 </p>
@@ -275,9 +269,6 @@ export default class Home extends Component {
                 lg={4} lgOffset={0}
               >
                 <img src={require('./files/p3.jpg')} />
-                <span className={s.num}>
-                  3
-                </span>
                 <p>
                   <strong>Landed helps you find and buy a home</strong> near where you work. We pay half the down payment when you’re ready to buy.
                 </p>

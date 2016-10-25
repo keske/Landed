@@ -437,10 +437,10 @@ export default class HowItWorks extends Component {
               lg={4} lgOffset={0}
             >
               <p className={s.question}>
-                How does Landed make money? Do I get charged a bunch of fees?
+                Is this more expensive than a loan?
               </p>
               <p className={s.answer}>
-                Currently Landed does not charge home buyers any origination fees. We make our money in two ways. First, we charge a small management fee to investors. Second, we partner you with great real estate agents in your area and we charge them a referral fee.
+                It can be, but you'll only know once you end the partnership. While loans have a fixed rate of repayment and an APR, partners only succeed if the venture succeeds. Our customers find that a combination of a partner and a mortgage is better than a large mortgage alone.
               </p>
             </Col>
           </Row>
@@ -455,7 +455,7 @@ export default class HowItWorks extends Component {
                 Who is responsible for property taxes, insurance, repairs, and maintenance costs?
               </p>
               <p className={s.answer}>
-                You will be responsible for all the costs of homeownership like any other homeowner.
+                You will be responsible for all the costs of homeownership like any other homeowner. If you fail to maintain your home, you might face penalties and/or default. Similarly, if you upgrade your home, Landed will endeavor to give you credit for the work done.
               </p>
             </Col>
 
@@ -469,7 +469,7 @@ export default class HowItWorks extends Component {
                 What if I don't want to sell?
               </p>
               <p className={s.answer}>
-                Normally, the Landed investment is made for a 10-year term. That means that if you don't want to sell in the next 10 years, you'll have to repay Landed. Often this happens as a part of a refinancing (when you take out a new loan). You can buy out Landed's investment at any time after the first year without penalty.
+                Normally, the Landed investment is made for a 10-year term. If, before that time, you don't want to sell, you'll have to repay Landed. Often this happens by taking out a new loan or entering a new Landed partnership. You can also end your partnership at any time after the first year without penalty.
               </p>
             </Col>
           </Row>
