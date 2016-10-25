@@ -20,7 +20,7 @@ if (global.ssr && process.env.NODE_ENV === 'development') {
 }
 
 if (process.env.NODE_ENV === 'production') {
-  devUrl = 'http://keske.github.io/Landed/dist/';
+  devUrl = 'http://localhost/';
 }
 
 const common = {
