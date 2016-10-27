@@ -183,7 +183,7 @@ export default class Home extends Component {
               <br />
               <span className={s['left-arrow']} />
               <p className={s.middle}>
-                Landed let's you put down 10%<br />but pay less each month
+                Landed lets you put down 10%<br />but pay less each month
               </p>
               <span className={s['right-arrow']} />
 
