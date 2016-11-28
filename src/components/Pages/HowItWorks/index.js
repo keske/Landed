@@ -391,6 +391,7 @@ export default class HowItWorks extends Component {
                     </span>
                   </div>
                 </div>
+                <p> <br/>Note: these are estimates only. Contact us for more information</p>
               </div>
             </Col>
           </Row>
