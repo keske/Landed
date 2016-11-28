@@ -77,14 +77,12 @@ export default class About extends Component {
               
               <p className={s.head}>
                <img src={require('./files/a1.jpg')} />
-                The system is rigged
+                Insurmountable barriers
               </p>
-              <p className={s.text}>
-               
+              <p className={s.text}>               
                 Many people can't responsibly buy their first home by themselves, even with a supportive bank.
               </p>
-              <p className={s.text}>
-               
+              <p className={s.text}>               
                 Without partners, millions of Americans are making excessively risky investment decisions that the bankers themselves would never make.
               </p>
             </Col>
