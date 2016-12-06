@@ -159,7 +159,7 @@ export default class About extends Component {
                   <p className={s.description}>
                     Head of Growth. Co-founder.
                     <br />
-                    Recovering campaigner.
+                    Former campaigner.
                   </p>
                 </div>
               </Col>
@@ -181,7 +181,7 @@ export default class About extends Component {
                   <p className={s.description}>
                     CEO. Co-founder.
                     <br />
-                    Recovering engineer.
+                    Former engineer.
                   </p>
                 </div>
               </Col>
@@ -203,11 +203,78 @@ export default class About extends Component {
                   <p className={s.description}>
                     Head of Product. Co-founder.
                     <br />
-                    Recovering frontier-markets investor.
+                    Former frontier-markets investor.
                   </p>
                 </div>
               </Col>
-
+            </Row>
+            <Row>
+              <Col
+                xs={10} xsOffset={1}
+                sm={10} smOffset={1}
+                md={4} mdOffset={0}
+                lg={4} lgOffset={0}
+              >
+                <div className={s.card}>
+                  <img
+                    src={require('./files/jess.jpg')}
+                    className={s.circle}
+                    role="presentation"
+                  />
+                  <p className={s.name}>
+                    Jess Zhao
+                  </p>
+                  <p className={s.description}>
+                    Customer Experience.
+                    <br />
+                    Former management consultant.
+                  </p>
+                </div>
+              </Col>
+              <Col
+                xs={10} xsOffset={1}
+                sm={10} smOffset={1}
+                md={4} mdOffset={0}
+                lg={4} lgOffset={0}
+              >
+                <div className={s.card}>
+                  <img
+                    src={require('./files/ian.jpg')}
+                    className={s.circle}
+                    role="presentation"
+                  />
+                  <p className={s.name}>
+                    Ian Magruder
+                  </p>
+                  <p className={s.description}>
+                    Partnerships.
+                    <br />
+                    Former organizer.
+                  </p>
+                </div>
+              </Col>
+              <Col
+                xs={10} xsOffset={1}
+                sm={10} smOffset={1}
+                md={4} mdOffset={0}
+                lg={4} lgOffset={0}
+              >
+                <div className={s.card}>
+                  <img
+                    src={require('./files/nikki.jpg')}
+                    className={s.circle}
+                    role="presentation"
+                  />
+                  <p className={s.name}>
+                    Nikki Lowy
+                  </p>
+                  <p className={s.description}>
+                    Partnerships.
+                    <br />
+                    Former school builder.
+                  </p>
+                </div>
+              </Col>
             </Row>
           </Grid>
         </div>
