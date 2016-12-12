@@ -19,3 +19,4 @@ crashlytics.properties
 crashlytics-build.properties
 .tern-project
 build-analyze.log
+dist/
