@@ -11,9 +11,9 @@
   background-size: cover;
 
   @media only screen and (max-width: 667px) {
-      background: url(./files/bg-m.jpg);
-      background-size: cover;
-    }
+    background: url(./files/bg-m.jpg);
+    background-size: cover;
+  }
 
   .title {
     font-family: $janon;
@@ -29,10 +29,8 @@
     @media only screen and (max-width: 667px) {
       font-size: 40px;
       line-height: 35px;
-       margin-top: 160px;
-      
+      margin-top: 160px;
     }
-
   }
 
   .intro {
@@ -43,14 +41,11 @@
 
     margin: 20px 0 140px;
 
-
-     @media only screen and (max-width: 667px) {
+    @media only screen and (max-width: 667px) {
       margin: 20px 0 120px;
     }
   }
 }
-
-
 
 .head {
   font-family: $janon;
@@ -79,9 +74,9 @@
   display: inline-block;
   max-width: 580px;
 
-   @media only screen and (max-width: 667px) {
-      padding: 0px 30px 00px 30px ;
-    }
+  @media only screen and (max-width: 667px) {
+    padding: 0px 30px 00px 30px ;
+  }
 }
 
 .about {
@@ -112,7 +107,6 @@
 
     @media only screen and (max-width: 667px) {
       padding-right: 0px;
-      
     }
   }
 

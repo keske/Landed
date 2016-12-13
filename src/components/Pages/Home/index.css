@@ -165,13 +165,11 @@
     top: 10px;
 
     @media only screen and (max-width: 667px) {
-        font-size: 14px;    
-         width: 30%;         
-         top: 5px;
-         line-height: 15px;
-        
-      }
-
+      font-size: 14px;    
+      width: 30%;         
+      top: 5px;
+      line-height: 15px;
+    }
   }
 
   .dollar {
@@ -184,10 +182,10 @@
     margin-top: 19px;
     margin-left: 10px;
 
-      @media only screen and (max-width: 667px) {
-        margin-top: 13px;
-        font-size: 13px;
-      }
+    @media only screen and (max-width: 667px) {
+      margin-top: 13px;
+      font-size: 13px;
+    }
   }
   
   .form {
@@ -208,20 +206,18 @@
 
     outline: none;
 
-
     @media only screen and (max-width: 667px) {
-        font-size: 16px;        
-      }
+      font-size: 16px;        
+    }
   }
 
   input[type="text"] {
     display: inline-block;
     width: 40%;
 
-       @media only screen and (max-width: 667px) {
-        width: 47%;      
-      }
-
+    @media only screen and (max-width: 667px) {
+      width: 47%;      
+    }
   }
 
   button {
@@ -268,12 +264,11 @@
 
     font-family: @supriaSans;
 
-      @media only screen and (max-width: 667px) {
-        font-size: 16px;
-        padding-bottom: 0px;
-        margin-bottom: 0px;
-        
-      }
+    @media only screen and (max-width: 667px) {
+      font-size: 16px;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+    }
   }
 
   &.expand {

@@ -21,6 +21,34 @@ export const renderFullPage = (html, devPort, domain, initialState = null, head)
         <link rel="stylesheet" type="text/css" href="/static/vendors/react-select/react-select.css"></style>
         <link rel="stylesheet" type="text/css" href="/static/fonts/index.css"></style>
 
+        <link rel="stylesheet" type="text/css" href="/static/vendors/rc-slider/index.css"></style>
+
+        <style>
+          .rc-slider-rail {
+            background-color: #373737;
+            height: 10px;
+            margin-top: -5px;
+            border-radius: 5px;
+          }
+
+          .rc-slider-track {
+            display: none;
+          }
+
+          .rc-slider-handle {
+            width: 10px;
+            height: 10px;
+
+            border: none;
+
+            background: rgb(0,203,162);
+            background: -moz-linear-gradient(top, rgba(0,203,162,1) 0%, rgba(0,155,105,1) 100%);
+            background: -webkit-linear-gradient(top, rgba(0,203,162,1) 0%,rgba(0,155,105,1) 100%);
+            background: linear-gradient(to bottom, rgba(0,203,162,1) 0%,rgba(0,155,105,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00cba2', endColorstr='#009b69',GradientType=0 );
+          }
+        </style>
+
 
         ${bundleCSS}
         <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
