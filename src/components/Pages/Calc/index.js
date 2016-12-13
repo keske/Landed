@@ -10,37 +10,50 @@ import { Grid, Row, Col } from 'react-bootstrap';
 // Styles
 import s from './index.css';
 
-const min = (a, b) =>
-  a < b ? a : b;
+const min = (a, b) => a < b ? a : b;
 
-const mortgageAPRWithLanded = 0.038;
+const a15 = 0.038;
 const initialClosingCostRatio = 0.015;
-const HOAFees = 0;
+const a10 = 0;
 
-let houseIncome = 200000;
-let existingMonthlyDebts = 0;
-let priceOfHome = houseIncome * 6.85 - (existingMonthlyDebts / 100 * 20000);
-let closingCostsOnPurchase = priceOfHome * initialClosingCostRatio;
-let taxRate = 0.373; // TODO: 28 + 9.3
-let propertyTaxRatio = 0.015;
-let cashToContribute = priceOfHome * 0.1 + closingCostsOnPurchase;
-let landedLoanAmount = priceOfHome - ((cashToContribute - closingCostsOnPurchase) + (priceOfHome * 0.2 - cashToContribute + closingCostsOnPurchase));
-let landedMonthlyMortgagePayment = Math.pow((1 + mortgageAPRWithLanded / 12), 360) * (mortgageAPRWithLanded / 12) / (Math.pow((1 + mortgageAPRWithLanded / 12), 360) - 1) * landedLoanAmount;
-let landedMonthlyPrincipalPayment = (landedLoanAmount - (Math.pow((1 + mortgageAPRWithLanded / 12), 120) * landedLoanAmount - landedMonthlyMortgagePayment * (Math.pow((1 + mortgageAPRWithLanded / 12), 120) - 1) / (mortgageAPRWithLanded / 12))) / 120;
-let landedMonthlyInterestPayment = landedMonthlyMortgagePayment - landedMonthlyPrincipalPayment;
-let landedMaximumPaymentForTaxLimit = Math.pow((1 + mortgageAPRWithLanded / 12), 360) * (mortgageAPRWithLanded / 12) / (Math.pow((1 + mortgageAPRWithLanded / 12), 360) - 1) * 1000000;
-let m120 = (Math.pow((1 + mortgageAPRWithLanded / 12), 120));
-
-let landedMaximumPrincipalForTaxLimit = (1000000 - (m120 * 1000000 - landedMaximumPaymentForTaxLimit * (m120 - 1) / (mortgageAPRWithLanded / 12))) / 120;
-let monthlyProperyTaxes = Math.round(priceOfHome * propertyTaxRatio / 12);
-let landedMaximumInterestPaymentsYouCanDeduct = landedMaximumPaymentForTaxLimit- landedMaximumPrincipalForTaxLimit;
-let taxWriteOffsWithLanded = Math.round((min(landedMonthlyInterestPayment, landedMaximumInterestPaymentsYouCanDeduct) + monthlyProperyTaxes) * taxRate);
-let landedDownpayment = priceOfHome * 0.2 - cashToContribute + closingCostsOnPurchase;
-const monthlyInsurance = priceOfHome * 0.03 / 12;
-let ownershipExpenses = HOAFees + monthlyInsurance + monthlyProperyTaxes + landedMonthlyInterestPayment - taxWriteOffsWithLanded;
-
-console.log(monthlyInsurance);
-console.log(ownershipExpenses);
+let a7 = 200000;
+let a8 = 0;
+let a3 = a7 * 6.85 - (a8 / 100 * 20000);
+let a18 = a3 * initialClosingCostRatio;
+let a32 = 0.373; // TODO: 28 + 9.3
+let a48 = 0.015;
+let a4 = a3 * 0.1 + a18;
+let a24 = a3 - ((a4 - a18) + (a3 * 0.2 - a4 + a18));
+let a25 = Math.pow((1 + a15 / 12), 360) * (a15 / 12) / (Math.pow((1 + a15 / 12), 360) - 1) * a24;
+let a26 = (a24 - (Math.pow((1 + a15 / 12), 120) * a24 - a25 * (Math.pow((1 + a15 / 12), 120) - 1) / (a15 / 12))) / 120;
+let a27 = a25 - a26;
+let a37 = Math.pow((1 + a15 / 12), 360) * (a15 / 12) / (Math.pow((1 + a15 / 12), 360) - 1) * 1000000;
+let m120 = (Math.pow((1 + a15 / 12), 120));
+let a38 = (1000000 - (m120 * 1000000 - a37 * (m120 - 1) / (a15 / 12))) / 120;
+let a13 = Math.round(a3 * a48 / 12);
+let a39 = a37 - a38;
+let g9 = Math.round((min(a27, a39) + a13) * a32);
+let a5 = a3 * 0.2 - a4 + a18;
+let a46 = 0.003;
+let a11 = a3 * a46 / 12;
+let g11 = a10 + a11 + a13 + a27 - g9;
+let g12 = g9 + a26 + g11;
+let a16 = 0.043;
+let a28 = a24 + a5;
+let a29 = Math.pow((1 + a16 / 12), 360) * (a16 / 12) / (Math.pow((1 + a16 / 12), 360) - 1) * a28;
+let a30 = (a28 - (Math.pow((1 + a16 / 12), 120) * a28 - a29 * (Math.pow((1 + a16 / 12), 120) - 1) / (a16 / 12))) / 120;
+let a31 = a29 - a30;
+let a40 = Math.pow((1 + a16 / 12), 360) * (a16 / 12) / (Math.pow((1 + a16 / 12), 360) - 1) * 1000000;
+let m12016 = (Math.pow((1 + a16 / 12), 120));
+let a41 = (1000000 - (m12016 * 1000000 - a40 * (m12016 - 1) / (a16 / 12))) / 120;
+let a42 = a40 - a41;
+let a49 = 0.008;
+let a17 = a3 * a49 / 12;
+let a19 = 0.0475;
+let i11 = a3 * a19 / 12;
+let h9 = (min(a31, a42) + a13) * a32;
+let h11 = a10 + a11 + a13 + a17 + a31 - h9;
+let h12 = h9 + a30 + h11;
 
 @observer
 export default class Calc extends Component {
@@ -84,12 +97,12 @@ export default class Calc extends Component {
         yourDownpayment: 10,
         landedsDownpayment: 10,
         householdIncome: 10,
-        existingMonthlyDebts: 10,
+        a8: 10,
         hoa: 10,
-        monthlyInsurance: 10,
+        a11: 10,
         monthlyRepairCosts: 10,
         taxes: 10,
-        closingCostsonPurchase: 10,
+        a18: 10,
         Mortgage80: 10,
         Mortgage90: 10,
       },
@@ -104,17 +117,17 @@ export default class Calc extends Component {
         yourDownpayment,
         landedsDownpayment,
         householdIncome,
-        existingMonthlyDebts,
         hoa,
-        monthlyInsurance,
         monthlyRepairCosts,
         taxes,
-        closingCostsonPurchase,
         mortgage80,
         mortgage90,
       },
       showSuperCenter,
     } = this.state;
+
+    const getHeight = (value) => value.toFixed() * 0.02;
+    const getTop = (value) => 292 - (value.toFixed() * 0.02);
 
     return (
       <section className={s.root}>
@@ -158,8 +171,11 @@ export default class Calc extends Component {
                   >
                     <input
                       type="text"
-                      defaultValue="130,000"
+                      defaultValue={a7}
                       placeholder="Combined Annual Household Salary"
+                      onChange={(event) => {
+                        a7 = event.value;
+                      }}
                     />
                   </Col>
                   <Col
@@ -182,8 +198,11 @@ export default class Calc extends Component {
                   >
                     <input
                       type="text"
-                      defaultValue="130,000"
+                      defaultValue={a8}
                       placeholder="Existing Monthly Debt Payments"
+                      onChange={(event) => {
+                        a8 = event.value;
+                      }}
                     />
                   </Col>
                 </Row>
@@ -191,9 +210,9 @@ export default class Calc extends Component {
                 <div className={s.center}>
                   <span className={s.logo} />
                   <p className={s.info}>
-                    You can likely afford up to a $800,000 home!
+                    You can likely afford up to a <span className={s.green}>${a3}</span> home!
                     <br />
-                    And with Laned you’ll only need a $80,000 down payment
+                    And with Laned you’ll only need a <span className={s.green}>${a4}</span> down payment
                     <br />
                     <i>
                       (half of the down payment you would otherwise need)
@@ -264,56 +283,130 @@ export default class Calc extends Component {
                     Monhly payments
                   </p>
                   <div className={s.col}>
-                    <span
-                      className={cx(s.graph, s.magenta)}
-                      style={{
-                        height: '100px',
-                      }}
-                    />
-                    <span
-                      className={cx(s.price, s.magenta)}
-                      style={{
-                        top: '100px',
-                      }}
-                    >
-                      $3,950
-                    </span>
+                    {
+                      step > 1 && [
+                        <span
+                          className={cx(
+                            s.graph,
+                            s.magenta,
+                            { [s.gray]: step >= 3 },
+                          )}
+                          style={{
+                            height: `${getHeight(i11)}px`,
+                          }}
+                        />,
+                        <span
+                          className={cx(
+                            s.price,
+                            s.magenta,
+                            { [s.gray]: step >= 3 },
+                          )}
+                          style={{
+                            top: `${getTop(i11)}px`,
+                          }}
+                        >
+                          ${Math.round(i11)}
+                        </span>,
+                      ]
+                    }
                   </div>
                   <div className={s.col}>
+                    {
+                      step > 2 && [
+                        <span
+                          className={cx(s.graph, s.green, s.tax)}
+                          style={{
+                            height: `${getHeight(g12)}px`,
+                          }}
+                        />,
+                        <span
+                          className={cx(s.price, s.green, s.tax)}
+                          style={{
+                            top: `${getTop(g12) + 25}px`,
+                          }}
+                        >
+                          ${Math.round(g12 - (g12 - g9))}
+                          <br />
+                          Tax benefits
+                        </span>,
+                      ]
+                    }
                     <span
                       className={cx(s.graph, s.green)}
                       style={{
-                        height: '100px',
+                        height: `${step < 3 ? getHeight(g12) : getHeight(g12 - g9)}px`,
                       }}
                     />
                     <span
                       className={cx(s.price, s.green)}
                       style={{
-                        top: '100px',
+                        top: `${step < 3 ? getTop(g12) : getTop(g12 - g9)}px`,
                       }}
                     >
-                      $3,950
+                      ${Math.round(step < 3 ? g12 : g12 - g9)}
                     </span>
+                    {
+                      step > 3 &&
+                        <span
+                          className={cx(s.graph, s.yellow)}
+                          style={{
+                            height: `${getHeight(g12 - g9 - a26)}px`,
+                            top: `${getTop(g12)}px`,
+                          }}
+                        />
+                    }
                   </div>
                   <div className={s.col}>
+                    {
+                      step > 2 && [
+                        <span
+                          className={cx(s.graph, s.red, s.tax)}
+                          style={{
+                            height: `${getHeight(h12)}px`,
+                          }}
+                        />,
+                        <span
+                          className={cx(s.price, s.red, s.tax)}
+                          style={{
+                            top: `${getTop(h12) + 25}px`,
+                          }}
+                        >
+                          ${Math.round(h12 - (h12 - h9))}
+                          <br />
+                          Tax benefits
+                        </span>,
+                      ]
+                    }
                     <span
                       className={cx(s.graph, s.red)}
                       style={{
-                        height: '100px',
+                        height: `${step < 3 ? getHeight(h12) : getHeight(h12 - h9)}px`,
                       }}
                     />
                     <span
                       className={cx(s.price, s.red)}
                       style={{
-                        top: '100px',
+                        top: `${step < 3 ? getTop(h12) : getTop(h12 - h9)}px`,
                       }}
                     >
-                      $3,950
+                      ${Math.round(step < 3 ? h12 : h12 - h9)}
                     </span>
+                    {
+                      step > 3 &&
+                        <span
+                          className={cx(s.graph, s.yellow)}
+                          style={{
+                            height: `${getHeight(g12 - g9 - a26)}px`,
+                            top: `${getTop(h12)}px`,
+                          }}
+                        />
+                    }
                   </div>
                   <div className={s.footer}>
                     <div className={cx(s.col, s['in-footer'])}>
-                      renting
+                      {
+                        step > 1 && 'renting'
+                      }
                     </div>
                     <div className={cx(s.col, s['in-footer'])}>
                       <span className={s.logo} />
@@ -412,13 +505,13 @@ export default class Calc extends Component {
                     defaultValue={37}
                     onChange={(value) => {
                       this.setState({
-                        existingMonthlyDebts: value,
+                        a8: value,
                       });
                     }}
                   />
                 </span>
                 <span className={s.value}>
-                  {existingMonthlyDebts}
+                  {a8}
                 </span>
               </Col>
               <Col
@@ -465,7 +558,7 @@ export default class Calc extends Component {
                     className={s['custom-slider']}
                     onChange={(value) => {
                       this.setState({
-                        monthlyInsurance: value,
+                        a11: value,
                       });
                     }}
                   />
@@ -537,13 +630,13 @@ export default class Calc extends Component {
                     defaultValue={37}
                     onChange={(value) => {
                       this.setState({
-                        closingCostsonPurchase: value,
+                        a18: value,
                       });
                     }}
                   />
                 </span>
                 <span className={s.value}>
-                  {closingCostsonPurchase}
+                  {a18}
                 </span>
                 <br /><br />
                 <span className={s.label}>
