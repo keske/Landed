@@ -25,7 +25,7 @@ let a3 = a7 * 6.85 - (a8 / 100 * 20000);
 let a18 = a3 * initialClosingCostRatio;
 let a32 = 0.373; // TODO: 28 + 9.3
 let a48 = 0.015;
-let a4 = a3 * 0.1 + a18;
+let a4 = a3 * 0.1;
 let a24 = a3 - ((a4 - a18) + (a3 * 0.2 - a4 + a18));
 let a25 = Math.pow((1 + a15 / 12), 360) * (a15 / 12) / (Math.pow((1 + a15 / 12), 360) - 1) * a24;
 let a26 = (a24 - (Math.pow((1 + a15 / 12), 120) * a24 - a25 * (Math.pow((1 + a15 / 12), 120) - 1) / (a15 / 12))) / 120;
@@ -129,7 +129,7 @@ export default class Calc extends Component {
 
   updateValues() {
     a3 = a7 * 6.85 - (a8 / 100 * 20000);
-    a4 = a3 * 0.1 + a18;
+    a4 = a3 * 0.1;
 
     this.setState({
       data: {
@@ -429,7 +429,7 @@ export default class Calc extends Component {
                             top: `${getTop(g12 - g9) + 28}px`,
                           }}
                         >
-                          ${numberWithCommas(Math.round(g12))}
+                          ${numberWithCommas(Math.round(g12 - g9 - (g12 - g9 - a26)))}
                           <br />
                           your money<br />in mortgage
                         </span>,
@@ -466,7 +466,7 @@ export default class Calc extends Component {
                           }}
                         >
                           {
-                            `$${numberWithCommas(Math.round(g12 - g9 - (g12 - g9 - a26)))}`
+                            `$${numberWithCommas(Math.round(g11))}`
                           }
                           <br />
                           Cost of ownership
@@ -522,7 +522,7 @@ export default class Calc extends Component {
                             top: `${getTop(h12 - h9) + 28}px`,
                           }}
                         >
-                          ${numberWithCommas(Math.round(h12))}
+                          ${numberWithCommas(Math.round(h12 - h9 - (h12 - h9 - a30)))}
                           <br />
                           your money<br />in mortgage
                         </span>,
@@ -561,9 +561,7 @@ export default class Calc extends Component {
                             top: `${getTop(h11)}px`,
                           }}
                         >
-                          {
-                            `$${numberWithCommas(Math.round(h12 - h9 - (h12 - h9 - a30)))}`
-                          }
+                          ${numberWithCommas(Math.round(h11))}
                           <br />
                           Cost of ownership
                         </span>
