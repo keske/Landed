@@ -3,9 +3,12 @@ import cx from 'classnames';
 import Helmet from 'react-helmet';
 import R from 'ramda';
 import Slider from 'rc-slider';
+import DynamicNumber from 'react-dynamic-number';
 
 import { observer } from 'mobx-react';
 import { Grid, Row, Col } from 'react-bootstrap';
+
+import { numberWithCommas } from 'utils/price.js';
 
 // Styles
 import s from './index.css';
@@ -90,7 +93,7 @@ export default class Calc extends Component {
 
         {
           title: 'With what’s left you can compare to the financial impact of renting.',
-          info: '<button>bring Landed to your school or district</button>Now that you understand everything about home ownership, you can adjust some of the assumptions on the left.',
+          info: '<button>bring Landed to your<br />school or district</button>Now that you understand everything about home ownership, you can adjust some of the assumptions on the left.',
         },
       ],
       slider: {
@@ -106,8 +109,35 @@ export default class Calc extends Component {
         Mortgage80: 10,
         Mortgage90: 10,
       },
+      data: {
+        priceOfHome: a3,
+        downpayment: a4,
+      },
+      showGraphs: false,
       showSuperCenter: false,
     };
+  }
+
+  componentDidMount() {
+    const { app } = this.context;
+
+    app.headerSetColor('green');
+    app.hideMenu();
+
+    window.scrollTo(0, 0);
+  }
+
+  updateValues() {
+    a3 = a7 * 6.85 - (a8 / 100 * 20000);
+    a4 = a3 * 0.1 + a18;
+
+    this.setState({
+      data: {
+        ...this.state.data,
+        priceOfHome: a3,
+        downpayment: a4,
+      },
+    });
   }
 
   render() {
@@ -123,11 +153,16 @@ export default class Calc extends Component {
         mortgage80,
         mortgage90,
       },
+      data: {
+        priceOfHome,
+        downpayment,
+      },
+      showGraphs,
       showSuperCenter,
     } = this.state;
 
-    const getHeight = (value) => value.toFixed() * 0.02;
-    const getTop = (value) => 292 - (value.toFixed() * 0.02);
+    const getHeight = (value) => value.toFixed() * 0.03;
+    const getTop = (value) => 292 - (value.toFixed() * 0.03);
 
     return (
       <section className={s.root}>
@@ -149,7 +184,12 @@ export default class Calc extends Component {
                 Subtitle
               </p>
 
-              <div className={s['init-calc']}>
+              <div
+                className={cx(
+                  s['init-calc'],
+                  { [s.hide]: showGraphs },
+                )}
+              >
                 <Row>
                   <Col
                     xs={12}
@@ -169,12 +209,19 @@ export default class Calc extends Component {
                     md={3}
                     lg={3}
                   >
-                    <input
-                      type="text"
-                      defaultValue={a7}
-                      placeholder="Combined Annual Household Salary"
+                    <DynamicNumber
+                      separator={'.'}
+                      integer={7}
+                      fraction={10}
+                      positive
+                      negative={false}
+                      thousand
+                      placeholder={a7}
+                      value={a7}
+                      className={s.form}
                       onChange={(event) => {
-                        a7 = event.value;
+                        a7 = event.target.value.replace(/,/g, '');
+                        this.updateValues();
                       }}
                     />
                   </Col>
@@ -196,12 +243,19 @@ export default class Calc extends Component {
                     md={3}
                     lg={3}
                   >
-                    <input
-                      type="text"
-                      defaultValue={a8}
-                      placeholder="Existing Monthly Debt Payments"
+                    <DynamicNumber
+                      separator={'.'}
+                      integer={7}
+                      fraction={10}
+                      positive
+                      negative={false}
+                      thousand
+                      placeholder={a8}
+                      value={a8}
+                      className={s.form}
                       onChange={(event) => {
-                        a8 = event.value;
+                        a8 = event.target.value.replace(/,/g, '');
+                        this.updateValues();
                       }}
                     />
                   </Col>
@@ -210,15 +264,22 @@ export default class Calc extends Component {
                 <div className={s.center}>
                   <span className={s.logo} />
                   <p className={s.info}>
-                    You can likely afford up to a <span className={s.green}>${a3}</span> home!
+                    You can likely afford up to a <span className={s.green}>
+                    ${numberWithCommas(priceOfHome)}</span> home!
                     <br />
-                    And with Laned you’ll only need a <span className={s.green}>${a4}</span> down payment
+                    And with Laned you’ll only need a <span className={s.green}>${numberWithCommas(downpayment)}</span> down payment
                     <br />
                     <i>
                       (half of the down payment you would otherwise need)
                     </i>
                   </p>
-                  <button>
+                  <button
+                    onClick={() => {
+                      this.setState({
+                        showGraphs: true,
+                      });
+                    }}
+                  >
                     see your estimated monthly payments
                   </button>
                 </div>
@@ -226,7 +287,12 @@ export default class Calc extends Component {
             </Col>
           </Row>
 
-          <div className={s.graphs}>
+          <div
+            className={cx(
+              s.graphs,
+              { [s.show]: showGraphs },
+            )}
+          >
             <Row>
               <Col
                 xs={10} xsOffset={1}
@@ -258,7 +324,7 @@ export default class Calc extends Component {
                     />
                   </div>
                   {
-                    step < 6 &&
+                    step < 5 &&
                       <button
                         onClick={() => {
                           this.setState({
@@ -271,8 +337,9 @@ export default class Calc extends Component {
                   }
                   <div className={s.footer}>
                     {
-                      step === 6 &&
+                      step === 5 &&
                         <button className={s.adjust}>
+                          <span className={s.icon} />
                           adjust assumptions
                         </button>
                     }
@@ -305,7 +372,13 @@ export default class Calc extends Component {
                             top: `${getTop(i11)}px`,
                           }}
                         >
-                          ${Math.round(i11)}
+                          ${numberWithCommas(Math.round(i11))}
+                          {
+                            step === 5 && [
+                              <br />,
+                              'cost of rent',
+                            ]
+                          }
                         </span>,
                       ]
                     }
@@ -325,16 +398,21 @@ export default class Calc extends Component {
                             top: `${getTop(g12) + 25}px`,
                           }}
                         >
-                          ${Math.round(g12 - (g12 - g9))}
+                          ${numberWithCommas(Math.round(g12 - (g12 - g9)))}
                           <br />
                           Tax benefits
                         </span>,
                       ]
                     }
                     <span
-                      className={cx(s.graph, s.green)}
+                      className={cx(
+                        s.graph,
+                        s.green,
+                        { [s.fat]: step === 5 },
+                      )}
                       style={{
                         height: `${step < 3 ? getHeight(g12) : getHeight(g12 - g9)}px`,
+                        maxHeight: `${step === 5 ? `${getHeight(g12 - g12 - a26)}px` : 'auto'}`,
                       }}
                     />
                     <span
@@ -343,15 +421,19 @@ export default class Calc extends Component {
                         top: `${step < 3 ? getTop(g12) : getTop(g12 - g9)}px`,
                       }}
                     >
-                      ${Math.round(step < 3 ? g12 : g12 - g9)}
+                      ${numberWithCommas(Math.round(step < 3 ? g12 : g12 - g9))}
                     </span>
                     {
                       step > 3 &&
                         <span
-                          className={cx(s.graph, s.yellow)}
+                          className={cx(
+                            s.graph,
+                            s.yellow,
+                            { [s.tiny]: step === 5 },
+                          )}
                           style={{
                             height: `${getHeight(g12 - g9 - a26)}px`,
-                            top: `${getTop(g12)}px`,
+                            top: `${getTop(g12 - g9) + 28}px`,
                           }}
                         />
                     }
@@ -371,14 +453,18 @@ export default class Calc extends Component {
                             top: `${getTop(h12) + 25}px`,
                           }}
                         >
-                          ${Math.round(h12 - (h12 - h9))}
+                          ${numberWithCommas(Math.round(h12 - (h12 - h9)))}
                           <br />
                           Tax benefits
                         </span>,
                       ]
                     }
                     <span
-                      className={cx(s.graph, s.red)}
+                      className={cx(
+                        s.graph,
+                        s.red,
+                        { [s.fat]: step === 5 },
+                      )}
                       style={{
                         height: `${step < 3 ? getHeight(h12) : getHeight(h12 - h9)}px`,
                       }}
@@ -389,15 +475,19 @@ export default class Calc extends Component {
                         top: `${step < 3 ? getTop(h12) : getTop(h12 - h9)}px`,
                       }}
                     >
-                      ${Math.round(step < 3 ? h12 : h12 - h9)}
+                      ${numberWithCommas(Math.round(step < 3 ? h12 : h12 - h9))}
                     </span>
                     {
                       step > 3 &&
                         <span
-                          className={cx(s.graph, s.yellow)}
+                          className={cx(
+                            s.graph,
+                            s.yellow,
+                            { [s.tiny]: step === 5 },
+                          )}
                           style={{
                             height: `${getHeight(g12 - g9 - a26)}px`,
-                            top: `${getTop(h12)}px`,
+                            top: `${getTop(h12 - h9) + 28}px`,
                           }}
                         />
                     }
