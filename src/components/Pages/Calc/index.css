@@ -254,6 +254,8 @@
       font-style: italic;
       font-size: 15px;
       line-height: 16px;
+
+      opacity: .5;
     }
 
     .col {
@@ -269,7 +271,6 @@
         opacity: .5;
 
         height: auto;
-        padding-left: 20px;
 
         vertical-align: top;
 
@@ -301,7 +302,11 @@
 
         border-radius: 2px;
 
-        transition: .3s;
+        transition: .7s;
+
+        &.hide {
+          opacity: 0;
+        }
 
         &.tax {
           opacity: .3;
@@ -338,7 +343,7 @@
         &.yellow {
           background: #FBDA61;
 
-          // opacity: .9;
+          opacity: .9;
 
           border-top: 1px solid #000;
           border-bottom: 1px solid #000;
@@ -353,6 +358,10 @@
             border: none;
             width: 10px;
             margin-left: 0;
+          }
+
+          &.hide {
+            opacity: 0;
           }
         }
 
@@ -369,6 +378,12 @@
         margin-left: 25px;
 
         font-size: 14px;
+
+        transition: .7s;
+
+        &.hide {
+          opacity: 0;
+        }
 
         &.magenta {
           color: #CC70DA;
