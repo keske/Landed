@@ -155,7 +155,7 @@
 
         margin-right: 10px;
       
-        &.active {
+        &:hover, &.active {
           background: $green;
           color: #FFF;
         }
@@ -183,6 +183,19 @@
         color: rgba(0, 0, 0, .5);
 
         width: 60%;
+      }
+
+      a {
+        color: rgba(0, 0, 0, .5);
+        font-size: 15px;
+        line-height: 16px;
+
+        display: inline-block;
+
+        font-family: $janon;
+        font-style: italic;
+
+        border-bottom: 1px solid rgba(0, 0, 0, .3);
       }
 
       button {
@@ -302,7 +315,7 @@
 
         border-radius: 2px;
 
-        transition: .7s;
+        transition: margin-left .7s, width .7s;
 
         &.hide {
           opacity: 0;
@@ -389,7 +402,7 @@
           color: #CC70DA;
 
           &.gray {
-            color: #D9D9D9;
+            color: rgba(0, 0, 0, .3);
           }
         }
 
@@ -420,15 +433,18 @@
 
   padding: 40px 20px 20px 20px;
 
-  margin-top: -20px;
-
   position: relative;
   z-index: 1;
 
+  transition: .7s;
+
+  margin-top: -400px;
+  opacity: 0;
   display: none;
 
   &.show {
-    display: block;
+    margin-top: -20px;
+    opacity: 1;
   }
 
   .title {

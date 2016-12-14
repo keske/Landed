@@ -82,12 +82,12 @@ export default class Calc extends Component {
         },
 
         {
-          title: 'But that’s not the whole story. Owning earns you immediate tax benefits.<a href="#">learn how</a>',
+          title: 'But that’s not the whole story. Owning earns you immediate tax benefits.<br /><a href="#">learn how</a>',
           info: 'As long as you have taxes to pay, you can compare the after-tax payments',
         },
 
         {
-          title: 'And as we all know, paying your mortgage builds equity over time.<a href="#">learn how</a>',
+          title: 'And as we all know, paying your mortgage builds equity over time.<br /><a href="#">learn how</a>',
           info: 'This much of your home payments every month go to paying down your mortgage',
         },
 
@@ -111,7 +111,7 @@ export default class Calc extends Component {
       },
       data: {
         priceOfHome: a3,
-        downpayment: a4,
+        downpayment: a3 * 0.1,
       },
       showGraphs: false,
       showSuperCenter: false,
@@ -307,6 +307,11 @@ export default class Calc extends Component {
                         <span
                           key={index}
                           className={cx({ [s.active]: step === index })}
+                          onClick={() => {
+                            this.setState({
+                              step: index,
+                            });
+                          }}
                         >
                           {index}
                         </span>
@@ -338,7 +343,14 @@ export default class Calc extends Component {
                   <div className={s.footer}>
                     {
                       step === 5 &&
-                        <button className={s.adjust}>
+                        <button
+                          className={s.adjust}
+                          onClick={() => {
+                            this.setState({
+                              showSuperCenter: !showSuperCenter,
+                            });
+                          }}
+                        >
                           <span className={s.icon} />
                           adjust assumptions
                         </button>
