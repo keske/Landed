@@ -376,13 +376,14 @@ export default class Calc extends Component {
                           {
                             step === 5 && [
                               <br />,
-                              'cost of rent',
+                              'Cost of rent',
                             ]
                           }
                         </span>,
                       ]
                     }
                   </div>
+
                   <div className={s.col}>
                     {
                       step > 2 && [
@@ -404,6 +405,26 @@ export default class Calc extends Component {
                         </span>,
                       ]
                     }
+                    {
+                      step === 5 && [
+                        <span
+                          className={cx(s.graph, s.green, s.tax)}
+                          style={{
+                            height: `${getHeight(g12)}px`,
+                          }}
+                        />,
+                        <span
+                          className={cx(s.price, s.red, s.tax)}
+                          style={{
+                            top: `${getTop(g12 - g9) + 28}px`,
+                          }}
+                        >
+                          ${numberWithCommas(Math.round(g12))}
+                          <br />
+                          Tax benefits
+                        </span>,
+                      ]
+                    }
                     <span
                       className={cx(
                         s.graph,
@@ -412,17 +433,35 @@ export default class Calc extends Component {
                       )}
                       style={{
                         height: `${step < 3 ? getHeight(g12) : getHeight(g12 - g9)}px`,
-                        maxHeight: `${step === 5 ? `${getHeight(g12 - g12 - a26)}px` : 'auto'}`,
+                        maxHeight: `${step === 5 ? `${getHeight(g11)}px` : 'auto'}`,
                       }}
                     />
-                    <span
-                      className={cx(s.price, s.green)}
-                      style={{
-                        top: `${step < 3 ? getTop(g12) : getTop(g12 - g9)}px`,
-                      }}
-                    >
-                      ${numberWithCommas(Math.round(step < 3 ? g12 : g12 - g9))}
-                    </span>
+                    {
+                      step < 5 &&
+                        <span
+                          className={cx(s.price, s.green)}
+                          style={{
+                            top: `${step < 3 ? getTop(g12) : getTop(g12 - g9)}px`,
+                          }}
+                        >
+                          ${numberWithCommas(Math.round(step < 3 ? g12 : g12 - g9))}
+                        </span>
+                    }
+                    {
+                      step === 5 &&
+                        <span
+                          className={cx(s.price, s.green)}
+                          style={{
+                            top: `${getTop(g11)}px`,
+                          }}
+                        >
+                          {
+                            `$${numberWithCommas(Math.round(g12 - g9 - (g12 - g9 - a26)))}`
+                          }
+                          <br />
+                          Cost of ownership
+                        </span>
+                    }
                     {
                       step > 3 &&
                         <span
@@ -432,12 +471,14 @@ export default class Calc extends Component {
                             { [s.tiny]: step === 5 },
                           )}
                           style={{
-                            height: `${getHeight(g12 - g9 - a26)}px`,
+                            height: `${getHeight(a26)}px`,
                             top: `${getTop(g12 - g9) + 28}px`,
                           }}
                         />
                     }
                   </div>
+
+
                   <div className={s.col}>
                     {
                       step > 2 && [
@@ -459,6 +500,26 @@ export default class Calc extends Component {
                         </span>,
                       ]
                     }
+                    {
+                      step === 5 && [
+                        <span
+                          className={cx(s.graph, s.red, s.tax)}
+                          style={{
+                            height: `${getHeight(h12)}px`,
+                          }}
+                        />,
+                        <span
+                          className={cx(s.price, s.red, s.tax)}
+                          style={{
+                            top: `${getTop(h12 - h9) + 28}px`,
+                          }}
+                        >
+                          ${numberWithCommas(Math.round(h12))}
+                          <br />
+                          Tax benefits
+                        </span>,
+                      ]
+                    }
                     <span
                       className={cx(
                         s.graph,
@@ -467,16 +528,38 @@ export default class Calc extends Component {
                       )}
                       style={{
                         height: `${step < 3 ? getHeight(h12) : getHeight(h12 - h9)}px`,
+                        maxHeight: `${step === 5 ? `${getHeight(h11)}px` : 'auto'}`,
                       }}
                     />
-                    <span
-                      className={cx(s.price, s.red)}
-                      style={{
-                        top: `${step < 3 ? getTop(h12) : getTop(h12 - h9)}px`,
-                      }}
-                    >
-                      ${numberWithCommas(Math.round(step < 3 ? h12 : h12 - h9))}
-                    </span>
+                    {
+                      step < 5 &&
+                        <span
+                          className={cx(s.price, s.red)}
+                          style={{
+                            top: `${step < 3 ? getTop(h12) : getTop(h12 - h9)}px`,
+                          }}
+                        >
+                          {
+                            step < 5 &&
+                            `$${numberWithCommas(Math.round(step < 3 ? h12 : h12 - h9))}`
+                          }
+                        </span>
+                    }
+                    {
+                      step === 5 &&
+                        <span
+                          className={cx(s.price, s.red)}
+                          style={{
+                            top: `${getTop(h11)}px`,
+                          }}
+                        >
+                          {
+                            `$${numberWithCommas(Math.round(h12 - h9 - (h12 - h9 - a30)))}`
+                          }
+                          <br />
+                          Cost of ownership
+                        </span>
+                    }
                     {
                       step > 3 &&
                         <span
@@ -486,7 +569,7 @@ export default class Calc extends Component {
                             { [s.tiny]: step === 5 },
                           )}
                           style={{
-                            height: `${getHeight(g12 - g9 - a26)}px`,
+                            height: `${getHeight(a30)}px`,
                             top: `${getTop(h12 - h9) + 28}px`,
                           }}
                         />

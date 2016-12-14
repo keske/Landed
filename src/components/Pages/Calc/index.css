@@ -210,6 +210,8 @@
       margin-top: -65px;
       position: absolute;
 
+      text-align: left;
+
       background: rgb(32,255,141);
       background: -moz-linear-gradient(top, rgba(32,255,141,1) 0%, rgba(0,155,105,1) 100%);
       background: -webkit-linear-gradient(top, rgba(32,255,141,1) 0%,rgba(0,155,105,1) 100%);
@@ -364,9 +366,9 @@
         position: absolute;
 
         margin-top: 25px;
-        margin-left: 20px;
+        margin-left: 25px;
 
-        font-size: 15px;
+        font-size: 14px;
 
         &.magenta {
           color: #CC70DA;
