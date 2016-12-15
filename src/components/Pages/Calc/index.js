@@ -13,12 +13,104 @@ import { numberWithCommas } from 'utils/price.js';
 // Styles
 import s from './index.css';
 
-const min = (a, b) => a < b ? a : b;
+const min = (a, b) => (a < b ? a : b);
+
+const federalTaxes = [
+  {
+    single: 9275,
+    jointlyDual: 18550,
+    jointlySignle: 13250,
+    tax: 0.15,
+  },
+  {
+    single: 37650,
+    jointlyDual: 75300,
+    jointlySignle: 50400,
+    tax: 0.25,
+  },
+  {
+    single: 91150,
+    jointlyDual: 151900,
+    jointlySignle: 130150,
+    tax: 0.28,
+  },
+  {
+    single: 190150,
+    jointlyDual: 231450,
+    jointlySignle: 210800,
+    tax: 0.33,
+  },
+  {
+    single: 413350,
+    jointlyDual: 413350,
+    jointlySignle: 413350,
+    tax: 0.35,
+  },
+  {
+    single: 415050,
+    jointlyDual: 466950,
+    jointlySignle: 441000,
+    tax: 0.396,
+  },
+];
+
+const californiaTaxes = [
+  {
+    single: 7850,
+    jointlyDual: 15700,
+    jointlySignle: 15710,
+    tax: 0.02,
+  },
+  {
+    single: 18610,
+    jointlyDual: 37220,
+    jointlySignle: 37221,
+    tax: 0.04,
+  },
+  {
+    single: 29372,
+    jointlyDual: 58744,
+    jointlySignle: 47982,
+    tax: 0.06,
+  },
+  {
+    single: 40773,
+    jointlyDual: 81546,
+    jointlySignle: 59383,
+    tax: 0.08,
+  },
+  {
+    single: 51530,
+    jointlyDual: 103060,
+    jointlySignle: 70142,
+    tax: 0.93,
+  },
+  {
+    single: 263222,
+    jointlyDual: 526444,
+    jointlySignle: 357981,
+    tax: 0.103,
+  },
+  {
+    single: 315866,
+    jointlyDual: 631732,
+    jointlySignle: 429578,
+    tax: 0.113,
+  },
+  {
+    single: 526443,
+    jointlyDual: 1052886,
+    jointlySignle: 715962,
+    tax: 0.123,
+  },
+];
+
+console.log(federalTaxes);
+console.log(californiaTaxes);
 
 const a15 = 0.038;
 const initialClosingCostRatio = 0.015;
 const a10 = 0;
-
 let a7 = 200000;
 let a8 = 0;
 let a3 = a7 * 6.85 - (a8 / 100 * 20000);
@@ -171,10 +263,10 @@ export default class Calc extends Component {
         <Grid>
           <Row>
             <Col
-              xs={10} xsOffset={1}
-              sm={10} smOffset={1}
-              md={12} mdOffset={0}
-              lg={12} lgOffset={0}
+              xs={12}
+              sm={12}
+              md={12}
+              lg={12}
               className={s.center}
             >
               <p className={s.title}>
@@ -193,7 +285,7 @@ export default class Calc extends Component {
                 <Row>
                   <Col
                     xs={12}
-                    sm={3}
+                    sm={12}
                     md={3}
                     lg={3}
                   >
@@ -205,7 +297,7 @@ export default class Calc extends Component {
                   </Col>
                   <Col
                     xs={12}
-                    sm={3}
+                    sm={12}
                     md={3}
                     lg={3}
                   >
@@ -227,7 +319,7 @@ export default class Calc extends Component {
                   </Col>
                   <Col
                     xs={12}
-                    sm={3}
+                    sm={12}
                     md={3}
                     lg={3}
                   >
@@ -239,7 +331,7 @@ export default class Calc extends Component {
                   </Col>
                   <Col
                     xs={12}
-                    sm={3}
+                    sm={12}
                     md={3}
                     lg={3}
                   >
@@ -277,6 +369,7 @@ export default class Calc extends Component {
                     onClick={() => {
                       this.setState({
                         showGraphs: true,
+                        step: window.innerWidth < 768 ? 5 : 1,
                       });
                     }}
                   >
@@ -295,10 +388,10 @@ export default class Calc extends Component {
           >
             <Row>
               <Col
-                xs={10} xsOffset={1}
-                sm={10} smOffset={1}
-                md={12} mdOffset={0}
-                lg={12} lgOffset={0}
+                xs={12}
+                sm={12}
+                md={12}
+                lg={12}
               >
                 <div className={s['left-side']}>
                   <div className={s.numbers}>
@@ -469,7 +562,7 @@ export default class Calc extends Component {
                             `$${numberWithCommas(Math.round(g11))}`
                           }
                           <br />
-                          Cost of ownership
+                          Cost of<br />ownership
                         </span>
                     }
                     <span
@@ -563,7 +656,7 @@ export default class Calc extends Component {
                         >
                           ${numberWithCommas(Math.round(h11))}
                           <br />
-                          Cost of ownership
+                          Cost of<br />ownership
                         </span>
                     }
                     <span
