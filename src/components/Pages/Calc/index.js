@@ -285,7 +285,7 @@ export default class Calc extends Component {
                 <Row>
                   <Col
                     xs={12}
-                    sm={12}
+                    sm={3}
                     md={3}
                     lg={3}
                   >
@@ -297,7 +297,7 @@ export default class Calc extends Component {
                   </Col>
                   <Col
                     xs={12}
-                    sm={12}
+                    sm={3}
                     md={3}
                     lg={3}
                   >
@@ -319,7 +319,7 @@ export default class Calc extends Component {
                   </Col>
                   <Col
                     xs={12}
-                    sm={12}
+                    sm={3}
                     md={3}
                     lg={3}
                   >
@@ -331,7 +331,7 @@ export default class Calc extends Component {
                   </Col>
                   <Col
                     xs={12}
-                    sm={12}
+                    sm={3}
                     md={3}
                     lg={3}
                   >
