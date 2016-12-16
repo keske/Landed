@@ -1,6 +1,7 @@
 .root {
   background: rgb(247, 247, 247);
   padding: 100px 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 .title {
@@ -371,7 +372,7 @@
 
         border-radius: 2px;
 
-        transition: margin-left .7s, width .7s;
+        transition: height .3s, margin-left .7s, width .7s;
 
         &.hide {
           opacity: 0;
@@ -507,13 +508,9 @@
 
   margin-top: -20px;
 
-  // margin-top: -400px;
-  // opacity: 0;
   display: none;
 
   &.show {
-    // margin-top: -20px;
-    // opacity: 1;
     display: block;
   }
 
@@ -526,7 +523,7 @@
 
   .label {
     display: inline-block;
-    width: 35%;
+    width: 30%;
 
     font-family: $supriaSans;
     font-size: 14px;
@@ -548,12 +545,12 @@
     position: relative;
     
     top: -15px;
-    left: 10px;
+    left: 15px;
   }
 
   .slider {
     display: inline-block;
-    width: 40%;
+    width: 30%;
     margin-top: 5px;
     margin-left: 5%;
 

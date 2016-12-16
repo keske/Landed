@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import R from 'ramda';
 import Slider from 'rc-slider';
 import DynamicNumber from 'react-dynamic-number';
+import Select from 'react-select';
 
 import { observer } from 'mobx-react';
 import { Grid, Row, Col } from 'react-bootstrap';
@@ -19,43 +20,43 @@ const federalTaxes = [
   {
     single: 0,
     jointlyDual: 0,
-    jointlySignle: 0,
+    jointlySingle: 0,
     tax: 10,
   },
   {
     single: 9275,
     jointlyDual: 18550,
-    jointlySignle: 13250,
+    jointlySingle: 13250,
     tax: 15,
   },
   {
     single: 37650,
     jointlyDual: 75300,
-    jointlySignle: 50400,
+    jointlySingle: 50400,
     tax: 25,
   },
   {
     single: 91150,
     jointlyDual: 151900,
-    jointlySignle: 130150,
+    jointlySingle: 130150,
     tax: 28,
   },
   {
     single: 190150,
     jointlyDual: 231450,
-    jointlySignle: 210800,
+    jointlySingle: 210800,
     tax: 33,
   },
   {
     single: 413350,
     jointlyDual: 413350,
-    jointlySignle: 413350,
+    jointlySingle: 413350,
     tax: 35,
   },
   {
     single: 415050,
     jointlyDual: 466950,
-    jointlySignle: 441000,
+    jointlySingle: 441000,
     tax: 39.6,
   },
 ];
@@ -64,55 +65,55 @@ const californiaTaxes = [
   {
     single: 0,
     jointlyDual: 0,
-    jointlySignle: 0,
+    jointlySingle: 0,
     tax: 1,
   },
   {
     single: 7850,
     jointlyDual: 15700,
-    jointlySignle: 15710,
+    jointlySingle: 15710,
     tax: 2,
   },
   {
     single: 18610,
     jointlyDual: 37220,
-    jointlySignle: 37221,
+    jointlySingle: 37221,
     tax: 4,
   },
   {
     single: 29372,
     jointlyDual: 58744,
-    jointlySignle: 47982,
+    jointlySingle: 47982,
     tax: 6,
   },
   {
     single: 40773,
     jointlyDual: 81546,
-    jointlySignle: 59383,
+    jointlySingle: 59383,
     tax: 8,
   },
   {
     single: 51530,
     jointlyDual: 103060,
-    jointlySignle: 70142,
+    jointlySingle: 70142,
     tax: 9.3,
   },
   {
     single: 263222,
     jointlyDual: 526444,
-    jointlySignle: 357981,
+    jointlySingle: 357981,
     tax: 10.3,
   },
   {
     single: 315866,
     jointlyDual: 631732,
-    jointlySignle: 429578,
+    jointlySingle: 429578,
     tax: 11.3,
   },
   {
     single: 526443,
     jointlyDual: 1052886,
-    jointlySignle: 715962,
+    jointlySingle: 715962,
     tax: 12.3,
   },
 ];
@@ -128,7 +129,9 @@ let initialClosingCostRatio = 0.015;
 let a10 = 0;
 let a8 = 0;
 let a3 = a7 * 6.85 - (a8 / 100 * 20000);
+let newA7 = a3 / 6.85;
 let a18 = a3 * initialClosingCostRatio;
+let a47 = 0.008;
 let a48 = 0.015;
 let a4 = a3 * 0.1;
 let a24 = a3 - ((a4 - a18) + (a3 * 0.2 - a4 + a18));
@@ -144,6 +147,7 @@ let g9 = Math.round((min(a27, a39) + a13) * a32);
 let a5 = a3 * 0.2 - a4 + a18;
 let a46 = 0.003;
 let a11 = a3 * a46 / 12;
+let a12 = a3 * a47 / 12;
 let g11 = a10 + a11 + a13 + a27 - g9;
 let g12 = g9 + a26 + g11;
 let a16 = 0.043;
@@ -156,6 +160,7 @@ let m12016 = (Math.pow((1 + a16 / 12), 120));
 let a41 = (1000000 - (m12016 * 1000000 - a40 * (m12016 - 1) / (a16 / 12))) / 120;
 let a42 = a40 - a41;
 let a49 = 0.008;
+let a50 = 0.015;
 let a17 = a3 * a49 / 12;
 let a19 = 0.0475;
 let i11 = a3 * a19 / 12;
@@ -174,7 +179,7 @@ export default class Calc extends Component {
     super(props);
 
     this.state = {
-      step: 1,
+      step: 5,
       text: [
         {
           title: 'With landed you pay less then the regular owning',
@@ -201,25 +206,12 @@ export default class Calc extends Component {
           info: '<button>bring Landed to your<br />school or district</button>Now that you understand everything about home ownership, you can adjust some of the assumptions on the left.',
         },
       ],
-      slider: {
-        yourDownpayment: 10,
-        landedsDownpayment: 10,
-        householdIncome: 10,
-        a8: 10,
-        hoa: 10,
-        a11: 10,
-        monthlyRepairCosts: 10,
-        taxes: 10,
-        a18: 10,
-        Mortgage80: 10,
-        Mortgage90: 10,
-      },
       data: {
         priceOfHome: a3,
         downpayment: a3 * 0.1,
       },
       showGraphs: false,
-      showSuperCenter: false,
+      showSuperCenter: true,
 
       a7State: a7,
       a32State: a32,
@@ -244,6 +236,7 @@ export default class Calc extends Component {
       a5State: a5,
       a46State: a46,
       a11State: a11,
+      a12State: a12,
       g11State: g11,
       g12State: g12,
       a16State: a16,
@@ -262,6 +255,7 @@ export default class Calc extends Component {
       h9State: h9,
       h11State: h11,
       h12State: h12,
+      taxLabel: '',
     };
   }
 
@@ -301,13 +295,9 @@ export default class Calc extends Component {
     this.getCaliforniaTaxes();
 
     a32 = (federalTempTax + californiaTempTax) * 0.01;
-
-    a15 = 0.038;
     initialClosingCostRatio = 0.015;
-    a10 = 0;
     a3 = a7 * 6.85 - (a8 / 100 * 20000);
-    a18 = a3 * initialClosingCostRatio;
-    a48 = 0.015;
+    a18 = a3 * a50;
     a4 = a3 * 0.1;
     a24 = a3 - ((a4 - a18) + (a3 * 0.2 - a4 + a18));
     a25 = Math.pow((1 + a15 / 12), 360) * (a15 / 12) / (Math.pow((1 + a15 / 12), 360) - 1) * a24;
@@ -320,11 +310,11 @@ export default class Calc extends Component {
     a39 = a37 - a38;
     g9 = Math.round((min(a27, a39) + a13) * a32);
     a5 = a3 * 0.2 - a4 + a18;
-    a46 = 0.003;
     a11 = a3 * a46 / 12;
+    a12 = a3 * a47 / 12;
+
     g11 = a10 + a11 + a13 + a27 - g9;
     g12 = g9 + a26 + g11;
-    a16 = 0.043;
     a28 = a24 + a5;
     a29 = Math.pow((1 + a16 / 12), 360) * (a16 / 12) / (Math.pow((1 + a16 / 12), 360) - 1) * a28;
     a30 = (a28 - (Math.pow((1 + a16 / 12), 120) * a28 - a29 * (Math.pow((1 + a16 / 12), 120) - 1) / (a16 / 12))) / 120;
@@ -333,7 +323,6 @@ export default class Calc extends Component {
     m12016 = (Math.pow((1 + a16 / 12), 120));
     a41 = (1000000 - (m12016 * 1000000 - a40 * (m12016 - 1) / (a16 / 12))) / 120;
     a42 = a40 - a41;
-    a49 = 0.008;
     a17 = a3 * a49 / 12;
     a19 = 0.0475;
     i11 = a3 * a19 / 12;
@@ -360,12 +349,13 @@ export default class Calc extends Component {
       a37State: a37,
       m120State: m120,
       a38State: a38,
+      a11State: a11,
+      a12State: a12,
       a13State: a13,
       a39State: a39,
       g9State: g9,
       a5State: a5,
       a46State: a46,
-      a11State: a11,
       g11State: g11,
       g12State: g12,
       a16State: a16,
@@ -378,6 +368,7 @@ export default class Calc extends Component {
       a41State: a41,
       a42State: a42,
       a49State: a49,
+      a50State: a50,
       a17State: a17,
       a19State: a19,
       i11State: i11,
@@ -390,16 +381,6 @@ export default class Calc extends Component {
   render() {
     const {
       step, text,
-      slider: {
-        yourDownpayment,
-        landedsDownpayment,
-        householdIncome,
-        hoa,
-        monthlyRepairCosts,
-        taxes,
-        mortgage80,
-        mortgage90,
-      },
       data: {
         priceOfHome,
         downpayment,
@@ -424,12 +405,13 @@ export default class Calc extends Component {
       a37State,
       m120State,
       a38State,
+      a11State,
+      a12State,
       a13State,
       a39State,
       g9State,
       a5State,
       a46State,
-      a11State,
       g11State,
       g12State,
       a16State,
@@ -442,16 +424,24 @@ export default class Calc extends Component {
       a41State,
       a42State,
       a49State,
+      a50State,
       a17State,
       a19State,
       i11State,
       h9State,
       h11State,
       h12State,
+      taxLabel,
     } = this.state;
 
-    const getHeight = (value) => value.toFixed() * 0.03;
-    const getTop = (value) => 292 - (value.toFixed() * 0.03);
+    const taxSelectOptions = [
+      { value: 'single', label: 'Single' },
+      { value: 'jointlyDual', label: 'Jointly (Dual Income)' },
+      { value: 'jointlySingle', label: 'Jointly (Single Income)' },
+    ];
+
+    const getHeight = (value) => value.toFixed() * (300 / h12);
+    const getTop = (value) => 292 - (value.toFixed() * (300 / h12));
 
     return (
       <section className={s.root}>
@@ -901,11 +891,8 @@ export default class Calc extends Component {
                 md={4}
                 lg={4}
               >
-                <p className={s.title}>
-                  Price of Home
-                </p>
                 <span className={s.label}>
-                  Your<br />downpayment
+                  Price of Home
                 </span>
                 <span className={s.slider}>
                   <Slider
@@ -920,161 +907,119 @@ export default class Calc extends Component {
                   />
                 </span>
                 <span className={s.value}>
-                  {yourDownpayment}
+                  ${numberWithCommas(a3.toFixed(0))}
                 </span>
                 <br /><br />
                 <span className={s.label}>
-                  Landed‘s<br />downpayment
+                  Household Income
                 </span>
                 <span className={s.slider}>
                   <Slider
                     min={1}
-                    max={100}
+                    max={1000000}
+                    step={1000}
                     defaultValue={37}
-                    className={s['custom-slider']}
                     onChange={(value) => {
-                      this.setState({
-                        landedsDownpayment: value,
-                      });
+                      a7 = value;
+                      this.updateAllValues();
                     }}
                   />
                 </span>
                 <span className={s.value}>
-                  {landedsDownpayment}
+                  ${numberWithCommas(a7State)}
                 </span>
                 <br /><br />
                 <span className={s.label}>
-                  Household<br />Income
+                  Existing monthly debts
                 </span>
                 <span className={s.slider}>
                   <Slider
                     min={1}
-                    max={100}
+                    max={1000}
                     defaultValue={37}
                     onChange={(value) => {
-                      this.setState({
-                        householdIncome: value,
-                      });
+                      a8 = value;
+                      this.updateAllValues();
                     }}
                   />
                 </span>
                 <span className={s.value}>
-                  {householdIncome}
+                  {a8State}
                 </span>
                 <br /><br />
                 <span className={s.label}>
-                  Existing<br />monthly debts
+                  HOA fees
                 </span>
                 <span className={s.slider}>
                   <Slider
                     min={1}
-                    max={100}
+                    max={1000}
                     defaultValue={37}
                     onChange={(value) => {
-                      this.setState({
-                        a8: value,
-                      });
+                      a10 = value;
+                      this.updateAllValues();
                     }}
                   />
                 </span>
                 <span className={s.value}>
-                  {a8}
-                </span>
-              </Col>
-              <Col
-                xs={12}
-                sm={4}
-                md={4}
-                lg={4}
-              >
-                <p className={s.title}>
-                  Estimate assumptions
-                </p>
-                <span className={s.label}>
-                  HOA
-                </span>
-                <span
-                  className={s.slider}
-                  style={{
-                    marginTop: 0,
-                  }}
-                >
-                  <Slider
-                    min={1}
-                    max={100}
-                    defaultValue={37}
-                    onChange={(value) => {
-                      this.setState({
-                        hoa: value,
-                      });
-                    }}
-                  />
-                </span>
-                <span className={s.value}>
-                  {hoa}
+                  {a10State}
                 </span>
                 <br /><br />
                 <span className={s.label}>
-                  Monthly<br />Insurance est
+                  Monthly insurance
                 </span>
                 <span className={s.slider}>
                   <Slider
-                    min={1}
-                    max={100}
-                    defaultValue={37}
-                    className={s['custom-slider']}
+                    min={0}
+                    max={0.01}
+                    step={0.0001}
+                    defaultValue={a46}
                     onChange={(value) => {
-                      this.setState({
-                        a11: value,
-                      });
+                      a46 = value;
+                      this.updateAllValues();
                     }}
                   />
                 </span>
                 <span className={s.value}>
-                  {monthlyRepairCosts}
+                  ${numberWithCommas(a11State.toFixed())}
                 </span>
                 <br /><br />
                 <span className={s.label}>
-                  Monthly Repair<br />Costs est.
+                  Monthly repair cost
                 </span>
                 <span className={s.slider}>
                   <Slider
-                    min={1}
-                    max={100}
-                    defaultValue={37}
+                    min={0}
+                    max={0.03}
+                    step={0.0001}
+                    defaultValue={a47}
                     onChange={(value) => {
-                      this.setState({
-                        monthlyRepairCosts: value,
-                      });
+                      a47 = value;
+                      this.updateAllValues();
                     }}
                   />
                 </span>
                 <span className={s.value}>
-                  {monthlyRepairCosts}
+                  ${numberWithCommas(a12State.toFixed())}
                 </span>
                 <br /><br />
                 <span className={s.label}>
-                  Taxes est.
+                  Monthly property taxes
                 </span>
-                <span
-                  className={s.slider}
-                  style={{
-                    marginTop: 0,
-                  }}
-                >
+                <span className={s.slider}>
                   <Slider
-                    min={1}
-                    max={100}
-                    defaultValue={37}
+                    min={0}
+                    max={0.03}
+                    step={0.0001}
+                    defaultValue={a48}
                     onChange={(value) => {
-                      this.setState({
-                        taxes: value,
-                      });
+                      a48 = value;
+                      this.updateAllValues();
                     }}
                   />
                 </span>
                 <span className={s.value}>
-                  {taxes}
+                  ${numberWithCommas(a13State.toFixed())}
                 </span>
               </Col>
 
@@ -1084,66 +1029,107 @@ export default class Calc extends Component {
                 md={4}
                 lg={4}
               >
-                <p className={s.title}>
-                  Tax Status
-                </p>
                 <span className={s.label}>
-                  Closing Costs<br />on Purchase
+                  Mortgage APR with Landed
                 </span>
                 <span className={s.slider}>
                   <Slider
-                    min={1}
-                    max={100}
-                    defaultValue={37}
+                    min={0}
+                    max={0.01}
+                    step={0.0001}
+                    defaultValue={a15}
                     onChange={(value) => {
-                      this.setState({
-                        a18: value,
-                      });
+                      a15 = value;
+                      this.updateAllValues();
                     }}
                   />
                 </span>
                 <span className={s.value}>
-                  {a18}
+                  {(a15State * 100).toFixed(2)}%
                 </span>
                 <br /><br />
                 <span className={s.label}>
-                  80% Mortgage<br />Rate (7/1 ARM)
+                  Mortgage APR without Landed
                 </span>
                 <span className={s.slider}>
                   <Slider
-                    min={1}
-                    max={100}
-                    defaultValue={37}
-                    className={s['custom-slider']}
+                    min={0}
+                    max={0.01}
+                    step={0.0001}
+                    defaultValue={a16}
                     onChange={(value) => {
-                      this.setState({
-                        mortgage80: value,
-                      });
+                      a16 = value;
+                      this.updateAllValues();
                     }}
                   />
                 </span>
                 <span className={s.value}>
-                  {mortgage80}
+                  {(a16State * 100).toFixed(2)}%
                 </span>
                 <br /><br />
                 <span className={s.label}>
-                  90% Mortgage<br />Rate (7/1 ARM
+                  Monthly PMI
                 </span>
                 <span className={s.slider}>
                   <Slider
-                    min={1}
-                    max={100}
-                    defaultValue={37}
+                    min={0}
+                    max={0.03}
+                    step={0.0001}
+                    defaultValue={a49}
                     onChange={(value) => {
-                      this.setState({
-                        mortgage90: value,
-                      });
+                      a49 = value;
+                      this.updateAllValues();
                     }}
                   />
                 </span>
                 <span className={s.value}>
-                  {mortgage90}
+                  ${numberWithCommas(a17State.toFixed())}
                 </span>
+                <br /><br />
+                <span className={s.label}>
+                  Closing costs on purchase
+                </span>
+                <span className={s.slider}>
+                  <Slider
+                    min={0}
+                    max={0.03}
+                    step={0.0001}
+                    defaultValue={a50}
+                    onChange={(value) => {
+                      a50 = value;
+                      this.updateAllValues();
+                    }}
+                  />
+                </span>
+                <span className={s.value}>
+                  ${numberWithCommas(a18State.toFixed())}
+                </span>
+              </Col>
+              <Col
+                xs={12}
+                sm={4}
+                md={4}
+                lg={4}
+              >
+                <Select
+                  name="taxes"
+                  value={taxLabel}
+                  options={taxSelectOptions}
+                  className={s.adjust}
+                  onChange={(event) => {
+                    taxStatus = event.value;
+
+                    taxSelectOptions.filter((option) => {
+                      if (option.value === taxStatus) {
+                        this.setState({
+                          taxLabel: option.label,
+                        });
+                      }
+                    });
+
+                    this.updateAllValues();
+                  }}
+                />
               </Col>
             </Row>
             <span className={cx(s.line, s.first)} />
