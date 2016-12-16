@@ -17,105 +17,118 @@ const min = (a, b) => (a < b ? a : b);
 
 const federalTaxes = [
   {
+    single: 0,
+    jointlyDual: 0,
+    jointlySignle: 0,
+    tax: 10,
+  },
+  {
     single: 9275,
     jointlyDual: 18550,
     jointlySignle: 13250,
-    tax: 0.15,
+    tax: 15,
   },
   {
     single: 37650,
     jointlyDual: 75300,
     jointlySignle: 50400,
-    tax: 0.25,
+    tax: 25,
   },
   {
     single: 91150,
     jointlyDual: 151900,
     jointlySignle: 130150,
-    tax: 0.28,
+    tax: 28,
   },
   {
     single: 190150,
     jointlyDual: 231450,
     jointlySignle: 210800,
-    tax: 0.33,
+    tax: 33,
   },
   {
     single: 413350,
     jointlyDual: 413350,
     jointlySignle: 413350,
-    tax: 0.35,
+    tax: 35,
   },
   {
     single: 415050,
     jointlyDual: 466950,
     jointlySignle: 441000,
-    tax: 0.396,
+    tax: 39.6,
   },
 ];
 
 const californiaTaxes = [
   {
+    single: 0,
+    jointlyDual: 0,
+    jointlySignle: 0,
+    tax: 1,
+  },
+  {
     single: 7850,
     jointlyDual: 15700,
     jointlySignle: 15710,
-    tax: 0.02,
+    tax: 2,
   },
   {
     single: 18610,
     jointlyDual: 37220,
     jointlySignle: 37221,
-    tax: 0.04,
+    tax: 4,
   },
   {
     single: 29372,
     jointlyDual: 58744,
     jointlySignle: 47982,
-    tax: 0.06,
+    tax: 6,
   },
   {
     single: 40773,
     jointlyDual: 81546,
     jointlySignle: 59383,
-    tax: 0.08,
+    tax: 8,
   },
   {
     single: 51530,
     jointlyDual: 103060,
     jointlySignle: 70142,
-    tax: 0.93,
+    tax: 9.3,
   },
   {
     single: 263222,
     jointlyDual: 526444,
     jointlySignle: 357981,
-    tax: 0.103,
+    tax: 10.3,
   },
   {
     single: 315866,
     jointlyDual: 631732,
     jointlySignle: 429578,
-    tax: 0.113,
+    tax: 11.3,
   },
   {
     single: 526443,
     jointlyDual: 1052886,
     jointlySignle: 715962,
-    tax: 0.123,
+    tax: 12.3,
   },
 ];
 
-console.log(federalTaxes);
-console.log(californiaTaxes);
+let federalTempTax = 0;
+let californiaTempTax = 0;
+let taxStatus = 'jointlyDual';
 
-const a15 = 0.038;
-const initialClosingCostRatio = 0.015;
-const a10 = 0;
 let a7 = 200000;
+let a32 = 0.373;
+let a15 = 0.038;
+let initialClosingCostRatio = 0.015;
+let a10 = 0;
 let a8 = 0;
 let a3 = a7 * 6.85 - (a8 / 100 * 20000);
 let a18 = a3 * initialClosingCostRatio;
-let a32 = 0.373; // TODO: 28 + 9.3
 let a48 = 0.015;
 let a4 = a3 * 0.1;
 let a24 = a3 - ((a4 - a18) + (a3 * 0.2 - a4 + a18));
@@ -207,6 +220,48 @@ export default class Calc extends Component {
       },
       showGraphs: false,
       showSuperCenter: false,
+
+      a7State: a7,
+      a32State: a32,
+      a15State: a15,
+      initialClosingCostRatioState: initialClosingCostRatio,
+      a10State: a10,
+      a8State: a8,
+      a3State: a3,
+      a18State: a18,
+      a48State: a38,
+      a4State: a4,
+      a24State: a24,
+      a25State: a25,
+      a26State: a26,
+      a27State: a27,
+      a37State: a37,
+      m120State: m120,
+      a38State: a38,
+      a13State: a13,
+      a39State: a39,
+      g9State: g9,
+      a5State: a5,
+      a46State: a46,
+      a11State: a11,
+      g11State: g11,
+      g12State: g12,
+      a16State: a16,
+      a28State: a28,
+      a29State: a29,
+      a30State: a30,
+      a31State: a31,
+      a40State: a40,
+      m12016State: m12016,
+      a41State: a41,
+      a42State: a42,
+      a49State: a49,
+      a17State: a17,
+      a19State: a19,
+      i11State: i11,
+      h9State: h9,
+      h11State: h11,
+      h12State: h12,
     };
   }
 
@@ -219,16 +274,116 @@ export default class Calc extends Component {
     window.scrollTo(0, 0);
   }
 
-  updateValues() {
+  getFederalTaxes() {
+    federalTaxes.map((group) => {
+      const salary = R.prop(taxStatus, group);
+      const tax = R.prop('tax', group);
+
+      if (a7 > salary) {
+        federalTempTax = tax;
+      }
+    });
+  }
+
+  getCaliforniaTaxes() {
+    californiaTaxes.map((group) => {
+      const salary = R.prop(taxStatus, group);
+      const tax = R.prop('tax', group);
+
+      if (a7 > salary) {
+        californiaTempTax = tax;
+      }
+    });
+  }
+
+  updateAllValues() {
+    this.getFederalTaxes();
+    this.getCaliforniaTaxes();
+
+    a32 = (federalTempTax + californiaTempTax) * 0.01;
+
+    a15 = 0.038;
+    initialClosingCostRatio = 0.015;
+    a10 = 0;
     a3 = a7 * 6.85 - (a8 / 100 * 20000);
+    a18 = a3 * initialClosingCostRatio;
+    a48 = 0.015;
     a4 = a3 * 0.1;
+    a24 = a3 - ((a4 - a18) + (a3 * 0.2 - a4 + a18));
+    a25 = Math.pow((1 + a15 / 12), 360) * (a15 / 12) / (Math.pow((1 + a15 / 12), 360) - 1) * a24;
+    a26 = (a24 - (Math.pow((1 + a15 / 12), 120) * a24 - a25 * (Math.pow((1 + a15 / 12), 120) - 1) / (a15 / 12))) / 120;
+    a27 = a25 - a26;
+    a37 = Math.pow((1 + a15 / 12), 360) * (a15 / 12) / (Math.pow((1 + a15 / 12), 360) - 1) * 1000000;
+    m120 = (Math.pow((1 + a15 / 12), 120));
+    a38 = (1000000 - (m120 * 1000000 - a37 * (m120 - 1) / (a15 / 12))) / 120;
+    a13 = Math.round(a3 * a48 / 12);
+    a39 = a37 - a38;
+    g9 = Math.round((min(a27, a39) + a13) * a32);
+    a5 = a3 * 0.2 - a4 + a18;
+    a46 = 0.003;
+    a11 = a3 * a46 / 12;
+    g11 = a10 + a11 + a13 + a27 - g9;
+    g12 = g9 + a26 + g11;
+    a16 = 0.043;
+    a28 = a24 + a5;
+    a29 = Math.pow((1 + a16 / 12), 360) * (a16 / 12) / (Math.pow((1 + a16 / 12), 360) - 1) * a28;
+    a30 = (a28 - (Math.pow((1 + a16 / 12), 120) * a28 - a29 * (Math.pow((1 + a16 / 12), 120) - 1) / (a16 / 12))) / 120;
+    a31 = a29 - a30;
+    a40 = Math.pow((1 + a16 / 12), 360) * (a16 / 12) / (Math.pow((1 + a16 / 12), 360) - 1) * 1000000;
+    m12016 = (Math.pow((1 + a16 / 12), 120));
+    a41 = (1000000 - (m12016 * 1000000 - a40 * (m12016 - 1) / (a16 / 12))) / 120;
+    a42 = a40 - a41;
+    a49 = 0.008;
+    a17 = a3 * a49 / 12;
+    a19 = 0.0475;
+    i11 = a3 * a19 / 12;
+    h9 = (min(a31, a42) + a13) * a32;
+    h11 = a10 + a11 + a13 + a17 + a31 - h9;
+    h12 = h9 + a30 + h11;
 
     this.setState({
-      data: {
-        ...this.state.data,
-        priceOfHome: a3,
-        downpayment: a4,
-      },
+      ...this.state,
+      a7State: a7,
+      a32State: a32,
+      a15State: a15,
+      initialClosingCostRatioState: initialClosingCostRatio,
+      a10State: a10,
+      a8State: a8,
+      a3State: a3,
+      a18State: a18,
+      a48State: a38,
+      a4State: a4,
+      a24State: a24,
+      a25State: a25,
+      a26State: a26,
+      a27State: a27,
+      a37State: a37,
+      m120State: m120,
+      a38State: a38,
+      a13State: a13,
+      a39State: a39,
+      g9State: g9,
+      a5State: a5,
+      a46State: a46,
+      a11State: a11,
+      g11State: g11,
+      g12State: g12,
+      a16State: a16,
+      a28State: a28,
+      a29State: a29,
+      a30State: a30,
+      a31State: a31,
+      a40State: a40,
+      m12016State: m12016,
+      a41State: a41,
+      a42State: a42,
+      a49State: a49,
+      a17State: a17,
+      a19State: a19,
+      i11State: i11,
+      h9State: h9,
+      h11State: h11,
+      h12State: h12,
     });
   }
 
@@ -251,6 +406,48 @@ export default class Calc extends Component {
       },
       showGraphs,
       showSuperCenter,
+
+      a7State,
+      a32State,
+      a15State,
+      initialClosingCostRatioState,
+      a10State,
+      a8State,
+      a3State,
+      a18State,
+      a48State,
+      a4State,
+      a24State,
+      a25State,
+      a26State,
+      a27State,
+      a37State,
+      m120State,
+      a38State,
+      a13State,
+      a39State,
+      g9State,
+      a5State,
+      a46State,
+      a11State,
+      g11State,
+      g12State,
+      a16State,
+      a28State,
+      a29State,
+      a30State,
+      a31State,
+      a40State,
+      m12016State,
+      a41State,
+      a42State,
+      a49State,
+      a17State,
+      a19State,
+      i11State,
+      h9State,
+      h11State,
+      h12State,
     } = this.state;
 
     const getHeight = (value) => value.toFixed() * 0.03;
@@ -313,7 +510,7 @@ export default class Calc extends Component {
                       className={s.form}
                       onChange={(event) => {
                         a7 = event.target.value.replace(/,/g, '');
-                        this.updateValues();
+                        this.updateAllValues();
                       }}
                     />
                   </Col>
@@ -347,7 +544,7 @@ export default class Calc extends Component {
                       className={s.form}
                       onChange={(event) => {
                         a8 = event.target.value.replace(/,/g, '');
-                        this.updateValues();
+                        this.updateAllValues();
                       }}
                     />
                   </Col>
@@ -357,9 +554,9 @@ export default class Calc extends Component {
                   <span className={s.logo} />
                   <p className={s.info}>
                     You can likely afford up to a <span className={s.green}>
-                    ${numberWithCommas(priceOfHome)}</span> home!
+                    ${numberWithCommas(a3State)}</span> home!
                     <br />
-                    And with Laned you’ll only need a <span className={s.green}>${numberWithCommas(downpayment)}</span> down payment
+                    And with Laned you’ll only need a <span className={s.green}>${numberWithCommas(a3State * 0.1)}</span> down payment
                     <br />
                     <i>
                       (half of the down payment you would otherwise need)
