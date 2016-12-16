@@ -1,6 +1,7 @@
 .root {
   background: rgb(247, 247, 247);
   padding: 100px 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 .title {
@@ -22,9 +23,15 @@
   background: $white;
   box-shadow: 0 20px 20px rgba(0, 0, 0, .2);
 
+   @media only screen and (min-width: 1200px) {
+      max-width: 940px;
+      margin-left: 90px;
+    }
+
+
   border-radius: 7px;
 
-  padding: 40px;
+  padding: 60px;
 
   &.hide {
     display: none;
@@ -34,6 +41,7 @@
     width: 80%;
 
     text-align: right;
+    line-height: 18px;
 
     display: inline-block;
 
@@ -54,8 +62,9 @@
   }
 
   input[type="text"] {
-    border: 1px solid #009B69;
-    border-radius: 2px;
+    border: 1px solid rgba(0,0,0,0.0);
+    border-radius: 7px;
+    background-color: rgba(240,240,30,0.1);
 
     box-shadow: inset 0 3px 7px rgba(0, 0, 0, .1);
 
@@ -64,8 +73,14 @@
     font-size: 24px;
     color: #4A4A4A;
     font-family: $supriaSans;
+    color: $green;
 
     width: 90%;
+
+    &:focus{
+      border: 1px solid rgba(240,240,30,1);      
+
+    };
 
     @media only screen and (max-width: 667px) {
       text-align: center;
@@ -92,7 +107,7 @@
 
   .info {
     font-family: $supriaSans;
-    font-size: 24px;
+    font-size: 22px;
     color: #4C4C4C;
     line-height: 29px;
 
@@ -103,6 +118,7 @@
 
     i {
       font-family: $janon;
+      font-size: 18px;
     }
 
     @media only screen and (max-width: 667px) {
@@ -122,11 +138,16 @@
     border: none;
 
     color: white;
-
-    font-family: $janon;
-    font-size: 22px;
+    
+    font-size: 18px;
 
     margin-top: 30px;
+    cursor: pointer!important;
+    transition: .2s;
+
+    &:hover{
+      opacity: 0.8;  
+    }
 
     @media only screen and (max-width: 667px) {
       font-size: 16px;
@@ -138,6 +159,11 @@
 .graphs {
   background: $white;
   box-shadow: 0 20px 20px rgba(0, 0, 0, .2);
+
+  @media only screen and (min-width: 1200px) {
+      max-width: 940px;
+      margin-left: 90px;
+    }
 
   border-radius: 7px;
 
@@ -269,19 +295,23 @@
 
       color: white;
 
-      font-family: $janon;
-      font-size: 22px;
+      font-size: 20px;
 
       margin-top: -65px;
       position: absolute;
 
       text-align: left;
 
-      background: rgb(32,255,141);
-      background: -moz-linear-gradient(top, rgba(32,255,141,1) 0%, rgba(0,155,105,1) 100%);
+      background: $green;
+      transition: 0.3s;
+      &:hover{
+        opacity: 0.8;  
+      }
+
+      /*background: -moz-linear-gradient(top, rgba(32,255,141,1) 0%, rgba(0,155,105,1) 100%);
       background: -webkit-linear-gradient(top, rgba(32,255,141,1) 0%,rgba(0,155,105,1) 100%);
       background: linear-gradient(to bottom, rgba(32,255,141,1) 0%,rgba(0,155,105,1) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#20ff8d', endColorstr='#009b69',GradientType=0 );
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#20ff8d', endColorstr='#009b69',GradientType=0 );*/
 
       &.adjust {
         color: $green;
