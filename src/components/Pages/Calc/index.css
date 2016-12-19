@@ -23,11 +23,13 @@
   background: $white;
   box-shadow: 0 20px 20px rgba(0, 0, 0, .2);
 
-   @media only screen and (min-width: 1200px) {
-      max-width: 940px;
-      margin-left: 90px;
-    }
+  position: relative;
+  z-index: 3;
 
+  @media only screen and (min-width: 1200px) {
+    max-width: 940px;
+    margin-left: 90px;
+  }
 
   border-radius: 7px;
 
@@ -528,26 +530,24 @@
   background: #4A4A4A;
   border-radius: 7px;
 
-  padding: 40px 20px 20px 20px;
+  padding: 50px 20px 20px 20px;
 
   position: relative;
   z-index: 1;
 
   transition: .7s;
 
-  margin-top: -20px;
+  opacity: 0;
+  margin-top: -300px;
 
-  display: none;
-
-  &.show {
-    display: block;
+  @media only screen and (min-width: 1200px) {
+    max-width: 940px;
+    margin-left: 90px;
   }
 
-  .title {
-    font-family: @supriaSansMedium;
-    color: #FFF;
-    font-size: 15px;
-    line-height: 
+  &.show {
+    opacity: 1;
+    margin-top: -20px;
   }
 
   .label {
@@ -555,9 +555,9 @@
     width: 30%;
 
     font-family: $supriaSans;
-    font-size: 14px;
+    font-size: 11px;
     color: #FFF;
-    line-height: 16px;
+    line-height: 13px;
 
     opacity: .58;
 
@@ -569,7 +569,7 @@
     color: #00C796;
 
     font-family: $supriaSans;
-    font-size: 12px;
+    font-size: 10px;
 
     position: relative;
     
@@ -579,7 +579,7 @@
 
   .slider {
     display: inline-block;
-    width: 30%;
+    width: 33%;
     margin-top: 5px;
     margin-left: 5%;
 
@@ -596,14 +596,51 @@
     height: 100%;
 
     background: #000;
-    opacity: .3;
+    opacity: .2;
 
     &.first {
-      left: 31%;
+      left: 32%;
     }
 
     &.second {
-      left: 64%;
+      left: 65%;
+    }
+  }
+
+  .radiobuttons {
+    margin-top: 3px;
+
+    .radiobutton {
+      display: inline-block;
+
+      width: 33.3%;
+
+      padding-bottom: 5px;
+
+      cursor: pointer;
+
+      .toggle {
+        size: 13px;
+
+        display: inline-block;
+
+        border-radius: 100%;
+        border: 3px solid #4A4A4A;
+
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, .3);
+        
+        &.active {
+          background: rgb(0,203,162);
+          background: -moz-linear-gradient(top, rgba(0,203,162,1) 0%, rgba(0,155,105,1) 100%);
+          background: -webkit-linear-gradient(top, rgba(0,203,162,1) 0%,rgba(0,155,105,1) 100%);
+          background: linear-gradient(to bottom, rgba(0,203,162,1) 0%,rgba(0,155,105,1) 100%);
+        }  
+      }
+
+      .label {
+        margin-top: 2px;
+        margin-left: 9px;
+      }
     }
   }
 }

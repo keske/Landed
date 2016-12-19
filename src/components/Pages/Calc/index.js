@@ -179,7 +179,7 @@ export default class Calc extends Component {
     super(props);
 
     this.state = {
-      step: 5,
+      step: 1,
       text: [
         {
           title: 'With landed you pay less then the regular owning',
@@ -211,7 +211,7 @@ export default class Calc extends Component {
         downpayment: a3 * 0.1,
       },
       showGraphs: false,
-      showSuperCenter: true,
+      showSuperCenter: false,
 
       a7State: a7,
       a32State: a32,
@@ -434,12 +434,6 @@ export default class Calc extends Component {
       taxLabel,
     } = this.state;
 
-    const taxSelectOptions = [
-      { value: 'single', label: 'Single' },
-      { value: 'jointlyDual', label: 'Jointly (Dual Income)' },
-      { value: 'jointlySingle', label: 'Jointly (Single Income)' },
-    ];
-
     const getHeight = (value) => value.toFixed() * (300 / h12);
     const getTop = (value) => 292 - (value.toFixed() * (300 / h12));
 
@@ -588,9 +582,9 @@ export default class Calc extends Component {
                           key={index}
                           className={cx({ [s.active]: step === index })}
                           onClick={() => {
-                            this.setState({
-                              step: index,
-                            });
+                            // this.setState({
+                              // step: index,
+                            // });
                           }}
                         >
                           {index}
@@ -964,7 +958,14 @@ export default class Calc extends Component {
                 <span className={s.value}>
                   {a10State}
                 </span>
-                <br /><br />
+              </Col>
+
+              <Col
+                xs={12}
+                sm={4}
+                md={4}
+                lg={4}
+              >
                 <span className={s.label}>
                   Monthly insurance
                 </span>
@@ -1021,14 +1022,86 @@ export default class Calc extends Component {
                 <span className={s.value}>
                   ${numberWithCommas(a13State.toFixed())}
                 </span>
+                <br /><br />
+                <span className={s.label}>
+                  Monthly PMI
+                </span>
+                <span className={s.slider}>
+                  <Slider
+                    min={0}
+                    max={0.03}
+                    step={0.0001}
+                    defaultValue={a49}
+                    onChange={(value) => {
+                      a49 = value;
+                      this.updateAllValues();
+                    }}
+                  />
+                </span>
+                <span className={s.value}>
+                  ${numberWithCommas(a17State.toFixed())}
+                </span>
               </Col>
-
               <Col
                 xs={12}
                 sm={4}
                 md={4}
                 lg={4}
               >
+                <div className={s.radiobuttons}>
+                  <span
+                    className={s.radiobutton}
+                    onClick={() => {
+                      taxStatus = 'single';
+                      this.updateAllValues();
+                    }}
+                  >
+                    <span
+                      className={cx(
+                        s.toggle,
+                        { [s.active]: taxStatus === 'single' },
+                      )}
+                    />
+                    <span className={s.label}>
+                      Single
+                    </span>
+                  </span>
+                  <span
+                    className={s.radiobutton}
+                    onClick={() => {
+                      taxStatus = 'jointlyDual';
+                      this.updateAllValues();
+                    }}
+                  >
+                    <span
+                      className={cx(
+                        s.toggle,
+                        { [s.active]: taxStatus === 'jointlyDual' },
+                      )}
+                    />
+                    <span className={s.label}>
+                      Dual Income
+                    </span>
+                  </span>
+                  <span
+                    className={s.radiobutton}
+                    onClick={() => {
+                      taxStatus = 'jointlySingle';
+                      this.updateAllValues();
+                    }}
+                  >
+                    <span
+                      className={cx(
+                        s.toggle,
+                        { [s.active]: taxStatus === 'jointlySingle' },
+                      )}
+                    />
+                    <span className={s.label}>
+                      Single Income
+                    </span>
+                  </span>
+                </div>
+                <br />
                 <span className={s.label}>
                   Mortgage APR with Landed
                 </span>
@@ -1068,25 +1141,6 @@ export default class Calc extends Component {
                 </span>
                 <br /><br />
                 <span className={s.label}>
-                  Monthly PMI
-                </span>
-                <span className={s.slider}>
-                  <Slider
-                    min={0}
-                    max={0.03}
-                    step={0.0001}
-                    defaultValue={a49}
-                    onChange={(value) => {
-                      a49 = value;
-                      this.updateAllValues();
-                    }}
-                  />
-                </span>
-                <span className={s.value}>
-                  ${numberWithCommas(a17State.toFixed())}
-                </span>
-                <br /><br />
-                <span className={s.label}>
                   Closing costs on purchase
                 </span>
                 <span className={s.slider}>
@@ -1104,32 +1158,6 @@ export default class Calc extends Component {
                 <span className={s.value}>
                   ${numberWithCommas(a18State.toFixed())}
                 </span>
-              </Col>
-              <Col`
-                xs={12}
-                sm={4}
-                md={4}
-                lg={4}
-              >
-                <Select
-                  name="taxes"
-                  value={taxStatus}
-                  options={taxStatus}
-                  className={s.adjust}
-                  onChange={(event) => {
-                    taxStatus = event.value;
-
-                    // taxSelectOptions.filter((option) => {
-                    //   if (option.value === taxStatus) {
-                    //     this.setState({
-                    //       taxLabel: option.label,
-                    //     });
-                    //   }
-                    // });
-
-                    this.updateAllValues();
-                  }}
-                />
               </Col>
             </Row>
             <span className={cx(s.line, s.first)} />
