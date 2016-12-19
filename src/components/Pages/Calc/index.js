@@ -188,7 +188,7 @@ export default class Calc extends Component {
     super(props);
 
     this.state = {
-      step: 5,
+      step: 1,
       text: [
         {
           title: 'With landed you pay less then the regular owning',
@@ -219,8 +219,8 @@ export default class Calc extends Component {
         priceOfHome: a3,
         downpayment: a3 * 0.1,
       },
-      showGraphs: true,
-      showSuperCenter: true,
+      showGraphs: false,
+      showSuperCenter: false,
 
       a7State: a7,
       a32State: a32,
