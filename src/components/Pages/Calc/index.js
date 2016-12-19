@@ -4,7 +4,6 @@ import Helmet from 'react-helmet';
 import R from 'ramda';
 import Slider from 'rc-slider';
 import DynamicNumber from 'react-dynamic-number';
-import Select from 'react-select';
 
 import { observer } from 'mobx-react';
 import { Grid, Row, Col } from 'react-bootstrap';
@@ -128,8 +127,8 @@ let a15 = 0.038;
 let initialClosingCostRatio = 0.015;
 let a10 = 0;
 let a8 = 0;
+let lockA3 = false;
 let a3 = a7 * 6.85 - (a8 / 100 * 20000);
-let newA7 = a3 / 6.85;
 let a18 = a3 * initialClosingCostRatio;
 let a47 = 0.008;
 let a48 = 0.015;
@@ -144,16 +143,17 @@ let a38 = (1000000 - (m120 * 1000000 - a37 * (m120 - 1) / (a15 / 12))) / 120;
 let a13 = Math.round(a3 * a48 / 12);
 let a39 = a37 - a38;
 let g9 = Math.round((min(a27, a39) + a13) * a32);
-let a5 = a3 * 0.2 - a4 + a18;
+let a5 = a3 * 0.2 - a4;
 let a46 = 0.003;
 let a11 = a3 * a46 / 12;
 let a12 = a3 * a47 / 12;
-let g11 = a10 + a11 + a13 + a27 - g9;
+let g11 = a10 + a11 + a13 + a27 - g9 + a12;
 let g12 = g9 + a26 + g11;
 let a16 = 0.043;
 let a28 = a24 + a5;
 let a29 = Math.pow((1 + a16 / 12), 360) * (a16 / 12) / (Math.pow((1 + a16 / 12), 360) - 1) * a28;
 let a30 = (a28 - (Math.pow((1 + a16 / 12), 120) * a28 - a29 * (Math.pow((1 + a16 / 12), 120) - 1) / (a16 / 12))) / 120;
+
 let a31 = a29 - a30;
 let a40 = Math.pow((1 + a16 / 12), 360) * (a16 / 12) / (Math.pow((1 + a16 / 12), 360) - 1) * 1000000;
 let m12016 = (Math.pow((1 + a16 / 12), 120));
@@ -165,8 +165,17 @@ let a17 = a3 * a49 / 12;
 let a19 = 0.0475;
 let i11 = a3 * a19 / 12;
 let h9 = (min(a31, a42) + a13) * a32;
-let h11 = a10 + a11 + a13 + a17 + a31 - h9;
+let h11 = a10 + a11 + a13 + a17 + a31 - h9 + a12;
 let h12 = h9 + a30 + h11;
+
+let a33 = (g12 + a8) / (a7 / 12);
+let a34 = (h12 + a8) / (a7 / 12);
+
+let g14 = () => a33 < 0.43;
+let h14 = () => a34 < 0.43;
+
+// console.log(a33);
+// console.log(a34);
 
 @observer
 export default class Calc extends Component {
@@ -179,7 +188,7 @@ export default class Calc extends Component {
     super(props);
 
     this.state = {
-      step: 1,
+      step: 5,
       text: [
         {
           title: 'With landed you pay less then the regular owning',
@@ -210,8 +219,8 @@ export default class Calc extends Component {
         priceOfHome: a3,
         downpayment: a3 * 0.1,
       },
-      showGraphs: false,
-      showSuperCenter: false,
+      showGraphs: true,
+      showSuperCenter: true,
 
       a7State: a7,
       a32State: a32,
@@ -255,6 +264,8 @@ export default class Calc extends Component {
       h9State: h9,
       h11State: h11,
       h12State: h12,
+      g14State: g14,
+      h14State: h14,
       taxLabel: '',
     };
   }
@@ -296,7 +307,11 @@ export default class Calc extends Component {
 
     a32 = (federalTempTax + californiaTempTax) * 0.01;
     initialClosingCostRatio = 0.015;
-    a3 = a7 * 6.85 - (a8 / 100 * 20000);
+
+    if (!lockA3) {
+      a3 = a7 * 6.85 - (a8 / 100 * 20000);
+    }
+
     a18 = a3 * a50;
     a4 = a3 * 0.1;
     a24 = a3 - ((a4 - a18) + (a3 * 0.2 - a4 + a18));
@@ -313,7 +328,7 @@ export default class Calc extends Component {
     a11 = a3 * a46 / 12;
     a12 = a3 * a47 / 12;
 
-    g11 = a10 + a11 + a13 + a27 - g9;
+    g11 = a10 + a11 + a13 + a27 - g9 + a12;
     g12 = g9 + a26 + g11;
     a28 = a24 + a5;
     a29 = Math.pow((1 + a16 / 12), 360) * (a16 / 12) / (Math.pow((1 + a16 / 12), 360) - 1) * a28;
@@ -327,8 +342,11 @@ export default class Calc extends Component {
     a19 = 0.0475;
     i11 = a3 * a19 / 12;
     h9 = (min(a31, a42) + a13) * a32;
-    h11 = a10 + a11 + a13 + a17 + a31 - h9;
+    h11 = a10 + a11 + a13 + a17 + a31 - h9 + a12;
     h12 = h9 + a30 + h11;
+
+    a33 = (g12 + a8) / (a7 / 12);
+    a34 = (h12 + a8) / (a7 / 12);
 
     this.setState({
       ...this.state,
@@ -375,6 +393,8 @@ export default class Calc extends Component {
       h9State: h9,
       h11State: h11,
       h12State: h12,
+      g14State: a33 < 0.43,
+      h14State: a34 < 0.43,
     });
   }
 
@@ -431,8 +451,13 @@ export default class Calc extends Component {
       h9State,
       h11State,
       h12State,
+      h14State,
+      g14State,
       taxLabel,
     } = this.state;
+
+    console.log(h14State());
+    console.log(g14State());
 
     const getHeight = (value) => value.toFixed() * (300 / h12);
     const getTop = (value) => 292 - (value.toFixed() * (300 / h12));
@@ -668,7 +693,12 @@ export default class Calc extends Component {
                     </span>
                   </div>
 
-                  <div className={s.col}>
+                  <div
+                    className={cx(
+                      s.col,
+                      { [s.gray]: !h14State() },
+                    )}
+                  >
                     {
                       step > 2 && [
                         <span
@@ -760,8 +790,12 @@ export default class Calc extends Component {
                     />
                   </div>
 
-
-                  <div className={s.col}>
+                  <div
+                    className={cx(
+                      s.col,
+                      { [s.gray]: !g14State() },
+                    )}
+                  >
                     {
                       step > 2 && [
                         <span
@@ -894,14 +928,13 @@ export default class Calc extends Component {
                     max={100}
                     defaultValue={37}
                     onChange={(value) => {
-                      this.setState({
-                        yourDownpayment: value,
-                      });
+                      a3 = value;
+                      this.updateAllValues();
                     }}
                   />
                 </span>
                 <span className={s.value}>
-                  ${numberWithCommas(a3.toFixed(0))}
+                  ${numberWithCommas(a3State.toFixed(0))}
                 </span>
                 <br /><br />
                 <span className={s.label}>
@@ -909,12 +942,14 @@ export default class Calc extends Component {
                 </span>
                 <span className={s.slider}>
                   <Slider
-                    min={1}
+                    min={20000}
                     max={1000000}
                     step={1000}
-                    defaultValue={37}
+                    defaultValue={a7}
                     onChange={(value) => {
                       a7 = value;
+                      lockA3 = true;
+
                       this.updateAllValues();
                     }}
                   />
@@ -928,17 +963,19 @@ export default class Calc extends Component {
                 </span>
                 <span className={s.slider}>
                   <Slider
-                    min={1}
-                    max={1000}
-                    defaultValue={37}
+                    min={0}
+                    max={5000}
+                    defaultValue={0}
                     onChange={(value) => {
                       a8 = value;
+                      lockA3 = true;
+
                       this.updateAllValues();
                     }}
                   />
                 </span>
                 <span className={s.value}>
-                  {a8State}
+                  ${numberWithCommas(a8State)}
                 </span>
                 <br /><br />
                 <span className={s.label}>
@@ -946,9 +983,9 @@ export default class Calc extends Component {
                 </span>
                 <span className={s.slider}>
                   <Slider
-                    min={1}
+                    min={0}
                     max={1000}
-                    defaultValue={37}
+                    defaultValue={0}
                     onChange={(value) => {
                       a10 = value;
                       this.updateAllValues();
@@ -956,7 +993,7 @@ export default class Calc extends Component {
                   />
                 </span>
                 <span className={s.value}>
-                  {a10State}
+                  ${numberWithCommas(a10State)}
                 </span>
               </Col>
 
@@ -1049,6 +1086,9 @@ export default class Calc extends Component {
                 lg={4}
               >
                 <div className={s.radiobuttons}>
+                  <span className={s.title}>
+                    Tax Status
+                  </span>
                   <span
                     className={s.radiobutton}
                     onClick={() => {
@@ -1108,7 +1148,7 @@ export default class Calc extends Component {
                 <span className={s.slider}>
                   <Slider
                     min={0}
-                    max={0.01}
+                    max={0.1}
                     step={0.0001}
                     defaultValue={a15}
                     onChange={(value) => {
@@ -1127,7 +1167,7 @@ export default class Calc extends Component {
                 <span className={s.slider}>
                   <Slider
                     min={0}
-                    max={0.01}
+                    max={0.1}
                     step={0.0001}
                     defaultValue={a16}
                     onChange={(value) => {
@@ -1138,25 +1178,6 @@ export default class Calc extends Component {
                 </span>
                 <span className={s.value}>
                   {(a16State * 100).toFixed(2)}%
-                </span>
-                <br /><br />
-                <span className={s.label}>
-                  Closing costs on purchase
-                </span>
-                <span className={s.slider}>
-                  <Slider
-                    min={0}
-                    max={0.03}
-                    step={0.0001}
-                    defaultValue={a50}
-                    onChange={(value) => {
-                      a50 = value;
-                      this.updateAllValues();
-                    }}
-                  />
-                </span>
-                <span className={s.value}>
-                  ${numberWithCommas(a18State.toFixed())}
                 </span>
               </Col>
             </Row>
