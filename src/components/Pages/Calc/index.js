@@ -1105,7 +1105,7 @@ export default class Calc extends Component {
                   ${numberWithCommas(a18State.toFixed())}
                 </span>
               </Col>
-              <Col
+              <Col`
                 xs={12}
                 sm={4}
                 md={4}
@@ -1113,19 +1113,19 @@ export default class Calc extends Component {
               >
                 <Select
                   name="taxes"
-                  value={taxLabel}
-                  options={taxSelectOptions}
+                  value={taxStatus}
+                  options={taxStatus}
                   className={s.adjust}
                   onChange={(event) => {
                     taxStatus = event.value;
 
-                    taxSelectOptions.filter((option) => {
-                      if (option.value === taxStatus) {
-                        this.setState({
-                          taxLabel: option.label,
-                        });
-                      }
-                    });
+                    // taxSelectOptions.filter((option) => {
+                    //   if (option.value === taxStatus) {
+                    //     this.setState({
+                    //       taxLabel: option.label,
+                    //     });
+                    //   }
+                    // });
 
                     this.updateAllValues();
                   }}
