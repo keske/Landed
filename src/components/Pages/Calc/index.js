@@ -348,8 +348,8 @@ export default class Calc extends Component {
     h11 = a10 + a11 + a13 + a17 + a31 - h9 + a12;
     h12 = h9 + a30 + h11;
 
-    a33 = (g12 + a8) / (a7 / 12);
-    a34 = (h12 + a8) / (a7 / 12);
+    a33 = (g12 + a8 - a12) / (a7 / 12);
+    a34 = (h12 + a8 - a12) / (a7 / 12);
 
     this.setState({
       ...this.state,
