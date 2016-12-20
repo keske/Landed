@@ -171,8 +171,11 @@ let h12 = h9 + a30 + h11;
 let a33 = (g12 + a8) / (a7 / 12);
 let a34 = (h12 + a8) / (a7 / 12);
 
-let g14 = () => a33 < 0.43;
-let h14 = () => a34 < 0.43;
+const getG14 = () => a33 < 0.43;
+const getH14 = () => a34 < 0.43;
+
+let g14 = getG14();
+let h14 = getH14();
 
 // console.log(a33);
 // console.log(a34);
@@ -393,8 +396,8 @@ export default class Calc extends Component {
       h9State: h9,
       h11State: h11,
       h12State: h12,
-      g14State: a33 < 0.43,
-      h14State: a34 < 0.43,
+      g14State: getG14(),
+      h14State: getH14(),
     });
   }
 
@@ -455,9 +458,6 @@ export default class Calc extends Component {
       g14State,
       taxLabel,
     } = this.state;
-
-    console.log(h14State());
-    console.log(g14State());
 
     const getHeight = (value) => value.toFixed() * (300 / h12);
     const getTop = (value) => 292 - (value.toFixed() * (300 / h12));
@@ -693,10 +693,20 @@ export default class Calc extends Component {
                     </span>
                   </div>
 
+                  {
+                    !h14State &&
+                      <span className={s.warning}>
+                        <span className={s.cross}>
+                          ×
+                        </span>
+                        You likely<br />won't qualify
+                      </span>
+                  }
+
                   <div
                     className={cx(
                       s.col,
-                      { [s.gray]: !h14State() },
+                      { [s.gray]: !h14State },
                     )}
                   >
                     {
@@ -790,10 +800,20 @@ export default class Calc extends Component {
                     />
                   </div>
 
+                  {
+                    !g14State &&
+                      <span className={s.warning}>
+                        <span className={s.cross}>
+                          ×
+                        </span>
+                        You likely<br />won't qualify
+                      </span>
+                  }
+
                   <div
                     className={cx(
                       s.col,
-                      { [s.gray]: !g14State() },
+                      { [s.gray]: !g14State },
                     )}
                   >
                     {
