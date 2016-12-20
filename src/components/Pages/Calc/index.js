@@ -168,8 +168,8 @@ let h9 = (min(a31, a42) + a13) * a32;
 let h11 = a10 + a11 + a13 + a17 + a31 - h9 + a12;
 let h12 = h9 + a30 + h11;
 
-let a33 = (g12 + a8) / (a7 / 12);
-let a34 = (h12 + a8) / (a7 / 12);
+let a33 = (g12 + a8 - a12) / (a7 / 12);
+let a34 = (h12 + a8 - a12) / (a7 / 12);
 
 const getG14 = () => a33 < 0.43;
 const getH14 = () => a34 < 0.43;
@@ -177,8 +177,8 @@ const getH14 = () => a34 < 0.43;
 let g14 = getG14();
 let h14 = getH14();
 
-// console.log(a33);
-// console.log(a34);
+console.log(a33);
+console.log(a34);
 
 @observer
 export default class Calc extends Component {
@@ -694,7 +694,7 @@ export default class Calc extends Component {
                   </div>
 
                   {
-                    !h14State &&
+                    !g14State &&
                       <span className={s.warning}>
                         <span className={s.cross}>
                           ×
@@ -706,7 +706,7 @@ export default class Calc extends Component {
                   <div
                     className={cx(
                       s.col,
-                      { [s.gray]: !h14State },
+                      { [s.gray]: !g14State },
                     )}
                   >
                     {
@@ -801,7 +801,7 @@ export default class Calc extends Component {
                   </div>
 
                   {
-                    !g14State &&
+                    !h14State &&
                       <span className={s.warning}>
                         <span className={s.cross}>
                           ×
@@ -813,7 +813,7 @@ export default class Calc extends Component {
                   <div
                     className={cx(
                       s.col,
-                      { [s.gray]: !g14State },
+                      { [s.gray]: !h14State },
                     )}
                   >
                     {
@@ -944,11 +944,13 @@ export default class Calc extends Component {
                 </span>
                 <span className={s.slider}>
                   <Slider
-                    min={1}
-                    max={100}
-                    defaultValue={37}
+                    min={100000}
+                    max={5000000}
+                    step={1000}
+                    defaultValue={a3}
                     onChange={(value) => {
                       a3 = value;
+                      lockA3 = true;
                       this.updateAllValues();
                     }}
                   />
@@ -971,6 +973,9 @@ export default class Calc extends Component {
                       lockA3 = true;
 
                       this.updateAllValues();
+
+                      console.log(a33);
+                      console.log(a34);
                     }}
                   />
                 </span>
