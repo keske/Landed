@@ -121,19 +121,19 @@ let federalTempTax = 0;
 let californiaTempTax = 0;
 let taxStatus = 'jointlyDual';
 
-let a7 = 200000;
+let a7 = 125000;
 let a32 = 0.373;
-let a15 = 0.038;
+let a15 = 0.041;
 let initialClosingCostRatio = 0.015;
 let a10 = 0;
-let a8 = 0;
+let a8 = 200;
 let lockA3 = false;
-let a3 = a7 * 6.85 - (a8 / 100 * 20000);
+let a3 = a7 * 6.5 - (a8 / 100 * 20000);
 let a18 = a3 * initialClosingCostRatio;
 let a47 = 0.008;
 let a48 = 0.015;
 let a4 = a3 * 0.1;
-let a24 = a3 - ((a4 - a18) + (a3 * 0.2 - a4 + a18));
+let a24 = a3 - ((a4 - a18) + (a3 * 0.2 - a4));
 let a25 = Math.pow((1 + a15 / 12), 360) * (a15 / 12) / (Math.pow((1 + a15 / 12), 360) - 1) * a24;
 let a26 = (a24 - (Math.pow((1 + a15 / 12), 120) * a24 - a25 * (Math.pow((1 + a15 / 12), 120) - 1) / (a15 / 12))) / 120;
 let a27 = a25 - a26;
@@ -149,7 +149,7 @@ let a11 = a3 * a46 / 12;
 let a12 = a3 * a47 / 12;
 let g11 = a10 + a11 + a13 + a27 - g9 + a12;
 let g12 = g9 + a26 + g11;
-let a16 = 0.043;
+let a16 = 0.050;
 let a28 = a24 + a5;
 let a29 = Math.pow((1 + a16 / 12), 360) * (a16 / 12) / (Math.pow((1 + a16 / 12), 360) - 1) * a28;
 let a30 = (a28 - (Math.pow((1 + a16 / 12), 120) * a28 - a29 * (Math.pow((1 + a16 / 12), 120) - 1) / (a16 / 12))) / 120;
@@ -177,9 +177,6 @@ const getH14 = () => a34 < 0.43;
 let g14 = getG14();
 let h14 = getH14();
 
-console.log(a33);
-console.log(a34);
-
 @observer
 export default class Calc extends Component {
 
@@ -194,13 +191,13 @@ export default class Calc extends Component {
       step: 1,
       text: [
         {
-          title: 'With landed you pay less then the regular owning',
-          info: 'You pay less with Landed because we share in your home investment<br /><a href="#">learn how it works</a>',
+          title: 'With Landed you\'ll pay less than a 90% mortgage',
+          info: 'You pay less with Landed because we share in your home investment<br /><Link to="/how-it-works">learn how it works</Link>',
         },
 
         {
-          title: 'And it may seem that renting is cheaper',
-          info: 'more details here?',
+          title: 'And that still might seem much more expensive than renting',
+          info: 'Assuming you currently rent a similar home to the one you would buy',
         },
 
         {
@@ -210,12 +207,12 @@ export default class Calc extends Component {
 
         {
           title: 'And as we all know, paying your mortgage builds equity over time.<br /><a href="#">learn how</a>',
-          info: 'This much of your home payments every month go to paying down your mortgage',
+          info: 'This amount goes directly to paying down your mortgage, increasing your wealth',
         },
 
         {
-          title: 'With what’s left you can compare to the financial impact of renting.',
-          info: '<button>bring Landed to your<br />school or district</button>Now that you understand everything about home ownership, you can adjust some of the assumptions on the left.',
+          title: 'With what’s left you can compare to the monthly cost of renting.',
+          info: 'Make sure to adjust the assumptions below to see how things change!',
         },
       ],
       data: {
@@ -312,11 +309,10 @@ export default class Calc extends Component {
     initialClosingCostRatio = 0.015;
 
     if (!lockA3) {
-      a3 = a7 * 6.85 - (a8 / 100 * 20000);
+      a3 = a7 * 6.5 - (a8 / 100 * 20000);
     }
 
     a18 = a3 * a50;
-    a4 = a3 * 0.1;
     a24 = a3 - ((a4 - a18) + (a3 * 0.2 - a4 + a18));
     a25 = Math.pow((1 + a15 / 12), 360) * (a15 / 12) / (Math.pow((1 + a15 / 12), 360) - 1) * a24;
     a26 = (a24 - (Math.pow((1 + a15 / 12), 120) * a24 - a25 * (Math.pow((1 + a15 / 12), 120) - 1) / (a15 / 12))) / 120;
@@ -327,7 +323,7 @@ export default class Calc extends Component {
     a13 = Math.round(a3 * a48 / 12);
     a39 = a37 - a38;
     g9 = Math.round((min(a27, a39) + a13) * a32);
-    a5 = a3 * 0.2 - a4 + a18;
+    a5 = a3 * 0.2 - a4;
     a11 = a3 * a46 / 12;
     a12 = a3 * a47 / 12;
 
@@ -399,6 +395,7 @@ export default class Calc extends Component {
       g14State: getG14(),
       h14State: getH14(),
     });
+    console.log(this.state);
   }
 
   render() {
@@ -476,10 +473,10 @@ export default class Calc extends Component {
               className={s.center}
             >
               <p className={s.title}>
-                Landed calcualtor
+                Landed Calculator
               </p>
               <p className={s.subtitle}>
-                Subtitle
+                <br />
               </p>
 
               <div
@@ -518,7 +515,7 @@ export default class Calc extends Component {
                       value={a7}
                       className={s.form}
                       onChange={(event) => {
-                        a7 = event.target.value.replace(/,/g, '');
+                        a7 = parseFloat(event.target.value.replace(/,/g, ''));
                         this.updateAllValues();
                       }}
                     />
@@ -552,7 +549,7 @@ export default class Calc extends Component {
                       value={a8}
                       className={s.form}
                       onChange={(event) => {
-                        a8 = event.target.value.replace(/,/g, '');
+                        a8 = parseFloat(event.target.value.replace(/,/g, ''));
                         this.updateAllValues();
                       }}
                     />
@@ -562,14 +559,10 @@ export default class Calc extends Component {
                 <div className={s.center}>
                   <span className={s.logo} />
                   <p className={s.info}>
-                    You can likely afford up to a <span className={s.green}>
+                    With Landed, you can likely afford a <span className={s.green}>
                     ${numberWithCommas(a3State)}</span> home!
                     <br />
-                    And with Laned you’ll only need a <span className={s.green}>${numberWithCommas(a3State * 0.1)}</span> down payment
-                    <br />
-                    <i>
-                      (half of the down payment you would otherwise need)
-                    </i>
+                    And you’ll only need a <span className={s.green}>${numberWithCommas((a3State * 0.1).toFixed(0))}</span> down payment.
                   </p>
                   <button
                     onClick={() => {
@@ -658,7 +651,7 @@ export default class Calc extends Component {
                 </div>
                 <div className={s['right-side']}>
                   <p className={s.title}>
-                    Monhly payments
+                    Estimated Monthly Payments
                   </p>
                   <div className={s.col}>
                     <span
@@ -745,7 +738,7 @@ export default class Calc extends Component {
                         >
                           ${numberWithCommas(Math.round(g12 - g9 - (g12 - g9 - a26)))}
                           <br />
-                          your money<br />in mortgage
+                          Building<br />home wealth
                         </span>,
                       ]
                     }
@@ -852,7 +845,7 @@ export default class Calc extends Component {
                         >
                           ${numberWithCommas(Math.round(h12 - h9 - (h12 - h9 - a30)))}
                           <br />
-                          your money<br />in mortgage
+                          Building<br />home wealth
                         </span>,
                       ]
                     }
@@ -915,10 +908,10 @@ export default class Calc extends Component {
                     </div>
                     <div className={cx(s.col, s['in-footer'])}>
                       <span className={s.logo} />
-                      Landed as 25%<br />partner*
+                      Landed as <br /><span className={s.green}>{numberWithCommas(((0.2 - a4State/a3State)*250).toFixed(0))}</span>% partner
                     </div>
                     <div className={cx(s.col, s['in-footer'])}>
-                      Owning without<br />Landed**
+                      Owning without<br />Landed
                     </div>
                   </div>
                 </div>
@@ -944,13 +937,11 @@ export default class Calc extends Component {
                 </span>
                 <span className={s.slider}>
                   <Slider
-                    min={100000}
-                    max={5000000}
-                    step={1000}
+                    min={200000}
+                    max={a7State * 6.5 - (a8State / 100 * 20000)}
                     defaultValue={a3}
                     onChange={(value) => {
                       a3 = value;
-                      lockA3 = true;
                       this.updateAllValues();
                     }}
                   />
@@ -960,22 +951,36 @@ export default class Calc extends Component {
                 </span>
                 <br /><br />
                 <span className={s.label}>
+                  Down Payment Amount
+                </span>
+                <span className={s.slider}>
+                  <Slider
+                    min={a3State*0.1}
+                    max={a3State*0.2}
+                    defaultValue={a3State*0.1}
+                    onChange={(value) => {
+                      a4 = value;
+                      this.updateAllValues();
+                    }}
+                  />
+                </span>
+                <span className={s.value}>
+                  ${numberWithCommas(a4State.toFixed(0))}
+                </span>
+                <br /><br />
+                <span className={s.label}>
                   Household Income
                 </span>
                 <span className={s.slider}>
                   <Slider
-                    min={20000}
-                    max={1000000}
+                    min={45000}
+                    max={350000}
                     step={1000}
                     defaultValue={a7}
                     onChange={(value) => {
                       a7 = value;
                       lockA3 = true;
-
                       this.updateAllValues();
-
-                      console.log(a33);
-                      console.log(a34);
                     }}
                   />
                 </span>
@@ -989,7 +994,7 @@ export default class Calc extends Component {
                 <span className={s.slider}>
                   <Slider
                     min={0}
-                    max={5000}
+                    max={2500}
                     defaultValue={0}
                     onChange={(value) => {
                       a8 = value;
@@ -1001,24 +1006,6 @@ export default class Calc extends Component {
                 </span>
                 <span className={s.value}>
                   ${numberWithCommas(a8State)}
-                </span>
-                <br /><br />
-                <span className={s.label}>
-                  HOA fees
-                </span>
-                <span className={s.slider}>
-                  <Slider
-                    min={0}
-                    max={1000}
-                    defaultValue={0}
-                    onChange={(value) => {
-                      a10 = value;
-                      this.updateAllValues();
-                    }}
-                  />
-                </span>
-                <span className={s.value}>
-                  ${numberWithCommas(a10State)}
                 </span>
               </Col>
 
@@ -1048,7 +1035,25 @@ export default class Calc extends Component {
                 </span>
                 <br /><br />
                 <span className={s.label}>
-                  Monthly repair cost
+                  Monthly <br />HOA fees
+                </span>
+                <span className={s.slider}>
+                  <Slider
+                    min={0}
+                    max={600}
+                    defaultValue={0}
+                    onChange={(value) => {
+                      a10 = value;
+                      this.updateAllValues();
+                    }}
+                  />
+                </span>
+                <span className={s.value}>
+                  ${numberWithCommas(a10State)}
+                </span>
+                <br /><br />
+                <span className={s.label}>
+                  Monthly <br />repair costs
                 </span>
                 <span className={s.slider}>
                   <Slider
@@ -1084,25 +1089,7 @@ export default class Calc extends Component {
                 <span className={s.value}>
                   ${numberWithCommas(a13State.toFixed())}
                 </span>
-                <br /><br />
-                <span className={s.label}>
-                  Monthly PMI
-                </span>
-                <span className={s.slider}>
-                  <Slider
-                    min={0}
-                    max={0.03}
-                    step={0.0001}
-                    defaultValue={a49}
-                    onChange={(value) => {
-                      a49 = value;
-                      this.updateAllValues();
-                    }}
-                  />
-                </span>
-                <span className={s.value}>
-                  ${numberWithCommas(a17State.toFixed())}
-                </span>
+                
               </Col>
               <Col
                 xs={12}
@@ -1145,7 +1132,7 @@ export default class Calc extends Component {
                       )}
                     />
                     <span className={s.label}>
-                      Dual Income
+                      Married (joint)
                     </span>
                   </span>
                   <span
@@ -1162,7 +1149,7 @@ export default class Calc extends Component {
                       )}
                     />
                     <span className={s.label}>
-                      Single Income
+                      Married (individual)
                     </span>
                   </span>
                 </div>
@@ -1203,6 +1190,25 @@ export default class Calc extends Component {
                 </span>
                 <span className={s.value}>
                   {(a16State * 100).toFixed(2)}%
+                </span>
+                <br /><br />
+                <span className={s.label}>
+                  PMI (if any) <br /> without Landed
+                </span>
+                <span className={s.slider}>
+                  <Slider
+                    min={0}
+                    max={0.03}
+                    step={0.0001}
+                    defaultValue={a49}
+                    onChange={(value) => {
+                      a49 = value;
+                      this.updateAllValues();
+                    }}
+                  />
+                </span>
+                <span className={s.value}>
+                  ${numberWithCommas(a17State.toFixed())}
                 </span>
               </Col>
             </Row>
