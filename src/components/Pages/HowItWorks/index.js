@@ -282,7 +282,7 @@ export default class HowItWorks extends Component {
                         $75,000
                       </p>
                       <p>
-                        ${numberWithCommas(+pay * (0.284).toFixed(1))}
+                        ${numberWithCommas((+pay * (0.27)).toFixed(0))}
                       </p>
                     </span>
 
@@ -293,7 +293,7 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.green}>
-                        ${numberWithCommas(+pay * (0.284).toFixed(1) + 75000)}
+                        ${numberWithCommas(((+pay * (0.27)) + 75000).toFixed(0))}
                       </p>
                     </span>
                   </div>
@@ -375,7 +375,7 @@ export default class HowItWorks extends Component {
                         -$75,000
                       </p>
                       <p>
-                        ${numberWithCommas(+pay * (0.284).toFixed(1))}
+                        ${numberWithCommas((+pay * (0.27)).toFixed(0))}
                       </p>
                     </span>
 
@@ -386,11 +386,12 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.green}>
-                        ${numberWithCommas(+pay * (0.284).toFixed(1) - 75000)}
+                        ${numberWithCommas(((+pay * (0.27)) - 75000).toFixed(0))}
                       </p>
                     </span>
                   </div>
                 </div>
+                <p> <br/>Note: these are estimates only. Contact us for more information.<br/>The amount you keep does not include any costs incurred selling the home.</p>
               </div>
             </Col>
           </Row>
@@ -423,10 +424,10 @@ export default class HowItWorks extends Component {
               lg={4} lgOffset={2}
             >
               <p className={s.question}>
-                Where does the money come from?
+                What is my 'Equity in Home'?
               </p>
               <p className={s.answer}>
-                Landed pools investor money from people in your community who are interested in supporting you and making a return on their investment. You can think of Landed as a type of impact investing. We care about making sustainable good investments.
+                When you buy a home, you will pay down a bit of your mortgage every month and increase the amount of wealth you have in your home. Over a 10 year period, you will build wealth equal to about 20% of your original mortgage amount plus your original down payment.
               </p>
             </Col>
 
