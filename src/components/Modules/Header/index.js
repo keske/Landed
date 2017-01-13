@@ -56,6 +56,12 @@ export default class Header extends Component {
         >
           About
         </Link>
+        <Link
+          to="/calculator"
+          activeClassName={s.active}
+        >
+          Calc
+        </Link>
         <span
           className={s['get-landed']}
           onClick={() => { app.showQuiz(); }}

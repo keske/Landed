@@ -290,7 +290,7 @@ export default class Quiz extends Component {
                       className={s.slide}
                     >
                       <p className={s.label}>
-                        How would you best describe your interest?
+                        Why are you interested in learning more about Landed?
                       </p>
                       <Select
                         className={s['stage-style']}

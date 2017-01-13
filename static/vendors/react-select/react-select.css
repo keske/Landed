@@ -322,6 +322,22 @@
   }
 }
 
+.adjust > .Select-control {
+  opacity: .1;
+  height: 20px !important;
+  // background-color: none !important;
+  // border-color: none !important;
+}
 
+.adjust .Select-multi-value-wrapper {
+  height: auto !important;
+}
 
+.adjust .Select-placeholder {
+  line-height: 16px !important;
+  color: #FFF !important;
+}
 
+.adjust .Select-input {
+  height: 20px !important;
+}

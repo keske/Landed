@@ -67,8 +67,8 @@
     "postcss-short": "^1.4.0",
     "postcss-simple-vars": "^3.0.0",
     "ramda": "^0.21.0",
-    "react-addons-create-fragment": "^15.3.0",
-    "react-addons-perf": "^15.3.0",
+    "react-addons-create-fragment": "^15.4.1",
+    "react-addons-perf": "^15.4.1",
     "react-bootstrap": "^0.30.1",
     "react-dom": "^15.4.1",
     "react-dynamic-number": "^1.4.4",
@@ -94,7 +94,7 @@
     "mobx": "^2.4.3",
     "mobx-react": "3.5.5",
     "rc-slider": "^5.4.0",
-    "react": "15.2.1",
+    "react": "^15.4.1",
     "react-router": "2.6.0",
     "redux-batched-subscribe": "0.1.6"
   }
