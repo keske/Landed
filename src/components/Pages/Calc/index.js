@@ -160,7 +160,7 @@ let m12016 = (Math.pow((1 + a16 / 12), 120));
 let a41 = (1000000 - (m12016 * 1000000 - a40 * (m12016 - 1) / (a16 / 12))) / 120;
 let a42 = a40 - a41;
 let a49 = 0.008;
-let a50 = 0.015;
+const a50 = 0.015;
 let a17 = a3 * a49 / 12;
 let a19 = 0.0475;
 let i11 = a3 * a19 / 12;
@@ -174,12 +174,6 @@ let a34 = (h12 + a8 - a12) / (a7 / 12);
 const getG14 = () => a33 < 0.43;
 const getH14 = () => a34 < 0.43;
 
-let g14 = getG14();
-let h14 = getH14();
-
-console.log(a33);
-console.log(a34);
-
 @observer
 export default class Calc extends Component {
 
@@ -191,11 +185,10 @@ export default class Calc extends Component {
     super(props);
 
     this.state = {
-      step: 1,
       text: [
         {
           title: 'With landed you pay less then the regular owning',
-          info: 'You pay less with Landed because we share in your home investment<br /><a href="#">learn how it works</a>',
+          info: 'You pay less with Landed because we share in your home investment<br /><a href="/how-it-works">learn how it works</a>',
         },
 
         {
@@ -204,12 +197,12 @@ export default class Calc extends Component {
         },
 
         {
-          title: 'But that’s not the whole story. Owning earns you immediate tax benefits.<br /><a href="#">learn how</a>',
+          title: 'But that’s not the whole story. Owning earns you immediate tax benefits.<br /><a href="/how-it-works">learn how</a>',
           info: 'As long as you have taxes to pay, you can compare the after-tax payments',
         },
 
         {
-          title: 'And as we all know, paying your mortgage builds equity over time.<br /><a href="#">learn how</a>',
+          title: 'And as we all know, paying your mortgage builds equity over time.<br /><a href="/how-it-works">learn how</a>',
           info: 'This much of your home payments every month go to paying down your mortgage',
         },
 
@@ -218,58 +211,6 @@ export default class Calc extends Component {
           info: '<button>bring Landed to your<br />school or district</button>Now that you understand everything about home ownership, you can adjust some of the assumptions on the left.',
         },
       ],
-      data: {
-        priceOfHome: a3,
-        downpayment: a3 * 0.1,
-      },
-      showGraphs: false,
-      showSuperCenter: false,
-
-      a7State: a7,
-      a32State: a32,
-      a15State: a15,
-      initialClosingCostRatioState: initialClosingCostRatio,
-      a10State: a10,
-      a8State: a8,
-      a3State: a3,
-      a18State: a18,
-      a48State: a38,
-      a4State: a4,
-      a24State: a24,
-      a25State: a25,
-      a26State: a26,
-      a27State: a27,
-      a37State: a37,
-      m120State: m120,
-      a38State: a38,
-      a13State: a13,
-      a39State: a39,
-      g9State: g9,
-      a5State: a5,
-      a46State: a46,
-      a11State: a11,
-      a12State: a12,
-      g11State: g11,
-      g12State: g12,
-      a16State: a16,
-      a28State: a28,
-      a29State: a29,
-      a30State: a30,
-      a31State: a31,
-      a40State: a40,
-      m12016State: m12016,
-      a41State: a41,
-      a42State: a42,
-      a49State: a49,
-      a17State: a17,
-      a19State: a19,
-      i11State: i11,
-      h9State: h9,
-      h11State: h11,
-      h12State: h12,
-      g14State: g14,
-      h14State: h14,
-      taxLabel: '',
     };
   }
 
@@ -305,6 +246,8 @@ export default class Calc extends Component {
   }
 
   updateAllValues() {
+    const { app } = this.context;
+
     this.getFederalTaxes();
     this.getCaliforniaTaxes();
 
@@ -351,8 +294,7 @@ export default class Calc extends Component {
     a33 = (g12 + a8) / (a7 / 12);
     a34 = (h12 + a8) / (a7 / 12);
 
-    this.setState({
-      ...this.state,
+    app.updateCalc({
       a7State: a7,
       a32State: a32,
       a15State: a15,
@@ -402,62 +344,28 @@ export default class Calc extends Component {
   }
 
   render() {
+    const { text } = this.state;
     const {
-      step, text,
-      data: {
-        priceOfHome,
-        downpayment,
+      app: {
+        calc: {
+          step,
+          showGraphs,
+          showSuperCenter,
+          a7State,
+          a15State,
+          a10State,
+          a8State,
+          a3State,
+          a11State,
+          a12State,
+          a13State,
+          a16State,
+          a17State,
+          h14State,
+          g14State,
+        },
       },
-      showGraphs,
-      showSuperCenter,
-
-      a7State,
-      a32State,
-      a15State,
-      initialClosingCostRatioState,
-      a10State,
-      a8State,
-      a3State,
-      a18State,
-      a48State,
-      a4State,
-      a24State,
-      a25State,
-      a26State,
-      a27State,
-      a37State,
-      m120State,
-      a38State,
-      a11State,
-      a12State,
-      a13State,
-      a39State,
-      g9State,
-      a5State,
-      a46State,
-      g11State,
-      g12State,
-      a16State,
-      a28State,
-      a29State,
-      a30State,
-      a31State,
-      a40State,
-      m12016State,
-      a41State,
-      a42State,
-      a49State,
-      a50State,
-      a17State,
-      a19State,
-      i11State,
-      h9State,
-      h11State,
-      h12State,
-      h14State,
-      g14State,
-      taxLabel,
-    } = this.state;
+    } = this.context;
 
     const getHeight = (value) => value.toFixed() * (300 / h12);
     const getTop = (value) => 292 - (value.toFixed() * (300 / h12));
@@ -573,7 +481,7 @@ export default class Calc extends Component {
                   </p>
                   <button
                     onClick={() => {
-                      this.setState({
+                      this.context.app.updateCalc({
                         showGraphs: true,
                         step: window.innerWidth < 768 ? 5 : 1,
                       });
@@ -607,9 +515,9 @@ export default class Calc extends Component {
                           key={index}
                           className={cx({ [s.active]: step === index })}
                           onClick={() => {
-                            // this.setState({
-                              // step: index,
-                            // });
+                            this.context.app.updateCalc({
+                              step: index,
+                            });
                           }}
                         >
                           {index}
@@ -631,7 +539,7 @@ export default class Calc extends Component {
                     step < 5 &&
                       <button
                         onClick={() => {
-                          this.setState({
+                          this.context.app.updateCalc({
                             step: step + 1,
                           });
                         }}
@@ -645,7 +553,7 @@ export default class Calc extends Component {
                         <button
                           className={s.adjust}
                           onClick={() => {
-                            this.setState({
+                            this.context.app.updateCalc({
                               showSuperCenter: !showSuperCenter,
                             });
                           }}
@@ -973,9 +881,6 @@ export default class Calc extends Component {
                       lockA3 = true;
 
                       this.updateAllValues();
-
-                      console.log(a33);
-                      console.log(a34);
                     }}
                   />
                 </span>

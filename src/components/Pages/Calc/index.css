@@ -206,6 +206,7 @@
 
     .numbers {
       margin-bottom: 30px;
+      cursor: pointer;
 
       span {
         font-family: $supriaSans;
