@@ -257,7 +257,7 @@ export default class Calc extends Component {
     initialClosingCostRatio = 0.015;
 
     if (!lockA3) {
-      a3 = a7 * 6.5 - (a8 / 100 * 20000);
+      // a3 = a7 * 6.5 - (a8 / 100 * 20000);
     }
 
     a18 = a3 * a50;
@@ -424,8 +424,8 @@ export default class Calc extends Component {
                       positive
                       negative={false}
                       thousand
-                      placeholder={a7}
-                      value={a7}
+                      placeholder={a7State}
+                      value={a7State}
                       className={s.form}
                       onChange={(event) => {
                         a7 = parseFloat(event.target.value.replace(/,/g, ''));
@@ -458,8 +458,8 @@ export default class Calc extends Component {
                       positive
                       negative={false}
                       thousand
-                      placeholder={a8}
-                      value={a8}
+                      placeholder={a8State}
+                      value={a8State}
                       className={s.form}
                       onChange={(event) => {
                         a8 = parseFloat(event.target.value.replace(/,/g, ''));
@@ -851,10 +851,11 @@ export default class Calc extends Component {
                 <span className={s.slider}>
                   <Slider
                     min={200000}
-                    max={a7State * 6.5 - (a8State / 100 * 20000)}
+                    max={1000000}
                     defaultValue={a3}
                     onChange={(value) => {
                       a3 = value;
+                      lockA3 = true;
                       this.updateAllValues();
                     }}
                   />
@@ -868,9 +869,9 @@ export default class Calc extends Component {
                 </span>
                 <span className={s.slider}>
                   <Slider
-                    min={a3State*0.1}
-                    max={a3State*0.2}
-                    defaultValue={a3State*0.1}
+                    min={a3State * 0.1}
+                    max={a3State * 0.2}
+                    defaultValue={a3State * 0.1}
                     onChange={(value) => {
                       a4 = value;
                       this.updateAllValues();
@@ -1002,7 +1003,6 @@ export default class Calc extends Component {
                 <span className={s.value}>
                   ${numberWithCommas(a13State.toFixed())}
                 </span>
-                
               </Col>
               <Col
                 xs={12}
