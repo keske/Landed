@@ -33,42 +33,38 @@ export default class Quiz extends Component {
   nextSlider() {
     const { slider, other, persontype } = this.state;
     this.setState({
-      other: (persontype.value === "Other" && slider === 1) ? true : other,
+      other: (persontype === "Other" && slider === 1) ? true : other,
       slider: slider < MAX_SLIDERS ? R.sum([slider, 1]) : slider,
     });
-    console.log(other);
   }
 
   backSlider() {
     const { slider, other, persontype } = this.state;
 
     this.setState({
-      other: (persontype.value === "Other" && slider === 2) ? false : other,
+      other: (persontype === "Other" && slider === 2) ? false : other,
       slider: slider > 0 ? R.subtract(slider, 1) : slider,
     });
   }
 
   handleRequest() {
-    const { email, persontype, othertype, school, number } = this.state;
+    const { email, persontype, othertype, school, number, state } = this.state;
 
     const req = {
       email,
       data: {
-        persontype,
-        othertype,
-        school,
-        number,
+        PERSONTYPE: persontype === '' ? "not provided" : persontype,
+        OTHERTYPE: othertype === '' ? "na" : othertype,
+        SCHOOL: school === '' ? "na" : school,
+        NUMBER: number === '' ? "not provided" : number,
+        STATE: state === '' ? "na" : state,
       },
     };
 
     const request = $.ajax({
-      url: 'http://landed.com/mail.php',
+      url: '/mail.php',
       type: 'post',
       data: req,
-    });
-
-    request.done((data) => {
-      console.log(data);
     });
 
     this.setState({ success: true });
@@ -81,7 +77,7 @@ export default class Quiz extends Component {
   }
 
   render() {
-    const { slider, other, email, persontype, othertype, school, number, success } = this.state;
+    const { slider, other, email, persontype, othertype, school, state, number, success } = this.state;
 
     // Get all USA states
     const data = require('./states');
@@ -236,7 +232,7 @@ export default class Quiz extends Component {
                         optionRenderer={renderOption}
                         valueRenderer={renderOption}
                         value={persontype}
-                        onChange={(val) => this.setState({ persontype: val })}
+                        onChange={(val) => this.setState({ persontype: val.value })}
                       />
                     </Col>
 
@@ -260,8 +256,8 @@ export default class Quiz extends Component {
                         }}
                         placeholder="School Name"
                         onPlaceSelected={(place) => {
-                          console.log(place);
-                          this.setState({ school: place.name });
+                          //console.log(place.address_components[5].short_name);
+                          this.setState({ school: place.name, state: place.address_components[5].short_name});
                         }}
                         types={['establishment']}
                       />
@@ -294,7 +290,7 @@ export default class Quiz extends Component {
                       className={s.slide}
                     >
                       <p className={s.label}>
-                        What kind of other?
+                        How would you best describe your interest?
                       </p>
                       <Select
                         className={s['stage-style']}
@@ -304,7 +300,7 @@ export default class Quiz extends Component {
                         optionRenderer={renderOption}
                         valueRenderer={renderOption}
                         value={othertype}
-                        onChange={(val) => this.setState({ othertype: val })}
+                        onChange={(val) => this.setState({ othertype: val.value })}
                       />
                     </Col>
 
