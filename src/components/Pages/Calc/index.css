@@ -233,6 +233,12 @@
       padding-top: 40px;
       height: 307px;
 
+      display: none;
+
+      &.show {
+        display: block;
+      }
+
       .title {
         font-family: $supriaSans;
         font-weight: normal;

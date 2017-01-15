@@ -6,6 +6,7 @@ import Slider from 'rc-slider';
 import DynamicNumber from 'react-dynamic-number';
 
 import { observer } from 'mobx-react';
+import { Link } from 'react-router';
 import { Grid, Row, Col } from 'react-bootstrap';
 
 import { numberWithCommas } from 'utils/price.js';
@@ -181,39 +182,6 @@ export default class Calc extends Component {
     app: PropTypes.object,
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      text: [
-        {
-          title: 'With Landed you\'ll pay less than a 90% mortgage',
-          info: 'You pay less with Landed because we share in your home investment<br /><a href="/how-it-works">learn how it works</a>',
-        },
-
-        {
-          title: 'And that still might seem much more expensive than renting',
-          info: 'Assuming you currently rent a similar home to the one you would buy',
-        },
-
-        {
-          title: 'But that’s not the whole story. Owning earns you immediate tax benefits.<br /><a href="/how-it-works">learn how</a>',
-          info: 'As long as you have taxes to pay, you can compare the after-tax payments',
-        },
-
-        {
-          title: 'And as we all know, paying your mortgage builds equity over time.<br /><a href="#">learn how</a>',
-          info: 'This amount goes directly to paying down your mortgage, increasing your wealth',
-        },
-
-        {
-          title: 'With what’s left you can compare to the monthly cost of renting.',
-          info: 'Make sure to adjust the assumptions below to see how things change!',
-        },
-      ],
-    };
-  }
-
   componentDidMount() {
     const { app } = this.context;
 
@@ -345,7 +313,6 @@ export default class Calc extends Component {
   }
 
   render() {
-    const { text } = this.state;
     const {
       app: {
         calc: {
@@ -506,33 +473,70 @@ export default class Calc extends Component {
                 lg={12}
               >
                 <div className={s['left-side']}>
+
                   <div className={s.numbers}>
                     {
-                      R.range(1, 6).map((index) =>
+                      R.range(1, 6).map((number, key) =>
                         <span
-                          key={index}
-                          className={cx({ [s.active]: step === index })}
+                          key={key}
+                          className={cx({ [s.active]: step === number })}
                           onClick={() => {
                             this.context.app.updateCalc({
-                              step: index,
+                              step: number,
                             });
                           }}
                         >
-                          {index}
+                          {number}
                         </span>
                       )
                     }
                   </div>
-                  <div className={s.description}>
-                    <p
-                      className={s.title}
-                      dangerouslySetInnerHTML={{ __html: text[step - 1].title }}
-                    />
-                    <p
-                      className={s.info}
-                      dangerouslySetInnerHTML={{ __html: text[step - 1].info }}
-                    />
+
+                  <div className={cx(s.description, { [s.show]: step === 1 })}>
+                    <p className={s.title}>
+                      With Landed you'll pay less than a 90% mortgage
+                    </p>
+                    <p className={s.info}>
+                      You pay less with Landed because we share in your home investment<br /><Link to="/how-it-works">learn how it works</Link>
+                    </p>
                   </div>
+
+                  <div className={cx(s.description, { [s.show]: step === 2 })}>
+                    <p className={s.title}>
+                      And that still might seem much more expensive than renting
+                    </p>
+                    <p className={s.info}>
+                      And that still might seem much more expensive than renting
+                    </p>
+                  </div>
+
+                  <div className={cx(s.description, { [s.show]: step === 3 })}>
+                    <p className={s.title}>
+                      But that’s not the whole story. Owning earns you immediate tax benefits.<br /><Link to="/how-it-works">learn how</Link>
+                    </p>
+                    <p className={s.info}>
+                      As long as you have taxes to pay, you can compare the after-tax payments
+                    </p>
+                  </div>
+
+                  <div className={cx(s.description, { [s.show]: step === 4 })}>
+                    <p className={s.title}>
+                      And as we all know, paying your mortgage builds equity over time.<br /><Link to="/how-it-works">learn how</Link>
+                    </p>
+                    <p className={s.info}>
+                      This amount goes directly to paying down your mortgage, increasing your wealth
+                    </p>
+                  </div>
+
+                  <div className={cx(s.description, { [s.show]: step === 5 })}>
+                    <p className={s.title}>
+                      With what’s left you can compare to the monthly cost of renting.
+                    </p>
+                    <p className={s.info}>
+                      Make sure to adjust the assumptions below to see how things change!
+                    </p>
+                  </div>
+
                   {
                     step < 5 &&
                       <button
