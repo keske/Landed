@@ -667,7 +667,7 @@ export default class Calc extends Component {
                       )}
                       style={{
                         height: `${step < 3 ? getHeight(g12) : getHeight(g12 - g9)}px`,
-                        maxHeight: `${step === 5 ? `${getHeight(g11)}px` : 'auto'}`,
+                        maxHeight: `${step === 5 ? `${getHeight(g11)}px` : ''}`,
                       }}
                     />
                     {
@@ -774,7 +774,7 @@ export default class Calc extends Component {
                       )}
                       style={{
                         height: `${step < 3 ? getHeight(h12) : getHeight(h12 - h9)}px`,
-                        maxHeight: `${step === 5 ? `${getHeight(h11)}px` : 'auto'}`,
+                        maxHeight: `${step === 5 ? `${getHeight(h11)}px` : ''}`,
                       }}
                     />
                     {
