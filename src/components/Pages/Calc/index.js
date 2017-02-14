@@ -122,16 +122,16 @@ let federalTempTax = 0;
 let californiaTempTax = 0;
 let taxStatus = 'jointlyDual';
 
-let a7 = 125000;
+let a7 = 119999;
 let a32 = 0.373;
-let a15 = 0.041;
+let a15 = 0.042;
 let initialClosingCostRatio = 0.015;
 let a10 = 0;
-let a8 = 200;
+let a8 = 0;
 let lockA3 = false;
 let a3 = a7 * 6.5 - (a8 / 100 * 20000);
 let a18 = a3 * initialClosingCostRatio;
-let a47 = 0.008;
+let a47 = 0;
 let a48 = 0.015;
 let a4 = a3 * 0.1;
 let a24 = a3 - ((a4 - a18) + (a3 * 0.2 - a4));
@@ -180,6 +180,7 @@ export default class Calc extends Component {
 
   static contextTypes = {
     app: PropTypes.object,
+    calc: PropTypes.object,
   };
 
   componentDidMount() {
@@ -216,7 +217,12 @@ export default class Calc extends Component {
   }
 
   updateAllValues() {
-    const { app } = this.context;
+    const { 
+      app,
+      calc: {
+        data: { pay },
+      },
+    } = this.context;
 
     this.getFederalTaxes();
     this.getCaliforniaTaxes();
@@ -224,8 +230,13 @@ export default class Calc extends Component {
     a32 = (federalTempTax + californiaTempTax) * 0.01;
     initialClosingCostRatio = 0.015;
 
+    if (a7==119999){
+      a7=+pay;
+    }
+
     if (!lockA3) {
-      // a3 = a7 * 6.5 - (a8 / 100 * 20000);
+       a3 = a7 * 6.5 - (a8 / 100 * 20000);
+       a4 = a3 * 0.1;
     }
 
     a18 = a3 * a50;
@@ -262,6 +273,9 @@ export default class Calc extends Component {
 
     a33 = (g12 + a8 - a12) / (a7 / 12);
     a34 = (h12 + a8 - a12) / (a7 / 12);
+//    updatepay(a3, '120000');
+//    updateprice(a7, '120000');
+
 
     app.updateCalc({
       a7State: a7,
@@ -270,7 +284,7 @@ export default class Calc extends Component {
       initialClosingCostRatioState: initialClosingCostRatio,
       a10State: a10,
       a8State: a8,
-      a3State: a3,
+      a3State: a3>0 ? a3 : 0,
       a18State: a18,
       a48State: a38,
       a4State: a4,
@@ -334,6 +348,9 @@ export default class Calc extends Component {
           g14State,
         },
       },
+      calc: {
+        data: { pay },
+      },
     } = this.context;
 
     const getHeight = (value) => value.toFixed() * (300 / h12);
@@ -391,7 +408,7 @@ export default class Calc extends Component {
                       positive
                       negative={false}
                       thousand
-                      placeholder={a7State}
+                     // placeholder={+pay}
                       value={a7State}
                       className={s.form}
                       onChange={(event) => {
@@ -450,6 +467,7 @@ export default class Calc extends Component {
                         showGraphs: true,
                         step: window.innerWidth < 768 ? 5 : 1,
                       });
+                      lockA3 = true;
                     }}
                   >
                     see your estimated monthly payments
@@ -497,7 +515,7 @@ export default class Calc extends Component {
                       With Landed you'll pay less than a 90% mortgage
                     </p>
                     <p className={s.info}>
-                      You pay less with Landed because we share in your home investment<br /><Link to="/how-it-works">learn how it works</Link>
+                      You pay less with Landed because we give you the money you need to get to a 20% down payment
                     </p>
                   </div>
 
@@ -506,13 +524,13 @@ export default class Calc extends Component {
                       And that still might seem much more expensive than renting
                     </p>
                     <p className={s.info}>
-                      And that still might seem much more expensive than renting
+                      But that's not the whole story!
                     </p>
                   </div>
 
                   <div className={cx(s.description, { [s.show]: step === 3 })}>
                     <p className={s.title}>
-                      But that’s not the whole story. Owning earns you immediate tax benefits.<br /><Link to="/how-it-works">learn how</Link>
+                      Owning earns you immediate tax benefits
                     </p>
                     <p className={s.info}>
                       As long as you have taxes to pay, you can compare the after-tax payments
@@ -521,19 +539,19 @@ export default class Calc extends Component {
 
                   <div className={cx(s.description, { [s.show]: step === 4 })}>
                     <p className={s.title}>
-                      And as we all know, paying your mortgage builds equity over time.<br /><Link to="/how-it-works">learn how</Link>
+                      And as we all know, you pay down your mortgage over time
                     </p>
                     <p className={s.info}>
-                      This amount goes directly to paying down your mortgage, increasing your wealth
+                      The amount in yellow goes directly to paying down your mortgage, increasing your wealth
                     </p>
                   </div>
 
                   <div className={cx(s.description, { [s.show]: step === 5 })}>
                     <p className={s.title}>
-                      With what’s left you can compare to the monthly cost of renting.
+                      With what’s left you can compare to the monthly cost of renting
                     </p>
                     <p className={s.info}>
-                      Make sure to adjust the assumptions below to see how things change!
+                      <Link to="/how-it-works">does Landed just gift me the money?</Link>
                     </p>
                   </div>
 
@@ -859,7 +877,6 @@ export default class Calc extends Component {
                     defaultValue={a3}
                     onChange={(value) => {
                       a3 = value;
-                      lockA3 = true;
                       this.updateAllValues();
                     }}
                   />
@@ -875,7 +892,7 @@ export default class Calc extends Component {
                   <Slider
                     min={a3State * 0.1}
                     max={a3State * 0.2}
-                    defaultValue={a3State * 0.1}
+                    defaultValue={a4State}
                     onChange={(value) => {
                       a4 = value;
                       this.updateAllValues();
@@ -897,7 +914,6 @@ export default class Calc extends Component {
                     defaultValue={a7}
                     onChange={(value) => {
                       a7 = value;
-                      lockA3 = true;
                       this.updateAllValues();
                     }}
                   />
@@ -916,8 +932,6 @@ export default class Calc extends Component {
                     defaultValue={0}
                     onChange={(value) => {
                       a8 = value;
-                      lockA3 = true;
-
                       this.updateAllValues();
                     }}
                   />
@@ -1066,7 +1080,7 @@ export default class Calc extends Component {
                       )}
                     />
                     <span className={s.label}>
-                      Married (individual)
+                      Married (separate)
                     </span>
                   </span>
                 </div>

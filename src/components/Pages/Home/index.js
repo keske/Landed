@@ -6,6 +6,7 @@ import cx from 'classnames';
 import Helmet from 'react-helmet';
 import { Element, scroller } from 'react-scroll';
 import DynamicNumber from 'react-dynamic-number';
+import { browserHistory } from 'react-router';
 
 // Components
 import Press from 'components/Helpers/Press';
@@ -30,6 +31,10 @@ export default class Home extends Component {
     window.scrollTo(0, 0);
   }
 
+  navigateToPage() {
+    this.context.router.push('/calculator');
+  }
+
   componentWillUnmount() {
     window.removeEventListener('scroll', this.parallax);
   }
@@ -38,12 +43,9 @@ export default class Home extends Component {
     const {
       app,
       calc: {
-        calculate,
-        data: {
-          expand,
-          monthly,
-          downpayment,
-        },
+        updatepay,
+        updateprice,
+        data: { pay }
       },
     } = this.context;
 
@@ -71,7 +73,7 @@ export default class Home extends Component {
             </Row>
           </Grid>
 
-          <div className={cx(s.calc, s.calcstart, { [s.expand]: expand })}>
+          <div className={cx(s.calc, s.calcstart)}>
             <p className={s.lead}>
               Think you can’t buy a home?
               <br />
@@ -79,7 +81,7 @@ export default class Home extends Component {
             </p>
             <br />
             <span className={s.want}>
-              <i>I want to buy<br />a home for</i>
+              <i>Our combined<br />income is</i>
             </span>
             <span className={s.dollar}>$</span>
             <DynamicNumber
@@ -89,30 +91,31 @@ export default class Home extends Component {
               positive
               negative={false}
               thousand
-              placeholder="800000"
-              value="800000"
+              placeholder="120000"
+              value="120000"
               className={s.form}
               onChange={(event) => {
-                calculate(event.target.value, '800000');
+                updatepay(event.target.value, '120000');
               }}
             />
+            <Link to="calculator" className={s.learn}>
+                go
+            </Link>
             <button
               className={s.learn}
-              onClick={() => {
-                scroller.scrollTo('calcStart', {
-                  duration: 1200,
-                  delay: 100,
-                  smooth: true,
-                });
-              }}
+              onClick={() => {this.props.history.push('/calculator')}}
+//                scroller.scrollTo('calcStart', {
+//                  duration: 1200,
+//                  delay: 100,
+//                  smooth: true,
+//                });
+                    
+//              }}
             >
               go
             </button>
-            <Link to="/how-it-works">
-              go
-            </Link>
           </div>
-
+{/*
           <Element name="calcStart" />
 
           <div className={cx(s.calc, { [s.expand]: expand })}>
@@ -222,7 +225,9 @@ export default class Home extends Component {
             </div>
 
           </div>
+          */}
         </div>
+        
 
         <div className={s.how}>
           <p className={s.head}>

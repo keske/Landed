@@ -34,9 +34,11 @@ export default class HowItWorks extends Component {
 
   render() {
     const {
-      app,
+      app: {
+        calc: { a3State },
+      },
       calc: {
-        data: { pay },
+        data: { pay, price },
       },
     } = this.context;
 
@@ -74,7 +76,7 @@ export default class HowItWorks extends Component {
                     <p className={s.title}>
                       Your dream home
                       <br />
-                      Cost: ${numberWithCommas(pay)}
+                      Cost: ${numberWithCommas(a3State)}
                     </p>
                   </div>
                 </div>
@@ -91,10 +93,10 @@ export default class HowItWorks extends Component {
                   </div>
                   <div className={s.right}>
                     <p className={s.title}>
-                      You need a ${numberWithCommas(+pay / 5)} down payment
+                      You need a ${numberWithCommas(+a3State / 5)} down payment
                     </p>
                     <p className={s.text}>
-                      You currently have only half of it – ${numberWithCommas(+pay / 10)} saved.
+                      But you only have ${numberWithCommas(+a3State / 10)} saved.
                     </p>
                   </div>
                 </div>
@@ -111,10 +113,10 @@ export default class HowItWorks extends Component {
                   </div>
                   <div className={s.right}>
                     <p className={cx(s.title, s.green)}>
-                      You can partner with Landed and get ${numberWithCommas(+pay / 10)} today
+                      You can partner with Landed to get up to ${numberWithCommas(+a3State / 10)} today
                     </p>
                     <p className={s.text}>
-                      In exchange for 25% of the appreciation when you sell.
+                      Remember, you'll make no monthly payments on this money.
                     </p>
                   </div>
                 </div>
@@ -137,7 +139,7 @@ export default class HowItWorks extends Component {
                       <i>We help you find your dream home</i> and contribute to the down payment.
                     </p>
                     <p className={s.text}>
-                      You put in ${numberWithCommas(+pay / 10)}, Landed puts in ${numberWithCommas(+pay / 10)} and the bank provides a ${numberWithCommas(+pay * 0.8)} loan.
+                      You put in ${numberWithCommas(+a3State / 10)}, Landed puts in ${numberWithCommas(+a3State / 10)} and the bank provides a ${numberWithCommas(+a3State * 0.8)} loan.
                     </p>
                   </div>
                 </div>
@@ -185,7 +187,7 @@ export default class HowItWorks extends Component {
                       <i>Landed makes its return on investment</i> when you sell or buy out the investment
                     </p>
                     <p className={s.text}>
-                      There are two ways to end the partnership with Landed. The first is to sell your home. The second is to refinance your home without selling. You can sell or refinance at any time before the end of the Landed term (usually 10 years).
+                      For giving you half of your down payment, you'll share 25% of the investment gain or loss with Landed.
                     </p>
                   </div>
                 </div>
@@ -228,7 +230,7 @@ export default class HowItWorks extends Component {
                       Sale Price
                     </span>
                     <span className={s['col-5']}>
-                      ${numberWithCommas(+pay + 100000)}
+                      ${numberWithCommas(+a3State + 100000)}
                     </span>
                     <span className={s['col-5']}>
                       <span className={s.green}>
@@ -237,7 +239,7 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={s['col-5']}>
                       <span className={s.green}>
-                        $100,000
+                        +$100,000
                       </span>
                     </span>
 
@@ -251,10 +253,10 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={s['col-3']}>
                       <p className={s.green}>
-                        $25,000
+                        +$25,000
                       </p>
                       <p>
-                        ${numberWithCommas(+pay / 10)}
+                        ${numberWithCommas(+a3State / 10)}
                       </p>
                     </span>
 
@@ -265,7 +267,7 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.green}>
-                        ${numberWithCommas((+pay / 10) + 25000)}
+                        ${numberWithCommas((+a3State / 10) + 25000)}
                       </p>
                     </span>
 
@@ -279,10 +281,10 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={s['col-3']}>
                       <p className={s.green}>
-                        $75,000
+                        +$75,000
                       </p>
                       <p>
-                        ${numberWithCommas((+pay * (0.27)).toFixed(0))}
+                        ${numberWithCommas((+a3State * (0.27)).toFixed(0))}
                       </p>
                     </span>
 
@@ -293,7 +295,7 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.green}>
-                        ${numberWithCommas(((+pay * (0.27)) + 75000).toFixed(0))}
+                        ${numberWithCommas(((+a3State * (0.27)) + 75000).toFixed(0))}
                       </p>
                     </span>
                   </div>
@@ -321,7 +323,7 @@ export default class HowItWorks extends Component {
                       Sale Price
                     </span>
                     <span className={s['col-5']}>
-                        ${numberWithCommas(+pay - 100000)}
+                        ${numberWithCommas(+a3State - 100000)}
                     </span>
                     <span className={s['col-5']}>
                       <span className={s.red}>
@@ -347,7 +349,7 @@ export default class HowItWorks extends Component {
                         -$25,000
                       </p>
                       <p>
-                        ${numberWithCommas(+pay / 10)}
+                        ${numberWithCommas(+a3State / 10)}
                       </p>
                     </span>
 
@@ -358,7 +360,7 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.red}>
-                        ${numberWithCommas((+pay / 10) - 25000)}
+                        ${numberWithCommas((+a3State / 10) - 25000)}
                       </p>
                     </span>
 
@@ -375,7 +377,7 @@ export default class HowItWorks extends Component {
                         -$75,000
                       </p>
                       <p>
-                        ${numberWithCommas((+pay * (0.27)).toFixed(0))}
+                        ${numberWithCommas((+a3State * (0.27)).toFixed(0))}
                       </p>
                     </span>
 
@@ -386,12 +388,12 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.green}>
-                        ${numberWithCommas(((+pay * (0.27)) - 75000).toFixed(0))}
+                        ${numberWithCommas(((+a3State * (0.27)) - 75000).toFixed(0))}
                       </p>
                     </span>
                   </div>
                 </div>
-                <p> <br/>Note: these are estimates only. Contact us for more information.<br/>The amount you keep does not include any costs incurred selling the home.</p>
+                <p> <br/>Note: these are estimates only. Contact us for more information.</p>
               </div>
             </Col>
           </Row>
@@ -470,7 +472,7 @@ export default class HowItWorks extends Component {
                 What if I don't want to sell?
               </p>
               <p className={s.answer}>
-                Normally, the Landed investment is made for a 10-year term. If, before that time, you don't want to sell, you'll have to repay Landed. Often this happens by taking out a new loan or entering a new Landed partnership. You can also end your partnership at any time after the first year without penalty.
+                Normally, the Landed investment is made for a 10-year term. If, before that time, you don't want to sell, you'll have to repay Landed. Often this happens by taking out a new loan or entering a new Landed partnership. You can end your partnership at any time after the first year without penalty.
               </p>
             </Col>
           </Row>

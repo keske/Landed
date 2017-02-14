@@ -86,7 +86,7 @@ export default new class App {
     initialClosingCostRatioState: 0,
     a10State: 0,
     a8State: 200,
-    a3State: 0,
+    a3State: 800000,
     a18State: 0,
     a48State: 0,
     a4State: 0,
