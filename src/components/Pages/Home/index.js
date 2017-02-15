@@ -81,7 +81,7 @@ export default class Home extends Component {
             </p>
             <br />
             <span className={s.want}>
-              <i>Our combined<br />income is</i>
+              <i>Our combined<br />salaries are</i>
             </span>
             <span className={s.dollar}>$</span>
             <DynamicNumber

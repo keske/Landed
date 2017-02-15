@@ -230,7 +230,7 @@
     }
 
     .description {
-      padding-top: 40px;
+      padding-top: 30px;
       height: 307px;
 
       display: none;
@@ -242,10 +242,10 @@
       .title {
         font-family: $supriaSans;
         font-weight: normal;
-        font-size: 22px;
-        line-height: 24px;
+        font-size: 30px;
+        line-height: 32px;
 
-        width: 60%;
+        width: 75%;
 
         @media only screen and (min-width: 667px) and (max-width: 998px) {
           font-size: 18px;
@@ -374,7 +374,7 @@
       color: $red;
       line-height: 16px;
       
-      margin-top: 230px;
+      margin-top: 214px;
       text-align: left;
       margin-left: 25px;
 
@@ -392,7 +392,7 @@
 
     .col {
       width: 33%;
-      height: 333px;
+      height: 317px;
 
       display: inline-block;
       vertical-align: bottom;

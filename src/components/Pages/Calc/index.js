@@ -150,7 +150,7 @@ let a11 = a3 * a46 / 12;
 let a12 = a3 * a47 / 12;
 let g11 = a10 + a11 + a13 + a27 - g9 + a12;
 let g12 = g9 + a26 + g11;
-let a16 = 0.050;
+let a16 = 0.045;
 let a28 = a24 + a5;
 let a29 = Math.pow((1 + a16 / 12), 360) * (a16 / 12) / (Math.pow((1 + a16 / 12), 360) - 1) * a28;
 let a30 = (a28 - (Math.pow((1 + a16 / 12), 120) * a28 - a29 * (Math.pow((1 + a16 / 12), 120) - 1) / (a16 / 12))) / 120;
@@ -160,7 +160,7 @@ let a40 = Math.pow((1 + a16 / 12), 360) * (a16 / 12) / (Math.pow((1 + a16 / 12),
 let m12016 = (Math.pow((1 + a16 / 12), 120));
 let a41 = (1000000 - (m12016 * 1000000 - a40 * (m12016 - 1) / (a16 / 12))) / 120;
 let a42 = a40 - a41;
-let a49 = 0.008;
+let a49 = 0.0085;
 const a50 = 0.015;
 let a17 = a3 * a49 / 12;
 let a19 = 0.0475;
@@ -370,7 +370,7 @@ export default class Calc extends Component {
               className={s.center}
             >
               <p className={s.title}>
-                Landed Calculator
+                What Landed Can Help You Achieve
               </p>
               <p className={s.subtitle}>
                 <br />
@@ -512,10 +512,10 @@ export default class Calc extends Component {
 
                   <div className={cx(s.description, { [s.show]: step === 1 })}>
                     <p className={s.title}>
-                      With Landed you'll pay less than a 90% mortgage
+                      With Landed, you'll pay less than buying on your own
                     </p>
                     <p className={s.info}>
-                      You pay less with Landed because we give you the money you need to get to a 20% down payment
+                      You pay less with Landed because we give you the money you're missing to get to a 20% down payment
                     </p>
                   </div>
 
@@ -533,26 +533,30 @@ export default class Calc extends Component {
                       Owning earns you immediate tax benefits
                     </p>
                     <p className={s.info}>
-                      As long as you have taxes to pay, you can compare the after-tax payments
+                      As long as you have taxes to pay, owning a home is less expensive than you might think!
                     </p>
                   </div>
 
                   <div className={cx(s.description, { [s.show]: step === 4 })}>
                     <p className={s.title}>
-                      And as we all know, you pay down your mortgage over time
+                      You also own more of your home over time
                     </p>
                     <p className={s.info}>
-                      The amount in yellow goes directly to paying down your mortgage, increasing your wealth
+                      Part of your mortgage payments go directly to paying down the amount you owe the bank, increasing your home equity and wealth
                     </p>
                   </div>
 
                   <div className={cx(s.description, { [s.show]: step === 5 })}>
                     <p className={s.title}>
-                      With what’s left you can compare to the monthly cost of renting
+                      Wow. <br />Now that's better!
                     </p>
                     <p className={s.info}>
-                      <Link to="/how-it-works">does Landed just gift me the money?</Link>
+                      <br />Try adjusting some of the assumptions below, then find out:
                     </p>
+                    <p className={s.info}>
+                      <Link to="/how-it-works">what does Landed get out of this?</Link>
+                    </p>
+
                   </div>
 
                   {
@@ -586,7 +590,7 @@ export default class Calc extends Component {
                 </div>
                 <div className={s['right-side']}>
                   <p className={s.title}>
-                    Estimated Monthly Payments
+                    Estimated Monthly Payments<br />on a ${numberWithCommas(a3State)} Home
                   </p>
                   <div className={s.col}>
                     <span
@@ -627,7 +631,7 @@ export default class Calc extends Component {
                         <span className={s.cross}>
                           ×
                         </span>
-                        You likely<br />won't qualify
+                        Requires<br />more income
                       </span>
                   }
 
@@ -734,7 +738,7 @@ export default class Calc extends Component {
                         <span className={s.cross}>
                           ×
                         </span>
-                        You likely<br />won't qualify
+                        Requires<br />more income
                       </span>
                   }
 
@@ -838,12 +842,13 @@ export default class Calc extends Component {
                   <div className={s.footer}>
                     <div className={cx(s.col, s['in-footer'])}>
                       {
-                        step > 1 && 'renting'
+                        step > 1 && 'Renting'
                       }
                     </div>
                     <div className={cx(s.col, s['in-footer'])}>
                       <span className={s.logo} />
-                      Landed as <br /><span className={s.green}>{numberWithCommas(((0.2 - a4State / a3State) * 250).toFixed(0))}</span>% partner
+                      {/*}Landed as <br /><span className={s.green}>{numberWithCommas(((0.2 - a4State / a3State) * 250).toFixed(0))}</span>% partner*/}
+                      Owning with <br />Landed
                     </div>
                     <div className={cx(s.col, s['in-footer'])}>
                       Owning without<br />Landed
@@ -873,7 +878,8 @@ export default class Calc extends Component {
                 <span className={s.slider}>
                   <Slider
                     min={200000}
-                    max={1000000}
+                    max={2000000}
+                    step={1000}
                     defaultValue={a3}
                     onChange={(value) => {
                       a3 = value;

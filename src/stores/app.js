@@ -89,7 +89,7 @@ export default new class App {
     a3State: 800000,
     a18State: 0,
     a48State: 0,
-    a4State: 0,
+    a4State: 80000,
     a24State: 0,
     a25State: 0,
     a26State: 0,
