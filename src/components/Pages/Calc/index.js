@@ -232,6 +232,7 @@ export default class Calc extends Component {
 
     if (a7==119999){
       a7=+pay;
+      console.log("using pay");
     }
 
     if (!lockA3) {
@@ -273,6 +274,9 @@ export default class Calc extends Component {
 
     a33 = (g12 + a8 - a12) / (a7 / 12);
     a34 = (h12 + a8 - a12) / (a7 / 12);
+    console.log("in update func");
+    console.log(a7);
+//    console.log(a8);
 //    updatepay(a3, '120000');
 //    updateprice(a7, '120000');
 
@@ -408,14 +412,19 @@ export default class Calc extends Component {
                       positive
                       negative={false}
                       thousand
-                     // placeholder={+pay}
+                      placeholder={0}
                       value={a7State}
                       className={s.form}
                       onChange={(event) => {
-                        a7 = parseFloat(event.target.value.replace(/,/g, ''));
+                        //console.log("onChange activated")
+                        a7 = isNaN(parseFloat(event.target.value.replace(/,/g, ''))) ? 0 : parseFloat(event.target.value.replace(/,/g, ''));
                         this.updateAllValues();
+                        //console.log("a7 updated, updateAllValues finished")
+                        //console.log(a7);
+                        //console.log(a7State);
+                        //somehow runs twice
                       }}
-                    />
+                    />  
                   </Col>
                   <Col
                     xs={12}
@@ -442,12 +451,15 @@ export default class Calc extends Component {
                       positive
                       negative={false}
                       thousand
-                      placeholder={a8State}
+                      placeholder={0}
                       value={a8State}
                       className={s.form}
                       onChange={(event) => {
-                        a8 = parseFloat(event.target.value.replace(/,/g, ''));
+                        a8 = isNaN(parseFloat(event.target.value.replace(/,/g, ''))) ? 0 : parseFloat(event.target.value.replace(/,/g, ''));
                         this.updateAllValues();
+                        //console.log("in onChange fun for a8");
+                        //console.log(a8);
+                        //console.log(a8State);
                       }}
                     />
                   </Col>
@@ -456,10 +468,9 @@ export default class Calc extends Component {
                 <div className={s.center}>
                   <span className={s.logo} />
                   <p className={s.info}>
-                    With Landed, you can likely afford a <span className={s.green}>
-                    ${numberWithCommas(a3State)}</span> home!
+                    Once you save a <span className={s.green}>${numberWithCommas((a3State * 0.1).toFixed(0))}</span> down payment,
                     <br />
-                    And you’ll only need a <span className={s.green}>${numberWithCommas((a3State * 0.1).toFixed(0))}</span> down payment.
+                    you can likely afford a <span className={s.green}>${numberWithCommas(a3State)}</span> home
                   </p>
                   <button
                     onClick={() => {
@@ -859,6 +870,7 @@ export default class Calc extends Component {
             </Row>
           </div>
 
+          { lockA3 &&
           <div
             className={cx(
               s['super-center'],
@@ -882,6 +894,7 @@ export default class Calc extends Component {
                     step={1000}
                     defaultValue={a3}
                     onChange={(value) => {
+                      //console.log("Price of Home Update Ran");
                       a3 = value;
                       this.updateAllValues();
                     }}
@@ -896,10 +909,11 @@ export default class Calc extends Component {
                 </span>
                 <span className={s.slider}>
                   <Slider
-                    min={a3State * 0.1}
-                    max={a3State * 0.2}
-                    defaultValue={a4State}
+                    min={a3State*0.1}
+                    max={a3State*0.2}
+                    defaultValue={a4}
                     onChange={(value) => {
+                      //console.log("Down Payment Amount Update Ran");
                       a4 = value;
                       this.updateAllValues();
                     }}
@@ -914,13 +928,15 @@ export default class Calc extends Component {
                 </span>
                 <span className={s.slider}>
                   <Slider
-                    min={45000}
+                    min={0}
                     max={350000}
                     step={1000}
                     defaultValue={a7}
                     onChange={(value) => {
+                      //console.log("Income Amount Update Ran");
                       a7 = value;
                       this.updateAllValues();
+
                     }}
                   />
                 </span>
@@ -935,8 +951,9 @@ export default class Calc extends Component {
                   <Slider
                     min={0}
                     max={2500}
-                    defaultValue={0}
+                    defaultValue={a8}
                     onChange={(value) => {
+                      //console.log("Monthly Debt Update Ran");
                       a8 = value;
                       this.updateAllValues();
                     }}
@@ -963,6 +980,7 @@ export default class Calc extends Component {
                     step={0.0001}
                     defaultValue={a46}
                     onChange={(value) => {
+                      //console.log("Insurance Amount Update Ran");
                       a46 = value;
                       this.updateAllValues();
                     }}
@@ -981,6 +999,7 @@ export default class Calc extends Component {
                     max={600}
                     defaultValue={0}
                     onChange={(value) => {
+                      //console.log("HOA Update Ran");
                       a10 = value;
                       this.updateAllValues();
                     }}
@@ -1000,6 +1019,7 @@ export default class Calc extends Component {
                     step={0.0001}
                     defaultValue={a47}
                     onChange={(value) => {
+                      //console.log("Repair Amount Update Ran");
                       a47 = value;
                       this.updateAllValues();
                     }}
@@ -1019,6 +1039,7 @@ export default class Calc extends Component {
                     step={0.0001}
                     defaultValue={a48}
                     onChange={(value) => {
+                      //console.log("Taxes Amount Update Ran");
                       a48 = value;
                       this.updateAllValues();
                     }}
@@ -1096,8 +1117,8 @@ export default class Calc extends Component {
                 </span>
                 <span className={s.slider}>
                   <Slider
-                    min={0}
-                    max={0.1}
+                    min={0.02}
+                    max={0.05}
                     step={0.0001}
                     defaultValue={a15}
                     onChange={(value) => {
@@ -1115,8 +1136,8 @@ export default class Calc extends Component {
                 </span>
                 <span className={s.slider}>
                   <Slider
-                    min={0}
-                    max={0.1}
+                    min={0.02}
+                    max={0.07}
                     step={0.0001}
                     defaultValue={a16}
                     onChange={(value) => {
@@ -1152,6 +1173,7 @@ export default class Calc extends Component {
             <span className={cx(s.line, s.first)} />
             <span className={cx(s.line, s.second)} />
           </div>
+        }
         </Grid>
       </section>
     );

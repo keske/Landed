@@ -132,5 +132,7 @@ export default new class App {
       ...this.calc,
       ...data,
     };
+    console.log("updatecalc ran");
+    console.log(data);
   }
 };

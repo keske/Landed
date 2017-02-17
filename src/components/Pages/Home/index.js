@@ -91,7 +91,7 @@ export default class Home extends Component {
               positive
               negative={false}
               thousand
-              placeholder="120000"
+              placeholder="120,000"
               value="120000"
               className={s.form}
               onChange={(event) => {
