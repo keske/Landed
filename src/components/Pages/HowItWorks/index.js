@@ -472,7 +472,7 @@ export default class HowItWorks extends Component {
                 What if I don't want to sell?
               </p>
               <p className={s.answer}>
-                Normally, the Landed investment is made for a 10-year term. If, before that time, you don't want to sell, you'll have to repay Landed. Often this happens by taking out a new loan or entering a new Landed partnership. You can end your partnership at any time after the first year without penalty.
+                Normally, the Landed investment is made for a 10-year term. If you don't want to sell, you'll have to repay Landed before the end of the term. Often this happens by taking out a new loan or entering a new Landed partnership. You can do this at any time after the first year without penalty.
               </p>
             </Col>
           </Row>

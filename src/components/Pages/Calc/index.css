@@ -592,17 +592,46 @@
   }
 
   .label {
-    display: inline-block;
-    width: 30%;
 
     font-family: $supriaSans;
     font-size: 11px;
     color: #FFF;
-    line-height: 13px;
+    
+    &.first{
+      display: inline-block;
+      width: 30%;
+      line-height: 13px;
+      opacity: .58;
+      vertical-align: top;
+    }
 
-    opacity: .58;
+    &.first:hover span{
+      display:block;
+    }
 
-    vertical-align: top;
+    &.second{
+      font-size: 9px;
+      line-height: 11px;
+      text-align: left;
+      padding-top: 4px;
+      width: 100%;
+      margin:auto;
+      display:none;
+    }
+  }
+
+  .description {
+    font-size: 9px;
+    line-height: 11px;
+    text-align: left;
+    padding-top: 4px;
+    width: 100%;
+    margin:auto;
+    display:none;
+
+    &.show{
+      display:block;
+    }
   }
 
   .value {
@@ -618,12 +647,21 @@
     left: 15px;
   }
 
+  .infoicon {
+    display: inline-block;
+    position: relative;
+    top: -15px;
+    width: 13px;
+    height: 13px;
+    background: url(./files/infoicon.png);
+    background-size: cover;
+  }
+
   .slider {
     display: inline-block;
     width: 33%;
     margin-top: 5px;
     margin-left: 5%;
-
     height: 25px;
   }
 

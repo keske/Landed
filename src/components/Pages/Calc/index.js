@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import R from 'ramda';
 import Slider from 'rc-slider';
 import DynamicNumber from 'react-dynamic-number';
+import ReactTooltip from'react-tooltip';
 
 import { observer } from 'mobx-react';
 import { Link } from 'react-router';
@@ -393,7 +394,7 @@ export default class Calc extends Component {
                     md={3}
                     lg={3}
                   >
-                    <span className={s.label}>
+                    <span className={cx(s.label, s.first)}>
                       Combined Annual
                       <br />
                       Household Salary
@@ -432,7 +433,7 @@ export default class Calc extends Component {
                     md={3}
                     lg={3}
                   >
-                    <span className={s.label}>
+                    <span className={cx(s.label, s.first)}>
                       Existing Monthly
                       <br />
                       Debt Payments
@@ -526,7 +527,7 @@ export default class Calc extends Component {
                       With Landed, you'll pay less than buying on your own
                     </p>
                     <p className={s.info}>
-                      You pay less with Landed because we give you the money you're missing to get to a 20% down payment
+                      You pay less with Landed because we provide you the money you're missing to get to a 20% down payment
                     </p>
                   </div>
 
@@ -546,6 +547,9 @@ export default class Calc extends Component {
                     <p className={s.info}>
                       As long as you have taxes to pay, owning a home is less expensive than you might think!
                     </p>
+                    <p className={s.info}>
+                      <a href="https://landed.zendesk.com/hc/en-us/articles/115004061967-How-do-the-monthly-tax-benefits-of-ownership-ultimately-work-" target="_blank">Learn More</a>
+                    </p>
                   </div>
 
                   <div className={cx(s.description, { [s.show]: step === 4 })}>
@@ -553,7 +557,7 @@ export default class Calc extends Component {
                       You also own more of your home over time
                     </p>
                     <p className={s.info}>
-                      Part of your mortgage payments go directly to paying down the amount you owe the bank, increasing your home equity and wealth
+                      Part of your mortgage payments go towards paying down your mortgage. <br/><br/>These payments are <a href="https://landed.zendesk.com/knowledge/articles/115004161827/en-us?brand_id=274787" target="_blank">forced savings</a> that increase your net worth.
                     </p>
                   </div>
 
@@ -688,7 +692,7 @@ export default class Calc extends Component {
                         >
                           ${numberWithCommas(Math.round(g12 - g9 - (g12 - g9 - a26)))}
                           <br />
-                          Building<br />home wealth
+                          Forced<br />savings
                         </span>,
                       ]
                     }
@@ -795,7 +799,7 @@ export default class Calc extends Component {
                         >
                           ${numberWithCommas(Math.round(h12 - h9 - (h12 - h9 - a30)))}
                           <br />
-                          Building<br />home wealth
+                          Forced<br />savings
                         </span>,
                       ]
                     }
@@ -884,9 +888,13 @@ export default class Calc extends Component {
                 md={4}
                 lg={4}
               >
-                <span className={s.label}>
+                <span className={cx(s.label, s.first)}>
                   Price of Home
                 </span>
+                <span data-tip data-for="homeprice" className={s.infoicon}/>
+                <ReactTooltip id="homeprice" type="dark" effect="float" place="right">
+                  <span> Your target home price </span>
+                </ReactTooltip>
                 <span className={s.slider}>
                   <Slider
                     min={200000}
@@ -904,9 +912,15 @@ export default class Calc extends Component {
                   ${numberWithCommas(a3State.toFixed(0))}
                 </span>
                 <br /><br />
-                <span className={s.label}>
+
+
+                <span className={cx(s.label, s.first)}>
                   Down Payment Amount
                 </span>
+                <span data-tip data-for="downpayment" className={s.infoicon}/>
+                <ReactTooltip id="downpayment" type="dark" effect="float" place="right">
+                  <span> The down payment you would make on the home.  <br />With Landed this can be anywhere between 10% and 20% -- Landed will fill in the rest! </span>
+                </ReactTooltip>
                 <span className={s.slider}>
                   <Slider
                     min={a3State*0.1}
@@ -923,9 +937,14 @@ export default class Calc extends Component {
                   ${numberWithCommas(a4State.toFixed(0))}
                 </span>
                 <br /><br />
-                <span className={s.label}>
+                
+                <span className={cx(s.label, s.first)}>
                   Household Income
                 </span>
+                <span data-tip data-for="income" className={s.infoicon}/>
+                <ReactTooltip id="income" type="dark" effect="float" place="right">
+                  <span> This is your combined household income before taxes. </span>
+                </ReactTooltip>
                 <span className={s.slider}>
                   <Slider
                     min={0}
@@ -944,9 +963,14 @@ export default class Calc extends Component {
                   ${numberWithCommas(a7State)}
                 </span>
                 <br /><br />
-                <span className={s.label}>
-                  Existing monthly debts
+
+                <span className={cx(s.label, s.first)}>
+                  Existing <br />monthly debts
                 </span>
+                <span data-tip data-for="monthlydebt" className={s.infoicon}/>
+                <ReactTooltip id="monthlydebt" type="dark" effect="float" place="left">
+                  <span> These are the mandatory debt payments you have very month. <br /> Usually they include car payments, student loans and personal debt. </span>
+                </ReactTooltip>
                 <span className={s.slider}>
                   <Slider
                     min={0}
@@ -970,9 +994,13 @@ export default class Calc extends Component {
                 md={4}
                 lg={4}
               >
-                <span className={s.label}>
+                <span className={cx(s.label, s.first)}>
                   Monthly insurance
                 </span>
+                <span data-tip data-for="insurance" className={s.infoicon}/>
+                <ReactTooltip id="insurance" type="dark" effect="float" place="left">
+                  <span> For single family homes, basic insurance is usually $80 - $100 a month. <br />Earthquake insurance can be another $150 - $300 a month. <br />For condos, most of the insurance is contained within your HOA cost.</span>
+                </ReactTooltip>
                 <span className={s.slider}>
                   <Slider
                     min={0}
@@ -990,9 +1018,14 @@ export default class Calc extends Component {
                   ${numberWithCommas(a11State.toFixed())}
                 </span>
                 <br /><br />
-                <span className={s.label}>
+
+                <span className={cx(s.label, s.first)}>
                   Monthly <br />HOA fees
                 </span>
+                <span data-tip data-for="HOA" className={s.infoicon}/>
+                <ReactTooltip id="HOA" type="dark" effect="float" place="left">
+                  <span> Many condos and planned communities have required Home Owners Association fees. <br /> If present, they are usually a few hundred dollars.  </span>
+                </ReactTooltip>
                 <span className={s.slider}>
                   <Slider
                     min={0}
@@ -1009,9 +1042,14 @@ export default class Calc extends Component {
                   ${numberWithCommas(a10State)}
                 </span>
                 <br /><br />
-                <span className={s.label}>
+
+                <span className={cx(s.label, s.first)}>
                   Monthly <br />repair costs
                 </span>
+                <span data-tip data-for="repair" className={s.infoicon}/>
+                <ReactTooltip id="repair" type="dark" effect="float" place="left">
+                  <span> This calculator is designed to help you understand the required monthly costs of ownership.<br/>Ongoing repair costs can be highly varied and uncertain.<br/>A rule of thumb is that you will likely spend more on repairs than on your insurance premiums.</span>
+                </ReactTooltip>
                 <span className={s.slider}>
                   <Slider
                     min={0}
@@ -1029,9 +1067,14 @@ export default class Calc extends Component {
                   ${numberWithCommas(a12State.toFixed())}
                 </span>
                 <br /><br />
-                <span className={s.label}>
+
+                <span className={cx(s.label, s.first)}>
                   Monthly property taxes
                 </span>
+                <span data-tip data-for="taxes" className={s.infoicon}/>
+                <ReactTooltip id="taxes" type="dark" effect="float" place="left">
+                  <span> Property taxes vary from region to region. <br/>This initial estimate is based on a home purchased in California.</span>
+                </ReactTooltip>
                 <span className={s.slider}>
                   <Slider
                     min={0}
@@ -1049,6 +1092,7 @@ export default class Calc extends Component {
                   ${numberWithCommas(a13State.toFixed())}
                 </span>
               </Col>
+
               <Col
                 xs={12}
                 sm={4}
@@ -1072,7 +1116,7 @@ export default class Calc extends Component {
                         { [s.active]: taxStatus === 'single' },
                       )}
                     />
-                    <span className={s.label}>
+                    <span className={cx(s.label, s.first)}>
                       Single
                     </span>
                   </span>
@@ -1089,7 +1133,7 @@ export default class Calc extends Component {
                         { [s.active]: taxStatus === 'jointlyDual' },
                       )}
                     />
-                    <span className={s.label}>
+                    <span className={cx(s.label, s.first)}>
                       Married (joint)
                     </span>
                   </span>
@@ -1106,19 +1150,23 @@ export default class Calc extends Component {
                         { [s.active]: taxStatus === 'jointlySingle' },
                       )}
                     />
-                    <span className={s.label}>
+                    <span className={cx(s.label, s.first)}>
                       Married (separate)
                     </span>
                   </span>
                 </div>
                 <br />
-                <span className={s.label}>
+                <span className={cx(s.label, s.first)}>
                   Mortgage APR with Landed
                 </span>
+                <span data-tip data-for="LandedAPR" className={s.infoicon}/>
+                <ReactTooltip id="LandedAPR" type="dark" effect="float" place="left">
+                  <span> With our mortgage partners, you'll receive the same great rate using Landed as if you had placed 20% down yourself.<br/>Mortgage will usually state their rates as Annual Percentage Rates (APRs) which incorporate the impact of one-time origination fees.</span>
+                </ReactTooltip>
                 <span className={s.slider}>
                   <Slider
                     min={0.02}
-                    max={0.05}
+                    max={0.07}
                     step={0.0001}
                     defaultValue={a15}
                     onChange={(value) => {
@@ -1131,9 +1179,14 @@ export default class Calc extends Component {
                   {(a15State * 100).toFixed(2)}%
                 </span>
                 <br /><br />
-                <span className={s.label}>
+
+                <span className={cx(s.label, s.first)}>
                   Mortgage APR without Landed
                 </span>
+                <span data-tip data-for="NormalAPR" className={s.infoicon}/>
+                <ReactTooltip id="NormalAPR" type="dark" effect="float" place="left">
+                  <span> When you take more than an 80% mortgage, you will often be charged a higher APR to reflect the higher risk.</span>
+                </ReactTooltip>                
                 <span className={s.slider}>
                   <Slider
                     min={0.02}
@@ -1150,9 +1203,14 @@ export default class Calc extends Component {
                   {(a16State * 100).toFixed(2)}%
                 </span>
                 <br /><br />
-                <span className={s.label}>
+
+                <span className={cx(s.label, s.first)}>
                   PMI (if any) <br /> without Landed
                 </span>
+                <span data-tip data-for="PMI" className={s.infoicon}/>
+                <ReactTooltip id="PMI" type="dark" effect="float" place="left">
+                  <span> When you take more than an 80% mortgage, you will often be charged mortgage insurance to help the lender manage the additional risk.<br/>Mortgage insurance is not usually tax deductible in the same way mortgage interest is.</span>
+                </ReactTooltip>                
                 <span className={s.slider}>
                   <Slider
                     min={0}
