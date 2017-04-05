@@ -73,6 +73,8 @@ export default class Home extends Component {
             </Row>
           </Grid>
 
+{/* Want to edit this out for mobile */}
+
           <div className={cx(s.calc, s.calcstart)}>
             <p className={s.lead}>
               Think you can’t buy a home?
@@ -275,7 +277,7 @@ export default class Home extends Component {
               >
                 <img src={require('./files/p3.jpg')} />
                 <p>
-                  <strong>Landed helps you find and buy a home</strong> near where you work. We pay half the down payment when you’re ready to buy.
+                  <strong>Landed helps you find and buy a home</strong> near where you work. We contribute the funds at time of purchase.
                 </p>
               </Col>
             </Row>

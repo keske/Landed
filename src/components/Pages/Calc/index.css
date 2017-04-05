@@ -742,6 +742,17 @@
   }
 }
 
+.disclaimer {
+  color: #00C796;
+
+  font-family: $supriaSans;
+  font-size: 10px;
+  text-align: center;
+
+  position: relative;
+  top: 10px;
+}
+
 .center {
   text-align: center;
 }

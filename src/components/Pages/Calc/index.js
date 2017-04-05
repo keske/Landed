@@ -469,7 +469,7 @@ export default class Calc extends Component {
                 <div className={s.center}>
                   <span className={s.logo} />
                   <p className={s.info}>
-                    Once you save a <span className={s.green}>${numberWithCommas((a3State * 0.1).toFixed(0))}</span> down payment,
+                    With a <span className={s.green}>${numberWithCommas((a3State * 0.1).toFixed(0))}</span> down payment,
                     <br />
                     you can likely afford a <span className={s.green}>${numberWithCommas(a3State)}</span> home
                   </p>
@@ -524,16 +524,16 @@ export default class Calc extends Component {
 
                   <div className={cx(s.description, { [s.show]: step === 1 })}>
                     <p className={s.title}>
-                      With Landed, you'll pay less than buying on your own
+                      With Landed, you'll pay less every month
                     </p>
                     <p className={s.info}>
-                      You pay less with Landed because we provide you the money you're missing to get to a 20% down payment
+                      You pay less with Landed because we provide you the money you're missing to get to a 20% down payment -- giving you access to better financing.
                     </p>
                   </div>
 
                   <div className={cx(s.description, { [s.show]: step === 2 })}>
                     <p className={s.title}>
-                      And that still might seem much more expensive than renting
+                      And that might seem more expensive than renting a similar home
                     </p>
                     <p className={s.info}>
                       But that's not the whole story!
@@ -969,7 +969,7 @@ export default class Calc extends Component {
                 </span>
                 <span data-tip data-for="monthlydebt" className={s.infoicon}/>
                 <ReactTooltip id="monthlydebt" type="dark" effect="float" place="left">
-                  <span> These are the mandatory debt payments you have very month. <br /> Usually they include car payments, student loans and personal debt. </span>
+                  <span> These are the mandatory debt payments you have every month. <br /> Usually they include car payments, student loans and personal debt. </span>
                 </ReactTooltip>
                 <span className={s.slider}>
                   <Slider
@@ -1161,7 +1161,7 @@ export default class Calc extends Component {
                 </span>
                 <span data-tip data-for="LandedAPR" className={s.infoicon}/>
                 <ReactTooltip id="LandedAPR" type="dark" effect="float" place="left">
-                  <span> With our mortgage partners, you'll receive the same great rate using Landed as if you had placed 20% down yourself.<br/>Mortgage will usually state their rates as Annual Percentage Rates (APRs) which incorporate the impact of one-time origination fees.</span>
+                  <span> With our mortgage partners, you'll receive the same great rate using Landed as if you had placed 20% down yourself.<br/>Lenders will usually state their rates as Annual Percentage Rates (APRs) which incorporate the impact of one-time origination fees.</span>
                 </ReactTooltip>
                 <span className={s.slider}>
                   <Slider
@@ -1227,6 +1227,11 @@ export default class Calc extends Component {
                   ${numberWithCommas(a17State.toFixed())}
                 </span>
               </Col>
+            </Row>
+            <Row>
+            <div className={s.disclaimer}>
+              Note: these are estimates only. Numbers can vary significantly from region to region and home to home.<br/>This calculator only looks at monthly costs and does not include one-time costs associated with homeownership (closing costs, broker fees, etc.).
+            </div>
             </Row>
             <span className={cx(s.line, s.first)} />
             <span className={cx(s.line, s.second)} />

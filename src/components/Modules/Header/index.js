@@ -68,6 +68,28 @@ export default class Header extends Component {
         </span>
       </span>;
 
+    const renderNavMobile = () =>
+     <span>
+        <Link
+          to="/how-it-works"
+          activeClassName={s.active}
+        >
+          How it Works
+        </Link>
+        <Link
+          to="/about"
+          activeClassName={s.active}
+        >
+          About
+        </Link>
+        <span
+          className={s['get-landed']}
+          onClick={() => { app.showQuiz(); }}
+        >
+          Get Landed
+        </span>
+      </span>;
+
     return (
       <section
         className={cx(
@@ -114,7 +136,7 @@ export default class Header extends Component {
           </Row>
         </Grid>
         <div className={cx(s.menu, { show: app.menu })}>
-          {renderNav()}
+          {renderNavMobile()}
           <span
             className={s.close}
             onClick={() => {
