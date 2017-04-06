@@ -42,6 +42,12 @@ export default class Header extends Component {
 
     const renderNav = () =>
       <span>
+        <Link
+          to="/about"
+          activeClassName={s.active}
+        >
+          About
+        </Link>
         <a
           target="_blank"
           href="http://blog.landed.com"
@@ -61,12 +67,6 @@ export default class Header extends Component {
         >
           How it Works
         </Link>
-        <Link
-          to="/about"
-          activeClassName={s.active}
-        >
-          About
-        </Link>
         <span
           className={s['get-landed']}
           onClick={() => { app.showQuiz(); }}
@@ -77,6 +77,12 @@ export default class Header extends Component {
 
     const renderNavMobile = () =>
      <span>
+        <Link
+          to="/about"
+          activeClassName={s.active}
+        >
+          About
+        </Link>
         <a
           target="_blank"
           href="http://blog.landed.com"
@@ -89,12 +95,6 @@ export default class Header extends Component {
           activeClassName={s.active}
         >
           How it Works
-        </Link>
-        <Link
-          to="/about"
-          activeClassName={s.active}
-        >
-          About
         </Link>
         <span
           className={s['get-landed']}
