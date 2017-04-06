@@ -42,6 +42,13 @@ export default class Header extends Component {
 
     const renderNav = () =>
       <span>
+        <a
+          target="_blank"
+          href="http://blog.landed.com"
+          activeClassName={s.active}
+        >
+          Blog
+        </a>
         <Link
           to="/calculator"
           activeClassName={s.active}
@@ -70,6 +77,13 @@ export default class Header extends Component {
 
     const renderNavMobile = () =>
      <span>
+        <a
+          target="_blank"
+          href="http://blog.landed.com"
+          activeClassName={s.active}
+        >
+          Blog
+        </a>
         <Link
           to="/how-it-works"
           activeClassName={s.active}
