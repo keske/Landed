@@ -86,7 +86,8 @@
     "webpack-dev-middleware": "1.6.1",
     "webpack-dev-server": "2.0.0-beta",
     "webpack-hot-middleware": "2.12.1",
-    "webpack-merge": "0.14.0"
+    "webpack-merge": "0.14.0",
+    "rc-slider": "^5.4.0"
   },
   "dependencies": {
     "asset-require-hook": "1.0.2",
@@ -96,6 +97,7 @@
     "mobx-react": "3.5.5",
     "rc-slider": "^5.4.0",
     "react": "^15.4.1",
+    "react-ga": "^2.2.0",
     "react-router": "2.6.0",
     "redux-batched-subscribe": "0.1.6"
   }

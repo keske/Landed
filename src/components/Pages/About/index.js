@@ -4,9 +4,6 @@ import { Grid, Row, Col } from 'react-bootstrap';
 import cx from 'classnames';
 import Helmet from 'react-helmet';
 
-// Components
-import Invest from 'components/Helpers/Invest';
-
 // Styles
 import s from './index.css';
 
@@ -201,7 +198,7 @@ export default class About extends Component {
                     Jesse Vaughan
                   </p>
                   <p className={s.description}>
-                    Head of Product. Co-founder.
+                    Head of Investments. Co-founder.
                     <br />
                     Former frontier-markets investor.
                   </p>

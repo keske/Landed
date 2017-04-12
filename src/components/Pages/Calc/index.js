@@ -5,6 +5,7 @@ import R from 'ramda';
 import Slider from 'rc-slider';
 import DynamicNumber from 'react-dynamic-number';
 import ReactTooltip from'react-tooltip';
+import 'rc-slider/assets/index.css';
 
 import { observer } from 'mobx-react';
 import { Link } from 'react-router';
@@ -542,13 +543,13 @@ export default class Calc extends Component {
 
                   <div className={cx(s.description, { [s.show]: step === 3 })}>
                     <p className={s.title}>
-                      Owning earns you immediate tax benefits
+                      Owning earns you large tax benefits
                     </p>
                     <p className={s.info}>
                       As long as you have taxes to pay, owning a home is less expensive than you might think!
                     </p>
                     <p className={s.info}>
-                      <a href="https://landed.zendesk.com/hc/en-us/articles/115004061967-How-do-the-monthly-tax-benefits-of-ownership-ultimately-work-" target="_blank">Learn More</a>
+                      <a href="https://landed.zendesk.com/hc/en-us/articles/115004061967-How-do-the-monthly-tax-benefits-of-ownership-ultimately-work-" target="_blank">Learn more about tax benefits.</a>
                     </p>
                   </div>
 
