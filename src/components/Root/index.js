@@ -44,7 +44,7 @@ export default class Root extends Component {
             React.cloneElement(this.props.children, this.props)
         }
         <QuizPopUp />
-        <Subscribe />
+        {/*<Subscribe />*/}
         <Footer />
       </section>
     );

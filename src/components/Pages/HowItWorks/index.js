@@ -114,7 +114,7 @@ export default class HowItWorks extends Component {
                       You can partner with Landed to get up to ${numberWithCommas(+app.calc.a3State / 10)} today
                     </p>
                     <p className={s.text}>
-                      Remember, you'll make no monthly payments on this money.
+                      Remember, there are no monthly payments on this money.
                     </p>
                   </div>
                 </div>
