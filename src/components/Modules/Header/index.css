@@ -67,6 +67,9 @@
 
       .get-landed {     
         color: $black;
+        padding: 8px;
+        border: 2px solid rgba(0, 0, 0, 1);
+        border-radius: 8px;
       }
     }
   }
@@ -96,6 +99,9 @@
 
       .get-landed {     
         color: $white;
+        padding: 8px;
+        border: 2px solid rgba(255, 255, 255, 1);
+        border-radius: 8px;
       }
     }
   }
