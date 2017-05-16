@@ -52,7 +52,7 @@ export default class Footer extends Component {
                 Need to contact us?
               </p>
               <a
-                to="mailto:hi@landed.com"
+                href="mailto:hi@landed.com"
                 className={s.mail}
               >
                 hi@landed.com

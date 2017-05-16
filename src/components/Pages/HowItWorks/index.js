@@ -34,9 +34,7 @@ export default class HowItWorks extends Component {
 
   render() {
     const {
-      app: {
-        calc: { a3State },
-      },
+      app,
       calc: {
         data: { pay, price },
       },
@@ -76,7 +74,7 @@ export default class HowItWorks extends Component {
                     <p className={s.title}>
                       Your dream home
                       <br />
-                      Cost: ${numberWithCommas(a3State)}
+                      Cost: ${numberWithCommas(app.calc.a3State)}
                     </p>
                   </div>
                 </div>
@@ -93,10 +91,10 @@ export default class HowItWorks extends Component {
                   </div>
                   <div className={s.right}>
                     <p className={s.title}>
-                      You need a ${numberWithCommas(+a3State / 5)} down payment
+                      You need a ${numberWithCommas(+app.calc.a3State / 5)} down payment
                     </p>
                     <p className={s.text}>
-                      But you only have ${numberWithCommas(+a3State / 10)} saved.
+                      But you only have ${numberWithCommas(+app.calc.a3State / 10)} saved.
                     </p>
                   </div>
                 </div>
@@ -113,7 +111,7 @@ export default class HowItWorks extends Component {
                   </div>
                   <div className={s.right}>
                     <p className={cx(s.title, s.green)}>
-                      You can partner with Landed to get up to ${numberWithCommas(+a3State / 10)} today
+                      You can partner with Landed to get up to ${numberWithCommas(+app.calc.a3State / 10)} today
                     </p>
                     <p className={s.text}>
                       Remember, you'll make no monthly payments on this money.
@@ -139,7 +137,7 @@ export default class HowItWorks extends Component {
                       <i>We help you find your dream home</i> and contribute to the down payment.
                     </p>
                     <p className={s.text}>
-                      You put in ${numberWithCommas(+a3State / 10)}, Landed puts in ${numberWithCommas(+a3State / 10)} and the bank provides a ${numberWithCommas(+a3State * 0.8)} loan.
+                      You put in ${numberWithCommas(+app.calc.a3State / 10)}, Landed puts in ${numberWithCommas(+app.calc.a3State / 10)} and the bank provides a ${numberWithCommas(+app.calc.a3State * 0.8)} loan.
                     </p>
                   </div>
                 </div>
@@ -230,7 +228,7 @@ export default class HowItWorks extends Component {
                       Sale Price
                     </span>
                     <span className={s['col-5']}>
-                      ${numberWithCommas(+a3State + 100000)}
+                      ${numberWithCommas(+app.calc.a3State + 100000)}
                     </span>
                     <span className={s['col-5']}>
                       <span className={s.green}>
@@ -256,7 +254,7 @@ export default class HowItWorks extends Component {
                         +$25,000
                       </p>
                       <p>
-                        ${numberWithCommas(+a3State / 10)}
+                        ${numberWithCommas(+app.calc.a3State / 10)}
                       </p>
                     </span>
 
@@ -267,7 +265,7 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.green}>
-                        ${numberWithCommas((+a3State / 10) + 25000)}
+                        ${numberWithCommas((+app.calc.a3State / 10) + 25000)}
                       </p>
                     </span>
 
@@ -284,7 +282,7 @@ export default class HowItWorks extends Component {
                         +$75,000
                       </p>
                       <p>
-                        ${numberWithCommas((+a3State * (0.27)).toFixed(0))}
+                        ${numberWithCommas((+app.calc.a3State * (0.27)).toFixed(0))}
                       </p>
                     </span>
 
@@ -295,7 +293,7 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.green}>
-                        ${numberWithCommas(((+a3State * (0.27)) + 75000).toFixed(0))}
+                        ${numberWithCommas(((+app.calc.a3State * (0.27)) + 75000).toFixed(0))}
                       </p>
                     </span>
                   </div>
@@ -323,7 +321,7 @@ export default class HowItWorks extends Component {
                       Sale Price
                     </span>
                     <span className={s['col-5']}>
-                        ${numberWithCommas(+a3State - 100000)}
+                        ${numberWithCommas(+app.calc.a3State - 100000)}
                     </span>
                     <span className={s['col-5']}>
                       <span className={s.red}>
@@ -349,7 +347,7 @@ export default class HowItWorks extends Component {
                         -$25,000
                       </p>
                       <p>
-                        ${numberWithCommas(+a3State / 10)}
+                        ${numberWithCommas(+app.calc.a3State / 10)}
                       </p>
                     </span>
 
@@ -360,7 +358,7 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.red}>
-                        ${numberWithCommas((+a3State / 10) - 25000)}
+                        ${numberWithCommas((+app.calc.a3State / 10) - 25000)}
                       </p>
                     </span>
 
@@ -377,7 +375,7 @@ export default class HowItWorks extends Component {
                         -$75,000
                       </p>
                       <p>
-                        ${numberWithCommas((+a3State * (0.27)).toFixed(0))}
+                        ${numberWithCommas((+app.calc.a3State * (0.27)).toFixed(0))}
                       </p>
                     </span>
 
@@ -388,7 +386,7 @@ export default class HowItWorks extends Component {
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
                       <p className={s.green}>
-                        ${numberWithCommas(((+a3State * (0.27)) - 75000).toFixed(0))}
+                        ${numberWithCommas(((+app.calc.a3State * (0.27)) - 75000).toFixed(0))}
                       </p>
                     </span>
                   </div>

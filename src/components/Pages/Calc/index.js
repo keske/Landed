@@ -234,7 +234,6 @@ export default class Calc extends Component {
 
     if (a7==119999){
       a7=+pay;
-      console.log("using pay");
     }
 
     if (!lockA3) {
@@ -276,8 +275,6 @@ export default class Calc extends Component {
 
     a33 = (g12 + a8 - a12) / (a7 / 12);
     a34 = (h12 + a8 - a12) / (a7 / 12);
-    console.log("in update func");
-    console.log(a7);
 //    console.log(a8);
 //    updatepay(a3, '120000');
 //    updateprice(a7, '120000');

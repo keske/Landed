@@ -48,30 +48,33 @@ export default class Header extends Component {
         >
           About
         </Link>
+        
         <a
           target="_blank"
           href="http://blog.landed.com"
-          activeClassName={s.active}
         >
           Blog
         </a>
+        
         <Link
           to="/calculator"
           activeClassName={s.active}
         >
           Calculator
         </Link>
+        
         <Link
           to="/how-it-works"
           activeClassName={s.active}
         >
           How it Works
         </Link>
+        
         <span
           className={s['get-landed']}
           onClick={() => { app.showQuiz(); }}
         >
-          Get Landed
+          Sign Up
         </span>
       </span>;
 
@@ -86,7 +89,6 @@ export default class Header extends Component {
         <a
           target="_blank"
           href="http://blog.landed.com"
-          activeClassName={s.active}
         >
           Blog
         </a>
