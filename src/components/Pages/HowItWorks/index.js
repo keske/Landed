@@ -453,7 +453,7 @@ export default class HowItWorks extends Component {
               lg={4} lgOffset={2}
             >
               <p className={s.question}>
-                Who is responsible for property taxes, insurance, repairs, and maintenance costs?
+                Who is responsible for different costs?
               </p>
               <p className={s.answer}>
                 You will be responsible for all the costs of homeownership like any other homeowner. If you fail to maintain your home, you might face penalties and/or default. Similarly, if you upgrade your home, Landed will endeavor to give you credit for the work done.
@@ -467,10 +467,10 @@ export default class HowItWorks extends Component {
               lg={4} lgOffset={0}
             >
               <p className={s.question}>
-                What if I don't want to sell?
+                What if I never sell?
               </p>
               <p className={s.answer}>
-                Normally, the Landed investment is made for a 10-year term. If you don't want to sell, you'll have to repay Landed before the end of the term. Often this happens by taking out a new loan or entering a new Landed partnership. You can do this at any time after the first year without penalty.
+                If you don't want to sell, you'll have to repay Landed before the end of the investment term (between 10 and 30 years). Often this happens by taking out a new loan or entering a new Landed partnership. You can do this at any time after the first year without penalty.
               </p>
             </Col>
           </Row>

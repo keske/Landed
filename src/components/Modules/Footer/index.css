@@ -16,6 +16,17 @@
     }
     }
   }
+  .social {
+    opacity: 1;
+    border: none;
+    
+    img {
+      width: 50px;
+      @media only screen and (max-width: 667px) {
+      margin-top:10px;
+    }
+    }
+  }
 
   p, a {
     color: $white;

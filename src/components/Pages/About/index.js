@@ -3,9 +3,11 @@ import { observer } from 'mobx-react';
 import { Grid, Row, Col } from 'react-bootstrap';
 import cx from 'classnames';
 import Helmet from 'react-helmet';
+import { Link } from 'react-router';
 
 // Styles
 import s from './index.css';
+import Investors from 'components/Helpers/Investors';
 
 @observer
 export default class About extends Component {
@@ -51,11 +53,7 @@ export default class About extends Component {
                 lg={12} lgOffset={0}
               >
                 <p className={s.title}>
-                  Making homeownership possible, one school at a&nbsp;time.
-                </p>
-                <br />
-                <p className={s.intro}>
-                  At Landed, we’re on a mission to make homeownership accessible, affordable, and easy, even in expensive cities.
+                  Uphold those who uphold us
                 </p>
               </Col>
             </Row>
@@ -77,10 +75,10 @@ export default class About extends Component {
                 Insurmountable barriers
               </p>
               <p className={s.text}>               
-                Many people can't responsibly buy their first home by themselves, even with a supportive bank.
+                Many essential professionals, like teachers, struggle to build financial security near where they work.
               </p>
-              <p className={s.text}>               
-                Without partners, millions of Americans are making excessively risky investment decisions that the bankers themselves would never make.
+              <p className={s.text}>
+                High land prices prevent them from becoming the long-term residents our communities are dependent on.
               </p>
             </Col>
 
@@ -96,10 +94,10 @@ export default class About extends Component {
                 Together, there is another way
               </p>
               <p className={s.text}>
-                Joining forces to pay for a home is extremely hard, but it really doesn’t have to be.
+                As a financial coach, we help essential professionals save money faster, even in expensive places.
               </p>
               <p className={s.text}>
-                We work with banks, title companies, insurers, lawyers and brokers to make the hard parts simpler.
+                And when the time comes that they are ready to buy a home, <Link to="/how-it-works">we have some tools to make it a little easier.</Link>
               </p>
             </Col>
 
@@ -115,10 +113,10 @@ export default class About extends Component {
                 Less vulnerability, more wealth
               </p>
               <p className={s.text}>
-                We want everyone to have a real partner to help them buy their first home.
+                If we want stronger schools and safer communities, we need to uphold those that make it possible.
               </p>
               <p className={s.text}>
-                Until then, we’ll keep working to reduce barriers to wealth building and make people less financially vulnerable.
+                A house is more than an investment - it’s home. The more of us feel at home, the better off we’ll all be.
               </p>
             </Col>
           </Row>
@@ -151,7 +149,7 @@ export default class About extends Component {
                     role="presentation"
                   />
                   <p className={s.name}>
-                    Alex Lofton
+                    <a href="https://www.linkedin.com/in/alexlofton/" target="_blank">Alex Lofton</a>
                   </p>
                   <p className={s.description}>
                     Head of Growth. Co-founder.
@@ -173,7 +171,7 @@ export default class About extends Component {
                     role="presentation"
                   />
                   <p className={s.name}>
-                    Jonathan Asmis
+                    <a href="https://www.linkedin.com/in/jonathanasmis/" target="_blank">Jonathan Asmis</a>
                   </p>
                   <p className={s.description}>
                     CEO. Co-founder.
@@ -195,7 +193,7 @@ export default class About extends Component {
                     role="presentation"
                   />
                   <p className={s.name}>
-                    Jesse Vaughan
+                    <a href="https://www.linkedin.com/in/jessecvaughan/" target="_blank">Jesse Vaughan</a>
                   </p>
                   <p className={s.description}>
                     Head of Investments. Co-founder.
@@ -219,7 +217,7 @@ export default class About extends Component {
                     role="presentation"
                   />
                   <p className={s.name}>
-                    Jess Zhao
+                    <a href="https://www.linkedin.com/in/jessica-zhao-4a161114/" target="_blank">Jess Zhao</a>
                   </p>
                   <p className={s.description}>
                     Customer Experience.
@@ -241,7 +239,7 @@ export default class About extends Component {
                     role="presentation"
                   />
                   <p className={s.name}>
-                    Ian Magruder
+                    <a href="https://www.linkedin.com/in/ianmagruder/" target="_blank">Ian Magruder</a>
                   </p>
                   <p className={s.description}>
                     Partnerships.
@@ -263,7 +261,7 @@ export default class About extends Component {
                     role="presentation"
                   />
                   <p className={s.name}>
-                    Nikki Lowy
+                    <a href="https://www.linkedin.com/in/nikkilowy/" target="_blank">Nikki Lowy</a>
                   </p>
                   <p className={s.description}>
                     Partnerships.
@@ -275,6 +273,7 @@ export default class About extends Component {
             </Row>
           </Grid>
         </div>
+        <Investors />
       </section>
     );
   }

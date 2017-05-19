@@ -10,6 +10,7 @@ import { browserHistory } from 'react-router';
 
 // Components
 import Press from 'components/Helpers/Press';
+import Testimonials from 'components/Helpers/Testimonials';
 
 // Styles
 import s from './index.css';
@@ -289,9 +290,9 @@ export default class Home extends Component {
           >
             bring Landed to your school
           </span>
-
         </div>
 
+        {/*<Testimonials />*/}
         <Press />
       </section>
     );

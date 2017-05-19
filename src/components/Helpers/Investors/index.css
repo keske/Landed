@@ -1,0 +1,30 @@
+.root {
+  background: rgba(216, 216, 216, .2);
+
+  padding: 20px;
+  text-align: center;
+
+  border-top: 1px solid rgba(216, 216, 216, .9);
+  border-bottom: 1px solid rgba(216, 216, 216, .9);
+
+  img {
+    width: 120px;
+    height: auto;
+
+    margin: 0 30px;
+
+    @media only screen 
+      and (max-width: 667px) {
+        margin: 10px 20px;
+    }
+  }
+
+  br {
+    display: none;
+
+    @media only screen 
+      and (max-width: 667px) {
+        display: block;
+    }
+  }
+}
