@@ -10,6 +10,7 @@ import { browserHistory } from 'react-router';
 
 // Components
 import Press from 'components/Helpers/Press';
+import Testimonials from 'components/Helpers/Testimonials';
 
 // Styles
 import s from './index.css';
@@ -94,7 +95,7 @@ export default class Home extends Component {
               negative={false}
               thousand
               placeholder="120,000"
-              value="120000"
+              value={120000}
               className={s.form}
               onChange={(event) => {
                 updatepay(event.target.value, '120000');
@@ -289,9 +290,9 @@ export default class Home extends Component {
           >
             bring Landed to your school
           </span>
-
         </div>
 
+        {/*<Testimonials />*/}
         <Press />
       </section>
     );

@@ -7,7 +7,7 @@ import cx from 'classnames';
 import Autocomplete from 'react-google-autocomplete';
 
 // Utils
-import { isEmailValid, isPhoneValid } from 'utils/validate.js';
+import { isEmailValid } from 'utils/validate.js';
 
 // Styles
 import s from './index.css';
@@ -23,40 +23,38 @@ export default class Quiz extends Component {
       other: false,
       email: '',
       persontype: '',
-      othertype: '',
       school: '',
-      number: '',
+      firstname: '',
+      lastname: '',
       success: false,
     };
   }
 
   nextSlider() {
-    const { slider, other, persontype } = this.state;
+    const { slider } = this.state;
     this.setState({
-      other: (persontype === "Other" && slider === 1) ? true : other,
       slider: slider < MAX_SLIDERS ? R.sum([slider, 1]) : slider,
     });
   }
 
   backSlider() {
-    const { slider, other, persontype } = this.state;
+    const { slider } = this.state;
 
     this.setState({
-      other: (persontype === "Other" && slider === 2) ? false : other,
       slider: slider > 0 ? R.subtract(slider, 1) : slider,
     });
   }
 
   handleRequest() {
-    const { email, persontype, othertype, school, number, state } = this.state;
+    const { email, persontype, school, firstname, lastname, state } = this.state;
 
     const req = {
       email,
       data: {
         PERSONTYPE: persontype === '' ? "not provided" : persontype,
-        OTHERTYPE: othertype === '' ? "na" : othertype,
+        OTHERTYPE: firstname === '' ? "na" : firstname,
         SCHOOL: school === '' ? "na" : school,
-        NUMBER: number === '' ? "not provided" : number,
+        NUMBER: lastname === '' ? "not provided" : lastname,
         STATE: state === '' ? "na" : state,
       },
     };
@@ -77,75 +75,28 @@ export default class Quiz extends Component {
   }
 
   render() {
-    const { slider, other, email, persontype, othertype, school, state, number, success } = this.state;
+    const { slider, other, email, persontype, school, state, firstname, lastname, success } = this.state;
 
-    // Get all USA states
-    const data = require('./states');
-    const states = [];
-    // Prepare data for react-select
-    data.default.map((state) => {
-      states.push({
-        value: state.name,
-        label: state.name,
-      });
-    });
-
-    // Render customize state options for react-select
-/*    const renderStateOption = (option) =>
-      <span className={s['select-option']}>
-        <span className={s['select-label']}>
-          {option.label}
-        </span>
-      </span>; */
 
     // Stage options
     const optionsPersonType = [{
-      label: 'I have a leadership role at a school or district',
+      label: 'I am a school or district leader',
       value: 'Leader',
       text: 'I want to understand how to start a Landed program',
     }, {
-      label: 'I\'m a teacher or staff member at a school',
+      label: 'I am a faculty or staff member at a school',
       value: 'Customer',
-      text: 'I want to learn more about how Landed would work at my school',
+      text: 'I want to learn more about how Landed works',
     }, {
-      label: 'I don\'t fit those categories',
-      value: 'Other',
-      text: 'But I still want to learn more about Landed!',
-    }];
-    const optionsOtherType = [{
-      label: 'I\'m a realtor',
-      value: 'Realtor',
-      text: 'I want to work with Landed homebuyers',
-    }, {
-      label: 'I\'m a banker',
-      value: 'Banker',
-      text: 'I want to learn about lending against Landed partnerships',
-    }, {
-      label: 'I\'m an accredited community investor',
+      label: 'I am an accredited community investor',
       value: 'Investor',
-      text: 'I want to know whether my community already has a fund',
+      text: 'I want to learn more about Landed investment products',
     }, {
-      label: 'I\'m a member of the press',
-      value: 'Press',
-      text: 'I want to learn more about the Landed story',
-    }, {
-      label: 'None of the above',
+      label: 'I don\'t fit these categories',
       value: 'Other',
-      text: 'I just want to learn more',
+      text: 'But I\'d still like to talk to someone at Landed',
     }];
-/*    const optionsPersonRole = [{
-      label: 'I have a leadership role at a school or district',
-      value: 'Leader',
-      text: 'I want to understand how to start a Landed program',
-    }, {
-      label: 'I\'m a teacher or staff member at a school',
-      value: 'Customer',
-      text: 'I want to learn more about how Landed would work at my school',
-    }, {
-      label: 'I don\'t fit those categories',
-      value: 'Post-Offer',
-      text: 'But I still want to learn more about Landed!',
-    }]; */
+
 
     // Render option
     const renderOption = (option) =>
@@ -160,13 +111,13 @@ export default class Quiz extends Component {
           <p
             className={s.title}
             dangerouslySetInnerHTML={{ __html:
-              'Bring Landed to your school',
+              'Learn more about Landed',
             }}
           />
           <p
             className={s.info}
             dangerouslySetInnerHTML={{ __html:
-              'We\'re adding new schools every week. Have your school be next!',
+              'We\'re adding new funds every week.',
           }}
           />
         </Row>
@@ -191,28 +142,9 @@ export default class Quiz extends Component {
                   <div
                     className={cx(
                       s.slides,
-                      s[`position-${slider}-${other}`]
+                      s[`position-${slider}`]
                     )}
                   >
-
-                    <Col
-                      xs={12}
-                      sm={12}
-                      md={12}
-                      lg={12}
-                      className={s.slide}
-                    >
-                      <p className={s.label}>
-                        What’s your email?
-                      </p>
-                      <input
-                        type="text"
-                        placeholder="Your email"
-                        onChange={(event) =>
-                          this.setState({ email: event.target.value })
-                        }
-                      />
-                    </Col>
 
                     <Col
                       xs={12}
@@ -244,7 +176,7 @@ export default class Quiz extends Component {
                       className={s.slide}
                     >
                       <p className={s.label}>
-                        At what school do you work?
+                        Where do you work?
                       </p>
                       <Autocomplete
                         style={{
@@ -254,7 +186,7 @@ export default class Quiz extends Component {
                           width: '100%',
                           outline: 'none',
                         }}
-                        placeholder="School Name"
+                        placeholder="School or Employer Name"
                         onPlaceSelected={(place) => {
                           //console.log(place.address_components[5].short_name);
                           this.setState({ school: place.name, state: place.address_components[5].short_name});
@@ -271,13 +203,20 @@ export default class Quiz extends Component {
                       className={s.slide}
                     >
                       <p className={s.label}>
-                        What’s your phone number?
+                        What’s your name?
                       </p>
                       <input
-                        type="text"
-                        placeholder="Your phone number"
+                        type="firstname"
+                        placeholder="First Name"
                         onChange={(event) =>
-                          this.setState({ number: event.target.value })
+                          this.setState({ firstname: event.target.value })
+                        }
+                      />
+                      <input
+                        type="lastname"
+                        placeholder="Last Name"
+                        onChange={(event) =>
+                          this.setState({ lastname: event.target.value })
                         }
                       />
                     </Col>
@@ -290,23 +229,20 @@ export default class Quiz extends Component {
                       className={s.slide}
                     >
                       <p className={s.label}>
-                        Why are you interested in learning more about Landed?
+                        What’s your email?
                       </p>
-                      <Select
-                        className={s['stage-style']}
-                        searchable={false}
-                        name="form-field-stage"
-                        options={optionsOtherType}
-                        optionRenderer={renderOption}
-                        valueRenderer={renderOption}
-                        value={othertype}
-                        onChange={(val) => this.setState({ othertype: val.value })}
+                      <input
+                        type="text"
+                        placeholder="Your email"
+                        onChange={(event) =>
+                          this.setState({ email: event.target.value })
+                        }
                       />
                     </Col>
-
                   </div>
                 </div>
               </Row>
+
 
               <Row className={s.nav}>
                 <div
@@ -335,10 +271,10 @@ export default class Quiz extends Component {
                         : this.nextSlider()
                     )}
                     disabled={
-                      slider === 0 && !isEmailValid(email) ||
-                      slider === 1 && persontype === '' ||
-                      slider === 2 && (school === '' && othertype === '') ||
-                      slider === 3 && !isPhoneValid(number) === ''
+                      slider === 0 && persontype === '' ||
+                      slider === 1 && school === '' ||
+                      slider === 2 && lastname === '' ||
+                      slider === 3 && !isEmailValid(email)
                     }
                   >
                     next

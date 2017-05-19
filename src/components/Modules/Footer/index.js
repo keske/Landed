@@ -38,7 +38,7 @@ export default class Footer extends Component {
                 Copyright © Landed, Inc.  DRE #01988003.
               </p>
               <p>
-                Landed was founded in 2015 in the San Francisco Bay Area.
+                Landed was founded in 2015 in San Francisco.
               </p>
             </Col>
 
@@ -52,11 +52,49 @@ export default class Footer extends Component {
                 Need to contact us?
               </p>
               <a
-                to="mailto:hi@landed.com"
+                href="mailto:hi@landed.com"
                 className={s.mail}
               >
                 hi@landed.com
               </a>
+            </Col>
+
+            <Col
+              xs={12}
+              sm={12}
+              md={3}
+              lg={3}
+            >
+              <a
+                href="http://www.facebook.com/landedinc"
+                className={s.social}
+              >
+                <img
+                  src={require('./files/fb.png')}
+                  role="presentation"
+                />
+              </a>
+
+              <a
+                href="http://www.twitter.com/landedhomes"
+                className={s.social}
+              >
+                <img
+                  src={require('./files/twitter.png')}
+                  role="presentation"
+                />
+              </a>
+
+              <a
+                href="http://www.instagram.com/landedhomes"
+                className={s.social}
+              >
+                <img
+                  src={require('./files/insta.png')}
+                  role="presentation"
+                />
+              </a>
+
             </Col>
           </Row>
         </Grid>

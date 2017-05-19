@@ -5,6 +5,7 @@ import R from 'ramda';
 import Slider from 'rc-slider';
 import DynamicNumber from 'react-dynamic-number';
 import ReactTooltip from'react-tooltip';
+import 'rc-slider/assets/index.css';
 
 import { observer } from 'mobx-react';
 import { Link } from 'react-router';
@@ -151,7 +152,7 @@ let a11 = a3 * a46 / 12;
 let a12 = a3 * a47 / 12;
 let g11 = a10 + a11 + a13 + a27 - g9 + a12;
 let g12 = g9 + a26 + g11;
-let a16 = 0.045;
+let a16 = 0.042;
 let a28 = a24 + a5;
 let a29 = Math.pow((1 + a16 / 12), 360) * (a16 / 12) / (Math.pow((1 + a16 / 12), 360) - 1) * a28;
 let a30 = (a28 - (Math.pow((1 + a16 / 12), 120) * a28 - a29 * (Math.pow((1 + a16 / 12), 120) - 1) / (a16 / 12))) / 120;
@@ -233,7 +234,6 @@ export default class Calc extends Component {
 
     if (a7==119999){
       a7=+pay;
-      console.log("using pay");
     }
 
     if (!lockA3) {
@@ -275,8 +275,6 @@ export default class Calc extends Component {
 
     a33 = (g12 + a8 - a12) / (a7 / 12);
     a34 = (h12 + a8 - a12) / (a7 / 12);
-    console.log("in update func");
-    console.log(a7);
 //    console.log(a8);
 //    updatepay(a3, '120000');
 //    updateprice(a7, '120000');
@@ -542,13 +540,13 @@ export default class Calc extends Component {
 
                   <div className={cx(s.description, { [s.show]: step === 3 })}>
                     <p className={s.title}>
-                      Owning earns you immediate tax benefits
+                      Owning can earn you large tax benefits
                     </p>
                     <p className={s.info}>
-                      As long as you have taxes to pay, owning a home is less expensive than you might think!
+                      As long as you have taxes to pay, owning a home can be less expensive than you might think!
                     </p>
                     <p className={s.info}>
-                      <a href="https://landed.zendesk.com/hc/en-us/articles/115004061967-How-do-the-monthly-tax-benefits-of-ownership-ultimately-work-" target="_blank">Learn More</a>
+                      <a href="https://landed.zendesk.com/hc/en-us/articles/115004061967-How-do-the-monthly-tax-benefits-of-ownership-ultimately-work-" target="_blank">Learn more about tax benefits.</a>
                     </p>
                   </div>
 

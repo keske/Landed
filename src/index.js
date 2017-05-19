@@ -17,11 +17,11 @@ try {
 export const history = browserHistory;
 
 var ReactGA = require('react-ga');
-ReactGA.initialize('UA-000000-01');
+ReactGA.initialize('UA-72154127-1');
 
-function logPageView() {
-  ReactGA.set({ page: window.location.pathname });
-  ReactGA.pageview(window.location.pathname);
+function logPageView(){
+	ReactGA.set({page: window.location.pathname});
+	ReactGA.pageview(window.location.pathname);
 }
 
 if (__CLIENT__) {

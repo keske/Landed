@@ -1,0 +1,67 @@
+.root {
+  background: #F7F7F7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.image {
+  background: url(./files/bg_new.jpg);
+  background-size: 100% auto;
+  margin-bottom: -10px;
+
+  @media only screen and (max-width: 667px) {
+    background: url(./files/bg_mobile.jpg);
+    background-size: 100% auto;
+  }
+  
+  p {
+    color: $white;
+  }
+
+  .quote {
+    font-size: 20px;
+    font-family: $janon;
+    text-shadow: 2px 5px 7px rgba(0,0,0,0.3);
+
+    -webkit-font-smoothing: antialiased;
+
+    padding-top: 80px;
+    padding-left: 60%;
+    padding-right: 10%;
+
+
+    @media only screen and (max-width: 667px) {
+      padding-top: 300px;
+      padding-left: 10%;
+    }
+    @media only screen and (min-width: 668px) and (max-width: 992px) {
+      
+    }
+  }
+  
+  .signature {
+    font-size: 20px;
+    font-family: $janon;
+    text-shadow: 2px 5px 7px rgba(0,0,0,0.3);
+    text-align: right;
+
+    -webkit-font-smoothing: antialiased;
+
+    padding-top: 20px;
+    padding-left: 60%;
+    padding-right: 10%;
+    padding-bottom: 20px;
+
+
+    @media only screen and (max-width: 667px) {
+      padding-left: 10%;
+    }
+    @media only screen and (min-width: 668px) and (max-width: 992px) {
+      
+    }
+  }
+  .scroll {
+
+
+  }
+
+}

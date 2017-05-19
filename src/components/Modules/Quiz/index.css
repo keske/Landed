@@ -62,7 +62,7 @@
 
   .success {
     margin: 50px 0 30px;
-    width: 600px;
+    width: 100%;
 
     display: inline-block;
     text-align: center;
@@ -185,7 +185,7 @@
     .slides {
       transition: .3s;
 
-      &.position-0-false {
+      &.position-0 {
         .slide:nth-child(1) {
           display: block;
         }
@@ -196,17 +196,11 @@
           display: none;
         }
         .slide:nth-child(4) {
-          display: none;
-        }
-        .slide:nth-child(5) {
-          display: none;
-        }
-        .slide:nth-child(6) {
           display: none;
         }
       }
 
-      &.position-1-false {
+      &.position-1 {
         .slide:nth-child(1) {
           display: none;
         }
@@ -217,17 +211,11 @@
           display: none;
         }
         .slide:nth-child(4) {
-          display: none;
-        }
-        .slide:nth-child(5) {
-          display: none;
-        }
-        .slide:nth-child(6) {
           display: none;
         }
       }
 
-      &.position-2-false {
+      &.position-2 {
         .slide:nth-child(1) {
           display: none;
         }
@@ -238,39 +226,12 @@
           display: block;
         }
         .slide:nth-child(4) {
-          display: none;
-        }
-        .slide:nth-child(5) {
-          display: none;
-        }
-        .slide:nth-child(6) {
-          display: none;
-        }
-      }
-
-      &.position-2-true {
-        .slide:nth-child(1) {
-          display: none;
-        }
-        .slide:nth-child(2) {
-          display: none;
-        }
-        .slide:nth-child(3) {
-          display: none;
-        }
-        .slide:nth-child(4) {
-          display: none;
-        }
-        .slide:nth-child(5) {
-          display: block;
-        }
-        .slide:nth-child(6) {
           display: none;
         }
       }
 
 
-      &.position-3-false {
+      &.position-3 {
         .slide:nth-child(1) {
           display: none;
         }
@@ -283,75 +244,7 @@
         .slide:nth-child(4) {
           display: block;
         }
-        .slide:nth-child(5) {
-          display: none;
-        }
-        .slide:nth-child(6) {
-          display: none;
-        }
       }
-      &.position-4-false {
-        .slide:nth-child(1) {
-          display: none;
-        }
-        .slide:nth-child(2) {
-          display: none;
-        }
-        .slide:nth-child(3) {
-          display: none;
-        }
-        .slide:nth-child(4) {
-          display: none;
-        }
-        .slide:nth-child(5) {
-          display: block;
-        }
-        .slide:nth-child(6) {
-          display: none;
-        }
-      }
-
-      &.position-3-true {
-        .slide:nth-child(1) {
-          display: none;
-        }
-        .slide:nth-child(2) {
-          display: none;
-        }
-        .slide:nth-child(3) {
-          display: none;
-        }
-        .slide:nth-child(4) {
-          display: block;
-        }
-        .slide:nth-child(5) {
-          display: none;
-        }
-        .slide:nth-child(6) {
-          display: none;
-        }
-      }
-      &.position-4-true {
-        .slide:nth-child(1) {
-          display: none;
-        }
-        .slide:nth-child(2) {
-          display: none;
-        }
-        .slide:nth-child(3) {
-          display: none;
-        }
-        .slide:nth-child(4) {
-          display: none;
-        }
-        .slide:nth-child(5) {
-          display: block;
-        }
-        .slide:nth-child(6) {
-          display: none;
-        }
-      }
-
 
       .slide {
         float: left;
@@ -384,8 +277,31 @@
           display: inline-block;
 
           width: 100%;
+          outline: none;
+
+          font-family: 'SupriaSans Regular';
+        }
+        input[type="firstname"] {
+          border: 1px solid rgba(0, 155, 105, .33);
+          padding: 11px 30px 11px 20px;
+          display: inline-block;
+
+          width: 35%;
+          margin-right: 2.5%;
 
           outline: none;
+
+          font-family: 'SupriaSans Regular';
+          font-size: 16px;
+        }
+        input[type="lastname"] {
+          border: 1px solid rgba(0, 155, 105, .33);
+          padding: 11px 30px 11px 20px;
+          display: inline-block;
+
+          width: 60%;
+          outline: none;
+          margin-left: 2.5%;
 
           font-family: 'SupriaSans Regular';
           font-size: 16px;
