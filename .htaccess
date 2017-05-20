@@ -1,5 +1,11 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
+
+    # Forcing visitors to use SSL
+    RewriteCond %{HTTP_HOST} ^landed\.com [NC] 
+	RewriteCond %{SERVER_PORT} 80 
+	RewriteRule ^(.*)$ https://www.landed.com/$1 [R,L]
+
     # Send all requests to the index.html unless
     # it's a directory or a file that actually exists
     RewriteCond %{REQUEST_FILENAME} !-d
