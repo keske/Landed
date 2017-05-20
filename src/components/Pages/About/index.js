@@ -55,6 +55,10 @@ export default class About extends Component {
                 <p className={s.title}>
                   Uphold those who uphold us
                 </p>
+                <br/><br/>
+                <p className={s.intro}>
+                  At Landed, we’re on a mission to make homeownership accessible, affordable, and easy, even in expensive cities.
+                </p>  
               </Col>
             </Row>
           </Grid>
