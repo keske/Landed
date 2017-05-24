@@ -243,10 +243,10 @@ export default class HowItWorks extends Component {
 
                     <span className={s['col-7']}>
                       <p className={s.green}>
-                        Landed's 25% Share
+                        Landed's share of gain
                       </p>
                       <p>
-                        (plus original investment)
+                        Landed's down payment
                       </p>
                     </span>
                     <span className={s['col-3']}>
@@ -260,7 +260,7 @@ export default class HowItWorks extends Component {
 
                     <span className={cx(s['col-7'], s.total)}>
                       <p className={s.green}>
-                        You owe Landed
+                        Landed Keeps
                       </p>
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
@@ -271,10 +271,13 @@ export default class HowItWorks extends Component {
 
                     <span className={s['col-7']}>
                       <p className={s.green}>
-                        Your 75% Share
+                        Your share of gain
                       </p>
                       <p>
-                        (plus equity in home)
+                        Your down payment
+                      </p>
+                      <p>
+                        Your mortgage paid off
                       </p>
                     </span>
                     <span className={s['col-3']}>
@@ -282,7 +285,10 @@ export default class HowItWorks extends Component {
                         +$75,000
                       </p>
                       <p>
-                        ${numberWithCommas((+app.calc.a3State * (0.27)).toFixed(0))}
+                       ${numberWithCommas((+app.calc.a3State)/10)}
+                      </p>
+                      <p>
+                        ${numberWithCommas((+app.calc.a3State * (0.17)).toFixed(0))}
                       </p>
                     </span>
 
@@ -336,10 +342,10 @@ export default class HowItWorks extends Component {
 
                     <span className={s['col-7']}>
                       <p className={s.red}>
-                        Landed's 25% Share
+                        Landed's share of loss
                       </p>
                       <p>
-                        (plus original investment)
+                        Landed's down payment
                       </p>
                     </span>
                     <span className={s['col-3']}>
@@ -353,7 +359,7 @@ export default class HowItWorks extends Component {
 
                     <span className={cx(s['col-7'], s.total)}>
                       <p className={s.red}>
-                        You owe Landed
+                        Landed Keeps
                       </p>
                     </span>
                     <span className={cx(s['col-3'], s.total)}>
@@ -364,10 +370,13 @@ export default class HowItWorks extends Component {
 
                     <span className={s['col-7']}>
                       <p className={s.red}>
-                        Your 75% Share
+                        Your share of loss
                       </p>
                       <p>
-                        (plus equity in home)
+                      Your down payment
+                      </p>
+                      <p>
+                        Your mortgage paid off
                       </p>
                     </span>
                     <span className={s['col-3']}>
@@ -375,7 +384,10 @@ export default class HowItWorks extends Component {
                         -$75,000
                       </p>
                       <p>
-                        ${numberWithCommas((+app.calc.a3State * (0.27)).toFixed(0))}
+                       ${numberWithCommas(+app.calc.a3State / 10)}
+                      </p>
+                      <p>
+                        ${numberWithCommas((+app.calc.a3State * (0.17)).toFixed(0))}
                       </p>
                     </span>
 
@@ -424,7 +436,7 @@ export default class HowItWorks extends Component {
               lg={4} lgOffset={2}
             >
               <p className={s.question}>
-                What is my 'Equity in Home'?
+                What is my 'mortgage paid off'?
               </p>
               <p className={s.answer}>
                 When you buy a home, you will pay down a bit of your mortgage every month and increase the amount of wealth you have in your home. Over a 10 year period, you will build wealth equal to about 20% of your original mortgage amount plus your original down payment.
@@ -438,10 +450,10 @@ export default class HowItWorks extends Component {
               lg={4} lgOffset={0}
             >
               <p className={s.question}>
-                Is this more expensive than a loan?
+                What if I only want 5% from Landed?
               </p>
               <p className={s.answer}>
-                It can be, but you'll only know once you end the partnership. While loans have a fixed rate of repayment and an APR, partners only succeed if the venture succeeds. Our customers find that a combination of a partner and a mortgage is better than a large mortgage alone.
+                You don't need to get half of your down payment from Landed - many of our customers take less. In those cases, the amount of appreciation (or depreciation) you have share with Landed is less too! That way, you can make it work for your specific financial situation.
               </p>
             </Col>
           </Row>

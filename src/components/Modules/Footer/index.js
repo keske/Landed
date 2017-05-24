@@ -67,6 +67,7 @@ export default class Footer extends Component {
             >
               <a
                 href="http://www.facebook.com/landedinc"
+                target="_blank"
                 className={s.social}
               >
                 <img
@@ -77,6 +78,7 @@ export default class Footer extends Component {
 
               <a
                 href="http://www.twitter.com/landedhomes"
+                target="_blank"
                 className={s.social}
               >
                 <img
@@ -87,6 +89,7 @@ export default class Footer extends Component {
 
               <a
                 href="http://www.instagram.com/landedhomes"
+                target="_blank"
                 className={s.social}
               >
                 <img
